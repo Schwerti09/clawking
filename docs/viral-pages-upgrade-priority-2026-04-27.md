@@ -34,11 +34,11 @@
 ### Batch A (nächste 5):
 | # | Slug | Haupt-Keyword | Suchvolumen-Schätzung | Status |
 |---|---|---|---|---|
-| 14 | `ai-agent-security` | "AI agent security" | 🔴 Sehr hoch | [ ] |
-| 15 | `prompt-injection-defense` | "prompt injection defense" | 🔴 Sehr hoch | [ ] |
-| 16 | `llm-gateway-hardening` | "LLM gateway security" | 🔴 Hoch | [ ] |
-| 17 | `zero-trust-architecture` | "zero trust architecture" | 🔴 Sehr hoch | [ ] |
-| 18 | `container-security-docker-kubernetes` | "container security Kubernetes" | 🔴 Sehr hoch | [ ] |
+| 14 | `ai-agent-security` | "AI agent security" | 🔴 Sehr hoch | ✅ |
+| 15 | `prompt-injection-defense` | "prompt injection defense" | 🔴 Sehr hoch | ✅ |
+| 16 | `llm-gateway-hardening` | "LLM gateway security" | 🔴 Hoch | ✅ |
+| 17 | `zero-trust-architecture` | "zero trust architecture" | 🔴 Sehr hoch | ✅ |
+| 18 | `container-security-docker-kubernetes` | "container security Kubernetes" | 🔴 Sehr hoch | ✅ |
 
 ### Batch B:
 | # | Slug | Haupt-Keyword | Suchvolumen-Schätzung | Status |
