@@ -48,7 +48,9 @@
     "test:coverage": "jest --coverage",
     "test:e2e": "playwright test",
     "test:e2e:ui": "playwright test --ui",
-    "test:e2e:headed": "playwright test --headed --project=chromium"
+    "test:e2e:headed": "playwright test --headed --project=chromium",
+    "test:e2e:consulting": "playwright test e2e/payment-flow/consulting-checkout.spec.ts",
+    "test:webhook": "node scripts/test-stripe-webhook.mjs"
   },
   "dependencies": {
     "@neondatabase/serverless": "^1.0.2",
