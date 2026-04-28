@@ -43,11 +43,11 @@
 ### Batch B:
 | # | Slug | Haupt-Keyword | Suchvolumen-Schätzung | Status |
 |---|---|---|---|---|
-| 19 | `ai-agent-hardening-guide` | "AI agent hardening" | 🔴 Hoch | [ ] |
-| 20 | `model-poisoning-protection` | "model poisoning protection" | 🔴 Hoch | [ ] |
-| 21 | `devsecops-pipeline` | "DevSecOps pipeline" | 🔴 Hoch | [ ] |
-| 22 | `api-rate-limiting-advanced` | "API rate limiting" | 🔴 Hoch | [ ] |
-| 23 | `security-framework` | "security framework" | 🔴 Hoch | [ ] |
+| 19 | `ai-agent-hardening-guide` | "AI agent hardening" | 🔴 Hoch | ✅ |
+| 20 | `model-poisoning-protection` | "model poisoning protection" | 🔴 Hoch | ✅ |
+| 21 | `devsecops-pipeline` | "DevSecOps pipeline" | 🔴 Hoch | ✅ |
+| 22 | `api-rate-limiting-advanced` | "API rate limiting" | 🔴 Hoch | ✅ |
+| 23 | `security-framework` | "security framework" | 🔴 Hoch | ✅ |
 
 ### Batch C:
 | # | Slug | Haupt-Keyword | Suchvolumen-Schätzung | Status |
