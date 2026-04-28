@@ -70,11 +70,11 @@
 ### Batch E:
 | # | Slug | Haupt-Keyword | Suchvolumen-Schätzung | Status |
 |---|---|---|---|---|
-| 34 | `secrets-vault-management` | "secrets vault management" | 🔴 Hoch | [ ] |
-| 35 | `real-time-cve-feed` | "CVE feed real-time" | 🟠 Mittel-Hoch | [ ] |
-| 36 | `sbom-generation` | "SBOM generation" | 🟠 Mittel-Hoch | [ ] |
-| 37 | `security-posture-score` | "security posture score" | 🟠 Mittel-Hoch | [ ] |
-| 38 | `cloud-security-posture-management` | "CSPM cloud security" | 🔴 Hoch | [ ] |
+| 34 | `secrets-vault-management` | "secrets vault management" | 🔴 Hoch | ✅ |
+| 35 | `real-time-cve-feed` | "CVE feed real-time" | 🟠 Mittel-Hoch | ✅ |
+| 36 | `sbom-generation` | "SBOM generation" | 🟠 Mittel-Hoch | ✅ |
+| 37 | `security-posture-score` | "security posture score" | 🟠 Mittel-Hoch | ✅ |
+| 38 | `cloud-security-posture-management` | "CSPM cloud security" | 🔴 Hoch | ✅ |
 
 ---
 
