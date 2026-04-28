@@ -83,56 +83,56 @@
 ### Batch F:
 | # | Slug | Status |
 |---|---|---|
-| 39 | `ai-agent-rbac` | [ ] |
-| 40 | `ai-agent-audit-logging` | [ ] |
-| 41 | `ai-agent-threat-model-template` | [ ] |
-| 42 | `ai-agent-behavioral-monitoring` | [ ] |
-| 43 | `llm-prompt-injection-detection` | [ ] |
+| 39 | `ai-agent-rbac` | ✅ |
+| 40 | `ai-agent-audit-logging` | ✅ |
+| 41 | `ai-agent-threat-model-template` | ✅ |
+| 42 | `ai-agent-behavioral-monitoring` | ✅ |
+| 43 | `llm-prompt-injection-detection` | ✅ |
 
 ### Batch G:
 | # | Slug | Status |
 |---|---|---|
-| 44 | `llm-api-security` | [ ] |
-| 45 | `llm-output-filtering` | [ ] |
-| 46 | `llm-prompt-hardening` | [ ] |
-| 47 | `llm-prompt-hardening-advanced` | [ ] |
-| 48 | `llm-context-isolation` | [ ] |
+| 44 | `llm-api-security` | ✅ |
+| 45 | `llm-output-filtering` | ✅ |
+| 46 | `llm-prompt-hardening` | ✅ |
+| 47 | `llm-prompt-hardening-advanced` | ✅ |
+| 48 | `llm-context-isolation` | ✅ |
 
 ### Batch H:
 | # | Slug | Status |
 |---|---|---|
-| 49 | `ai-agent-governance` | [ ] |
-| 50 | `ai-agent-compliance-automation` | [ ] |
-| 51 | `ai-agent-incident-response-playbook` | [ ] |
-| 52 | `ai-agent-runtime-protection` | [ ] |
-| 53 | `ai-agent-input-validation` | [ ] |
+| 49 | `ai-agent-governance` | ✅ |
+| 50 | `ai-agent-compliance-automation` | ✅ |
+| 51 | `ai-agent-incident-response-playbook` | ✅ |
+| 52 | `ai-agent-runtime-protection` | ✅ |
+| 53 | `ai-agent-input-validation` | ✅ |
 
 ### Batch I:
 | # | Slug | Status |
 |---|---|---|
-| 54 | `ai-agent-identity-verification` | [ ] |
-| 55 | `ai-agent-access-control` | [ ] |
-| 56 | `ai-agent-network-isolation` | [ ] |
-| 57 | `ai-agent-output-security` | [ ] |
-| 58 | `ai-agent-deployment-security` | [ ] |
+| 54 | `ai-agent-identity-verification` | ✅ |
+| 55 | `ai-agent-access-control` | ✅ |
+| 56 | `ai-agent-network-isolation` | ✅ |
+| 57 | `ai-agent-output-security` | ✅ |
+| 58 | `ai-agent-deployment-security` | ✅ |
 
 ### Batch J:
 | # | Slug | Status |
 |---|---|---|
-| 59 | `runtime-protection-rasp` | [ ] |
-| 60 | `network-security-firewall` | [ ] |
-| 61 | `database-security-encryption` | [ ] |
-| 62 | `cryptography-encryption-guide` | [ ] |
-| 63 | `logging-auditing-compliance` | [ ] |
+| 59 | `runtime-protection-rasp` | ✅ |
+| 60 | `network-security-firewall` | ✅ |
+| 61 | `database-security-encryption` | ✅ |
+| 62 | `cryptography-encryption-guide` | ✅ |
+| 63 | `logging-auditing-compliance` | ✅ |
 
 ### Batch K:
 | # | Slug | Status |
 |---|---|---|
-| 64 | `compliance-gdpr-setup` | [ ] |
-| 65 | `nis2-compliance-setup` | [ ] |
-| 66 | `identity-governance-iam` | [ ] |
-| 67 | `incident-response-automation` | [ ] |
-| 68 | `monitoring-dashboards` | [ ] |
+| 64 | `compliance-gdpr-setup` | ✅ |
+| 65 | `nis2-compliance-setup` | ✅ |
+| 66 | `identity-governance-iam` | ✅ |
+| 67 | `incident-response-automation` | ✅ |
+| 68 | `monitoring-dashboards` | ✅ |
 
 ### Batch L:
 | # | Slug | Status |
