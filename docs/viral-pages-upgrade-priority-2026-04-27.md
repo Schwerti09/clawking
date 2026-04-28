@@ -52,11 +52,11 @@
 ### Batch C:
 | # | Slug | Haupt-Keyword | Suchvolumen-Schätzung | Status |
 |---|---|---|---|---|
-| 24 | `ai-red-teaming` | "AI red teaming" | 🔴 Hoch | [ ] |
-| 25 | `ai-agent-secrets-management` | "AI agent secrets management" | 🟠 Mittel-Hoch | [ ] |
-| 26 | `zero-trust-ai-agents` | "zero trust AI agents" | 🟠 Mittel-Hoch | [ ] |
-| 27 | `llm-jailbreak-defense` | "LLM jailbreak defense" | 🟠 Mittel-Hoch | [ ] |
-| 28 | `vulnerability-scanning` | "vulnerability scanning" | 🔴 Hoch | [ ] |
+| 24 | `ai-red-teaming` | "AI red teaming" | 🔴 Hoch | ✅ |
+| 25 | `ai-agent-secrets-management` | "AI agent secrets management" | � Hoch | ✅ |
+| 26 | `zero-trust-ai-agents` | "zero trust AI agents" | � Hoch | ✅ |
+| 27 | `llm-jailbreak-defense` | "LLM jailbreak defense" | � Hoch | ✅ |
+| 28 | `vulnerability-scanning` | "vulnerability scanning" | 🔴 Hoch | ✅ |
 
 ### Batch D:
 | # | Slug | Haupt-Keyword | Suchvolumen-Schätzung | Status |
