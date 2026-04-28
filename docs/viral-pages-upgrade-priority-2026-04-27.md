@@ -61,11 +61,11 @@
 ### Batch D:
 | # | Slug | Haupt-Keyword | Suchvolumen-Schätzung | Status |
 |---|---|---|---|---|
-| 29 | `api-gateway-security` | "API gateway security" | 🔴 Hoch | [ ] |
-| 30 | `authentication-oauth2-jwt` | "OAuth2 JWT security" | 🔴 Hoch | [ ] |
-| 31 | `compliance-automation-engine` | "compliance automation" | 🟠 Mittel-Hoch | [ ] |
-| 32 | `bot-security-testing` | "bot security testing" | 🟠 Mittel-Hoch | [ ] |
-| 33 | `cloud-native-security` | "cloud native security" | 🔴 Hoch | [ ] |
+| 29 | `api-gateway-security` | "API gateway security" | 🔴 Hoch | ✅ |
+| 30 | `authentication-oauth2-jwt` | "OAuth2 JWT security" | 🔴 Hoch | ✅ |
+| 31 | `compliance-automation-engine` | "compliance automation" | 🟠 Mittel-Hoch | ✅ |
+| 32 | `bot-security-testing` | "bot security testing" | 🟠 Mittel-Hoch | ✅ |
+| 33 | `cloud-native-security` | "cloud native security" | 🔴 Hoch | ✅ |
 
 ### Batch E:
 | # | Slug | Haupt-Keyword | Suchvolumen-Schätzung | Status |
