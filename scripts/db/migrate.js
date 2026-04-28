@@ -17,9 +17,9 @@ try {
 const { Pool } = require('pg')
 
 async function main() {
-  const connectionString = process.env.DATABASE_URL
+  const connectionString = process.env.DATABASE_URL_2 || process.env.DATABASE_URL
   if (!connectionString) {
-    console.error('DATABASE_URL is not set')
+    console.error('DATABASE_URL_2 or DATABASE_URL is not set')
     process.exit(1)
   }
 
