@@ -253,11 +253,11 @@
 ### Batch X:
 | # | Slug | Status |
 |---|---|---|
-| 129 | `ai-agent-human-oversight` | [ ] |
-| 130 | `ai-agent-memory-poisoning-defense` | [ ] |
-| 131 | `ai-agent-model-hardening` | [ ] |
-| 132 | `ai-agent-multi-modal-security` | [ ] |
-| 133 | `ai-agent-observability-security` | [ ] |
+| 129 | `ai-agent-human-oversight` | ✅ |
+| 130 | `ai-agent-memory-poisoning-defense` | ✅ |
+| 131 | `ai-agent-model-hardening` | ✅ |
+| 132 | `ai-agent-multi-modal-security` | ✅ |
+| 133 | `ai-agent-observability-security` | ✅ |
 
 ### Batch Y:
 | # | Slug | Status |
