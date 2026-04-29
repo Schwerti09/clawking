@@ -235,11 +235,11 @@
 ### Batch V:
 | # | Slug | Status |
 |---|---|---|
-| 119 | `ai-agent-capability-control` | [ ] |
-| 120 | `ai-agent-communication-security` | [ ] |
-| 121 | `ai-agent-context-security` | [ ] |
-| 122 | `ai-agent-continuous-security` | [ ] |
-| 123 | `ai-agent-data-integrity` | [ ] |
+| 119 | `ai-agent-capability-control` | ✅ |
+| 120 | `ai-agent-communication-security` | ✅ |
+| 121 | `ai-agent-context-security` | ✅ |
+| 122 | `ai-agent-continuous-security` | ✅ |
+| 123 | `ai-agent-data-integrity` | ✅ |
 
 ### Batch W:
 | # | Slug | Status |
