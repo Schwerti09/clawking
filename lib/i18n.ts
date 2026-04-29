@@ -39,6 +39,77 @@ export type Locale =
   // 100-Language Rollout — Tier 1+2 completion (23.04.2026)
   | "ms"
   | "bg"
+  // 100-Language Rollout — Tier 3 (29.04.2026)
+  | "fa"
+  | "ur"
+  | "ta"
+  | "te"
+  | "mr"
+  | "gu"
+  | "kn"
+  | "ml"
+  | "et"
+  | "lv"
+  | "lt"
+  | "sk"
+  | "sl"
+  | "hr"
+  | "sr"
+  | "ca"
+  | "eu"
+  | "gl"
+  // 100-Language Rollout — Tier 4 (29.04.2026)
+  | "fil"
+  | "sw"
+  | "zu"
+  | "am"
+  | "km"
+  | "lo"
+  | "my"
+  | "ne"
+  | "si"
+  | "ka"
+  | "hy"
+  | "az"
+  | "kk"
+  | "uz"
+  | "mn"
+  | "is"
+  | "mt"
+  | "sq"
+  | "mk"
+  | "bs"
+  | "cy"
+  | "ga"
+  | "lb"
+  | "fo"
+  | "ps"
+  // 100-Language Rollout — Tier 5 (29.04.2026)
+  | "yo"
+  | "ig"
+  | "ha"
+  | "rw"
+  | "rn"
+  | "so"
+  | "ti"
+  | "om"
+  | "ky"
+  | "tg"
+  | "tk"
+  | "pa"
+  | "or"
+  | "as"
+  | "jv"
+  | "su"
+  | "mi"
+  | "sm"
+  | "to"
+  | "haw"
+  | "br"
+  | "co"
+  | "oc"
+  | "tt"
+  | "cv"
 
 export const SUPPORTED_LOCALES: Locale[] = [
   "de",
@@ -75,11 +146,82 @@ export const SUPPORTED_LOCALES: Locale[] = [
   // 100-Language Rollout — Tier 1+2 completion (23.04.2026)
   "ms",
   "bg",
+  // 100-Language Rollout — Tier 3 (29.04.2026)
+  "fa",
+  "ur",
+  "ta",
+  "te",
+  "mr",
+  "gu",
+  "kn",
+  "ml",
+  "et",
+  "lv",
+  "lt",
+  "sk",
+  "sl",
+  "hr",
+  "sr",
+  "ca",
+  "eu",
+  "gl",
+  // 100-Language Rollout — Tier 4 (29.04.2026)
+  "fil",
+  "sw",
+  "zu",
+  "am",
+  "km",
+  "lo",
+  "my",
+  "ne",
+  "si",
+  "ka",
+  "hy",
+  "az",
+  "kk",
+  "uz",
+  "mn",
+  "is",
+  "mt",
+  "sq",
+  "mk",
+  "bs",
+  "cy",
+  "ga",
+  "lb",
+  "fo",
+  "ps",
+  // 100-Language Rollout — Tier 5 (29.04.2026)
+  "yo",
+  "ig",
+  "ha",
+  "rw",
+  "rn",
+  "so",
+  "ti",
+  "om",
+  "ky",
+  "tg",
+  "tk",
+  "pa",
+  "or",
+  "as",
+  "jv",
+  "su",
+  "mi",
+  "sm",
+  "to",
+  "haw",
+  "br",
+  "co",
+  "oc",
+  "tt",
+  "cv",
 ]
 export const DEFAULT_LOCALE: Locale = "de"
 
-// RTL locales — ar + he
-export const RTL_LOCALES: Locale[] = ["ar", "he"]
+// RTL locales — Arabic, Hebrew, Persian, Urdu
+export const RTL_LOCALES: Locale[] = ["ar", "he", "fa", "ur"]
 
 /** Returns true if the locale uses right-to-left text direction */
 export function isRTL(locale: Locale): boolean {
@@ -111,6 +253,90 @@ export const LOCALE_HREFLANG: Partial<Record<Locale, string>> = {
   pl: "pl-PL",
   ko: "ko-KR",
   af: "af",
+  he: "he-IL",
+  uk: "uk-UA",
+  vi: "vi-VN",
+  id: "id-ID",
+  sv: "sv-SE",
+  fi: "fi-FI",
+  ro: "ro-RO",
+  cs: "cs-CZ",
+  th: "th-TH",
+  bn: "bn-BD",
+  el: "el-GR",
+  hu: "hu-HU",
+  da: "da-DK",
+  no: "nb-NO",
+  ms: "ms-MY",
+  bg: "bg-BG",
+  fa: "fa-IR",
+  ur: "ur-PK",
+  ta: "ta-IN",
+  te: "te-IN",
+  mr: "mr-IN",
+  gu: "gu-IN",
+  kn: "kn-IN",
+  ml: "ml-IN",
+  et: "et-EE",
+  lv: "lv-LV",
+  lt: "lt-LT",
+  sk: "sk-SK",
+  sl: "sl-SI",
+  hr: "hr-HR",
+  sr: "sr-RS",
+  ca: "ca-ES",
+  eu: "eu-ES",
+  gl: "gl-ES",
+  fil: "fil-PH",
+  sw: "sw-KE",
+  zu: "zu-ZA",
+  am: "am-ET",
+  km: "km-KH",
+  lo: "lo-LA",
+  my: "my-MM",
+  ne: "ne-NP",
+  si: "si-LK",
+  ka: "ka-GE",
+  hy: "hy-AM",
+  az: "az-AZ",
+  kk: "kk-KZ",
+  uz: "uz-UZ",
+  mn: "mn-MN",
+  is: "is-IS",
+  mt: "mt-MT",
+  sq: "sq-AL",
+  mk: "mk-MK",
+  bs: "bs-BA",
+  cy: "cy-GB",
+  ga: "ga-IE",
+  lb: "lb-LU",
+  fo: "fo-FO",
+  ps: "ps-AF",
+  yo: "yo",
+  ig: "ig",
+  ha: "ha",
+  rw: "rw",
+  rn: "rn",
+  so: "so",
+  ti: "ti",
+  om: "om",
+  ky: "ky",
+  tg: "tg",
+  tk: "tk",
+  pa: "pa",
+  or: "or",
+  as: "as",
+  jv: "jv",
+  su: "su",
+  mi: "mi",
+  sm: "sm",
+  to: "to",
+  haw: "haw",
+  br: "br",
+  co: "co",
+  oc: "oc",
+  tt: "tt",
+  cv: "cv",
 }
 
 export function getLocaleHrefLang(locale: Locale): string {
