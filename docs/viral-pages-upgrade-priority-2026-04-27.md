@@ -244,11 +244,11 @@
 ### Batch W:
 | # | Slug | Status |
 |---|---|---|
-| 124 | `ai-agent-escalation-prevention` | [ ] |
-| 125 | `ai-agent-ethical-ai-security` | [ ] |
-| 126 | `ai-agent-federated-learning` | [ ] |
-| 127 | `ai-agent-goal-alignment-security` | [ ] |
-| 128 | `ai-agent-human-in-the-loop-security` | [ ] |
+| 124 | `ai-agent-escalation-prevention` | ✅ |
+| 125 | `ai-agent-ethical-ai-security` | ✅ |
+| 126 | `ai-agent-federated-learning` | ✅ |
+| 127 | `ai-agent-goal-alignment-security` | ✅ |
+| 128 | `ai-agent-human-in-the-loop-security` | ✅ |
 
 ### Batch X:
 | # | Slug | Status |
