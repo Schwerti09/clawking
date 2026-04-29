@@ -204,20 +204,20 @@
 ### Batch S:
 | # | Slug | Status |
 |---|---|---|
-| 104 | `llm-observability` | [ ] |
-| 105 | `llm-output-encoding-security` | [ ] |
-| 106 | `llm-output-schema-validation` | [ ] |
-| 107 | `llm-output-validation` | [ ] |
-| 108 | `llm-output-watermarking` | [ ] |
+| 104 | `llm-observability` | ✅ |
+| 105 | `llm-output-encoding-security` | ✅ |
+| 106 | `llm-output-schema-validation` | ✅ |
+| 107 | `llm-output-validation` | ✅ |
+| 108 | `llm-output-watermarking` | ✅ |
 
 ### Batch T:
 | # | Slug | Status |
 |---|---|---|
-| 109 | `llm-privacy-preserving-computation` | [ ] |
-| 110 | `llm-prompt-leakage-defense` | [ ] |
-| 111 | `llm-quantization-security` | [ ] |
-| 112 | `llm-rate-limiting` | [ ] |
-| 113 | `llm-red-team-automation` | [ ] |
+| 109 | `llm-privacy-preserving-computation` | ✅ |
+| 110 | `llm-prompt-leakage-defense` | ✅ |
+| 111 | `llm-quantization-security` | ✅ |
+| 112 | `llm-rate-limiting` | ✅ |
+| 113 | `llm-red-team-automation` | ✅ |
 
 ### Batch U:
 | # | Slug | Status |
