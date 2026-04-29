@@ -222,11 +222,11 @@
 ### Batch U:
 | # | Slug | Status |
 |---|---|---|
-| 114 | `llm-secure-inference` | [ ] |
-| 115 | `llm-supply-chain-security` | [ ] |
-| 116 | `llm-token-budgeting` | [ ] |
-| 117 | `multi-model-orchestration-security` | [ ] |
-| 118 | `multi-tenant-llm-isolation` | [ ] |
+| 114 | `llm-secure-inference` | ✅ |
+| 115 | `llm-supply-chain-security` | ✅ |
+| 116 | `llm-token-budgeting` | ✅ |
+| 117 | `multi-model-orchestration-security` | ✅ |
+| 118 | `multi-tenant-llm-isolation` | ✅ |
 
 ---
 
