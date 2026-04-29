@@ -137,20 +137,20 @@
 ### Batch L:
 | # | Slug | Status |
 |---|---|---|
-| 69 | `multi-agent-trust` | [ ] |
-| 70 | `multi-agent-trust-frameworks` | [ ] |
-| 71 | `secure-agent-communication` | [ ] |
-| 72 | `secure-agent-deployment` | [ ] |
-| 73 | `security-automation-workflows` | [ ] |
+| 69 | `multi-agent-trust` | ✅ |
+| 70 | `multi-agent-trust-frameworks` | ✅ |
+| 71 | `secure-agent-communication` | ✅ |
+| 72 | `secure-agent-deployment` | ✅ |
+| 73 | `security-automation-workflows` | ✅ |
 
 ### Batch M:
 | # | Slug | Status |
 |---|---|---|
-| 74 | `agent-tool-security` | [ ] |
-| 75 | `agent-memory-security` | [ ] |
-| 76 | `agentic-rag-security` | [ ] |
-| 77 | `agentic-rag-security-patterns` | [ ] |
-| 78 | `agentic-workflow-security` | [ ] |
+| 74 | `agent-tool-security` | ✅ |
+| 75 | `agent-memory-security` | ✅ |
+| 76 | `agentic-rag-security` | ✅ |
+| 77 | `agentic-rag-security-patterns` | ✅ |
+| 78 | `agentic-workflow-security` | ✅ |
 
 ---
 
@@ -159,47 +159,47 @@
 ### Batch N:
 | # | Slug | Status |
 |---|---|---|
-| 79 | `llm-adversarial-examples-defense` | [ ] |
-| 80 | `llm-adversarial-robustness` | [ ] |
-| 81 | `llm-api-gateway-hardening` | [ ] |
-| 82 | `llm-bias-detection-mitigation` | [ ] |
-| 83 | `llm-bias-fairness-auditing` | [ ] |
+| 79 | `llm-adversarial-examples-defense` | ✅ |
+| 80 | `llm-adversarial-robustness` | ✅ |
+| 81 | `llm-api-gateway-hardening` | ✅ |
+| 82 | `llm-bias-detection-mitigation` | ✅ |
+| 83 | `llm-bias-fairness-auditing` | ✅ |
 
 ### Batch O:
 | # | Slug | Status |
 |---|---|---|
-| 84 | `llm-context-manipulation-defense` | [ ] |
-| 85 | `llm-context-poisoning-defense` | [ ] |
-| 86 | `llm-context-window-security` | [ ] |
-| 87 | `llm-continual-learning-security` | [ ] |
-| 88 | `llm-data-encryption-at-rest` | [ ] |
+| 84 | `llm-context-manipulation-defense` | ✅ |
+| 85 | `llm-context-poisoning-defense` | ✅ |
+| 86 | `llm-context-window-security` | ✅ |
+| 87 | `llm-continual-learning-security` | ✅ |
+| 88 | `llm-data-encryption-at-rest` | ✅ |
 
 ### Batch P:
 | # | Slug | Status |
 |---|---|---|
-| 89 | `llm-edge-deployment-security` | [ ] |
-| 90 | `llm-embeddings-security` | [ ] |
-| 91 | `llm-federated-inference` | [ ] |
-| 92 | `llm-fine-tuning-security` | [ ] |
-| 93 | `llm-gateway-advanced-security` | [ ] |
+| 89 | `llm-edge-deployment-security` | ✅ |
+| 90 | `llm-embeddings-security` | ✅ |
+| 91 | `llm-federated-inference` | ✅ |
+| 92 | `llm-fine-tuning-security` | ✅ |
+| 93 | `llm-gateway-advanced-security` | ✅ |
 
 ### Batch Q:
 | # | Slug | Status |
 |---|---|---|
-| 94 | `llm-hallucination-detection` | [ ] |
-| 95 | `llm-inference-cost-security` | [ ] |
-| 96 | `llm-inference-privacy` | [ ] |
-| 97 | `llm-injection-response` | [ ] |
-| 98 | `llm-model-access-control` | [ ] |
+| 94 | `llm-hallucination-detection` | ✅ |
+| 95 | `llm-inference-cost-security` | ✅ |
+| 96 | `llm-inference-privacy` | ✅ |
+| 97 | `llm-injection-response` | ✅ |
+| 98 | `llm-model-access-control` | ✅ |
 
 ### Batch R:
 | # | Slug | Status |
 |---|---|---|
-| 99 | `llm-model-compression-security` | [ ] |
-| 100 | `llm-model-extraction-defense` | [ ] |
-| 101 | `llm-model-versioning-security` | [ ] |
-| 102 | `llm-model-watermarking` | [ ] |
-| 103 | `llm-multilingual-security` | [ ] |
+| 99 | `llm-model-compression-security` | ✅ |
+| 100 | `llm-model-extraction-defense` | ✅ |
+| 101 | `llm-model-versioning-security` | ✅ |
+| 102 | `llm-model-watermarking` | ✅ |
+| 103 | `llm-multilingual-security` | ✅ |
 
 ### Batch S:
 | # | Slug | Status |
