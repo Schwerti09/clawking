@@ -30,22 +30,22 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   };
 }
 
-const NIS2_MEASURES = [
-  { art: 'Art. 21(2)(a)', measure: pick(isDE, 'Risikoanalyse & Informationssicherheitsrichtlinien', 'Risk analysis & information security policies'), status: 'automated', priority: 'P1' },
-  { art: 'Art. 21(2)(b)', measure: pick(isDE, 'Business Continuity, Backup-Management, DR', 'Business continuity, backup management, DR'), status: 'automated', priority: 'P1' },
-  { art: 'Art. 21(2)(c)', measure: pick(isDE, 'Supply Chain Security', 'Supply chain security'), status: 'partial', priority: 'P1' },
-  { art: 'Art. 21(2)(d)', measure: pick(isDE, 'Sicherheit beim Erwerb, Entwicklung, Wartung', 'Security in acquisition, development, maintenance'), status: 'automated', priority: 'P2' },
-  { art: 'Art. 21(2)(e)', measure: pick(isDE, 'Wirksamkeit von Cybersecurity-Maßnahmen', 'Effectiveness of cybersecurity measures'), status: 'automated', priority: 'P1' },
-  { art: 'Art. 21(2)(f)', measure: pick(isDE, 'Grundlegende Cyber-Hygiene, Schulungen', 'Basic cyber hygiene, training'), status: 'manual', priority: 'P2' },
-  { art: 'Art. 21(2)(g)', measure: pick(isDE, 'Kryptografie und Verschlüsselung', 'Cryptography and encryption'), status: 'automated', priority: 'P1' },
-  { art: 'Art. 21(2)(h)', measure: pick(isDE, 'Sicherheit des Personals, Zugangskontrolle', 'Personnel security, access control'), status: 'automated', priority: 'P1' },
-  { art: 'Art. 21(2)(i)', measure: pick(isDE, 'MFA, kontinuierliche Authentifizierung', 'MFA, continuous authentication'), status: 'automated', priority: 'P1' },
-  { art: 'Art. 21(2)(j)', measure: pick(isDE, 'Sicherheit der Kommunikation (Sprache, Video)', 'Communication security (voice, video)'), status: 'partial', priority: 'P3' },
-];
-
 export default function MoltbotNis2Page({ params }: PageProps) {
   const locale = (SUPPORTED_LOCALES.includes(params.lang as Locale) ? params.lang : "de") as Locale
   const isDE = locale === "de"
+
+  const NIS2_MEASURES = [
+    { art: 'Art. 21(2)(a)', measure: pick(isDE, 'Risikoanalyse & Informationssicherheitsrichtlinien', 'Risk analysis & information security policies'), status: 'automated', priority: 'P1' },
+    { art: 'Art. 21(2)(b)', measure: pick(isDE, 'Business Continuity, Backup-Management, DR', 'Business continuity, backup management, DR'), status: 'automated', priority: 'P1' },
+    { art: 'Art. 21(2)(c)', measure: pick(isDE, 'Supply Chain Security', 'Supply chain security'), status: 'partial', priority: 'P1' },
+    { art: 'Art. 21(2)(d)', measure: pick(isDE, 'Sicherheit beim Erwerb, Entwicklung, Wartung', 'Security in acquisition, development, maintenance'), status: 'automated', priority: 'P2' },
+    { art: 'Art. 21(2)(e)', measure: pick(isDE, 'Wirksamkeit von Cybersecurity-Maßnahmen', 'Effectiveness of cybersecurity measures'), status: 'automated', priority: 'P1' },
+    { art: 'Art. 21(2)(f)', measure: pick(isDE, 'Grundlegende Cyber-Hygiene, Schulungen', 'Basic cyber hygiene, training'), status: 'manual', priority: 'P2' },
+    { art: 'Art. 21(2)(g)', measure: pick(isDE, 'Kryptografie und Verschlüsselung', 'Cryptography and encryption'), status: 'automated', priority: 'P1' },
+    { art: 'Art. 21(2)(h)', measure: pick(isDE, 'Sicherheit des Personals, Zugangskontrolle', 'Personnel security, access control'), status: 'automated', priority: 'P1' },
+    { art: 'Art. 21(2)(i)', measure: pick(isDE, 'MFA, kontinuierliche Authentifizierung', 'MFA, continuous authentication'), status: 'automated', priority: 'P1' },
+    { art: 'Art. 21(2)(j)', measure: pick(isDE, 'Sicherheit der Kommunikation (Sprache, Video)', 'Communication security (voice, video)'), status: 'partial', priority: 'P3' },
+  ];
 
   const jsonLd = [
     { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
