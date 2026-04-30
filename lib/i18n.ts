@@ -2727,7 +2727,7 @@ export async function translateRunbook(opts: {
     return { title, summary, locale: "de" as const }
   }
 
-  const localeNames: Record<Locale, string> = {
+  const localeNames: Partial<Record<Locale, string>> = {
     de: "German",
     en: "English",
     es: "Spanish",
@@ -2763,7 +2763,7 @@ export async function translateRunbook(opts: {
   }
 
   const prompt = [
-    `Translate the following runbook title and summary from German to ${localeNames[targetLocale]}.`,
+    `Translate the following runbook title and summary from German to ${localeNames[targetLocale] ?? localeNames.en ?? "English"}.`,
     "Keep technical terms (e.g. SSH, TLS, CORS, CVE, runbook) as-is.",
     "Return ONLY a JSON object: { \"title\": \"...\", \"summary\": \"...\" }",
     "",
