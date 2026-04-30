@@ -22,7 +22,7 @@ export async function generateMetadata(
     ? params.lang
     : "de") as Locale
 
-  const titles: Record<Locale, string> = {
+  const titles: Partial<Record<Locale, string>> = {
     de: "Account | ClawGuru",
     en: "Account | ClawGuru",
     es: "Cuenta | ClawGuru",
@@ -57,7 +57,7 @@ export async function generateMetadata(
     bg: "Акаунт | ClawGuru",
   }
 
-  const descriptions: Record<Locale, string> = {
+  const descriptions: Partial<Record<Locale, string>> = {
     de: "Dein ClawGuru Zugang – Dashboard, Reports, Weekly Digest, Kits.",
     en: "Your ClawGuru access – Dashboard, reports, weekly digest, kits.",
     es: "Tu acceso a ClawGuru – Dashboard, informes, weekly digest, kits.",
@@ -93,8 +93,8 @@ export async function generateMetadata(
   }
 
   return {
-    title: titles[locale] ?? "Account | ClawGuru",
-    description: descriptions[locale] ?? descriptions.de,
+    title: titles[locale] ?? titles.en ?? "Account | ClawGuru",
+    description: descriptions[locale] ?? descriptions.en ?? descriptions.de,
     robots: { index: false, follow: false },
   }
 }
