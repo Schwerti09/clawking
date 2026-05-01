@@ -10,22 +10,44 @@ import { reverseProxyRatelimitMission } from "./reverse-proxy-ratelimit"
 import { backupRestoreDrillMission } from "./backup-restore-drill"
 import { secretsRotationMission } from "./secrets-rotation"
 import { k8sNetworkpolicyMission } from "./k8s-networkpolicy"
+import { nginxAccessControlMission } from "./nginx-access-control"
+import { dockerComposeHardeningMission } from "./docker-compose-hardening"
+import { redisAuthAclMission } from "./redis-auth-acl"
+import { jwtAlgNoneMission } from "./jwt-alg-none"
+import { sessionSecurityMission } from "./session-security"
+import { promptInjectionDefenseMission } from "./prompt-injection-defense"
+import { aiAgentPermissionsMission } from "./ai-agent-permissions"
+import { llmOutputSanitizeMission } from "./llm-output-sanitize"
+import { llmRateLimitingMission } from "./llm-rate-limiting"
 
 // Mission registry. Add new missions here; they become instantly routable via
 // /academy/mission/[slug]. Mission metadata on the hub + track pages is pulled
 // from MISSION_INDEX below, which associates each mission with a track.
 export const MISSIONS: Record<string, Mission> = {
+  // Foundations (beginner)
   [nginxHstsMission.slug]:        nginxHstsMission,
   [sshHardeningMission.slug]:     sshHardeningMission,
   [ufwFirewallMission.slug]:      ufwFirewallMission,
   [letsEncryptMission.slug]:      letsEncryptMission,
   [misconfigHuntMission.slug]:    misconfigHuntMission,
-  [dockerNonrootMission.slug]:        dockerNonrootMission,
-  [postgresHardeningMission.slug]:    postgresHardeningMission,
-  [reverseProxyRatelimitMission.slug]:reverseProxyRatelimitMission,
-  [backupRestoreDrillMission.slug]:   backupRestoreDrillMission,
-  [secretsRotationMission.slug]:      secretsRotationMission,
-  [k8sNetworkpolicyMission.slug]:     k8sNetworkpolicyMission,
+  // Stack Hardening (intermediate)
+  [dockerNonrootMission.slug]:            dockerNonrootMission,
+  [postgresHardeningMission.slug]:        postgresHardeningMission,
+  [reverseProxyRatelimitMission.slug]:    reverseProxyRatelimitMission,
+  [backupRestoreDrillMission.slug]:       backupRestoreDrillMission,
+  [secretsRotationMission.slug]:          secretsRotationMission,
+  [k8sNetworkpolicyMission.slug]:         k8sNetworkpolicyMission,
+  [nginxAccessControlMission.slug]:       nginxAccessControlMission,
+  [dockerComposeHardeningMission.slug]:   dockerComposeHardeningMission,
+  [redisAuthAclMission.slug]:             redisAuthAclMission,
+  // Auth & Identity (auth track)
+  [jwtAlgNoneMission.slug]:       jwtAlgNoneMission,
+  [sessionSecurityMission.slug]:  sessionSecurityMission,
+  // AI Agent Security (advanced track)
+  [promptInjectionDefenseMission.slug]:   promptInjectionDefenseMission,
+  [aiAgentPermissionsMission.slug]:       aiAgentPermissionsMission,
+  [llmOutputSanitizeMission.slug]:        llmOutputSanitizeMission,
+  [llmRateLimitingMission.slug]:          llmRateLimitingMission,
 }
 
 export interface MissionIndexEntry {
@@ -46,12 +68,23 @@ export const MISSION_INDEX: MissionIndexEntry[] = [
   { slug: "lets-encrypt",       track: "beginner",     order: 4, xp: 150, durationMin: 7,  accent: "emerald" },
   { slug: "misconfig-hunt",     track: "beginner",     order: 5, xp: 160, durationMin: 8,  accent: "emerald" },
   // Stack Hardening (intermediate) — containers, databases, runtime hardening
-  { slug: "docker-nonroot",         track: "intermediate", order: 1, xp: 150, durationMin: 7,  accent: "blue" },
-  { slug: "postgres-hardening",     track: "intermediate", order: 2, xp: 180, durationMin: 10, accent: "blue" },
-  { slug: "reverse-proxy-ratelimit",track: "intermediate", order: 3, xp: 200, durationMin: 9,  accent: "blue" },
-  { slug: "backup-restore-drill",   track: "intermediate", order: 4, xp: 220, durationMin: 12, accent: "blue" },
-  { slug: "secrets-rotation",       track: "intermediate", order: 5, xp: 240, durationMin: 13, accent: "blue" },
-  { slug: "k8s-networkpolicy",      track: "intermediate", order: 6, xp: 260, durationMin: 14, accent: "blue" },
+  { slug: "docker-nonroot",          track: "intermediate", order: 1, xp: 150, durationMin: 7,  accent: "blue" },
+  { slug: "postgres-hardening",      track: "intermediate", order: 2, xp: 180, durationMin: 10, accent: "blue" },
+  { slug: "reverse-proxy-ratelimit", track: "intermediate", order: 3, xp: 200, durationMin: 9,  accent: "blue" },
+  { slug: "backup-restore-drill",    track: "intermediate", order: 4, xp: 220, durationMin: 12, accent: "blue" },
+  { slug: "secrets-rotation",        track: "intermediate", order: 5, xp: 240, durationMin: 13, accent: "blue" },
+  { slug: "k8s-networkpolicy",       track: "intermediate", order: 6, xp: 260, durationMin: 14, accent: "blue" },
+  { slug: "nginx-access-control",    track: "intermediate", order: 7, xp: 195, durationMin: 9,  accent: "cyan" },
+  { slug: "docker-compose-hardening",track: "intermediate", order: 8, xp: 210, durationMin: 10, accent: "cyan" },
+  { slug: "redis-auth-acl",          track: "intermediate", order: 9, xp: 230, durationMin: 11, accent: "cyan" },
+  // Auth & Identity (auth track)
+  { slug: "jwt-alg-none",       track: "auth",         order: 1, xp: 200, durationMin: 10, accent: "violet" },
+  { slug: "session-security",   track: "auth",         order: 2, xp: 220, durationMin: 11, accent: "violet" },
+  // AI Agent Security (advanced track)
+  { slug: "prompt-injection-defense", track: "advanced", order: 1, xp: 280, durationMin: 15, accent: "red" },
+  { slug: "ai-agent-permissions",     track: "advanced", order: 2, xp: 260, durationMin: 14, accent: "red" },
+  { slug: "llm-output-sanitize",      track: "advanced", order: 3, xp: 240, durationMin: 13, accent: "red" },
+  { slug: "llm-rate-limiting",        track: "advanced", order: 4, xp: 250, durationMin: 12, accent: "red" },
 ]
 
 export function getMission(slug: string): Mission | undefined {
