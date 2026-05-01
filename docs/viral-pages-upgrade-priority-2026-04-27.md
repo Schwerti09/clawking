@@ -280,11 +280,11 @@
 ### Batch AA:
 | # | Slug | Status |
 |---|---|---|
-| 144 | `ai-agent-testing-strategies` | [ ] |
-| 145 | `ai-agent-threat-intelligence` | [ ] |
-| 146 | `ai-agent-threat-model` | [ ] |
-| 147 | `ai-agent-tool-poisoning-prevention` | [ ] |
-| 148 | `ai-agent-vulnerability-management` | [ ] |
+| 144 | `ai-agent-testing-strategies` | ✅ |
+| 145 | `ai-agent-threat-intelligence` | ✅ |
+| 146 | `ai-agent-threat-model` | ✅ |
+| 147 | `ai-agent-tool-poisoning-prevention` | ✅ |
+| 148 | `ai-agent-vulnerability-management` | ✅ |
 
 ### Batch AB:
 | # | Slug | Status |
