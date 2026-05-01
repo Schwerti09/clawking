@@ -55,8 +55,8 @@ export const HOSTING_PROVIDERS = [
 ]
 
 export const LEGAL_INFO = {
-  company: "ClawGuru Security Operations – Rolf Schwertfechter (Einzelunternehmen)",
-  owner: "Rolf Schwertfechter",
+  company: "ClawGuru Security Operations – R. Schwertfechter (Einzelunternehmen)",
+  owner: "R. Schwertfechter",
   address: "Karklandsweg 1",
   city: "26553 Dornum, Deutschland",
   email: "support@clawguru.org",

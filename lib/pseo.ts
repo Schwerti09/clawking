@@ -40,7 +40,7 @@ export type Runbook = {
 const LASTMOD = "2026-02-25"
 
 export const DEFAULT_AUTHOR: RunbookAuthor = {
-  name: "Rolf Schwertfechter",
+  name: "R. Schwertfechter",
   role: "Principal Ops-Engineer & Security Architect",
   experience: "15+ Jahre Erfahrung als Ops-Engineer, Incident Responder und Security Architect. Betreibt produktive Infrastruktur auf Hetzner, AWS, GCP und Kubernetes.",
   sources: [
@@ -773,7 +773,7 @@ curl -I https://your-domain | grep -Ei "content-security-policy|strict-transport
         "Incident-Postmortems zeigen: 60% der Rückfälle entstehen durch fehlende Guardrails, nicht durch falschen Fix.",
       ]},
 
-      { kind: "callout", tone: "tip", title: "Mein persönlicher Tipp als Ops-Engineer", text: `Nach ${r.title}: Setze sofort einen Monitoring-Alert auf die kritischen Metriken (5xx-Rate, Latenz, Auth-Fehler). Ein Fix ohne Alert ist nur halb fertig. – Rolf Schwertfechter` },
+      { kind: "callout", tone: "tip", title: "Mein persönlicher Tipp als Ops-Engineer", text: `Nach ${r.title}: Setze sofort einen Monitoring-Alert auf die kritischen Metriken (5xx-Rate, Latenz, Auth-Fehler). Ein Fix ohne Alert ist nur halb fertig. – R. Schwertfechter` },
     ]
   }
 
@@ -830,7 +830,7 @@ curl -I https://your-domain | grep -Ei "content-security-policy|strict-transport
         "Viele 5xx entstehen durch fehlende Timeouts, nicht durch Bugs.",
       ]},
 
-      { kind: "callout", tone: "tip", title: "Mein persönlicher Tipp als Ops-Engineer", text: `Bei '${error}': Immer zuerst Logs → dann Metriken → dann Code. Nie umgekehrt. Und: Ein Re-Check nach 15 Minuten gibt mehr Sicherheit als jede statische Checkliste. – Rolf Schwertfechter` },
+      { kind: "callout", tone: "tip", title: "Mein persönlicher Tipp als Ops-Engineer", text: `Bei '${error}': Immer zuerst Logs → dann Metriken → dann Code. Nie umgekehrt. Und: Ein Re-Check nach 15 Minuten gibt mehr Sicherheit als jede statische Checkliste. – R. Schwertfechter` },
     ]
   }
 
@@ -855,7 +855,7 @@ curl -I https://your-domain | grep -Ei "content-security-policy|strict-transport
       "Rollback-Plan fehlt – bei Config-Änderungen genauso wichtig wie bei Code.",
     ]},
 
-    { kind: "callout", tone: "tip", title: "Mein persönlicher Tipp als Ops-Engineer", text: `Für '${r.title}': Jede Konfigurationsänderung in einer Staging-Umgebung testen, bevor sie in Produktion geht. Klingt trivial – wird aber in 70% der Fälle übersprungen. – Rolf Schwertfechter` },
+    { kind: "callout", tone: "tip", title: "Mein persönlicher Tipp als Ops-Engineer", text: `Für '${r.title}': Jede Konfigurationsänderung in einer Staging-Umgebung testen, bevor sie in Produktion geht. Klingt trivial – wird aber in 70% der Fälle übersprungen. – R. Schwertfechter` },
   ]
 }
 
