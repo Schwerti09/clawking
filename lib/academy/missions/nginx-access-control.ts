@@ -296,7 +296,9 @@ export const nginxAccessControlMission: Mission = {
       }
 
       // Determine if IP is in allowed range
-      const isAllowed = ip.startsWith("10.") || ip.startsWith("172.16.") || ip.startsWith("172.17.") || ip.startsWith("172.18.")
+      const isAllowed = ip.startsWith("10.") ||
+        // 172.16.0.0/12 covers 172.16.x.x through 172.31.x.x
+        (ip.startsWith("172.") && (() => { const second = parseInt(ip.split(".")[1], 10); return second >= 16 && second <= 31 })())
 
       if (!isAllowed) {
         env.PROBE_BLOCKED = "yes"
