@@ -297,7 +297,7 @@ export const dockerComposeHardeningMission: Mission = {
           bold("Docker Compose Security Audit") + "\r\n" +
           lines.join("\r\n") + "\r\n" +
           (fixed === 6 ? green(`Result: PASS — all 6 issues resolved. Production-ready.`) : yellow(`Result: ${fixed}/6 fixed — complete the remaining items.`)),
-        goalMet: fixed === 6 ? undefined : undefined,
+        goalMet: fixed === 6 ? "audit" : undefined,
       }
     },
     hint: ({ state }) => {
