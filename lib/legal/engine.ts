@@ -45,7 +45,7 @@ const EU_COUNTRIES = new Set([
   "SK",
 ])
 
-const LOCALE_NAMES: Record<Locale, string> = {
+const LOCALE_NAMES: Partial<Record<Locale, string>> = {
   de: "German",
   en: "English",
   es: "Spanish",
@@ -295,7 +295,7 @@ async function callAi(prompt: string): Promise<string | null> {
 }
 
 function buildPrompt(type: LegalDocumentType, locale: Locale, region: LegalRegion): string {
-  const language = LOCALE_NAMES[locale]
+  const language = LOCALE_NAMES[locale] ?? "English"
   const jurisdictionByRegion: Record<LegalRegion, string> = {
     DE: "German law (TMG/TTDSG) and GDPR",
     EU: "GDPR (EU)",

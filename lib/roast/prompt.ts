@@ -1,7 +1,7 @@
 import type { Locale } from "@/lib/i18n"
 
 /** Human-readable output language for the model (matches UI locale). */
-const LOCALE_OUTPUT_LANGUAGE: Record<Locale, string> = {
+const LOCALE_OUTPUT_LANGUAGE: Partial<Record<Locale, string>> = {
   de: "German",
   en: "English",
   es: "Spanish",
