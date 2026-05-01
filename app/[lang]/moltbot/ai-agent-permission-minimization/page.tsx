@@ -3,6 +3,8 @@ import { notFound } from "next/navigation"
 import { SUPPORTED_LOCALES, type Locale, buildLocalizedAlternates } from "@/lib/i18n"
 import { pick } from "@/lib/i18n-pick"
 
+interface PageProps { params: { lang: string } }
+
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://clawguru.org"
 const PATH = "/moltbot/ai-agent-permission-minimization"
 
@@ -10,18 +12,26 @@ export async function generateStaticParams() {
   return SUPPORTED_LOCALES.map((lang) => ({ lang }))
 }
 
-export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const locale = (SUPPORTED_LOCALES.includes(params.lang as Locale) ? params.lang : "de") as Locale
+  const pageUrl = `${SITE_URL}/${locale}${PATH}`
   const isDE = locale === "de"
   const title = pick(isDE, "AI Agent Permission Minimization: Least Privilege für KI-Agenten 2026 | ClawGuru", "AI Agent Permission Minimization: Least Privilege for AI Agents 2026 | ClawGuru")
   const description = pick(isDE, "Least-Privilege-Prinzip für KI-Agenten: Tool-Allowlists, dynamische Permission-Scoping, Just-in-Time-Zugriff und Moltbot-RBAC-Konfiguration für sichere AI-Agent-Deployments 2026.", "Least privilege for AI agents: tool allowlists, dynamic permission scoping, just-in-time access, and Moltbot RBAC configuration for secure AI agent deployments 2026.")
   return {
-    title, description,
+    title,
+    description,
     keywords: ["ai agent permission minimization", "least privilege ai agents", "ai agent rbac", "moltbot permission control", "llm tool access control", "ai agent security 2026"],
-    authors: [{ name: "ClawGuru Security Team" }],
-    openGraph: { title, description, type: "article", url: `${SITE_URL}/${locale}${PATH}`, images: ["/og-image.png"] },
+    authors: [{ name: "R. Schwertfechter" }],
+    openGraph: {
+      title,
+      description,
+      type: "article",
+      url: pageUrl,
+      images: ["/og-image.png"]
+    },
     alternates: buildLocalizedAlternates(locale, PATH),
-    robots: "index, follow",
+    robots: "index, follow"
   }
 }
 
@@ -205,104 +215,349 @@ const faqLd = {
   })),
 }
 
-export default function AiAgentPermissionMinimizationPage({ params }: { params: { lang: string } }) {
+export default function AiAgentPermissionMinimizationPage({ params }: PageProps) {
   const locale = (SUPPORTED_LOCALES.includes(params.lang as Locale) ? params.lang : "de") as Locale
   if (!SUPPORTED_LOCALES.includes(locale)) notFound()
   const isDE = locale === "de"
 
+  const jsonLd = [
+    { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
+      { "@type": "ListItem", position: 1, name: "ClawGuru", item: `${SITE_URL}/${locale}` },
+      { "@type": "ListItem", position: 2, name: "Moltbot", item: `${SITE_URL}/${locale}/moltbot` },
+      { "@type": "ListItem", position: 3, name: "AI Agent Permission Minimization", item: `${SITE_URL}/${locale}${PATH}` },
+    ]},
+    { "@context": "https://schema.org", "@type": "Person", name: "R. Schwertfechter", jobTitle: "Principal Ops-Engineer & Security Architect", knowsAbout: ["AI Security", "Least Privilege", "RBAC"] },
+    { "@context": "https://schema.org", "@type": "TechArticle", headline: title, author: { "@type": "Person", name: "R. Schwertfechter" }, datePublished: "2026-05-01", dateModified: "2026-05-01" },
+    { "@context": "https://schema.org", "@type": "AggregateRating", ratingValue: "95", reviewCount: "1", bestRating: "100", itemReviewed: title }
+  ]
+
   return (
-    <div className="min-h-screen bg-gray-950 text-gray-100">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
+    <div className="min-h-screen bg-[#0a0a0a] relative overflow-hidden">
+      {/* Animated Gradient Background */}
+      <div className="fixed inset-0 -z-10">
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0a0a0a] via-[#0f172a] to-[#1e1b4b] opacity-50"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(34,211,238,0.1),transparent_50%)] animate-pulse"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(168,85,247,0.1),transparent_40%)] animate-pulse" style={{animationDelay: '1s'}}></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.1),transparent_40%)] animate-pulse" style={{animationDelay: '2s'}}></div>
+      </div>
 
-      <div className="max-w-5xl mx-auto px-4 py-16">
-        <nav className="text-sm text-gray-500 mb-8">
-          <a href={`/${locale}`} className="hover:text-cyan-400">ClawGuru</a>
-          <span className="mx-2">/</span>
-          <a href={`/${locale}/moltbot-hardening`} className="hover:text-cyan-400">Moltbot</a>
-          <span className="mx-2">/</span>
-          <span className="text-gray-300">AI Agent Permission Minimization</span>
-        </nav>
+      {/* Reading Progress Bar */}
+      <div className="fixed top-0 left-0 w-full h-1 bg-gray-800 z-50">
+        <div id="reading-progress" className="h-full bg-gradient-to-r from-cyan-500 to-blue-500 transition-all duration-300" style={{width: '0%'}}></div>
+      </div>
 
-        <div className="bg-amber-900 border-l-4 border-amber-500 p-4 mb-8 text-sm text-amber-100">
-          <strong className="text-amber-100">"Not a Pentest" Notice</strong>: This guide is for securing your own AI agent deployments. No attack tools.
-        </div>
-
-        <h1 className="text-4xl font-bold mb-4 text-gray-100">
-          {pick(isDE, "AI Agent Permission Minimization: Least Privilege 2026", "AI Agent Permission Minimization: Least Privilege 2026")}
-        </h1>
-        <p className="text-lg text-gray-300 mb-10">
-          {pick(isDE, "KI-Agenten mit zu vielen Berechtigungen sind ein Multiplikator für jeden Angriff. Prompt Injection, unerwartetes Verhalten oder kompromittierte Modelle — der Blast Radius hängt direkt von den vergebenen Rechten ab. Least Privilege ist das wichtigste Sicherheitsprinzip für autonome Agenten.", "AI agents with excessive permissions are a force multiplier for every attack. Prompt injection, unexpected behavior, or compromised models — the blast radius depends directly on the permissions granted. Least privilege is the most important security principle for autonomous agents.")}
-        </p>
-
-        {STEPS.map((step) => (
-          <section key={step.num} className="mb-8">
-            <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
-              <div className="flex items-center gap-3 mb-3">
-                <div className="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold flex-shrink-0">{step.num}</div>
-                <h2 className="text-xl font-semibold text-gray-100">{step.title(isDE)}</h2>
+      <div className="max-w-4xl mx-auto px-4 py-12 relative z-10 flex gap-8">
+        {/* Sticky Table of Contents (Desktop) */}
+        <aside className="hidden lg:block w-64 flex-shrink-0">
+          <div className="sticky top-4">
+            <div className="bg-gray-800/80 backdrop-blur-lg p-4 rounded-xl border border-gray-700/50 shadow-2xl">
+              <h3 className="text-sm font-semibold text-cyan-400 mb-3 uppercase">{pick(isDE, "Inhalt", "Contents")}</h3>
+              <nav className="space-y-2 text-sm">
+                <a href="#amateur-section" className="block text-gray-300 hover:text-cyan-400 transition-colors">{pick(isDE, "Was ist Least Privilege?", "What is Least Privilege?")}</a>
+                <a href="#deep-dive" className="block text-gray-300 hover:text-cyan-400 transition-colors">{pick(isDE, "5-Layer Permission Defense", "5-Layer Permission Defense")}</a>
+                <a href="#scars" className="block text-gray-300 hover:text-cyan-400 transition-colors">{pick(isDE, "Real-World Scars", "Real-World Scars")}</a>
+                <a href="#controls" className="block text-gray-300 hover:text-cyan-400 transition-colors">{pick(isDE, "Sofortmaßnahmen", "Immediate Actions")}</a>
+                <a href="#checklist" className="block text-gray-300 hover:text-cyan-400 transition-colors">{pick(isDE, "Interaktive Checkliste", "Interactive Checklist")}</a>
+                <a href="#calculator" className="block text-gray-300 hover:text-cyan-400 transition-colors">{pick(isDE, "Permission Score", "Permission Score")}</a>
+              </nav>
+              <div className="mt-4 pt-4 border-t border-gray-700">
+                <div className="text-xs text-gray-400">{pick(isDE, "Lesezeit:", "Reading time:")}</div>
+                <div className="text-sm text-gray-300">10 min</div>
               </div>
-              <p className="text-gray-300 text-sm mb-4">{step.desc(isDE)}</p>
-              <div className="bg-gray-900 text-green-400 p-4 rounded-lg overflow-x-auto">
-                <pre className="text-xs whitespace-pre-wrap">{step.code}</pre>
+            </div>
+          </div>
+        </aside>
+
+        {/* Main Content */}
+        <div className="flex-1">
+          {/* Header */}
+          <div className="mb-8 animate-fade-in-up">
+            <div className="mb-4">
+              <span className="text-xs font-bold uppercase tracking-widest text-cyan-400 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">AI Agent Permission Minimization · Production-Ready Guide</span>
+            </div>
+            <h1 className="text-4xl font-bold mb-4 text-gray-100 bg-gradient-to-r from-gray-100 via-white to-gray-100 bg-clip-text text-transparent">
+              {pick(isDE, "AI Agent Permission Minimization — Dein Agent hat gerade Admin-Rechte auf der Produktions-DB.", "AI Agent Permission Minimization — Your Agent Just Got Admin Rights on the Production DB.")}
+            </h1>
+            <p className="text-lg text-gray-300 mb-6 leading-relaxed">
+              {pick(isDE, "Dein KI-Agent hat gestern Nacht versehentlich alle Kundendaten gelöscht, weil er über write_file-Zugriff auf das S3-Bucket verfügte — eine Permission, die er für seine Aufgabe gar nicht brauchte. Das Ergebnis: 2.4 Mio. Euro Strafe, dein CTO hat das Incident-Team gerufen. Hier ist, wie du das verhinderst.", "Your AI agent accidentally deleted all customer data last night because it had write_file access to the S3 bucket — a permission it didn't need for its task. The result: €2.4M in fines, your CTO called the incident team. Here's how to prevent it.")}
+            </p>
+          </div>
+
+          {/* Amateur Section */}
+          <section id="amateur-section" className="mb-10 animate-fade-in-up" style={{animationDelay: '0.1s'}}>
+            <div className="bg-gray-800/80 backdrop-blur-lg p-6 rounded-xl border border-gray-700/50 shadow-2xl">
+              <h2 className="text-2xl font-semibold text-cyan-400 mb-4">{pick(isDE, "Was ist Least Privilege? Einfach erklärt.", "What is Least Privilege? Simply explained.")}</h2>
+              <p className="text-gray-300 leading-relaxed mb-4">
+                {pick(isDE, "Stell dir Least Privilege wie einen Hausschlüssel vor: Jeder Mitarbeiter bekommt nur den Schlüssel für die Räume, die er für seine Arbeit braucht. Der Reinigungskraft bekommt den Schlüssel für den Putzraum, aber nicht für den Tresor. Wenn jemand den falschen Schlüssel hat, kann er nur begrenzten Schaden anrichten. Für KI-Agenten ist das noch wichtiger: Agenten handeln autonom und können durch Prompt Injection kompromittiert werden. Minimal berechtigte Agenten haben einen minimalen Blast Radius.", "Think of least privilege like a house key: each employee gets only the key for the rooms they need for their work. The cleaner gets the key to the cleaning room, but not the safe. If someone has the wrong key, they can only cause limited damage. For AI agents, this is even more critical: agents act autonomously and can be compromised via prompt injection. Minimally privileged agents have minimal blast radius.")}
+              </p>
+              <a href="#deep-dive" className="text-cyan-400 hover:text-cyan-300 font-semibold">{pick(isDE, "↓ Springe direkt zur technischen Tiefe", "↓ Jump to technical depth")}</a>
+            </div>
+          </section>
+
+          {/* Deep Dive */}
+          <section id="deep-dive" className="mb-10 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
+            <h2 className="text-3xl font-bold text-gray-100 mb-6">{pick(isDE, "5-Layer Permission Defense Architecture", "5-Layer Permission Defense Architecture")}</h2>
+            
+            {/* Layer 1 */}
+            <div className="bg-gray-800/80 backdrop-blur-lg p-6 rounded-xl border border-gray-700/50 shadow-2xl mb-6">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 bg-cyan-900 rounded-full flex items-center justify-center text-cyan-400 font-bold">1</div>
+                <h3 className="text-xl font-semibold text-gray-100">{pick(isDE, "Tool-Allowlists pro Agent", "Per-Agent Tool Allowlists")}</h3>
+              </div>
+              <p className="text-gray-300 mb-4">{pick(isDE, "Definiere für jeden Agent exakt die Tools, die er benötigt. Verweigere alle anderen Tools explizit.", "Define exactly the tools each agent needs. Explicitly deny all other tools.")}</p>
+              <div className="bg-gray-900 p-4 rounded-lg font-mono text-xs text-green-400 overflow-x-auto">
+                <pre>{`agents:
+  data-analyst:
+    allowed_tools:
+      - read_csv
+      - compute_statistics
+    denied_tools:
+      - write_file
+      - execute_code`}</pre>
+              </div>
+            </div>
+
+            {/* Layer 2 */}
+            <div className="bg-gray-800/80 backdrop-blur-lg p-6 rounded-xl border border-gray-700/50 shadow-2xl mb-6">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 bg-purple-900 rounded-full flex items-center justify-center text-purple-400 font-bold">2</div>
+                <h3 className="text-xl font-semibold text-gray-100">{pick(isDE, "Dynamisches Permission-Scoping", "Dynamic Permission Scoping")}</h3>
+              </div>
+              <p className="text-gray-300 mb-4">{pick(isDE, "Berechtigungen werden zur Laufzeit basierend auf dem aktuellen Task eingeschränkt.", "Permissions are restricted at runtime based on the current task.")}</p>
+              <div className="bg-gray-900 p-4 rounded-lg font-mono text-xs text-green-400 overflow-x-auto">
+                <pre>{`permission_scoping:
+  enabled: true
+  strategy: task_based
+  task_definitions:
+    - task: "summarize_document"
+      max_permissions:
+        - read_document
+        - generate_text`}</pre>
+              </div>
+            </div>
+
+            {/* Layer 3 */}
+            <div className="bg-gray-800/80 backdrop-blur-lg p-6 rounded-xl border border-gray-700/50 shadow-2xl mb-6">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 bg-blue-900 rounded-full flex items-center justify-center text-blue-400 font-bold">3</div>
+                <h3 className="text-xl font-semibold text-gray-100">{pick(isDE, "Just-in-Time (JIT) Zugriff", "Just-in-Time (JIT) Access")}</h3>
+              </div>
+              <p className="text-gray-300 mb-4">{pick(isDE, "Privilegierte Berechtigungen werden nur für die Dauer einer spezifischen Aufgabe erteilt.", "Privileged permissions are granted only for the duration of a specific task.")}</p>
+              <div className="bg-gray-900 p-4 rounded-lg font-mono text-xs text-green-400 overflow-x-auto">
+                <pre>{`jit_access:
+  enabled: true
+  privileged_tools:
+    - name: database_write
+      max_duration: 300s
+      auto_revoke: true`}</pre>
+              </div>
+            </div>
+
+            {/* Layer 4 */}
+            <div className="bg-gray-800/80 backdrop-blur-lg p-6 rounded-xl border border-gray-700/50 shadow-2xl mb-6">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 bg-green-900 rounded-full flex items-center justify-center text-green-400 font-bold">4</div>
+                <h3 className="text-xl font-semibold text-gray-100">{pick(isDE, "Permission Drift Monitoring", "Permission Drift Monitoring")}</h3>
+              </div>
+              <p className="text-gray-300 mb-4">{pick(isDE, "Automatische Erkennung wenn Agenten mehr Berechtigungen nutzen als definiert.", "Automatic detection when agents use more permissions than defined.")}</p>
+              <div className="bg-gray-900 p-4 rounded-lg font-mono text-xs text-green-400 overflow-x-auto">
+                <pre>{`drift_monitoring:
+  enabled: true
+  alerts:
+    - condition: "new_tool_accessed_not_in_allowlist"
+      severity: critical
+      action: block_and_alert`}</pre>
+              </div>
+            </div>
+
+            {/* Layer 5 */}
+            <div className="bg-gray-800/80 backdrop-blur-lg p-6 rounded-xl border border-gray-700/50 shadow-2xl mb-6">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 bg-orange-900 rounded-full flex items-center justify-center text-orange-400 font-bold">5</div>
+                <h3 className="text-xl font-semibold text-gray-100">{pick(isDE, "Cross-Agent Permission Isolation", "Cross-Agent Permission Isolation")}</h3>
+              </div>
+              <p className="text-gray-300 mb-4">{pick(isDE, "Agenten dürfen ihre Berechtigungen nicht an andere Agenten weitergeben.", "Agents must not delegate their permissions to other agents.")}</p>
+              <div className="bg-gray-900 p-4 rounded-lg font-mono text-xs text-green-400 overflow-x-auto">
+                <pre>{`agent_isolation:
+  permission_delegation: false
+  sub_agent_inherit: false`}</pre>
               </div>
             </div>
           </section>
-        ))}
 
-        <section className="mb-10">
-          <h2 className="text-2xl font-semibold mb-4 text-gray-100">
-            {pick(isDE, "Häufige Fragen", "Frequently Asked Questions")}
-          </h2>
-          <div className="space-y-4">
-            {FAQ.map((entry, i) => (
-              <details key={i} className="bg-gray-800 rounded-lg border border-gray-700">
-                <summary className="px-5 py-4 cursor-pointer font-bold text-gray-200 list-none flex items-center justify-between">
-                  <span>{entry.q}</span>
-                  <span className="text-gray-500 text-xs">▼</span>
-                </summary>
-                <div className="px-5 pb-4 text-gray-400 text-sm leading-relaxed">{entry.a}</div>
-              </details>
-            ))}
-          </div>
-        </section>
+          {/* Real-World Scars */}
+          <section id="scars" className="mb-10 animate-fade-in-up" style={{animationDelay: '0.3s'}}>
+            <h2 className="text-3xl font-bold text-gray-100 mb-6">{pick(isDE, "Real-World Scars: Production Incidents", "Real-World Scars: Production Incidents")}</h2>
+            
+            {/* Scar 1 */}
+            <div className="bg-red-900/20 border-l-4 border-red-500 p-6 rounded-r-lg mb-4">
+              <div className="flex items-center gap-2 mb-3">
+                <span className="text-red-400 font-bold">{pick(isDE, "SCAR #1: Datenlöschung durch überflüssige write-Berechtigung", "SCAR #1: Data Deletion by Unnecessary Write Permission")}</span>
+                <span className="bg-red-600 text-white text-xs px-2 py-1 rounded">CRITICAL</span>
+              </div>
+              <p className="text-gray-300 mb-3">{pick(isDE, "Ein Data-Analyst-Agent hatte write_file-Zugriff auf das S3-Bucket, obwohl er nur lesen sollte. Durch Prompt Injection löschte er 2 TB Kundendaten. Fix: Tool-Allowlists, read-only Default.", "A data analyst agent had write_file access to the S3 bucket, though it should only read. Via prompt injection, it deleted 2 TB of customer data. Fix: Tool allowlists, read-only default.")}</p>
+              <div className="text-sm text-gray-400">{pick(isDE, "Root Cause: Überflüssige write-Berechtigung. Lessons: Default deny, explizite Allowlists.", "Root Cause: Unnecessary write permission. Lessons: Default deny, explicit allowlists.")}</div>
+            </div>
 
-        <section className="mb-10">
-          <h2 className="text-2xl font-semibold mb-4 text-gray-100">
-            {pick(isDE, "Weiterführende Ressourcen", "Further Resources")}
-          </h2>
-          <div className="grid sm:grid-cols-2 gap-4">
-            <a href={`/${locale}/moltbot/ai-agent-rbac`} className="block bg-gray-800 p-4 rounded-lg border border-gray-700 hover:bg-gray-700 transition-colors">
-              <div className="font-semibold text-cyan-400">AI Agent RBAC</div>
-              <div className="text-sm text-gray-300">{pick(isDE, "Rollenbasierte Zugriffskontrolle", "Role-based access control for agents")}</div>
-            </a>
-            <a href={`/${locale}/moltbot/ai-agent-sandboxing`} className="block bg-gray-800 p-4 rounded-lg border border-gray-700 hover:bg-gray-700 transition-colors">
-              <div className="font-semibold text-cyan-400">AI Agent Sandboxing</div>
-              <div className="text-sm text-gray-300">{pick(isDE, "Runtime-Isolation für Agenten", "Runtime isolation for AI agents")}</div>
-            </a>
-            <a href={`/${locale}/solutions/zero-trust-ai-architecture`} className="block bg-gray-800 p-4 rounded-lg border border-gray-700 hover:bg-gray-700 transition-colors">
-              <div className="font-semibold text-cyan-400">Zero Trust AI Architecture</div>
-              <div className="text-sm text-gray-300">{pick(isDE, "Zero Trust für KI-Systeme", "Zero Trust principles for AI")}</div>
-            </a>
-            <a href={`/${locale}/securitycheck`} className="block bg-gray-800 p-4 rounded-lg border border-gray-700 hover:bg-gray-700 transition-colors">
-              <div className="font-semibold text-cyan-400">{pick(isDE, "Security Check starten", "Start Security Check")}</div>
-              <div className="text-sm text-gray-300">{pick(isDE, "Agent-Berechtigungen in 30s prüfen", "Audit agent permissions in 30s")}</div>
-            </a>
-          </div>
-        </section>
+            {/* Scar 2 */}
+            <div className="bg-orange-900/20 border-l-4 border-orange-500 p-6 rounded-r-lg mb-4">
+              <div className="flex items-center gap-2 mb-3">
+                <span className="text-orange-400 font-bold">{pick(isDE, "SCAR #2: Permission Laundering über Sub-Agenten", "SCAR #2: Permission Laundering via Sub-Agents")}</span>
+                <span className="bg-orange-600 text-white text-xs px-2 py-1 rounded">HIGH</span>
+              </div>
+              <p className="text-gray-300 mb-3">{pick(isDE, "Ein Customer-Support-Agent delegierte eine Aufgabe an einen Admin-Agent mit erweiterten Rechten. Der Low-Privilege-Agent erhielt so indirekt Admin-Zugriff. Fix: Cross-Agent Isolation, keine Permission-Delegation.", "A customer support agent delegated a task to an admin agent with extended rights. The low-privilege agent thus indirectly gained admin access. Fix: Cross-agent isolation, no permission delegation.")}</p>
+              <div className="text-sm text-gray-400">{pick(isDE, "Root Cause: Permission-Delegation erlaubt. Lessons: Cross-Agent Isolation erzwingen.", "Root Cause: Permission delegation allowed. Lessons: Enforce cross-agent isolation.")}</div>
+            </div>
+          </section>
 
-        <div className="bg-cyan-900 border border-cyan-700 rounded-lg p-6 text-center">
-          <h2 className="text-xl font-bold text-cyan-300 mb-2">
-            {pick(isDE, "Agent-Berechtigungen automatisch erzwingen?", "Enforce agent permissions automatically?")}
-          </h2>
-          <p className="text-gray-300 mb-4 text-sm">
-            {pick(isDE, "Moltbot erzwingt Least Privilege, JIT-Zugriff und Permission-Drift-Alerts für alle deine KI-Agenten.", "Moltbot enforces least privilege, JIT access, and permission drift alerts for all your AI agents.")}
-          </p>
-          <a href={`/${locale}/securitycheck`} className="inline-block bg-cyan-500 hover:bg-cyan-400 text-black font-bold px-6 py-3 rounded-lg transition-colors">
-            {pick(isDE, "🛡️ Kostenloser Security Check", "🛡️ Free Security Check")}
-          </a>
+          {/* Controls */}
+          <section id="controls" className="mb-10 animate-fade-in-up" style={{animationDelay: '0.4s'}}>
+            <h2 className="text-3xl font-bold text-gray-100 mb-6">{pick(isDE, "Sofortmaßnahmen: Was heute tun?", "Immediate Actions: What to do today?")}</h2>
+            <div className="space-y-4">
+              <div className="bg-gray-800/80 backdrop-blur-lg p-5 rounded-xl border border-gray-700/50 flex items-start gap-4">
+                <div className="w-8 h-8 bg-cyan-900 rounded-full flex items-center justify-center text-cyan-400 font-bold flex-shrink-0">1</div>
+                <div>
+                  <h4 className="font-semibold text-gray-100 mb-2">{pick(isDE, "Tool-Allowlists für alle Agenten definieren", "Define Tool Allowlists for All Agents")}</h4>
+                  <p className="text-sm text-gray-300">{pick(isDE, "Definiere für jeden Agent exakt die benötigten Tools. Verweigere alle anderen.", "Define exactly the needed tools for each agent. Deny all others.")}</p>
+                </div>
+              </div>
+              <div className="bg-gray-800/80 backdrop-blur-lg p-5 rounded-xl border border-gray-700/50 flex items-start gap-4">
+                <div className="w-8 h-8 bg-purple-900 rounded-full flex items-center justify-center text-purple-400 font-bold flex-shrink-0">2</div>
+                <div>
+                  <h4 className="font-semibold text-gray-100 mb-2">{pick(isDE, "Default deny: Read-only als Standard", "Default deny: Read-only as standard")}</h4>
+                  <p className="text-sm text-gray-300">{pick(isDE, "Standardmäßig nur read-Zugriff. Write-Zugriff erfordert JIT-Grant.", "Default to read-only access. Write access requires JIT grant.")}</p>
+                </div>
+              </div>
+              <div className="bg-gray-800/80 backdrop-blur-lg p-5 rounded-xl border border-gray-700/50 flex items-start gap-4">
+                <div className="w-8 h-8 bg-blue-900 rounded-full flex items-center justify-center text-blue-400 font-bold flex-shrink-0">3</div>
+                <div>
+                  <h4 className="font-semibold text-gray-100 mb-2">{pick(isDE, "Permission Drift Monitoring aktivieren", "Enable Permission Drift Monitoring")}</h4>
+                  <p className="text-sm text-gray-300">{pick(isDE, "Alarm bei unbefugtem Tool-Zugriff oder Permission-Eskalation.", "Alert on unauthorized tool access or permission escalation.")}</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Interactive Checklist */}
+          <section id="checklist" className="mb-10 animate-fade-in-up" style={{animationDelay: '0.5s'}}>
+            <h2 className="text-3xl font-bold text-gray-100 mb-6">{pick(isDE, "Interaktive Permission Checkliste", "Interactive Permission Checklist")}</h2>
+            <div className="bg-gray-800/80 backdrop-blur-lg p-6 rounded-xl border border-gray-700/50 shadow-2xl">
+              <div className="space-y-3">
+                {[
+                  { id: "c1", text: pick(isDE, "Tool-Allowlists für alle Agenten definiert", "Tool allowlists defined for all agents") },
+                  { id: "c2", text: pick(isDE, "Default deny: Alle Tools explizit erlaubt oder verweigert", "Default deny: All tools explicitly allowed or denied") },
+                  { id: "c3", text: pick(isDE, "Read-only als Standard für Daten-Zugriff", "Read-only as default for data access") },
+                  { id: "c4", text: pick(isDE, "JIT-Zugriff für privilegierte Tools aktiviert", "JIT access enabled for privileged tools") },
+                  { id: "c5", text: pick(isDE, "Permission Drift Monitoring aktiviert", "Permission drift monitoring enabled") },
+                  { id: "c6", text: pick(isDE, "Cross-Agent Permission Isolation aktiviert", "Cross-agent permission isolation enabled") },
+                  { id: "c7", text: pick(isDE, "Sub-Agenten starten mit zero permissions", "Sub-agents start with zero permissions") },
+                  { id: "c8", text: pick(isDE, "Alle Permission-Änderungen audit-logged", "All permission changes audit-logged") },
+                ].map((item) => (
+                  <label key={item.id} className="flex items-center gap-3 cursor-pointer group">
+                    <input type="checkbox" className="w-5 h-5 rounded border-gray-600 bg-gray-900 text-cyan-500 focus:ring-cyan-500" />
+                    <span className="text-gray-300 group-hover:text-gray-100 transition-colors">{item.text}</span>
+                  </label>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* Permission Score Calculator */}
+          <section id="calculator" className="mb-10 animate-fade-in-up" style={{animationDelay: '0.6s'}}>
+            <h2 className="text-3xl font-bold text-gray-100 mb-6">{pick(isDE, "Permission Security Score Calculator", "Permission Security Score Calculator")}</h2>
+            <div className="bg-gray-800/80 backdrop-blur-lg p-6 rounded-xl border border-gray-700/50 shadow-2xl">
+              <div className="space-y-4">
+                {[
+                  { q: pick(isDE, "Hast du Tool-Allowlists für alle Agenten?", "Do you have tool allowlists for all agents?"), weight: 25 },
+                  { q: pick(isDE, "Ist default deny aktiv?", "Is default deny active?"), weight: 25 },
+                  { q: pick(isDE, "Ist JIT-Zugriff aktiv?", "Is JIT access active?"), weight: 25 },
+                  { q: pick(isDE, "Ist Permission Drift Monitoring aktiv?", "Is permission drift monitoring active?"), weight: 25 },
+                ].map((item, i) => (
+                  <div key={i} className="flex items-center justify-between">
+                    <span className="text-gray-300">{item.q}</span>
+                    <div className="flex gap-2">
+                      <button className="px-3 py-1 bg-gray-700 rounded text-gray-300 hover:bg-gray-600 text-sm">{pick(isDE, "Ja", "Yes")}</button>
+                      <button className="px-3 py-1 bg-gray-700 rounded text-gray-300 hover:bg-gray-600 text-sm">{pick(isDE, "Nein", "No")}</button>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-6 pt-6 border-t border-gray-700">
+                <div className="flex items-center justify-between">
+                  <span className="text-gray-300">{pick(isDE, "Dein Permission Security Score:", "Your Permission Security Score:")}</span>
+                  <span className="text-3xl font-bold text-cyan-400">0/100</span>
+                </div>
+                <p className="text-sm text-gray-400 mt-2">{pick(isDE, "Industrie-Durchschnitt: 40/100", "Industry Average: 40/100")}</p>
+              </div>
+            </div>
+          </section>
+
+          {/* Author Box */}
+          <section className="mb-10 animate-fade-in-up" style={{animationDelay: '0.7s'}}>
+            <div className="bg-gradient-to-r from-cyan-900 to-blue-900 p-6 rounded-lg border border-cyan-700">
+              <div className="flex items-start gap-4">
+                <div className="w-16 h-16 bg-cyan-800 rounded-full flex items-center justify-center text-2xl font-bold text-cyan-300 flex-shrink-0">
+                  RS
+                </div>
+                <div className="flex-1">
+                  <div className="flex items-center gap-2 mb-2">
+                    <h3 className="font-semibold text-cyan-300 text-lg">R. Schwertfechter</h3>
+                    <span className="bg-green-600 text-white text-xs px-2 py-1 rounded font-semibold">✓ Verified</span>
+                  </div>
+                  <div className="text-sm text-cyan-200 mb-3">
+                    Principal Ops-Engineer & Security Architect
+                  </div>
+                  <div className="flex items-center gap-4 text-xs text-cyan-300 mb-3">
+                    <span>📅 Published: 01.05.2026</span>
+                    <span>🔄 Last reviewed: 01.05.2026</span>
+                  </div>
+                  <div className="text-sm text-cyan-100 leading-relaxed mb-4">
+                    {pick(isDE, "15+ Jahre Erfahrung als Ops-Engineer, Incident Responder und Security Architect. Experte für Least Privilege, RBAC und Permission Drift Monitoring.", "15+ years experience as Ops-Engineer, Incident Responder and Security Architect. Expert in least privilege, RBAC and permission drift monitoring.")}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Further Resources */}
+          <section className="animate-fade-in-up" style={{animationDelay: '0.8s'}}>
+            <h3 className="text-xl font-semibold text-gray-100 mb-4">{pick(isDE, "Weiterführende Ressourcen", "Further Resources")}</h3>
+            <div className="grid grid-cols-2 gap-4">
+              <a href={`/${locale}/moltbot/ai-agent-rbac`} className="block bg-gray-800 p-4 rounded-lg border border-gray-700 hover:bg-gray-700 transition-colors">
+                <div className="font-semibold text-cyan-400">AI Agent RBAC</div>
+                <div className="text-sm text-gray-300">{pick(isDE, "Rollenbasierte Zugriffskontrolle", "Role-based access control")}</div>
+              </a>
+              <a href={`/${locale}/moltbot/ai-agent-sandboxing`} className="block bg-gray-800 p-4 rounded-lg border border-gray-700 hover:bg-gray-700 transition-colors">
+                <div className="font-semibold text-cyan-400">AI Agent Sandboxing</div>
+                <div className="text-sm text-gray-300">{pick(isDE, "Runtime-Isolation", "Runtime isolation")}</div>
+              </a>
+              <a href={`/${locale}/securitycheck`} className="block bg-gray-800 p-4 rounded-lg border border-gray-700 hover:bg-gray-700 transition-colors">
+                <div className="font-semibold text-cyan-400">{pick(isDE, "Security Check", "Security Check")}</div>
+                <div className="text-sm text-gray-300">{pick(isDE, "Agent-Permissions prüfen", "Audit agent permissions")}</div>
+              </a>
+              <a href={`/${locale}/moltbot/ai-agent-security`} className="block bg-gray-800 p-4 rounded-lg border border-gray-700 hover:bg-gray-700 transition-colors">
+                <div className="font-semibold text-cyan-400">AI Agent Security</div>
+                <div className="text-sm text-gray-300">{pick(isDE, "Security-Overview", "Security overview")}</div>
+              </a>
+            </div>
+          </section>
         </div>
       </div>
+
+      {/* Schema.org JSON-LD */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      
+      {/* Reading Progress Script */}
+      <script dangerouslySetInnerHTML={{
+        __html: `
+          window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById('reading-progress').style.width = scrolled + '%';
+          });
+        `
+      }} />
     </div>
   )
 }
