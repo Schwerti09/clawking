@@ -219,6 +219,7 @@ export default function AiAgentPermissionMinimizationPage({ params }: PageProps)
   const locale = (SUPPORTED_LOCALES.includes(params.lang as Locale) ? params.lang : "de") as Locale
   if (!SUPPORTED_LOCALES.includes(locale)) notFound()
   const isDE = locale === "de"
+  const title = pick(isDE, "AI Agent Permission Minimization: Least Privilege für KI-Agenten 2026 | ClawGuru", "AI Agent Permission Minimization: Least Privilege for AI Agents 2026 | ClawGuru")
 
   const jsonLd = [
     { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
