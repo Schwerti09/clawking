@@ -27,9 +27,9 @@ export interface Track {
 // in lib/academy/missions/index.ts.
 export const TRACKS: Track[] = [
   { slug: "beginner",           icon: "🟢", accent: "emerald", status: "live",    missionCount: 5  }, // Foundations — 5/5
-  { slug: "intermediate",       icon: "🧱", accent: "blue",    status: "live",    missionCount: 6  }, // Stack Hardening — 6 playable, more shipping
-  { slug: "advanced",           icon: "🤖", accent: "red",     status: "preview", missionCount: 0  }, // AI Agent Security — content pages live, missions WIP
-  { slug: "auth",               icon: "🔐", accent: "cyan",    status: "soon",    missionCount: 10 },
+  { slug: "intermediate",       icon: "🧱", accent: "blue",    status: "live",    missionCount: 9  }, // Stack Hardening — 9 playable
+  { slug: "advanced",           icon: "🤖", accent: "red",     status: "live",    missionCount: 4  }, // AI Agent Security — 4 playable
+  { slug: "auth",               icon: "🔐", accent: "cyan",    status: "live",    missionCount: 2  },
   { slug: "incident-response",  icon: "🛡️", accent: "amber",   status: "soon",    missionCount: 10 },
   { slug: "compliance",         icon: "📋", accent: "violet",  status: "soon",    missionCount: 8  },
   { slug: "adversarial",        icon: "🔴", accent: "pink",    status: "soon",    missionCount: 10 },

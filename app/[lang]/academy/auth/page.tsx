@@ -1,10 +1,12 @@
 import type { Metadata } from "next"
+import { notFound } from "next/navigation"
 import { SUPPORTED_LOCALES, type Locale, buildLocalizedAlternates } from "@/lib/i18n"
-import { TrackComingSoon } from "@/components/academy/TrackComingSoon"
-import { getHubContent } from "@/lib/academy/hubContent"
+import { TRACKS, getHubContent } from "@/lib/academy/hubContent"
+import { TrackShowcase } from "@/components/academy/TrackShowcase"
+import { MissionList } from "@/components/academy/MissionList"
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://clawguru.org"
-const SLUG = "auth"
+const TRACK_SLUG = "auth"
 
 export const revalidate = 3600
 export const dynamic = "force-static"
@@ -15,19 +17,28 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
   const locale = (SUPPORTED_LOCALES.includes(params.lang as Locale) ? params.lang : "de") as Locale
-  const copy = getHubContent(locale).tracks[SLUG]
-  const pageUrl = `${SITE_URL}/${locale}/academy/${SLUG}`
+  const copy = getHubContent(locale).tracks[TRACK_SLUG]
+  const pageUrl = `${SITE_URL}/${locale}/academy/${TRACK_SLUG}`
   const title = `${copy?.title ?? "Auth & Identity"} — Academy ∞ | ClawGuru`
   return {
     title,
     description: copy?.tagline,
     openGraph: { title, description: copy?.tagline, url: pageUrl, type: "website" },
-    alternates: buildLocalizedAlternates(locale, `/academy/${SLUG}`),
+    alternates: buildLocalizedAlternates(locale, `/academy/${TRACK_SLUG}`),
     robots: "index, follow",
   }
 }
 
 export default function AuthTrackPage({ params }: { params: { lang: string } }) {
   const locale = (SUPPORTED_LOCALES.includes(params.lang as Locale) ? params.lang : "de") as Locale
-  return <TrackComingSoon locale={locale} slug={SLUG} />
+  const track = TRACKS.find((t) => t.slug === TRACK_SLUG)
+  if (!track) notFound()
+
+  return (
+    <TrackShowcase
+      locale={locale}
+      track={track}
+      missionsSlot={<MissionList locale={locale} trackSlug={TRACK_SLUG} accent={track.accent} />}
+    />
+  )
 }
