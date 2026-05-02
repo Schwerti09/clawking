@@ -8,7 +8,7 @@
     "switch": "Chuyển đổi"
   },
   "hero": {
-    "badge": "Mycelial Singularity Engine v3.0 · GENESIS PROTOCOL ACTIVE",
+    "badge": "Tình báo Chuyên nghiệp Hoạt động",
     "subtitle": "Mạng lưới sợi nấm sống động của hơn 1 triệu runbook. Mỗi nút là một đơn vị kiến thức, mỗi cạnh là một mối quan hệ ngữ nghĩa. Đồ thị định hướng lực, Darwinian Evolution Engine và Oracle Mode – cơ sở kiến thức vận hành tiên tiến nhất thế giới.",
     "ctaMycelium": "Mạng lưới Sợi nấm Sống →",
     "ctaCopilot": "Hỏi Copilot",
@@ -30,7 +30,17 @@
     "knowledgeEdges": "Các Cạnh Kiến thức",
     "genesisProtocol": "Giao thức Genesis",
     "nodeTooltip": "Nút Kiến thức",
-    "scrollLabel": "Cuộn"
+    "scrollLabel": "Cuộn",
+    "cta_primary": "Bắt đầu Kiểm tra Bảo mật Ngay →",
+    "cta_secondary": "Duyệt Runbook",
+    "img_alt": "Bảng điều khiển ClawGuru - Giám sát Bảo mật",
+    "stat_check": "Kiểm tra Bảo mật",
+    "stat_languages": "Ngôn ngữ",
+    "stat_speed": "30 giây",
+    "stat_uptime": "Thời gian hoạt động",
+    "sub": "Cho công nghệ Self-Hosted — chạy kiểm tra bảo mật, sửa lỗ hổng, luôn được bảo vệ.",
+    "title_1": "Tình báo Bảo mật",
+    "title_2": "Cho Self-Hoster"
   },
   "nav": {
     "live": "Trực tiếp",

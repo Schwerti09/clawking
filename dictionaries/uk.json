@@ -8,7 +8,7 @@
     "switch": "Змінити"
   },
   "hero": {
-    "badge": "Mycelial Singularity Engine v3.0 · GENESIS PROTOCOL ACTIVE",
+    "badge": "Оперативна Про Розвідка",
     "subtitle": "Живий міцелій з понад 1 мільйона runbook-ів. Кожен вузол — одиниця знань, кожне ребро — семантичний зв'язок. Граф із силовим розташуванням, Darwinian Evolution Engine та Oracle Mode — найсучасніша база знань з експлуатації у світі.",
     "ctaMycelium": "Живий міцелій →",
     "ctaCopilot": "Запитати Copilot",
@@ -30,7 +30,17 @@
     "knowledgeEdges": "Ребра знань",
     "genesisProtocol": "Протокол Генезис",
     "nodeTooltip": "Вузол знань",
-    "scrollLabel": "Прокрутити"
+    "scrollLabel": "Прокрутити",
+    "cta_primary": "Почати перевірку безпеки →",
+    "cta_secondary": "Переглянути Runbooks",
+    "img_alt": "Панель ClawGuru - Моніторинг безпеки",
+    "stat_check": "Перевірки безпеки",
+    "stat_languages": "Мови",
+    "stat_speed": "30 секунд",
+    "stat_uptime": "Час роботи",
+    "sub": "Для технологій Self-Hosted — запусти перевірку безпеки, виправ вразливості, залишайся захищеним.",
+    "title_1": "Розвідка безпеки",
+    "title_2": "Для Self-Хостерів"
   },
   "nav": {
     "live": "Live",

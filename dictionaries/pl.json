@@ -8,7 +8,7 @@
     "switch": "Przełącz"
   },
   "hero": {
-    "badge": "Mycelial Singularity Engine v3.0 · GENESIS PROTOCOL ACTIVE",
+    "badge": "Operacyjna Pro Inteligencja",
     "subtitle": "Żywe mycelium z ponad 1 miliona runbooków. Każdy węzeł to jednostka wiedzy, każda krawędź to relacja semantyczna. Graf siłowy, Darwinowski Silnik Ewolucji i Tryb Wyroczni – najbardziej zaawansowana baza wiedzy operacyjnej na świecie.",
     "ctaMycelium": "Żywe Mycelium →",
     "ctaCopilot": "Zapytaj Copilota",
@@ -30,7 +30,17 @@
     "knowledgeEdges": "Krawędzie wiedzy",
     "genesisProtocol": "Protokół Genesis",
     "nodeTooltip": "Węzeł wiedzy",
-    "scrollLabel": "Przewiń"
+    "scrollLabel": "Przewiń",
+    "cta_primary": "Rozpocznij sprawdzanie bezpieczeństwa →",
+    "cta_secondary": "Przeglądaj Runbooki",
+    "img_alt": "Panel ClawGuru - Monitorowanie bezpieczeństwa",
+    "stat_check": "Kontrole bezpieczeństwa",
+    "stat_languages": "Języki",
+    "stat_speed": "30 sekund",
+    "stat_uptime": "Dostępność",
+    "sub": "Dla technologii Self-Hosted — uruchom kontrolę bezpieczeństwa, napraw luki, pozostań chroniony.",
+    "title_1": "Inteligencja bezpieczeństwa",
+    "title_2": "Dla Self-Hosterów"
   },
   "nav": {
     "live": "Na żywo",

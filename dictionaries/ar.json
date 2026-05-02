@@ -8,7 +8,7 @@
     "switch": "تبديل"
   },
   "hero": {
-    "badge": "Mycelial Singularity Engine v3.0 · GENESIS PROTOCOL ACTIVE",
+    "badge": "استخبارات عملياتية احترافية",
     "subtitle": "The living mycelium of 1M+ runbooks. Every node a unit of knowledge, every edge a semantic relationship. Force-directed graph, Darwinian Evolution Engine, and Oracle Mode – the world's most advanced ops knowledge base.",
     "ctaMycelium": "الميسليوم الحي →",
     "ctaCopilot": "اسأل Copilot",
@@ -30,7 +30,17 @@
     "knowledgeEdges": "حواف المعرفة",
     "genesisProtocol": "بروتوكول Genesis",
     "nodeTooltip": "عقدة المعرفة",
-    "scrollLabel": "تمرير"
+    "scrollLabel": "تمرير",
+    "cta_primary": "ابدأ فحص الأمان الآن →",
+    "cta_secondary": "استعرض Runbooks",
+    "img_alt": "لوحة تحكم ClawGuru - مراقبة الأمان",
+    "stat_check": "فحوصات الأمان",
+    "stat_languages": "اللغات",
+    "stat_speed": "٣٠ ثانية",
+    "stat_uptime": "وقت التشغيل",
+    "sub": "لتقنية Self-Hosted — شغّل فحص الأمان، أصلح الثغرات، ابقَ محمياً.",
+    "title_1": "استخبارات الأمان",
+    "title_2": "لـ Self-Hosters"
   },
   "nav": {
     "live": "مباشر",

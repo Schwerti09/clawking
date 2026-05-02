@@ -30,7 +30,17 @@
     "knowledgeEdges": "지식 엣지",
     "genesisProtocol": "제네시스 프로토콜",
     "nodeTooltip": "지식 노드",
-    "scrollLabel": "스크롤"
+    "scrollLabel": "스크롤",
+    "cta_primary": "지금 보안 검사 시작 →",
+    "cta_secondary": "Runbook 보기",
+    "img_alt": "ClawGuru 대시보드 - 보안 모니터링",
+    "stat_check": "보안 검사",
+    "stat_languages": "언어",
+    "stat_speed": "30초",
+    "stat_uptime": "가동 시간",
+    "sub": "셀프 호스팅 기술용 — 보안 검사 실행, 취약점 수정, 보호 상태 유지.",
+    "title_1": "보안 인텔리전스",
+    "title_2": "셀프 호스터를 위해"
   },
   "nav": {
     "live": "실시간",

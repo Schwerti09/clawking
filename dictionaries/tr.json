@@ -30,7 +30,17 @@
     "knowledgeEdges": "Bilgi Kenarları",
     "genesisProtocol": "Genesis Protokolü",
     "nodeTooltip": "Bilgi Düğümü",
-    "scrollLabel": "Kaydır"
+    "scrollLabel": "Kaydır",
+    "cta_primary": "Güvenlik Kontrolünü Başlat →",
+    "cta_secondary": "Runbookları Gözat",
+    "img_alt": "ClawGuru Kontrol Paneli - Güvenlik İzleme",
+    "stat_check": "Güvenlik Kontrolleri",
+    "stat_languages": "Diller",
+    "stat_speed": "30 Saniye",
+    "stat_uptime": "Çalışma Süresi",
+    "sub": "Self-Hosted teknoloji için — güvenlik kontrolü çalıştır, açıkları düzelt, korumalı kal.",
+    "title_1": "Güvenlik İstihbaratı",
+    "title_2": "Self-Hosterlar İçin"
   },
   "nav": {
     "live": "Canlı",
