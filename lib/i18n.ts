@@ -224,7 +224,7 @@ export const DEFAULT_LOCALE: Locale = "de"
 export const RTL_LOCALES: Locale[] = ["ar", "he", "fa", "ur"]
 
 /**
- * QUALITY_LOCALES — the 31 locales with genuine translations (< 50 % key overlap
+ * QUALITY_LOCALES — the 32 locales with genuine translations (< 50 % key overlap
  * with the English fallback).  All other locales in SUPPORTED_LOCALES are
  * structurally complete but contain English content and must stay noindexed
  * until real translations are available.
