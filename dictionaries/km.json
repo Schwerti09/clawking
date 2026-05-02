@@ -1,14 +1,14 @@
 {
   "common": {
-    "ctaDashboard": "Dashboard →",
-    "ctaMissionControl": "Mission Control →",
+    "ctaDashboard": "ផ្ទាំងបញ្ជា →",
+    "ctaMissionControl": "ការគ្រប់គ្រងភារកិច្ច →",
     "locale_detected": "We detected",
     "switch_language": "Switch language?",
     "stay_here": "Stay here",
     "switch": "Switch"
   },
   "hero": {
-    "badge": "Mycelial Singularity Engine v3.0 · GENESIS PROTOCOL ACTIVE",
+    "badge": "ភ្នាក់ងារប្រតិបត្តិ Pro",
     "subtitle": "The living mycelium of 1M+ runbooks. Every node a unit of knowledge, every edge a semantic relationship. Force-directed graph, Darwinian Evolution Engine, and Oracle Mode – the world's most advanced ops knowledge base.",
     "ctaMycelium": "Living Mycelium →",
     "ctaCopilot": "Ask Copilot",
@@ -30,7 +30,17 @@
     "knowledgeEdges": "Knowledge Edges",
     "genesisProtocol": "Genesis Protocol",
     "nodeTooltip": "Knowledge Node",
-    "scrollLabel": "Scroll"
+    "scrollLabel": "Scroll",
+    "cta_primary": "ចាប់ផ្តើមការពិនិត្យសុវត្ថិភាពឥឡូវ →",
+    "cta_secondary": "រំដោះ Runbooks",
+    "img_alt": "ផ្ទាំងបញ្ជា ClawGuru - ការតាមដានសុវត្ថិភាព",
+    "stat_check": "ការពិនិត្យសុវត្ថិភាព",
+    "stat_languages": "ភាសា",
+    "stat_speed": "30 វិនាទី",
+    "stat_uptime": "ពេលដំណើរការ",
+    "sub": "សម្រាប់បច្ចេកវិទ្យា self-hosted — ដំណើរការការពិនិត្យសុវត្ថិភាព កែតម្រូវភាពងាយរងគ្រោះ ស្ថិតក្នុងភាពការពារ។",
+    "title_1": "ការស្ទង់ស្ថានភាពសុវត្ថិភាព",
+    "title_2": "សម្រាប់ Self-Hosters"
   },
   "nav": {
     "live": "Live",

@@ -1,14 +1,14 @@
 {
   "common": {
-    "ctaDashboard": "Dashboard →",
-    "ctaMissionControl": "Mission Control →",
+    "ctaDashboard": "ډشبورډ →",
+    "ctaMissionControl": "د ماموریت کنټرول →",
     "locale_detected": "We detected",
     "switch_language": "Switch language?",
     "stay_here": "Stay here",
     "switch": "Switch"
   },
   "hero": {
-    "badge": "Mycelial Singularity Engine v3.0 · GENESIS PROTOCOL ACTIVE",
+    "badge": "عملیاتي پرو-استخباراتو",
     "subtitle": "The living mycelium of 1M+ runbooks. Every node a unit of knowledge, every edge a semantic relationship. Force-directed graph, Darwinian Evolution Engine, and Oracle Mode – the world's most advanced ops knowledge base.",
     "ctaMycelium": "Living Mycelium →",
     "ctaCopilot": "Ask Copilot",
@@ -30,7 +30,17 @@
     "knowledgeEdges": "Knowledge Edges",
     "genesisProtocol": "Genesis Protocol",
     "nodeTooltip": "Knowledge Node",
-    "scrollLabel": "Scroll"
+    "scrollLabel": "Scroll",
+    "cta_primary": "اوس د امنیت چک پیل کړئ →",
+    "cta_secondary": "Runbooks وګورئ",
+    "img_alt": "د ClawGuru ډشبورډ - د امنیت نظارت",
+    "stat_check": "د امنیت چکونه",
+    "stat_languages": "ژبې",
+    "stat_speed": "30 ثانیې",
+    "stat_uptime": "د کار وخت",
+    "sub": "د Self-Hosted ټیکنالوژۍ لپاره — د امنیت چکونه وچلوئ، زیانمنتیاوې سمې کړئ، خوندي پاتې شئ.",
+    "title_1": "د امنیت استخباراتو",
+    "title_2": "د Self-Hosters لپاره"
   },
   "nav": {
     "live": "Live",

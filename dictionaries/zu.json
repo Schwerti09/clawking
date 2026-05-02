@@ -1,14 +1,14 @@
 {
   "common": {
-    "ctaDashboard": "Dashboard →",
-    "ctaMissionControl": "Mission Control →",
+    "ctaDashboard": "Ideshibhodi →",
+    "ctaMissionControl": "Ukuphatha Okuyinhloko →",
     "locale_detected": "We detected",
     "switch_language": "Switch language?",
     "stay_here": "Stay here",
     "switch": "Switch"
   },
   "hero": {
-    "badge": "Mycelial Singularity Engine v3.0 · GENESIS PROTOCOL ACTIVE",
+    "badge": "Ukwazi Okujulile Kokusebenza",
     "subtitle": "The living mycelium of 1M+ runbooks. Every node a unit of knowledge, every edge a semantic relationship. Force-directed graph, Darwinian Evolution Engine, and Oracle Mode – the world's most advanced ops knowledge base.",
     "ctaMycelium": "Living Mycelium →",
     "ctaCopilot": "Ask Copilot",
@@ -30,7 +30,17 @@
     "knowledgeEdges": "Knowledge Edges",
     "genesisProtocol": "Genesis Protocol",
     "nodeTooltip": "Knowledge Node",
-    "scrollLabel": "Scroll"
+    "scrollLabel": "Scroll",
+    "cta_primary": "Qala Ukuhlolwa Kokuphepha Manje →",
+    "cta_secondary": "Hlola Izincwadi Zomsebbenzi",
+    "img_alt": "Ideshibhodi ye-ClawGuru - Ukuqashelwa Kokuphepha",
+    "stat_check": "Ukuhlolwa Kokuphepha",
+    "stat_languages": "Izilimi",
+    "stat_speed": "Izikhathi ezingu-30",
+    "stat_uptime": "Isikhathi Sokusebenza",
+    "sub": "Kutheknoloji ye-self-hosted — Sebenza Ukuhlolwa Kokuphepha, Lungisa Ubuthakathaka, Hlala Uphephile.",
+    "title_1": "Ulwazi Lokuphepha",
+    "title_2": "Nge-Self-Hosters"
   },
   "nav": {
     "live": "Live",

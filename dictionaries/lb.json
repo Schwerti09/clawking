@@ -1,14 +1,14 @@
 {
   "common": {
-    "ctaDashboard": "Dashboard →",
-    "ctaMissionControl": "Mission Control →",
+    "ctaDashboard": "Tableau de bord →",
+    "ctaMissionControl": "Missionskontrolle →",
     "locale_detected": "We detected",
     "switch_language": "Switch language?",
     "stay_here": "Stay here",
     "switch": "Switch"
   },
   "hero": {
-    "badge": "Mycelial Singularity Engine v3.0 · GENESIS PROTOCOL ACTIVE",
+    "badge": "Operativen Pro-Intelligenz",
     "subtitle": "The living mycelium of 1M+ runbooks. Every node a unit of knowledge, every edge a semantic relationship. Force-directed graph, Darwinian Evolution Engine, and Oracle Mode – the world's most advanced ops knowledge base.",
     "ctaMycelium": "Living Mycelium →",
     "ctaCopilot": "Ask Copilot",
@@ -30,7 +30,17 @@
     "knowledgeEdges": "Knowledge Edges",
     "genesisProtocol": "Genesis Protocol",
     "nodeTooltip": "Knowledge Node",
-    "scrollLabel": "Scroll"
+    "scrollLabel": "Scroll",
+    "cta_primary": "Sécherheetsprüfung elo starten →",
+    "cta_secondary": "Runbooks exploréieren",
+    "img_alt": "ClawGuru Tableau de bord - Sécherheetsiwwerwaachung",
+    "stat_check": "Sécherheetsprüfungen",
+    "stat_languages": "Sproochen",
+    "stat_speed": "30 Sekonnen",
+    "stat_uptime": "Betribszäit",
+    "sub": "Fir Self-Hosted Technologie — Sécherheetsprüfungen ausféieren, Schwachstellen behiewen, geschützt bleiwen.",
+    "title_1": "Sécherheetsiwwerwaachung",
+    "title_2": "Fir Self-Hosters"
   },
   "nav": {
     "live": "Live",

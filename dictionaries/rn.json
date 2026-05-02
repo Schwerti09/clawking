@@ -1,14 +1,14 @@
 {
   "common": {
     "ctaDashboard": "Dashboard →",
-    "ctaMissionControl": "Mission Control →",
+    "ctaMissionControl": "Kugenzura Inshingano →",
     "locale_detected": "We detected",
     "switch_language": "Switch language?",
     "stay_here": "Stay here",
     "switch": "Switch"
   },
   "hero": {
-    "badge": "Mycelial Singularity Engine v3.0 · GENESIS PROTOCOL ACTIVE",
+    "badge": "Uburyo bw'Ubuhanga bwa Pro",
     "subtitle": "The living mycelium of 1M+ runbooks. Every node a unit of knowledge, every edge a semantic relationship. Force-directed graph, Darwinian Evolution Engine, and Oracle Mode – the world's most advanced ops knowledge base.",
     "ctaMycelium": "Living Mycelium →",
     "ctaCopilot": "Ask Copilot",
@@ -30,7 +30,17 @@
     "knowledgeEdges": "Knowledge Edges",
     "genesisProtocol": "Genesis Protocol",
     "nodeTooltip": "Knowledge Node",
-    "scrollLabel": "Scroll"
+    "scrollLabel": "Scroll",
+    "cta_primary": "Tangura Gupima Umutekano Nonaha →",
+    "cta_secondary": "Gusoma Runbooks",
+    "img_alt": "Dashboard ya ClawGuru - Gusuzuma Umutekano",
+    "stat_check": "Gupima Umutekano",
+    "stat_languages": "Indimi",
+    "stat_speed": "Amasegonda 30",
+    "stat_uptime": "Igihe cyo Gukora",
+    "sub": "Muri Ikoranabuhanga rya Self-Hosted — Gupima Umutekano, Gukosora Inzitiro, Kuguma Uhariwe.",
+    "title_1": "Ubwenge bw'Umutekano",
+    "title_2": "Kubw'abagira Self-Hosting"
   },
   "nav": {
     "live": "Live",

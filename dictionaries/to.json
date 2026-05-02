@@ -1,14 +1,14 @@
 {
   "common": {
     "ctaDashboard": "Dashboard →",
-    "ctaMissionControl": "Mission Control →",
+    "ctaMissionControl": "Pule Misione →",
     "locale_detected": "We detected",
     "switch_language": "Switch language?",
     "stay_here": "Stay here",
     "switch": "Switch"
   },
   "hero": {
-    "badge": "Mycelial Singularity Engine v3.0 · GENESIS PROTOCOL ACTIVE",
+    "badge": "Pro-ʻIlo Ngāue",
     "subtitle": "The living mycelium of 1M+ runbooks. Every node a unit of knowledge, every edge a semantic relationship. Force-directed graph, Darwinian Evolution Engine, and Oracle Mode – the world's most advanced ops knowledge base.",
     "ctaMycelium": "Living Mycelium →",
     "ctaCopilot": "Ask Copilot",
@@ -30,7 +30,17 @@
     "knowledgeEdges": "Knowledge Edges",
     "genesisProtocol": "Genesis Protocol",
     "nodeTooltip": "Knowledge Node",
-    "scrollLabel": "Scroll"
+    "scrollLabel": "Scroll",
+    "cta_primary": "Kamata Siaki ʻo e Ngāue Mālohi He Taimi Ni →",
+    "cta_secondary": "Siosiʻi ha Runbook",
+    "img_alt": "ClawGuru Dashboard - Pule ʻo e Ngāue Mālohi",
+    "stat_check": "Siaki ʻo e Ngāue Mālohi",
+    "stat_languages": "Ngaahi lea",
+    "stat_speed": "Sekoni ʻe 30",
+    "stat_uptime": "Taimi Ngāue",
+    "sub": "Ki he tekinolosia self-hosted — Tali ʻa e ngaahi siaki ʻo e ngāue mālohi, fakaleleiʻi ʻa e ngaahi fakatamaki, tauhi ke malu.",
+    "title_1": "ʻIlo ʻo e Ngāue Mālohi",
+    "title_2": "Ki he ngaahi Self-Hoster"
   },
   "nav": {
     "live": "Live",

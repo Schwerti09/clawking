@@ -1,14 +1,14 @@
 {
   "common": {
-    "ctaDashboard": "Dashboard →",
-    "ctaMissionControl": "Mission Control →",
+    "ctaDashboard": "ڈیش بورڈ →",
+    "ctaMissionControl": "مشن کنٹرول →",
     "locale_detected": "We detected",
     "switch_language": "Switch language?",
     "stay_here": "Stay here",
     "switch": "Switch"
   },
   "hero": {
-    "badge": "Mycelial Singularity Engine v3.0 · GENESIS PROTOCOL ACTIVE",
+    "badge": "آپریشنل پرو انٹیلی جنس",
     "subtitle": "The living mycelium of 1M+ runbooks. Every node a unit of knowledge, every edge a semantic relationship. Force-directed graph, Darwinian Evolution Engine, and Oracle Mode – the world's most advanced ops knowledge base.",
     "ctaMycelium": "Living Mycelium →",
     "ctaCopilot": "Ask Copilot",
@@ -30,7 +30,17 @@
     "knowledgeEdges": "Knowledge Edges",
     "genesisProtocol": "Genesis Protocol",
     "nodeTooltip": "Knowledge Node",
-    "scrollLabel": "Scroll"
+    "scrollLabel": "Scroll",
+    "cta_primary": "ابھی سیکیورٹی چیک شروع کریں →",
+    "cta_secondary": "Runbooks دیکھیں",
+    "img_alt": "ClawGuru ڈیش بورڈ - سیکیورٹی نگرانی",
+    "stat_check": "سیکیورٹی جانچ",
+    "stat_languages": "زبانیں",
+    "stat_speed": "30 سیکنڈ",
+    "stat_uptime": "اپ ٹائم",
+    "sub": "Self-Hosted ٹیکنالوجی کے لیے — سیکیورٹی جانچ چلائیں، کمزوریاں ٹھیک کریں، محفوظ رہیں.",
+    "title_1": "سیکیورٹی انٹیلی جنس",
+    "title_2": "Self-Hosters کے لیے"
   },
   "nav": {
     "live": "Live",

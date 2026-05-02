@@ -1,14 +1,14 @@
 {
   "common": {
-    "ctaDashboard": "Dashboard →",
-    "ctaMissionControl": "Mission Control →",
+    "ctaDashboard": "Идарә итү панеле →",
+    "ctaMissionControl": "Миссия белән идарә итү →",
     "locale_detected": "We detected",
     "switch_language": "Switch language?",
     "stay_here": "Stay here",
     "switch": "Switch"
   },
   "hero": {
-    "badge": "Mycelial Singularity Engine v3.0 · GENESIS PROTOCOL ACTIVE",
+    "badge": "Оперативная про-барлау",
     "subtitle": "The living mycelium of 1M+ runbooks. Every node a unit of knowledge, every edge a semantic relationship. Force-directed graph, Darwinian Evolution Engine, and Oracle Mode – the world's most advanced ops knowledge base.",
     "ctaMycelium": "Living Mycelium →",
     "ctaCopilot": "Ask Copilot",
@@ -30,7 +30,17 @@
     "knowledgeEdges": "Knowledge Edges",
     "genesisProtocol": "Genesis Protocol",
     "nodeTooltip": "Knowledge Node",
-    "scrollLabel": "Scroll"
+    "scrollLabel": "Scroll",
+    "cta_primary": "Хәзер куркынычсызлык тикшерүен башла →",
+    "cta_secondary": "Runbooks-ны карарга",
+    "img_alt": "ClawGuru идарә итү панеле - Куркынычсызлыкны күзәтү",
+    "stat_check": "Куркынычсызлык тикшерүләре",
+    "stat_languages": "Телләр",
+    "stat_speed": "30 Секунд",
+    "stat_uptime": "Эшләү вакыты",
+    "sub": "Self-hosted технология өчен — Куркынычсызлык тикшерүен башла, зәгыйфьлекне бетер, саклана бул.",
+    "title_1": "Куркынычсызлык барлавы",
+    "title_2": "Self-Hosters өчен"
   },
   "nav": {
     "live": "Live",

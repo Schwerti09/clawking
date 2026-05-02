@@ -1,14 +1,14 @@
 {
   "common": {
-    "ctaDashboard": "Dashboard →",
-    "ctaMissionControl": "Mission Control →",
+    "ctaDashboard": "උපකරණ පුවරුව →",
+    "ctaMissionControl": "මෙහෙවර පාලනය →",
     "locale_detected": "We detected",
     "switch_language": "Switch language?",
     "stay_here": "Stay here",
     "switch": "Switch"
   },
   "hero": {
-    "badge": "Mycelial Singularity Engine v3.0 · GENESIS PROTOCOL ACTIVE",
+    "badge": "මෙහෙයුම් ප්‍රෝ-බුද්ධිමත්බව",
     "subtitle": "The living mycelium of 1M+ runbooks. Every node a unit of knowledge, every edge a semantic relationship. Force-directed graph, Darwinian Evolution Engine, and Oracle Mode – the world's most advanced ops knowledge base.",
     "ctaMycelium": "Living Mycelium →",
     "ctaCopilot": "Ask Copilot",
@@ -30,7 +30,17 @@
     "knowledgeEdges": "Knowledge Edges",
     "genesisProtocol": "Genesis Protocol",
     "nodeTooltip": "Knowledge Node",
-    "scrollLabel": "Scroll"
+    "scrollLabel": "Scroll",
+    "cta_primary": "දැන් ආරක්ෂා පරීක්ෂාව ආරම්භ කරන්න →",
+    "cta_secondary": "Runbooks බ්‍රවුස් කරන්න",
+    "img_alt": "ClawGuru උපකරණ පුවරුව - ආරක්ෂා නිරීක්ෂණය",
+    "stat_check": "ආරක්ෂා පරීක්ෂා",
+    "stat_languages": "භාෂා",
+    "stat_speed": "තත්‍පර 30",
+    "stat_uptime": "ක්‍රියාකාරී කාලය",
+    "sub": "Self-Hosted තාක්ෂණය සඳහා — ආරක්ෂා පරීක්ෂා ධාවනය කරන්න, දුර්වලතා නිවැරදි කරන්න, ආරක්ෂිතව සිටින්න.",
+    "title_1": "ආරක්ෂා බුද්ධිය",
+    "title_2": "Self-Hosters සඳහා"
   },
   "nav": {
     "live": "Live",
