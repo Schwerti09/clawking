@@ -1,14 +1,14 @@
 {
   "common": {
-    "ctaDashboard": "Dashboard →",
-    "ctaMissionControl": "Mission Control →",
+    "ctaDashboard": "Paneelbord →",
+    "ctaMissionControl": "Sendingebeheer →",
     "locale_detected": "Ons het opgemerk",
     "switch_language": "Verander taal?",
     "stay_here": "Bly hier",
     "switch": "Verander"
   },
   "hero": {
-    "badge": "Mycelial Singularity Engine v3.0 · GENESIS PROTOCOL ACTIVE",
+    "badge": "Operasionele Pro-Intelligensie",
     "subtitle": "Die lewendige miselium van 1M+ runbooks. Elke knoop 'n eenheid van kennis, elke rand 'n semantiese verhouding. Force-directed graph, Darwinian Evolution Engine, en Oracle Mode – die wêreld se mees gevorderde ops kennisbasis.",
     "ctaMycelium": "Living Mycelium →",
     "ctaCopilot": "Vra Copilot",
@@ -30,7 +30,17 @@
     "knowledgeEdges": "Knowledge Edges",
     "genesisProtocol": "Genesis Protocol",
     "nodeTooltip": "Knowledge Node",
-    "scrollLabel": "Scroll"
+    "scrollLabel": "Scroll",
+    "cta_primary": "Begin Sekuriteitstoets Nou →",
+    "cta_secondary": "Blaai deur Runbooks",
+    "img_alt": "ClawGuru Paneelbord - Sekuriteitsmonitering",
+    "stat_check": "Sekuriteitstoetse",
+    "stat_languages": "Tale",
+    "stat_speed": "30 Sekondes",
+    "stat_uptime": "Bedryftyd",
+    "sub": "Vir Self-Hosted tegnologie — Begin sekuriteitstoets, herstel kwesbaarhede, bly beskerm.",
+    "title_1": "Sekuriteitsintelligensie",
+    "title_2": "Vir Self-Hosters"
   },
   "nav": {
     "live": "Live",

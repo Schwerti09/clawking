@@ -30,7 +30,17 @@
     "knowledgeEdges": "Arêtes de connaissance",
     "genesisProtocol": "Protocole Genesis",
     "nodeTooltip": "Nœud de connaissance",
-    "scrollLabel": "Faire défiler"
+    "scrollLabel": "Faire défiler",
+    "cta_primary": "Démarrer la vérification de sécurité →",
+    "cta_secondary": "Parcourir les Runbooks",
+    "img_alt": "Tableau de bord ClawGuru - Surveillance de sécurité",
+    "stat_check": "Vérifications de sécurité",
+    "stat_languages": "Langues",
+    "stat_speed": "30 secondes",
+    "stat_uptime": "Disponibilité",
+    "sub": "Pour la technologie Self-Hosted — lancez la vérification de sécurité, corrigez les vulnérabilités, restez protégé.",
+    "title_1": "Renseignement en sécurité",
+    "title_2": "Pour les Self-Hosters"
   },
   "nav": {
     "live": "En direct",

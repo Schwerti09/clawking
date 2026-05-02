@@ -8,7 +8,7 @@
     "switch": "পরিবর্তন করুন"
   },
   "hero": {
-    "badge": "Mycelial Singularity Engine v3.0 · GENESIS PROTOCOL ACTIVE",
+    "badge": "অপারেশনাল প্রো ইন্টেলিজেন্স",
     "subtitle": "1M+ রানবুকের জীবন্ত মাইসেলিয়াম। প্রতিটি নোড জ্ঞানের একক, প্রতিটি প্রান্ত একটি শব্দার্থিক সম্পর্ক। ফোর্স-ডিরেক্টেড গ্রাফ, ডারউইনিয়ান ইভোলিউশন ইঞ্জিন এবং ওরাকল মোড – বিশ্বের সবচেয়ে উন্নত অপস জ্ঞান ভান্ডার।",
     "ctaMycelium": "জীবন্ত মাইসেলিয়াম →",
     "ctaCopilot": "কোপাইলটকে জিজ্ঞাসা করুন",
@@ -30,7 +30,17 @@
     "knowledgeEdges": "জ্ঞানের প্রান্ত",
     "genesisProtocol": "Genesis Protocol",
     "nodeTooltip": "নলেজ নোড",
-    "scrollLabel": "স্ক্রল"
+    "scrollLabel": "স্ক্রল",
+    "cta_primary": "এখনই নিরাপত্তা পরীক্ষা শুরু করুন →",
+    "cta_secondary": "Runbooks ব্রাউজ করুন",
+    "img_alt": "ClawGuru ড্যাশবোর্ড - নিরাপত্তা পর্যবেক্ষণ",
+    "stat_check": "নিরাপত্তা পরীক্ষা",
+    "stat_languages": "ভাষা",
+    "stat_speed": "৩০ সেকেন্ড",
+    "stat_uptime": "আপটাইম",
+    "sub": "Self-Hosted প্রযুক্তির জন্য — নিরাপত্তা পরীক্ষা চালান, দুর্বলতা ঠিক করুন, সুরক্ষিত থাকুন।",
+    "title_1": "নিরাপত্তা বুদ্ধিমত্তা",
+    "title_2": "Self-Hosters-দের জন্য"
   },
   "nav": {
     "live": "লাইভ",

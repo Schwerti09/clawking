@@ -1,14 +1,14 @@
 {
   "common": {
     "ctaDashboard": "Πίνακας Ελέγχου →",
-    "ctaMissionControl": "Mission Control →",
+    "ctaMissionControl": "Κέντρο Αποστολής →",
     "locale_detected": "Ανιχνεύσαμε",
     "switch_language": "Αλλαγή γλώσσας;",
     "stay_here": "Παραμονή εδώ",
     "switch": "Αλλαγή"
   },
   "hero": {
-    "badge": "Mycelial Singularity Engine v3.0 · GENESIS PROTOCOL ACTIVE",
+    "badge": "Επιχειρησιακή Pro Νοημοσύνη",
     "subtitle": "Το ζωντανό μυκήλιο 1M+ runbooks. Κάθε κόμβος μια μονάδα γνώσης, κάθε ακμή μια σημασιολογική σχέση. Force-directed graph, Darwinian Evolution Engine και Oracle Mode – η πιο προηγμένη βάση γνώσεων ops στον κόσμο.",
     "ctaMycelium": "Living Mycelium →",
     "ctaCopilot": "Ρωτήστε τον Copilot",
@@ -30,7 +30,17 @@
     "knowledgeEdges": "Ακμές Γνώσης",
     "genesisProtocol": "Genesis Protocol",
     "nodeTooltip": "Κόμβος Γνώσης",
-    "scrollLabel": "Κύλιση"
+    "scrollLabel": "Κύλιση",
+    "cta_primary": "Ξεκίνα Έλεγχο Ασφαλείας Τώρα →",
+    "cta_secondary": "Περιήγηση Runbooks",
+    "img_alt": "ClawGuru Πίνακας - Παρακολούθηση Ασφαλείας",
+    "stat_check": "Έλεγχοι Ασφαλείας",
+    "stat_languages": "Γλώσσες",
+    "stat_speed": "30 δευτερόλεπτα",
+    "stat_uptime": "Χρόνος Λειτουργίας",
+    "sub": "Για Self-Hosted τεχνολογία — εκτέλεσε έλεγχο ασφαλείας, διόρθωσε ευπάθειες, μείνε προστατευμένος.",
+    "title_1": "Πληροφορίες Ασφαλείας",
+    "title_2": "Για Self-Hosters"
   },
   "nav": {
     "live": "Live",

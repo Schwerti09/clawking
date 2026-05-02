@@ -8,7 +8,7 @@
     "switch": "เปลี่ยน"
   },
   "hero": {
-    "badge": "Mycelial Singularity Engine v3.0 · GENESIS PROTOCOL ACTIVE",
+    "badge": "ข่าวกรองปฏิบัติการระดับโปร",
     "subtitle": "Mycelium ที่มีชีวิตของ Runbook กว่า 1 ล้านรายการ แต่ละโหนดเป็นหน่วยความรู้ แต่ละขอบเป็นความสัมพันธ์เชิงความหมาย กราฟแบบ Force-directed, Darwinian Evolution Engine และ Oracle Mode – ฐานความรู้ด้าน Ops ที่ทันสมัยที่สุดในโลก",
     "ctaMycelium": "ชีวิตของ Mycelium →",
     "ctaCopilot": "ถาม Copilot",
@@ -30,7 +30,17 @@
     "knowledgeEdges": "ความจุดเด่นของความรู้",
     "genesisProtocol": "Genesis Protocol",
     "nodeTooltip": "Node ของความรู้",
-    "scrollLabel": "เลื่อน"
+    "scrollLabel": "เลื่อน",
+    "cta_primary": "เริ่มตรวจสอบความปลอดภัยเดี๋ยวนี้ →",
+    "cta_secondary": "เรียกดู Runbooks",
+    "img_alt": "แดชบอร์ด ClawGuru - การตรวจสอบความปลอดภัย",
+    "stat_check": "การตรวจสอบความปลอดภัย",
+    "stat_languages": "ภาษา",
+    "stat_speed": "30 วินาที",
+    "stat_uptime": "เวลาทำงาน",
+    "sub": "สำหรับเทคโนโลยี Self-Hosted — รันการตรวจสอบความปลอดภัย แก้ไขช่องโหว่ ปลอดภัยตลอดเวลา",
+    "title_1": "ข่าวกรองความปลอดภัย",
+    "title_2": "สำหรับ Self-Hosters"
   },
   "nav": {
     "live": "Live",

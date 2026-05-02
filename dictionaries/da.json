@@ -1,7 +1,7 @@
 {
   "common": {
-    "ctaDashboard": "Dashboard →",
-    "ctaMissionControl": "Mission Control →",
+    "ctaDashboard": "Kontrolpanel →",
+    "ctaMissionControl": "Missions Kontrol →",
     "locale_detected": "Vi har registreret",
     "switch_language": "Skift sprog?",
     "stay_here": "Bliv her",
@@ -30,7 +30,17 @@
     "knowledgeEdges": "Videnskanter",
     "genesisProtocol": "Genesis Protocol",
     "nodeTooltip": "Viden Node",
-    "scrollLabel": "Scroll"
+    "scrollLabel": "Scroll",
+    "cta_primary": "Start sikkerhedstjek Nu →",
+    "cta_secondary": "Gennemse Runbooks",
+    "img_alt": "ClawGuru Kontrolpanel - Sikkerhedsovervågning",
+    "stat_check": "Sikkerhedstjek",
+    "stat_languages": "Sprog",
+    "stat_speed": "30 sekunder",
+    "stat_uptime": "Oppetid",
+    "sub": "Til Self-Hosted teknologi — kør sikkerhedstjek, ret sårbarheder, forbliv beskyttet.",
+    "title_1": "Sikkerhedsefterretning",
+    "title_2": "Til Self-Hostere"
   },
   "nav": {
     "live": "Live",

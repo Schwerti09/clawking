@@ -30,7 +30,17 @@
     "knowledgeEdges": "नॉलेज एजेस",
     "genesisProtocol": "जेनेसिस प्रोटोकॉल",
     "nodeTooltip": "नॉलेज नोड",
-    "scrollLabel": "स्क्रॉल करें"
+    "scrollLabel": "स्क्रॉल करें",
+    "cta_primary": "अभी सुरक्षा जाँच शुरू करें →",
+    "cta_secondary": "Runbooks देखें",
+    "img_alt": "ClawGuru डैशबोर्ड - सुरक्षा निगरानी",
+    "stat_check": "सुरक्षा जाँचें",
+    "stat_languages": "भाषाएँ",
+    "stat_speed": "30 सेकंड",
+    "stat_uptime": "अपटाइम",
+    "sub": "Self-Hosted तकनीक के लिए — सुरक्षा जाँच चलाएं, कमजोरियाँ ठीक करें, सुरक्षित रहें।",
+    "title_1": "सुरक्षा इंटेलिजेंस",
+    "title_2": "Self-Hosters के लिए"
   },
   "nav": {
     "live": "लाइव",
