@@ -27,18 +27,18 @@ export async function generateMetadata({ params }: { params: { lang: string } })
   };
 }
 
-const FAQ = [
-  { q: pick(isDE, "Was ist TLS Hardening?", "What is TLS Hardening?"), a: pick(isDE, "TLS Hardening ist das Konfigurieren von TLS für maximale Sicherheit: TLS 1.2/1.3 nur, schwache Cipher Suites deaktiviert, Perfect Forward Secrecy, HSTS Preloading, OCSP Stapling. Ziel: A+ SSL Labs Rating.", "TLS hardening is configuring TLS for maximum security: TLS 1.2/1.3 only, weak cipher suites disabled, perfect forward secrecy, HSTS preloading, OCSP stapling. Goal: A+ SSL Labs rating.") },
-  { q: pick(isDE, "Wie aktiviere ich Let's Encrypt Auto-Renewal?", "How do I enable Let's Encrypt auto-renewal?"), a: pick(isDE, "Installiere certbot, richte Cron-Job für alle 12 Stunden ein: certbot renew --quiet --post-hook 'nginx -s reload'. Monitoring Script prüft Ablaufdatum und warnt bei < 30 Tagen.", "Install certbot, set up cron job every 12 hours: certbot renew --quiet --post-hook 'nginx -s reload'. Monitoring script checks expiry date and warns at < 30 days.") },
-  { q: pick(isDE, "Was ist Perfect Forward Secrecy?", "What is Perfect Forward Secrecy?"), a: pick(isDE, "Perfect Forward Secrecy (PFS) bedeutet, dass auch bei kompromittiertem Private Key vergangene Sessions nicht entschlüsselt werden können. Aktiviert durch ECDHE Cipher Suites und Session Ticket Deaktivierung.", "Perfect Forward Secrecy (PFS) means that even with a compromised private key, past sessions cannot be decrypted. Enabled by ECDHE cipher suites and session ticket deactivation.") },
-  { q: pick(isDE, "Was ist HSTS Preloading?", "What is HSTS Preloading?"), a: pick(isDE, "HSTS Preloading fügt deine Domain zur HSTS Preload List hinzu. Browser erzwingen HTTPS für alle Subdomains ohne initialen HTTP-Request. Erfordert max-age ≥ 31536000 und includeSubDomains.", "HSTS preloading adds your domain to the HSTS preload list. Browsers enforce HTTPS for all subdomains without initial HTTP request. Requires max-age ≥ 31536000 and includeSubDomains.") },
-]
-
 export default function MoltbotSslTlsPage({ params }: { params: { lang: string } }) {
   const locale = (SUPPORTED_LOCALES.includes(params.lang as Locale) ? params.lang : "de") as Locale
   if (!SUPPORTED_LOCALES.includes(locale)) notFound()
   const isDE = locale === "de"
   const title = pick(isDE, "Moltbot SSL/TLS Management: Zertifikate & Cipher Suites 2026 | ClawGuru", "Moltbot SSL/TLS Management: Certificates & Cipher Suites 2026 | ClawGuru")
+
+  const FAQ = [
+    { q: pick(isDE, "Was ist TLS Hardening?", "What is TLS Hardening?"), a: pick(isDE, "TLS Hardening ist das Konfigurieren von TLS für maximale Sicherheit: TLS 1.2/1.3 nur, schwache Cipher Suites deaktiviert, Perfect Forward Secrecy, HSTS Preloading, OCSP Stapling. Ziel: A+ SSL Labs Rating.", "TLS hardening is configuring TLS for maximum security: TLS 1.2/1.3 only, weak cipher suites disabled, perfect forward secrecy, HSTS preloading, OCSP stapling. Goal: A+ SSL Labs rating.") },
+    { q: pick(isDE, "Wie aktiviere ich Let's Encrypt Auto-Renewal?", "How do I enable Let's Encrypt auto-renewal?"), a: pick(isDE, "Installiere certbot, richte Cron-Job für alle 12 Stunden ein: certbot renew --quiet --post-hook 'nginx -s reload'. Monitoring Script prüft Ablaufdatum und warnt bei < 30 Tagen.", "Install certbot, set up cron job every 12 hours: certbot renew --quiet --post-hook 'nginx -s reload'. Monitoring script checks expiry date and warns at < 30 days.") },
+    { q: pick(isDE, "Was ist Perfect Forward Secrecy?", "What is Perfect Forward Secrecy?"), a: pick(isDE, "Perfect Forward Secrecy (PFS) bedeutet, dass auch bei kompromittiertem Private Key vergangene Sessions nicht entschlüsselt werden können. Aktiviert durch ECDHE Cipher Suites und Session Ticket Deaktivierung.", "Perfect Forward Secrecy (PFS) means that even with a compromised private key, past sessions cannot be decrypted. Enabled by ECDHE cipher suites and session ticket deactivation.") },
+    { q: pick(isDE, "Was ist HSTS Preloading?", "What is HSTS Preloading?"), a: pick(isDE, "HSTS Preloading fügt deine Domain zur HSTS Preload List hinzu. Browser erzwingen HTTPS für alle Subdomains ohne initialen HTTP-Request. Erfordert max-age ≥ 31536000 und includeSubDomains.", "HSTS preloading adds your domain to the HSTS preload list. Browsers enforce HTTPS for all subdomains without initial HTTP request. Requires max-age ≥ 31536000 and includeSubDomains.") },
+  ]
 
   const jsonLd = [
     { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
