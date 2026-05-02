@@ -320,17 +320,17 @@
 ### Batch AE (alle Geo-Seiten in einem Batch):
 | # | Slug | Markt | Status |
 |---|---|---|---|
-| 164 | `ai-agent-security-asia` | Asien | [ ] |
-| 165 | `ai-agent-security-bangalore` | Indien | [ ] |
-| 166 | `ai-agent-security-buenos-aires` | Argentinien | [ ] |
-| 167 | `ai-agent-security-jakarta` | Indonesien | [ ] |
-| 168 | `ai-agent-security-latam` | Latam | [ ] |
-| 169 | `ai-agent-security-mexico-city` | Mexiko | [ ] |
-| 170 | `ai-agent-security-santiago` | Chile | [ ] |
-| 171 | `ai-agent-security-sao-paulo` | Brasilien | [ ] |
-| 172 | `ai-agent-security-seoul` | Korea | [ ] |
-| 173 | `ai-agent-security-singapore` | Singapur | [ ] |
-| 174 | `ai-agent-security-tokyo` | Japan | [ ] |
+| 164 | `ai-agent-security-asia` | Asien | ✅ |
+| 165 | `ai-agent-security-bangalore` | Indien | ✅ |
+| 166 | `ai-agent-security-buenos-aires` | Argentinien | ✅ |
+| 167 | `ai-agent-security-jakarta` | Indonesien | ✅ |
+| 168 | `ai-agent-security-latam` | Latam | ✅ |
+| 169 | `ai-agent-security-mexico-city` | Mexiko | ✅ |
+| 170 | `ai-agent-security-santiago` | Chile | ✅ |
+| 171 | `ai-agent-security-sao-paulo` | Brasilien | ✅ |
+| 172 | `ai-agent-security-seoul` | Korea | ✅ |
+| 173 | `ai-agent-security-singapore` | Singapur | ✅ |
+| 174 | `ai-agent-security-tokyo` | Japan | ✅ |
 
 ---
 
@@ -338,11 +338,11 @@
 
 | Priorität | Slug | Haupt-Keyword | Status |
 |---|---|---|---|
-| T1 | `kubernetes-secrets-management` | "Kubernetes secrets" | [ ] |
-| T1 | `ebpf-security-monitoring` | "eBPF security" | [ ] |
-| T1 | `supply-chain-security` | "supply chain security" | [ ] |
-| T1 | `zero-trust-networking` | "zero trust networking" | [ ] |
-| T1 | `container-escape-prevention` | "container escape" | [ ] |
+| T1 | `kubernetes-secrets-management` | "Kubernetes secrets" | ✅ |
+| T1 | `ebpf-security-monitoring` | "eBPF security" | ✅ |
+| T1 | `supply-chain-security` | "supply chain security" | ✅ |
+| T1 | `zero-trust-networking` | "zero trust networking" | ✅ |
+| T1 | `container-escape-prevention` | "container escape" | ✅ |
 | T2 | `cicd-security-pipeline` | "CI/CD security" | [ ] |
 | T2 | `runtime-policy-enforcement` | "runtime policy" | [ ] |
 | T2 | `secrets-rotation-automation` | "secrets rotation" | [ ] |
