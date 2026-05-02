@@ -3,3 +3,7 @@ cmds = ["npm install --legacy-peer-deps"]
 
 [phases.build]
 cmds = ["npm run build"]
+
+[variables]
+NODE_OPTIONS = "--max-old-space-size=6144"
+NEXT_DISABLE_ESLINT = "1"
