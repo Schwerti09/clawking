@@ -223,6 +223,23 @@ export const DEFAULT_LOCALE: Locale = "de"
 // RTL locales — Arabic, Hebrew, Persian, Urdu
 export const RTL_LOCALES: Locale[] = ["ar", "he", "fa", "ur"]
 
+/**
+ * QUALITY_LOCALES — the 31 locales with genuine translations (< 50 % key overlap
+ * with the English fallback).  All other locales in SUPPORTED_LOCALES are
+ * structurally complete but contain English content and must stay noindexed
+ * until real translations are available.
+ *
+ * Used by middleware.ts to decide X-Robots-Tag and by the sitemap generator
+ * (SITEMAP_100K_LOCALES mirrors this list).  Update this array whenever a new
+ * locale graduates to full-translation status.
+ */
+export const QUALITY_LOCALES: Locale[] = [
+  "de", "en", "es", "fr", "pt", "it", "ru", "zh", "ja", "ko",
+  "ar", "hi", "tr", "pl", "nl", "sv", "no", "da", "fi", "cs",
+  "hu", "bg", "th", "ms", "vi", "uk", "el", "id", "bn", "he",
+  "ro", "af",
+]
+
 /** Returns true if the locale uses right-to-left text direction */
 export function isRTL(locale: Locale): boolean {
   return RTL_LOCALES.includes(locale)
