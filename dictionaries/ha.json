@@ -1,14 +1,14 @@
 {
   "common": {
     "ctaDashboard": "Dashboard →",
-    "ctaMissionControl": "Mission Control →",
+    "ctaMissionControl": "Kula da Aikin →",
     "locale_detected": "We detected",
     "switch_language": "Switch language?",
     "stay_here": "Stay here",
     "switch": "Switch"
   },
   "hero": {
-    "badge": "Mycelial Singularity Engine v3.0 · GENESIS PROTOCOL ACTIVE",
+    "badge": "Hankali na Ƙwararrun Aiki",
     "subtitle": "The living mycelium of 1M+ runbooks. Every node a unit of knowledge, every edge a semantic relationship. Force-directed graph, Darwinian Evolution Engine, and Oracle Mode – the world's most advanced ops knowledge base.",
     "ctaMycelium": "Living Mycelium →",
     "ctaCopilot": "Ask Copilot",
@@ -30,7 +30,17 @@
     "knowledgeEdges": "Knowledge Edges",
     "genesisProtocol": "Genesis Protocol",
     "nodeTooltip": "Knowledge Node",
-    "scrollLabel": "Scroll"
+    "scrollLabel": "Scroll",
+    "cta_primary": "Fara Duba Tsaro Yanzu →",
+    "cta_secondary": "Bincike Runbooks",
+    "img_alt": "ClawGuru Dashboard - Kulawa da Tsaro",
+    "stat_check": "Duba Tsaro",
+    "stat_languages": "Harsuna",
+    "stat_speed": "Daƙiƙa 30",
+    "stat_uptime": "Lokacin Aiki",
+    "sub": "Don fasahar self-hosted — Gudanar da duba tsaro, gyara rauni, kasance mai kariya.",
+    "title_1": "Hankali na Tsaro",
+    "title_2": "Don Self-Hosters"
   },
   "nav": {
     "live": "Live",

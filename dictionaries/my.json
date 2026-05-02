@@ -1,14 +1,14 @@
 {
   "common": {
-    "ctaDashboard": "Dashboard →",
-    "ctaMissionControl": "Mission Control →",
+    "ctaDashboard": "ဒက်ရှ်ဘုတ် →",
+    "ctaMissionControl": "တာဝန်ထမ်းဆောင်ရေး ထိန်းချုပ်မှု →",
     "locale_detected": "We detected",
     "switch_language": "Switch language?",
     "stay_here": "Stay here",
     "switch": "Switch"
   },
   "hero": {
-    "badge": "Mycelial Singularity Engine v3.0 · GENESIS PROTOCOL ACTIVE",
+    "badge": "စစ်ဆင်ရေး Pro ထောက်လှမ်းရေး",
     "subtitle": "The living mycelium of 1M+ runbooks. Every node a unit of knowledge, every edge a semantic relationship. Force-directed graph, Darwinian Evolution Engine, and Oracle Mode – the world's most advanced ops knowledge base.",
     "ctaMycelium": "Living Mycelium →",
     "ctaCopilot": "Ask Copilot",
@@ -30,7 +30,17 @@
     "knowledgeEdges": "Knowledge Edges",
     "genesisProtocol": "Genesis Protocol",
     "nodeTooltip": "Knowledge Node",
-    "scrollLabel": "Scroll"
+    "scrollLabel": "Scroll",
+    "cta_primary": "ယခု လုံခြုံရေးစစ်ဆေးမှု စတင်ရန် →",
+    "cta_secondary": "Runbooks ကြည့်ရှုရန်",
+    "img_alt": "ClawGuru ဒက်ရှ်ဘုတ် - လုံခြုံရေး စောင့်ကြည့်မှု",
+    "stat_check": "လုံခြုံရေးစစ်ဆေးမှုများ",
+    "stat_languages": "ဘာသာစကားများ",
+    "stat_speed": "30 စက္ကန့်",
+    "stat_uptime": "အလုပ်လုပ်ချိန်",
+    "sub": "Self-hosted နည်းပညာအတွက် — လုံခြုံရေးစစ်ဆေးမှုများ ပြုလုပ်ပါ၊ အားနည်းချက်များ ပြင်ဆင်ပါ၊ ကာကွယ်မှုရှိနေပါ.",
+    "title_1": "လုံခြုံရေး ထောက်လှမ်းရေး",
+    "title_2": "Self-Hosters များအတွက်"
   },
   "nav": {
     "live": "Live",

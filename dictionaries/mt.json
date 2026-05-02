@@ -1,14 +1,14 @@
 {
   "common": {
     "ctaDashboard": "Dashboard →",
-    "ctaMissionControl": "Mission Control →",
+    "ctaMissionControl": "Kontroll tal-Missjoni →",
     "locale_detected": "We detected",
     "switch_language": "Switch language?",
     "stay_here": "Stay here",
     "switch": "Switch"
   },
   "hero": {
-    "badge": "Mycelial Singularity Engine v3.0 · GENESIS PROTOCOL ACTIVE",
+    "badge": "Pro-Intelligence operattiva",
     "subtitle": "The living mycelium of 1M+ runbooks. Every node a unit of knowledge, every edge a semantic relationship. Force-directed graph, Darwinian Evolution Engine, and Oracle Mode – the world's most advanced ops knowledge base.",
     "ctaMycelium": "Living Mycelium →",
     "ctaCopilot": "Ask Copilot",
@@ -30,7 +30,17 @@
     "knowledgeEdges": "Knowledge Edges",
     "genesisProtocol": "Genesis Protocol",
     "nodeTooltip": "Knowledge Node",
-    "scrollLabel": "Scroll"
+    "scrollLabel": "Scroll",
+    "cta_primary": "Ibda l-Verifika tas-Sigurtà Issa →",
+    "cta_secondary": "Ħares lejn ir-Runbooks",
+    "img_alt": "Dashboard ClawGuru - Monitoraġġ tas-Sigurtà",
+    "stat_check": "Verifiki tas-Sigurtà",
+    "stat_languages": "Lingwi",
+    "stat_speed": "30 Sekonda",
+    "stat_uptime": "Ħin ta' Uptime",
+    "sub": "Għal teknoloġija self-hosted — Mexxi verifiki tas-sigurtà, irranġa vulnerabbiltajiet, ibqa' protett.",
+    "title_1": "Intelliġenza tas-Sigurtà",
+    "title_2": "Għal Self-Hosters"
   },
   "nav": {
     "live": "Live",

@@ -8,7 +8,7 @@
     "switch": "Switch"
   },
   "hero": {
-    "badge": "Mycelial Singularity Engine v3.0 · GENESIS PROTOCOL ACTIVE",
+    "badge": "Operational Pro-Intelligence",
     "subtitle": "The living mycelium of 1M+ runbooks. Every node a unit of knowledge, every edge a semantic relationship. Force-directed graph, Darwinian Evolution Engine, and Oracle Mode – the world's most advanced ops knowledge base.",
     "ctaMycelium": "Living Mycelium →",
     "ctaCopilot": "Ask Copilot",
@@ -30,7 +30,17 @@
     "knowledgeEdges": "Knowledge Edges",
     "genesisProtocol": "Genesis Protocol",
     "nodeTooltip": "Knowledge Node",
-    "scrollLabel": "Scroll"
+    "scrollLabel": "Scroll",
+    "cta_primary": "Simulan ang Security Check Ngayon →",
+    "cta_secondary": "I-browse ang mga Runbook",
+    "img_alt": "ClawGuru Dashboard - Pagsubaybay ng Seguridad",
+    "stat_check": "Mga Security Check",
+    "stat_languages": "Mga Wika",
+    "stat_speed": "30 Segundo",
+    "stat_uptime": "Uptime",
+    "sub": "Para sa self-hosted na teknolohiya — Magpatakbo ng mga security check, ayusin ang mga kahinaan, manatiling protektado.",
+    "title_1": "Security Intelligence",
+    "title_2": "Para sa mga Self-Hoster"
   },
   "nav": {
     "live": "Live",

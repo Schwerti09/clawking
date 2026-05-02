@@ -1,14 +1,14 @@
 {
   "common": {
-    "ctaDashboard": "Dashboard →",
-    "ctaMissionControl": "Mission Control →",
+    "ctaDashboard": "Stjórnborð →",
+    "ctaMissionControl": "Verkstjórn →",
     "locale_detected": "We detected",
     "switch_language": "Switch language?",
     "stay_here": "Stay here",
     "switch": "Switch"
   },
   "hero": {
-    "badge": "Mycelial Singularity Engine v3.0 · GENESIS PROTOCOL ACTIVE",
+    "badge": "Rekstrarlegar sérfræðiupplýsingar",
     "subtitle": "The living mycelium of 1M+ runbooks. Every node a unit of knowledge, every edge a semantic relationship. Force-directed graph, Darwinian Evolution Engine, and Oracle Mode – the world's most advanced ops knowledge base.",
     "ctaMycelium": "Living Mycelium →",
     "ctaCopilot": "Ask Copilot",
@@ -30,7 +30,17 @@
     "knowledgeEdges": "Knowledge Edges",
     "genesisProtocol": "Genesis Protocol",
     "nodeTooltip": "Knowledge Node",
-    "scrollLabel": "Scroll"
+    "scrollLabel": "Scroll",
+    "cta_primary": "Byrja Öryggisathugun Núna →",
+    "cta_secondary": "Skoða Runbooks",
+    "img_alt": "ClawGuru Stjórnborð - Öryggiseftirlit",
+    "stat_check": "Öryggisathuganir",
+    "stat_languages": "Tungumál",
+    "stat_speed": "30 Sekúndur",
+    "stat_uptime": "Uptime",
+    "sub": "Fyrir self-hosted tækni — Keyra öryggisathuganir, laga veikleika, vera verndaður.",
+    "title_1": "Öryggislegt innsæi",
+    "title_2": "Fyrir Self-Hosters"
   },
   "nav": {
     "live": "Live",

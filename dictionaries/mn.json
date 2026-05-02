@@ -1,14 +1,14 @@
 {
   "common": {
-    "ctaDashboard": "Dashboard →",
-    "ctaMissionControl": "Mission Control →",
+    "ctaDashboard": "Хяналтын самбар →",
+    "ctaMissionControl": "Эрхэм зорилгын удирдлага →",
     "locale_detected": "We detected",
     "switch_language": "Switch language?",
     "stay_here": "Stay here",
     "switch": "Switch"
   },
   "hero": {
-    "badge": "Mycelial Singularity Engine v3.0 · GENESIS PROTOCOL ACTIVE",
+    "badge": "Оперативын про-тагнуул",
     "subtitle": "The living mycelium of 1M+ runbooks. Every node a unit of knowledge, every edge a semantic relationship. Force-directed graph, Darwinian Evolution Engine, and Oracle Mode – the world's most advanced ops knowledge base.",
     "ctaMycelium": "Living Mycelium →",
     "ctaCopilot": "Ask Copilot",
@@ -30,7 +30,17 @@
     "knowledgeEdges": "Knowledge Edges",
     "genesisProtocol": "Genesis Protocol",
     "nodeTooltip": "Knowledge Node",
-    "scrollLabel": "Scroll"
+    "scrollLabel": "Scroll",
+    "cta_primary": "Одоо Аюулгүй байдлын шалгалтыг эхлүүлнэ →",
+    "cta_secondary": "Runbooks-г үзэх",
+    "img_alt": "ClawGuru хяналтын самбар - Аюулгүй байдлын хяналт",
+    "stat_check": "Аюулгүй байдлын шалгалтууд",
+    "stat_languages": "Хэлүүд",
+    "stat_speed": "30 Секунд",
+    "stat_uptime": "Ажиллах хугацаа",
+    "sub": "Self-hosted технологийн хувьд — Аюулгүй байдлын шалгалт явуулж, эмзэг байдлыг засаж, хамгаалалттай байна уу.",
+    "title_1": "Аюулгүй байдлын тагнуул",
+    "title_2": "Self-Hosters-д зориулсан"
   },
   "nav": {
     "live": "Live",

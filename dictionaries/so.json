@@ -1,14 +1,14 @@
 {
   "common": {
     "ctaDashboard": "Dashboard →",
-    "ctaMissionControl": "Mission Control →",
+    "ctaMissionControl": "Xukumaada Xilka →",
     "locale_detected": "We detected",
     "switch_language": "Switch language?",
     "stay_here": "Stay here",
     "switch": "Switch"
   },
   "hero": {
-    "badge": "Mycelial Singularity Engine v3.0 · GENESIS PROTOCOL ACTIVE",
+    "badge": "Garasho-xirfadeedka Hawleed",
     "subtitle": "The living mycelium of 1M+ runbooks. Every node a unit of knowledge, every edge a semantic relationship. Force-directed graph, Darwinian Evolution Engine, and Oracle Mode – the world's most advanced ops knowledge base.",
     "ctaMycelium": "Living Mycelium →",
     "ctaCopilot": "Ask Copilot",
@@ -30,7 +30,17 @@
     "knowledgeEdges": "Knowledge Edges",
     "genesisProtocol": "Genesis Protocol",
     "nodeTooltip": "Knowledge Node",
-    "scrollLabel": "Scroll"
+    "scrollLabel": "Scroll",
+    "cta_primary": "Bilow Hubinta Amniga Hadda →",
+    "cta_secondary": "Baadhi Runbooks",
+    "img_alt": "ClawGuru Dashboard - Wax Ku Xeeriska Amniga",
+    "stat_check": "Hubinta Amniga",
+    "stat_languages": "Luqadaha",
+    "stat_speed": "30 Ilbiriqsi",
+    "stat_uptime": "Waqtiga Shaqada",
+    "sub": "Teknoolajiyada self-hosted — Bilow hubinta amniga, hagaaji nuglaanshaha, ahaaw la-xiroone.",
+    "title_1": "Garasho-xirfadeedka Amniga",
+    "title_2": "Codsadayaasha Self-Hosted"
   },
   "nav": {
     "live": "Live",

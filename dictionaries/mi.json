@@ -1,14 +1,14 @@
 {
   "common": {
-    "ctaDashboard": "Dashboard →",
-    "ctaMissionControl": "Mission Control →",
+    "ctaDashboard": "Papa Whakaahua →",
+    "ctaMissionControl": "Kaiwhakahaere Kaupeka →",
     "locale_detected": "We detected",
     "switch_language": "Switch language?",
     "stay_here": "Stay here",
     "switch": "Switch"
   },
   "hero": {
-    "badge": "Mycelial Singularity Engine v3.0 · GENESIS PROTOCOL ACTIVE",
+    "badge": "Pro-Mōhio Mahi",
     "subtitle": "The living mycelium of 1M+ runbooks. Every node a unit of knowledge, every edge a semantic relationship. Force-directed graph, Darwinian Evolution Engine, and Oracle Mode – the world's most advanced ops knowledge base.",
     "ctaMycelium": "Living Mycelium →",
     "ctaCopilot": "Ask Copilot",
@@ -30,7 +30,17 @@
     "knowledgeEdges": "Knowledge Edges",
     "genesisProtocol": "Genesis Protocol",
     "nodeTooltip": "Knowledge Node",
-    "scrollLabel": "Scroll"
+    "scrollLabel": "Scroll",
+    "cta_primary": "Tīmata i te Tirotiro Haumarutanga Inaianei →",
+    "cta_secondary": "Tirotiro Runbooks",
+    "img_alt": "Papa ClawGuru - Tirotiro Haumarutanga",
+    "stat_check": "Tirotiro Haumarutanga",
+    "stat_languages": "Reo",
+    "stat_speed": "30 Hēkona",
+    "stat_uptime": "Wā Mahi",
+    "sub": "Mō hangarau self-hosted — Whakahaerehia ngā tirotiro haumarutanga, whakatikahia ngā ngoikoretanga, noho kaitiakitia.",
+    "title_1": "Mōhio Haumarutanga",
+    "title_2": "Mō Self-Hosters"
   },
   "nav": {
     "live": "Live",

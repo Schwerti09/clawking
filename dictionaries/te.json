@@ -1,14 +1,14 @@
 {
   "common": {
-    "ctaDashboard": "Dashboard →",
-    "ctaMissionControl": "Mission Control →",
+    "ctaDashboard": "డాష్‌బోర్డ్ →",
+    "ctaMissionControl": "మిషన్ నియంత్రణ →",
     "locale_detected": "We detected",
     "switch_language": "Switch language?",
     "stay_here": "Stay here",
     "switch": "Switch"
   },
   "hero": {
-    "badge": "Mycelial Singularity Engine v3.0 · GENESIS PROTOCOL ACTIVE",
+    "badge": "ఆపరేషనల్ ప్రో-ఇంటెలిజెన్స్",
     "subtitle": "The living mycelium of 1M+ runbooks. Every node a unit of knowledge, every edge a semantic relationship. Force-directed graph, Darwinian Evolution Engine, and Oracle Mode – the world's most advanced ops knowledge base.",
     "ctaMycelium": "Living Mycelium →",
     "ctaCopilot": "Ask Copilot",
@@ -30,7 +30,17 @@
     "knowledgeEdges": "Knowledge Edges",
     "genesisProtocol": "Genesis Protocol",
     "nodeTooltip": "Knowledge Node",
-    "scrollLabel": "Scroll"
+    "scrollLabel": "Scroll",
+    "cta_primary": "ఇప్పుడే భద్రతా పరీక్ష ప్రారంభించండి →",
+    "cta_secondary": "Runbooks బ్రౌజ్ చేయండి",
+    "img_alt": "ClawGuru డాష్‌బోర్డ్ - భద్రతా పర్యవేక్షణ",
+    "stat_check": "భద్రతా తనిఖీలు",
+    "stat_languages": "భాషలు",
+    "stat_speed": "30 సెకన్లు",
+    "stat_uptime": "అప్‌టైమ్",
+    "sub": "Self-Hosted సాంకేతికత కోసం — భద్రతా తనిఖీలు నిర్వహించండి, బలహీనతలు పరిష్కరించండి, రక్షితంగా ఉండండి.",
+    "title_1": "భద్రతా గూఢచర్యం",
+    "title_2": "Self-Hosters కోసం"
   },
   "nav": {
     "live": "Live",
