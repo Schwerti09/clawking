@@ -1,8 +1,6 @@
-name: Deploy to Vercel via GitHub
+name: Deploy to Vercel via GitHub (disabled - Railway only)
 
 on:
-  push:
-    branches: [ main ]
   workflow_dispatch: {}
 
 jobs:
