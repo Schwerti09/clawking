@@ -8,7 +8,7 @@
     "switch": "Váltás"
   },
   "hero": {
-    "badge": "Mycelial Singularity Engine v3.0 · GENESIS PROTOCOL ACTIVE",
+    "badge": "Operatív Pro Intelligencia",
     "subtitle": "Az 1M+ runbook élő micéliuma. Minden csomópont egy tudásegység, minden él egy szemantikai kapcsolat. Erő-vezérelt gráf, Darwinian Evolution Engine és Oracle Mode – a világ legfejlettebb ops tudásbázisa.",
     "ctaMycelium": "Élő Micélium →",
     "ctaCopilot": "Kérdezd a Copilotot",
@@ -30,7 +30,17 @@
     "knowledgeEdges": "Tudáshatárok",
     "genesisProtocol": "Genesis Protokoll",
     "nodeTooltip": "Tudáscsomópont",
-    "scrollLabel": "Görgetés"
+    "scrollLabel": "Görgetés",
+    "cta_primary": "Biztonsági ellenőrzés indítása →",
+    "cta_secondary": "Runbookok böngészése",
+    "img_alt": "ClawGuru Irányítópult - Biztonsági megfigyelés",
+    "stat_check": "Biztonsági ellenőrzések",
+    "stat_languages": "Nyelvek",
+    "stat_speed": "30 másodperc",
+    "stat_uptime": "Üzemidő",
+    "sub": "Self-Hosted technológiához — futtass biztonsági ellenőrzést, javítsd a sebezhetőségeket, maradj védett.",
+    "title_1": "Biztonsági hírszerzés",
+    "title_2": "Self-Hostereknek"
   },
   "nav": {
     "live": "Élő",

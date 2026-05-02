@@ -1,14 +1,14 @@
 {
   "common": {
-    "ctaDashboard": "Dashboard →",
-    "ctaMissionControl": "Mission Control →",
+    "ctaDashboard": "Kojelauta →",
+    "ctaMissionControl": "Tehtävänhallinta →",
     "locale_detected": "Havaitsimme",
     "switch_language": "Vaihda kieltä?",
     "stay_here": "Pysy täällä",
     "switch": "Vaihda"
   },
   "hero": {
-    "badge": "Mycelial Singularity Engine v3.0 · GENESIS PROTOCOL ACTIVE",
+    "badge": "Operatiivinen Pro-Tiedustelu",
     "subtitle": "1 miljoonan+ runbookin elävä myseeliverkosto. Jokainen solmu on tiedon yksikkö, jokainen reuna semanttinen yhteys. Force-directed-graafi, Darwinin evoluutio-moottori ja Oracle-tila – maailman edistynein operaatiotiedon tietokanta.",
     "ctaMycelium": "Living Mycelium →",
     "ctaCopilot": "Kysy Copilotilta",
@@ -30,7 +30,17 @@
     "knowledgeEdges": "Knowledge Edges",
     "genesisProtocol": "Genesis Protocol",
     "nodeTooltip": "Knowledge Node",
-    "scrollLabel": "Scroll"
+    "scrollLabel": "Scroll",
+    "cta_primary": "Aloita Turvallisuustarkistus Nyt →",
+    "cta_secondary": "Selaa Runbookeja",
+    "img_alt": "ClawGuru Kojelauta - Turvallisuuden valvonta",
+    "stat_check": "Turvallisuustarkistukset",
+    "stat_languages": "Kielet",
+    "stat_speed": "30 sekuntia",
+    "stat_uptime": "Käytettävyys",
+    "sub": "Self-Hosted-teknologialle — aja turvallisuustarkistus, korjaa haavoittuvuudet, pysy suojattuna.",
+    "title_1": "Turvallisuustiedustelu",
+    "title_2": "Self-Hostereille"
   },
   "nav": {
     "live": "Live",

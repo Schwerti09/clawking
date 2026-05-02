@@ -1,7 +1,7 @@
 {
   "common": {
-    "ctaDashboard": "Dashboard →",
-    "ctaMissionControl": "Mission Control →",
+    "ctaDashboard": "Panou →",
+    "ctaMissionControl": "Centrul de Misiune →",
     "locale_detected": "Am detectat",
     "switch_language": "Schimbă limba?",
     "stay_here": "Rămâi aici",
@@ -30,7 +30,17 @@
     "knowledgeEdges": "Muchii de Cunoaștere",
     "genesisProtocol": "Protocolul Genesis",
     "nodeTooltip": "Nod de Cunoștințe",
-    "scrollLabel": "Derulează"
+    "scrollLabel": "Derulează",
+    "cta_primary": "Pornește verificarea securității →",
+    "cta_secondary": "Răsfoiește Runbooks",
+    "img_alt": "Panoul ClawGuru - Monitorizarea Securității",
+    "stat_check": "Verificări de securitate",
+    "stat_languages": "Limbi",
+    "stat_speed": "30 de secunde",
+    "stat_uptime": "Timp de funcționare",
+    "sub": "Pentru tehnologia Self-Hosted — rulează verificarea securității, remediați vulnerabilitățile, rămâneți protejat.",
+    "title_1": "Informații de securitate",
+    "title_2": "Pentru Self-Hosteri"
   },
   "nav": {
     "live": "Live",

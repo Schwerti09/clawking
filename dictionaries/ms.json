@@ -1,14 +1,14 @@
 {
   "common": {
     "ctaDashboard": "Dasbor →",
-    "ctaMissionControl": "Mission Control →",
+    "ctaMissionControl": "Kawalan Misi →",
     "locale_detected": "Kami mendeteksi",
     "switch_language": "Ganti bahasa?",
     "stay_here": "Tetap di sini",
     "switch": "Ganti"
   },
   "hero": {
-    "badge": "Mycelial Singularity Engine v3.0 · GENESIS PROTOCOL ACTIVE",
+    "badge": "Risikan Pro Operasi",
     "subtitle": "Mycelium hidup dari 1M+ runbook. Setiap node adalah unit pengetahuan, setiap edge adalah hubungan semantik. Grafik force-directed, Darwinian Evolution Engine, dan Oracle Mode – basis pengetahuan operasional paling canggih di dunia.",
     "ctaMycelium": "Living Mycelium →",
     "ctaCopilot": "Tanyakan Copilot",
@@ -30,7 +30,17 @@
     "knowledgeEdges": "Knowledge Edges",
     "genesisProtocol": "Genesis Protocol",
     "nodeTooltip": "Knowledge Node",
-    "scrollLabel": "Scroll"
+    "scrollLabel": "Scroll",
+    "cta_primary": "Mulakan Semakan Keselamatan Sekarang →",
+    "cta_secondary": "Layari Runbook",
+    "img_alt": "Papan Pemuka ClawGuru - Pemantauan Keselamatan",
+    "stat_check": "Semakan Keselamatan",
+    "stat_languages": "Bahasa",
+    "stat_speed": "30 Saat",
+    "stat_uptime": "Masa Aktif",
+    "sub": "Untuk teknologi Self-Hosted — jalankan semakan keselamatan, perbaiki kelemahan, kekal dilindungi.",
+    "title_1": "Risikan Keselamatan",
+    "title_2": "Untuk Self-Hoster"
   },
   "nav": {
     "live": "Langsung",

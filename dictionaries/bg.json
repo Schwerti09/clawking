@@ -8,7 +8,7 @@
     "switch": "Смяна"
   },
   "hero": {
-    "badge": "Mycelial Singularity Engine v3.0 · GENESIS PROTOCOL ACTIVE",
+    "badge": "Оперативно про разузнаване",
     "subtitle": "Живата мицелия от над 1 милион runbooks. Всеки възел е единица знание, всяка връзка – семантична зависимост. Граф с насочени връзки, еволюционен механизъм на Дарвин и Oracle Mode – най-усъвършенстваната база от оперативни знания.",
     "ctaMycelium": "Жива мицелия →",
     "ctaCopilot": "Попитай Copilot",
@@ -30,7 +30,17 @@
     "knowledgeEdges": "Връзки на знанието",
     "genesisProtocol": "Genesis Protocol",
     "nodeTooltip": "Възел на знанието",
-    "scrollLabel": "Превърти"
+    "scrollLabel": "Превърти",
+    "cta_primary": "Стартирай проверка на сигурността →",
+    "cta_secondary": "Разгледай Runbooks",
+    "img_alt": "ClawGuru Табло - Мониторинг на сигурността",
+    "stat_check": "Проверки на сигурността",
+    "stat_languages": "Езици",
+    "stat_speed": "30 секунди",
+    "stat_uptime": "Работно време",
+    "sub": "За Self-Hosted технологии — Стартирай проверка на сигурността, отстрани уязвимости, остани защитен.",
+    "title_1": "Разузнаване на сигурността",
+    "title_2": "За Self-Hosters"
   },
   "nav": {
     "live": "На живо",

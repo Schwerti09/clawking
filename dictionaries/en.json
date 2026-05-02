@@ -8,7 +8,7 @@
     "switch": "Switch"
   },
   "hero": {
-    "badge": "Mycelial Singularity Engine v3.0 · GENESIS PROTOCOL ACTIVE",
+    "badge": "Operational Pro Intelligence",
     "subtitle": "The living mycelium of 1M+ runbooks. Every node a unit of knowledge, every edge a semantic relationship. Force-directed graph, Darwinian Evolution Engine, and Oracle Mode – the world's most advanced ops knowledge base.",
     "ctaMycelium": "Living Mycelium →",
     "ctaCopilot": "Ask Copilot",
@@ -30,7 +30,17 @@
     "knowledgeEdges": "Knowledge Edges",
     "genesisProtocol": "Genesis Protocol",
     "nodeTooltip": "Knowledge Node",
-    "scrollLabel": "Scroll"
+    "scrollLabel": "Scroll",
+    "cta_primary": "Start Security Check Now →",
+    "cta_secondary": "Browse Runbooks",
+    "img_alt": "ClawGuru Dashboard - Security Monitoring",
+    "stat_check": "Security Checks",
+    "stat_languages": "Languages",
+    "stat_speed": "30 Seconds",
+    "stat_uptime": "Uptime",
+    "sub": "For Self-Hosted tech — Run security check, fix vulnerabilities, stay protected.",
+    "title_1": "Security Intelligence",
+    "title_2": "For Self-Hosters"
   },
   "nav": {
     "live": "Live",
