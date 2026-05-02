@@ -349,7 +349,7 @@ export function middleware(request: NextRequest) {
   const rawAllowed = process.env.SITEMAP_100K_LOCALES
   let allowedLocales = (rawAllowed ?? "").split(",").map((s) => s.trim()).filter(Boolean)
   if (allowedLocales.length === 0) {
-    allowedLocales = QUALITY_LOCALES as string[]
+    allowedLocales = [...QUALITY_LOCALES]
   }
   if (!allowedLocales.includes(locale)) {
     const isRunbookDetail = new RegExp(`^/${locale}/runbook/`, "i").test(pathname)
