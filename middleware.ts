@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server"
-import { DEFAULT_LOCALE, SUPPORTED_LOCALES, type Locale, localeDir } from "@/lib/i18n"
+import { DEFAULT_LOCALE, SUPPORTED_LOCALES, QUALITY_LOCALES, type Locale, localeDir } from "@/lib/i18n"
 import { getRequestId, getRequestIdHeaderName } from "@/lib/ops/request-id"
 import { buildGeoSlug, getGeoProfileFromHeaders, parseGeoVariantSlug, slugifyCity } from "@/lib/geo-matrix"
 
@@ -343,11 +343,13 @@ export function middleware(request: NextRequest) {
     return res
   }
 
-  // Determine allowed locales for high-volume routes. If env var is missing or empty, fall back to sane defaults.
+  // Determine allowed locales for high-volume routes.
+  // Fall back to QUALITY_LOCALES if the env var is missing or empty so that all
+  // properly-translated languages serve runbook/tag pages without extra redirects.
   const rawAllowed = process.env.SITEMAP_100K_LOCALES
-  let allowedLocales = (rawAllowed ?? "de,en").split(",").map((s) => s.trim()).filter(Boolean)
+  let allowedLocales = (rawAllowed ?? "").split(",").map((s) => s.trim()).filter(Boolean)
   if (allowedLocales.length === 0) {
-    allowedLocales = ["de", "en"]
+    allowedLocales = [...QUALITY_LOCALES]
   }
   if (!allowedLocales.includes(locale)) {
     const isRunbookDetail = new RegExp(`^/${locale}/runbook/`, "i").test(pathname)
@@ -451,26 +453,13 @@ export function middleware(request: NextRequest) {
   if (edgeGeo.country) res.headers.set("x-claw-geo-country", edgeGeo.country)
   res.headers.set(getRequestIdHeaderName(), requestId)
 
-  // SEO: noindex for non-primary-locale content pages whose body text is not translated.
-  // Only de and en have real content; other locales show duplicate English text.
-  // Translated pages (homepage, runbooks, tags) are explicitly excluded.
-  const indexableLocales = (process.env.SITEMAP_100K_LOCALES || "de,en").split(",").map((s) => s.trim())
-  if (!indexableLocales.includes(locale)) {
-    // Pages that ARE translated via dictionary system — keep indexable
-    const translatedRoutePatterns = [
-      /^\/[a-z]{2}(?:-[a-z]{2})?\/?$/i,                  // homepage
-      /^\/[a-z]{2}(?:-[a-z]{2})?\/runbooks?\b/i,         // runbooks index + detail
-      /^\/[a-z]{2}(?:-[a-z]{2})?\/tags?\b/i,             // tags index + detail
-      /^\/[a-z]{2}(?:-[a-z]{2})?\/roast-my-/i,           // roast-my-* (dictionary-driven)
-      /^\/[a-z]{2}(?:-[a-z]{2})?\/summon\b/i,            // summon (dictionary-driven)
-      /^\/[a-z]{2}(?:-[a-z]{2})?\/vorstellung\b/i,       // vorstellung (dictionary-driven)
-      /^\/[a-z]{2}(?:-[a-z]{2})?\/pricing\b/i,           // pricing (critical revenue route)
-      /^\/[a-z]{2}(?:-[a-z]{2})?\/consulting\b/i,        // consulting (critical revenue route)
-    ]
-    const isTranslated = translatedRoutePatterns.some((re) => re.test(pathname))
-    if (!isTranslated) {
-      res.headers.set("X-Robots-Tag", "noindex, follow")
-    }
+  // SEO: noindex ALL routes for locales that don't have genuine translations.
+  // QUALITY_LOCALES are the 32 locales with < 50 % key-overlap with English — they
+  // have real human/LLM content and are safe to index.  The remaining 68 locales
+  // are structural copies of the English dictionary and would create massive
+  // duplicate-content penalties if indexed.
+  if (!QUALITY_LOCALES.includes(locale)) {
+    res.headers.set("X-Robots-Tag", "noindex, follow")
   }
 
   // Light CDN caching for Tag pages to lower CPU
