@@ -1,14 +1,14 @@
 {
   "common": {
-    "ctaDashboard": "Dashboard →",
-    "ctaMissionControl": "Mission Control →",
+    "ctaDashboard": "Taolenn-stur →",
+    "ctaMissionControl": "Gouarnamant Misyon →",
     "locale_detected": "We detected",
     "switch_language": "Switch language?",
     "stay_here": "Stay here",
     "switch": "Switch"
   },
   "hero": {
-    "badge": "Mycelial Singularity Engine v3.0 · GENESIS PROTOCOL ACTIVE",
+    "badge": "Pro-Intellijañs Operañs",
     "subtitle": "The living mycelium of 1M+ runbooks. Every node a unit of knowledge, every edge a semantic relationship. Force-directed graph, Darwinian Evolution Engine, and Oracle Mode – the world's most advanced ops knowledge base.",
     "ctaMycelium": "Living Mycelium →",
     "ctaCopilot": "Ask Copilot",
@@ -30,7 +30,17 @@
     "knowledgeEdges": "Knowledge Edges",
     "genesisProtocol": "Genesis Protocol",
     "nodeTooltip": "Knowledge Node",
-    "scrollLabel": "Scroll"
+    "scrollLabel": "Scroll",
+    "cta_primary": "Loc ar Gwiriañ Surentez Bremañ →",
+    "cta_secondary": "Sellout ouzh Runbooks",
+    "img_alt": "Taolenn-stur ClawGuru - Gouarnamant Surentez",
+    "stat_check": "Gwiriadoù Surentez",
+    "stat_languages": "Yezhoù",
+    "stat_speed": "30 Eilenn",
+    "stat_uptime": "Amzer a-save",
+    "sub": "Evit teknologiez self-hosted — Loc'hskrivañ gwiriadoù surentez, reoliañ palioù faellidigezh, bezañ dizoret.",
+    "title_1": "Koulzad Surentez",
+    "title_2": "Evit Self-Hosters"
   },
   "nav": {
     "live": "Live",

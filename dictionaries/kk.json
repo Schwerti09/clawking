@@ -1,14 +1,14 @@
 {
   "common": {
-    "ctaDashboard": "Dashboard →",
-    "ctaMissionControl": "Mission Control →",
+    "ctaDashboard": "Басқару тақтасы →",
+    "ctaMissionControl": "Миссияны басқару →",
     "locale_detected": "We detected",
     "switch_language": "Switch language?",
     "stay_here": "Stay here",
     "switch": "Switch"
   },
   "hero": {
-    "badge": "Mycelial Singularity Engine v3.0 · GENESIS PROTOCOL ACTIVE",
+    "badge": "Жедел кәсіпқой барлау",
     "subtitle": "The living mycelium of 1M+ runbooks. Every node a unit of knowledge, every edge a semantic relationship. Force-directed graph, Darwinian Evolution Engine, and Oracle Mode – the world's most advanced ops knowledge base.",
     "ctaMycelium": "Living Mycelium →",
     "ctaCopilot": "Ask Copilot",
@@ -30,7 +30,17 @@
     "knowledgeEdges": "Knowledge Edges",
     "genesisProtocol": "Genesis Protocol",
     "nodeTooltip": "Knowledge Node",
-    "scrollLabel": "Scroll"
+    "scrollLabel": "Scroll",
+    "cta_primary": "Қазір Қауіпсіздік тексерісін бастаңыз →",
+    "cta_secondary": "Runbooks шолыңыз",
+    "img_alt": "ClawGuru басқару тақтасы - Қауіпсіздік мониторингі",
+    "stat_check": "Қауіпсіздік тексерістері",
+    "stat_languages": "Тілдер",
+    "stat_speed": "30 Секунд",
+    "stat_uptime": "Жұмыс уақыты",
+    "sub": "Self-hosted технология үшін — Қауіпсіздік тексерістерін іске қосыңыз, осалдықтарды жойыңыз, қорғалған болыңыз.",
+    "title_1": "Қауіпсіздік барлауы",
+    "title_2": "Self-Hosters үшін"
   },
   "nav": {
     "live": "Live",

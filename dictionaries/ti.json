@@ -1,14 +1,14 @@
 {
   "common": {
-    "ctaDashboard": "Dashboard →",
-    "ctaMissionControl": "Mission Control →",
+    "ctaDashboard": "ዳሽቦርድ →",
+    "ctaMissionControl": "ምእዝ ቁጽጽር →",
     "locale_detected": "We detected",
     "switch_language": "Switch language?",
     "stay_here": "Stay here",
     "switch": "Switch"
   },
   "hero": {
-    "badge": "Mycelial Singularity Engine v3.0 · GENESIS PROTOCOL ACTIVE",
+    "badge": "ዕቅዳዊ ፕሮ-ምልከታ",
     "subtitle": "The living mycelium of 1M+ runbooks. Every node a unit of knowledge, every edge a semantic relationship. Force-directed graph, Darwinian Evolution Engine, and Oracle Mode – the world's most advanced ops knowledge base.",
     "ctaMycelium": "Living Mycelium →",
     "ctaCopilot": "Ask Copilot",
@@ -30,7 +30,17 @@
     "knowledgeEdges": "Knowledge Edges",
     "genesisProtocol": "Genesis Protocol",
     "nodeTooltip": "Knowledge Node",
-    "scrollLabel": "Scroll"
+    "scrollLabel": "Scroll",
+    "cta_primary": "ሕጂ ናይ ድሕነት ምርመራ ጀምር →",
+    "cta_secondary": "Runbooks ሕሰብ",
+    "img_alt": "ዳሽቦርድ ClawGuru - ናይ ድሕነት ክትትል",
+    "stat_check": "ናይ ድሕነት ምርመራታት",
+    "stat_languages": "ቋንቋታት",
+    "stat_speed": "30 ካልኢ",
+    "stat_uptime": "ናይ ምሥራሕ ግዜ",
+    "sub": "ንSelf-Hosted ቴክኖሎጂ — ናይ ድሕነት ምርመራ ዘካይዱ፣ ድኽነታት ኣቕርቡ፣ ብሕቡእ ጸኒሑ።",
+    "title_1": "ናይ ድሕነት ምልከታ",
+    "title_2": "ንSelf-Hosters"
   },
   "nav": {
     "live": "Live",

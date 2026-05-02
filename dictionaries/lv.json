@@ -1,14 +1,14 @@
 {
   "common": {
-    "ctaDashboard": "Dashboard →",
-    "ctaMissionControl": "Mission Control →",
+    "ctaDashboard": "Vadības panelis →",
+    "ctaMissionControl": "Misijas vadība →",
     "locale_detected": "We detected",
     "switch_language": "Switch language?",
     "stay_here": "Stay here",
     "switch": "Switch"
   },
   "hero": {
-    "badge": "Mycelial Singularity Engine v3.0 · GENESIS PROTOCOL ACTIVE",
+    "badge": "Operatīvā pro-izlūkošana",
     "subtitle": "The living mycelium of 1M+ runbooks. Every node a unit of knowledge, every edge a semantic relationship. Force-directed graph, Darwinian Evolution Engine, and Oracle Mode – the world's most advanced ops knowledge base.",
     "ctaMycelium": "Living Mycelium →",
     "ctaCopilot": "Ask Copilot",
@@ -30,7 +30,17 @@
     "knowledgeEdges": "Knowledge Edges",
     "genesisProtocol": "Genesis Protocol",
     "nodeTooltip": "Knowledge Node",
-    "scrollLabel": "Scroll"
+    "scrollLabel": "Scroll",
+    "cta_primary": "Sākt drošības pārbaudi tūlīt →",
+    "cta_secondary": "Pārlūkot Runbooks",
+    "img_alt": "ClawGuru vadības panelis - Drošības uzraudzība",
+    "stat_check": "Drošības pārbaudes",
+    "stat_languages": "Valodas",
+    "stat_speed": "30 Sekundes",
+    "stat_uptime": "Darbības laiks",
+    "sub": "Self-hosted tehnoloģijai — Palaist drošības pārbaudes, novērst ievainojamības, palikt aizsargātam.",
+    "title_1": "Drošības izlūkošana",
+    "title_2": "Self-Hosters-iem"
   },
   "nav": {
     "live": "Live",

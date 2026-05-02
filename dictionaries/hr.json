@@ -1,14 +1,14 @@
 {
   "common": {
-    "ctaDashboard": "Dashboard →",
-    "ctaMissionControl": "Mission Control →",
+    "ctaDashboard": "Nadzorna ploča →",
+    "ctaMissionControl": "Kontrola misije →",
     "locale_detected": "We detected",
     "switch_language": "Switch language?",
     "stay_here": "Stay here",
     "switch": "Switch"
   },
   "hero": {
-    "badge": "Mycelial Singularity Engine v3.0 · GENESIS PROTOCOL ACTIVE",
+    "badge": "Operativna pro-inteligencija",
     "subtitle": "The living mycelium of 1M+ runbooks. Every node a unit of knowledge, every edge a semantic relationship. Force-directed graph, Darwinian Evolution Engine, and Oracle Mode – the world's most advanced ops knowledge base.",
     "ctaMycelium": "Living Mycelium →",
     "ctaCopilot": "Ask Copilot",
@@ -30,7 +30,17 @@
     "knowledgeEdges": "Knowledge Edges",
     "genesisProtocol": "Genesis Protocol",
     "nodeTooltip": "Knowledge Node",
-    "scrollLabel": "Scroll"
+    "scrollLabel": "Scroll",
+    "cta_primary": "Pokreni Provjeru Sigurnosti Odmah →",
+    "cta_secondary": "Pregledaj Runbooks",
+    "img_alt": "ClawGuru Nadzorna ploča - Sigurnosni nadzor",
+    "stat_check": "Sigurnosne Provjere",
+    "stat_languages": "Jezici",
+    "stat_speed": "30 Sekundi",
+    "stat_uptime": "Dostupnost",
+    "sub": "Za self-hosted tehnologiju — Pokreni sigurnosne provjere, otkloni ranjivosti, ostani zaštićen.",
+    "title_1": "Sigurnosna Inteligencija",
+    "title_2": "Za Self-Hosters"
   },
   "nav": {
     "live": "Live",

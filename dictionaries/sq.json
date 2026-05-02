@@ -1,14 +1,14 @@
 {
   "common": {
-    "ctaDashboard": "Dashboard →",
-    "ctaMissionControl": "Mission Control →",
+    "ctaDashboard": "Paneli i kontrollit →",
+    "ctaMissionControl": "Kontroli i misionit →",
     "locale_detected": "We detected",
     "switch_language": "Switch language?",
     "stay_here": "Stay here",
     "switch": "Switch"
   },
   "hero": {
-    "badge": "Mycelial Singularity Engine v3.0 · GENESIS PROTOCOL ACTIVE",
+    "badge": "Inteligjencë pro-operative",
     "subtitle": "The living mycelium of 1M+ runbooks. Every node a unit of knowledge, every edge a semantic relationship. Force-directed graph, Darwinian Evolution Engine, and Oracle Mode – the world's most advanced ops knowledge base.",
     "ctaMycelium": "Living Mycelium →",
     "ctaCopilot": "Ask Copilot",
@@ -30,7 +30,17 @@
     "knowledgeEdges": "Knowledge Edges",
     "genesisProtocol": "Genesis Protocol",
     "nodeTooltip": "Knowledge Node",
-    "scrollLabel": "Scroll"
+    "scrollLabel": "Scroll",
+    "cta_primary": "Fillo Kontrollin e Sigurisë Tani →",
+    "cta_secondary": "Shfleto Runbooks",
+    "img_alt": "Paneli ClawGuru - Monitorim i Sigurisë",
+    "stat_check": "Kontrolle Sigurie",
+    "stat_languages": "Gjuhë",
+    "stat_speed": "30 Sekonda",
+    "stat_uptime": "Koha e Funksionimit",
+    "sub": "Për teknologji self-hosted — Kryej kontrolle sigurie, rregulso dobësitë, mbetuni i mbrojtur.",
+    "title_1": "Inteligjencë e Sigurisë",
+    "title_2": "Për Self-Hosters"
   },
   "nav": {
     "live": "Live",

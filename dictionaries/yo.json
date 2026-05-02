@@ -1,14 +1,14 @@
 {
   "common": {
     "ctaDashboard": "Dashboard →",
-    "ctaMissionControl": "Mission Control →",
+    "ctaMissionControl": "Iṣakoso Iṣẹ →",
     "locale_detected": "We detected",
     "switch_language": "Switch language?",
     "stay_here": "Stay here",
     "switch": "Switch"
   },
   "hero": {
-    "badge": "Mycelial Singularity Engine v3.0 · GENESIS PROTOCOL ACTIVE",
+    "badge": "Pro-Ìmọ Iṣẹ",
     "subtitle": "The living mycelium of 1M+ runbooks. Every node a unit of knowledge, every edge a semantic relationship. Force-directed graph, Darwinian Evolution Engine, and Oracle Mode – the world's most advanced ops knowledge base.",
     "ctaMycelium": "Living Mycelium →",
     "ctaCopilot": "Ask Copilot",
@@ -30,7 +30,17 @@
     "knowledgeEdges": "Knowledge Edges",
     "genesisProtocol": "Genesis Protocol",
     "nodeTooltip": "Knowledge Node",
-    "scrollLabel": "Scroll"
+    "scrollLabel": "Scroll",
+    "cta_primary": "Bẹ̀rẹ̀ Ìmọ̀ Ààbò Báyìí →",
+    "cta_secondary": "Wò Runbooks",
+    "img_alt": "ClawGuru Dashboard - Ìgbọ́ Ààbò",
+    "stat_check": "Ìdánwò Ààbò",
+    "stat_languages": "Àwọn Èdè",
+    "stat_speed": "Ìṣẹ́jú 30",
+    "stat_uptime": "Àkókò Iṣẹ",
+    "sub": "Fun imọ-ẹrọ self-hosted — Ṣe awọn idanwo ààbò, tọ awọn ailera ṣe, wa ni ailewu.",
+    "title_1": "Ìmọ̀ Ààbò",
+    "title_2": "Fun Self-Hosters"
   },
   "nav": {
     "live": "Live",

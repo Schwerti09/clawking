@@ -1,14 +1,14 @@
 {
   "common": {
-    "ctaDashboard": "Dashboard →",
-    "ctaMissionControl": "Mission Control →",
+    "ctaDashboard": "სამართავი პანელი →",
+    "ctaMissionControl": "მისიის კონტროლი →",
     "locale_detected": "We detected",
     "switch_language": "Switch language?",
     "stay_here": "Stay here",
     "switch": "Switch"
   },
   "hero": {
-    "badge": "Mycelial Singularity Engine v3.0 · GENESIS PROTOCOL ACTIVE",
+    "badge": "საოპერაციო პრო-ინტელექტი",
     "subtitle": "The living mycelium of 1M+ runbooks. Every node a unit of knowledge, every edge a semantic relationship. Force-directed graph, Darwinian Evolution Engine, and Oracle Mode – the world's most advanced ops knowledge base.",
     "ctaMycelium": "Living Mycelium →",
     "ctaCopilot": "Ask Copilot",
@@ -30,7 +30,17 @@
     "knowledgeEdges": "Knowledge Edges",
     "genesisProtocol": "Genesis Protocol",
     "nodeTooltip": "Knowledge Node",
-    "scrollLabel": "Scroll"
+    "scrollLabel": "Scroll",
+    "cta_primary": "დაიწყე უსაფრთხოების შემოწმება ახლავე →",
+    "cta_secondary": "გადახედეთ Runbooks-ს",
+    "img_alt": "ClawGuru სამართავი პანელი - უსაფრთხოების მონიტორინგი",
+    "stat_check": "უსაფრთხოების შემოწმებები",
+    "stat_languages": "ენები",
+    "stat_speed": "30 წამი",
+    "stat_uptime": "ფუნქციონირების დრო",
+    "sub": "Self-hosted ტექნოლოგიისთვის — გაუშვი უსაფრთხოების შემოწმებები, გამოასწორე სუსტი წერტილები, დარჩი დაცული.",
+    "title_1": "უსაფრთხოების ინტელექტი",
+    "title_2": "Self-Hosters-ისთვის"
   },
   "nav": {
     "live": "Live",
