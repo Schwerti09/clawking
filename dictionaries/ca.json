@@ -1,14 +1,14 @@
 {
   "common": {
-    "ctaDashboard": "Dashboard →",
-    "ctaMissionControl": "Mission Control →",
+    "ctaDashboard": "Tauler →",
+    "ctaMissionControl": "Control de missió →",
     "locale_detected": "We detected",
     "switch_language": "Switch language?",
     "stay_here": "Stay here",
     "switch": "Switch"
   },
   "hero": {
-    "badge": "Mycelial Singularity Engine v3.0 · GENESIS PROTOCOL ACTIVE",
+    "badge": "Pro-Intel·ligència operativa",
     "subtitle": "The living mycelium of 1M+ runbooks. Every node a unit of knowledge, every edge a semantic relationship. Force-directed graph, Darwinian Evolution Engine, and Oracle Mode – the world's most advanced ops knowledge base.",
     "ctaMycelium": "Living Mycelium →",
     "ctaCopilot": "Ask Copilot",
@@ -30,7 +30,17 @@
     "knowledgeEdges": "Knowledge Edges",
     "genesisProtocol": "Genesis Protocol",
     "nodeTooltip": "Knowledge Node",
-    "scrollLabel": "Scroll"
+    "scrollLabel": "Scroll",
+    "cta_primary": "Inicia ara la Verificació de Seguretat →",
+    "cta_secondary": "Explorar Runbooks",
+    "img_alt": "Tauler ClawGuru - Monitoratge de seguretat",
+    "stat_check": "Verificacions de Seguretat",
+    "stat_languages": "Idiomes",
+    "stat_speed": "30 Segons",
+    "stat_uptime": "Disponibilitat",
+    "sub": "Per a tecnologia self-hosted — Executa verificacions de seguretat, corregeix vulnerabilitats, mantén-te protegit.",
+    "title_1": "Intel·ligència de Seguretat",
+    "title_2": "Per a Self-Hosters"
   },
   "nav": {
     "live": "Live",

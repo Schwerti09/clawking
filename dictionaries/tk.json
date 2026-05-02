@@ -1,14 +1,14 @@
 {
   "common": {
-    "ctaDashboard": "Dashboard →",
-    "ctaMissionControl": "Mission Control →",
+    "ctaDashboard": "Dolandyryş paneli →",
+    "ctaMissionControl": "Missiýa dolandyryşy →",
     "locale_detected": "We detected",
     "switch_language": "Switch language?",
     "stay_here": "Stay here",
     "switch": "Switch"
   },
   "hero": {
-    "badge": "Mycelial Singularity Engine v3.0 · GENESIS PROTOCOL ACTIVE",
+    "badge": "Operatiw pro-aňtamar",
     "subtitle": "The living mycelium of 1M+ runbooks. Every node a unit of knowledge, every edge a semantic relationship. Force-directed graph, Darwinian Evolution Engine, and Oracle Mode – the world's most advanced ops knowledge base.",
     "ctaMycelium": "Living Mycelium →",
     "ctaCopilot": "Ask Copilot",
@@ -30,7 +30,17 @@
     "knowledgeEdges": "Knowledge Edges",
     "genesisProtocol": "Genesis Protocol",
     "nodeTooltip": "Knowledge Node",
-    "scrollLabel": "Scroll"
+    "scrollLabel": "Scroll",
+    "cta_primary": "Häzir Howpsuzlyk barlagyny başla →",
+    "cta_secondary": "Runbook-lara göz aýlaň",
+    "img_alt": "ClawGuru dolandyryş paneli - Howpsuzlyk gözegçiligi",
+    "stat_check": "Howpsuzlyk barlaglary",
+    "stat_languages": "Diller",
+    "stat_speed": "30 Sekunt",
+    "stat_uptime": "Işleýiş wagty",
+    "sub": "Self-hosted tehnologiýa üçin — Howpsuzlyk barlaglaryny geçiriň, gowşak ýerleri düzediň, goraga alnan boluň.",
+    "title_1": "Howpsuzlyk Aňtamary",
+    "title_2": "Self-Hosters üçin"
   },
   "nav": {
     "live": "Live",

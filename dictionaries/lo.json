@@ -1,14 +1,14 @@
 {
   "common": {
-    "ctaDashboard": "Dashboard →",
-    "ctaMissionControl": "Mission Control →",
+    "ctaDashboard": "ແຜງຄວບຄຸມ →",
+    "ctaMissionControl": "ການຄວບຄຸມພາລະກິດ →",
     "locale_detected": "We detected",
     "switch_language": "Switch language?",
     "stay_here": "Stay here",
     "switch": "Switch"
   },
   "hero": {
-    "badge": "Mycelial Singularity Engine v3.0 · GENESIS PROTOCOL ACTIVE",
+    "badge": "ການຂ່າວກອງຫ້ອງການ Pro",
     "subtitle": "The living mycelium of 1M+ runbooks. Every node a unit of knowledge, every edge a semantic relationship. Force-directed graph, Darwinian Evolution Engine, and Oracle Mode – the world's most advanced ops knowledge base.",
     "ctaMycelium": "Living Mycelium →",
     "ctaCopilot": "Ask Copilot",
@@ -30,7 +30,17 @@
     "knowledgeEdges": "Knowledge Edges",
     "genesisProtocol": "Genesis Protocol",
     "nodeTooltip": "Knowledge Node",
-    "scrollLabel": "Scroll"
+    "scrollLabel": "Scroll",
+    "cta_primary": "ເລີ່ມການກວດສອບຄວາມປອດໄພດຽວນີ້ →",
+    "cta_secondary": "ທ່ອງ Runbooks",
+    "img_alt": "ແຜງຄວບຄຸມ ClawGuru - ການຕິດຕາມຄວາມປອດໄພ",
+    "stat_check": "ການກວດສອບຄວາມປອດໄພ",
+    "stat_languages": "ພາສາ",
+    "stat_speed": "30 ວິນາທີ",
+    "stat_uptime": "ເວລາທໍາງານ",
+    "sub": "ສໍາລັບເທກໂນໂລຍີ self-hosted — ດໍາເນີນການກວດສອບຄວາມປອດໄພ, ແກ້ໄຂຊ່ອງໂຫວ່, ຢູ່ໃນຄວາມປອດໄພ.",
+    "title_1": "ຂ່າວກອງຄວາມປອດໄພ",
+    "title_2": "ສໍາລັບ Self-Hosters"
   },
   "nav": {
     "live": "Live",

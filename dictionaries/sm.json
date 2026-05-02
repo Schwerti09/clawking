@@ -1,14 +1,14 @@
 {
   "common": {
     "ctaDashboard": "Dashboard →",
-    "ctaMissionControl": "Mission Control →",
+    "ctaMissionControl": "Pule Galuega →",
     "locale_detected": "We detected",
     "switch_language": "Switch language?",
     "stay_here": "Stay here",
     "switch": "Switch"
   },
   "hero": {
-    "badge": "Mycelial Singularity Engine v3.0 · GENESIS PROTOCOL ACTIVE",
+    "badge": "Pro-Malamalama Faigaluega",
     "subtitle": "The living mycelium of 1M+ runbooks. Every node a unit of knowledge, every edge a semantic relationship. Force-directed graph, Darwinian Evolution Engine, and Oracle Mode – the world's most advanced ops knowledge base.",
     "ctaMycelium": "Living Mycelium →",
     "ctaCopilot": "Ask Copilot",
@@ -30,7 +30,17 @@
     "knowledgeEdges": "Knowledge Edges",
     "genesisProtocol": "Genesis Protocol",
     "nodeTooltip": "Knowledge Node",
-    "scrollLabel": "Scroll"
+    "scrollLabel": "Scroll",
+    "cta_primary": "Amata le Siaki o le Saogalemu Nei →",
+    "cta_secondary": "Suʻesuʻe Runbooks",
+    "img_alt": "ClawGuru Dashboard - Faatulafono Saogalemu",
+    "stat_check": "Siaki Saogalemu",
+    "stat_languages": "Gagana",
+    "stat_speed": "30 Sekone",
+    "stat_uptime": "Taimi Gāoioi",
+    "sub": "Mo tekinolosi self-hosted — Tautala i siaki saogalemu, faafouina leai ni faaletonu, nofo puipuia.",
+    "title_1": "Malamalama Saogalemu",
+    "title_2": "Mo Self-Hosters"
   },
   "nav": {
     "live": "Live",

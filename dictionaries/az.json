@@ -1,14 +1,14 @@
 {
   "common": {
-    "ctaDashboard": "Dashboard →",
-    "ctaMissionControl": "Mission Control →",
+    "ctaDashboard": "İdarə Paneli →",
+    "ctaMissionControl": "Missiya Mərkəzi →",
     "locale_detected": "We detected",
     "switch_language": "Switch language?",
     "stay_here": "Stay here",
     "switch": "Switch"
   },
   "hero": {
-    "badge": "Mycelial Singularity Engine v3.0 · GENESIS PROTOCOL ACTIVE",
+    "badge": "Operativ Pro Kəşfiyyat",
     "subtitle": "The living mycelium of 1M+ runbooks. Every node a unit of knowledge, every edge a semantic relationship. Force-directed graph, Darwinian Evolution Engine, and Oracle Mode – the world's most advanced ops knowledge base.",
     "ctaMycelium": "Living Mycelium →",
     "ctaCopilot": "Ask Copilot",
@@ -30,7 +30,17 @@
     "knowledgeEdges": "Knowledge Edges",
     "genesisProtocol": "Genesis Protocol",
     "nodeTooltip": "Knowledge Node",
-    "scrollLabel": "Scroll"
+    "scrollLabel": "Scroll",
+    "cta_primary": "İndi Təhlükəsizlik Yoxlamasına Başla →",
+    "cta_secondary": "Runbooks-a baxın",
+    "img_alt": "ClawGuru İdarə Paneli - Təhlükəsizlik monitorinqi",
+    "stat_check": "Təhlükəsizlik Yoxlamaları",
+    "stat_languages": "Dillər",
+    "stat_speed": "30 Saniyə",
+    "stat_uptime": "İşləmə vaxtı",
+    "sub": "Self-Hosted texnologiya üçün — Təhlükəsizlik yoxlamasını işə sal, zəiflikləri düzəlt, qorunmuş qal.",
+    "title_1": "Təhlükəsizlik Kəşfiyyatı",
+    "title_2": "Self-Hosters üçün"
   },
   "nav": {
     "live": "Live",

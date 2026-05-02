@@ -1,14 +1,14 @@
 {
   "common": {
-    "ctaDashboard": "Dashboard →",
-    "ctaMissionControl": "Mission Control →",
+    "ctaDashboard": "Papa →",
+    "ctaMissionControl": "Hoʻomalu Pahuhopu →",
     "locale_detected": "We detected",
     "switch_language": "Switch language?",
     "stay_here": "Stay here",
     "switch": "Switch"
   },
   "hero": {
-    "badge": "Mycelial Singularity Engine v3.0 · GENESIS PROTOCOL ACTIVE",
+    "badge": "ʻIke ʻOihana Kiʻekiʻe",
     "subtitle": "The living mycelium of 1M+ runbooks. Every node a unit of knowledge, every edge a semantic relationship. Force-directed graph, Darwinian Evolution Engine, and Oracle Mode – the world's most advanced ops knowledge base.",
     "ctaMycelium": "Living Mycelium →",
     "ctaCopilot": "Ask Copilot",
@@ -30,7 +30,17 @@
     "knowledgeEdges": "Knowledge Edges",
     "genesisProtocol": "Genesis Protocol",
     "nodeTooltip": "Knowledge Node",
-    "scrollLabel": "Scroll"
+    "scrollLabel": "Scroll",
+    "cta_primary": "Hoʻomaka i ka Nānā Palekana Kēia Manawa →",
+    "cta_secondary": "Nānā i nā Runbook",
+    "img_alt": "ClawGuru Papa - Kiaʻi Palekana",
+    "stat_check": "Nānā Palekana",
+    "stat_languages": "Nā ʻŌlelo",
+    "stat_speed": "30 Kekona",
+    "stat_uptime": "Manawa Hana",
+    "sub": "No ka ʻenehana self-hosted — E hoʻoholo i nā nānā palekana, e hoʻoponopono i nā palekana nāwaliwali, e mālama i ke kaiāpuni palekana.",
+    "title_1": "ʻIke Palekana",
+    "title_2": "No nā Self-Hoster"
   },
   "nav": {
     "live": "Live",

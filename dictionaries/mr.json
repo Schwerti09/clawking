@@ -1,14 +1,14 @@
 {
   "common": {
-    "ctaDashboard": "Dashboard →",
-    "ctaMissionControl": "Mission Control →",
+    "ctaDashboard": "डॅशबोर्ड →",
+    "ctaMissionControl": "मिशन नियंत्रण →",
     "locale_detected": "We detected",
     "switch_language": "Switch language?",
     "stay_here": "Stay here",
     "switch": "Switch"
   },
   "hero": {
-    "badge": "Mycelial Singularity Engine v3.0 · GENESIS PROTOCOL ACTIVE",
+    "badge": "ऑपरेशनल प्रो-इंटेलिजन्स",
     "subtitle": "The living mycelium of 1M+ runbooks. Every node a unit of knowledge, every edge a semantic relationship. Force-directed graph, Darwinian Evolution Engine, and Oracle Mode – the world's most advanced ops knowledge base.",
     "ctaMycelium": "Living Mycelium →",
     "ctaCopilot": "Ask Copilot",
@@ -30,7 +30,17 @@
     "knowledgeEdges": "Knowledge Edges",
     "genesisProtocol": "Genesis Protocol",
     "nodeTooltip": "Knowledge Node",
-    "scrollLabel": "Scroll"
+    "scrollLabel": "Scroll",
+    "cta_primary": "आता सुरक्षा तपासणी सुरू करा →",
+    "cta_secondary": "Runbooks पाहा",
+    "img_alt": "ClawGuru डॅशबोर्ड - सुरक्षा निरीक्षण",
+    "stat_check": "सुरक्षा तपासण्या",
+    "stat_languages": "भाषा",
+    "stat_speed": "30 सेकंद",
+    "stat_uptime": "अपटाइम",
+    "sub": "Self-hosted तंत्रज्ञानासाठी — सुरक्षा तपासणी चालवा, असुरक्षितता दुरुस्त करा, संरक्षित राहा.",
+    "title_1": "सुरक्षा बुद्धिमत्ता",
+    "title_2": "Self-Hosters साठी"
   },
   "nav": {
     "live": "Live",

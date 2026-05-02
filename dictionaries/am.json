@@ -1,14 +1,14 @@
 {
   "common": {
-    "ctaDashboard": "Dashboard →",
-    "ctaMissionControl": "Mission Control →",
+    "ctaDashboard": "ዳሽቦርድ →",
+    "ctaMissionControl": "ተልዕኮ መቆጣጠሪያ →",
     "locale_detected": "We detected",
     "switch_language": "Switch language?",
     "stay_here": "Stay here",
     "switch": "Switch"
   },
   "hero": {
-    "badge": "Mycelial Singularity Engine v3.0 · GENESIS PROTOCOL ACTIVE",
+    "badge": "ኦፔሬሽናል ፕሮ-ኢንቴሊጀንስ",
     "subtitle": "The living mycelium of 1M+ runbooks. Every node a unit of knowledge, every edge a semantic relationship. Force-directed graph, Darwinian Evolution Engine, and Oracle Mode – the world's most advanced ops knowledge base.",
     "ctaMycelium": "Living Mycelium →",
     "ctaCopilot": "Ask Copilot",
@@ -30,7 +30,17 @@
     "knowledgeEdges": "Knowledge Edges",
     "genesisProtocol": "Genesis Protocol",
     "nodeTooltip": "Knowledge Node",
-    "scrollLabel": "Scroll"
+    "scrollLabel": "Scroll",
+    "cta_primary": "አሁኑኑ የደህንነት ፈተና ጀምር →",
+    "cta_secondary": "Runbooksን ያስሱ",
+    "img_alt": "ClawGuru ዳሽቦርድ - የደህንነት ቁጥጥር",
+    "stat_check": "የደህንነት ፈተናዎች",
+    "stat_languages": "ቋንቋዎች",
+    "stat_speed": "30 ሰከንድ",
+    "stat_uptime": "ሥራ ሰዓት",
+    "sub": "ለ Self-Hosted ቴክ - ሥራ ላይ ያለ ደህንነት ሲስቴሞችን ፍሰቱ ፣ ማስተካከያ ሂደቶችን አስፍጥም ፣ ሽፋን ማጣቱ ቀብ ።",
+    "title_1": "የደህንነት ትንበያ",
+    "title_2": "ለ Self-Hosters"
   },
   "nav": {
     "live": "Live",

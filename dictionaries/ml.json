@@ -1,14 +1,14 @@
 {
   "common": {
-    "ctaDashboard": "Dashboard →",
-    "ctaMissionControl": "Mission Control →",
+    "ctaDashboard": "ഡാഷ്‌ബോർഡ് →",
+    "ctaMissionControl": "ദൗത്യ നിയന്ത്രണം →",
     "locale_detected": "We detected",
     "switch_language": "Switch language?",
     "stay_here": "Stay here",
     "switch": "Switch"
   },
   "hero": {
-    "badge": "Mycelial Singularity Engine v3.0 · GENESIS PROTOCOL ACTIVE",
+    "badge": "ഓപ്പറേഷണൽ പ്രൊ-ഇന്റലിജൻസ്",
     "subtitle": "The living mycelium of 1M+ runbooks. Every node a unit of knowledge, every edge a semantic relationship. Force-directed graph, Darwinian Evolution Engine, and Oracle Mode – the world's most advanced ops knowledge base.",
     "ctaMycelium": "Living Mycelium →",
     "ctaCopilot": "Ask Copilot",
@@ -30,7 +30,17 @@
     "knowledgeEdges": "Knowledge Edges",
     "genesisProtocol": "Genesis Protocol",
     "nodeTooltip": "Knowledge Node",
-    "scrollLabel": "Scroll"
+    "scrollLabel": "Scroll",
+    "cta_primary": "ഇപ്പോൾ സുരക്ഷാ പരിശോധന ആരംഭിക്കൂ →",
+    "cta_secondary": "Runbooks ബ്രൗസ് ചെയ്യൂ",
+    "img_alt": "ClawGuru ഡാഷ്‌ബോർഡ് - സുരക്ഷാ നിരീക്ഷണം",
+    "stat_check": "സുരക്ഷാ പരിശോധനകൾ",
+    "stat_languages": "ഭാഷകൾ",
+    "stat_speed": "30 സെക്കൻഡ്",
+    "stat_uptime": "അപ്‌ടൈം",
+    "sub": "Self-hosted ടെക്‌നോളജിക്കായി — സുരക്ഷാ പരിശോധനകൾ നടത്തൂ, ദുർബലതകൾ പരിഹരിക്കൂ, സംരക്ഷിതരായിരിക്കൂ.",
+    "title_1": "സുരക്ഷാ ഗൂഢചര്യ",
+    "title_2": "Self-Hosters-നായി"
   },
   "nav": {
     "live": "Live",

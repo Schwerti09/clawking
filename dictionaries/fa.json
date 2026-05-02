@@ -1,14 +1,14 @@
 {
   "common": {
-    "ctaDashboard": "Dashboard →",
-    "ctaMissionControl": "Mission Control →",
+    "ctaDashboard": "داشبورد →",
+    "ctaMissionControl": "کنترل ماموریت →",
     "locale_detected": "We detected",
     "switch_language": "Switch language?",
     "stay_here": "Stay here",
     "switch": "Switch"
   },
   "hero": {
-    "badge": "Mycelial Singularity Engine v3.0 · GENESIS PROTOCOL ACTIVE",
+    "badge": "هوشمندی عملیاتی حرفه‌ای",
     "subtitle": "The living mycelium of 1M+ runbooks. Every node a unit of knowledge, every edge a semantic relationship. Force-directed graph, Darwinian Evolution Engine, and Oracle Mode – the world's most advanced ops knowledge base.",
     "ctaMycelium": "Living Mycelium →",
     "ctaCopilot": "Ask Copilot",
@@ -30,7 +30,17 @@
     "knowledgeEdges": "Knowledge Edges",
     "genesisProtocol": "Genesis Protocol",
     "nodeTooltip": "Knowledge Node",
-    "scrollLabel": "Scroll"
+    "scrollLabel": "Scroll",
+    "cta_primary": "اکنون بررسی امنیت را شروع کنید →",
+    "cta_secondary": "مرور Runbooks",
+    "img_alt": "داشبورد ClawGuru - نظارت بر امنیت",
+    "stat_check": "بررسی‌های امنیتی",
+    "stat_languages": "زبان‌ها",
+    "stat_speed": "۳۰ ثانیه",
+    "stat_uptime": "زمان فعالیت",
+    "sub": "برای فناوری self-hosted — بررسی‌های امنیتی انجام دهید، آسیب‌پذیری‌ها را برطرف کنید، محافظت شده بمانید.",
+    "title_1": "هوش امنیتی",
+    "title_2": "برای Self-Hosters"
   },
   "nav": {
     "live": "Live",

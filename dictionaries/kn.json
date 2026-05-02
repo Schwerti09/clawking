@@ -1,14 +1,14 @@
 {
   "common": {
-    "ctaDashboard": "Dashboard →",
-    "ctaMissionControl": "Mission Control →",
+    "ctaDashboard": "ಡ್ಯಾಶ್‌ಬೋರ್ಡ್ →",
+    "ctaMissionControl": "ಮಿಷನ್ ನಿಯಂತ್ರಣ →",
     "locale_detected": "We detected",
     "switch_language": "Switch language?",
     "stay_here": "Stay here",
     "switch": "Switch"
   },
   "hero": {
-    "badge": "Mycelial Singularity Engine v3.0 · GENESIS PROTOCOL ACTIVE",
+    "badge": "ಕಾರ್ಯಾಚರಣೆ ಪ್ರೊ-ಇಂಟೆಲಿಜೆನ್ಸ್",
     "subtitle": "The living mycelium of 1M+ runbooks. Every node a unit of knowledge, every edge a semantic relationship. Force-directed graph, Darwinian Evolution Engine, and Oracle Mode – the world's most advanced ops knowledge base.",
     "ctaMycelium": "Living Mycelium →",
     "ctaCopilot": "Ask Copilot",
@@ -30,7 +30,17 @@
     "knowledgeEdges": "Knowledge Edges",
     "genesisProtocol": "Genesis Protocol",
     "nodeTooltip": "Knowledge Node",
-    "scrollLabel": "Scroll"
+    "scrollLabel": "Scroll",
+    "cta_primary": "ಈಗಲೇ ಭದ್ರತಾ ಪರೀಕ್ಷೆ ಪ್ರಾರಂಭಿಸಿ →",
+    "cta_secondary": "ರನ್‌ಬುಕ್‌ಗಳನ್ನು 둘러보다",
+    "img_alt": "ClawGuru ಡ್ಯಾಶ್‌ಬೋರ್ಡ್ - ಭದ್ರತಾ ಮೇಲ್ವಿಚಾರಣೆ",
+    "stat_check": "ಭದ್ರತಾ ತಪಾಸಣೆಗಳು",
+    "stat_languages": "ಭಾಷೆಗಳು",
+    "stat_speed": "30 ಸೆಕೆಂಡುಗಳು",
+    "stat_uptime": "ಅಪ್‌ಟೈಮ್",
+    "sub": "Self-hosted ತಂತ್ರಜ್ಞಾನಕ್ಕಾಗಿ — ಭದ್ರತಾ ತಪಾಸಣೆಗಳನ್ನು ನಡೆಸಿ, ದುರ್ಬಲತೆಗಳನ್ನು ಸರಿಪಡಿಸಿ, ಸಂರಕ್ಷಿತರಾಗಿ ಇರಿ.",
+    "title_1": "ಭದ್ರತಾ ಬೇಹುಗಾರಿಕೆ",
+    "title_2": "Self-Hosters ರ ಕ್ಕಾಗಿ"
   },
   "nav": {
     "live": "Live",

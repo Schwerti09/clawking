@@ -1,14 +1,14 @@
 {
   "common": {
-    "ctaDashboard": "Dashboard →",
-    "ctaMissionControl": "Mission Control →",
+    "ctaDashboard": "Arbel →",
+    "ctaMissionControl": "Misio-kontrola →",
     "locale_detected": "We detected",
     "switch_language": "Switch language?",
     "stay_here": "Stay here",
     "switch": "Switch"
   },
   "hero": {
-    "badge": "Mycelial Singularity Engine v3.0 · GENESIS PROTOCOL ACTIVE",
+    "badge": "Eragiketa pro-adimena",
     "subtitle": "The living mycelium of 1M+ runbooks. Every node a unit of knowledge, every edge a semantic relationship. Force-directed graph, Darwinian Evolution Engine, and Oracle Mode – the world's most advanced ops knowledge base.",
     "ctaMycelium": "Living Mycelium →",
     "ctaCopilot": "Ask Copilot",
@@ -30,7 +30,17 @@
     "knowledgeEdges": "Knowledge Edges",
     "genesisProtocol": "Genesis Protocol",
     "nodeTooltip": "Knowledge Node",
-    "scrollLabel": "Scroll"
+    "scrollLabel": "Scroll",
+    "cta_primary": "Hasi Segurtasun Egiaztapena Orain →",
+    "cta_secondary": "Arakatu Runbooks",
+    "img_alt": "ClawGuru arbela - Segurtasun monitorizazioa",
+    "stat_check": "Segurtasun Egiaztapenak",
+    "stat_languages": "Hizkuntzak",
+    "stat_speed": "30 Segundo",
+    "stat_uptime": "Funtzionamendu-denbora",
+    "sub": "Self-hosted teknologiarako — Exekutatu segurtasun egiaztapenak, konpondu ahultasunak, egon babestuta.",
+    "title_1": "Segurtasun Adimena",
+    "title_2": "Self-Hosters-entzat"
   },
   "nav": {
     "live": "Live",

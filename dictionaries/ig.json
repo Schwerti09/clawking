@@ -1,14 +1,14 @@
 {
   "common": {
     "ctaDashboard": "Dashboard →",
-    "ctaMissionControl": "Mission Control →",
+    "ctaMissionControl": "Njikwa Ọrụ →",
     "locale_detected": "We detected",
     "switch_language": "Switch language?",
     "stay_here": "Stay here",
     "switch": "Switch"
   },
   "hero": {
-    "badge": "Mycelial Singularity Engine v3.0 · GENESIS PROTOCOL ACTIVE",
+    "badge": "Ọrụ Pro-Ihe ọmụma",
     "subtitle": "The living mycelium of 1M+ runbooks. Every node a unit of knowledge, every edge a semantic relationship. Force-directed graph, Darwinian Evolution Engine, and Oracle Mode – the world's most advanced ops knowledge base.",
     "ctaMycelium": "Living Mycelium →",
     "ctaCopilot": "Ask Copilot",
@@ -30,7 +30,17 @@
     "knowledgeEdges": "Knowledge Edges",
     "genesisProtocol": "Genesis Protocol",
     "nodeTooltip": "Knowledge Node",
-    "scrollLabel": "Scroll"
+    "scrollLabel": "Scroll",
+    "cta_primary": "Bido Nlele Nchekwa Ugbu a →",
+    "cta_secondary": "Ịchọ Runbooks",
+    "img_alt": "ClawGuru Dashboard - Nlekọta Nchekwa",
+    "stat_check": "Nlele Nchekwa",
+    "stat_languages": "Asụsụ",
+    "stat_speed": "Sekọnd 30",
+    "stat_uptime": "Oge Ọrụ",
+    "sub": "Maka teknolojị self-hosted — Bido nlele nchekwa, dozie ihe ndọghachi, bụrụ onye echekwara.",
+    "title_1": "Ihe ọmụma Nchekwa",
+    "title_2": "Maka Self-Hosters"
   },
   "nav": {
     "live": "Live",

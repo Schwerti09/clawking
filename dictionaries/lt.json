@@ -1,14 +1,14 @@
 {
   "common": {
-    "ctaDashboard": "Dashboard →",
-    "ctaMissionControl": "Mission Control →",
+    "ctaDashboard": "Valdymo skydelis →",
+    "ctaMissionControl": "Misijos valdymas →",
     "locale_detected": "We detected",
     "switch_language": "Switch language?",
     "stay_here": "Stay here",
     "switch": "Switch"
   },
   "hero": {
-    "badge": "Mycelial Singularity Engine v3.0 · GENESIS PROTOCOL ACTIVE",
+    "badge": "Operatyvinis pro-žvalgyba",
     "subtitle": "The living mycelium of 1M+ runbooks. Every node a unit of knowledge, every edge a semantic relationship. Force-directed graph, Darwinian Evolution Engine, and Oracle Mode – the world's most advanced ops knowledge base.",
     "ctaMycelium": "Living Mycelium →",
     "ctaCopilot": "Ask Copilot",
@@ -30,7 +30,17 @@
     "knowledgeEdges": "Knowledge Edges",
     "genesisProtocol": "Genesis Protocol",
     "nodeTooltip": "Knowledge Node",
-    "scrollLabel": "Scroll"
+    "scrollLabel": "Scroll",
+    "cta_primary": "Pradėkite saugumo patikrinimą dabar →",
+    "cta_secondary": "Naršyti Runbooks",
+    "img_alt": "ClawGuru valdymo skydelis - Saugumo stebėjimas",
+    "stat_check": "Saugumo patikrinimai",
+    "stat_languages": "Kalbos",
+    "stat_speed": "30 Sekundžių",
+    "stat_uptime": "Veikimo laikas",
+    "sub": "Self-hosted technologijai — Vykdykite saugumo patikrinimus, taisykite pažeidžiamumus, likite apsaugoti.",
+    "title_1": "Saugumo žvalgyba",
+    "title_2": "Self-Hosters-ams"
   },
   "nav": {
     "live": "Live",
