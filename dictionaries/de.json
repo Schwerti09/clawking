@@ -8,6 +8,16 @@
     "switch": "Switch"
   },
   "hero": {
+    "title_1": "Security Intelligence",
+    "title_2": "Für Self-Hoster",
+    "sub": "Für Self-Hosted-Infrastruktur — Security-Check starten, Schwachstellen beheben, geschützt bleiben.",
+    "cta_primary": "Security-Check starten →",
+    "cta_secondary": "Runbooks durchsuchen",
+    "img_alt": "ClawGuru Dashboard – Sicherheitsüberwachung",
+    "stat_check": "Security-Checks",
+    "stat_languages": "Sprachen",
+    "stat_speed": "30 Sekunden",
+    "stat_uptime": "Verfügbarkeit",
     "badge": "Mycelial Singularity Engine v3.0 · GENESIS PROTOKOLL AKTIV",
     "subtitle": "Das lebende Mycelium aus über einer Million Runbooks – Wissen verbunden durch semantische Beziehungen.",
     "ctaMycelium": "Living Mycelium öffnen →",
