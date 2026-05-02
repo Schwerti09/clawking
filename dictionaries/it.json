@@ -1,14 +1,14 @@
 {
   "common": {
-    "ctaDashboard": "Dashboard →",
-    "ctaMissionControl": "Mission Control →",
+    "ctaDashboard": "Pannello →",
+    "ctaMissionControl": "Controllo Missione →",
     "locale_detected": "Abbiamo rilevato",
     "switch_language": "Cambiare lingua?",
     "stay_here": "Rimani qui",
     "switch": "Cambia"
   },
   "hero": {
-    "badge": "Mycelial Singularity Engine v3.0 · GENESIS PROTOCOL ACTIVE",
+    "badge": "Intelligence Pro Operativa",
     "subtitle": "Il micelio vivente di oltre 1 milione di runbook. Ogni nodo è un'unità di conoscenza, ogni arco una relazione semantica. Grafico a forza, Darwinian Evolution Engine e Oracle Mode: la knowledge base operativa più avanzata al mondo.",
     "ctaMycelium": "Living Mycelium →",
     "ctaCopilot": "Chiedi a Copilot",
@@ -30,7 +30,17 @@
     "knowledgeEdges": "Archi della Conoscenza",
     "genesisProtocol": "Genesis Protocol",
     "nodeTooltip": "Nodo di Conoscenza",
-    "scrollLabel": "Scorri"
+    "scrollLabel": "Scorri",
+    "cta_primary": "Avvia Verifica di Sicurezza →",
+    "cta_secondary": "Sfoglia i Runbook",
+    "img_alt": "Pannello ClawGuru - Monitoraggio Sicurezza",
+    "stat_check": "Verifiche di Sicurezza",
+    "stat_languages": "Lingue",
+    "stat_speed": "30 secondi",
+    "stat_uptime": "Disponibilità",
+    "sub": "Per tecnologia Self-Hosted — esegui verifica di sicurezza, correggi vulnerabilità, rimani protetto.",
+    "title_1": "Intelligence di Sicurezza",
+    "title_2": "Per Self-Hoster"
   },
   "nav": {
     "live": "Live",

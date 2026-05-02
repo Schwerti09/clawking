@@ -1,7 +1,7 @@
 {
   "common": {
     "ctaDashboard": "לוח בקרה →",
-    "ctaMissionControl": "Mission Control →",
+    "ctaMissionControl": "מרכז בקרה →",
     "locale_detected": "זיהינו",
     "switch_language": "להחליף שפה?",
     "stay_here": "להישאר כאן",
@@ -30,7 +30,17 @@
     "knowledgeEdges": "קצוות ידע",
     "genesisProtocol": "פרוטוקול גניס",
     "nodeTooltip": "צומת ידע",
-    "scrollLabel": "גלול"
+    "scrollLabel": "גלול",
+    "cta_primary": "התחל בדיקת אבטחה עכשיו →",
+    "cta_secondary": "עיין ב-Runbooks",
+    "img_alt": "לוח בקרה ClawGuru - ניטור אבטחה",
+    "stat_check": "בדיקות אבטחה",
+    "stat_languages": "שפות",
+    "stat_speed": "30 שניות",
+    "stat_uptime": "זמן פעולה",
+    "sub": "לטכנולוגיית Self-Hosted — הפעל בדיקת אבטחה, תקן פגיעויות, הישאר מוגן.",
+    "title_1": "מודיעין אבטחה",
+    "title_2": "ל-Self-Hosters"
   },
   "nav": {
     "live": "Live",

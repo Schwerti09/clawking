@@ -30,7 +30,17 @@
     "knowledgeEdges": "知识连接",
     "genesisProtocol": "创世协议",
     "nodeTooltip": "知识节点",
-    "scrollLabel": "滚动"
+    "scrollLabel": "滚动",
+    "cta_primary": "立即开始安全检查 →",
+    "cta_secondary": "浏览 Runbooks",
+    "img_alt": "ClawGuru 控制台 - 安全监控",
+    "stat_check": "安全检查",
+    "stat_languages": "语言",
+    "stat_speed": "30秒",
+    "stat_uptime": "运行时间",
+    "sub": "为 Self-Hosted 技术 — 运行安全检查，修复漏洞，保持受保护状态。",
+    "title_1": "安全情报",
+    "title_2": "为 Self-Hosters"
   },
   "nav": {
     "live": "Live",

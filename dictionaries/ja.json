@@ -8,7 +8,7 @@
     "switch": "切り替え"
   },
   "hero": {
-    "badge": "Mycelial Singularity Engine v3.0 · GENESIS PROTOCOL ACTIVE",
+    "badge": "オペレーショナル・プロ・インテリジェンス",
     "subtitle": "100万件以上のランブックからなる生きた菌糸ネットワーク。各ノードは知識の単位、各エッジは意味的な関係。フォースダイレクトグラフ、ダーウィン進化エンジン、Oracleモード — 世界最先端のOps知識ベース。",
     "ctaMycelium": "リビング・マイセリウム →",
     "ctaCopilot": "Copilotに質問",
@@ -30,7 +30,17 @@
     "knowledgeEdges": "ナレッジエッジ",
     "genesisProtocol": "ジェネシスプロトコル",
     "nodeTooltip": "ナレッジノード",
-    "scrollLabel": "スクロール"
+    "scrollLabel": "スクロール",
+    "cta_primary": "今すぐセキュリティチェックを開始 →",
+    "cta_secondary": "Runbookを閲覧",
+    "img_alt": "ClawGuruダッシュボード - セキュリティ監視",
+    "stat_check": "セキュリティチェック",
+    "stat_languages": "言語",
+    "stat_speed": "30秒",
+    "stat_uptime": "稼働時間",
+    "sub": "セルフホスト技術向け — セキュリティチェックを実行し、脆弱性を修正し、保護された状態を維持。",
+    "title_1": "セキュリティインテリジェンス",
+    "title_2": "セルフホスター向け"
   },
   "nav": {
     "live": "ライブ",

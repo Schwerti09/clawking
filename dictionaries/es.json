@@ -30,7 +30,17 @@
     "knowledgeEdges": "Aristas de conocimiento",
     "genesisProtocol": "Protocolo Genesis",
     "nodeTooltip": "Nodo de conocimiento",
-    "scrollLabel": "Desplazarse"
+    "scrollLabel": "Desplazarse",
+    "cta_primary": "Iniciar Verificación de Seguridad →",
+    "cta_secondary": "Ver Runbooks",
+    "img_alt": "Panel de ClawGuru - Monitoreo de Seguridad",
+    "stat_check": "Verificaciones de Seguridad",
+    "stat_languages": "Idiomas",
+    "stat_speed": "30 Segundos",
+    "stat_uptime": "Disponibilidad",
+    "sub": "Para tecnología Self-Hosted — ejecuta verificación de seguridad, corrige vulnerabilidades, mantente protegido.",
+    "title_1": "Inteligencia de Seguridad",
+    "title_2": "Para Self-Hosters"
   },
   "nav": {
     "live": "Live",

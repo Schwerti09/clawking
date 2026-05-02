@@ -1,14 +1,14 @@
 {
   "common": {
-    "ctaDashboard": "Dashboard →",
-    "ctaMissionControl": "Mission Control →",
+    "ctaDashboard": "Instrumentpanel →",
+    "ctaMissionControl": "Uppdragskontroll →",
     "locale_detected": "Vi har upptäckt",
     "switch_language": "Byt språk?",
     "stay_here": "Stanna här",
     "switch": "Byt"
   },
   "hero": {
-    "badge": "Mycelial Singularity Engine v3.0 · GENESIS PROTOCOL ACTIVE",
+    "badge": "Operativ Pro-Underrättelse",
     "subtitle": "Det levande mycelet av 1M+ runbooks. Varje nod en kunskapsenhet, varje kant en semantisk relation. Force-directed graf, Darwinian Evolution Engine och Oracle Mode – världens mest avancerade kunskapsbas för drift.",
     "ctaMycelium": "Levande Mycelium →",
     "ctaCopilot": "Fråga Copilot",
@@ -30,7 +30,17 @@
     "knowledgeEdges": "Kunskapskanter",
     "genesisProtocol": "Genesis Protocol",
     "nodeTooltip": "Kunskapsnod",
-    "scrollLabel": "Skrolla"
+    "scrollLabel": "Skrolla",
+    "cta_primary": "Starta säkerhetskontroll nu →",
+    "cta_secondary": "Bläddra Runbooks",
+    "img_alt": "ClawGuru Instrumentpanel - Säkerhetsövervakning",
+    "stat_check": "Säkerhetskontroller",
+    "stat_languages": "Språk",
+    "stat_speed": "30 sekunder",
+    "stat_uptime": "Drifttid",
+    "sub": "För Self-Hosted teknik — kör säkerhetskontroll, åtgärda sårbarheter, förbliv skyddad.",
+    "title_1": "Säkerhetsunderrättelse",
+    "title_2": "För Self-Hosters"
   },
   "nav": {
     "live": "Live",

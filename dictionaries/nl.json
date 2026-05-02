@@ -1,14 +1,14 @@
 {
   "common": {
     "ctaDashboard": "Dashboard →",
-    "ctaMissionControl": "Mission Control →",
+    "ctaMissionControl": "Missiecontrole →",
     "locale_detected": "We hebben",
     "switch_language": "Taal wisselen?",
     "stay_here": "Hier blijven",
     "switch": "Wisselen"
   },
   "hero": {
-    "badge": "Mycelial Singularity Engine v3.0 · GENESIS PROTOCOL ACTIVE",
+    "badge": "Operationele Pro-Intelligentie",
     "subtitle": "Het levende mycelium van 1M+ runbooks. Elke node is kennis, elke edge een semantische relatie. Force-directed graph, Darwinian Evolution Engine en Oracle Mode – de meest geavanceerde kennisbank voor operations ter wereld.",
     "ctaMycelium": "Levend Mycelium →",
     "ctaCopilot": "Vraag Copilot",
@@ -30,7 +30,17 @@
     "knowledgeEdges": "Kennisverbindingen",
     "genesisProtocol": "Genesis Protocol",
     "nodeTooltip": "Kennisnode",
-    "scrollLabel": "Scrollen"
+    "scrollLabel": "Scrollen",
+    "cta_primary": "Start beveiligingscontrole nu →",
+    "cta_secondary": "Runbooks doorbladeren",
+    "img_alt": "ClawGuru Dashboard - Beveiligingsbewaking",
+    "stat_check": "Beveiligingscontroles",
+    "stat_languages": "Talen",
+    "stat_speed": "30 seconden",
+    "stat_uptime": "Beschikbaarheid",
+    "sub": "Voor Self-Hosted technologie — voer beveiligingscontrole uit, herstel kwetsbaarheden, blijf beschermd.",
+    "title_1": "Beveiligingsintelligentie",
+    "title_2": "Voor Self-Hosters"
   },
   "nav": {
     "live": "Live",

@@ -1,14 +1,14 @@
 {
   "common": {
     "ctaDashboard": "Панель управления →",
-    "ctaMissionControl": "Mission Control →",
+    "ctaMissionControl": "Центр управления →",
     "locale_detected": "Мы обнаружили",
     "switch_language": "Сменить язык?",
     "stay_here": "Остаться здесь",
     "switch": "Сменить"
   },
   "hero": {
-    "badge": "Mycelial Singularity Engine v3.0 · GENESIS PROTOCOL ACTIVE",
+    "badge": "Оперативная Про Разведка",
     "subtitle": "Живая мицелиальная сеть из более чем 1 млн runbook'ов. Каждый узел — единица знаний, каждая связь — семантическое отношение. Граф с силовой динамикой, Darwinian Evolution Engine и Oracle Mode — самая передовая база операционных знаний в мире.",
     "ctaMycelium": "Living Mycelium →",
     "ctaCopilot": "Спросить Copilot",
@@ -30,7 +30,17 @@
     "knowledgeEdges": "Связи знаний",
     "genesisProtocol": "Genesis Protocol",
     "nodeTooltip": "Узел знаний",
-    "scrollLabel": "Прокрутить"
+    "scrollLabel": "Прокрутить",
+    "cta_primary": "Начать проверку безопасности →",
+    "cta_secondary": "Просмотреть Runbooks",
+    "img_alt": "Панель управления ClawGuru - Мониторинг безопасности",
+    "stat_check": "Проверки безопасности",
+    "stat_languages": "Языки",
+    "stat_speed": "30 секунд",
+    "stat_uptime": "Время работы",
+    "sub": "Для Self-Hosted технологий — запусти проверку безопасности, исправь уязвимости, оставайся защищённым.",
+    "title_1": "Разведка безопасности",
+    "title_2": "Для Self-Хостеров"
   },
   "nav": {
     "live": "Live",

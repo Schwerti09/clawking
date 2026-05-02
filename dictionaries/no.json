@@ -1,14 +1,14 @@
 {
   "common": {
-    "ctaDashboard": "Dashboard →",
-    "ctaMissionControl": "Mission Control →",
+    "ctaDashboard": "Kontrollpanel →",
+    "ctaMissionControl": "Oppdragskontroll →",
     "locale_detected": "Vi har oppdaget",
     "switch_language": "Bytte språk?",
     "stay_here": "Bli her",
     "switch": "Bytt"
   },
   "hero": {
-    "badge": "Mycelial Singularity Engine v3.0 · GENESIS PROTOCOL ACTIVE",
+    "badge": "Operasjonell Pro-Etterretning",
     "subtitle": "Det levende mycelet av 1M+ runbooks. Hver node en kunnskapsenhet, hver kant et semantisk forhold. Kraftstyrt graf, Darwinistisk evolusjonsmotor og Oracle Mode – verdens mest avanserte ops-kunnskapsbase.",
     "ctaMycelium": "Levende Mycelium →",
     "ctaCopilot": "Spør Copilot",
@@ -30,7 +30,17 @@
     "knowledgeEdges": "Kunnskapskanter",
     "genesisProtocol": "Genesis Protocol",
     "nodeTooltip": "Kunnskapspunkt",
-    "scrollLabel": "Scroll"
+    "scrollLabel": "Scroll",
+    "cta_primary": "Start sikkerhetsjekk nå →",
+    "cta_secondary": "Bla gjennom Runbooks",
+    "img_alt": "ClawGuru Kontrollpanel - Sikkerhetsovervåking",
+    "stat_check": "Sikkerhetsjekker",
+    "stat_languages": "Språk",
+    "stat_speed": "30 sekunder",
+    "stat_uptime": "Oppetid",
+    "sub": "For Self-Hosted teknologi — kjør sikkerhetsjekk, rett sårbarheter, forbli beskyttet.",
+    "title_1": "Sikkerhetsettterretning",
+    "title_2": "For Self-Hostere"
   },
   "nav": {
     "live": "Live",
