@@ -289,29 +289,29 @@
 ### Batch AB:
 | # | Slug | Status |
 |---|---|---|
-| 149 | `ai-agent-zero-trust-advanced` | [ ] |
-| 150 | `ai-compliance-automation` | [ ] |
-| 151 | `ai-data-loss-prevention` | [ ] |
-| 152 | `ai-incident-response` | [ ] |
-| 153 | `ai-model-versioning-security` | [ ] |
+| 149 | `ai-agent-zero-trust-advanced` | ✅ |
+| 150 | `ai-compliance-automation` | ✅ |
+| 151 | `ai-data-loss-prevention` | ✅ |
+| 152 | `ai-incident-response` | ✅ |
+| 153 | `ai-model-versioning-security` | ✅ |
 
 ### Batch AC:
 | # | Slug | Status |
 |---|---|---|
-| 154 | `ai-red-teaming-methodologies` | [ ] |
-| 155 | `ai-regulatory-reporting` | [ ] |
-| 156 | `ai-supply-chain` | [ ] |
-| 157 | `ai-tool-use-security` | [ ] |
-| 158 | `backup-recovery-disaster-recovery` | [ ] |
+| 154 | `ai-red-teaming-methodologies` | ✅ |
+| 155 | `ai-regulatory-reporting` | ✅ |
+| 156 | `ai-supply-chain` | ✅ |
+| 157 | `ai-tool-use-security` | ✅ |
+| 158 | `backup-recovery-disaster-recovery` | ✅ |
 
 ### Batch AD:
 | # | Slug | Status |
 |---|---|---|
-| 159 | `data-loss-prevention` | [ ] |
-| 160 | `federated-learning-security` | [ ] |
-| 161 | `hardening-guide-2024` | [ ] |
-| 162 | `ssl-tls-management` | [ ] |
-| 163 | `threat-detection-setup` | [ ] |
+| 159 | `data-loss-prevention` | ✅ |
+| 160 | `federated-learning-security` | ✅ |
+| 161 | `hardening-guide-2024` | ✅ |
+| 162 | `ssl-tls-management` | ✅ |
+| 163 | `threat-detection-setup` | ✅ |
 
 ---
 
