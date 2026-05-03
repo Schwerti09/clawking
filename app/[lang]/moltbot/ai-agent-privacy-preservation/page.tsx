@@ -39,6 +39,7 @@ export default function AIAgentPrivacyPreservationPage({ params }: PageProps) {
   const locale = (SUPPORTED_LOCALES.includes(params.lang as Locale) ? params.lang : "de") as Locale
   if (!SUPPORTED_LOCALES.includes(locale)) notFound()
   const isDE = locale === "de"
+  const title = pick(isDE, "AI Agent Privacy Preservation: Datenschutz für AI-Agents | ClawGuru", "AI Agent Privacy Preservation: Privacy Protection for AI Agents | ClawGuru")
 
   const jsonLd = [
     { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
