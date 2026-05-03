@@ -53,6 +53,7 @@
     "test:webhook": "node scripts/test-stripe-webhook.mjs"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.92.0",
     "@neondatabase/serverless": "^1.0.2",
     "@react-three/drei": "^8.17.0",
     "@react-three/fiber": "^8.18.0",
