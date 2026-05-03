@@ -5,7 +5,7 @@
 
 import { NextRequest, NextResponse } from "next/server"
 import { isValidBookingUrl } from "@/lib/booking-url"
-import { CheckoutProduct, resolveCheckoutPriceWithOptions } from "@/lib/stripe-pricing"
+import { CheckoutProduct, resolvePriceFromEnv } from "@/lib/stripe-pricing"
 
 export const dynamic = "force-dynamic"
 export const runtime = "nodejs"
@@ -201,7 +201,7 @@ function classify(checks: EnvCheck[]): EnvCheckResult {
   }
 }
 
-async function probeCheckoutReady(): Promise<EnvCheckResult["checkoutReady"]> {
+function probeCheckoutReady(): EnvCheckResult["checkoutReady"] {
   const matrix: Array<{ product: CheckoutProduct; annual: boolean }> = [
     { product: "daypass", annual: false },
     { product: "pro", annual: false },
@@ -216,27 +216,18 @@ async function probeCheckoutReady(): Promise<EnvCheckResult["checkoutReady"]> {
     { product: "scale", annual: true },
   ]
 
-  const checks = await Promise.all(
-    matrix.map(async ({ product, annual }) => {
-      try {
-        // Intentionally env-only: this health probe must be side-effect free and
-        // must not depend on Stripe API reachability. We validate that each flow
-        // can resolve to a configured env price id right now.
-        await resolveCheckoutPriceWithOptions(product, annual, {
-          allowCreate: false,
-          allowLookup: false,
-        })
-        return { product, annual, ok: true as const }
-      } catch (error) {
-        return {
-          product,
-          annual,
-          ok: false as const,
-          error: error instanceof Error ? error.message : String(error),
-        }
-      }
-    })
-  )
+  const checks = matrix.map(({ product, annual }) => {
+    // Intentionally env-only and side-effect free: this probe validates whether
+    // each checkout flow resolves to a configured price id right now.
+    const price = resolvePriceFromEnv(product, annual)
+    if (price) return { product, annual, ok: true as const }
+    return {
+      product,
+      annual,
+      ok: false as const,
+      error: `No env price configured for product=${product}, annual=${annual}`,
+    }
+  })
 
   const failing = checks
     .filter((check) => !check.ok)
@@ -253,7 +244,7 @@ export async function GET(req: NextRequest) {
   if (!verifyCronSecret(req)) return unauthorized()
 
   const result = classify(ENV_CHECKS)
-  result.checkoutReady = await probeCheckoutReady()
+  result.checkoutReady = probeCheckoutReady()
 
   return NextResponse.json(result, {
     status: 200,
