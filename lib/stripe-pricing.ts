@@ -237,6 +237,8 @@ export async function resolveCheckoutPrice(
   product: CheckoutProduct,
   annual: boolean
 ): Promise<string> {
+  // Backwards-compatible convenience wrapper used by existing checkout routes.
+  // Keep default behavior as full resolution (env -> lookup -> optional create).
   return resolveCheckoutPriceWithOptions(product, annual, { allowCreate: true, allowLookup: true })
 }
 
@@ -282,7 +284,7 @@ export async function resolveCheckoutPriceWithOptions(
  * Supports all product types and handles annual/monthly variants transparently
  */
 export function planFromSubscription(subscription: any): string {
-  const price = subscription.items?.data?.[0]?.price
+  const price = extractFirstSubscriptionPrice(subscription)
   const lookupKey = price?.lookup_key ?? ""
   const priceId = price?.id ?? ""
 
@@ -304,6 +306,10 @@ export function planFromSubscription(subscription: any): string {
 
   // Default: pro covers both pro_monthly and pro_annual
   return "pro"
+}
+
+function extractFirstSubscriptionPrice(subscription: any): { id?: string; lookup_key?: string } | null {
+  return subscription?.items?.data?.[0]?.price ?? null
 }
 
 function nonEmpty(values: Array<string | undefined>): string[] {

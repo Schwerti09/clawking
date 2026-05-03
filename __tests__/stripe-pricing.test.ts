@@ -107,4 +107,3 @@ describe("stripe-pricing plan fallback", () => {
     expect(planFromSubscription(subscription)).toBe("team")
   })
 })
-
