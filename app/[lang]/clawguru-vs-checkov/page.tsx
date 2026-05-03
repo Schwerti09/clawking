@@ -45,34 +45,25 @@ export default function ClawGuruVsCheckovPage({ params }: { params: { lang: stri
   const pricingLocale = isDE ? "de" : "en"
 
   return (
-    <div className="min-h-screen bg-[#0a0a0a] relative overflow-hidden">
-      {/* Animated Gradient Background */}
-      <div className="fixed inset-0 -z-10">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#0a0a0a] via-[#0f172a] to-[#1e1b4b] opacity-50"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(34,211,238,0.1),transparent_50%)] animate-pulse"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(168,85,247,0.1),transparent_40%)] animate-pulse" style={{animationDelay: '1s'}}></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.1),transparent_40%)] animate-pulse" style={{animationDelay: '2s'}}></div>
-      </div>
+    <div className="container mx-auto px-4 py-8">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <div className="max-w-4xl mx-auto">
+        <div className="bg-amber-900/80 border-l-4 border-amber-500 p-4 mb-8 text-sm text-amber-100 rounded-r-lg shadow-lg">
+          <strong className="text-amber-100">{pick(isDE, '"Not a Pentest" Hinweis', '"Not a Pentest" Notice')}</strong>
+          {pick(isDE, ': Dieser Guide hilft dabei, das richtige Tool für deine Infrastruktur zu wählen. Kein Angriffs-Tool.', ': This guide helps you choose the right tool for your infrastructure. No attack tools.')}
+        </div>
 
-      <div className="container mx-auto px-4 py-8 relative z-10">
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-amber-900/80 backdrop-blur-lg border-l-4 border-amber-500 p-4 mb-8 text-sm text-amber-100 rounded-r-lg shadow-lg animate-fade-in-up">
-            <strong className="text-amber-100">{pick(isDE, '"Not a Pentest" Hinweis', '"Not a Pentest" Notice')}</strong>
-            {pick(isDE, ': Dieser Guide hilft dabei, das richtige Tool für deine Infrastruktur zu wählen. Kein Angriffs-Tool.', ': This guide helps you choose the right tool for your infrastructure. No attack tools.')}
-          </div>
+        <h1 className="text-4xl font-bold mb-4 text-gray-100 bg-gradient-to-r from-gray-100 via-white to-gray-100 bg-clip-text text-transparent">
+          {pick(isDE, 'ClawGuru vs Checkov: IaC Security Scanner vs Security Platform', 'ClawGuru vs Checkov: IaC Security Scanner vs Security Platform')}
+        </h1>
+        <p className="text-lg text-gray-300 mb-8 leading-relaxed">
+          {pick(isDE, 'Checkov (von Bridgecrew/Prisma Cloud) ist ein statischer IaC-Security-Scanner für Terraform, CloudFormation, Kubernetes und Dockerfile. ClawGuru ist eine Live-Security-Plattform mit Executable Runbooks, Real-Time-Score und Compliance-Dashboard.', 'Checkov (by Bridgecrew/Prisma Cloud) is a static IaC security scanner for Terraform, CloudFormation, Kubernetes and Dockerfile. ClawGuru is a live security platform with executable runbooks, real-time scoring and compliance dashboard.')}
+        </p>
 
-          <h1 className="text-4xl font-bold mb-4 text-gray-100 bg-gradient-to-r from-gray-100 via-white to-gray-100 bg-clip-text text-transparent animate-fade-in-up" style={{animationDelay: '0.1s'}}>
-            {pick(isDE, 'ClawGuru vs Checkov: IaC Security Scanner vs Security Platform', 'ClawGuru vs Checkov: IaC Security Scanner vs Security Platform')}
-          </h1>
-          <p className="text-lg text-gray-300 mb-8 leading-relaxed animate-fade-in-up" style={{animationDelay: '0.2s'}}>
-            {pick(isDE, 'Checkov (von Bridgecrew/Prisma Cloud) ist ein statischer IaC-Security-Scanner für Terraform, CloudFormation, Kubernetes und Dockerfile. ClawGuru ist eine Live-Security-Plattform mit Executable Runbooks, Real-Time-Score und Compliance-Dashboard.', 'Checkov (by Bridgecrew/Prisma Cloud) is a static IaC security scanner for Terraform, CloudFormation, Kubernetes and Dockerfile. ClawGuru is a live security platform with executable runbooks, real-time scoring and compliance dashboard.')}
-          </p>
-
-        <section className="mb-10 animate-fade-in-up" style={{animationDelay: '0.3s'}}>
+        <section className="mb-10">
           <h2 className="text-2xl font-semibold mb-4 text-gray-100">{pick(isDE, '⚔️ Direkter Vergleich', '⚔️ Head-to-Head Comparison')}</h2>
           <div className="overflow-x-auto">
-            <table className="min-w-full bg-gray-900/80 backdrop-blur-lg border border-gray-700/50 rounded-xl shadow-2xl">
+            <table className="min-w-full bg-gray-900/80 border border-gray-700/50 rounded-xl shadow-2xl">
               <thead className="bg-gray-800/80">
                 <tr>
                   <th className="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase">{pick(isDE, 'Kriterium', 'Criterion')}</th>
@@ -115,14 +106,14 @@ export default function ClawGuruVsCheckovPage({ params }: { params: { lang: stri
           </div>
         </section>
 
-        <section className="mb-10 animate-fade-in-up" style={{animationDelay: '0.4s'}}>
+        <section className="mb-10">
           <h2 className="text-2xl font-semibold mb-4 text-gray-100">{pick(isDE, '🏆 Wann welches Tool?', '🏆 Which tool when?')}</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-green-900/80 backdrop-blur-lg border border-green-700/50 p-5 rounded-xl shadow-2xl hover:border-green-500/30 transition-all duration-300">
+            <div className="bg-green-900/80 p-5 rounded-xl border border-green-700/50 shadow-2xl hover:border-green-500/30 transition-all duration-300">
               <h3 className="font-bold text-green-300 mb-3">🛡️ {pick(isDE, 'ClawGuru ist die Wahl wenn...', 'ClawGuru is the choice when...')}</h3>
               <ul className="space-y-1.5 text-sm text-green-200">
                 {(isDE ? [
-                  'Runtime-Sicherheit zusätzlich zu IaC-Checks gebraucht',
+                  'Runtime-Security zusätzlich zu IaC-Checks gebraucht',
                   'Executable Runbooks für schnelle Fixes gewünscht',
                   'Live-Score und Compliance-Dashboard wichtig',
                   'DSGVO und EU-Datenhaltung zwingend',
@@ -136,7 +127,7 @@ export default function ClawGuruVsCheckovPage({ params }: { params: { lang: stri
                 ]).map(item => <li key={item}>• {item}</li>)}
               </ul>
             </div>
-            <div className="bg-blue-900/80 backdrop-blur-lg border border-blue-700/50 p-5 rounded-xl shadow-2xl hover:border-blue-500/30 transition-all duration-300">
+            <div className="bg-blue-900/80 p-5 rounded-xl border border-blue-700/50 shadow-2xl hover:border-blue-500/30 transition-all duration-300">
               <h3 className="font-bold text-blue-300 mb-3">📋 {pick(isDE, 'Checkov ist die Wahl wenn...', 'Checkov is the choice when...')}</h3>
               <ul className="space-y-1.5 text-sm text-blue-200">
                 {(isDE ? [
@@ -157,14 +148,14 @@ export default function ClawGuruVsCheckovPage({ params }: { params: { lang: stri
           </div>
         </section>
 
-        <section className="mb-10 animate-fade-in-up" style={{animationDelay: '0.5s'}}>
+        <section className="mb-10">
           <h2 className="text-2xl font-semibold mb-4 text-gray-100">{pick(isDE, '🔗 Weiterführende Links', '🔗 Further Resources')}</h2>
           <div className="grid grid-cols-2 gap-4">
-            <a href={`/${lang}/securitycheck`} className="block bg-gray-800/80 backdrop-blur-lg p-4 rounded-xl border border-gray-700/50 shadow-2xl hover:border-cyan-500/30 transition-all duration-300 hover:shadow-cyan-500/20">
+            <a href={`/${lang}/securitycheck`} className="block bg-gray-800/80 p-4 rounded-xl border border-gray-700/50 shadow-2xl hover:border-cyan-500/30 transition-all duration-300 hover:shadow-cyan-500/20">
               <div className="font-semibold text-cyan-400">{pick(isDE, '🛡️ Security Check', '🛡️ Security Check')}</div>
               <div className="text-sm text-gray-300">{pick(isDE, 'Kostenlos starten', 'Start for free')}</div>
             </a>
-            <a href={`/${lang}/moltbot/devsecops-pipeline`} className="block bg-gray-800/80 backdrop-blur-lg p-4 rounded-xl border border-gray-700/50 shadow-2xl hover:border-cyan-500/30 transition-all duration-300 hover:shadow-cyan-500/20">
+            <a href={`/${lang}/moltbot/devsecops-pipeline`} className="block bg-gray-800/80 p-4 rounded-xl border border-gray-700/50 shadow-2xl hover:border-cyan-500/30 transition-all duration-300 hover:shadow-cyan-500/20">
               <div className="font-semibold text-cyan-400">{pick(isDE, '🔧 DevSecOps Pipeline', '🔧 DevSecOps Pipeline')}</div>
               <div className="text-sm text-gray-300">{pick(isDE, 'CI/CD Security Runbook', 'CI/CD Security Runbook')}</div>
             </a>

@@ -52,28 +52,19 @@ export default function ClawGuruVsCrowdstrikePage({ params }: PageProps) {
   const clawGuruPreis = clawGuruPublicPricingBullets(pricingLocale)
 
   return (
-    <div className="min-h-screen bg-[#0a0a0a] relative overflow-hidden">
-      {/* Animated Gradient Background */}
-      <div className="fixed inset-0 -z-10">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#0a0a0a] via-[#0f172a] to-[#1e1b4b] opacity-50"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(34,211,238,0.1),transparent_50%)] animate-pulse"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(168,85,247,0.1),transparent_40%)] animate-pulse" style={{animationDelay: '1s'}}></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.1),transparent_40%)] animate-pulse" style={{animationDelay: '2s'}}></div>
-      </div>
+    <div className="container mx-auto px-4 py-8">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <div className="max-w-4xl mx-auto">
+        <div className="bg-amber-900/80 border-l-4 border-amber-500 p-4 mb-8 text-sm text-amber-100 rounded-r-lg shadow-lg">
+          <strong className="text-amber-100">Kein Penetrationstest</strong>: Dieser Vergleich dient der Sicherheitsarchitektur-Entscheidung. Keine Angriffswerkzeuge.
+        </div>
+        <h1 className="text-4xl font-bold mb-4 text-gray-100 bg-gradient-to-r from-gray-100 via-white to-gray-100 bg-clip-text text-transparent">ClawGuru vs CrowdStrike: SIEM & EDR Sicherheitsvergleich 2026</h1>
+        <p className="text-lg text-gray-300 mb-8 leading-relaxed">Umfassender Security-Plattformvergleich für Enterprise-SIEM, EDR und Security-Operations-Teams. Wir analysieren Funktionen, DSGVO-Compliance, Deployment und Kosten beider Lösungen.</p>
 
-      <div className="container mx-auto px-4 py-8 relative z-10">
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-amber-900/80 backdrop-blur-lg border-l-4 border-amber-500 p-4 mb-8 text-sm text-amber-100 rounded-r-lg shadow-lg animate-fade-in-up">
-            <strong className="text-amber-100">Kein Penetrationstest</strong>: Dieser Vergleich dient der Sicherheitsarchitektur-Entscheidung. Keine Angriffswerkzeuge.
-          </div>
-          <h1 className="text-4xl font-bold mb-4 text-gray-100 bg-gradient-to-r from-gray-100 via-white to-gray-100 bg-clip-text text-transparent animate-fade-in-up" style={{animationDelay: '0.1s'}}>ClawGuru vs CrowdStrike: SIEM & EDR Sicherheitsvergleich 2026</h1>
-          <p className="text-lg text-gray-300 mb-8 leading-relaxed animate-fade-in-up" style={{animationDelay: '0.2s'}}>Umfassender Security-Plattformvergleich für Enterprise-SIEM, EDR und Security-Operations-Teams. Wir analysieren Funktionen, DSGVO-Compliance, Deployment und Kosten beider Lösungen.</p>
-
-        <section className="mb-10 animate-fade-in-up" style={{animationDelay: '0.3s'}}>
+        <section className="mb-10">
           <h2 className="text-2xl font-semibold mb-4 text-gray-100">Schnellvergleich</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-blue-900/80 backdrop-blur-lg p-6 rounded-xl border border-blue-700/50 shadow-2xl hover:border-blue-500/30 transition-all duration-300">
+            <div className="bg-blue-900/80 p-6 rounded-xl border border-blue-700/50 shadow-2xl hover:border-blue-500/30 transition-all duration-300">
               <h3 className="font-bold text-blue-300 mb-4">ClawGuru</h3>
               <ul className="space-y-2 text-sm text-gray-300">
                 <li className="flex items-start"><span className="text-green-400 mr-2">✓</span>Self-Hosted & DSGVO-konform</li>
@@ -83,7 +74,7 @@ export default function ClawGuruVsCrowdstrikePage({ params }: PageProps) {
                 <li className="flex items-start"><span className="text-green-400 mr-2">✓</span>Day Pass + monatliche Pläne in EUR (keine Endpoint-Taxe)</li>
               </ul>
             </div>
-            <div className="bg-red-900/80 backdrop-blur-lg p-6 rounded-xl border border-red-700/50 shadow-2xl hover:border-red-500/30 transition-all duration-300">
+            <div className="bg-red-900/80 p-6 rounded-xl border border-red-700/50 shadow-2xl hover:border-red-500/30 transition-all duration-300">
               <h3 className="font-bold text-red-300 mb-4">CrowdStrike</h3>
               <ul className="space-y-2 text-sm text-gray-300">
                 <li className="flex items-start"><span className="text-green-400 mr-2">✓</span>KI-gestützte Bedrohungserkennung</li>
@@ -96,10 +87,10 @@ export default function ClawGuruVsCrowdstrikePage({ params }: PageProps) {
           </div>
         </section>
 
-        <section className="mb-10 animate-fade-in-up" style={{animationDelay: '0.4s'}}>
+        <section className="mb-10">
           <h2 className="text-2xl font-semibold mb-4 text-gray-100">Feature-Vergleich</h2>
           <div className="overflow-x-auto">
-            <table className="min-w-full bg-gray-900/80 backdrop-blur-lg border border-gray-700/50 rounded-xl shadow-2xl">
+            <table className="min-w-full bg-gray-900/80 border border-gray-700/50 rounded-xl shadow-2xl">
               <thead className="bg-gray-800/80">
                 <tr>
                   <th className="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">Feature</th>
@@ -107,7 +98,7 @@ export default function ClawGuruVsCrowdstrikePage({ params }: PageProps) {
                   <th className="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">CrowdStrike</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-gray-700/50">
+              <tbody className="divide-y divide-gray-700">
                 <tr className="hover:bg-gray-700/30 transition-colors"><td className="px-6 py-4 text-sm font-medium text-gray-100">SIEM-Funktionen</td><td className="px-6 py-4 text-sm text-green-400">Vollständig mit Custom Rules</td><td className="px-6 py-4 text-sm text-yellow-400">Eingeschränkt</td></tr>
                 <tr className="bg-gray-800/50 hover:bg-gray-700/30 transition-colors"><td className="px-6 py-4 text-sm font-medium text-gray-100">EDR/XDR</td><td className="px-6 py-4 text-sm text-green-400">Open-Source Agent-Unterstützung</td><td className="px-6 py-4 text-sm text-green-400">KI-Falcon-Agent</td></tr>
                 <tr className="hover:bg-gray-700/30 transition-colors"><td className="px-6 py-4 text-sm font-medium text-gray-100">Deployment</td><td className="px-6 py-4 text-sm text-green-400">Self-Hosted, On-Prem, Cloud</td><td className="px-6 py-4 text-sm text-yellow-400">Nur Cloud (SaaS)</td></tr>
@@ -119,10 +110,10 @@ export default function ClawGuruVsCrowdstrikePage({ params }: PageProps) {
           </div>
         </section>
 
-        <section className="mb-10 animate-fade-in-up" style={{animationDelay: '0.5s'}}>
+        <section className="mb-10">
           <h2 className="text-2xl font-semibold mb-4 text-gray-100">Wann welche Plattform wählen?</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-gray-800/80 backdrop-blur-lg border border-gray-700/50 rounded-xl p-6 shadow-2xl hover:border-cyan-500/30 transition-all duration-300">
+            <div className="bg-gray-800/80 border border-gray-700/50 rounded-xl p-6 shadow-2xl hover:border-cyan-500/30 transition-all duration-300">
               <h3 className="font-bold text-cyan-400 mb-4">ClawGuru wählen wenn:</h3>
               <ul className="space-y-3 text-sm text-gray-300">
                 <li className="flex items-start"><span className="text-cyan-400 mr-2">→</span>DSGVO/EU-Compliance zwingend erforderlich ist</li>
@@ -132,7 +123,7 @@ export default function ClawGuruVsCrowdstrikePage({ params }: PageProps) {
                 <li className="flex items-start"><span className="text-cyan-400 mr-2">→</span>Kein Vendor Lock-in erwünscht ist</li>
               </ul>
             </div>
-            <div className="bg-gray-800/80 backdrop-blur-lg border border-gray-700/50 rounded-xl p-6 shadow-2xl hover:border-red-500/30 transition-all duration-300">
+            <div className="bg-gray-800/80 border border-gray-700/50 rounded-xl p-6 shadow-2xl hover:border-cyan-500/30 transition-all duration-300">
               <h3 className="font-bold text-red-300 mb-4">CrowdStrike wählen wenn:</h3>
               <ul className="space-y-3 text-sm text-gray-300">
                 <li className="flex items-start"><span className="text-red-400 mr-2">→</span>24/7 Managed Security Services benötigt werden</li>
@@ -145,11 +136,11 @@ export default function ClawGuruVsCrowdstrikePage({ params }: PageProps) {
           </div>
         </section>
 
-        <section className="mb-10 animate-fade-in-up" style={{animationDelay: '0.6s'}}>
+        <section className="mb-10">
           <h2 className="text-2xl font-semibold mb-4 text-gray-100">Preisvergleich 2026</h2>
-          <div className="bg-gray-800/80 backdrop-blur-lg p-6 rounded-xl border border-gray-700/50 shadow-2xl hover:border-gray-600/30 transition-all duration-300">
+          <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="bg-gray-900/80 backdrop-blur-lg p-4 rounded-lg border border-gray-700/50">
+              <div className="bg-gray-900 p-4 rounded-lg border border-gray-700">
                 <h3 className="font-bold text-cyan-400 mb-3">ClawGuru Preise</h3>
                 <ul className="space-y-2 text-sm text-gray-300">
                   {clawGuruPreis.map(({ k, label, text, highlightClass }) => (
@@ -159,7 +150,7 @@ export default function ClawGuruVsCrowdstrikePage({ params }: PageProps) {
                   ))}
                 </ul>
               </div>
-              <div className="bg-gray-900/80 backdrop-blur-lg p-4 rounded-lg border border-gray-700/50">
+              <div className="bg-gray-900 p-4 rounded-lg border border-gray-700">
                 <h3 className="font-bold text-red-300 mb-3">CrowdStrike Preise</h3>
                 <ul className="space-y-2 text-sm text-gray-300">
                   <li><strong className="text-gray-100">Falcon Prevent:</strong> 69$/Endpoint/Jahr</li>
@@ -173,11 +164,11 @@ export default function ClawGuruVsCrowdstrikePage({ params }: PageProps) {
           </div>
         </section>
 
-        <section className="mb-10 animate-fade-in-up" style={{animationDelay: '0.7s'}}>
+        <section className="mb-10">
           <h2 className="text-2xl font-semibold mb-4 text-gray-100">Häufige Fragen (FAQ)</h2>
           <div className="space-y-4">
             {faqSchema.mainEntity.map((item, i) => (
-              <details key={i} className="bg-gray-800/80 backdrop-blur-lg border border-gray-700/50 rounded-xl p-4 shadow-2xl hover:border-cyan-500/30 transition-all duration-300">
+              <details key={i} className="bg-gray-800/80 border border-gray-700/50 rounded-xl p-4 shadow-2xl hover:border-cyan-500/30 transition-all duration-300">
                 <summary className="font-semibold text-gray-100 cursor-pointer">{item.name}</summary>
                 <p className="mt-3 text-sm text-gray-300">{item.acceptedAnswer.text}</p>
               </details>
@@ -185,22 +176,22 @@ export default function ClawGuruVsCrowdstrikePage({ params }: PageProps) {
           </div>
         </section>
 
-        <section className="mb-10 animate-fade-in-up" style={{animationDelay: '0.8s'}}>
+        <section className="mb-10">
           <h2 className="text-2xl font-semibold mb-4 text-gray-100">Weiterführende Ressourcen</h2>
           <div className="grid grid-cols-2 gap-4">
-            <a href={`/${locale}/check`} className="block bg-gray-800/80 backdrop-blur-lg p-4 rounded-xl border border-gray-700/50 shadow-2xl hover:border-cyan-500/30 transition-all duration-300 hover:shadow-cyan-500/20">
+            <a href={`/${locale}/check`} className="block bg-gray-800/80 p-4 rounded-xl border border-gray-700/50 shadow-2xl hover:border-cyan-500/30 transition-all duration-300 hover:shadow-cyan-500/20">
               <div className="font-semibold text-cyan-400">Security Check</div>
               <div className="text-sm text-gray-300">System jetzt scannen</div>
             </a>
-            <a href={`/${locale}/runbooks`} className="block bg-gray-800/80 backdrop-blur-lg p-4 rounded-xl border border-gray-700/50 shadow-2xl hover:border-cyan-500/30 transition-all duration-300 hover:shadow-cyan-500/20">
+            <a href={`/${locale}/runbooks`} className="block bg-gray-800/80 p-4 rounded-xl border border-gray-700/50 shadow-2xl hover:border-cyan-500/30 transition-all duration-300 hover:shadow-cyan-500/20">
               <div className="font-semibold text-cyan-400">Runbooks</div>
               <div className="text-sm text-gray-300">600+ Security-Playbooks</div>
             </a>
-            <a href={`/${locale}/openclaw`} className="block bg-gray-800/80 backdrop-blur-lg p-4 rounded-xl border border-gray-700/50 shadow-2xl hover:border-cyan-500/30 transition-all duration-300 hover:shadow-cyan-500/20">
+            <a href={`/${locale}/openclaw`} className="block bg-gray-800/80 p-4 rounded-xl border border-gray-700/50 shadow-2xl hover:border-cyan-500/30 transition-all duration-300 hover:shadow-cyan-500/20">
               <div className="font-semibold text-cyan-400">OpenClaw Framework</div>
               <div className="text-sm text-gray-300">Self-Hosted Security</div>
             </a>
-            <a href={`/${locale}/moltbot/threat-detection-setup`} className="block bg-gray-800/80 backdrop-blur-lg p-4 rounded-xl border border-gray-700/50 shadow-2xl hover:border-cyan-500/30 transition-all duration-300 hover:shadow-cyan-500/20">
+            <a href={`/${locale}/moltbot/threat-detection-setup`} className="block bg-gray-800/80 p-4 rounded-xl border border-gray-700/50 shadow-2xl hover:border-cyan-500/30 transition-all duration-300 hover:shadow-cyan-500/20">
               <div className="font-semibold text-cyan-400">Threat Detection</div>
               <div className="text-sm text-gray-300">Falco + Prometheus Setup</div>
             </a>
