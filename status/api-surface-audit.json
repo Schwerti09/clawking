@@ -1,0 +1,2549 @@
+{
+  "generatedAt": "2026-05-03T15:31:58.450Z",
+  "summary": {
+    "totalRoutes": 147,
+    "classes": {
+      "public": 116,
+      "internal": 1,
+      "admin": 22,
+      "cron": 4,
+      "webhook": 4
+    },
+    "risk": {
+      "critical": 0,
+      "medium": 4,
+      "low": 143
+    },
+    "telemetryCoveragePct": 6.1,
+    "authCoveragePct": 49
+  },
+  "routes": [
+    {
+      "route": "app/api/academy/sentinel/route.ts",
+      "class": "public",
+      "methods": [
+        "POST"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": false
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/admin/block-ip/route.ts",
+      "class": "admin",
+      "methods": [
+        "POST"
+      ],
+      "guards": {
+        "adminAuth": true,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": true
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/admin/cockpit/route.ts",
+      "class": "admin",
+      "methods": [
+        "GET"
+      ],
+      "guards": {
+        "adminAuth": true,
+        "sharedSecret": true,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": true
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/admin/executions/route.ts",
+      "class": "admin",
+      "methods": [
+        "GET"
+      ],
+      "guards": {
+        "adminAuth": true,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": true
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/admin/executions/stats/route.ts",
+      "class": "admin",
+      "methods": [
+        "GET"
+      ],
+      "guards": {
+        "adminAuth": true,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": true
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/admin/gemini/stats/route.ts",
+      "class": "admin",
+      "methods": [
+        "GET"
+      ],
+      "guards": {
+        "adminAuth": true,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": true
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/admin/geo/enrich-city/route.ts",
+      "class": "admin",
+      "methods": [
+        "POST",
+        "GET"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": true,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": true
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/admin/geo-cities/route.ts",
+      "class": "admin",
+      "methods": [
+        "GET",
+        "POST",
+        "PATCH"
+      ],
+      "guards": {
+        "adminAuth": true,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": true
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/admin/geo-matrix/route.ts",
+      "class": "admin",
+      "methods": [
+        "GET"
+      ],
+      "guards": {
+        "adminAuth": true,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": true
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/admin/index-urls/route.ts",
+      "class": "admin",
+      "methods": [
+        "POST"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": true,
+        "apiKeyAuth": true,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": true
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/admin/kill-switch/route.ts",
+      "class": "admin",
+      "methods": [
+        "POST"
+      ],
+      "guards": {
+        "adminAuth": true,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": true
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/admin/login/route.ts",
+      "class": "admin",
+      "methods": [
+        "POST"
+      ],
+      "guards": {
+        "adminAuth": true,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": true
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/admin/logout/route.ts",
+      "class": "admin",
+      "methods": [
+        "GET"
+      ],
+      "guards": {
+        "adminAuth": true,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": true
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/admin/maintenance/route.ts",
+      "class": "admin",
+      "methods": [
+        "GET",
+        "POST"
+      ],
+      "guards": {
+        "adminAuth": true,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": true
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/admin/overview/route.ts",
+      "class": "admin",
+      "methods": [
+        "GET"
+      ],
+      "guards": {
+        "adminAuth": true,
+        "sharedSecret": true,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": true
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/admin/profit-analytics/route.ts",
+      "class": "admin",
+      "methods": [
+        "GET"
+      ],
+      "guards": {
+        "adminAuth": true,
+        "sharedSecret": true,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": true
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/admin/rebuild/route.ts",
+      "class": "admin",
+      "methods": [
+        "POST"
+      ],
+      "guards": {
+        "adminAuth": true,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": true
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/admin/revenue/route.ts",
+      "class": "admin",
+      "methods": [
+        "GET"
+      ],
+      "guards": {
+        "adminAuth": true,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": true,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": true
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/admin/revenue/stats/route.ts",
+      "class": "admin",
+      "methods": [
+        "GET"
+      ],
+      "guards": {
+        "adminAuth": true,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": true
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/admin/sentinel-check/route.ts",
+      "class": "admin",
+      "methods": [
+        "GET",
+        "POST"
+      ],
+      "guards": {
+        "adminAuth": true,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": true
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/admin/system-health/route.ts",
+      "class": "admin",
+      "methods": [
+        "GET"
+      ],
+      "guards": {
+        "adminAuth": true,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": true
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/admin/users/route.ts",
+      "class": "admin",
+      "methods": [
+        "GET"
+      ],
+      "guards": {
+        "adminAuth": true,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": true,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": true
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/admin/users/stats/route.ts",
+      "class": "admin",
+      "methods": [
+        "GET"
+      ],
+      "guards": {
+        "adminAuth": true,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": true
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/affiliate/assets/[partnerId]/route.ts",
+      "class": "public",
+      "methods": [
+        "GET"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": false
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/affiliate/onboard/route.ts",
+      "class": "public",
+      "methods": [
+        "POST"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": false
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/agents/growth/route.ts",
+      "class": "public",
+      "methods": [
+        "POST"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": false
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/agents/predictive/route.ts",
+      "class": "public",
+      "methods": [
+        "GET"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": true,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": true
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/agents/video/route.ts",
+      "class": "public",
+      "methods": [
+        "POST"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": false
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/agents/viral/route.ts",
+      "class": "public",
+      "methods": [
+        "POST"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": false
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/agents/vulnerability/route.ts",
+      "class": "public",
+      "methods": [
+        "GET"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": true,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": true
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/ai/approve-for-publishing/route.ts",
+      "class": "public",
+      "methods": [
+        "GET",
+        "POST"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": false
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/ai/auto-publish-gold/route.ts",
+      "class": "public",
+      "methods": [
+        "GET",
+        "POST"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": false
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/ai/batch-generate/route.ts",
+      "class": "public",
+      "methods": [
+        "POST",
+        "GET"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": false
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/ai/content-validator/route.ts",
+      "class": "public",
+      "methods": [
+        "POST",
+        "GET"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": false
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/ai/generate/route.ts",
+      "class": "public",
+      "methods": [
+        "POST"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": false
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/ai/generate-chunk/route.ts",
+      "class": "public",
+      "methods": [
+        "POST"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": false
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/ai/health/route.ts",
+      "class": "public",
+      "methods": [
+        "GET"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": false
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/ai/human-review-queue/route.ts",
+      "class": "public",
+      "methods": [
+        "GET",
+        "POST",
+        "PUT",
+        "DELETE"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": false
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/ai/provider-health/route.ts",
+      "class": "public",
+      "methods": [
+        "GET"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": false
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/ai/publish-content/route.ts",
+      "class": "public",
+      "methods": [
+        "POST"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": false
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/analytics/check/route.ts",
+      "class": "public",
+      "methods": [
+        "POST"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": true,
+        "hasAuth": false
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/analytics/copilot/route.ts",
+      "class": "public",
+      "methods": [
+        "POST"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": true,
+        "hasAuth": false
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/auth/activate/route.ts",
+      "class": "public",
+      "methods": [
+        "GET"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": true,
+        "hasAuth": false
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/auth/login/route.ts",
+      "class": "public",
+      "methods": [
+        "POST"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": true,
+        "telemetry": false,
+        "hasAuth": false
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/auth/logout/route.ts",
+      "class": "public",
+      "methods": [
+        "GET"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": true,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": true
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/auth/me/route.ts",
+      "class": "public",
+      "methods": [
+        "GET"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": true,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": true
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/auth/recover/route.ts",
+      "class": "public",
+      "methods": [
+        "GET"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": true,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": true
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/auth/tier/route.ts",
+      "class": "public",
+      "methods": [
+        "GET"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": false
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/bounties/route.ts",
+      "class": "public",
+      "methods": [
+        "POST"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": false
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/clawlink/route.ts",
+      "class": "public",
+      "methods": [
+        "GET"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": false
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/clawlink.js/route.ts",
+      "class": "public",
+      "methods": [
+        "GET"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": false
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/consult-health/cron/route.ts",
+      "class": "cron",
+      "methods": [
+        "GET"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": true,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": true
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/consult-health/env-check/route.ts",
+      "class": "public",
+      "methods": [
+        "GET"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": true,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": true
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/copilot/route.ts",
+      "class": "public",
+      "methods": [
+        "POST"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": true,
+        "telemetry": true,
+        "hasAuth": false
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/dashboard/tool-execution/route.ts",
+      "class": "public",
+      "methods": [
+        "POST"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": true,
+        "hasAuth": false
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/discord/route.ts",
+      "class": "public",
+      "methods": [
+        "POST"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": true,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": true
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/download/route.ts",
+      "class": "public",
+      "methods": [
+        "GET"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": true,
+        "rateLimit": false,
+        "telemetry": true,
+        "hasAuth": true
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/downloads/[slug]/route.ts",
+      "class": "public",
+      "methods": [
+        "GET"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": false
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/email/onboarding/route.ts",
+      "class": "public",
+      "methods": [
+        "POST"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": false
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/extension-analytics/route.ts",
+      "class": "public",
+      "methods": [
+        "POST"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": false
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/geo/africa-expansion/route.ts",
+      "class": "public",
+      "methods": [
+        "GET"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": true,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": true
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/geo/africa-mea-expansion/route.ts",
+      "class": "public",
+      "methods": [
+        "GET"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": true,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": true
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/geo/asia-latam-expansion/route.ts",
+      "class": "public",
+      "methods": [
+        "GET"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": true,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": true
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/geo/auto-promotion/route.ts",
+      "class": "public",
+      "methods": [
+        "POST"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": true,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": true
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/geo/auto-prune/route.ts",
+      "class": "public",
+      "methods": [
+        "POST"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": true,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": true
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/geo/canary-rollout/route.ts",
+      "class": "public",
+      "methods": [
+        "POST"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": true,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": true
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/geo/china-create/route.ts",
+      "class": "public",
+      "methods": [
+        "GET"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": true,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": true
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/geo/city-ranking/route.ts",
+      "class": "public",
+      "methods": [
+        "GET"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": false
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/geo/global-expansion/route.ts",
+      "class": "public",
+      "methods": [
+        "GET"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": true,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": true
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/geo/index-health/route.ts",
+      "class": "public",
+      "methods": [
+        "GET"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": false
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/geo/latam-plus-expansion/route.ts",
+      "class": "public",
+      "methods": [
+        "GET"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": true,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": true
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/geo/mea-expansion/route.ts",
+      "class": "public",
+      "methods": [
+        "GET"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": true,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": true
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/geo/oceania-expansion/route.ts",
+      "class": "public",
+      "methods": [
+        "GET"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": true,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": true
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/geo/revalidate/route.ts",
+      "class": "public",
+      "methods": [
+        "POST"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": true,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": true
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/geo/rollout-status/route.ts",
+      "class": "public",
+      "methods": [
+        "GET"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": true,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": true
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/geo/sitemap-guardrail/route.ts",
+      "class": "public",
+      "methods": [
+        "GET",
+        "POST"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": true,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": true
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/geo/top-city-expansion/route.ts",
+      "class": "public",
+      "methods": [
+        "POST"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": true,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": true
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/health/activate-passive/route.ts",
+      "class": "public",
+      "methods": [
+        "POST"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": true,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": true
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/health/cron/route.ts",
+      "class": "cron",
+      "methods": [
+        "GET"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": true,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": true
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/health/route.ts",
+      "class": "public",
+      "methods": [
+        "GET"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": true,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": true
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/incidents/route.ts",
+      "class": "public",
+      "methods": [
+        "GET"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": false
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/indexing-request/route.ts",
+      "class": "public",
+      "methods": [
+        "POST",
+        "GET"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": true,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": true,
+        "hasAuth": true
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/intel/cve/[id]/route.ts",
+      "class": "public",
+      "methods": [
+        "GET"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": false
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/intel/cves/route.ts",
+      "class": "public",
+      "methods": [
+        "GET"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": false
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/intel/feeds/route.ts",
+      "class": "public",
+      "methods": [
+        "GET"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": false,
+        "apiKeyAuth": true,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": true
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/intel/mapping/route.ts",
+      "class": "public",
+      "methods": [
+        "GET"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": false
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/intel/route.ts",
+      "class": "public",
+      "methods": [
+        "GET",
+        "POST"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": true,
+        "telemetry": false,
+        "hasAuth": false
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/intel/stats/route.ts",
+      "class": "public",
+      "methods": [
+        "GET"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": false
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/intel/threats/route.ts",
+      "class": "public",
+      "methods": [
+        "GET"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": false
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/internal/pseo/stats/route.ts",
+      "class": "internal",
+      "methods": [
+        "GET"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": true,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": true
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/launch/cron/route.ts",
+      "class": "cron",
+      "methods": [
+        "GET"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": true,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": true
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/launch/route.ts",
+      "class": "public",
+      "methods": [
+        "POST"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": false
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/launch/stats/route.ts",
+      "class": "public",
+      "methods": [
+        "GET"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": false
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/live/route.ts",
+      "class": "public",
+      "methods": [
+        "GET"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": false
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/live-wall/route.ts",
+      "class": "public",
+      "methods": [
+        "GET"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": false
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/mycelium/route.ts",
+      "class": "public",
+      "methods": [
+        "GET"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": false
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/neuro/route.ts",
+      "class": "public",
+      "methods": [
+        "GET",
+        "POST"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": false
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/newsletter/dispatch/route.ts",
+      "class": "public",
+      "methods": [
+        "POST"
+      ],
+      "guards": {
+        "adminAuth": true,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": true
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/newsletter/subscribe/route.ts",
+      "class": "public",
+      "methods": [
+        "POST"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": true,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": true,
+        "telemetry": false,
+        "hasAuth": true
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/newsletter/unsubscribe/route.ts",
+      "class": "public",
+      "methods": [
+        "GET"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": false
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/oracle/route.ts",
+      "class": "public",
+      "methods": [
+        "GET",
+        "POST"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": false
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/perfection/route.ts",
+      "class": "public",
+      "methods": [
+        "POST"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": false
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/public-score/route.ts",
+      "class": "public",
+      "methods": [
+        "POST"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": false
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/public-security-check/route.ts",
+      "class": "public",
+      "methods": [
+        "POST"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": false
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/quality-dashboard/route.ts",
+      "class": "public",
+      "methods": [
+        "GET"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": false
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/quality-gate/route.ts",
+      "class": "public",
+      "methods": [
+        "GET"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": false
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/recovery/request/route.ts",
+      "class": "public",
+      "methods": [
+        "POST"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": true,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": true
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/revalidate-all/route.ts",
+      "class": "public",
+      "methods": [
+        "GET"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": false
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/revalidate-sitemaps/route.ts",
+      "class": "public",
+      "methods": [
+        "GET"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": false
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/roast-statistics/route.ts",
+      "class": "public",
+      "methods": [
+        "GET"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": false
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/runbook/[slug]/merge-request/route.ts",
+      "class": "public",
+      "methods": [
+        "GET",
+        "POST",
+        "PATCH"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": false
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/runbook/[slug]/versions/route.ts",
+      "class": "public",
+      "methods": [
+        "GET",
+        "POST"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": false
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/runbooks/search/route.ts",
+      "class": "public",
+      "methods": [
+        "GET"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": false
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/runbooks/search-index/route.ts",
+      "class": "public",
+      "methods": [
+        "GET"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": false
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/runbooks/warmup/route.ts",
+      "class": "public",
+      "methods": [
+        "GET"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": false
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/score-badge/route.ts",
+      "class": "public",
+      "methods": [
+        "GET"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": false
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/security-check/route.ts",
+      "class": "public",
+      "methods": [
+        "POST"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": true,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": true
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/selfhealth/cron/route.ts",
+      "class": "cron",
+      "methods": [
+        "GET"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": true,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": true
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/seo/citation-feed/route.ts",
+      "class": "public",
+      "methods": [
+        "GET"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": false
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/seo/index-now/route.ts",
+      "class": "public",
+      "methods": [
+        "GET"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": true,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": true
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/sitemap-health/route.ts",
+      "class": "public",
+      "methods": [
+        "GET"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": false
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/social-proof/route.ts",
+      "class": "public",
+      "methods": [
+        "GET"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": false
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/stats/runbooks/route.ts",
+      "class": "public",
+      "methods": [
+        "GET"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": false
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/stats/tags/route.ts",
+      "class": "public",
+      "methods": [
+        "GET"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": false
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/stripe/accounting-export/route.ts",
+      "class": "public",
+      "methods": [
+        "GET"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": true,
+        "apiKeyAuth": true,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": true
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/stripe/checkout/route.ts",
+      "class": "public",
+      "methods": [
+        "GET",
+        "POST"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": true,
+        "rateLimit": false,
+        "telemetry": true,
+        "hasAuth": true
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/stripe/create-checkout/route.ts",
+      "class": "public",
+      "methods": [
+        "POST"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": true,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": true
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/stripe/portal/route.ts",
+      "class": "public",
+      "methods": [
+        "POST"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": true,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": true
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/stripe/prices/route.ts",
+      "class": "public",
+      "methods": [
+        "GET"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": false
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/stripe/verify/route.ts",
+      "class": "public",
+      "methods": [
+        "GET"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": false
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/stripe/webhook/route.ts",
+      "class": "webhook",
+      "methods": [
+        "POST"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": true,
+        "apiKeyAuth": false,
+        "sessionAuth": true,
+        "rateLimit": false,
+        "telemetry": true,
+        "hasAuth": true
+      },
+      "risk": "medium"
+    },
+    {
+      "route": "app/api/summon/history/route.ts",
+      "class": "public",
+      "methods": [
+        "GET",
+        "POST"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": false
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/summon/route.ts",
+      "class": "public",
+      "methods": [
+        "POST",
+        "GET"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": true,
+        "telemetry": false,
+        "hasAuth": false
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/summon/swarm/route.ts",
+      "class": "public",
+      "methods": [
+        "POST"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": false
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/summon/teaser/route.ts",
+      "class": "public",
+      "methods": [
+        "POST"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": false
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/test-email/route.ts",
+      "class": "public",
+      "methods": [
+        "GET"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": false
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/tools/headers/route.ts",
+      "class": "public",
+      "methods": [
+        "POST"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": false
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/tools/tls/route.ts",
+      "class": "public",
+      "methods": [
+        "POST"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": false
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/user/entitlements/route.ts",
+      "class": "public",
+      "methods": [
+        "GET"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": true,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": true
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/v1/check-indicator/route.ts",
+      "class": "public",
+      "methods": [
+        "POST"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": true,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": true
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/v1/intel-feed/latest/route.ts",
+      "class": "public",
+      "methods": [
+        "GET"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": false,
+        "apiKeyAuth": true,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": true
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/v1/roast-data/route.ts",
+      "class": "public",
+      "methods": [
+        "GET",
+        "POST"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": true,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": true
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/v1/runbook/[id]/route.ts",
+      "class": "public",
+      "methods": [
+        "GET"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": false
+      },
+      "risk": "low"
+    },
+    {
+      "route": "app/api/webhooks/bluebubbles/route.ts",
+      "class": "webhook",
+      "methods": [
+        "POST",
+        "GET"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": true,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": true
+      },
+      "risk": "medium"
+    },
+    {
+      "route": "app/api/webhooks/google-chat/route.ts",
+      "class": "webhook",
+      "methods": [
+        "POST",
+        "GET"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": true,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": true
+      },
+      "risk": "medium"
+    },
+    {
+      "route": "app/api/webhooks/line/route.ts",
+      "class": "webhook",
+      "methods": [
+        "POST",
+        "GET"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": true,
+        "apiKeyAuth": false,
+        "sessionAuth": false,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": true
+      },
+      "risk": "medium"
+    },
+    {
+      "route": "app/api/white-label/roast-widget/route.ts",
+      "class": "public",
+      "methods": [
+        "GET",
+        "POST"
+      ],
+      "guards": {
+        "adminAuth": false,
+        "sharedSecret": false,
+        "apiKeyAuth": false,
+        "sessionAuth": true,
+        "rateLimit": false,
+        "telemetry": false,
+        "hasAuth": true
+      },
+      "risk": "low"
+    }
+  ]
+}
