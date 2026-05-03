@@ -16,6 +16,7 @@ export const LOOKUP_KEYS = {
 } as const
 
 type LookupKey = (typeof LOOKUP_KEYS)[keyof typeof LOOKUP_KEYS]
+export type CheckoutProduct = "daypass" | "pro" | "team" | "msp" | "enterprise" | "starter" | "scale"
 
 /**
  * Price metadata: amount in cents (EUR), currency, and interval
@@ -92,6 +93,50 @@ export function getLookupKey(
   throw new Error(`Unknown product: ${product}`)
 }
 
+function normalizeLookupProduct(product: CheckoutProduct): "daypass" | "pro" | "team" | "starter" | "msp" {
+  if (product === "enterprise" || product === "scale") return "team"
+  return product
+}
+
+function envCandidates(product: CheckoutProduct, annual: boolean): string[] {
+  switch (product) {
+    case "daypass":
+      return ["STRIPE_PRICE_DAYPASS"]
+    case "starter":
+      // Starter is a subscription-tier in consulting; prefer dedicated price id.
+      // Fallback to PRO if only legacy env set exists.
+      return annual
+        ? ["STRIPE_PRICE_STARTER_ANNUAL", "STRIPE_PRICE_PRO_ANNUAL", "STRIPE_PRICE_PRO_YEARLY"]
+        : ["STRIPE_PRICE_STARTER", "STRIPE_PRICE_PRO", "STRIPE_PRICE_PRO_MONTHLY"]
+    case "pro":
+      return annual
+        ? ["STRIPE_PRICE_PRO_ANNUAL", "STRIPE_PRICE_PRO_YEARLY", "STRIPE_PRICE_PRO"]
+        : ["STRIPE_PRICE_PRO", "STRIPE_PRICE_PRO_MONTHLY"]
+    case "team":
+      return annual
+        ? ["STRIPE_PRICE_TEAM_ANNUAL", "STRIPE_PRICE_TEAM_YEARLY", "STRIPE_PRICE_TEAM"]
+        : ["STRIPE_PRICE_TEAM", "STRIPE_PRICE_TEAM_MONTHLY"]
+    case "scale":
+      return annual
+        ? ["STRIPE_PRICE_SCALE_ANNUAL", "STRIPE_PRICE_ENTERPRISE_ANNUAL", "STRIPE_PRICE_TEAM_ANNUAL", "STRIPE_PRICE_TEAM"]
+        : ["STRIPE_PRICE_SCALE", "STRIPE_PRICE_ENTERPRISE", "STRIPE_PRICE_TEAM"]
+    case "enterprise":
+      return ["STRIPE_PRICE_ENTERPRISE", "STRIPE_PRICE_TEAM"]
+    case "msp":
+      return annual
+        ? ["STRIPE_PRICE_MSP_ANNUAL", "STRIPE_PRICE_MSP"]
+        : ["STRIPE_PRICE_MSP"]
+  }
+}
+
+export function resolvePriceFromEnv(product: CheckoutProduct, annual: boolean): string | null {
+  for (const envName of envCandidates(product, annual)) {
+    const value = process.env[envName]?.trim()
+    if (value) return value
+  }
+  return null
+}
+
 /**
  * Retrieve or create a Stripe Price with a lookup_key
  * Fetches existing price by lookup_key; if not found, creates a new one
@@ -135,6 +180,15 @@ export async function getOrCreatePrice(lookupKey: LookupKey): Promise<string> {
   return newPrice.id
 }
 
+async function findExistingPriceByLookupKey(lookupKey: LookupKey): Promise<string | null> {
+  const stripe = getStripe()
+  const existing = await stripe.prices.list({
+    lookup_keys: [lookupKey],
+    limit: 1,
+  })
+  return existing.data[0]?.id ?? null
+}
+
 /**
  * Resolve product ID from env vars, or create a product inline
  * Used when creating prices if the product doesn't exist yet
@@ -170,17 +224,46 @@ function getProductIdForLookupKey(lookupKey: LookupKey): string {
  * Called from app/api/stripe/checkout/route.ts
  */
 export async function resolveCheckoutPrice(
-  product: "daypass" | "pro" | "team" | "msp" | "enterprise",
+  product: CheckoutProduct,
   annual: boolean
 ): Promise<string> {
-  // Map enterprise to team (fallback)
-  const mappedProduct =
-    product === "enterprise"
-      ? ("team" as const)
-      : (product as "daypass" | "pro" | "team" | "starter" | "msp")
+  return resolveCheckoutPriceWithOptions(product, annual, { allowCreate: true, allowLookup: true })
+}
 
-  const lookupKey = getLookupKey(mappedProduct, annual)
-  return getOrCreatePrice(lookupKey)
+export async function resolveCheckoutPriceWithOptions(
+  product: CheckoutProduct,
+  annual: boolean,
+  options: { allowCreate: boolean; allowLookup?: boolean }
+): Promise<string> {
+  const envPrice = resolvePriceFromEnv(product, annual)
+  if (envPrice) return envPrice
+
+  const lookupProduct = normalizeLookupProduct(product)
+  const lookupKey = getLookupKey(lookupProduct, annual)
+  const allowLookup = options.allowLookup !== false
+  if (allowLookup) {
+    const existing = await findExistingPriceByLookupKey(lookupKey)
+    if (existing) return existing
+  }
+
+  if (!options.allowCreate) {
+    throw new Error(
+      `No checkout price resolvable for product=${product}, annual=${annual}. ` +
+        `Checked env vars: ${envCandidates(product, annual).join(", ")}. ` +
+        `${allowLookup ? `Checked lookup_key: ${lookupKey}.` : "Lookup check disabled."}`
+    )
+  }
+
+  try {
+    return await getOrCreatePrice(lookupKey)
+  } catch (error) {
+    const msg = error instanceof Error ? error.message : String(error)
+    throw new Error(
+      `Checkout price resolution failed for product=${product}, annual=${annual}. ` +
+        `Checked env vars: ${envCandidates(product, annual).join(", ")}. ` +
+        `Lookup/create failed for key=${lookupKey}: ${msg}`
+    )
+  }
 }
 
 /**
@@ -189,7 +272,9 @@ export async function resolveCheckoutPrice(
  * Supports all product types and handles annual/monthly variants transparently
  */
 export function planFromSubscription(subscription: any): string {
-  const lookupKey = subscription.items?.data?.[0]?.price?.lookup_key ?? ""
+  const price = subscription.items?.data?.[0]?.price
+  const lookupKey = price?.lookup_key ?? ""
+  const priceId = price?.id ?? ""
 
   // Map lookup_key to plan string
   if (lookupKey.includes("team")) return "team"
@@ -197,6 +282,54 @@ export function planFromSubscription(subscription: any): string {
   if (lookupKey.includes("scale")) return "team"
   if (lookupKey.includes("msp")) return "msp"
 
+  // Fallback: map by explicit env price ids when lookup_key is absent.
+  const isTeamLike = isTeamLikePriceId(priceId)
+  if (isTeamLike) return "team"
+
+  const isStarterLike = isStarterLikePriceId(priceId)
+  if (isStarterLike) return "starter"
+
+  const isMsp = isMspPriceId(priceId)
+  if (isMsp) return "msp"
+
   // Default: pro covers both pro_monthly and pro_annual
+  return "pro"
+}
+
+function nonEmpty(values: Array<string | undefined>): string[] {
+  return values
+    .map((value) => (typeof value === "string" ? value.trim() : ""))
+    .filter((value) => value.length > 0)
+}
+
+function isTeamLikePriceId(priceId: string): boolean {
+  return nonEmpty([
+    process.env.STRIPE_PRICE_TEAM,
+    process.env.STRIPE_PRICE_TEAM_ANNUAL,
+    process.env.STRIPE_PRICE_ENTERPRISE,
+    process.env.STRIPE_PRICE_SCALE,
+    process.env.STRIPE_PRICE_SCALE_ANNUAL,
+  ]).includes(priceId)
+}
+
+function isStarterLikePriceId(priceId: string): boolean {
+  return nonEmpty([
+    process.env.STRIPE_PRICE_STARTER,
+    process.env.STRIPE_PRICE_STARTER_ANNUAL,
+  ]).includes(priceId)
+}
+
+function isMspPriceId(priceId: string): boolean {
+  return nonEmpty([
+    process.env.STRIPE_PRICE_MSP,
+    process.env.STRIPE_PRICE_MSP_ANNUAL,
+  ]).includes(priceId)
+}
+
+export function planFromPriceId(priceId: string): "daypass" | "pro" | "team" {
+  if (!priceId) return "pro"
+  if (priceId === (process.env.STRIPE_PRICE_DAYPASS ?? "").trim()) return "daypass"
+  if (isTeamLikePriceId(priceId) || isMspPriceId(priceId)) return "team"
+  if (isStarterLikePriceId(priceId)) return "pro"
   return "pro"
 }

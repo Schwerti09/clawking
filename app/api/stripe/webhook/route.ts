@@ -7,7 +7,7 @@ import { buildSocialProofEventFromStripe, recordSocialProofEvent } from "@/lib/s
 import { logTelemetry } from "@/lib/ops/telemetry"
 import { getRequestId } from "@/lib/ops/request-id"
 import { dbQuery } from "@/lib/db"
-import { planFromSubscription } from "@/lib/stripe-pricing"
+import { planFromPriceId, planFromSubscription } from "@/lib/stripe-pricing"
 
 // ---------------------------------------------------------------------------
 // Upsert customer entitlement – keeps customer_entitlements table in sync.
@@ -307,10 +307,13 @@ async function handleSubscriptionDeleted(subscription: Stripe.Subscription) {
   await upsertEntitlement(customerId, "explorer", subscriptionId, new Date().toISOString())
 }
 
-function planFromSession(session: Stripe.Checkout.Session): AccessPlan {
+function planFromSession(session: Stripe.Checkout.Session, fallbackPlan: AccessPlan): AccessPlan {
   const product = (session.metadata?.product || "").toLowerCase()
   if (product === "team") return "team"
+  if (product === "enterprise" || product === "msp" || product === "scale") return "team"
   if (product === "daypass") return "daypass"
+  if (product === "starter" || product === "pro") return "pro"
+  if (!product || product === "unknown") return fallbackPlan
   return "pro"
 }
 
@@ -377,7 +380,18 @@ async function sendAccessEmail(session: Stripe.Checkout.Session) {
   const email = session.customer_details?.email || session.customer_email
   if (!email) return
 
-  const plan = planFromSession(session)
+  const lineItems = await stripe.checkout.sessions
+    .listLineItems(session.id, {
+      limit: 1,
+      expand: ["data.price"],
+    })
+    .catch(() => null)
+  const firstPrice = lineItems?.data?.[0]?.price
+  const fallbackPlan =
+    firstPrice && typeof firstPrice !== "string"
+      ? planFromPriceId(firstPrice.id)
+      : "pro"
+  const plan = planFromSession(session, fallbackPlan)
   const now = Math.floor(Date.now() / 1000)
 
   const customerId = typeof session.customer === "string" ? session.customer : (session.customer as { id: string } | null)?.id

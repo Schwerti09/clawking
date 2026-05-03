@@ -5,11 +5,11 @@ import { getStripe } from "@/lib/stripe"
 import { logTelemetry } from "@/lib/ops/telemetry"
 import { getRequestId } from "@/lib/ops/request-id"
 import { sanitizeUpgradeSignals, upgradeSignalsMetadata } from "@/lib/checkout-upgrade-signals"
-import { resolveCheckoutPrice } from "@/lib/stripe-pricing"
+import { CheckoutProduct, resolveCheckoutPrice } from "@/lib/stripe-pricing"
 
 export const dynamic = "force-dynamic"
 export const runtime = "nodejs"
-type Product = "daypass" | "pro" | "team" | "msp" | "enterprise"
+type Product = CheckoutProduct
 
 async function resolvePromoCode(stripe: ReturnType<typeof import("@/lib/stripe")["getStripe"]>, code: string): Promise<string | null> {
   try {
@@ -35,7 +35,7 @@ export async function GET(req: NextRequest) {
     const sp = url.searchParams
 
     const raw = sp.get("product") || sp.get("plan") || "daypass"
-    const allowed = ["pro", "team", "daypass", "msp", "enterprise"] as const
+    const allowed = ["pro", "team", "daypass", "msp", "enterprise", "starter", "scale"] as const
     const product: Product = (allowed as readonly string[]).includes(raw) ? (raw as Product) : "daypass"
 
     const email = sp.get("email") || undefined
@@ -53,7 +53,7 @@ export async function GET(req: NextRequest) {
       })
 
       return NextResponse.json(
-        { error: "Checkout f\u00FCr dieses Produkt ist aktuell nicht verf\u00FCgbar." },
+        { error: `Checkout ist für product=${product} aktuell nicht verfügbar (Preisauflösung fehlgeschlagen).` },
         { status: 503 }
       )
     }
@@ -133,7 +133,7 @@ export async function POST(req: NextRequest) {
     const body = await req.json().catch(() => ({}))
 
     const product: Product =
-      (["pro", "team", "daypass", "msp", "enterprise"] as const).includes(body?.product)
+      (["pro", "team", "daypass", "msp", "enterprise", "starter", "scale"] as const).includes(body?.product)
         ? body.product
         : "daypass"
 
@@ -169,7 +169,7 @@ export async function POST(req: NextRequest) {
       })
 
       return NextResponse.json(
-        { error: "Checkout für dieses Produkt ist aktuell nicht verfügbar." },
+        { error: `Checkout ist für product=${product} aktuell nicht verfügbar (Preisauflösung fehlgeschlagen).` },
         { status: 503 }
       )
     }
