@@ -219,6 +219,9 @@ async function probeCheckoutReady(): Promise<EnvCheckResult["checkoutReady"]> {
   const checks = await Promise.all(
     matrix.map(async ({ product, annual }) => {
       try {
+        // Intentionally env-only: this health probe must be side-effect free and
+        // must not depend on Stripe API reachability. We validate that each flow
+        // can resolve to a configured env price id right now.
         await resolveCheckoutPriceWithOptions(product, annual, {
           allowCreate: false,
           allowLookup: false,

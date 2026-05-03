@@ -94,8 +94,18 @@ export function getLookupKey(
 }
 
 function normalizeLookupProduct(product: CheckoutProduct): "daypass" | "pro" | "team" | "starter" | "msp" {
-  if (product === "enterprise" || product === "scale") return "team"
-  return product
+  switch (product) {
+    case "enterprise":
+    case "scale":
+      return "team"
+    case "starter":
+      return "starter"
+    case "daypass":
+    case "pro":
+    case "team":
+    case "msp":
+      return product
+  }
 }
 
 function envCandidates(product: CheckoutProduct, annual: boolean): string[] {
@@ -104,7 +114,7 @@ function envCandidates(product: CheckoutProduct, annual: boolean): string[] {
       return ["STRIPE_PRICE_DAYPASS"]
     case "starter":
       // Starter is a subscription-tier in consulting; prefer dedicated price id.
-      // Fallback to PRO if only legacy env set exists.
+      // Fallback to PRO if only legacy env vars exist in an older deployment.
       return annual
         ? ["STRIPE_PRICE_STARTER_ANNUAL", "STRIPE_PRICE_PRO_ANNUAL", "STRIPE_PRICE_PRO_YEARLY"]
         : ["STRIPE_PRICE_STARTER", "STRIPE_PRICE_PRO", "STRIPE_PRICE_PRO_MONTHLY"]

@@ -313,8 +313,9 @@ function planFromSession(session: Stripe.Checkout.Session, fallbackPlan: AccessP
   if (product === "enterprise" || product === "msp" || product === "scale") return "team"
   if (product === "daypass") return "daypass"
   if (product === "starter" || product === "pro") return "pro"
+  // Unknown or empty metadata: trust the resolved Stripe line-item fallback.
   if (!product || product === "unknown") return fallbackPlan
-  return "pro"
+  return fallbackPlan
 }
 
 function tokenExp(plan: AccessPlan, now: number) {
