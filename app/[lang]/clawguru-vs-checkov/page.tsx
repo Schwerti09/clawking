@@ -68,6 +68,7 @@ export default function ClawGuruVsCheckovPage({ params }: { params: { lang: stri
           <p className="text-lg text-gray-300 mb-8 leading-relaxed animate-fade-in-up" style={{animationDelay: '0.2s'}}>
             {pick(isDE, 'Checkov (von Bridgecrew/Prisma Cloud) ist ein statischer IaC-Security-Scanner für Terraform, CloudFormation, Kubernetes und Dockerfile. ClawGuru ist eine Live-Security-Plattform mit Executable Runbooks, Real-Time-Score und Compliance-Dashboard.', 'Checkov (by Bridgecrew/Prisma Cloud) is a static IaC security scanner for Terraform, CloudFormation, Kubernetes and Dockerfile. ClawGuru is a live security platform with executable runbooks, real-time scoring and compliance dashboard.')}
           </p>
+        </div>
 
         <section className="mb-10 animate-fade-in-up" style={{animationDelay: '0.3s'}}>
           <h2 className="text-2xl font-semibold mb-4 text-gray-100">{pick(isDE, '⚔️ Direkter Vergleich', '⚔️ Head-to-Head Comparison')}</h2>

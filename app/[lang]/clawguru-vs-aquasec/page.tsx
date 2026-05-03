@@ -76,6 +76,7 @@ export default function ClawguruVsAquasecPage({ params }: { params: { lang: stri
           <div className="mb-3 animate-fade-in-up" style={{animationDelay: '0.1s'}}><span className="text-xs font-bold uppercase tracking-widest text-cyan-400 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">Compare · Batch 10</span></div>
           <h1 className="text-4xl font-bold mb-4 text-gray-100 bg-gradient-to-r from-gray-100 via-white to-gray-100 bg-clip-text text-transparent animate-fade-in-up" style={{animationDelay: '0.2s'}}>ClawGuru vs Aqua Security</h1>
           <p className="text-lg text-gray-300 mb-6 leading-relaxed animate-fade-in-up" style={{animationDelay: '0.3s'}}>Aqua Security is a powerful enterprise container security platform. ClawGuru delivers comparable runtime and vulnerability security fully self-hosted — without the six-figure annual contract, vendor lock-in, or cloud data egress. Here's the exact breakdown.</p>
+        </div>
 
         <section className="mb-10 animate-fade-in-up" style={{animationDelay: '0.4s'}}>
           <h2 className="text-2xl font-semibold mb-4 text-gray-100">Feature Comparison</h2>
