@@ -14,6 +14,10 @@ const TRACKED_ENV_VARS = [
   "STRIPE_PRICE_DAYPASS",
   "STRIPE_PRICE_PRO",
   "STRIPE_PRICE_TEAM",
+  "STRIPE_PRICE_STARTER",
+  "STRIPE_PRICE_STARTER_ANNUAL",
+  "STRIPE_PRICE_SCALE",
+  "STRIPE_PRICE_SCALE_ANNUAL",
   "STRIPE_PRICE_PRO_ANNUAL",
   "STRIPE_PRICE_TEAM_ANNUAL",
   "STRIPE_PRICE_MSP",
@@ -181,6 +185,9 @@ describe("GET /api/consult-health/env-check", () => {
       expect(body.status).toBe("ok")
       expect(body.summary.required.missing).toEqual([])
       expect(body.summary.recommended.missing).toEqual([])
+      expect(body.checkoutReady).toBeDefined()
+      expect(Array.isArray(body.checkoutReady.checks)).toBe(true)
+      expect(body.checkoutReady.failing).toContain("msp:monthly")
     })
   })
 
@@ -346,6 +353,7 @@ describe("GET /api/consult-health/env-check", () => {
       expect(body.configured["alerts.warnWebhook"]).toBe(true)
       expect(body.configured["alerts.pageWebhook"]).toBe(true)
       expect(body.configured["booking.cal_demo"]).toBe(true)
+      expect(typeof body.checkoutReady.ok).toBe("boolean")
     })
   })
 })
