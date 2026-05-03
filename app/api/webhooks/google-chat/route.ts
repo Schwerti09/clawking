@@ -17,6 +17,7 @@ function isAuthorized(req: NextRequest): boolean {
 
 export async function POST(req: NextRequest) {
   if (!isAuthorized(req)) {
+    console.warn("[webhook][google-chat] unauthorized request")
     return NextResponse.json({ ok: false, provider: "google-chat", error: "unauthorized" }, { status: 401 })
   }
 
