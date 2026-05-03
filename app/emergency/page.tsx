@@ -3,6 +3,7 @@ import Container from "@/components/shared/Container"
 import BuyButton from "@/components/commerce/BuyButton"
 import SocialProofCounter from "@/components/marketing/SocialProofCounter"
 import { BASE_URL } from "@/lib/config"
+import { MARKETING_METRICS } from "@/lib/marketing-metrics"
 
 export const metadata: Metadata = {
   title: "Emergency Security Response | ClawGuru – Log4j Check, Ransomware Runbook",
@@ -181,19 +182,19 @@ export default function EmergencyPage() {
           {/* Stats Bar */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mt-8 mb-6">
             <div className="bg-gray-800 border border-gray-700 rounded-xl p-4 text-center">
-              <div className="text-2xl font-black text-cyan-400">15+</div>
+              <div className="text-2xl font-black text-cyan-400">{MARKETING_METRICS.yearsExperience}</div>
               <div className="text-xs text-gray-400 mt-1">Jahre Erfahrung</div>
             </div>
             <div className="bg-gray-800 border border-gray-700 rounded-xl p-4 text-center">
-              <div className="text-2xl font-black text-emerald-400">4,200+</div>
+              <div className="text-2xl font-black text-emerald-400">{MARKETING_METRICS.runbooksCount}</div>
               <div className="text-xs text-gray-400 mt-1">AI Runbooks</div>
             </div>
             <div className="bg-gray-800 border border-gray-700 rounded-xl p-4 text-center">
-              <div className="text-2xl font-black text-fuchsia-400">10+</div>
+              <div className="text-2xl font-black text-fuchsia-400">{MARKETING_METRICS.specialistsCount}</div>
               <div className="text-xs text-gray-400 mt-1">Spezialisten</div>
             </div>
             <div className="bg-gray-800 border border-gray-700 rounded-xl p-4 text-center">
-              <div className="text-2xl font-black text-yellow-400">24/7</div>
+              <div className="text-2xl font-black text-yellow-400">{MARKETING_METRICS.incidentResponse}</div>
               <div className="text-xs text-gray-400 mt-1">Incident Response</div>
             </div>
           </div>
@@ -289,7 +290,7 @@ export default function EmergencyPage() {
             </h2>
             <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-3">
               {[
-                "500+ Runbooks & Incident Playbooks (Vault)",
+                `${MARKETING_METRICS.runbooksCount} Runbooks & Incident Playbooks (Vault)`,
                 "Log4Shell, CVE, Ransomware Runbooks",
                 "Security Score – Top-Risiken in 30 Sek.",
                 "Copilot: KI-Runbook für deinen Stack",

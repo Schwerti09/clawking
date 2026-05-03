@@ -3,6 +3,7 @@
 
 import { stripe } from "@/lib/stripe"
 import { LOOKUP_KEYS } from "@/lib/stripe-pricing"
+import { MARKETING_METRICS } from "@/lib/marketing-metrics"
 
 // ---------------------------------------------------------------------------
 // Config
@@ -275,7 +276,7 @@ export type UpsellTrigger = {
 
 /**
  * WORLD BEAST: Returns upsell popup config after N checks.
- * Trigger after 3 checks with "Unlock 500+ Runbooks for €9/month".
+ * Trigger after 3 checks with "Unlock runbooks for €9/month".
  */
 export function getUpsellTrigger(checksToday: number, hasPro: boolean): UpsellTrigger {
   if (hasPro || checksToday < 3) {
@@ -283,7 +284,7 @@ export function getUpsellTrigger(checksToday: number, hasPro: boolean): UpsellTr
   }
   return {
     show: true,
-    message: `🔓 Du hast heute ${checksToday} Checks gemacht. Unlock 500+ Runbooks für nur €9/Monat!`,
+    message: `🔓 Du hast heute ${checksToday} Checks gemacht. Unlock ${MARKETING_METRICS.runbooksCount} Runbooks für nur €9/Monat!`,
     ctaText: "Jetzt Pro werden →",
     ctaHref: "/pricing",
   }

@@ -11,6 +11,7 @@ import { headers } from "next/headers"
 import { DEFAULT_LOCALE, type Locale } from "@/lib/i18n"
 import { getDictionary } from "@/lib/getDictionary"
 import { AUTOPILOT_PLANS } from "@/lib/autopilot-offering"
+import { MARKETING_METRICS } from "@/lib/marketing-metrics"
 import dynamic from "next/dynamic"
 
 const CouponBanner = dynamic(() => import("@/components/marketing/CouponBanner"), { ssr: false })
@@ -633,19 +634,19 @@ curl https://clawguru.com/api/intel/feeds \\
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-6">
               <div>
-                <div className="text-3xl font-black text-white">25k+</div>
+                <div className="text-3xl font-black text-white">{MARKETING_METRICS.indexedPages}</div>
                 <div className="text-xs text-gray-400 mt-1">Indexierte Seiten</div>
               </div>
               <div>
-                <div className="text-3xl font-black text-white">500+</div>
+                <div className="text-3xl font-black text-white">{MARKETING_METRICS.runbooksCount}</div>
                 <div className="text-xs text-gray-400 mt-1">Runbooks & Playbooks</div>
               </div>
               <div>
-                <div className="text-3xl font-black text-white">16</div>
+                <div className="text-3xl font-black text-white">{MARKETING_METRICS.languagesSupported}</div>
                 <div className="text-xs text-gray-400 mt-1">Sprachen</div>
               </div>
               <div>
-                <div className="text-3xl font-black text-white">30+</div>
+                <div className="text-3xl font-black text-white">{MARKETING_METRICS.cveFixGuides}</div>
                 <div className="text-xs text-gray-400 mt-1">CVE Fix Guides</div>
               </div>
             </div>

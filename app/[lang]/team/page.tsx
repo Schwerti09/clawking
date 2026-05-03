@@ -3,6 +3,7 @@ import Link from "next/link"
 import { SUPPORTED_LOCALES, type Locale, buildLocalizedAlternates } from "@/lib/i18n"
 import { Shield, GraduationCap, Github, Linkedin, Award, BookOpen, Terminal } from "lucide-react"
 import { pick } from "@/lib/i18n-pick"
+import { MARKETING_METRICS } from "@/lib/marketing-metrics"
 
 interface PageProps { params: { lang: string } }
 
@@ -22,7 +23,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   const title = pick(isDE, "Team — ClawGuru Mega-Team aus Security Spezialisten", "Team — ClawGuru Mega-Team of Security Specialists")
 
-  const description = pick(isDE, "Ein interdisziplinäres Team aus Security Engineers, DevOps Experten und Threat Researchers mit 15+ Jahren Erfahrung. 10+ Spezialisten, 4,200+ AI Runbooks, 24/7 Incident Response.", "An interdisciplinary team of Security Engineers, DevOps Experts and Threat Researchers with 15+ years of experience. 10+ specialists, 4,200+ AI runbooks, 24/7 incident response.")
+  const description = pick(
+    isDE,
+    `Ein interdisziplinäres Team aus Security Engineers, DevOps Experten und Threat Researchers mit ${MARKETING_METRICS.yearsExperience} Jahren Erfahrung. ${MARKETING_METRICS.specialistsCount} Spezialisten, ${MARKETING_METRICS.runbooksCount} AI Runbooks, ${MARKETING_METRICS.incidentResponse} Incident Response.`,
+    `An interdisciplinary team of Security Engineers, DevOps Experts and Threat Researchers with ${MARKETING_METRICS.yearsExperience} years of experience. ${MARKETING_METRICS.specialistsCount} specialists, ${MARKETING_METRICS.runbooksCount} AI runbooks, ${MARKETING_METRICS.incidentResponse} incident response.`
+  )
 
   return {
     title,
@@ -283,26 +288,26 @@ export default function TeamPage({ params }: PageProps) {
             {pick(isDE, "Ein Team aus Spezialisten, das Security anders macht", "A Team of Specialists That Does Security Differently")}
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            {pick(isDE, "15+ Jahre kombinierte Erfahrung in DevOps, Security Research und Incident Response. Wir haben Produktionsumgebungen gerettet, CVEs analysiert und Systeme gehärtet — bevor es cool wurde.", "15+ years of combined experience in DevOps, security research, and incident response. We've rescued production environments, analyzed CVEs, and hardened systems — before it was cool.")}
+            {pick(isDE, `${MARKETING_METRICS.yearsExperience} Jahre kombinierte Erfahrung in DevOps, Security Research und Incident Response. Wir haben Produktionsumgebungen gerettet, CVEs analysiert und Systeme gehärtet — bevor es cool wurde.`, `${MARKETING_METRICS.yearsExperience} years of combined experience in DevOps, security research, and incident response. We've rescued production environments, analyzed CVEs, and hardened systems — before it was cool.`)}
           </p>
         </div>
 
         {/* Combined Stats */}
         <div className="grid md:grid-cols-4 gap-4 mb-16">
           <div className="bg-gray-800 border border-gray-700 rounded-xl p-6 text-center">
-            <div className="text-3xl font-black text-cyan-400">15+</div>
+            <div className="text-3xl font-black text-cyan-400">{MARKETING_METRICS.yearsExperience}</div>
             <div className="text-xs text-gray-400 mt-1">{pick(isDE, "Jahre Erfahrung", "Years of Experience")}</div>
           </div>
           <div className="bg-gray-800 border border-gray-700 rounded-xl p-6 text-center">
-            <div className="text-3xl font-black text-emerald-400">4,200+</div>
+            <div className="text-3xl font-black text-emerald-400">{MARKETING_METRICS.runbooksCount}</div>
             <div className="text-xs text-gray-400 mt-1">{pick(isDE, "AI Runbooks", "AI Runbooks")}</div>
           </div>
           <div className="bg-gray-800 border border-gray-700 rounded-xl p-6 text-center">
-            <div className="text-3xl font-black text-fuchsia-400">10+</div>
+            <div className="text-3xl font-black text-fuchsia-400">{MARKETING_METRICS.specialistsCount}</div>
             <div className="text-xs text-gray-400 mt-1">{pick(isDE, "Spezialisten", "Specialists")}</div>
           </div>
           <div className="bg-gray-800 border border-gray-700 rounded-xl p-6 text-center">
-            <div className="text-3xl font-black text-yellow-400">24/7</div>
+            <div className="text-3xl font-black text-yellow-400">{MARKETING_METRICS.incidentResponse}</div>
             <div className="text-xs text-gray-400 mt-1">{pick(isDE, "Incident Response", "Incident Response")}</div>
           </div>
         </div>
@@ -424,7 +429,7 @@ export default function TeamPage({ params }: PageProps) {
               },
               {
                 title: pick(isDE, "Expertise", "Expertise"),
-                desc: pick(isDE, "4,200+ AI-generierte Runbooks, die auf realen Incident-Response-Szenarien basieren. Jeder Guide ist getestet, validiert und kontinuierlich aktualisiert.", "4,200+ AI-generated runbooks based on real incident response scenarios. Every guide is tested, validated, and continuously updated."),
+                desc: pick(isDE, `${MARKETING_METRICS.runbooksCount} AI-generierte Runbooks, die auf realen Incident-Response-Szenarien basieren. Jeder Guide ist getestet, validiert und kontinuierlich aktualisiert.`, `${MARKETING_METRICS.runbooksCount} AI-generated runbooks based on real incident response scenarios. Every guide is tested, validated, and continuously updated.`),
                 color: "text-emerald-400",
               },
               {
