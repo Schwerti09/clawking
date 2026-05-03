@@ -1,6 +1,6 @@
 # API Telemetry Matrix
 
-Generated: 2026-05-03T15:30:21.663Z
+Generated: 2026-05-03T15:31:58.451Z
 
 | Route | Class | Methods | Telemetry Marker |
 | --- | --- | --- | --- |
