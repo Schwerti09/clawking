@@ -49,18 +49,31 @@ export default function SecretsRotationAutomationPage({ params }: PageProps) {
   if (!SUPPORTED_LOCALES.includes(locale)) notFound()
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <div className="max-w-4xl mx-auto">
-        <div className="bg-amber-900 border-l-4 border-amber-500 p-4 mb-8 text-sm text-amber-100">
+    <div className="min-h-screen bg-[#0a0a0a] relative overflow-hidden">
+      {/* Animated Gradient Background */}
+      <div className="fixed inset-0 -z-10">
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0a0a0a] via-[#0f172a] to-[#1e1b4b] opacity-50"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(34,211,238,0.1),transparent_50%)] animate-pulse"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(168,85,247,0.1),transparent_40%)] animate-pulse" style={{animationDelay: '1s'}}></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.1),transparent_40%)] animate-pulse" style={{animationDelay: '2s'}}></div>
+      </div>
+
+      <div className="max-w-4xl mx-auto px-4 py-12 relative z-10">
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+        <div className="bg-amber-900/80 backdrop-blur-lg border-l-4 border-amber-500 p-4 mb-8 text-sm text-amber-100 rounded-r-lg shadow-lg animate-fade-in-up">
           <strong className="text-amber-100">&quot;Not a Pentest&quot; Hinweis</strong>: Dieser Guide dient der Absicherung eigener Secrets-Infrastrukturen. Kein Angriffs-Tool.
         </div>
-        <h1 className="text-4xl font-bold mb-4 text-gray-100">Secrets Rotation Automation: Vault Management</h1>
-        <p className="text-lg text-gray-300 mb-8">Vollständig automatisierte Secrets-Rotation mit HashiCorp Vault, Kubernetes-Integration und Compliance-konformem Credential Management.</p>
+        <div className="mb-8 animate-fade-in-up" style={{animationDelay: '0.1s'}}>
+          <div className="mb-4">
+            <span className="text-xs font-bold uppercase tracking-widest text-cyan-400 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">Secrets Rotation Automation · Vault Management</span>
+          </div>
+          <h1 className="text-4xl font-bold mb-4 text-gray-100 bg-gradient-to-r from-gray-100 via-white to-gray-100 bg-clip-text text-transparent">Secrets Rotation Automation: Vault Management</h1>
+          <p className="text-lg text-gray-300 mb-8 leading-relaxed">Vollständig automatisierte Secrets-Rotation mit HashiCorp Vault, Kubernetes-Integration und Compliance-konformem Credential Management.</p>
+        </div>
 
-        <section className="mb-10">
+        <section className="mb-10 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
           <h2 className="text-2xl font-semibold mb-4 text-gray-100">Secrets Management Grundlagen</h2>
-          <div className="bg-gray-800 p-6 rounded-lg mb-4 border border-gray-700">
+          <div className="bg-gray-800/80 backdrop-blur-lg p-6 rounded-xl mb-4 border border-gray-700/50 shadow-2xl hover:border-cyan-500/30 transition-all duration-300 hover:shadow-cyan-500/20">
             <h3 className="font-semibold mb-2 text-gray-100">Kernkomponenten</h3>
             <ul className="list-disc list-inside space-y-1 text-gray-300">
               <li>Automatisierte Credential-Rotations-Policies</li>
@@ -72,9 +85,9 @@ export default function SecretsRotationAutomationPage({ params }: PageProps) {
           </div>
         </section>
 
-        <section className="mb-10">
+        <section className="mb-10 animate-fade-in-up" style={{animationDelay: '0.3s'}}>
           <h2 className="text-2xl font-semibold mb-4 text-gray-100">HashiCorp Vault Konfiguration</h2>
-          <div className="bg-gray-900 text-green-400 p-4 rounded-lg overflow-x-auto">
+          <div className="bg-gray-900/80 backdrop-blur-lg text-green-400 p-4 rounded-xl border border-gray-700/50 shadow-2xl hover:border-cyan-500/30 transition-all duration-300 hover:shadow-cyan-500/20 overflow-x-auto">
             <pre>
 {`# Vault configuration for automated rotation
 # vault-config.hcl
@@ -125,9 +138,9 @@ secrets "transit" {
           </div>
         </section>
 
-        <section className="mb-10">
+        <section className="mb-10 animate-fade-in-up" style={{animationDelay: '0.4s'}}>
           <h2 className="text-2xl font-semibold mb-4 text-gray-100">Database Secrets Rotation</h2>
-          <div className="bg-gray-900 text-green-400 p-4 rounded-lg overflow-x-auto">
+          <div className="bg-gray-900/80 backdrop-blur-lg text-green-400 p-4 rounded-xl border border-gray-700/50 shadow-2xl hover:border-cyan-500/30 transition-all duration-300 hover:shadow-cyan-500/20 overflow-x-auto">
             <pre>
 {`# Enable database secrets engine with rotation
 vault secrets enable database
@@ -159,9 +172,9 @@ vault write database/rotate-root/postgresql`}
           </div>
         </section>
 
-        <section className="mb-10">
+        <section className="mb-10 animate-fade-in-up" style={{animationDelay: '0.5s'}}>
           <h2 className="text-2xl font-semibold mb-4 text-gray-100">Kubernetes Integration</h2>
-          <div className="bg-gray-900 text-green-400 p-4 rounded-lg overflow-x-auto">
+          <div className="bg-gray-900/80 backdrop-blur-lg text-green-400 p-4 rounded-xl border border-gray-700/50 shadow-2xl hover:border-cyan-500/30 transition-all duration-300 hover:shadow-cyan-500/20 overflow-x-auto">
             <pre>
 {`# Kubernetes auth method configuration
 vault auth enable kubernetes
@@ -204,9 +217,9 @@ type: Opaque`}
           </div>
         </section>
 
-        <section className="mb-10">
+        <section className="mb-10 animate-fade-in-up" style={{animationDelay: '0.6s'}}>
           <h2 className="text-2xl font-semibold mb-4 text-gray-100">Automation Scripts</h2>
-          <div className="bg-gray-900 text-green-400 p-4 rounded-lg overflow-x-auto">
+          <div className="bg-gray-900/80 backdrop-blur-lg text-green-400 p-4 rounded-xl border border-gray-700/50 shadow-2xl hover:border-cyan-500/30 transition-all duration-300 hover:shadow-cyan-500/20 overflow-x-auto">
             <pre>
 {`#!/bin/bash
 # secrets-rotation.sh - Automated secrets rotation
@@ -280,47 +293,134 @@ main "$@"`}
           </div>
         </section>
 
-        <section className="mb-10">
+        <section className="mb-10 animate-fade-in-up" style={{animationDelay: '0.7s'}}>
           <h2 className="text-2xl font-semibold mb-4 text-gray-100">Compliance and Monitoring</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="bg-blue-900 p-4 rounded-lg border border-blue-700">
+            <div className="bg-blue-900/80 backdrop-blur-lg p-4 rounded-xl border border-blue-700/50 shadow-2xl hover:border-blue-500/30 transition-all duration-300 hover:shadow-blue-500/20">
               <h3 className="font-semibold text-blue-300 mb-2">Audit Logging</h3>
               <p className="text-sm text-blue-200">Enable comprehensive audit trails for all secrets access and rotation events.</p>
             </div>
-            <div className="bg-green-900 p-4 rounded-lg border border-green-700">
+            <div className="bg-green-900/80 backdrop-blur-lg p-4 rounded-xl border border-green-700/50 shadow-2xl hover:border-green-500/30 transition-all duration-300 hover:shadow-green-500/20">
               <h3 className="font-semibold text-green-300 mb-2">Compliance Reports</h3>
               <p className="text-sm text-green-200">Generate automated compliance reports for SOC2, ISO27001, and GDPR requirements.</p>
             </div>
-            <div className="bg-yellow-900 p-4 rounded-lg border border-yellow-700">
+            <div className="bg-yellow-900/80 backdrop-blur-lg p-4 rounded-xl border border-yellow-700/50 shadow-2xl hover:border-yellow-500/30 transition-all duration-300 hover:shadow-yellow-500/20">
               <h3 className="font-semibold text-yellow-300 mb-2">Alerting</h3>
               <p className="text-sm text-yellow-200">Configure alerts for failed rotations, expiring secrets, and unusual access patterns.</p>
             </div>
-            <div className="bg-red-900 p-4 rounded-lg border border-red-700">
+            <div className="bg-red-900/80 backdrop-blur-lg p-4 rounded-xl border border-red-700/50 shadow-2xl hover:border-red-500/30 transition-all duration-300 hover:shadow-red-500/20">
               <h3 className="font-semibold text-red-300 mb-2">Backup and Recovery</h3>
               <p className="text-sm text-red-200">Implement automated backup and disaster recovery procedures for secrets data.</p>
             </div>
           </div>
         </section>
 
-        <section className="mb-10">
+        <section className="mb-10 animate-fade-in-up" style={{animationDelay: '0.8s'}}>
           <h2 className="text-2xl font-semibold mb-4 text-gray-100">Further Resources</h2>
           <div className="grid grid-cols-2 gap-4">
-            <a href={`/${locale}/securitycheck`} className="block bg-gray-800 p-4 rounded-lg border border-gray-700 hover:bg-gray-700 transition-colors">
+            <a href={`/${locale}/securitycheck`} className="block bg-gray-800/80 backdrop-blur-lg p-4 rounded-xl border border-gray-700/50 shadow-2xl hover:border-cyan-500/30 transition-all duration-300 hover:shadow-cyan-500/20">
               <div className="font-semibold text-cyan-400">Security Check</div>
               <div className="text-sm text-gray-300">Scan your system now</div>
             </a>
-            <a href={`/${locale}/runbooks`} className="block bg-gray-800 p-4 rounded-lg border border-gray-700 hover:bg-gray-700 transition-colors">
+            <a href={`/${locale}/runbooks`} className="block bg-gray-800/80 backdrop-blur-lg p-4 rounded-xl border border-gray-700/50 shadow-2xl hover:border-cyan-500/30 transition-all duration-300 hover:shadow-cyan-500/20">
               <div className="font-semibold text-cyan-400">Runbooks</div>
               <div className="text-sm text-gray-300">600+ security playbooks</div>
             </a>
-            <a href={`/${locale}/openclaw`} className="block bg-gray-800 p-4 rounded-lg border border-gray-700 hover:bg-gray-700 transition-colors">
+            <a href={`/${locale}/openclaw`} className="block bg-gray-800/80 backdrop-blur-lg p-4 rounded-xl border border-gray-700/50 shadow-2xl hover:border-cyan-500/30 transition-all duration-300 hover:shadow-cyan-500/20">
               <div className="font-semibold text-cyan-400">OpenClaw Framework</div>
               <div className="text-sm text-gray-300">Self-hosted security</div>
             </a>
-            <a href={`/${locale}/solutions/kubernetes-security-hardening`} className="block bg-gray-800 p-4 rounded-lg border border-gray-700 hover:bg-gray-700 transition-colors">
+            <a href={`/${locale}/solutions/kubernetes-security-hardening`} className="block bg-gray-800/80 backdrop-blur-lg p-4 rounded-xl border border-gray-700/50 shadow-2xl hover:border-cyan-500/30 transition-all duration-300 hover:shadow-cyan-500/20">
               <div className="font-semibold text-cyan-400">Kubernetes Security</div>
               <div className="text-sm text-gray-300">Complete hardening guide</div>
             </a>
+          </div>
+        </section>
+
+        {/* Security Score Calculator */}
+        <section className="mb-10 animate-fade-in-up" style={{animationDelay: '0.9s'}}>
+          <h2 className="text-2xl font-semibold mb-4 text-gray-100">Secrets Rotation Security Score Calculator — Wie sicher sind deine Secrets?</h2>
+          <div className="bg-gray-800/80 backdrop-blur-lg p-6 rounded-xl border border-gray-700/50 shadow-2xl hover:border-cyan-500/30 transition-all duration-300 hover:shadow-cyan-500/20">
+            <p className="text-gray-300 mb-4 text-sm">
+              Beantworte 5 Fragen und erhalte deinen Secrets Rotation Security Score (0-100). Dieser Score basiert auf Best Practices aus der Produktion.
+            </p>
+            <div className="space-y-4 mb-6">
+              <div>
+                <label className="text-sm text-gray-300 mb-2 block">1. Hast du einen Secrets Manager (Vault, AWS Secrets Manager)?</label>
+                <select className="w-full bg-gray-900 border border-gray-600 rounded-lg p-3 text-gray-300 focus:border-cyan-500 focus:outline-none transition-colors">
+                  <option value="0">Nein</option>
+                  <option value="50">Teilweise</option>
+                  <option value="100">Ja, Vault/AWS Secrets Manager</option>
+                </select>
+              </div>
+              <div>
+                <label className="text-sm text-gray-300 mb-2 block">2. Rotierst du Secrets automatisch?</label>
+                <select className="w-full bg-gray-900 border border-gray-600 rounded-lg p-3 text-gray-300 focus:border-cyan-500 focus:outline-none transition-colors">
+                  <option value="0">Nein</option>
+                  <option value="50">Teilweise</option>
+                  <option value="100">Ja, Automated Rotation</option>
+                </select>
+              </div>
+              <div>
+                <label className="text-sm text-gray-300 mb-2 block">3. Hast du Audit Logging für Secrets?</label>
+                <select className="w-full bg-gray-900 border border-gray-600 rounded-lg p-3 text-gray-300 focus:border-cyan-500 focus:outline-none transition-colors">
+                  <option value="0">Nein</option>
+                  <option value="50">Teilweise</option>
+                  <option value="100">Ja, Comprehensive Audit</option>
+                </select>
+              </div>
+              <div>
+                <label className="text-sm text-gray-300 mb-2 block">4. Hast du Secrets in Git?</label>
+                <select className="w-full bg-gray-900 border border-gray-600 rounded-lg p-3 text-gray-300 focus:border-cyan-500 focus:outline-none transition-colors">
+                  <option value="0">Ja (schlecht)</option>
+                  <option value="50">Teilweise</option>
+                  <option value="100">Nein, nur in Vault</option>
+                </select>
+              </div>
+              <div>
+                <label className="text-sm text-gray-300 mb-2 block">5. Hast du Alerts für Secret Leaks?</label>
+                <select className="w-full bg-gray-900 border border-gray-600 rounded-lg p-3 text-gray-300 focus:border-cyan-500 focus:outline-none transition-colors">
+                  <option value="0">Nein</option>
+                  <option value="50">Teilweise</option>
+                  <option value="100">Ja, Real-time Alerts</option>
+                </select>
+              </div>
+            </div>
+            <button className="w-full bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/50">
+              Secrets Rotation Security Score berechnen
+            </button>
+            <div className="mt-4 p-4 bg-gray-900 rounded-lg border border-gray-700 hidden">
+              <div className="text-center">
+                <div className="text-4xl font-bold text-cyan-400 mb-2">65/100</div>
+                <div className="text-sm text-gray-300 mb-4">Dein Score: Mittel — Raum für Verbesserung</div>
+                <div className="bg-gradient-to-r from-cyan-900 to-blue-900 p-4 rounded-lg border border-cyan-700">
+                  <div className="text-sm text-cyan-300 mb-2">Upgrade zu Pro für Secrets Audit & Detailed Report</div>
+                  <a href={`/${locale}/pricing`} className="block bg-white text-gray-900 font-semibold py-2 px-4 rounded-lg text-center hover:bg-gray-100 transition-colors">
+                    Pro Plan — €49/mo
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Daypass Offer */}
+        <section className="mb-10 animate-fade-in-up" style={{animationDelay: '1.0s'}}>
+          <div className="bg-gradient-to-r from-purple-900 to-pink-900 p-6 rounded-xl border border-purple-700 shadow-2xl hover:shadow-purple-500/30 transition-all duration-300">
+            <div className="flex items-center justify-between">
+              <div>
+                <h3 className="text-xl font-bold text-white mb-2">Daypass — 24h Full Access für €3</h3>
+                <p className="text-purple-200 text-sm mb-4">Einmalig pro User/Kreditkarte. Volle 24 Stunden Zugang zu allen Security-Tools.</p>
+                <div className="flex gap-2 text-xs text-purple-300">
+                  <span className="bg-purple-800 px-2 py-1 rounded">✓ Security Check</span>
+                  <span className="bg-purple-800 px-2 py-1 rounded">✓ Runbooks</span>
+                  <span className="bg-purple-800 px-2 py-1 rounded">✓ AI Copilot</span>
+                </div>
+              </div>
+              <a href={`/${locale}/pricing#daypass`} className="bg-white text-purple-900 font-bold py-3 px-6 rounded-lg hover:bg-purple-100 transition-colors whitespace-nowrap">
+                Daypass kaufen — €3
+              </a>
+            </div>
           </div>
         </section>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([
