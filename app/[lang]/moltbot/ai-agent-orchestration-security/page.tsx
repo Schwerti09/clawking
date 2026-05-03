@@ -39,6 +39,7 @@ export default function AiAgentOrchestrationSecurityPage({ params }: PageProps) 
   const locale = (SUPPORTED_LOCALES.includes(params.lang as Locale) ? params.lang : "de") as Locale
   if (!SUPPORTED_LOCALES.includes(locale)) notFound()
   const isDE = locale === "de"
+  const title = pick(isDE, "AI Agent Orchestration Security: KI-Agenten-Orchestration-Security | ClawGuru Moltbot", "AI Agent Orchestration Security: AI Agent Orchestration Security | ClawGuru Moltbot")
 
   const jsonLd = [
     { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
