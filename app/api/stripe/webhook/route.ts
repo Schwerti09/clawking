@@ -385,7 +385,13 @@ async function sendAccessEmail(session: Stripe.Checkout.Session) {
       limit: 1,
       expand: ["data.price"],
     })
-    .catch(() => null)
+    .catch((error) => {
+      console.warn("[sendAccessEmail] Failed to fetch checkout line items", {
+        sessionId: session.id,
+        error: error instanceof Error ? error.message : String(error),
+      })
+      return null
+    })
   const firstPrice = lineItems?.data?.[0]?.price
   const fallbackPlan =
     firstPrice && typeof firstPrice !== "string"

@@ -105,6 +105,8 @@ function normalizeLookupProduct(product: CheckoutProduct): "daypass" | "pro" | "
     case "team":
     case "msp":
       return product
+    default:
+      throw new Error(`Unsupported checkout product: ${String(product)}`)
   }
 }
 
