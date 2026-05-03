@@ -7,6 +7,7 @@ import { buildSocialProofEventFromStripe, recordSocialProofEvent } from "@/lib/s
 import { logTelemetry } from "@/lib/ops/telemetry"
 import { getRequestId } from "@/lib/ops/request-id"
 import { dbQuery } from "@/lib/db"
+import { planFromSubscription } from "@/lib/stripe-pricing"
 
 // ---------------------------------------------------------------------------
 // Upsert customer entitlement – keeps customer_entitlements table in sync.
@@ -43,15 +44,6 @@ async function readRawBody(req: NextRequest) {
   return Buffer.from(ab)
 }
 
-// ---------------------------------------------------------------------------
-// Derive AccessPlan from a Stripe subscription (for renewal token issuance)
-// ---------------------------------------------------------------------------
-function planFromSubscription(subscription: Stripe.Subscription): AccessPlan {
-  const priceId = subscription.items.data[0]?.price?.id || ""
-  if (priceId === process.env.STRIPE_PRICE_TEAM) return "team"
-  if (priceId === process.env.STRIPE_PRICE_PRO) return "pro"
-  return "pro"
-}
 
 // ---------------------------------------------------------------------------
 // invoice.paid – send finalized PDF invoice + renew access token on subscription_cycle

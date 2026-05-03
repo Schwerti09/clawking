@@ -5,19 +5,11 @@ import { getStripe } from "@/lib/stripe"
 import { logTelemetry } from "@/lib/ops/telemetry"
 import { getRequestId } from "@/lib/ops/request-id"
 import { sanitizeUpgradeSignals, upgradeSignalsMetadata } from "@/lib/checkout-upgrade-signals"
+import { resolveCheckoutPrice } from "@/lib/stripe-pricing"
 
 export const dynamic = "force-dynamic"
 export const runtime = "nodejs"
 type Product = "daypass" | "pro" | "team" | "msp" | "enterprise"
-
-function getPriceId(product: Product, annual = false) {
-  if (product === "daypass") return process.env.STRIPE_PRICE_DAYPASS
-  if (product === "pro") return (annual && process.env.STRIPE_PRICE_PRO_ANNUAL) || process.env.STRIPE_PRICE_PRO
-  if (product === "team") return (annual && process.env.STRIPE_PRICE_TEAM_ANNUAL) || process.env.STRIPE_PRICE_TEAM
-  if (product === "msp") return process.env.STRIPE_PRICE_MSP
-  if (product === "enterprise") return process.env.STRIPE_PRICE_ENTERPRISE || process.env.STRIPE_PRICE_TEAM
-  return process.env.STRIPE_PRICE_TEAM
-}
 
 async function resolvePromoCode(stripe: ReturnType<typeof import("@/lib/stripe")["getStripe"]>, code: string): Promise<string | null> {
   try {
@@ -49,7 +41,7 @@ export async function GET(req: NextRequest) {
     const email = sp.get("email") || undefined
     const affiliateRef = sp.get("affiliate_ref") || undefined
 
-    const price = getPriceId(product)
+    const price = await resolveCheckoutPrice(product, false)
 
     if (!price) {
       console.error("[stripe/checkout] missing price id for product", { product })
@@ -165,7 +157,7 @@ export async function POST(req: NextRequest) {
         : undefined
     const upgradeSignals = sanitizeUpgradeSignals(body?.upgrade_signals)
 
-    const price = getPriceId(product, annual)
+    const price = await resolveCheckoutPrice(product, annual)
 
     if (!price) {
       console.error("[stripe/checkout] missing price id for product", { product, annual })

@@ -86,12 +86,9 @@ async function fetchStripePayments(customerId: string): Promise<{
       const sub = subs.data[0]
       subscriptionId = sub.id
       nextBillingDate = new Date(sub.current_period_end * 1000).toISOString()
-      // Derive tier from price metadata or product
-      const priceId = sub.items.data[0]?.price?.id || ''
-      if (priceId === process.env.STRIPE_PRICE_TEAM) subscriptionTier = 'team'
-      else if (priceId === process.env.STRIPE_PRICE_PRO) subscriptionTier = 'pro'
-      else if (priceId === process.env.STRIPE_PRICE_DAYPASS) subscriptionTier = 'daypass'
-      else subscriptionTier = 'pro'
+      // Derive tier from price.lookup_key (stable across price rotations)
+      const { planFromSubscription } = await import('@/lib/stripe-pricing')
+      subscriptionTier = planFromSubscription(sub) || 'pro'
     }
   } catch (err) {
     console.error('[dashboard] Stripe fetch error:', err)

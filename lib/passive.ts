@@ -2,6 +2,7 @@
 // WORLD BEAST: Passive-income tracking + plan definitions + affiliate dashboard.
 
 import { stripe } from "@/lib/stripe"
+import { LOOKUP_KEYS } from "@/lib/stripe-pricing"
 
 // ---------------------------------------------------------------------------
 // Config
@@ -137,6 +138,7 @@ export type Plan = {
 }
 
 // WORLD BEAST: Full plan catalog – monthly, yearly, enterprise, white-label
+// Note: stripePriceId now references lookup_keys from lib/stripe-pricing.ts for stable identification
 export const PLANS: Plan[] = [
   {
     id: "free",
@@ -149,9 +151,9 @@ export const PLANS: Plan[] = [
   {
     id: "pro_monthly",
     name: "Pro",
-    priceEurCents: 900,
+    priceEurCents: 9900,
     billingCycle: "monthly",
-    stripePriceId: process.env.STRIPE_PRICE_PRO_MONTHLY,
+    stripePriceId: LOOKUP_KEYS.pro_monthly,
     features: [
       "Unbegrenzte Checks",
       "500+ Runbooks",
@@ -165,9 +167,9 @@ export const PLANS: Plan[] = [
   {
     id: "pro_yearly",
     name: "Pro Yearly",
-    priceEurCents: 7900,
+    priceEurCents: 95040,
     billingCycle: "yearly",
-    stripePriceId: process.env.STRIPE_PRICE_PRO_YEARLY,
+    stripePriceId: LOOKUP_KEYS.pro_annual,
     features: [
       "Alles aus Pro",
       "2 Monate gratis (vs. monatlich)",
@@ -179,9 +181,9 @@ export const PLANS: Plan[] = [
   {
     id: "team",
     name: "Team",
-    priceEurCents: 2900,
+    priceEurCents: 24900,
     billingCycle: "monthly",
-    stripePriceId: process.env.STRIPE_PRICE_TEAM,
+    stripePriceId: LOOKUP_KEYS.team_monthly,
     features: [
       "Bis zu 10 Nutzer",
       "Shared Ops Dashboard",
@@ -195,12 +197,7 @@ export const PLANS: Plan[] = [
     name: "Enterprise",
     priceEurCents: 0,
     billingCycle: "monthly",
-    // STRIPE_PRICE_ENTERPRISE preferred; falls back to STRIPE_PRICE_TEAM (or its
-    // legacy alias STRIPE_PRISE_TEAM) when the dedicated enterprise price is not set.
-    stripePriceId:
-      process.env.STRIPE_PRICE_ENTERPRISE ||
-      process.env.STRIPE_PRICE_TEAM ||
-      process.env.STRIPE_PRISE_TEAM,
+    stripePriceId: LOOKUP_KEYS.team_monthly,
     features: [
       "Unbegrenzte Nutzer",
       "SSO / SAML",
@@ -230,7 +227,7 @@ export const PLANS: Plan[] = [
     name: "Day Pass",
     priceEurCents: 900,
     billingCycle: "once",
-    stripePriceId: process.env.STRIPE_PRICE_DAYPASS,
+    stripePriceId: LOOKUP_KEYS.daypass,
     features: ["24h Pro-Zugang", "Alle Runbooks", "Copilot Chat"],
     badge: "Sofort-Zugang",
   },
