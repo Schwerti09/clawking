@@ -58,20 +58,30 @@ export default function ClawguruVsAquasecPage({ params }: { params: { lang: stri
   ]
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <div className="max-w-4xl mx-auto">
-        <div className="bg-amber-900/80 border-l-4 border-amber-500 p-4 mb-8 text-sm text-amber-100 rounded-r-lg shadow-lg">
-          <strong className="text-amber-100">"Not a Pentest" Notice</strong>: Security tooling comparison for your own infrastructure decisions.
-        </div>
-        <div className="mb-3"><span className="text-xs font-bold uppercase tracking-widest text-cyan-400">Compare · Batch 10</span></div>
-        <h1 className="text-4xl font-bold mb-4 text-gray-100 bg-gradient-to-r from-gray-100 via-white to-gray-100 bg-clip-text text-transparent">ClawGuru vs Aqua Security</h1>
-        <p className="text-lg text-gray-300 mb-6 leading-relaxed">Aqua Security is a powerful enterprise container security platform. ClawGuru delivers comparable runtime and vulnerability security fully self-hosted — without the six-figure annual contract, vendor lock-in, or cloud data egress. Here's the exact breakdown.</p>
+    <div className="min-h-screen bg-[#0a0a0a] relative overflow-hidden">
+      {/* Animated Gradient Background */}
+      <div className="fixed inset-0 -z-10">
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0a0a0a] via-[#0f172a] to-[#1e1b4b] opacity-50"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(34,211,238,0.1),transparent_50%)] animate-pulse"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(168,85,247,0.1),transparent_40%)] animate-pulse" style={{animationDelay: '1s'}}></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.1),transparent_40%)] animate-pulse" style={{animationDelay: '2s'}}></div>
+      </div>
 
-        <section className="mb-10">
+      <div className="container mx-auto px-4 py-8 relative z-10">
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-amber-900/80 backdrop-blur-lg border-l-4 border-amber-500 p-4 mb-8 text-sm text-amber-100 rounded-r-lg shadow-lg animate-fade-in-up">
+            <strong className="text-amber-100">"Not a Pentest" Notice</strong>: Security tooling comparison for your own infrastructure decisions.
+          </div>
+          <div className="mb-3 animate-fade-in-up" style={{animationDelay: '0.1s'}}><span className="text-xs font-bold uppercase tracking-widest text-cyan-400 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">Compare · Batch 10</span></div>
+          <h1 className="text-4xl font-bold mb-4 text-gray-100 bg-gradient-to-r from-gray-100 via-white to-gray-100 bg-clip-text text-transparent animate-fade-in-up" style={{animationDelay: '0.2s'}}>ClawGuru vs Aqua Security</h1>
+          <p className="text-lg text-gray-300 mb-6 leading-relaxed animate-fade-in-up" style={{animationDelay: '0.3s'}}>Aqua Security is a powerful enterprise container security platform. ClawGuru delivers comparable runtime and vulnerability security fully self-hosted — without the six-figure annual contract, vendor lock-in, or cloud data egress. Here's the exact breakdown.</p>
+        </div>
+
+        <section className="mb-10 animate-fade-in-up" style={{animationDelay: '0.4s'}}>
           <h2 className="text-2xl font-semibold mb-4 text-gray-100">Feature Comparison</h2>
           <div className="overflow-x-auto">
-            <table className="min-w-full bg-gray-900/80 border border-gray-700/50 rounded-xl shadow-2xl">
+            <table className="min-w-full bg-gray-900/80 backdrop-blur-lg border border-gray-700/50 rounded-xl shadow-2xl">
               <thead className="bg-gray-800/80">
                 <tr>
                   <th className="px-4 py-3 text-left text-xs font-medium text-gray-400 uppercase">Feature</th>
@@ -92,10 +102,10 @@ export default function ClawguruVsAquasecPage({ params }: { params: { lang: stri
           </div>
         </section>
 
-        <section className="mb-10">
+        <section className="mb-10 animate-fade-in-up" style={{animationDelay: '0.5s'}}>
           <h2 className="text-2xl font-semibold mb-4 text-gray-100">Decision Guide</h2>
           <div className="grid md:grid-cols-2 gap-4">
-            <div className="bg-cyan-900/80 p-4 rounded-xl border border-cyan-700/50 shadow-2xl hover:border-cyan-500/30 transition-all duration-300">
+            <div className="bg-cyan-900/80 backdrop-blur-lg p-4 rounded-xl border border-cyan-700/50 shadow-2xl hover:border-cyan-500/30 transition-all duration-300">
               <h3 className="font-semibold text-cyan-300 mb-2">Choose ClawGuru when:</h3>
               <ul className="space-y-1 text-sm text-cyan-200">
                 <li>▸ Self-hosted is non-negotiable (GDPR, data residency)</li>
@@ -105,7 +115,7 @@ export default function ClawguruVsAquasecPage({ params }: { params: { lang: stri
                 <li>▸ Kubernetes + self-hosted infrastructure focus</li>
               </ul>
             </div>
-            <div className="bg-gray-800/80 p-4 rounded-xl border border-gray-700/50 shadow-2xl hover:border-gray-600/30 transition-all duration-300">
+            <div className="bg-gray-800/80 backdrop-blur-lg p-4 rounded-xl border border-gray-700/50 shadow-2xl hover:border-gray-600/30 transition-all duration-300">
               <h3 className="font-semibold text-gray-300 mb-2">Aqua Security fits when:</h3>
               <ul className="space-y-1 text-sm text-gray-400">
                 <li>▸ Enterprise budget available ($100k+ OK)</li>
@@ -118,11 +128,11 @@ export default function ClawguruVsAquasecPage({ params }: { params: { lang: stri
           </div>
         </section>
 
-        <section className="mb-10">
+        <section className="mb-10 animate-fade-in-up" style={{animationDelay: '0.6s'}}>
           <h2 className="text-2xl font-semibold mb-4 text-gray-100">Frequently Asked Questions</h2>
           <div className="space-y-3">
             {FAQ.map((f, i) => (
-              <details key={i} className="bg-gray-800/80 border border-gray-700/50 rounded-xl p-4 shadow-2xl hover:border-cyan-500/30 transition-all duration-300">
+              <details key={i} className="bg-gray-800/80 backdrop-blur-lg border border-gray-700/50 rounded-xl p-4 shadow-2xl hover:border-cyan-500/30 transition-all duration-300">
                 <summary className="font-semibold text-gray-100 cursor-pointer">{f.q}</summary>
                 <p className="mt-3 text-sm text-gray-300 leading-relaxed">{f.a}</p>
               </details>
@@ -130,22 +140,22 @@ export default function ClawguruVsAquasecPage({ params }: { params: { lang: stri
           </div>
         </section>
 
-        <section className="mb-10">
+        <section className="mb-10 animate-fade-in-up" style={{animationDelay: '0.7s'}}>
           <h2 className="text-2xl font-semibold mb-4 text-gray-100">Further Resources</h2>
           <div className="grid grid-cols-2 gap-4">
-            <a href={`/${locale}/clawguru-vs-wiz`} className="block bg-gray-800/80 p-4 rounded-xl border border-gray-700/50 shadow-2xl hover:border-cyan-500/30 transition-all duration-300 hover:shadow-cyan-500/20">
+            <a href={`/${locale}/clawguru-vs-wiz`} className="block bg-gray-800/80 backdrop-blur-lg p-4 rounded-xl border border-gray-700/50 shadow-2xl hover:border-cyan-500/30 transition-all duration-300 hover:shadow-cyan-500/20">
               <div className="font-semibold text-cyan-400">ClawGuru vs Wiz</div>
               <div className="text-sm text-gray-300">Cloud security posture comparison</div>
             </a>
-            <a href={`/${locale}/openclaw-vs-snyk`} className="block bg-gray-800/80 p-4 rounded-xl border border-gray-700/50 shadow-2xl hover:border-cyan-500/30 transition-all duration-300 hover:shadow-cyan-500/20">
+            <a href={`/${locale}/openclaw-vs-snyk`} className="block bg-gray-800/80 backdrop-blur-lg p-4 rounded-xl border border-gray-700/50 shadow-2xl hover:border-cyan-500/30 transition-all duration-300 hover:shadow-cyan-500/20">
               <div className="font-semibold text-cyan-400">OpenClaw vs Snyk</div>
               <div className="text-sm text-gray-300">Vulnerability scanning comparison</div>
             </a>
-            <a href={`/${locale}/neuro`} className="block bg-gray-800/80 p-4 rounded-xl border border-gray-700/50 shadow-2xl hover:border-cyan-500/30 transition-all duration-300 hover:shadow-cyan-500/20">
+            <a href={`/${locale}/neuro`} className="block bg-gray-800/80 backdrop-blur-lg p-4 rounded-xl border border-gray-700/50 shadow-2xl hover:border-cyan-500/30 transition-all duration-300 hover:shadow-cyan-500/20">
               <div className="font-semibold text-cyan-400">Stack MRI</div>
               <div className="text-sm text-gray-300">Scan your container stack now</div>
             </a>
-            <a href={`/${locale}/academy/cve-feed`} className="block bg-gray-800/80 p-4 rounded-xl border border-gray-700/50 shadow-2xl hover:border-cyan-500/30 transition-all duration-300 hover:shadow-cyan-500/20">
+            <a href={`/${locale}/academy/cve-feed`} className="block bg-gray-800/80 backdrop-blur-lg p-4 rounded-xl border border-gray-700/50 shadow-2xl hover:border-cyan-500/30 transition-all duration-300 hover:shadow-cyan-500/20">
               <div className="font-semibold text-cyan-400">CVE Feed</div>
               <div className="text-sm text-gray-300">Container CVEs with fix guides</div>
             </a>
