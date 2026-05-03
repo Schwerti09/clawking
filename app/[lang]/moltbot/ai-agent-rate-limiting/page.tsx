@@ -39,6 +39,7 @@ export default function AiAgentRateLimitingPage({ params }: PageProps) {
   const locale = (SUPPORTED_LOCALES.includes(params.lang as Locale) ? params.lang : "de") as Locale
   if (!SUPPORTED_LOCALES.includes(locale)) notFound()
   const isDE = locale === "de"
+  const title = pick(isDE, "AI Agent Rate Limiting: KI-Agenten-Rate-Limiting | ClawGuru Moltbot", "AI Agent Rate Limiting: AI Agent Rate Limiting | ClawGuru Moltbot")
 
   const jsonLd = [
     { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
