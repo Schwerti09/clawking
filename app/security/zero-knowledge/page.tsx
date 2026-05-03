@@ -25,26 +25,37 @@ const faqSchema = {
 
 export default function ZeroKnowledgePage() {
   return (
-    <Container>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <div className="py-16 max-w-3xl mx-auto">
-        <div className="mb-2 text-xs text-gray-500 uppercase tracking-widest">Security · Zero-Knowledge</div>
-        <h1 className="text-4xl md:text-5xl font-black mb-4">
-          Zero-Knowledge Check
-        </h1>
-        <p className="text-gray-300 text-lg mb-2">
-          Analysiere Configs, Logs und Code vollständig im Browser.
-        </p>
-        <p className="text-gray-500 text-sm mb-8">
-          Kein Datentransfer · Kein Server-Call · Kein Tracking. Deine Daten bleiben 100% lokal.
-        </p>
+    <div className="min-h-screen bg-[#0a0a0a] relative overflow-hidden">
+      {/* Animated Gradient Background */}
+      <div className="fixed inset-0 -z-10">
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0a0a0a] via-[#0f172a] to-[#1e1b4b] opacity-50"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,157,0.1),transparent_50%)] animate-pulse"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(34,211,238,0.1),transparent_40%)] animate-pulse" style={{animationDelay: '1s'}}></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.1),transparent_40%)] animate-pulse" style={{animationDelay: '2s'}}></div>
+      </div>
+
+      <Container>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+        <div className="py-16 max-w-3xl mx-auto relative z-10">
+          <div className="mb-2 text-xs text-gray-500 uppercase tracking-widest animate-fade-in-up">Security · Zero-Knowledge</div>
+          <h1 className="text-4xl md:text-5xl font-black mb-4 text-gray-100 bg-gradient-to-r from-gray-100 via-white to-gray-100 bg-clip-text text-transparent animate-fade-in-up" style={{animationDelay: '0.1s'}}>
+            Zero-Knowledge Check
+          </h1>
+          <p className="text-gray-300 text-lg mb-2 leading-relaxed animate-fade-in-up" style={{animationDelay: '0.2s'}}>
+            Analysiere Configs, Logs und Code vollständig im Browser.
+          </p>
+          <p className="text-gray-500 text-sm mb-8 animate-fade-in-up" style={{animationDelay: '0.3s'}}>
+            Kein Datentransfer · Kein Server-Call · Kein Tracking. Deine Daten bleiben 100% lokal.
+          </p>
 
         {/* NEXT-LEVEL UPGRADE 2026: Zero-Knowledge Check Component */}
-        <ZeroKnowledgeCheck />
+        <div className="animate-fade-in-up" style={{animationDelay: '0.4s'}}>
+          <ZeroKnowledgeCheck />
+        </div>
 
         {/* How it works */}
-        <div className="mt-8 p-5 rounded-2xl border border-white/10 bg-white/[0.02]">
-          <h2 className="text-base font-black mb-3">Wie funktioniert Zero-Knowledge Mode?</h2>
+        <div className="mt-8 p-5 rounded-2xl border border-gray-700/50 bg-gray-800/80 backdrop-blur-lg shadow-2xl hover:border-cyan-500/30 transition-all duration-300 animate-fade-in-up" style={{animationDelay: '0.5s'}}>
+          <h2 className="text-base font-black mb-3 text-gray-100">Wie funktioniert Zero-Knowledge Mode?</h2>
           <div className="space-y-2 text-sm text-gray-400">
             <div className="flex items-start gap-2">
               <span className="text-[#00ff9d] font-bold mt-0.5">1.</span>
@@ -66,5 +77,6 @@ export default function ZeroKnowledgePage() {
         </div>
       </div>
     </Container>
+    </div>
   )
 }
