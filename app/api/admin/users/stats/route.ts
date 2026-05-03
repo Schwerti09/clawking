@@ -1,9 +1,16 @@
 import { NextResponse } from 'next/server'
+import { cookies } from 'next/headers'
+import { adminCookieName, verifyAdminToken } from '@/lib/admin-auth'
 import { dbQuery } from '@/lib/db'
 
 export const dynamic = 'force-dynamic'
 
 export async function GET() {
+  const token = cookies().get(adminCookieName)?.value
+  if (!token || !verifyAdminToken(token)) {
+    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+  }
+
   if (!process.env.DATABASE_URL) {
     return NextResponse.json({ total: 1247, active: 892 })
   }
