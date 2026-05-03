@@ -83,6 +83,7 @@
     "tailwindcss": "^3.4.0",
     "three": "0.151.3",
     "typescript": "^5.9.3",
+    "js-yaml": "^4.1.0",
     "zod": "^4.3.6"
   },
   "devDependencies": {
