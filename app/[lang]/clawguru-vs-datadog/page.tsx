@@ -68,19 +68,28 @@ export default function ClawGuruVsDatadogPage({ params }: PageProps) {
   const clawGuruPreis = clawGuruPublicPricingBullets(pricingLocale)
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <div className="max-w-4xl mx-auto">
-        <div className="bg-amber-900 border-l-4 border-amber-500 p-4 mb-8 text-sm text-amber-100">
-          <strong className="text-amber-100">Kein Penetrationstest</strong>: Dieser Vergleich dient der Sicherheitsarchitektur-Entscheidung. Keine Angriffswerkzeuge.
-        </div>
-        <h1 className="text-4xl font-bold mb-4 text-gray-100">ClawGuru vs Datadog: Security-Monitoring Vergleich 2026</h1>
-        <p className="text-lg text-gray-300 mb-8">Umfassender Plattformvergleich für Security-Monitoring, Infrastrukturüberwachung und DevOps-Teams. Wir zeigen, welche Lösung für DSGVO-konformes Self-Hosting, Sicherheitsautomatisierung und Kosteneffizienz besser geeignet ist.</p>
+    <div className="min-h-screen bg-[#0a0a0a] relative overflow-hidden">
+      {/* Animated Gradient Background */}
+      <div className="fixed inset-0 -z-10">
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0a0a0a] via-[#0f172a] to-[#1e1b4b] opacity-50"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(34,211,238,0.1),transparent_50%)] animate-pulse"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(168,85,247,0.1),transparent_40%)] animate-pulse" style={{animationDelay: '1s'}}></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.1),transparent_40%)] animate-pulse" style={{animationDelay: '2s'}}></div>
+      </div>
 
-        <section className="mb-10">
+      <div className="container mx-auto px-4 py-8 relative z-10">
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-amber-900/80 backdrop-blur-lg border-l-4 border-amber-500 p-4 mb-8 text-sm text-amber-100 rounded-r-lg shadow-lg animate-fade-in-up">
+            <strong className="text-amber-100">Kein Penetrationstest</strong>: Dieser Vergleich dient der Sicherheitsarchitektur-Entscheidung. Keine Angriffswerkzeuge.
+          </div>
+          <h1 className="text-4xl font-bold mb-4 text-gray-100 bg-gradient-to-r from-gray-100 via-white to-gray-100 bg-clip-text text-transparent animate-fade-in-up" style={{animationDelay: '0.1s'}}>ClawGuru vs Datadog: Security-Monitoring Vergleich 2026</h1>
+          <p className="text-lg text-gray-300 mb-8 leading-relaxed animate-fade-in-up" style={{animationDelay: '0.2s'}}>Umfassender Plattformvergleich für Security-Monitoring, Infrastrukturüberwachung und DevOps-Teams. Wir zeigen, welche Lösung für DSGVO-konformes Self-Hosting, Sicherheitsautomatisierung und Kosteneffizienz besser geeignet ist.</p>
+
+        <section className="mb-10 animate-fade-in-up" style={{animationDelay: '0.3s'}}>
           <h2 className="text-2xl font-semibold mb-4 text-gray-100">Schnellvergleich</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-blue-900 p-6 rounded-lg border border-blue-700">
+            <div className="bg-blue-900/80 backdrop-blur-lg p-6 rounded-xl border border-blue-700/50 shadow-2xl hover:border-blue-500/30 transition-all duration-300">
               <h3 className="font-bold text-blue-300 mb-4">ClawGuru</h3>
               <ul className="space-y-2 text-sm text-gray-300">
                 <li className="flex items-start"><span className="text-green-400 mr-2">✓</span>Security-first Monitoring</li>
@@ -90,7 +99,7 @@ export default function ClawGuruVsDatadogPage({ params }: PageProps) {
                 <li className="flex items-start"><span className="text-green-400 mr-2">✓</span>Festpreis-Lizenz, keine Überraschungskosten</li>
               </ul>
             </div>
-            <div className="bg-purple-900 p-6 rounded-lg border border-purple-700">
+            <div className="bg-purple-900/80 backdrop-blur-lg p-6 rounded-xl border border-purple-700/50 shadow-2xl hover:border-purple-500/30 transition-all duration-300">
               <h3 className="font-bold text-purple-300 mb-4">Datadog</h3>
               <ul className="space-y-2 text-sm text-gray-300">
                 <li className="flex items-start"><span className="text-green-400 mr-2">✓</span>Umfassendes Observability-SaaS</li>
@@ -103,33 +112,33 @@ export default function ClawGuruVsDatadogPage({ params }: PageProps) {
           </div>
         </section>
 
-        <section className="mb-10">
+        <section className="mb-10 animate-fade-in-up" style={{animationDelay: '0.4s'}}>
           <h2 className="text-2xl font-semibold mb-4 text-gray-100">Feature-Vergleich</h2>
           <div className="overflow-x-auto">
-            <table className="min-w-full bg-gray-900 border border-gray-700 rounded-lg">
-              <thead className="bg-gray-800">
+            <table className="min-w-full bg-gray-900/80 backdrop-blur-lg border border-gray-700/50 rounded-xl shadow-2xl">
+              <thead className="bg-gray-800/80">
                 <tr>
                   <th className="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">Feature</th>
                   <th className="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">ClawGuru</th>
                   <th className="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">Datadog</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-gray-700">
-                <tr><td className="px-6 py-4 text-sm font-medium text-gray-100">Sicherheitsüberwachung</td><td className="px-6 py-4 text-sm text-green-400">Security-first, tief integriert</td><td className="px-6 py-4 text-sm text-yellow-400">Basis-Sicherheit, Add-on</td></tr>
-                <tr className="bg-gray-800"><td className="px-6 py-4 text-sm font-medium text-gray-100">Deployment</td><td className="px-6 py-4 text-sm text-green-400">Self-Hosted, On-Prem, Cloud</td><td className="px-6 py-4 text-sm text-yellow-400">Nur Cloud (SaaS)</td></tr>
-                <tr><td className="px-6 py-4 text-sm font-medium text-gray-100">Datenschutz</td><td className="px-6 py-4 text-sm text-green-400">DSGVO-konform, EU-Daten</td><td className="px-6 py-4 text-sm text-red-400">US-Rechenzentren</td></tr>
-                <tr className="bg-gray-800"><td className="px-6 py-4 text-sm font-medium text-gray-100">Automatisierung</td><td className="px-6 py-4 text-sm text-green-400">600+ ausführbare Runbooks</td><td className="px-6 py-4 text-sm text-yellow-400">Eingeschränkte Workflows</td></tr>
-                <tr><td className="px-6 py-4 text-sm font-medium text-gray-100">APM / Tracing</td><td className="px-6 py-4 text-sm text-yellow-400">Eingeschränkt</td><td className="px-6 py-4 text-sm text-green-400">Umfassendes APM & RUM</td></tr>
-                <tr className="bg-gray-800"><td className="px-6 py-4 text-sm font-medium text-gray-100">Preismodell</td><td className="px-6 py-4 text-sm text-green-400">Day Pass (24h) + monatliche Pläne (EUR)</td><td className="px-6 py-4 text-sm text-yellow-400">Pro Host/Nutzung</td></tr>
+              <tbody className="divide-y divide-gray-700/50">
+                <tr className="hover:bg-gray-700/30 transition-colors"><td className="px-6 py-4 text-sm font-medium text-gray-100">Sicherheitsüberwachung</td><td className="px-6 py-4 text-sm text-green-400">Security-first, tief integriert</td><td className="px-6 py-4 text-sm text-yellow-400">Basis-Sicherheit, Add-on</td></tr>
+                <tr className="bg-gray-800/50 hover:bg-gray-700/30 transition-colors"><td className="px-6 py-4 text-sm font-medium text-gray-100">Deployment</td><td className="px-6 py-4 text-sm text-green-400">Self-Hosted, On-Prem, Cloud</td><td className="px-6 py-4 text-sm text-yellow-400">Nur Cloud (SaaS)</td></tr>
+                <tr className="hover:bg-gray-700/30 transition-colors"><td className="px-6 py-4 text-sm font-medium text-gray-100">Datenschutz</td><td className="px-6 py-4 text-sm text-green-400">DSGVO-konform, EU-Daten</td><td className="px-6 py-4 text-sm text-red-400">US-Rechenzentren</td></tr>
+                <tr className="bg-gray-800/50 hover:bg-gray-700/30 transition-colors"><td className="px-6 py-4 text-sm font-medium text-gray-100">Automatisierung</td><td className="px-6 py-4 text-sm text-green-400">600+ ausführbare Runbooks</td><td className="px-6 py-4 text-sm text-yellow-400">Eingeschränkte Workflows</td></tr>
+                <tr className="hover:bg-gray-700/30 transition-colors"><td className="px-6 py-4 text-sm font-medium text-gray-100">APM / Tracing</td><td className="px-6 py-4 text-sm text-yellow-400">Eingeschränkt</td><td className="px-6 py-4 text-sm text-green-400">Umfassendes APM & RUM</td></tr>
+                <tr className="bg-gray-800/50 hover:bg-gray-700/30 transition-colors"><td className="px-6 py-4 text-sm font-medium text-gray-100">Preismodell</td><td className="px-6 py-4 text-sm text-green-400">Day Pass (24h) + monatliche Pläne (EUR)</td><td className="px-6 py-4 text-sm text-yellow-400">Pro Host/Nutzung</td></tr>
               </tbody>
             </table>
           </div>
         </section>
 
-        <section className="mb-10">
+        <section className="mb-10 animate-fade-in-up" style={{animationDelay: '0.5s'}}>
           <h2 className="text-2xl font-semibold mb-4 text-gray-100">Wann ClawGuru wählen?</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-gray-800 border border-gray-700 rounded-lg p-6">
+            <div className="bg-gray-800/80 backdrop-blur-lg border border-gray-700/50 rounded-xl p-6 shadow-2xl hover:border-cyan-500/30 transition-all duration-300">
               <h3 className="font-bold text-cyan-400 mb-4">ClawGuru ist die richtige Wahl wenn:</h3>
               <ul className="space-y-3 text-sm text-gray-300">
                 <li className="flex items-start"><span className="text-cyan-400 mr-2">→</span>Sicherheitsüberwachung oberste Priorität hat</li>
@@ -139,7 +148,7 @@ export default function ClawGuruVsDatadogPage({ params }: PageProps) {
                 <li className="flex items-start"><span className="text-cyan-400 mr-2">→</span>Planbare, fixe Lizenzkosten bevorzugt werden</li>
               </ul>
             </div>
-            <div className="bg-gray-800 border border-gray-700 rounded-lg p-6">
+            <div className="bg-gray-800/80 backdrop-blur-lg border border-gray-700/50 rounded-xl p-6 shadow-2xl hover:border-purple-500/30 transition-all duration-300">
               <h3 className="font-bold text-purple-300 mb-4">Datadog ist besser wenn:</h3>
               <ul className="space-y-3 text-sm text-gray-300">
                 <li className="flex items-start"><span className="text-purple-400 mr-2">→</span>Umfassendes Observability (APM, RUM, Traces) benötigt</li>
@@ -152,11 +161,11 @@ export default function ClawGuruVsDatadogPage({ params }: PageProps) {
           </div>
         </section>
 
-        <section className="mb-10">
+        <section className="mb-10 animate-fade-in-up" style={{animationDelay: '0.6s'}}>
           <h2 className="text-2xl font-semibold mb-4 text-gray-100">Preisvergleich 2026</h2>
-          <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
+          <div className="bg-gray-800/80 backdrop-blur-lg p-6 rounded-xl border border-gray-700/50 shadow-2xl hover:border-gray-600/30 transition-all duration-300">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="bg-gray-900 p-4 rounded-lg border border-gray-700">
+              <div className="bg-gray-900/80 backdrop-blur-lg p-4 rounded-lg border border-gray-700/50">
                 <h3 className="font-bold text-cyan-400 mb-3">ClawGuru Preise</h3>
                 <ul className="space-y-2 text-sm text-gray-300">
                   {clawGuruPreis.map(({ k, label, text, highlightClass }) => (
@@ -166,7 +175,7 @@ export default function ClawGuruVsDatadogPage({ params }: PageProps) {
                   ))}
                 </ul>
               </div>
-              <div className="bg-gray-900 p-4 rounded-lg border border-gray-700">
+              <div className="bg-gray-900/80 backdrop-blur-lg p-4 rounded-lg border border-gray-700/50">
                 <h3 className="font-bold text-purple-300 mb-3">Datadog Preise</h3>
                 <ul className="space-y-2 text-sm text-gray-300">
                   <li><strong className="text-gray-100">Infrastructure:</strong> 15$/Host/Monat</li>
@@ -180,11 +189,11 @@ export default function ClawGuruVsDatadogPage({ params }: PageProps) {
           </div>
         </section>
 
-        <section className="mb-10">
+        <section className="mb-10 animate-fade-in-up" style={{animationDelay: '0.7s'}}>
           <h2 className="text-2xl font-semibold mb-4 text-gray-100">Häufige Fragen (FAQ)</h2>
           <div className="space-y-4">
             {faqSchema.mainEntity.map((item, i) => (
-              <details key={i} className="bg-gray-800 border border-gray-700 rounded-lg p-4">
+              <details key={i} className="bg-gray-800/80 backdrop-blur-lg border border-gray-700/50 rounded-xl p-4 shadow-2xl hover:border-cyan-500/30 transition-all duration-300">
                 <summary className="font-semibold text-gray-100 cursor-pointer">{item.name}</summary>
                 <p className="mt-3 text-sm text-gray-300">{item.acceptedAnswer.text}</p>
               </details>
@@ -192,22 +201,22 @@ export default function ClawGuruVsDatadogPage({ params }: PageProps) {
           </div>
         </section>
 
-        <section className="mb-10">
+        <section className="mb-10 animate-fade-in-up" style={{animationDelay: '0.8s'}}>
           <h2 className="text-2xl font-semibold mb-4 text-gray-100">Weiterführende Ressourcen</h2>
           <div className="grid grid-cols-2 gap-4">
-            <a href={`/${locale}/check`} className="block bg-gray-800 p-4 rounded-lg border border-gray-700 hover:bg-gray-700 transition-colors">
+            <a href={`/${locale}/check`} className="block bg-gray-800/80 backdrop-blur-lg p-4 rounded-xl border border-gray-700/50 shadow-2xl hover:border-cyan-500/30 transition-all duration-300 hover:shadow-cyan-500/20">
               <div className="font-semibold text-cyan-400">Security Check</div>
               <div className="text-sm text-gray-300">Ihr System jetzt scannen</div>
             </a>
-            <a href={`/${locale}/runbooks`} className="block bg-gray-800 p-4 rounded-lg border border-gray-700 hover:bg-gray-700 transition-colors">
+            <a href={`/${locale}/runbooks`} className="block bg-gray-800/80 backdrop-blur-lg p-4 rounded-xl border border-gray-700/50 shadow-2xl hover:border-cyan-500/30 transition-all duration-300 hover:shadow-cyan-500/20">
               <div className="font-semibold text-cyan-400">Runbooks</div>
               <div className="text-sm text-gray-300">600+ Security-Playbooks</div>
             </a>
-            <a href={`/${locale}/moltbot/security-framework`} className="block bg-gray-800 p-4 rounded-lg border border-gray-700 hover:bg-gray-700 transition-colors">
+            <a href={`/${locale}/moltbot/security-framework`} className="block bg-gray-800/80 backdrop-blur-lg p-4 rounded-xl border border-gray-700/50 shadow-2xl hover:border-cyan-500/30 transition-all duration-300 hover:shadow-cyan-500/20">
               <div className="font-semibold text-cyan-400">Moltbot Security Framework</div>
               <div className="text-sm text-gray-300">Automatisierte Sicherheit</div>
             </a>
-            <a href={`/${locale}/solutions/kubernetes-security-hardening`} className="block bg-gray-800 p-4 rounded-lg border border-gray-700 hover:bg-gray-700 transition-colors">
+            <a href={`/${locale}/solutions/kubernetes-security-hardening`} className="block bg-gray-800/80 backdrop-blur-lg p-4 rounded-xl border border-gray-700/50 shadow-2xl hover:border-cyan-500/30 transition-all duration-300 hover:shadow-cyan-500/20">
               <div className="font-semibold text-cyan-400">Kubernetes Security</div>
               <div className="text-sm text-gray-300">Kompletter Härtungsleitfaden</div>
             </a>
