@@ -39,6 +39,7 @@ export default function AIAgentResiliencePatternsPage({ params }: PageProps) {
   const locale = (SUPPORTED_LOCALES.includes(params.lang as Locale) ? params.lang : "de") as Locale
   if (!SUPPORTED_LOCALES.includes(locale)) notFound()
   const isDE = locale === "de"
+  const title = pick(isDE, "AI Agent Resilience Patterns: Resilienz-Muster für AI-Agents | ClawGuru", "AI Agent Resilience Patterns: Resilience Patterns for AI Agents | ClawGuru")
 
   const jsonLd = [
     { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [

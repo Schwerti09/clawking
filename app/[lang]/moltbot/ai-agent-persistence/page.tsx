@@ -39,6 +39,7 @@ export default function AiAgentPersistencePage({ params }: PageProps) {
   const locale = (SUPPORTED_LOCALES.includes(params.lang as Locale) ? params.lang : "de") as Locale
   if (!SUPPORTED_LOCALES.includes(locale)) notFound()
   const isDE = locale === "de"
+  const title = pick(isDE, "AI Agent Persistence: KI-Agenten-Persistenz | ClawGuru Moltbot", "AI Agent Persistence: AI Agent Persistence | ClawGuru Moltbot")
 
   const jsonLd = [
     { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
