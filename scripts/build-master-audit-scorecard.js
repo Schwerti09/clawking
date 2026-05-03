@@ -23,9 +23,12 @@ function main() {
     authCoveragePct: 0,
   }
 
-  const score = Math.max(
-    0,
-    100 - summary.risk.critical * 8 - summary.risk.medium * 2 + Math.round(summary.authCoveragePct / 10)
+  const score = Math.min(
+    100,
+    Math.max(
+      0,
+      100 - summary.risk.critical * 8 - summary.risk.medium * 2 + Math.round(summary.authCoveragePct / 10)
+    )
   )
 
   const markdown = `# Master Audit Scorecard\n\nGenerated: ${new Date().toISOString()}\n\n## Snapshot\n\n- API routes: **${summary.totalRoutes}**\n- Auth marker coverage: **${summary.authCoveragePct}%**\n- Telemetry marker coverage: **${summary.telemetryCoveragePct}%**\n- Critical risk routes: **${summary.risk.critical}**\n- Medium risk routes: **${summary.risk.medium}**\n- Derived audit score: **${score}/100**\n\n## 14-Day Implementation Status\n\n- [x] Tag 1–2: API inventory + guard classes + risk prioritization (automated in \`status/api-surface-audit.json\`)\n- [x] Tag 3–4: Build/Release hardening baseline (CI gate + release checklist)\n- [x] Tag 5–6: i18n/SEO consistency check automated (QUALITY vs SITEMAP locales)\n- [x] Tag 7–8: Audit-focused tests added for guard and locale consistency helpers\n- [x] Tag 9–10: Security header + env governance documentation consolidated\n- [x] Tag 11–12: Telemetry matrix generated from API surface\n- [x] Tag 13–14: Scorecard + 30-day follow-up roadmap documented\n\n## Next 30 Days\n\n1. Fix all **critical** routes identified by the API surface audit.\n2. Expand API tests for Stripe/webhook/geo/ai endpoints with shared auth fixtures.\n3. Raise telemetry coverage by instrumenting high-risk routes lacking request-level tracing.\n4. Enforce audit scripts in release checklist before every production deploy.\n`

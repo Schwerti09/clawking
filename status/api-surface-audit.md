@@ -1,6 +1,6 @@
 # API Surface Audit (Master-Audit Day 1-2)
 
-Generated: 2026-05-03T15:28:29.362Z
+Generated: 2026-05-03T15:30:21.663Z
 
 ## Summary
 

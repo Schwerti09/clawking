@@ -6,7 +6,7 @@ export const dynamic = "force-dynamic"
 
 function isAuthorized(req: NextRequest): boolean {
   const secret = process.env.WEBHOOK_SHARED_SECRET || process.env.CRON_SECRET || ""
-  if (!secret) return true
+  if (!secret) return false
 
   const auth = req.headers.get("authorization") ?? ""
   const bearer = auth.toLowerCase().startsWith("bearer ") ? auth.slice(7).trim() : ""
