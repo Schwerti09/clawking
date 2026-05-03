@@ -29,9 +29,9 @@
 ## 📊 Snapshot
 
 - API routes audited: **147**
-- Auth marker coverage: **43.5%**
+- Auth marker coverage: **47.6%**
 - Telemetry marker coverage: **6.1%**
-- Critical routes flagged: **8**
+- Critical routes flagged: **0**
 - i18n/SEO consistency gate: **pass** (`SUPPORTED_LOCALES=98`, `QUALITY_LOCALES=32`, `SITEMAP_100K_LOCALES=32`)
 
 ## 📌 Next

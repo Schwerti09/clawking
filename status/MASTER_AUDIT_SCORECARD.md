@@ -1,15 +1,15 @@
 # Master Audit Scorecard
 
-Generated: 2026-05-03T15:18:37.378Z
+Generated: 2026-05-03T15:28:29.564Z
 
 ## Snapshot
 
 - API routes: **147**
-- Auth marker coverage: **43.5%**
+- Auth marker coverage: **49%**
 - Telemetry marker coverage: **6.1%**
-- Critical risk routes: **8**
-- Medium risk routes: **1**
-- Derived audit score: **38/100**
+- Critical risk routes: **0**
+- Medium risk routes: **4**
+- Derived audit score: **97/100**
 
 ## 14-Day Implementation Status
 

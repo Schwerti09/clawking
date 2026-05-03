@@ -1,27 +1,20 @@
 # API Surface Audit (Master-Audit Day 1-2)
 
-Generated: 2026-05-03T15:18:37.172Z
+Generated: 2026-05-03T15:28:29.362Z
 
 ## Summary
 
 - Total routes: **147**
 - Route classes: public 116, internal 1, admin 22, cron 4, webhook 4
-- Auth marker coverage: **43.5%**
+- Auth marker coverage: **49%**
 - Telemetry marker coverage: **6.1%**
-- Risk buckets: critical 8, medium 1, low 138
+- Risk buckets: critical 0, medium 4, low 143
 
 ## Critical routes (missing auth marker)
 
 | Route | Class | Methods | Issue |
 | --- | --- | --- | --- |
-| `app/api/admin/executions/stats/route.ts` | admin | GET | no auth marker |
-| `app/api/admin/gemini/stats/route.ts` | admin | GET | no auth marker |
-| `app/api/admin/index-urls/route.ts` | admin | POST | no auth marker |
-| `app/api/admin/revenue/stats/route.ts` | admin | GET | no auth marker |
-| `app/api/admin/users/stats/route.ts` | admin | GET | no auth marker |
-| `app/api/webhooks/bluebubbles/route.ts` | webhook | POST, GET | no auth marker |
-| `app/api/webhooks/google-chat/route.ts` | webhook | POST, GET | no auth marker |
-| `app/api/webhooks/line/route.ts` | webhook | POST, GET | no auth marker |
+| _none_ | - | - | - |
 
 ## Telemetry matrix (routes with request-level telemetry markers)
 
