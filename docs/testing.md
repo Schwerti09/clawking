@@ -20,15 +20,23 @@ Related operational docs (Neon quota, build-time DB, failover):
 - `npm run check:static-db`
   - Ensures every file under `app/[lang]/` that imports `@/lib/db` also exports `export const dynamic = "force-dynamic"`.
   - Prevents static prerender × many locales from hammering Neon during `next build` (see post-mortem above).
+- `npm run check:i18n-seo-consistency`
+  - Verifies `SUPPORTED_LOCALES` stays at 100 and `QUALITY_LOCALES` stays at 32.
+  - Verifies `SITEMAP_100K_LOCALES` in `scripts/netlify-build-env.sh` exactly matches `QUALITY_LOCALES`.
+- `npm run test:security-core`
+  - Runs security-critical unit tests (`rate-limit`, access-token handling, deny-list, security-check-core).
+- `npm run test:audit`
+  - Runs unit tests for audit guardrails (API surface classification + i18n/SEO consistency parser helpers).
 
 ## CI Release Gate
 
 The CI workflow enforces this sequence:
 
 1. `unit-tests` job runs `npm run check:static-db`, then `npm run test:autopilot`
-2. `build` job runs only after unit tests pass
+2. `unit-tests` also runs `npm run check:i18n-seo-consistency`, `npm run test:security-core`, `npm run test:audit`
+3. `build` job runs only after unit tests pass
 
-If `check:static-db` or `test:autopilot` fails, the build step is blocked.
+If any unit gate fails, the build step is blocked.
 
 ## Roast statistics API (build resilience)
 
