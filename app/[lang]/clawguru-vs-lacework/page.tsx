@@ -52,19 +52,28 @@ export default function ClawGuruVsLaceworkPage({ params }: PageProps) {
   const clawGuruPreis = clawGuruPublicPricingBullets("en")
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <div className="max-w-4xl mx-auto">
-        <div className="bg-amber-900 border-l-4 border-amber-500 p-4 mb-8 text-sm text-amber-100">
-          <strong className="text-amber-100">&quot;Not a Pentest&quot; Hinweis</strong>: Dieser Vergleich dient der Entscheidungsfindung f\u00fcr Security-Architekturen. Kein Angriffs-Tool.
-        </div>
-        <h1 className="text-4xl font-bold mb-4 text-gray-100">ClawGuru vs Lacework: CSPM Security Vergleich</h1>
-        <p className="text-lg text-gray-300 mb-8">Umfassender Cloud-Security-Plattform-Vergleich f\u00fcr CSPM, Compliance-Management und Multi-Cloud-Security-Betrieb.</p>
+    <div className="min-h-screen bg-[#0a0a0a] relative overflow-hidden">
+      {/* Animated Gradient Background */}
+      <div className="fixed inset-0 -z-10">
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0a0a0a] via-[#0f172a] to-[#1e1b4b] opacity-50"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(34,211,238,0.1),transparent_50%)] animate-pulse"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(168,85,247,0.1),transparent_40%)] animate-pulse" style={{animationDelay: '1s'}}></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.1),transparent_40%)] animate-pulse" style={{animationDelay: '2s'}}></div>
+      </div>
 
-        <section className="mb-10">
+      <div className="container mx-auto px-4 py-8 relative z-10">
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-amber-900/80 backdrop-blur-lg border-l-4 border-amber-500 p-4 mb-8 text-sm text-amber-100 rounded-r-lg shadow-lg animate-fade-in-up">
+            <strong className="text-amber-100">&quot;Not a Pentest&quot; Hinweis</strong>: Dieser Vergleich dient der Entscheidungsfindung für Security-Architekturen. Kein Angriffs-Tool.
+          </div>
+          <h1 className="text-4xl font-bold mb-4 text-gray-100 bg-gradient-to-r from-gray-100 via-white to-gray-100 bg-clip-text text-transparent animate-fade-in-up" style={{animationDelay: '0.1s'}}>ClawGuru vs Lacework: CSPM Security Vergleich</h1>
+          <p className="text-lg text-gray-300 mb-8 leading-relaxed animate-fade-in-up" style={{animationDelay: '0.2s'}}>Umfassender Cloud-Security-Plattform-Vergleich für CSPM, Compliance-Management und Multi-Cloud-Security-Betrieb.</p>
+
+        <section className="mb-10 animate-fade-in-up" style={{animationDelay: '0.3s'}}>
           <h2 className="text-2xl font-semibold mb-4 text-gray-100">Schnellvergleich im Überblick</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-blue-900 p-6 rounded-lg">
+            <div className="bg-blue-900/80 backdrop-blur-lg p-6 rounded-xl border border-blue-700/50 shadow-2xl hover:border-blue-500/30 transition-all duration-300">
               <h3 className="font-bold text-blue-300 mb-4">ClawGuru</h3>
               <ul className="space-y-2 text-sm text-gray-300">
                 <li className="flex items-start">
@@ -89,7 +98,7 @@ export default function ClawGuruVsLaceworkPage({ params }: PageProps) {
                 </li>
               </ul>
             </div>
-            <div className="bg-teal-900 p-6 rounded-lg border border-teal-700">
+            <div className="bg-teal-900/80 backdrop-blur-lg p-6 rounded-xl border border-teal-700/50 shadow-2xl hover:border-teal-500/30 transition-all duration-300">
               <h3 className="font-bold text-teal-300 mb-4">Lacework</h3>
               <ul className="space-y-2 text-sm text-gray-300">
                 <li className="flex items-start">
@@ -117,49 +126,49 @@ export default function ClawGuruVsLaceworkPage({ params }: PageProps) {
           </div>
         </section>
 
-        <section className="mb-10">
+        <section className="mb-10 animate-fade-in-up" style={{animationDelay: '0.4s'}}>
           <h2 className="text-2xl font-semibold mb-4 text-gray-100">Feature-Vergleich</h2>
           <div className="overflow-x-auto">
-            <table className="min-w-full bg-gray-900 border border-gray-700 rounded-lg">
-              <thead className="bg-gray-800">
+            <table className="min-w-full bg-gray-900/80 backdrop-blur-lg border border-gray-700/50 rounded-xl shadow-2xl">
+              <thead className="bg-gray-800/80">
                 <tr>
                   <th className="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">Feature</th>
                   <th className="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">ClawGuru</th>
                   <th className="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">Lacework</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-gray-700">
-                <tr>
+              <tbody className="divide-y divide-gray-700/50">
+                <tr className="hover:bg-gray-700/30 transition-colors">
                   <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-100">CSPM Capabilities</td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-green-400">Full CSPM with custom rules</td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-green-400">Advanced AI-powered CSPM</td>
                 </tr>
-                <tr className="bg-gray-800">
+                <tr className="bg-gray-800/50 hover:bg-gray-700/30 transition-colors">
                   <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-100">Multi-Cloud Support</td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-green-400">AWS, GCP, Azure, on-prem</td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-green-400">AWS, GCP, Azure, Alibaba</td>
                 </tr>
-                <tr>
+                <tr className="hover:bg-gray-700/30 transition-colors">
                   <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-100">Compliance Management</td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-green-400">GDPR, ISO27001, NIS2</td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-green-400">SOC2, ISO27001, PCI-DSS</td>
                 </tr>
-                <tr className="bg-gray-800">
+                <tr className="bg-gray-800/50 hover:bg-gray-700/30 transition-colors">
                   <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-100">Deployment</td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-green-400">Self-hosted, on-prem, cloud</td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-yellow-400">Cloud-only (SaaS)</td>
                 </tr>
-                <tr>
+                <tr className="hover:bg-gray-700/30 transition-colors">
                   <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-100">Data Privacy</td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-green-400">GDPR/DSGVO compliant</td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-red-400">US data centers</td>
                 </tr>
-                <tr className="bg-gray-800">
+                <tr className="bg-gray-800/50 hover:bg-gray-700/30 transition-colors">
                   <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-100">Automation</td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-green-400">600+ executable runbooks</td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-yellow-400">Limited automation</td>
                 </tr>
-                <tr>
+                <tr className="hover:bg-gray-700/30 transition-colors">
                   <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-100">Pricing Model</td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-green-400">Perpetual license + support</td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-yellow-400">Per-asset subscription</td>
@@ -169,65 +178,65 @@ export default function ClawGuruVsLaceworkPage({ params }: PageProps) {
           </div>
         </section>
 
-        <section className="mb-10">
+        <section className="mb-10 animate-fade-in-up" style={{animationDelay: '0.5s'}}>
           <h2 className="text-2xl font-semibold mb-4 text-gray-100">Wann welches Tool?</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-gray-800 border border-gray-700 rounded-lg p-6">
-              <h3 className="font-bold text-cyan-400 mb-4">ClawGuru w\u00e4hlen wenn:</h3>
-              <ul className="space-y-3 text-sm">
+            <div className="bg-gray-800/80 backdrop-blur-lg border border-gray-700/50 rounded-xl p-6 shadow-2xl hover:border-cyan-500/30 transition-all duration-300">
+              <h3 className="font-bold text-cyan-400 mb-4">ClawGuru wählen wenn:</h3>
+              <ul className="space-y-3 text-sm text-gray-300">
                 <li className="flex items-start">
-                  <span className="text-cyan-400 mr-2">-</span>
+                  <span className="text-cyan-400 mr-2">→</span>
                   DSGVO/GDPR-Compliance zwingend
                 </li>
                 <li className="flex items-start">
-                  <span className="text-cyan-400 mr-2">-</span>
-                  Self-Hosted Deployment gew\u00fcnscht
+                  <span className="text-cyan-400 mr-2">→</span>
+                  Self-Hosted Deployment gewünscht
                 </li>
                 <li className="flex items-start">
-                  <span className="text-cyan-400 mr-2">-</span>
-                  Umfangreiche Automation ben\u00f6tigt
+                  <span className="text-cyan-400 mr-2">→</span>
+                  Umfangreiche Automation benötigt
                 </li>
                 <li className="flex items-start">
-                  <span className="text-cyan-400 mr-2">-</span>
-                  Vorhersehbare EUR-Preise (Day Pass + monatliche Pl\u00e4ne) bevorzugt
+                  <span className="text-cyan-400 mr-2">→</span>
+                  Vorhersehbare EUR-Preise (Day Pass + monatliche Pläne) bevorzugt
                 </li>
                 <li className="flex items-start">
-                  <span className="text-cyan-400 mr-2">-</span>
-                  On-Premises-Unterst\u00fctzung n\u00f6tig
+                  <span className="text-cyan-400 mr-2">→</span>
+                  On-Premises-Unterstützung nötig
                 </li>
               </ul>
             </div>
-            <div className="bg-gray-800 border border-gray-700 rounded-lg p-6">
-              <h3 className="font-bold text-cyan-400 mb-4">Lacework w\u00e4hlen wenn:</h3>
-              <ul className="space-y-3 text-sm">
+            <div className="bg-gray-800/80 backdrop-blur-lg border border-gray-700/50 rounded-xl p-6 shadow-2xl hover:border-teal-500/30 transition-all duration-300">
+              <h3 className="font-bold text-teal-300 mb-4">Lacework wählen wenn:</h3>
+              <ul className="space-y-3 text-sm text-gray-300">
                 <li className="flex items-start">
-                  <span className="text-teal-600 mr-2">-</span>
-                  KI-gest\u00fctzte Bedrohungserkennung ben\u00f6tigt
+                  <span className="text-teal-400 mr-2">→</span>
+                  KI-gestützte Bedrohungserkennung benötigt
                 </li>
                 <li className="flex items-start">
-                  <span className="text-teal-400 mr-2">-</span>
-                  Cloud-native L\u00f6sung gew\u00fcnscht
+                  <span className="text-teal-400 mr-2">→</span>
+                  Cloud-native Lösung gewünscht
                 </li>
                 <li className="flex items-start">
-                  <span className="text-teal-400 mr-2">-</span>
-                  Polygraph-Risikoanalyse ben\u00f6tigt
+                  <span className="text-teal-400 mr-2">→</span>
+                  Polygraph-Risikoanalyse benötigt
                 </li>
                 <li className="flex items-start">
-                  <span className="text-teal-400 mr-2">-</span>
+                  <span className="text-teal-400 mr-2">→</span>
                   Enterprise-Anforderungen vorhanden
                 </li>
                 <li className="flex items-start">
-                  <span className="text-teal-400 mr-2">-</span>
-                  24/7 Enterprise-Support n\u00f6tig
+                  <span className="text-teal-400 mr-2">→</span>
+                  24/7 Enterprise-Support nötig
                 </li>
               </ul>
             </div>
           </div>
         </section>
 
-        <section className="mb-10">
+        <section className="mb-10 animate-fade-in-up" style={{animationDelay: '0.6s'}}>
           <h2 className="text-2xl font-semibold mb-4 text-gray-100">Technische Architektur</h2>
-          <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
+          <div className="bg-gray-800/80 backdrop-blur-lg p-6 rounded-xl border border-gray-700/50 shadow-2xl hover:border-gray-600/30 transition-all duration-300">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <h3 className="font-bold text-cyan-400 mb-3">ClawGuru Architektur</h3>
@@ -248,12 +257,12 @@ export default function ClawGuruVsLaceworkPage({ params }: PageProps) {
           </div>
         </section>
 
-        <section className="mb-10">
+        <section className="mb-10 animate-fade-in-up" style={{animationDelay: '0.7s'}}>
           <h2 className="text-2xl font-semibold mb-4 text-gray-100">Compliance-Framework-Vergleich</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-blue-900 p-4 rounded-lg border border-blue-700">
+            <div className="bg-blue-900/80 backdrop-blur-lg p-4 rounded-xl border border-blue-700/50 shadow-2xl hover:border-blue-500/30 transition-all duration-300">
               <h3 className="font-semibold text-blue-300 mb-2">ClawGuru Compliance</h3>
-              <ul className="text-sm space-y-1">
+              <ul className="text-sm space-y-1 text-gray-300">
                 <li>GDPR/DSGVO (native support)</li>
                 <li>ISO 27001:2022</li>
                 <li>NIS2 Directive</li>
@@ -261,9 +270,9 @@ export default function ClawGuruVsLaceworkPage({ params }: PageProps) {
                 <li>Custom compliance frameworks</li>
               </ul>
             </div>
-            <div className="bg-teal-900 p-4 rounded-lg border border-teal-700">
+            <div className="bg-teal-900/80 backdrop-blur-lg p-4 rounded-xl border border-teal-700/50 shadow-2xl hover:border-teal-500/30 transition-all duration-300">
               <h3 className="font-semibold text-teal-300 mb-2">Lacework Compliance</h3>
-              <ul className="text-sm space-y-1">
+              <ul className="text-sm space-y-1 text-gray-300">
                 <li>SOC 2 Type II</li>
                 <li>ISO 27001:2013</li>
                 <li>PCI DSS 4.0</li>
@@ -274,11 +283,11 @@ export default function ClawGuruVsLaceworkPage({ params }: PageProps) {
           </div>
         </section>
 
-        <section className="mb-10">
+        <section className="mb-10 animate-fade-in-up" style={{animationDelay: '0.8s'}}>
           <h2 className="text-2xl font-semibold mb-4 text-gray-100">Cloud-Provider-Integration</h2>
-          <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
+          <div className="bg-gray-800/80 backdrop-blur-lg p-6 rounded-xl border border-gray-700/50 shadow-2xl hover:border-gray-600/30 transition-all duration-300">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="bg-gray-800 p-4 rounded border">
+              <div className="bg-gray-900/80 backdrop-blur-lg p-4 rounded-lg border border-gray-700/50">
                 <h3 className="font-bold text-cyan-400 mb-3">ClawGuru Integrations</h3>
                 <ul className="space-y-2 text-sm text-gray-300">
                   <li><strong>AWS:</strong> Config, CloudTrail, GuardDuty</li>
@@ -288,7 +297,7 @@ export default function ClawGuruVsLaceworkPage({ params }: PageProps) {
                   <li className="text-green-400">Full API access control</li>
                 </ul>
               </div>
-              <div className="bg-gray-800 p-4 rounded border">
+              <div className="bg-gray-900/80 backdrop-blur-lg p-4 rounded-lg border border-gray-700/50">
                 <h3 className="font-bold text-cyan-400 mb-3">Lacework Integrations</h3>
                 <ul className="space-y-2 text-sm text-gray-300">
                   <li><strong>AWS:</strong> 300+ service integrations</li>
@@ -302,27 +311,27 @@ export default function ClawGuruVsLaceworkPage({ params }: PageProps) {
           </div>
         </section>
 
-        <section className="mb-10">
+        <section className="mb-10 animate-fade-in-up" style={{animationDelay: '0.9s'}}>
           <h2 className="text-2xl font-semibold mb-4 text-gray-100">Preisvergleich</h2>
-          <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
+          <div className="bg-gray-800/80 backdrop-blur-lg p-6 rounded-xl border border-gray-700/50 shadow-2xl hover:border-gray-600/30 transition-all duration-300">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="bg-gray-800 p-4 rounded border">
+              <div className="bg-gray-900/80 backdrop-blur-lg p-4 rounded-lg border border-gray-700/50">
                 <h3 className="font-bold text-cyan-400 mb-3">ClawGuru Pricing</h3>
                 <ul className="space-y-2 text-sm text-gray-300">
                   {clawGuruPreis.map(({ k, label, text, highlightClass }) => (
                     <li key={k} className={highlightClass}>
-                      <strong>{label}:</strong> {text}
+                      <strong className="text-gray-100">{label}:</strong> {text}
                     </li>
                   ))}
                 </ul>
               </div>
-              <div className="bg-gray-800 p-4 rounded border">
+              <div className="bg-gray-900/80 backdrop-blur-lg p-4 rounded-lg border border-gray-700/50">
                 <h3 className="font-bold text-cyan-400 mb-3">Lacework Pricing</h3>
                 <ul className="space-y-2 text-sm text-gray-300">
-                  <li><strong>Plan:</strong> Custom pricing (starts at ~$50K/year)</li>
-                  <li><strong>Per-asset:</strong> $5-15/month depending on tier</li>
-                  <li><strong>Data ingestion:</strong> Additional fees</li>
-                  <li><strong>Support:</strong> 24/7 enterprise support</li>
+                  <li><strong className="text-gray-100">Plan:</strong> Custom pricing (starts at ~$50K/year)</li>
+                  <li><strong className="text-gray-100">Per-asset:</strong> $5-15/month depending on tier</li>
+                  <li><strong className="text-gray-100">Data ingestion:</strong> Additional fees</li>
+                  <li><strong className="text-gray-100">Support:</strong> 24/7 enterprise support</li>
                   <li className="text-red-400">Can be expensive at scale</li>
                 </ul>
               </div>
@@ -330,12 +339,12 @@ export default function ClawGuruVsLaceworkPage({ params }: PageProps) {
           </div>
         </section>
 
-        <section className="mb-10">
-          <h2 className="text-2xl font-semibold mb-4 text-gray-100">Integration &amp; \u00d6kosystem</h2>
+        <section className="mb-10 animate-fade-in-up" style={{animationDelay: '1.0s'}}>
+          <h2 className="text-2xl font-semibold mb-4 text-gray-100">Integration &amp; Ökosystem</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-blue-900 p-4 rounded-lg border border-blue-700">
+            <div className="bg-blue-900/80 backdrop-blur-lg p-4 rounded-xl border border-blue-700/50 shadow-2xl hover:border-blue-500/30 transition-all duration-300">
               <h3 className="font-semibold text-blue-300 mb-2">ClawGuru Integrations</h3>
-              <ul className="text-sm space-y-1">
+              <ul className="text-sm space-y-1 text-gray-300">
                 <li>SIEM systems (ELK, Splunk)</li>
                 <li>SOAR platforms (Cortex XSOAR)</li>
                 <li>ITSM systems (ServiceNow)</li>
@@ -343,9 +352,9 @@ export default function ClawGuruVsLaceworkPage({ params }: PageProps) {
                 <li>Custom API endpoints</li>
               </ul>
             </div>
-            <div className="bg-teal-900 p-4 rounded-lg border border-teal-700">
+            <div className="bg-teal-900/80 backdrop-blur-lg p-4 rounded-xl border border-teal-700/50 shadow-2xl hover:border-teal-500/30 transition-all duration-300">
               <h3 className="font-semibold text-teal-300 mb-2">Lacework Integrations</h3>
-              <ul className="text-sm space-y-1">
+              <ul className="text-sm space-y-1 text-gray-300">
                 <li>Major SIEM platforms</li>
                 <li>SOAR systems (Palo Alto, Splunk)</li>
                 <li>ITSM platforms (ServiceNow, Jira)</li>
@@ -356,24 +365,24 @@ export default function ClawGuruVsLaceworkPage({ params }: PageProps) {
           </div>
         </section>
 
-        <section className="mb-10">
-          <h2 className="text-2xl font-semibold mb-4 text-gray-100">Weiterf\u00fchrende Ressourcen</h2>
+        <section className="mb-10 animate-fade-in-up" style={{animationDelay: '1.1s'}}>
+          <h2 className="text-2xl font-semibold mb-4 text-gray-100">Weiterführende Ressourcen</h2>
           <div className="grid grid-cols-2 gap-4">
-            <a href={`/${locale}/securitycheck`} className="block bg-gray-800 p-4 rounded-lg border border-gray-700 hover:bg-gray-700 transition-colors">
+            <a href={`/${locale}/securitycheck`} className="block bg-gray-800/80 backdrop-blur-lg p-4 rounded-xl border border-gray-700/50 shadow-2xl hover:border-cyan-500/30 transition-all duration-300 hover:shadow-cyan-500/20">
               <div className="font-semibold text-cyan-400">Security Check</div>
               <div className="text-sm text-gray-300">System jetzt scannen</div>
             </a>
-            <a href={`/${locale}/runbooks`} className="block bg-gray-800 p-4 rounded-lg border border-gray-700 hover:bg-gray-700 transition-colors">
+            <a href={`/${locale}/runbooks`} className="block bg-gray-800/80 backdrop-blur-lg p-4 rounded-xl border border-gray-700/50 shadow-2xl hover:border-cyan-500/30 transition-all duration-300 hover:shadow-cyan-500/20">
               <div className="font-semibold text-cyan-400">Runbooks</div>
               <div className="text-sm text-gray-300">600+ Security-Playbooks</div>
             </a>
-            <a href={`/${locale}/openclaw`} className="block bg-gray-800 p-4 rounded-lg border border-gray-700 hover:bg-gray-700 transition-colors">
+            <a href={`/${locale}/openclaw`} className="block bg-gray-800/80 backdrop-blur-lg p-4 rounded-xl border border-gray-700/50 shadow-2xl hover:border-cyan-500/30 transition-all duration-300 hover:shadow-cyan-500/20">
               <div className="font-semibold text-cyan-400">OpenClaw Framework</div>
               <div className="text-sm text-gray-300">Self-Hosted Security</div>
             </a>
-            <a href={`/${locale}/solutions/kubernetes-security-hardening`} className="block bg-gray-800 p-4 rounded-lg border border-gray-700 hover:bg-gray-700 transition-colors">
+            <a href={`/${locale}/solutions/kubernetes-security-hardening`} className="block bg-gray-800/80 backdrop-blur-lg p-4 rounded-xl border border-gray-700/50 shadow-2xl hover:border-cyan-500/30 transition-all duration-300 hover:shadow-cyan-500/20">
               <div className="font-semibold text-cyan-400">Kubernetes Security</div>
-              <div className="text-sm text-gray-300">Vollst\u00e4ndiger H\u00e4rtungsleitfaden</div>
+              <div className="text-sm text-gray-300">Vollständiger Härtungsleitfaden</div>
             </a>
           </div>
         </section>
