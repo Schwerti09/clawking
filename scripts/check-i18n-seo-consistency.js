@@ -29,6 +29,8 @@ function main() {
 
   if (expectedSupportedCount > 0 && supportedLocales.length !== expectedSupportedCount) {
     errors.push(`SUPPORTED_LOCALES count mismatch: expected ${expectedSupportedCount}, got ${supportedLocales.length}`)
+  } else if (expectedSupportedCount === 0) {
+    console.warn("[check:i18n-seo-consistency] EXPECTED_SUPPORTED_LOCALES not set; skipping strict supported-locale count check")
   }
 
   if (qualityLocales.length !== expectedQualityCount) {
