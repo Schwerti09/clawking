@@ -69,6 +69,7 @@ export default function ClawGuruVsCrowdstrikePage({ params }: PageProps) {
           </div>
           <h1 className="text-4xl font-bold mb-4 text-gray-100 bg-gradient-to-r from-gray-100 via-white to-gray-100 bg-clip-text text-transparent animate-fade-in-up" style={{animationDelay: '0.1s'}}>ClawGuru vs CrowdStrike: SIEM & EDR Sicherheitsvergleich 2026</h1>
           <p className="text-lg text-gray-300 mb-8 leading-relaxed animate-fade-in-up" style={{animationDelay: '0.2s'}}>Umfassender Security-Plattformvergleich für Enterprise-SIEM, EDR und Security-Operations-Teams. Wir analysieren Funktionen, DSGVO-Compliance, Deployment und Kosten beider Lösungen.</p>
+        </div>
 
         <section className="mb-10 animate-fade-in-up" style={{animationDelay: '0.3s'}}>
           <h2 className="text-2xl font-semibold mb-4 text-gray-100">Schnellvergleich</h2>
