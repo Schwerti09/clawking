@@ -61,11 +61,11 @@ describe("stripe-pricing resolver", () => {
     ).resolves.toBe("price_starter_direct")
   })
 
-  it("falls back starter to STRIPE_PRICE_PRO when dedicated starter price is missing", async () => {
+  it("does not fall back starter to pro env price", async () => {
     process.env.STRIPE_PRICE_PRO = "price_pro_fallback"
     await expect(
       resolveCheckoutPriceWithOptions("starter", false, { allowCreate: false, allowLookup: false })
-    ).resolves.toBe("price_pro_fallback")
+    ).rejects.toThrow("No checkout price resolvable for product=starter")
   })
 
   it("falls back scale to enterprise/team env prices", async () => {
