@@ -42,12 +42,12 @@ export type UpgradeSignals = {
   needsPolicyControls: boolean
 }
 
-export type AutopilotCheckoutProduct = "daypass" | "pro" | "team"
+export type AutopilotCheckoutProduct = "starter" | "pro" | "scale"
 
 export function mapAutopilotPlanToCheckoutProduct(plan: AutopilotPlanId): AutopilotCheckoutProduct {
-  if (plan === "scale") return "team"
+  if (plan === "scale") return "scale"
   if (plan === "pro") return "pro"
-  return "daypass"
+  return "starter"
 }
 
 export function formatAutopilotPlanMonthlyPrice(plan: AutopilotPlanId, locale: "de" | "en"): string {
