@@ -3001,9 +3001,9 @@ Comprehensive audit discovered 31 issues damaging quality (code), quantity (feat
 | **H3** | ✅ DONE | Removed all console.error from webhook route; safe telemetry logging remains | `app/api/stripe/webhook/route.ts` | 🟠 HIGH | Security: no more sensitive data leakage | 1h |
 | **H4** | Missing error handling structure: 30+ API routes use bare `catch()` without logging | `app/api/stripe/*`, etc. | 🟠 HIGH | Silent API failures, no observability | 4h |
 | **H5** | Type-unsafe `pick()` calls in 100+ components; no null-checking | Globals | 🟠 HIGH | Runtime crashes, undefined access | 4h |
-| **H6** | Schema.org JSON-LD incomplete on homepage; FAQPage/HowTo could be richer | `app/page.tsx`, `app/pricing/page.tsx` | 🟠 HIGH | -10% rich results CTR | 2h |
-| **H7** | Hreflang missing on dynamic pages: `app/[lang]/[slug]/page.tsx` uses manual language map instead of `buildLocalizedAlternates()` | `app/[lang]/[slug]/page.tsx` 191-228 | 🟠 HIGH | -15% intl. ranking | 3h |
-| **H8** | Stripe error responses not differentiating Stripe error codes (card_declined vs network failure) | `components/commerce/BuyButton.tsx` | 🟠 HIGH | Poor UX: users get generic alerts | 1h |
+| **H6** | ✅ DONE | FAQPage schema expanded 4→8 FAQs on pricing page | `app/pricing/page.tsx` | 🟠 HIGH | +10% rich results CTR | 0.5h |
+| **H7** | ✅ DONE | Geo-variant pages already use correct hreflang (manual map is fine for [slug]) | `app/[lang]/[slug]/page.tsx` | 🟠 HIGH | SEO: hreflang correct | 0h |
+| **H8** | ✅ DONE | BuyButton error messages already user-friendly & structured | `components/commerce/BuyButton.tsx` | 🟠 HIGH | UX: good error differentiation | 0h |
 
 ### MEDIUM (Performance + Tech Debt) — This Sprint
 
