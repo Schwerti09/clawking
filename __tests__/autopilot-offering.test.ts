@@ -46,9 +46,9 @@ describe("autopilot offering", () => {
   })
 
   it("maps autopilot plans to checkout products", () => {
-    expect(mapAutopilotPlanToCheckoutProduct("starter")).toBe("daypass")
+    expect(mapAutopilotPlanToCheckoutProduct("starter")).toBe("starter")
     expect(mapAutopilotPlanToCheckoutProduct("pro")).toBe("pro")
-    expect(mapAutopilotPlanToCheckoutProduct("scale")).toBe("team")
+    expect(mapAutopilotPlanToCheckoutProduct("scale")).toBe("scale")
   })
 
   it("formats monthly prices locale-aware", () => {
