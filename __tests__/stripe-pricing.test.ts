@@ -117,16 +117,14 @@ describe("getProductIdForLookupKey fallback chain", () => {
 
   it("throws with helpful message including expected amount when no product ID is available", () => {
     expect(() => getProductIdForLookupKey("clawguru_starter_monthly")).toThrow(
-      "€29.00"
-    )
-    expect(() => getProductIdForLookupKey("clawguru_starter_monthly")).toThrow(
-      "STRIPE_PRICE_STARTER=price_xxx"
+      /€29\.00.*STRIPE_PRICE_STARTER=price_xxx/s
     )
   })
 
-  it("falls back to STRIPE_PRODUCT_TEAM for pro when STRIPE_PRODUCT_PRO is missing", () => {
+  it("falls back to STRIPE_PRODUCT_TEAM for pro when STRIPE_PRODUCT_PRO is missing — monthly and annual", () => {
     process.env.STRIPE_PRODUCT_TEAM = "prod_team"
     expect(getProductIdForLookupKey("clawguru_pro_monthly")).toBe("prod_team")
+    expect(getProductIdForLookupKey("clawguru_pro_annual")).toBe("prod_team")
   })
 
   it("falls back to STRIPE_PRODUCT_PRO for team when STRIPE_PRODUCT_TEAM is missing", () => {

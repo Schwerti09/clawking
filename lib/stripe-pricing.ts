@@ -62,7 +62,7 @@ const PRICE_METADATA: Record<
     interval: "month",
   },
   clawguru_team_annual: {
-    amount_cents: 239040, // 249 * 0.8 * 12 = 2387.2 → 239040 cents
+    amount_cents: 239040, // 249 * 0.8 * 12 = 2390.4 → 239040 cents
     currency: "eur",
     type: "recurring",
     interval: "year",
@@ -218,10 +218,10 @@ async function findExistingPriceByLookupKey(lookupKey: LookupKey): Promise<strin
  *   clawguru_pro_monthly      →  9900 (€99/mo)
  *   clawguru_pro_annual       → 95040 (€950.40/yr, 20% off)
  *   clawguru_team_monthly     → 24900 (€249/mo)
- *   clawguru_team_annual      →239040 (€2390.40/yr, 20% off)
- *   clawguru_daypass_onetime  →   900 (€9 one-time)
+ *   clawguru_team_annual      → 239040 (€2390.40/yr, 20% off)
+ *   clawguru_daypass_onetime  →    900 (€9 one-time)
  */
-/** @internal exported for unit-testing only */
+/** @internal Exported for unit-testing only. */
 export function getProductIdForLookupKey(lookupKey: LookupKey): string {
   const env = process.env
   let productId: string | undefined
