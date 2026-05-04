@@ -2,6 +2,9 @@ import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import { SUPPORTED_LOCALES, type Locale, buildLocalizedAlternates } from "@/lib/i18n"
 import { pick } from "@/lib/i18n-pick"
+import { buildEEATArticleSchema } from '@/lib/seo/eeat-helper'
+import AuthorBox from '@/components/seo/AuthorBox'
+import LastUpdated from '@/components/seo/LastUpdated'
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://clawguru.org"
 const PATH = "/solutions/zero-trust-architecture"
@@ -15,6 +18,14 @@ export async function generateMetadata({ params }: { params: { lang: string } })
   const isDE = locale === "de"
   const title = pick(isDE, "Zero Trust Architecture für Self-Hosted Infrastruktur 2026 | ClawGuru", "Zero Trust Architecture for Self-Hosted Infrastructure 2026 | ClawGuru")
   const description = pick(isDE, "Zero Trust vollständig selbst hosten: Identity, Device Trust, Micro-Segmentierung, SASE-Alternativen und AI-Agent-Integration. Schritt-für-Schritt-Implementierung ohne Vendor-Lock-in.", "Self-hosted Zero Trust architecture: identity, device trust, micro-segmentation, SASE alternatives and AI agent integration. Step-by-step implementation without vendor lock-in.")
+  const articleSchema = buildEEATArticleSchema({
+    headline: title,
+    description,
+    url: `${SITE_URL}/${locale}${PATH}`,
+    datePublished: "2026-04-28",
+    dateModified: "2026-05-04",
+    locale,
+  })
   return {
     title, description,
     keywords: ["zero trust architecture self-hosted", "zero trust implementation", "zero trust without vendor lock-in", "ztna self-hosted", "zero trust ai agents", "zero trust 2026"],
@@ -22,6 +33,11 @@ export async function generateMetadata({ params }: { params: { lang: string } })
     openGraph: { title, description, type: "article", url: `${SITE_URL}/${locale}${PATH}`, images: ["/og-image.png"] },
     alternates: buildLocalizedAlternates(locale, PATH),
     robots: "index, follow",
+    other: {
+      'article:published_time': '2026-04-28T00:00:00Z',
+      'article:modified_time': '2026-05-04T00:00:00Z',
+      'article:author': 'R. Schwertfechter',
+    },
   }
 }
 
@@ -72,6 +88,13 @@ export default function ZeroTrustArchitecturePage({ params }: { params: { lang: 
         <p className="text-lg text-gray-300 mb-6">
           {pick(isDE, "Zero Trust bedeutet nicht SASE kaufen. Es bedeutet: jeden Zugriff explizit authentifizieren, autorisieren und loggen — mit Open-Source-Tools, die du selbst kontrollierst. Sechs Säulen, konkrete Tools, klare Prioritäten.", "Zero Trust doesn't mean buying SASE. It means: explicitly authenticate, authorize and log every access — with open-source tools you control. Six pillars, concrete tools, clear priorities.")}
         </p>
+        <LastUpdated
+          date="2026-05-04"
+          publishedDate="2026-04-28"
+          locale={locale}
+          showPublished={true}
+          className="mb-6"
+        />
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
           {[
@@ -147,6 +170,14 @@ export default function ZeroTrustArchitecturePage({ params }: { params: { lang: 
             </a>
           </div>
         </section>
+
+        {/* E-E-A-T AuthorBox */}
+        <AuthorBox
+          locale={locale}
+          variant="full"
+          className="mb-8"
+        />
+
       </div>
     </div>
   )

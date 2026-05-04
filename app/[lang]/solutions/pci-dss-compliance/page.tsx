@@ -1,6 +1,10 @@
 import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import { SUPPORTED_LOCALES, type Locale, buildLocalizedAlternates } from "@/lib/i18n"
+import { pick } from "@/lib/i18n-pick"
+import { buildEEATArticleSchema } from '@/lib/seo/eeat-helper'
+import AuthorBox from '@/components/seo/AuthorBox'
+import LastUpdated from '@/components/seo/LastUpdated'
 
 interface PageProps { params: { lang: string } }
 
@@ -13,9 +17,18 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const locale = (SUPPORTED_LOCALES.includes(params.lang as Locale) ? params.lang : "de") as Locale
+  const isDE = locale === "de"
   const pageUrl = `${SITE_URL}/${locale}${PATH}`
-  const title = "PCI DSS Compliance Guide: Complete Implementation 2026"
-  const description = "Complete PCI DSS compliance guide with step-by-step implementation, security controls, and audit preparation for payment card data protection."
+  const title = pick(isDE, "PCI DSS Compliance Guide: Vollständige Umsetzung 2026", "PCI DSS Compliance Guide: Complete Implementation 2026")
+  const description = pick(isDE, "Vollständiger PCI DSS Compliance-Leitfaden mit Schritt-für-Schritt-Umsetzung, Sicherheitskontrollen und Audit-Vorbereitung für den Schutz von Kartendaten.", "Complete PCI DSS compliance guide with step-by-step implementation, security controls, and audit preparation for payment card data protection.")
+  const articleSchema = buildEEATArticleSchema({
+    headline: title,
+    description,
+    url: pageUrl,
+    datePublished: "2026-04-28",
+    dateModified: "2026-05-04",
+    locale,
+  })
   return {
     title,
     description,
@@ -30,6 +43,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     },
     alternates: buildLocalizedAlternates(locale, PATH),
     robots: "index, follow",
+    other: {
+      'article:published_time': '2026-04-28T00:00:00Z',
+      'article:modified_time': '2026-05-04T00:00:00Z',
+      'article:author': 'R. Schwertfechter',
+    },
   }
 }
 
@@ -56,6 +74,13 @@ export default function PciDssCompliancePage({ params }: PageProps) {
         </div>
         <h1 className="text-4xl font-bold mb-4 text-gray-100">PCI DSS Compliance: Complete Implementation Guide</h1>
         <p className="text-lg text-gray-300 mb-8">Step-by-step PCI DSS 4.0 compliance implementation with security controls, audit preparation, and payment card data protection.</p>
+        <LastUpdated
+          date="2026-05-04"
+          publishedDate="2026-04-28"
+          locale={locale}
+          showPublished={true}
+          className="mb-6"
+        />
 
         <section className="mb-10">
           <h2 className="text-2xl font-semibold mb-4 text-gray-100">PCI DSS 4.0 Overview</h2>
@@ -347,6 +372,14 @@ export default function PciDssCompliancePage({ params }: PageProps) {
             </a>
           </div>
         </section>
+
+        {/* E-E-A-T AuthorBox */}
+        <AuthorBox
+          locale={locale}
+          variant="full"
+          className="mb-8"
+        />
+
       </div>
     </div>
   )

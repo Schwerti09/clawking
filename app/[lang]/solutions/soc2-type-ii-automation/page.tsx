@@ -1,6 +1,10 @@
 import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import { SUPPORTED_LOCALES, type Locale, buildLocalizedAlternates } from "@/lib/i18n"
+import { pick } from "@/lib/i18n-pick"
+import { buildEEATArticleSchema } from '@/lib/seo/eeat-helper'
+import AuthorBox from '@/components/seo/AuthorBox'
+import LastUpdated from '@/components/seo/LastUpdated'
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://clawguru.org"
 const PATH = "/solutions/soc2-type-ii-automation"
@@ -11,8 +15,17 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
   const locale = (SUPPORTED_LOCALES.includes(params.lang as Locale) ? params.lang : "de") as Locale
-  const title = "SOC 2 Type II Automation for Self-Hosted Infrastructure | ClawGuru"
-  const description = "Automate SOC 2 Type II compliance for self-hosted infrastructure: Trust Service Criteria mapping, continuous monitoring, evidence collection, audit logging and access control with Moltbot."
+  const isDE = locale === "de"
+  const title = pick(isDE, "SOC 2 Type II Automation für Self-Hosted Infrastruktur | ClawGuru", "SOC 2 Type II Automation for Self-Hosted Infrastructure | ClawGuru")
+  const description = pick(isDE, "SOC 2 Type II Compliance für selbst gehostete Infrastruktur automatisieren: Trust Service Criteria Mapping, kontinuierliches Monitoring, Evidence Collection, Audit Logging und Access Control mit Moltbot.", "Automate SOC 2 Type II compliance for self-hosted infrastructure: Trust Service Criteria mapping, continuous monitoring, evidence collection, audit logging and access control with Moltbot.")
+  const articleSchema = buildEEATArticleSchema({
+    headline: title,
+    description,
+    url: `${SITE_URL}/${locale}${PATH}`,
+    datePublished: "2026-04-28",
+    dateModified: "2026-05-04",
+    locale,
+  })
   return {
     title, description,
     keywords: ["soc2 type ii", "soc 2 automation", "soc2 self-hosted", "soc2 compliance automation", "trust service criteria", "soc2 audit evidence"],
@@ -20,6 +33,11 @@ export async function generateMetadata({ params }: { params: { lang: string } })
     openGraph: { title, description, type: "article", url: `${SITE_URL}/${locale}${PATH}`, images: ["/og-image.png"] },
     alternates: buildLocalizedAlternates(locale, PATH),
     robots: "index, follow",
+    other: {
+      'article:published_time': '2026-04-28T00:00:00Z',
+      'article:modified_time': '2026-05-04T00:00:00Z',
+      'article:author': 'R. Schwertfechter',
+    },
   }
 }
 
@@ -76,6 +94,13 @@ export default function Soc2TypeIiAutomationPage({ params }: { params: { lang: s
         <div className="mb-3"><span className="text-xs font-bold uppercase tracking-widest text-cyan-400">Solutions · SOC 2 Type II</span></div>
         <h1 className="text-4xl font-bold mb-4 text-gray-100">SOC 2 Type II Automation for Self-Hosted Infrastructure</h1>
         <p className="text-lg text-gray-300 mb-6">SOC 2 Type II proves your controls worked over an entire audit period — not just on audit day. For self-hosted infrastructure this means 6-12 months of continuous, structured evidence collection. Moltbot automates 6 of 10 Trust Service Criteria out of the box.</p>
+        <LastUpdated
+          date="2026-05-04"
+          publishedDate="2026-04-28"
+          locale={locale}
+          showPublished={true}
+          className="mb-6"
+        />
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
           {[{ value: "10", label: "Trust Service Criteria" }, { value: "6/10", label: "Automatable with Moltbot" }, { value: "1 Year", label: "Log retention required" }, { value: "Type II", label: "Period-based (not snapshot)" }].map((s) => (
@@ -167,6 +192,14 @@ moltbot audit dashboard --period 2025-01-01/2025-12-31`}</pre>
             </a>
           </div>
         </section>
+
+        {/* E-E-A-T AuthorBox */}
+        <AuthorBox
+          locale={locale}
+          variant="full"
+          className="mb-8"
+        />
+
       </div>
     </div>
   )

@@ -1,6 +1,10 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { SUPPORTED_LOCALES, type Locale, buildLocalizedAlternates } from '@/lib/i18n'
+import { pick } from '@/lib/i18n-pick'
+import { buildEEATArticleSchema } from '@/lib/seo/eeat-helper'
+import AuthorBox from '@/components/seo/AuthorBox'
+import LastUpdated from '@/components/seo/LastUpdated'
 
 export async function generateStaticParams() {
   return SUPPORTED_LOCALES.map((lang) => ({ lang }))
@@ -8,20 +12,38 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
   const { lang } = params;
+  const locale = (SUPPORTED_LOCALES.includes(lang as Locale) ? lang : "de") as Locale
+  const isDE = locale === "de"
+  const title = pick(isDE, "Startup Security Foundation: Sicherheit von Tag 1 mit ClawGuru", "Startup Security Foundation: Security from Day 1 with ClawGuru")
+  const description = pick(isDE, "Security für Startups von Anfang an. Minimales Security-Budget, maximale Wirkung: Auth, Secrets, TLS, Backup und Incident Response für Early-Stage Startups.", "Security for startups from day 1. Minimal security budget, maximum impact: auth, secrets, TLS, backup and incident response for early-stage startups.")
+  const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://clawguru.org"
+  const articleSchema = buildEEATArticleSchema({
+    headline: title,
+    description,
+    url: `${SITE_URL}/${locale}/solutions/startup-security-foundation`,
+    datePublished: "2026-04-28",
+    dateModified: "2026-05-04",
+    locale,
+  })
   return {
-    title: 'Startup Security Foundation: Sicherheit von Tag 1 mit ClawGuru',
-    description: 'Security für Startups von Anfang an. Minimales Security-Budget, maximale Wirkung: Auth, Secrets, TLS, Backup und Incident Response für Early-Stage Startups.',
+    title, description,
     keywords: ['startup security','early stage security','security für startups','minimal security budget','startup compliance','security foundation'],
     authors: [{ name: 'ClawGuru Security Team' }],
     openGraph: {
-      images: ["/og-image.png"], title: 'Startup Security Foundation mit ClawGuru', description: 'Security für Startups von Tag 1.', type: 'article', url: `https://clawguru.org/${lang}/solutions/startup-security-foundation` },
-    alternates: buildLocalizedAlternates(lang as Locale, '/solutions/startup-security-foundation'),
+      images: ["/og-image.png"], title: isDE ? 'Startup Security Foundation mit ClawGuru' : 'Startup Security Foundation with ClawGuru', description: isDE ? 'Security für Startups von Tag 1.' : 'Security for startups from day 1.', type: 'article', url: `${SITE_URL}/${locale}/solutions/startup-security-foundation` },
+    alternates: buildLocalizedAlternates(locale, '/solutions/startup-security-foundation'),
     robots: 'index, follow',
+    other: {
+      'article:published_time': '2026-04-28T00:00:00Z',
+      'article:modified_time': '2026-05-04T00:00:00Z',
+      'article:author': 'R. Schwertfechter',
+    },
   };
 }
 
 export default function StartupSecurityPage({ params }: { params: { lang: string } }) {
   const { lang } = params;
+  const locale = (SUPPORTED_LOCALES.includes(lang as Locale) ? lang : "de") as Locale
   if (!SUPPORTED_LOCALES.includes(lang as Locale)) notFound();
   const faqSchema = {
     '@context': 'https://schema.org',
@@ -43,6 +65,13 @@ export default function StartupSecurityPage({ params }: { params: { lang: string
         </div>
         <h1 className="text-4xl font-bold mb-4 text-gray-100">Startup Security Foundation</h1>
         <p className="text-lg text-gray-300 mb-8">Die 10 wichtigsten Security-Maßnahmen für Startups — pragmatisch, kosteneffizient und sofort umsetzbar.</p>
+        <LastUpdated
+          date="2026-05-04"
+          publishedDate="2026-04-28"
+          locale={locale}
+          showPublished={true}
+          className="mb-6"
+        />
 
         <section className="mb-10">
           <h2 className="text-2xl font-semibold mb-4 text-gray-100">🚀 Top 10 Startup Security Maßnahmen</h2>
@@ -80,6 +109,14 @@ export default function StartupSecurityPage({ params }: { params: { lang: string
             <a href="/solutions" className="block bg-gray-800 p-4 rounded-lg border border-gray-700 hover:bg-gray-700"><div className="font-semibold text-cyan-400">🏢 Scale-up</div><div className="text-sm text-gray-300">Pro Plan ab €29/Mo</div></a>
           </div>
         </section>
+
+        {/* E-E-A-T AuthorBox */}
+        <AuthorBox
+          locale={locale}
+          variant="full"
+          className="mb-8"
+        />
+
       </div>
     </div>
   );
