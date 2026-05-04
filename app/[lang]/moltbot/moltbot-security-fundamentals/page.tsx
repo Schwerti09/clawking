@@ -2,6 +2,9 @@ import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import { SUPPORTED_LOCALES, type Locale, buildLocalizedAlternates } from "@/lib/i18n"
 import { pick } from "@/lib/i18n-pick"
+import { buildEEATArticleSchema } from "@/lib/seo/eeat-helper"
+import AuthorBox from "@/components/seo/AuthorBox"
+import LastUpdated from "@/components/seo/LastUpdated"
 
 interface PageProps { params: { lang: string } }
 
@@ -18,6 +21,17 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const isDE = locale === "de"
   const title = pick(isDE, "Moltbot Security Fundamentals: Grundlagen der AI-Agenten-Sicherheit | ClawGuru", "Moltbot Security Fundamentals: AI Agent Security Basics | ClawGuru")
   const description = pick(isDE, "Grundlegende Sicherheitskonzepte für Moltbot AI-Agents: Threat Modeling, IAM, Network Security, Data Encryption, Logging & Monitoring. Mit Moltbot automatisierbar.", "Fundamental security concepts for Moltbot AI agents: threat modeling, IAM, network security, data encryption, logging & monitoring. Automatable with Moltbot.")
+  
+  const articleSchema = buildEEATArticleSchema({
+    headline: title,
+    description,
+    url: pageUrl,
+    datePublished: "2026-04-24",
+    dateModified: "2026-05-04",
+    locale,
+    articleType: "TechArticle",
+  })
+
   return {
     title,
     description,
@@ -36,7 +50,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       images: ["/og-image.png"]
     },
     alternates: buildLocalizedAlternates(locale, PATH),
-    robots: "index, follow"
+    robots: "index, follow",
+    other: {
+      "application/ld+json": JSON.stringify(articleSchema),
+    },
   }
 }
 
@@ -93,9 +110,16 @@ export default function MoltbotSecurityFundamentalsPage({ params }: PageProps) {
             <h1 className="text-4xl font-bold mb-4 text-gray-100 bg-gradient-to-r from-gray-100 via-white to-gray-100 bg-clip-text text-transparent">
               {pick(isDE, "Moltbot Security Fundamentals — Dein Agent hat gerade deine gesamte Infrastruktur kompromittiert. Hier ist der Fix.", "Moltbot Security Fundamentals — Your Agent Just Compromised Your Entire Infrastructure. Here's the Fix.")}
             </h1>
-            <p className="text-lg text-gray-300 mb-6 leading-relaxed">
+            <p className="text-lg text-gray-300 mb-4 leading-relaxed">
               {pick(isDE, "Dein Moltbot AI Agent hat gestern Abend root-Zugriff auf deine Produktions-Datenbank bekommen, weil du vergessen hast, die IAM-Rollen zu beschränken. Das Ergebnis: 150.000 Kundendaten exponiert, 2.4 Mio. Euro Strafe, dein CIO hat gekündigt. Hier ist, wie du das verhinderst.", "Your Moltbot AI agent got root access to your production database last night because you forgot to restrict IAM roles. The result: 150,000 customer records exposed, €2.4M in fines, your CIO resigned. Here's how to prevent it.")}
             </p>
+            <LastUpdated
+              date="2026-05-04"
+              publishedDate="2026-04-24"
+              locale={locale}
+              showPublished={true}
+              className="mb-4"
+            />
           </div>
 
           {/* Amateur Section */}
@@ -764,6 +788,13 @@ export default function MoltbotSecurityFundamentalsPage({ params }: PageProps) {
             </div>
           </div>
         </section>
+
+        {/* E-E-A-T AuthorBox */}
+        <AuthorBox
+          locale={locale}
+          variant="full"
+          className="mb-8"
+        />
         </div>
       </div>
     </div>

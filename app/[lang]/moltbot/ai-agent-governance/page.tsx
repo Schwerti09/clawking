@@ -2,6 +2,9 @@ import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import { SUPPORTED_LOCALES, type Locale, buildLocalizedAlternates } from "@/lib/i18n"
 import { pick } from "@/lib/i18n-pick"
+import { buildEEATArticleSchema } from "@/lib/seo/eeat-helper"
+import AuthorBox from "@/components/seo/AuthorBox"
+import LastUpdated from "@/components/seo/LastUpdated"
 
 interface PageProps { params: { lang: string } }
 
@@ -18,6 +21,17 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const isDE = locale === "de"
   const title = pick(isDE, "AI Agent Governance: Governance-Frameworks für AI-Agents | ClawGuru", "AI Agent Governance: Governance Frameworks for AI Agents | ClawGuru")
   const description = pick(isDE, "AI Agent Governance für Moltbot-Deployments. Policy Enforcement, Audit Trails, Compliance Monitoring und Risk Management für AI-Agents. Mit Moltbot automatisierbar.", "AI agent governance for Moltbot deployments. Policy enforcement, audit trails, compliance monitoring and risk management for AI agents. Automatable with Moltbot.")
+  
+  const articleSchema = buildEEATArticleSchema({
+    headline: title,
+    description,
+    url: pageUrl,
+    datePublished: "2026-04-28",
+    dateModified: "2026-05-04",
+    locale,
+    articleType: "TechArticle",
+  })
+
   return {
     title,
     description,
@@ -36,7 +50,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       images: ["/og-image.png"]
     },
     alternates: buildLocalizedAlternates(locale, PATH),
-    robots: "index, follow"
+    robots: "index, follow",
+    other: {
+      "application/ld+json": JSON.stringify(articleSchema),
+    },
   }
 }
 

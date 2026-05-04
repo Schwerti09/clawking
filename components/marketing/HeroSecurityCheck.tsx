@@ -615,3 +615,4 @@ export default function HeroSecurityCheck({ dict = {} }: { dict?: Record<string,
     </div>
   )
 }
+

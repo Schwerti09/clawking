@@ -185,7 +185,7 @@ function GatedTile(props: { title: string; minTier: AccessPlan; tier: AccessPlan
   const rank = { free: 0, daypass: 1, pro: 2, enterprise: 3 }
   const allowed = rank[tier] >= rank[minTier]
   const need: Product | null = cta || (minTier === "enterprise" ? "team" : minTier === "pro" ? "pro" : "daypass")
-  const needLabel = need === "team" ? "Team 99 € / Monat freischalten" : need === "pro" ? "Pro 29 € / Monat freischalten" : "Daypass 9,99 € – 24h Zugriff"
+  const needLabel = need === "team" ? "Scale 249 € / Monat freischalten" : need === "pro" ? "Pro 99 € / Monat freischalten" : "Daypass 9 € – 24h Zugriff"
   return (
     <div className="relative p-6 rounded-3xl border border-gray-800 bg-black/30 overflow-hidden">
       <div className="text-lg font-black mb-3">{title}</div>
@@ -221,8 +221,8 @@ function MyceliumCommandCore(props: { tier: AccessPlan }) {
             <div className="mt-2 text-sm text-gray-400">Hover über Knoten → sofortiges Runbook</div>
           </div>
           <div className="mt-4 flex gap-2">
-            <UpgradeButton product="daypass" label="Daypass 9,99 € – 24h Live" />
-            <UpgradeButton product="pro" label="Pro 29 €/Monat – Generator" />
+            <UpgradeButton product="daypass" label="Daypass 9 € – 24h Live" />
+            <UpgradeButton product="pro" label="Pro 99 €/Monat – Generator" />
           </div>
         </div>
       </div>

@@ -2,6 +2,9 @@ import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import { SUPPORTED_LOCALES, type Locale, buildLocalizedAlternates } from "@/lib/i18n"
 import { pick } from "@/lib/i18n-pick"
+import { buildEEATArticleSchema } from "@/lib/seo/eeat-helper"
+import AuthorBox from "@/components/seo/AuthorBox"
+import LastUpdated from "@/components/seo/LastUpdated"
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://clawguru.org"
 const PATH = "/moltbot/ai-agent-communication-security"
@@ -16,6 +19,17 @@ export async function generateMetadata({ params }: { params: { lang: string } })
   const isDE = locale === "de"
   const title = pick(isDE, "AI Agent Communication Security: KI-Agenten-Kommunikationssicherheit | ClawGuru Moltbot", "AI Agent Communication Security: AI Agent Communication Security | ClawGuru Moltbot")
   const description = pick(isDE, "KI-Agenten-Kommunikationssicherheit: Agent-to-Agent Encryption, Message Validation, Channel Security und Communication Auditing für Multi-Agent-Systeme.", "AI agent communication security: agent-to-agent encryption, message validation, channel security and communication auditing for multi-agent systems.")
+  
+  const articleSchema = buildEEATArticleSchema({
+    headline: title,
+    description,
+    url: pageUrl,
+    datePublished: "2026-04-28",
+    dateModified: "2026-05-04",
+    locale,
+    articleType: "TechArticle",
+  })
+
   return {
     title, description,
     keywords: ["ai agent communication security", "multi-agent security", "agent-to-agent encryption", "message validation", "agent channel security", "moltbot communication"],
@@ -23,6 +37,9 @@ export async function generateMetadata({ params }: { params: { lang: string } })
     openGraph: { title, description, type: "article", url: pageUrl, images: ["/og-image.png"] },
     alternates: buildLocalizedAlternates(locale, PATH),
     robots: "index, follow",
+    other: {
+      "application/ld+json": JSON.stringify(articleSchema),
+    },
   }
 }
 
@@ -206,7 +223,14 @@ export default function AiAgentCommunicationSecurityPage({ params }: { params: {
         <div className="mb-8 animate-fade-in-up" style={{animationDelay: '0.3s'}}>
           <div className="mb-4"><span className="text-xs font-bold uppercase tracking-widest text-cyan-400 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">Moltbot AI Security · AI Agent Communication Security</span></div>
           <h1 className="text-4xl font-bold mb-4 text-gray-100 bg-gradient-to-r from-gray-100 via-white to-gray-100 bg-clip-text text-transparent">{pick(isDE, "AI Agent Communication Security", "AI Agent Communication Security")}</h1>
-          <p className="text-lg text-gray-300 mb-6 leading-relaxed">{pick(isDE, "Multi-Agent-Systeme ohne Communication Security sind Einfallstore für Interception und Tampering. Vier Kontrollen: Agent-to-Agent Encryption, Message Validation, Channel Security und Auditing.", "Multi-agent systems without communication security are entry points for interception and tampering. Four controls: agent-to-agent encryption, message validation, channel security and auditing.")}</p>
+          <p className="text-lg text-gray-300 mb-4 leading-relaxed">{pick(isDE, "Multi-Agent-Systeme ohne Communication Security sind Einfallstore für Interception und Tampering. Vier Kontrollen: Agent-to-Agent Encryption, Message Validation, Channel Security und Auditing.", "Multi-agent systems without communication security are entry points for interception and tampering. Four controls: agent-to-agent encryption, message validation, channel security and auditing.")}</p>
+          <LastUpdated
+            date="2026-05-04"
+            publishedDate="2026-04-28"
+            locale={locale}
+            showPublished={true}
+            className="mb-4"
+          />
         </div>
 
         {/* Amateur Section */}
@@ -270,35 +294,12 @@ export default function AiAgentCommunicationSecurityPage({ params }: { params: {
           </div>
         </section>
 
-        {/* Author & Trust */}
-        <section className="mb-10 animate-fade-in-up" style={{animationDelay: '0.8s'}}>
-          <div className="bg-gradient-to-r from-cyan-900/80 to-blue-900/80 backdrop-blur-lg p-6 rounded-xl border border-cyan-700/50 shadow-2xl hover:border-cyan-500/30 transition-all duration-300 hover:shadow-cyan-500/20">
-            <div className="flex items-start gap-4">
-              <div className="w-16 h-16 bg-cyan-800 rounded-full flex items-center justify-center text-2xl font-bold text-cyan-300 flex-shrink-0">CG</div>
-              <div className="flex-1">
-                <div className="flex items-center gap-2 mb-2">
-                  <h3 className="font-semibold text-cyan-300 text-lg">ClawGuru Security Team</h3>
-                  <span className="bg-green-600 text-white text-xs px-2 py-1 rounded font-semibold">✓ Verified</span>
-                </div>
-                <div className="text-sm text-cyan-200 mb-3">Security Research &amp; Engineering · Agent Communication Specialists</div>
-                <div className="flex items-center gap-4 text-xs text-cyan-300 mb-3">
-                  <span>📅 {pick(isDE, 'Veröffentlicht', 'Published')}: 28.04.2026</span>
-                  <span>🔄 {pick(isDE, 'Zuletzt geprüft', 'Last reviewed')}: 28.04.2026</span>
-                </div>
-                <div className="text-sm text-cyan-100 leading-relaxed">
-                  {pick(isDE, 'Dieser Guide basiert auf praktischer Erfahrung mit AI Agent Communication Security-Implementierungen für KI-Systeme in Produktionsumgebungen. Die beschriebenen Best Practices sind in echten Deployments erprobt und kontinuierlich verbessert worden.', 'This guide is based on practical experience with AI agent communication security implementations for AI systems in production environments. The described best practices have been proven in real deployments and continuously improved.')}
-                </div>
-              </div>
-            </div>
-            <div className="mt-4 pt-4 border-t border-cyan-700/50">
-              <div className="flex items-center gap-2 text-xs text-cyan-300">
-                <span className="bg-cyan-800/80 backdrop-blur-lg px-2 py-1 rounded">🔒 {pick(isDE, 'Verifiziert von ClawGuru Security Team', 'Verified by ClawGuru Security Team')}</span>
-                <span>·</span>
-                <span>{pick(isDE, 'Alle Informationen fact-checked und peer-reviewed', 'All information fact-checked and peer-reviewed')}</span>
-              </div>
-            </div>
-          </div>
-        </section>
+        {/* E-E-A-T AuthorBox */}
+        <AuthorBox
+          locale={locale}
+          variant="full"
+          className="mb-8"
+        />
       </div>
     </div>
   )

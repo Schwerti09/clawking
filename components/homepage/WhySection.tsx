@@ -1,8 +1,28 @@
+"use client"
+
 import { RUNBOOK_COUNT_LONG_EN } from "@/lib/stats"
+import { motion, easeOut } from "framer-motion"
+import { useInView } from "framer-motion"
+import { useRef } from "react"
 
 type Props = { dict?: Record<string, string> }
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.08, delayChildren: 0.1 },
+  },
+}
+
+const itemVariants = {
+  hidden: { opacity: 0, x: -20 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.5, ease: easeOut } },
+}
+
 export default function WhySection({ dict = {} }: Props) {
+  const ref = useRef(null)
+  const inView = useInView(ref, { once: true, margin: "-100px" })
   const reasons = [
     {
       title: dict.why_r1_title || "Ready immediately",
@@ -34,9 +54,14 @@ export default function WhySection({ dict = {} }: Props) {
   ]
 
   return (
-    <section className="py-16" style={{ background: "var(--surface-0)" }}>
+    <section ref={ref} className="py-16" style={{ background: "var(--surface-0)" }}>
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
-        <div className="text-center mb-12">
+        <motion.div
+          className="text-center mb-12"
+          initial={{ opacity: 0, y: -20 }}
+          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
+          transition={{ duration: 0.6 }}
+        >
           <span className="inline-block mb-3 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-widest bg-purple-500/10 text-purple-400 border border-purple-500/20">
             {dict.why_badge || "Why"}
           </span>
@@ -46,20 +71,25 @@ export default function WhySection({ dict = {} }: Props) {
           <p className="mt-4 text-gray-400 max-w-2xl mx-auto text-base sm:text-lg">
             {dict.why_sub || "We solve the core problem of SecOps: knowledge where it's needed, in executable form – instantly verifiable."}
           </p>
-        </div>
+        </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8 mb-12">
+        <motion.div
+          className="grid md:grid-cols-2 gap-8 mb-12"
+          variants={containerVariants}
+          initial="hidden"
+          animate={inView ? "visible" : "hidden"}
+        >
           <div>
             <h3 className="text-xl font-bold text-white mb-6">{dict.why_benefits_heading || "Key Benefits"}</h3>
             <div className="space-y-4">
               {reasons.map((r) => (
-                <div key={r.title} className="flex gap-3">
+                <motion.div key={r.title} variants={itemVariants} className="flex gap-3">
                   <div className="w-2 h-2 rounded-full bg-purple-400 mt-2 flex-shrink-0" />
                   <div>
                     <div className="text-white font-semibold">{r.title}</div>
                     <div className="text-gray-400 text-sm">{r.desc}</div>
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
@@ -68,17 +98,17 @@ export default function WhySection({ dict = {} }: Props) {
             <h3 className="text-xl font-bold text-white mb-6">{dict.why_diff_heading || "Differentiators"}</h3>
             <div className="space-y-4">
               {differentiators.map((d) => (
-                <div key={d.title} className="flex gap-3">
+                <motion.div key={d.title} variants={itemVariants} className="flex gap-3">
                   <div className="w-2 h-2 rounded-full bg-cyan-400 mt-2 flex-shrink-0" />
                   <div>
                     <div className="text-white font-semibold">{d.title}</div>
                     <div className="text-gray-400 text-sm">{d.desc}</div>
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   )

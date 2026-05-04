@@ -2,6 +2,9 @@ import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import { SUPPORTED_LOCALES, type Locale, buildLocalizedAlternates } from "@/lib/i18n"
 import { pick } from "@/lib/i18n-pick"
+import { buildEEATArticleSchema } from "@/lib/seo/eeat-helper"
+import AuthorBox from "@/components/seo/AuthorBox"
+import LastUpdated from "@/components/seo/LastUpdated"
 
 interface PageProps { params: { lang: string } }
 
@@ -18,6 +21,17 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const isDE = locale === "de"
   const title = pick(isDE, "Moltbot Threat Modeling Guide: Bedrohungsanalyse für AI-Agents | ClawGuru", "Moltbot Threat Modeling Guide: Threat Analysis for AI Agents | ClawGuru")
   const description = pick(isDE, "Systematische Bedrohungsanalyse für Moltbot-Deployments. STRIDE-Methodik, Threat Modeling für AI-Agents und Bedrohungsmodellierung. Mit Moltbot automatisierbar.", "Systematic threat analysis for Moltbot deployments. STRIDE methodology, threat modeling for AI agents and threat modeling. Automatable with Moltbot.")
+  
+  const articleSchema = buildEEATArticleSchema({
+    headline: title,
+    description,
+    url: pageUrl,
+    datePublished: "2026-04-24",
+    dateModified: "2026-05-04",
+    locale,
+    articleType: "TechArticle",
+  })
+
   return {
     title,
     description,
@@ -36,7 +50,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       images: ["/og-image.png"]
     },
     alternates: buildLocalizedAlternates(locale, PATH),
-    robots: "index, follow"
+    robots: "index, follow",
+    other: {
+      "application/ld+json": JSON.stringify(articleSchema),
+    },
   }
 }
 
@@ -93,9 +110,16 @@ export default function MoltbotThreatModelingGuidePage({ params }: PageProps) {
             <h1 className="text-4xl font-bold mb-4 text-gray-100 bg-gradient-to-r from-gray-100 via-white to-gray-100 bg-clip-text text-transparent">
               {pick(isDE, "Moltbot Threat Modeling Guide — Dein AI Agent hat gerade das gesamte Kundenarchiv exfiltriert. Hier ist der Fix.", "Moltbot Threat Modeling Guide — Your AI Agent Just Exfiltrated the Entire Customer Archive. Here's the Fix.")}
             </h1>
-            <p className="text-lg text-gray-300 mb-6 leading-relaxed">
+            <p className="text-lg text-gray-300 mb-4 leading-relaxed">
               {pick(isDE, "Dein Moltbot AI Agent hat gestern Abend durch eine Prompt Injection alle Kundendaten an einen externen Server gesendet, weil du kein Threat Modeling durchgeführt hast. Das Ergebnis: 250.000 Datensätze exponiert, 3.8 Mio. Euro Strafe, dein CISO wurde entlassen. Hier ist, wie du systematische Bedrohungsanalyse für deine AI Agents durchführst.", "Your Moltbot AI agent sent all customer data to an external server last night via prompt injection because you didn't do threat modeling. The result: 250,000 records exposed, €3.8M in fines, your CISO was fired. Here's how to conduct systematic threat analysis for your AI agents.")}
             </p>
+            <LastUpdated
+              date="2026-05-04"
+              publishedDate="2026-04-24"
+              locale={locale}
+              showPublished={true}
+              className="mb-4"
+            />
           </div>
 
           {/* Amateur Section */}
@@ -578,6 +602,13 @@ export default function MoltbotThreatModelingGuidePage({ params }: PageProps) {
             </div>
           </div>
         </section>
+
+        {/* E-E-A-T AuthorBox */}
+        <AuthorBox
+          locale={locale}
+          variant="full"
+          className="mb-8"
+        />
         </div>
       </div>
     </div>

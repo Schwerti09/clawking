@@ -2,6 +2,9 @@ import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import { SUPPORTED_LOCALES, type Locale, buildLocalizedAlternates } from "@/lib/i18n"
 import { pick } from "@/lib/i18n-pick"
+import { buildEEATArticleSchema } from "@/lib/seo/eeat-helper"
+import AuthorBox from "@/components/seo/AuthorBox"
+import LastUpdated from "@/components/seo/LastUpdated"
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://clawguru.org"
 const PATH = "/moltbot/agentic-rag-security"
@@ -16,6 +19,17 @@ export async function generateMetadata({ params }: { params: { lang: string } })
   const isDE = locale === "de"
   const title = pick(isDE, "Agentic RAG Security: RAG-Pipelines absichern | ClawGuru", "Agentic RAG Security: Securing Retrieval-Augmented Generation Pipelines | ClawGuru")
   const description = pick(isDE, "Sichere agentic RAG-Pipelines gegen Document Injection, Vector Database Poisoning, Retrieval Manipulation und Data Exfiltration. Executable Runbooks für Self-Hosted RAG mit Moltbot.", "Secure agentic RAG pipelines against document injection, vector database poisoning, retrieval manipulation and data exfiltration. Executable runbooks for self-hosted RAG with Moltbot.")
+  
+  const articleSchema = buildEEATArticleSchema({
+    headline: title,
+    description,
+    url: pageUrl,
+    datePublished: "2026-04-28",
+    dateModified: "2026-05-04",
+    locale,
+    articleType: "TechArticle",
+  })
+
   return {
     title, description,
     keywords: ["agentic rag security", "rag pipeline security", "vector database security", "document injection rag", "retrieval augmented generation security", "moltbot rag"],
@@ -23,6 +37,9 @@ export async function generateMetadata({ params }: { params: { lang: string } })
     openGraph: { title, description, type: "article", url: pageUrl, images: ["/og-image.png"] },
     alternates: buildLocalizedAlternates(locale, PATH),
     robots: "index, follow",
+    other: {
+      "application/ld+json": JSON.stringify(articleSchema),
+    },
   }
 }
 
@@ -84,7 +101,14 @@ export default function AgenticRagSecurityPage({ params }: { params: { lang: str
         <div className="mb-8 animate-fade-in-up" style={{animationDelay: '0.3s'}}>
           <div className="mb-4"><span className="text-xs font-bold uppercase tracking-widest text-cyan-400 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">Moltbot AI Security · Agentic RAG Security</span></div>
           <h1 className="text-4xl font-bold mb-4 text-gray-100 bg-gradient-to-r from-gray-100 via-white to-gray-100 bg-clip-text text-transparent">{pick(isDE, "Agentic RAG Security: RAG-Pipelines absichern", "Agentic RAG Security: Securing Retrieval-Augmented Generation Pipelines")}</h1>
-          <p className="text-lg text-gray-300 mb-6 leading-relaxed">{pick(isDE, "Agentic RAG-Systeme kombinieren LLM-Reasoning mit Echtzeit-Dokumenten-Retrieval — und jeder Knotenpunkt ist eine Angriffsfläche. Document Injection, Vector Poisoning, Namespace Traversal und Data Exfiltration sind echte Bedrohungen. Dieser Playbook deckt alle fünf RAG-spezifischen Angriffsvektoren mit konkreten Abwehrmaßnahmen ab.", "Agentic RAG systems combine LLM reasoning with real-time document retrieval — and every junction is an attack surface. Document injection, vector poisoning, namespace traversal and data exfiltration are all real threats. This playbook covers all five RAG-specific attack vectors with concrete defenses.")}</p>
+          <p className="text-lg text-gray-300 mb-4 leading-relaxed">{pick(isDE, "Agentic RAG-Systeme kombinieren LLM-Reasoning mit Echtzeit-Dokumenten-Retrieval — und jeder Knotenpunkt ist eine Angriffsfläche. Document Injection, Vector Poisoning, Namespace Traversal und Data Exfiltration sind echte Bedrohungen. Dieser Playbook deckt alle fünf RAG-spezifischen Angriffsvektoren mit konkreten Abwehrmaßnahmen ab.", "Agentic RAG systems combine LLM reasoning with real-time document retrieval — and every junction is an attack surface. Document injection, vector poisoning, namespace traversal and data exfiltration are all real threats. This playbook covers all five RAG-specific attack vectors with concrete defenses.")}</p>
+          <LastUpdated
+            date="2026-05-04"
+            publishedDate="2026-04-28"
+            locale={locale}
+            showPublished={true}
+            className="mb-4"
+          />
         </div>
 
         {/* Amateur Section */}
@@ -203,35 +227,12 @@ location /qdrant/ {
           </div>
         </section>
 
-        {/* Author & Trust */}
-        <section className="mb-10 animate-fade-in-up" style={{animationDelay: '1.1s'}}>
-          <div className="bg-gradient-to-r from-cyan-900/80 to-blue-900/80 backdrop-blur-lg p-6 rounded-xl border border-cyan-700/50 shadow-2xl hover:border-cyan-500/30 transition-all duration-300 hover:shadow-cyan-500/20">
-            <div className="flex items-start gap-4">
-              <div className="w-16 h-16 bg-cyan-800 rounded-full flex items-center justify-center text-2xl font-bold text-cyan-300 flex-shrink-0">CG</div>
-              <div className="flex-1">
-                <div className="flex items-center gap-2 mb-2">
-                  <h3 className="font-semibold text-cyan-300 text-lg">ClawGuru Security Team</h3>
-                  <span className="bg-green-600 text-white text-xs px-2 py-1 rounded font-semibold">✓ Verified</span>
-                </div>
-                <div className="text-sm text-cyan-200 mb-3">Security Research &amp; Engineering · RAG Security Specialists</div>
-                <div className="flex items-center gap-4 text-xs text-cyan-300 mb-3">
-                  <span>📅 {pick(isDE, 'Veröffentlicht', 'Published')}: 28.04.2026</span>
-                  <span>🔄 {pick(isDE, 'Zuletzt geprüft', 'Last reviewed')}: 28.04.2026</span>
-                </div>
-                <div className="text-sm text-cyan-100 leading-relaxed">
-                  {pick(isDE, 'Dieser Guide basiert auf praktischer Erfahrung mit Agentic RAG Security-Implementierungen für KI-Systeme in Produktionsumgebungen. Die beschriebenen Best Practices sind in echten Deployments erprobt und kontinuierlich verbessert worden.', 'This guide is based on practical experience with agentic RAG security implementations for AI systems in production environments. The described best practices have been proven in real deployments and continuously improved.')}
-                </div>
-              </div>
-            </div>
-            <div className="mt-4 pt-4 border-t border-cyan-700/50">
-              <div className="flex items-center gap-2 text-xs text-cyan-300">
-                <span className="bg-cyan-800/80 backdrop-blur-lg px-2 py-1 rounded">🔒 {pick(isDE, 'Verifiziert von ClawGuru Security Team', 'Verified by ClawGuru Security Team')}</span>
-                <span>·</span>
-                <span>{pick(isDE, 'Alle Informationen fact-checked und peer-reviewed', 'All information fact-checked and peer-reviewed')}</span>
-              </div>
-            </div>
-          </div>
-        </section>
+        {/* E-E-A-T AuthorBox */}
+        <AuthorBox
+          locale={locale}
+          variant="full"
+          className="mb-8"
+        />
       </div>
     </div>
   )

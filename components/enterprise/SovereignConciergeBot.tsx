@@ -91,7 +91,7 @@ const STEPS: Step[] = [
   {
     id: "summary",
     botMessage:
-      "✦ Perfekt, ich habe alles für dich vorbereitet.\n\nBasierend auf deinen Antworten ist **ClawGuru Enterprise** die ideale Lösung: Unbegrenzte API-Calls, dediziertes Onboarding, SLA-Garantie und direkter Zugang zum Security-Runbook-Vault.\n\nStarte jetzt dein Enterprise-Abo für **299 € / Monat**.",
+      "✦ Perfekt, ich habe alles für dich vorbereitet.\n\nBasierend auf deinen Antworten ist **ClawGuru Enterprise** die ideale Lösung: Unbegrenzte API-Calls, dediziertes Onboarding, SLA-Garantie und direkter Zugang zum Security-Runbook-Vault.\n\nStarte jetzt dein Enterprise-Abo mit **Custom Pricing** – kontaktiere unser Team für ein maßgeschneidertes Angebot.",
     inputType: "none",
     next: null,
   },
@@ -467,8 +467,8 @@ export default function SovereignConciergeBot({ open, onClose }: Props) {
                       whileTap={{ scale: 0.97 }}
                     >
                       {checkoutLoading
-                        ? "Weiterleitung zu Stripe …"
-                        : "✦ Jetzt Enterprise für 299 € buchen"}
+                        ? "Weiterleitung zu Kontaktform …"
+                        : "✦ Enterprise-Angebot anfordern"}
                     </motion.button>
                     {checkoutError && (
                       <p className="text-xs text-red-400 text-center">{checkoutError}</p>

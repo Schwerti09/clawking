@@ -241,7 +241,7 @@ export default function SummonFreemiumClient() {
             <div className="text-sm font-bold">Dein Teaser-Ergebnis geht verloren – upgrade jetzt</div>
             <div className="text-xs text-gray-400 mt-1">Pro schaltet dauerhafte History, Export & Oracle frei.</div>
             <div className="mt-3 flex gap-2">
-              <BuyButton product="pro" label="Pro 49 € / Monat" className="px-3 py-2 rounded-xl font-black text-black"
+              <BuyButton product="pro" label="Pro 99 € / Monat" className="px-3 py-2 rounded-xl font-black text-black"
                          style={{ background: "linear-gradient(135deg,#a78bfa,#00ff9d)" }} />
               <a href={`${prefix}/pricing`} className="px-3 py-2 rounded-xl border border-white/10 text-gray-300 hover:bg-white/5">Mehr erfahren</a>
             </div>

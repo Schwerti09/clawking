@@ -308,13 +308,13 @@ export default function OpsWall() {
           <div className="text-sm font-bold text-gray-200">Freischalten</div>
           <div className="flex items-center gap-2">
             <button onClick={() => checkout("daypass")} disabled={buying === "daypass"} className="px-4 py-2 rounded-xl bg-gradient-to-r from-cyan-600 to-green-500 text-white font-bold hover:opacity-90 disabled:opacity-60">
-              Daypass 9,99 € – 24h Full Live Feed
+              Daypass 9 € – 24h Full Live Feed
             </button>
             <button onClick={() => checkout("pro")} disabled={buying === "pro"} className="px-4 py-2 rounded-xl bg-gradient-to-r from-violet-600 to-fuchsia-500 text-white font-bold hover:opacity-90 disabled:opacity-60">
-              Pro 29 €/Monat – Unbegrenzter Zugriff + Alerts
+              Pro 99 €/Monat – Unbegrenzter Zugriff + Alerts
             </button>
             <a href={`${prefix}/pricing`} className="px-4 py-2 rounded-xl border border-gray-700 hover:border-gray-500 font-bold text-gray-200">
-              Team 99 €/Monat – Collaboration + Enterprise
+              Scale 249 €/Monat – Collaboration + Enterprise
             </a>
           </div>
         </div>
