@@ -5,6 +5,7 @@
 
 import { NextRequest, NextResponse } from "next/server"
 import { isValidBookingUrl } from "@/lib/booking-url"
+import { CheckoutProduct, resolvePriceFromEnv } from "@/lib/stripe-pricing"
 
 export const dynamic = "force-dynamic"
 export const runtime = "nodejs"
@@ -42,8 +43,12 @@ const ENV_CHECKS: EnvCheck[] = [
   { id: "stripe.prices.pro", vars: ["STRIPE_PRICE_PRO"], severity: "required" },
   { id: "stripe.prices.team", vars: ["STRIPE_PRICE_TEAM"], severity: "required" },
   // Stripe (optional)
+  { id: "stripe.prices.starter", vars: ["STRIPE_PRICE_STARTER"], severity: "optional" },
+  { id: "stripe.prices.starter_annual", vars: ["STRIPE_PRICE_STARTER_ANNUAL"], severity: "optional" },
   { id: "stripe.prices.pro_annual", vars: ["STRIPE_PRICE_PRO_ANNUAL"], severity: "optional" },
   { id: "stripe.prices.team_annual", vars: ["STRIPE_PRICE_TEAM_ANNUAL"], severity: "optional" },
+  { id: "stripe.prices.scale", vars: ["STRIPE_PRICE_SCALE"], severity: "optional" },
+  { id: "stripe.prices.scale_annual", vars: ["STRIPE_PRICE_SCALE_ANNUAL"], severity: "optional" },
   { id: "stripe.prices.msp", vars: ["STRIPE_PRICE_MSP"], severity: "optional" },
   { id: "stripe.prices.enterprise", vars: ["STRIPE_PRICE_ENTERPRISE"], severity: "optional" },
 
@@ -137,6 +142,16 @@ type EnvCheckResult = {
     optional: Summary
   }
   configured: Record<string, boolean>
+  checkoutReady?: {
+    ok: boolean
+    checks: Array<{
+      product: CheckoutProduct
+      annual: boolean
+      ok: boolean
+      error?: string
+    }>
+    failing: string[]
+  }
 }
 
 function emptySummary(): Summary {
@@ -186,10 +201,50 @@ function classify(checks: EnvCheck[]): EnvCheckResult {
   }
 }
 
+function probeCheckoutReady(): EnvCheckResult["checkoutReady"] {
+  const matrix: Array<{ product: CheckoutProduct; annual: boolean }> = [
+    { product: "daypass", annual: false },
+    { product: "pro", annual: false },
+    { product: "pro", annual: true },
+    { product: "team", annual: false },
+    { product: "team", annual: true },
+    { product: "msp", annual: false },
+    { product: "enterprise", annual: false },
+    { product: "starter", annual: false },
+    { product: "starter", annual: true },
+    { product: "scale", annual: false },
+    { product: "scale", annual: true },
+  ]
+
+  const checks = matrix.map(({ product, annual }) => {
+    // Intentionally env-only and side-effect free: this probe validates whether
+    // each checkout flow resolves to a configured price id right now.
+    const price = resolvePriceFromEnv(product, annual)
+    if (price) return { product, annual, ok: true as const }
+    return {
+      product,
+      annual,
+      ok: false as const,
+      error: `No env price configured for product=${product}, annual=${annual}`,
+    }
+  })
+
+  const failing = checks
+    .filter((check) => !check.ok)
+    .map((check) => `${check.product}:${check.annual ? "annual" : "monthly"}`)
+
+  return {
+    ok: failing.length === 0,
+    checks,
+    failing,
+  }
+}
+
 export async function GET(req: NextRequest) {
   if (!verifyCronSecret(req)) return unauthorized()
 
   const result = classify(ENV_CHECKS)
+  result.checkoutReady = probeCheckoutReady()
 
   return NextResponse.json(result, {
     status: 200,
