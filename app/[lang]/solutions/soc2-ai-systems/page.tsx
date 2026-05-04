@@ -2,6 +2,9 @@ import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import { SUPPORTED_LOCALES, type Locale, buildLocalizedAlternates } from "@/lib/i18n"
 import { pick } from "@/lib/i18n-pick"
+import { buildEEATArticleSchema } from '@/lib/seo/eeat-helper'
+import AuthorBox from '@/components/seo/AuthorBox'
+import LastUpdated from '@/components/seo/LastUpdated'
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://clawguru.org"
 const PATH = "/solutions/soc2-ai-systems"
@@ -15,6 +18,14 @@ export async function generateMetadata({ params }: { params: { lang: string } })
   const isDE = locale === "de"
   const title = pick(isDE, "SOC 2 für KI-Systeme: SOC 2 Compliance für AI-Systeme | ClawGuru Solutions", "SOC 2 for AI Systems: SOC 2 Compliance for AI Systems | ClawGuru Solutions")
   const description = pick(isDE, "SOC 2 Compliance für KI-Systeme: Trust Services Criteria, Audit Trail, Access Control und Incident Response für SOC 2 Type II. Executable Runbooks für Self-Hosted AI-Infrastruktur.", "SOC 2 compliance for AI systems: Trust Services Criteria, audit trail, access control and incident response for SOC 2 Type II. Executable runbooks for self-hosted AI infrastructure.")
+  const articleSchema = buildEEATArticleSchema({
+    headline: title,
+    description,
+    url: `${SITE_URL}/${locale}${PATH}`,
+    datePublished: "2026-04-28",
+    dateModified: "2026-05-04",
+    locale,
+  })
   return {
     title, description,
     keywords: ["soc 2 ai systems", "soc 2 type ii", "ai compliance", "trust services criteria", "audit trail", "incident response", "clawguru solutions"],
@@ -22,6 +33,11 @@ export async function generateMetadata({ params }: { params: { lang: string } })
     openGraph: { title, description, type: "article", url: `${SITE_URL}/${locale}${PATH}`, images: ["/og-image.png"] },
     alternates: buildLocalizedAlternates(locale, PATH),
     robots: "index, follow",
+    other: {
+      'article:published_time': '2026-04-28T00:00:00Z',
+      'article:modified_time': '2026-05-04T00:00:00Z',
+      'article:author': 'R. Schwertfechter',
+    },
   }
 }
 
@@ -184,6 +200,13 @@ export default function Soc2AiSystemsPage({ params }: { params: { lang: string }
         <p className="text-lg text-gray-300 mb-6">
           {pick(isDE, "SOC 2 Compliance für KI-Systeme: Trust Services Criteria, Audit Trail, Access Control und Incident Response für SOC 2 Type II. Executable Runbooks für Self-Hosted AI-Infrastruktur.", "SOC 2 compliance for AI systems: Trust Services Criteria, audit trail, access control and incident response for SOC 2 Type II. Executable runbooks for self-hosted AI infrastructure.")}
         </p>
+        <LastUpdated
+          date="2026-05-04"
+          publishedDate="2026-04-28"
+          locale={locale}
+          showPublished={true}
+          className="mb-6"
+        />
         <section className="mb-10">
           <h2 className="text-2xl font-semibold mb-4 text-gray-100">{pick(isDE, "4 SOC 2 Compliance-Kontrollen", "4 SOC 2 Compliance Controls")}</h2>
           <div className="space-y-5">
@@ -233,6 +256,14 @@ export default function Soc2AiSystemsPage({ params }: { params: { lang: string }
             </a>
           </div>
         </section>
+
+        {/* E-E-A-T AuthorBox */}
+        <AuthorBox
+          locale={locale}
+          variant="full"
+          className="mb-8"
+        />
+
       </div>
     </div>
   )
