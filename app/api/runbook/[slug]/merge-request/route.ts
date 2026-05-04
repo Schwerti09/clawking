@@ -10,6 +10,7 @@ import { NextRequest, NextResponse } from "next/server"
 import { cookies } from "next/headers"
 import { verifySessionToken, USER_SESSION_COOKIE } from "@/lib/auth"
 import { createMergeRequest, getMergeRequests, reviewMergeRequest } from "@/lib/runbook-versions"
+import { withApiHandler } from "@/lib/ops/with-api-handler"
 
 export const dynamic = "force-dynamic"
 
@@ -21,11 +22,11 @@ async function getSession() {
   return token ? verifySessionToken(token) : null
 }
 
-export async function GET(
+export const GET = withApiHandler(async (
   _req: NextRequest,
-  props: { params: { slug: string } }
-) {
-  const { slug } = props.params
+  ctx
+) => {
+  const { slug } = ctx!.params!
   const session = await getSession()
   if (!session) {
     return NextResponse.json({ error: "Authentication required" }, { status: 401 })
@@ -36,13 +37,13 @@ export async function GET(
     ? mrs
     : mrs.filter((mr) => mr.userEmail === session.email)
   return NextResponse.json({ mergeRequests: filtered })
-}
+})
 
-export async function POST(
+export const POST = withApiHandler(async (
   req: NextRequest,
-  props: { params: { slug: string } }
-) {
-  const { slug } = props.params
+  ctx
+) => {
+  const { slug } = ctx!.params!
   const session = await getSession()
   if (!session) {
     return NextResponse.json({ error: "Authentication required" }, { status: 401 })
@@ -66,13 +67,13 @@ export async function POST(
   })
 
   return NextResponse.json({ mergeRequest: mr }, { status: 201 })
-}
+})
 
-export async function PATCH(
+export const PATCH = withApiHandler(async (
   req: NextRequest,
-  props: { params: { slug: string } }
-) {
-  const { slug } = props.params
+  ctx
+) => {
+  const { slug } = ctx!.params!
   const session = await getSession()
   if (!session || session.email !== ADMIN_EMAIL) {
     return NextResponse.json({ error: "Admin access required" }, { status: 403 })
@@ -93,4 +94,4 @@ export async function PATCH(
   }
 
   return NextResponse.json({ mergeRequest: updated })
-}
+})

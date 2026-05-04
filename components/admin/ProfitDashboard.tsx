@@ -782,7 +782,7 @@ export default function ProfitDashboard() {
       {/* Alert banner */}
       {data?.alert?.triggered && (
         <div className="p-4 rounded-2xl border border-yellow-700 bg-yellow-950/40 text-yellow-200 font-bold text-sm">
-          {data.alert.message}
+          {data.alert?.message}
           {data.alert.costUsd !== undefined && (
             <span className="ml-2 text-yellow-400">
               (Kosten: {usd(data.alert.costUsd)} · Umsatz heute: {usd(data.alert.revenueTodayUsd ?? 0)})
@@ -947,7 +947,7 @@ export default function ProfitDashboard() {
             </div>
 
             {/* Endpoint call chart */}
-            {Object.keys(data.apiUsage.endpointCounts).length > 0 && (
+            {data.apiUsage?.endpointCounts && Object.keys(data.apiUsage.endpointCounts).length > 0 && (
               <div className="mt-4 rounded-2xl border border-gray-800 bg-black/30 p-5">
                 <div className="text-xs text-gray-500 uppercase tracking-widest mb-4">
                   API Calls pro Endpunkt
@@ -967,7 +967,7 @@ export default function ProfitDashboard() {
           <section>
             <SectionHeader title="Wall of Shame – Top Abuser IPs" icon="🚨" />
             <WallOfShame data={data.wallOfShame} onBlock={handleBlockIp} />
-            {data.wallOfShame.activeBlocks.length > 0 && (
+            {data.wallOfShame?.activeBlocks && data.wallOfShame.activeBlocks.length > 0 && (
               <div className="mt-3 text-xs text-gray-600">
                 Aktive Sperren:{" "}
                 {data.wallOfShame.activeBlocks

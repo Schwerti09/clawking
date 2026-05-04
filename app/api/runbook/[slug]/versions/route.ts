@@ -9,14 +9,15 @@ import { NextRequest, NextResponse } from "next/server"
 import { cookies } from "next/headers"
 import { verifySessionToken, USER_SESSION_COOKIE } from "@/lib/auth"
 import { getVersions, createFork } from "@/lib/runbook-versions"
+import { withApiHandler } from "@/lib/ops/with-api-handler"
 
 export const dynamic = "force-dynamic"
 
-export async function GET(
+export const GET = withApiHandler(async (
   _req: NextRequest,
-  props: { params: { slug: string } }
-) {
-  const { slug } = props.params
+  ctx
+) => {
+  const { slug } = ctx!.params!
   const { getRunbook } = await import("@/lib/pseo")
   const runbook = getRunbook(slug)
   if (!runbook) {
@@ -24,13 +25,13 @@ export async function GET(
   }
   const versions = getVersions(runbook)
   return NextResponse.json({ slug, versions })
-}
+})
 
-export async function POST(
+export const POST = withApiHandler(async (
   req: NextRequest,
-  props: { params: { slug: string } }
-) {
-  const { slug } = props.params
+  ctx
+) => {
+  const { slug } = ctx!.params!
   const { getRunbook } = await import("@/lib/pseo")
 
   // Auth check
@@ -60,4 +61,4 @@ export async function POST(
   })
 
   return NextResponse.json({ fork }, { status: 201 })
-}
+})

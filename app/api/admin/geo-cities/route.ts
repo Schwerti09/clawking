@@ -1,7 +1,8 @@
-import { NextResponse } from "next/server"
+import { NextResponse, NextRequest } from "next/server"
 import { cookies } from "next/headers"
 import { adminCookieName, verifyAdminToken } from "@/lib/admin-auth"
 import { dbQuery } from "@/lib/db"
+import { withApiHandler } from "@/lib/ops/with-api-handler"
 
 export const runtime = "nodejs"
 export const dynamic = "force-dynamic"
@@ -15,7 +16,7 @@ async function isAdmin() {
   return token ? verifyAdminToken(token) : null
 }
 
-export async function GET(req: Request) {
+export const GET = withApiHandler(async (req: NextRequest) => {
   const session = await isAdmin()
   if (!session) return unauthorized()
 
@@ -28,9 +29,9 @@ export async function GET(req: Request) {
      ORDER BY priority DESC, population DESC, slug ASC`
   )
   return NextResponse.json({ items: rows.rows })
-}
+})
 
-export async function POST(req: Request) {
+export const POST = withApiHandler(async (req: NextRequest) => {
   const session = await isAdmin()
   if (!session) return unauthorized()
 
@@ -70,9 +71,9 @@ export async function POST(req: Request) {
   )
 
   return NextResponse.json({ ok: true, item: result.rows[0] })
-}
+})
 
-export async function PATCH(req: Request) {
+export const PATCH = withApiHandler(async (req: NextRequest) => {
   const session = await isAdmin()
   if (!session) return unauthorized()
 
@@ -117,5 +118,5 @@ export async function PATCH(req: Request) {
     return NextResponse.json({ error: "city not found" }, { status: 404 })
   }
   return NextResponse.json({ ok: true, item: result.rows[0] })
-}
+})
 

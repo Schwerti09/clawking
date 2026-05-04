@@ -115,7 +115,7 @@ export default function IntelNexusClient() {
           top = results[0] || null
           if (top) {
             const pseo: any = await import("@/lib/pseo")
-            const rb = pseo.materializedRunbooks().find((r: any) => r.slug === top!.id)
+            const rb = pseo.materializedRunbooks().find((r: any) => r.slug === top.id)
             if (rb) picked = { slug: rb.slug, title: rb.title, summary: (rb.summary ?? "").slice(0, 180) }
           }
           const m = (query.match(/CVE-\d{4}-\d{4,7}/i) || j?.answer?.match(/CVE-\d{4}-\d{4,7}/i)) as RegExpMatchArray | null
