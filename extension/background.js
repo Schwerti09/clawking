@@ -44,6 +44,11 @@ async function updateBadge(tabId, domain) {
 
       if (score != null) {
         scoreCache.set(domain, { score, ts: Date.now() })
+        // Persist to session storage so content.js can read it and show the
+        // critical-score overlay without making its own network request.
+        chrome.storage.session.set({ [`score_${domain}`]: score }).catch((err) => {
+          console.warn('ClawGuru: failed to persist score to session storage:', err)
+        })
       }
     }
 
