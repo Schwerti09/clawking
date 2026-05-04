@@ -286,13 +286,13 @@ export default function ZeroKnowledgeCheck() {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
               {result.overallRisk === "critical" || result.overallRisk === "high" ? (
-                <ShieldX className={`w-6 h-6 ${riskCfg!.color}`} />
+                <ShieldX className={`w-6 h-6 ${riskCfg?.color ?? "text-gray-400"}`} />
               ) : (
-                <ShieldCheck className={`w-6 h-6 ${riskCfg!.color}`} />
+                <ShieldCheck className={`w-6 h-6 ${riskCfg?.color ?? "text-gray-400"}`} />
               )}
               <div>
-                <p className={`text-sm font-black ${riskCfg!.color}`}>
-                  Risiko: {riskCfg!.label}
+                <p className={`text-sm font-black ${riskCfg?.color ?? "text-gray-400"}`}>
+                  Risiko: {riskCfg?.label ?? "UNBEKANNT"}
                 </p>
                 <p className="text-xs text-gray-500">
                   {result.findings.length} Befunde · Score: {result.score}/100

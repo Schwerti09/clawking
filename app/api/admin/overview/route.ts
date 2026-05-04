@@ -1,9 +1,10 @@
-import { NextResponse } from "next/server"
+import { NextResponse, NextRequest } from "next/server"
 import { cookies } from "next/headers"
 import { adminCookieName, verifyAdminToken } from "@/lib/admin-auth"
 import { dbQuery } from "@/lib/db"
 import { getStripe } from "@/lib/stripe"
 import { getGeoSitemapRuntimeLimits } from "@/lib/geo-runtime-config"
+import { withApiHandler } from "@/lib/ops/with-api-handler"
 
 export const runtime = "nodejs"
 export const dynamic = "force-dynamic"
@@ -75,7 +76,7 @@ function dayRange(daysBack: number) {
   return d.toISOString()
 }
 
-export async function GET() {
+export const GET = withApiHandler(async (_req: NextRequest) => {
   const token = (await cookies()).get(adminCookieName())?.value || ""
   const session = token ? verifyAdminToken(token) : null
   if (!session) {
@@ -268,4 +269,4 @@ export async function GET() {
       sitemapRuntimeLimits: runtimeLimits || undefined,
     },
   })
-}
+})

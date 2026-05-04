@@ -21,7 +21,7 @@ export default function TeaserResultPanel({ teaser, secondsLeft }: { teaser: Tea
   const score = typeof teaser.score === "number" ? teaser.score : 0
   const pct = Math.min(100, Math.max(0, score))
   const ring = `conic-gradient(#0be6a8 ${pct}%, rgba(11,230,168,0.15) ${pct}% 100%)`
-  const runbookEntries = [teaser.runbook, teaser.runbook2].filter(Boolean)
+  const runbookEntries = [teaser.runbook, teaser.runbook2].filter((x): x is NonNullable<typeof x> => x != null)
 
   return (
     <div className="relative rounded-3xl border border-cyan-400/20 bg-black/70 p-6 shadow-[0_0_60px_rgba(0,255,209,0.18)]">
@@ -59,9 +59,9 @@ export default function TeaserResultPanel({ teaser, secondsLeft }: { teaser: Tea
             <div className="text-xs font-mono text-gray-400">Teaser‑Runbooks aus echter Library</div>
             <div className="mt-3 space-y-4">
               {runbookEntries.map((rb, idx) => (
-                <div key={`${rb!.slug}-${idx}`} className="p-3 rounded-xl bg-white/5 border border-white/5">
-                  <div className="text-sm font-semibold text-white">{rb!.title}</div>
-                  <div className="mt-1 text-xs text-gray-400 line-clamp-3">{rb!.summary} …</div>
+                <div key={`${rb.slug}-${idx}`} className="p-3 rounded-xl bg-white/5 border border-white/5">
+                  <div className="text-sm font-semibold text-white">{rb.title}</div>
+                  <div className="mt-1 text-xs text-gray-400 line-clamp-3">{rb.summary} …</div>
                 </div>
               ))}
               {runbookEntries.length === 0 && (

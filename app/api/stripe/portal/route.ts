@@ -4,10 +4,11 @@ import { stripe } from "@/lib/stripe"
 import { verifyAccessToken } from "@/lib/access-token"
 import { cookies } from "next/headers"
 import { isStripeActive, apiUnavailableResponse } from "@/lib/api-guard"
+import { withApiHandler } from "@/lib/ops/with-api-handler"
 
 export const runtime = "nodejs"
 
-export async function POST(req: NextRequest) {
+export const POST = withApiHandler(async (req: NextRequest) => {
   if (!isStripeActive()) return apiUnavailableResponse()
   const token = (await cookies()).get("claw_access")?.value || ""
   const payload = token ? verifyAccessToken(token) : null
@@ -20,4 +21,4 @@ export async function POST(req: NextRequest) {
   })
 
   return NextResponse.json({ url: session.url })
-}
+})
