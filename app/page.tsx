@@ -41,8 +41,8 @@ export default async function Home({ dict, locale }: HomeProps = {}) {
   const safeLocale = locale ?? DEFAULT_LOCALE
   const safeDict = dict ?? (await getDictionary(safeLocale))
   const prefix = `/${safeLocale}`
-  const hp = (safeDict as any)?.homepage ?? {}
-  const faq = (safeDict as any)?.faq ?? {
+  const hp = safeDict.homepage ?? {}
+  const faq = safeDict.faq ?? {
     kicker: "", title: "", subtitle: "",
     q1: "", a1: "", q2: "", a2: "", q3: "", a3: "", q4: "", a4: "",
   }
@@ -93,7 +93,7 @@ export default async function Home({ dict, locale }: HomeProps = {}) {
           <RoastMyStack
             locale={safeLocale}
             prefix={prefix}
-            dict={(safeDict as { roast?: Record<string, string> } | undefined)?.roast}
+            dict={safeDict.roast}
           />
         </Container>
       </section>
