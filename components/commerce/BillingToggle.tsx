@@ -14,10 +14,12 @@ import { pick } from "@/lib/i18n-pick"
 export default function BillingToggle({ locale, isDE, prefix }: { locale: Locale; isDE: boolean; prefix: string }) {
   const [annual, setAnnual] = useState(false)
 
+  const starterMonthly = AUTOPILOT_PLANS.starter.monthlyPriceEur
   const proMonthly = AUTOPILOT_PLANS.pro.monthlyPriceEur
-  const teamMonthly = AUTOPILOT_PLANS.scale.monthlyPriceEur
+  const scaleMonthly = AUTOPILOT_PLANS.scale.monthlyPriceEur
+  const starterAnnual = Math.round(starterMonthly * 0.8)
   const proAnnual = Math.round(proMonthly * 0.8)
-  const teamAnnual = Math.round(teamMonthly * 0.8)
+  const scaleAnnual = Math.round(scaleMonthly * 0.8)
 
   return (
     <div>
@@ -50,7 +52,77 @@ export default function BillingToggle({ locale, isDE, prefix }: { locale: Locale
       </div>
 
       {/* ── Cards ── */}
-      <div className="grid lg:grid-cols-2 gap-6 items-stretch">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
+
+        {/* ── Starter ── */}
+        <div className="relative rounded-3xl p-[1px] overflow-hidden"
+          style={{ background: "linear-gradient(135deg, rgba(0,184,255,0.45) 0%, rgba(0,184,255,0.08) 100%)" }}>
+          <div className="h-full rounded-3xl p-7 flex flex-col" style={{ background: "#09111d" }}>
+            <div className="flex items-start justify-between gap-3">
+              <div>
+                <div className="text-[11px] font-mono uppercase tracking-[0.2em] mb-2" style={{ color: "#00b8ff" }}>
+                  {pick(isDE, "Für Einzel-Stacks", "For solo stacks")}
+                </div>
+                <div className="text-xl font-black text-white font-heading">Autopilot Starter</div>
+              </div>
+            </div>
+
+            <div className="mt-5 flex items-end gap-2">
+              {annual && (
+                <span className="text-2xl font-bold text-gray-500 line-through pb-2">{starterMonthly}€</span>
+              )}
+              <span className="text-5xl font-black text-white">
+                {annual ? starterAnnual : starterMonthly}€
+              </span>
+              <span className="text-sm text-gray-400 pb-2">
+                {pick(isDE, "/Monat", "/month")}
+              </span>
+            </div>
+            {annual && (
+              <div className="text-xs text-emerald-400 font-semibold mt-1">
+                {isDE
+                  ? `Jährlich abgerechnet (${starterAnnual * 12}€/Jahr)`
+                  : `Billed annually (€${starterAnnual * 12}/year)`}
+              </div>
+            )}
+
+            <ul className="mt-4 space-y-2 text-sm text-gray-300">
+              {[
+                pick(isDE, "Security Score + Full Reports", "Security score + full reports"),
+                pick(isDE, "AI Priorisierung + Fix-Plan", "AI prioritization + fix plan"),
+                pick(isDE, "Proof-of-Fix je Maßnahme", "Proof-of-fix per remediation"),
+                pick(isDE, "Für 1 Workspace optimiert", "Optimized for 1 workspace"),
+              ].map((item) => (
+                <li key={item} className="flex gap-2">
+                  <span style={{ color: "#00b8ff" }}>✓</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+
+            <div className="mt-auto pt-6">
+              <SocialProofBlock locale={locale} />
+              <BuyButton
+                product="starter"
+                annual={annual}
+                autoRecommend
+                upgradeSignals={buildUpgradeSignalsFromUsage({
+                  workspaces: 1,
+                  apiExportsRequested: false,
+                  policyControlsRequested: false,
+                })}
+                label={isDE
+                  ? `Starter starten — ${annual ? starterAnnual : starterMonthly}€/${pick(isDE, "Mo", "mo")}`
+                  : `Start Starter — €${annual ? starterAnnual : starterMonthly}/mo`}
+                className="w-full py-3 px-6 rounded-2xl font-black text-sm text-black transition-all duration-300 hover:opacity-90 disabled:opacity-60"
+                style={{ background: "linear-gradient(135deg, #00b8ff 0%, #0077ff 100%)", boxShadow: "0 0 30px rgba(0,184,255,0.3)" }}
+              />
+              <div className="mt-3 text-xs text-gray-500 text-center">
+                {pick(isDE, "Jederzeit kündbar", "Cancel anytime")}
+              </div>
+            </div>
+          </div>
+        </div>
 
         {/* ── Pro ── (most popular) */}
         <div className="relative rounded-3xl p-[1px] overflow-hidden"
@@ -128,7 +200,7 @@ export default function BillingToggle({ locale, isDE, prefix }: { locale: Locale
         </div>
 
         {/* ── Scale ── */}
-        <div className="relative rounded-3xl p-[1px] overflow-hidden"
+        <div className="relative rounded-3xl p-[1px] overflow-hidden md:col-span-2 lg:col-span-1"
           style={{ background: "linear-gradient(135deg, rgba(0,255,157,0.4) 0%, rgba(0,255,157,0.05) 100%)" }}>
           <div className="h-full rounded-3xl p-7 flex flex-col" style={{ background: "#080f0c" }}>
             <div className="flex items-start justify-between gap-3">
@@ -142,10 +214,10 @@ export default function BillingToggle({ locale, isDE, prefix }: { locale: Locale
 
             <div className="mt-5 flex items-end gap-2">
               {annual && (
-                <span className="text-2xl font-bold text-gray-500 line-through pb-2">249€</span>
+                <span className="text-2xl font-bold text-gray-500 line-through pb-2">{scaleMonthly}€</span>
               )}
               <span className="text-5xl font-black text-white">
-                {annual ? teamAnnual : teamMonthly}€
+                {annual ? scaleAnnual : scaleMonthly}€
               </span>
               <span className="text-sm text-gray-400 pb-2">
                 {pick(isDE, "/Monat", "/month")}
@@ -154,8 +226,8 @@ export default function BillingToggle({ locale, isDE, prefix }: { locale: Locale
             {annual && (
               <div className="text-xs text-emerald-400 font-semibold mt-1">
                 {isDE
-                  ? `Jährlich abgerechnet (${teamAnnual * 12}€/Jahr)`
-                  : `Billed annually (€${teamAnnual * 12}/year)`}
+                  ? `Jährlich abgerechnet (${scaleAnnual * 12}€/Jahr)`
+                  : `Billed annually (€${scaleAnnual * 12}/year)`}
               </div>
             )}
 
@@ -185,8 +257,8 @@ export default function BillingToggle({ locale, isDE, prefix }: { locale: Locale
                   policyControlsRequested: AUTOPILOT_THRESHOLDS.scale.needsPolicyControls,
                 })}
                 label={isDE
-                  ? `Scale starten (${annual ? teamAnnual : teamMonthly}€/Monat) → Stripe`
-                  : `Start Scale (€${annual ? teamAnnual : teamMonthly}/month) → Stripe`}
+                  ? `Scale starten (${annual ? scaleAnnual : scaleMonthly}€/Monat) → Stripe`
+                  : `Start Scale (€${annual ? scaleAnnual : scaleMonthly}/month) → Stripe`}
                 className="w-full py-3 px-6 rounded-2xl font-black text-sm text-white border transition-all duration-300 hover:bg-white/5 disabled:opacity-60"
                 style={{ borderColor: "rgba(0,255,157,0.4)", boxShadow: "0 0 20px rgba(0,255,157,0.1)" }}
               />

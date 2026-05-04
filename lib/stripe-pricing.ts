@@ -115,18 +115,16 @@ function envCandidates(product: CheckoutProduct, annual: boolean): string[] {
     case "daypass":
       return ["STRIPE_PRICE_DAYPASS"]
     case "starter":
-      // Starter is a subscription-tier in consulting; prefer dedicated price id.
-      // Fallback to PRO if only legacy env vars exist in an older deployment.
       return annual
-        ? ["STRIPE_PRICE_STARTER_ANNUAL", "STRIPE_PRICE_PRO_ANNUAL", "STRIPE_PRICE_PRO_YEARLY"]
-        : ["STRIPE_PRICE_STARTER", "STRIPE_PRICE_PRO", "STRIPE_PRICE_PRO_MONTHLY"]
+        ? ["STRIPE_PRICE_STARTER_ANNUAL"]
+        : ["STRIPE_PRICE_STARTER"]
     case "pro":
       return annual
-        ? ["STRIPE_PRICE_PRO_ANNUAL", "STRIPE_PRICE_PRO_YEARLY", "STRIPE_PRICE_PRO"]
+        ? ["STRIPE_PRICE_PRO_ANNUAL", "STRIPE_PRICE_PRO_YEARLY"]
         : ["STRIPE_PRICE_PRO", "STRIPE_PRICE_PRO_MONTHLY"]
     case "team":
       return annual
-        ? ["STRIPE_PRICE_TEAM_ANNUAL", "STRIPE_PRICE_TEAM_YEARLY", "STRIPE_PRICE_TEAM"]
+        ? ["STRIPE_PRICE_TEAM_ANNUAL", "STRIPE_PRICE_TEAM_YEARLY"]
         : ["STRIPE_PRICE_TEAM", "STRIPE_PRICE_TEAM_MONTHLY"]
     case "scale":
       return annual
