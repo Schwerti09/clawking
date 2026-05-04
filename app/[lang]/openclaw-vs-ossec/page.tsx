@@ -3,6 +3,9 @@ import { notFound } from 'next/navigation'
 import { SUPPORTED_LOCALES, type Locale, buildLocalizedAlternates } from '@/lib/i18n'
 import { SITE_URL } from '@/lib/config'
 import { pick } from "@/lib/i18n-pick"
+import { buildEEATArticleSchema } from '@/lib/seo/eeat-helper'
+import AuthorBox from '@/components/seo/AuthorBox'
+import LastUpdated from '@/components/seo/LastUpdated'
 
 export async function generateStaticParams() {
   return SUPPORTED_LOCALES.map((lang) => ({ lang }))
@@ -14,12 +17,25 @@ export async function generateMetadata({ params }: { params: { lang: string } })
   const isDE = locale === 'de'
   const title = pick(isDE, 'OpenClaw vs OSSEC: Self-Hosted HIDS Security Platform Vergleich 2026', 'OpenClaw vs OSSEC: Self-Hosted HIDS Security Platform Comparison 2026')
   const description = pick(isDE, 'OpenClaw vs OSSEC 2026. OSSEC ist ein Open-Source Host-based IDS. OpenClaw bietet Executable Runbooks, Security-Check und Compliance-Dashboard — einfacher aufzusetzen als OSSEC.', 'OpenClaw vs OSSEC 2026. OSSEC is an open-source host-based IDS. OpenClaw provides executable runbooks, security check and compliance dashboard — easier to set up than OSSEC.')
+  const articleSchema = buildEEATArticleSchema({
+    headline: title,
+    description,
+    url: `${SITE_URL}/${locale}/openclaw-vs-ossec`,
+    datePublished: "2026-04-28",
+    dateModified: "2026-05-04",
+    locale,
+  })
   return {
     title,
     description,
     alternates: buildLocalizedAlternates(locale, '/openclaw-vs-ossec'),
     openGraph: { images: ['/og-image.png'], title, description, type: 'article', url: `${SITE_URL}/${lang}/openclaw-vs-ossec` },
     robots: 'index, follow',
+    other: {
+      'article:published_time': '2026-04-28T00:00:00Z',
+      'article:modified_time': '2026-05-04T00:00:00Z',
+      'article:author': 'R. Schwertfechter',
+    },
   }
 }
 
@@ -36,6 +52,7 @@ const faqSchema = {
 
 export default function OpenClawVsOssecPage({ params }: { params: { lang: string } }) {
   const { lang } = params
+  const locale = (SUPPORTED_LOCALES.includes(lang as Locale) ? lang : 'de') as Locale
   if (!SUPPORTED_LOCALES.includes(lang as Locale)) notFound()
   const isDE = lang === 'de'
 
@@ -51,9 +68,16 @@ export default function OpenClawVsOssecPage({ params }: { params: { lang: string
         <h1 className="text-4xl font-bold mb-4 text-gray-100">
           {pick(isDE, 'OpenClaw vs OSSEC: Self-Hosted HIDS Security Platform Vergleich', 'OpenClaw vs OSSEC: Self-Hosted HIDS Security Platform Comparison')}
         </h1>
-        <p className="text-lg text-gray-300 mb-8">
+        <p className="text-lg text-gray-300 mb-4">
           {pick(isDE, 'OSSEC ist ein bewährtes Open-Source Host-based Intrusion Detection System (HIDS) mit Log-Analyse, File Integrity Monitoring und aktiver Response. OpenClaw (Teil der ClawGuru-Plattform) ergänzt mit Executable Runbooks, automatisierten Security-Checks und einem integrierten Compliance-Dashboard — mit deutlich geringerem Setup-Aufwand.', 'OSSEC is a proven open-source host-based intrusion detection system (HIDS) with log analysis, file integrity monitoring and active response. OpenClaw (part of the ClawGuru platform) adds executable runbooks, automated security checks and an integrated compliance dashboard — with significantly lower setup effort.')}
         </p>
+        <LastUpdated
+          date="2026-05-04"
+          publishedDate="2026-04-28"
+          locale={locale}
+          showPublished={true}
+          className="mb-8"
+        />
 
         <section className="mb-10">
           <h2 className="text-2xl font-semibold mb-4 text-gray-100">{pick(isDE, '⚔️ Direkter Vergleich', '⚔️ Head-to-Head Comparison')}</h2>
@@ -168,6 +192,13 @@ export default function OpenClawVsOssecPage({ params }: { params: { lang: string
             </a>
           </div>
         </section>
+
+        {/* E-E-A-T AuthorBox */}
+        <AuthorBox
+          locale={locale}
+          variant="full"
+          className="mb-8"
+        />
       </div>
     </div>
   )

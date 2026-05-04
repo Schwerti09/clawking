@@ -1,8 +1,13 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { SUPPORTED_LOCALES, type Locale, buildLocalizedAlternates } from '@/lib/i18n'
+import { pick } from "@/lib/i18n-pick"
 
 const SITE_URL = 'https://clawguru.org'
+const PATH = '/openclaw-vs-crowdsec'
+import { buildEEATArticleSchema } from '@/lib/seo/eeat-helper'
+import AuthorBox from '@/components/seo/AuthorBox'
+import LastUpdated from '@/components/seo/LastUpdated'
 
 export async function generateStaticParams() {
   return SUPPORTED_LOCALES.map((lang) => ({ lang }))
@@ -10,9 +15,20 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
   const { lang } = params
+  const locale = (SUPPORTED_LOCALES.includes(lang as Locale) ? lang : 'de') as Locale
+  const title = 'OpenClaw vs CrowdSec 2025: Self-Hosted IDS Comparison'
+  const description = 'OpenClaw vs CrowdSec: collaborative threat intelligence vs. runbook-driven hardening. Compare IP reputation, blocklist sharing, GDPR compliance and remediation for self-hosted stacks.'
+  const articleSchema = buildEEATArticleSchema({
+    headline: title,
+    description,
+    url: `${SITE_URL}/${locale}${PATH}`,
+    datePublished: "2026-04-28",
+    dateModified: "2026-05-04",
+    locale,
+  })
   return {
-    title: 'OpenClaw vs CrowdSec 2025: Self-Hosted IDS Comparison',
-    description: 'OpenClaw vs CrowdSec: collaborative threat intelligence vs. runbook-driven hardening. Compare IP reputation, blocklist sharing, GDPR compliance and remediation for self-hosted stacks.',
+    title,
+    description,
     keywords: ['openclaw vs crowdsec','crowdsec alternative','self-hosted ids','collaborative threat intelligence','ip blocklist','intrusion detection','security hardening'],
     authors: [{ name: 'ClawGuru Security Team' }],
     openGraph: {
@@ -22,13 +38,19 @@ export async function generateMetadata({ params }: { params: { lang: string } })
       url: `${SITE_URL}/${lang}/openclaw-vs-crowdsec`,
       images: ['/og-compare-openclaw-crowdsec.jpg'],
     },
-    alternates: buildLocalizedAlternates(lang as Locale, '/openclaw-vs-crowdsec'),
+    alternates: buildLocalizedAlternates(locale, '/openclaw-vs-crowdsec'),
     robots: 'index, follow',
+    other: {
+      'article:published_time': '2026-04-28T00:00:00Z',
+      'article:modified_time': '2026-05-04T00:00:00Z',
+      'article:author': 'R. Schwertfechter',
+    },
   }
 }
 
 export default function OpenClawVsCrowdSecPage({ params }: { params: { lang: string } }) {
   const { lang } = params
+  const locale = (SUPPORTED_LOCALES.includes(lang as Locale) ? lang : 'de') as Locale
   if (!SUPPORTED_LOCALES.includes(lang as Locale)) notFound()
 
   const rows = [
@@ -68,9 +90,16 @@ export default function OpenClawVsCrowdSecPage({ params }: { params: { lang: str
         </div>
 
         <h1 className="text-4xl font-bold mb-4 text-gray-100">OpenClaw vs CrowdSec 2025</h1>
-        <p className="text-lg text-gray-300 mb-8">
+        <p className="text-lg text-gray-300 mb-4">
           CrowdSec excels at collaborative IP blocking via crowdsourced threat intel. OpenClaw goes further — executable runbooks, compliance scoring, and full remediation automation. Here's where each wins.
         </p>
+        <LastUpdated
+          date="2026-05-04"
+          publishedDate="2026-04-28"
+          locale={locale}
+          showPublished={true}
+          className="mb-8"
+        />
 
         <section className="mb-10">
           <h2 className="text-2xl font-semibold mb-4 text-gray-100">Direct Comparison</h2>
@@ -165,6 +194,13 @@ curl http://localhost:8080/v1/decisions/stream \
             { "@type": "Question", name: "Was ist der gr\u00f6\u00dfte Unterschied zwischen OpenClaw und CrowdSec?", acceptedAnswer: { "@type": "Answer", text: "CrowdSec ist spezialisiert auf kollaborative Bedrohungsintelligenz und IP-Reputationsdaten. OpenClaw bietet eine ganzheitliche Security-Plattform mit Executable Runbooks, Compliance-Dashboard und Live-Score \u2014 erg\u00e4nzt CrowdSec optimal." } }
           ]
         }) }} />
+
+        {/* E-E-A-T AuthorBox */}
+        <AuthorBox
+          locale={lang as Locale}
+          variant="full"
+          className="mb-8"
+        />
       </div>
     </div>
   )
