@@ -256,10 +256,14 @@ export default async function PricingPage() {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     mainEntity: [
-      { '@type': 'Question', name: "What is ClawGuru?", acceptedAnswer: { '@type': 'Answer', text: "ClawGuru is an AI-powered security intelligence platform for self-hosted infrastructure." } },
-      { '@type': 'Question', name: "How does pricing work?", acceptedAnswer: { '@type': 'Answer', text: "We offer Free, Starter, Pro, Scale, and Enterprise plans with automation-first feature tiers." } },
-      { '@type': 'Question', name: "Can I cancel anytime?", acceptedAnswer: { '@type': 'Answer', text: "Yes, you can cancel your subscription at any time. No long-term commitment required." } },
-      { '@type': 'Question', name: "Do you offer a free trial?", acceptedAnswer: { '@type': 'Answer', text: "Yes. The Starter trial gives 24h access, and monthly tiers continue with Starter, Pro, and Scale plans." } },
+      { '@type': 'Question', name: "What is ClawGuru?", acceptedAnswer: { '@type': 'Answer', text: "ClawGuru is an AI-powered security intelligence platform for self-hosted infrastructure. It provides real-time threat detection, CVE analysis, runbooks, and automation for security operations." } },
+      { '@type': 'Question', name: "How does pricing work?", acceptedAnswer: { '@type': 'Answer', text: "We offer Free, Starter (9€ one-time), Pro (99€/month), Scale (249€/month), and Enterprise (custom) plans with automation-first feature tiers." } },
+      { '@type': 'Question', name: "Can I cancel anytime?", acceptedAnswer: { '@type': 'Answer', text: "Yes, you can cancel your subscription at any time without penalty. No long-term commitment required." } },
+      { '@type': 'Question', name: "Do you offer a free trial?", acceptedAnswer: { '@type': 'Answer', text: "Yes. The Starter trial gives 24h access for 9€, and monthly tiers (Pro, Scale) continue with full features and no time limit." } },
+      { '@type': 'Question', name: "What payment methods do you accept?", acceptedAnswer: { '@type': 'Answer', text: "We accept all major credit cards and payment methods via Stripe. Invoicing available for Enterprise customers." } },
+      { '@type': 'Question', name: "Is there a money-back guarantee?", acceptedAnswer: { '@type': 'Answer', text: "Yes. If you're not satisfied with Pro or Scale within 14 days, we offer a full refund. Day Pass is non-refundable." } },
+      { '@type': 'Question', name: "What's included in the Free plan?", acceptedAnswer: { '@type': 'Answer', text: "Free plan includes live security score checks, 3 runbook views per month, CVE guides, and access to our knowledge base." } },
+      { '@type': 'Question', name: "Can I upgrade or downgrade anytime?", acceptedAnswer: { '@type': 'Answer', text: "Yes. You can upgrade to Pro or Scale anytime, or downgrade to a lower tier. Changes take effect immediately." } },
     ],
   }
 
