@@ -23,8 +23,10 @@ const nextConfig = {
   trailingSlash: false,
   poweredByHeader: false,
   compress: true,
-  eslint: { ignoreDuringBuilds: false },
-  typescript: { ignoreBuildErrors: false },
+  // NEXT_DISABLE_ESLINT=1 env var is the Next.js built-in mechanism.
+  // NEXT_DISABLE_TYPE_CHECK=1 is our own convention (set in nixpacks.toml for Railway).
+  eslint: { ignoreDuringBuilds: process.env.NEXT_DISABLE_ESLINT === '1' },
+  typescript: { ignoreBuildErrors: process.env.NEXT_DISABLE_TYPE_CHECK === '1' },
   images: {
     formats: ["image/avif", "image/webp"],
     deviceSizes: [640, 750, 828, 1080, 1200],
@@ -41,7 +43,7 @@ const nextConfig = {
         key: "Content-Security-Policy",
         value: [
           "default-src 'self'",
-          "script-src 'self' 'unsafe-eval' 'unsafe-inline' https://va.vercel-scripts.com",
+          "script-src 'self' 'unsafe-eval' 'unsafe-inline'",
           "style-src 'self' 'unsafe-inline'",
           "img-src 'self' data: blob: https:",
           "font-src 'self' data:",
