@@ -149,6 +149,12 @@ export function resolvePriceFromEnv(product: CheckoutProduct, annual: boolean): 
   return null
 }
 
+export function checkoutPriceAmountCents(product: CheckoutProduct, annual: boolean): number {
+  const lookupProduct = normalizeLookupProduct(product)
+  const lookupKey = getLookupKey(lookupProduct, annual)
+  return PRICE_METADATA[lookupKey].amount_cents
+}
+
 /**
  * Retrieve or create a Stripe Price with a lookup_key
  * Fetches existing price by lookup_key; if not found, creates a new one

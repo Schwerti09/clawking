@@ -4,7 +4,7 @@ import { useState } from "react"
 import BuyButton from "@/components/commerce/BuyButton"
 import SocialProofBlock from "@/components/commerce/SocialProofBlock"
 import type { Locale } from "@/lib/i18n"
-import { AUTOPILOT_PLANS } from "@/lib/autopilot-offering"
+import { AUTOPILOT_PLANS, mapAutopilotPlanToCheckoutProduct } from "@/lib/autopilot-offering"
 import {
   AUTOPILOT_THRESHOLDS,
   buildUpgradeSignalsFromUsage,
@@ -72,7 +72,7 @@ export default function BillingToggle({ locale, isDE, prefix }: { locale: Locale
 
             <div className="mt-5 flex items-end gap-2">
               {annual && (
-                <span className="text-2xl font-bold text-gray-500 line-through pb-2">99€</span>
+                <span className="text-2xl font-bold text-gray-500 line-through pb-2">{proMonthly}€</span>
               )}
               <span className="text-5xl font-black text-white">
                 {annual ? proAnnual : proMonthly}€
@@ -142,7 +142,7 @@ export default function BillingToggle({ locale, isDE, prefix }: { locale: Locale
 
             <div className="mt-5 flex items-end gap-2">
               {annual && (
-                <span className="text-2xl font-bold text-gray-500 line-through pb-2">249€</span>
+                <span className="text-2xl font-bold text-gray-500 line-through pb-2">{teamMonthly}€</span>
               )}
               <span className="text-5xl font-black text-white">
                 {annual ? teamAnnual : teamMonthly}€
@@ -176,7 +176,7 @@ export default function BillingToggle({ locale, isDE, prefix }: { locale: Locale
             <div className="mt-auto pt-6">
               <SocialProofBlock locale={locale} />
               <BuyButton
-                product="team"
+                product={mapAutopilotPlanToCheckoutProduct("scale")}
                 annual={annual}
                 autoRecommend
                 upgradeSignals={buildUpgradeSignalsFromUsage({

@@ -1,5 +1,6 @@
 import Container from "@/components/shared/Container"
 import ShareScore from "@/components/shared/ShareScore"
+import { DAY_PASS_EUR, formatAutopilotPlanMonthlyPrice } from "@/lib/pricing"
 
 export default async function ScorePage(
   props: { searchParams?: Record<string, string | string[] | undefined> }
@@ -10,6 +11,8 @@ export default async function ScorePage(
   const score = Number.isFinite(scoreRaw) ? Math.max(0, Math.min(100, Math.round(scoreRaw))) : 0
   const vulnerable = typeof searchParams?.vulnerable === "string" ? searchParams?.vulnerable === "1" : false
   const needsUpgrade = score < 70
+  const proMonthlyPrice = formatAutopilotPlanMonthlyPrice("pro", "de")
+  const dayPassPrice = `${DAY_PASS_EUR}€`
 
   const params = new URLSearchParams({
     target,
@@ -110,13 +113,13 @@ export default async function ScorePage(
                     href="/pricing"
                     className="px-5 py-3 rounded-2xl bg-gradient-to-r from-amber-400 to-orange-500 hover:from-amber-300 hover:to-orange-400 font-bold text-black transition-all"
                   >
-                    Pro freischalten (49€/Monat) →
+                    {`Pro freischalten (${proMonthlyPrice}/Monat) →`}
                   </a>
                   <a
                     href="/daypass"
                     className="px-5 py-3 rounded-2xl border border-amber-500/60 text-amber-200 hover:text-amber-100 hover:border-amber-400 font-bold transition-colors"
                   >
-                    Day Pass testen (9€ / 24h)
+                    {`Day Pass testen (${dayPassPrice} / 24h)`}
                   </a>
                 </div>
               </div>

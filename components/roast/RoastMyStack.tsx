@@ -8,6 +8,7 @@ import { roastMyStackAction, type RoastStackResult } from "@/app/actions/roast-s
 import type { Locale } from "@/lib/i18n"
 import { RoastShareCard, type RoastShareDict } from "./RoastShareCard"
 import type { RoastLevel } from "@/lib/roast/prompt"
+import { formatAutopilotPlanMonthlyPrice } from "@/lib/pricing"
 
 export type RoastUiDict = RoastShareDict & {
   kicker: string
@@ -102,6 +103,7 @@ function RoastMyStack({
   showTitleBlock = true,
 }: Props) {
   const t = useMemo(() => mergeDict(dictProp), [dictProp])
+  const proPrice = formatAutopilotPlanMonthlyPrice("pro", locale === "de" ? "de" : "en")
   const [input, setInput] = useState("")
   const [level, setLevel] = useState<RoastLevel>("medium")
   const [pending, startTransition] = useTransition()
@@ -341,11 +343,11 @@ function RoastMyStack({
                 <p className="mt-3 text-center text-sm text-gray-400">
                   {locale === 'de' ? (
                     <>
-                      Oder: <Link href={`${prefix}/pricing`} className="text-cyan-400 hover:underline">Pro-Abo ab €49/Monat</Link> — unlimitierte Runbooks + API-Zugriff
+                      Oder: <Link href={`${prefix}/pricing`} className="text-cyan-400 hover:underline">{`Pro-Abo ab ${proPrice}/Monat`}</Link> — unlimitierte Runbooks + API-Zugriff
                     </>
                   ) : (
                     <>
-                      Or: <Link href={`${prefix}/pricing`} className="text-cyan-400 hover:underline">Pro subscription from €49/month</Link> — unlimited runbooks + API access
+                      Or: <Link href={`${prefix}/pricing`} className="text-cyan-400 hover:underline">{`Pro subscription from ${proPrice}/month`}</Link> — unlimited runbooks + API access
                     </>
                   )}
                 </p>

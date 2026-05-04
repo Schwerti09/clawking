@@ -20,7 +20,7 @@ export default function BuyButton({
   autoRecommend,
   upgradeSignals,
 }: {
-  product: "daypass" | "pro" | "team" | "msp"
+  product: "daypass" | "pro" | "team" | "msp" | "starter" | "scale" | "enterprise"
   label: string
   className?: string
   style?: React.CSSProperties

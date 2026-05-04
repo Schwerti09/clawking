@@ -7,6 +7,7 @@ import SummonButton, { type SummonResult } from "@/components/summon/SummonButto
 import SwarmResults from "@/components/summon/SwarmResults"
 import SummonHistory from "@/components/summon/SummonHistory"
 import BuyButton from "@/components/commerce/BuyButton"
+import { DAY_PASS_EUR, formatAutopilotPlanMonthlyPrice } from "@/lib/pricing"
 
 export default function SummonClient() {
   const pathname = usePathname()
@@ -20,6 +21,9 @@ export default function SummonClient() {
   const [loading, setLoading] = useState(true)
   const [result, setResult] = useState<SummonResult | null>(null)
   const [history, setHistory] = useState<SummonResult[]>([])
+  const proPrice = formatAutopilotPlanMonthlyPrice("pro", "de")
+  const scalePrice = formatAutopilotPlanMonthlyPrice("scale", "de")
+  const dayPassPrice = `${DAY_PASS_EUR}€`
 
   useEffect(() => {
     let stop = false
@@ -82,9 +86,9 @@ export default function SummonClient() {
                 }}
               />
               <div className="mt-6 grid grid-cols-3 gap-3">
-                <BuyButton product="daypass" label="Daypass 9,99 € – 24h" className="px-4 py-3 rounded-2xl font-black text-black" style={{ background: "linear-gradient(135deg,#ff0066,#ff9900)" }} />
-                <BuyButton product="pro" label="Pro 49 € / Monat" className="px-4 py-3 rounded-2xl font-black text-black" style={{ background: "linear-gradient(135deg,#a78bfa,#00ff9d)" }} />
-                <BuyButton product="team" label="Team 89 € / Monat" className="px-4 py-3 rounded-2xl font-black text-white border" style={{ borderColor: "rgba(0,255,157,0.4)" }} />
+                <BuyButton product="daypass" label={`Daypass ${dayPassPrice} – 24h`} className="px-4 py-3 rounded-2xl font-black text-black" style={{ background: "linear-gradient(135deg,#ff0066,#ff9900)" }} />
+                <BuyButton product="pro" label={`Pro ${proPrice} / Monat`} className="px-4 py-3 rounded-2xl font-black text-black" style={{ background: "linear-gradient(135deg,#a78bfa,#00ff9d)" }} />
+                <BuyButton product="scale" label={`Scale ${scalePrice} / Monat`} className="px-4 py-3 rounded-2xl font-black text-white border" style={{ borderColor: "rgba(0,255,157,0.4)" }} />
               </div>
             </div>
             <div>
@@ -100,7 +104,7 @@ export default function SummonClient() {
             <div className="text-sm font-bold">Deine Swarm‑History geht verloren</div>
             <div className="text-xs text-gray-400 mt-1">Upgrade auf Pro für dauerhafte History & Oracle‑Modus.</div>
             <div className="mt-3 flex gap-2">
-              <BuyButton product="pro" label="Pro 49 € / Monat" className="px-3 py-2 rounded-xl font-black text-black" style={{ background: "linear-gradient(135deg,#a78bfa,#00ff9d)" }} />
+              <BuyButton product="pro" label={`Pro ${proPrice} / Monat`} className="px-3 py-2 rounded-xl font-black text-black" style={{ background: "linear-gradient(135deg,#a78bfa,#00ff9d)" }} />
               <a href={`${prefix}/pricing`} className="px-3 py-2 rounded-xl border border-white/10 text-gray-300 hover:bg-white/5">Mehr erfahren</a>
             </div>
           </div>

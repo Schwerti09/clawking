@@ -9,6 +9,7 @@ import TierGateOverlay from "@/components/summon/TierGateOverlay"
 import Container from "@/components/shared/Container"
 import type { MyceliumGraph, RunbookSummary, OracleResult } from "@/lib/mycelium"
 import type { Runbook } from "@/lib/pseo"
+import { DAY_PASS_EUR, formatAutopilotPlanMonthlyPrice } from "@/lib/pricing"
 
 const MyceliumClientLoader = dynamic(() => import("@/components/visual/MyceliumClientLoader"), { ssr: false })
 const IntelFeed = dynamic(() => import("@/components/intel/IntelFeed"), { ssr: false })
@@ -26,6 +27,8 @@ type Teaser = {
 }
 
 export default function IntelNexusClient() {
+  const proPrice = formatAutopilotPlanMonthlyPrice("pro", "de")
+  const dayPassPrice = `${DAY_PASS_EUR}€`
   const [q, setQ] = useState("")
   const [secondsLeft, setSecondsLeft] = useState(0)
   const [running, setRunning] = useState(false)
@@ -227,8 +230,8 @@ export default function IntelNexusClient() {
                         </div>
                       )}
                       <div className="mt-4 grid grid-cols-2 gap-3">
-                        <BuyButton product="daypass" label="Daypass 9,99 € - 24h" className="px-4 py-3 rounded-2xl font-black text-black" style={{ background: "linear-gradient(135deg,#ff0033,#ff7a00)" }} />
-                        <BuyButton product="pro" label="Pro 49 € / Monat" className="px-4 py-3 rounded-2xl font-black text-black" style={{ background: "linear-gradient(135deg,#a78bfa,#00ff9d)" }} />
+                        <BuyButton product="daypass" label={`Daypass ${dayPassPrice} - 24h`} className="px-4 py-3 rounded-2xl font-black text-black" style={{ background: "linear-gradient(135deg,#ff0033,#ff7a00)" }} />
+                        <BuyButton product="pro" label={`Pro ${proPrice} / Monat`} className="px-4 py-3 rounded-2xl font-black text-black" style={{ background: "linear-gradient(135deg,#a78bfa,#00ff9d)" }} />
                       </div>
                       <div className="mt-2 text-xs text-gray-400">Export & Alerts dauerhaft mit Pro</div>
                     </div>
@@ -260,7 +263,7 @@ export default function IntelNexusClient() {
             <div className="text-sm font-bold">Dein Teaser geht verloren</div>
             <div className="text-xs text-gray-400 mt-1">Upgrade auf Pro für dauerhafte Reports, Alerts & Feed‑History.</div>
             <div className="mt-3 flex gap-2">
-              <BuyButton product="pro" label="Pro 49 € / Monat" className="px-3 py-2 rounded-xl font-black text-black"
+              <BuyButton product="pro" label={`Pro ${proPrice} / Monat`} className="px-3 py-2 rounded-xl font-black text-black"
                          style={{ background: "linear-gradient(135deg,#a78bfa,#00ff9d)" }} />
               <a href={`${prefix}/pricing`} className="px-3 py-2 rounded-xl border border-white/10 text-gray-300 hover:bg-white/5">Mehr erfahren</a>
             </div>

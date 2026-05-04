@@ -12,6 +12,15 @@ export const DAY_PASS_EUR = 9
 
 export { AUTOPILOT_PLANS, type AutopilotPlanId, formatAutopilotPlanMonthlyPrice }
 
+export type PublicPricingPlanId = "daypass" | AutopilotPlanId
+
+export const PUBLIC_PRICING_EUR: Readonly<Record<PublicPricingPlanId, number>> = {
+  daypass: DAY_PASS_EUR,
+  starter: AUTOPILOT_PLANS.starter.monthlyPriceEur,
+  pro: AUTOPILOT_PLANS.pro.monthlyPriceEur,
+  scale: AUTOPILOT_PLANS.scale.monthlyPriceEur,
+}
+
 export function formatDayPassEur(locale: "de" | "en"): string {
   return locale === "de" ? `${DAY_PASS_EUR}€` : `€${DAY_PASS_EUR}`
 }

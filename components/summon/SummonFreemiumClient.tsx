@@ -10,6 +10,7 @@ import TierGateOverlay from "@/components/summon/TierGateOverlay"
 import type { OracleResult } from "@/lib/mycelium"
 import type { Runbook } from "@/lib/pseo"
 import TeaserResultPanel from "@/components/summon/TeaserResultPanel"
+import { formatAutopilotPlanMonthlyPrice } from "@/lib/pricing"
 
 const MyceliumClientLoader = dynamic(() => import("@/components/visual/MyceliumClientLoader"), { ssr: false })
 const FullSummonClient = dynamic(() => import("@/components/summon/SummonClient"), { ssr: false })
@@ -38,6 +39,7 @@ export default function SummonFreemiumClient() {
   const [secondsLeft, setSecondsLeft] = useState(0)
   const [running, setRunning] = useState(false)
   const [busy, setBusy] = useState(false)
+  const proPrice = formatAutopilotPlanMonthlyPrice("pro", "de")
   const [teaser, setTeaser] = useState<Teaser | null>(null)
   const [tier, setTier] = useState<Tier>("free")
   const [permanent, setPermanent] = useState(false)
@@ -241,7 +243,7 @@ export default function SummonFreemiumClient() {
             <div className="text-sm font-bold">Dein Teaser-Ergebnis geht verloren – upgrade jetzt</div>
             <div className="text-xs text-gray-400 mt-1">Pro schaltet dauerhafte History, Export & Oracle frei.</div>
             <div className="mt-3 flex gap-2">
-              <BuyButton product="pro" label="Pro 49 € / Monat" className="px-3 py-2 rounded-xl font-black text-black"
+              <BuyButton product="pro" label={`Pro ${proPrice} / Monat`} className="px-3 py-2 rounded-xl font-black text-black"
                          style={{ background: "linear-gradient(135deg,#a78bfa,#00ff9d)" }} />
               <a href={`${prefix}/pricing`} className="px-3 py-2 rounded-xl border border-white/10 text-gray-300 hover:bg-white/5">Mehr erfahren</a>
             </div>

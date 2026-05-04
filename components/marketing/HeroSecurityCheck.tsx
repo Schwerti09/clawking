@@ -10,6 +10,7 @@ import dynamic from "next/dynamic"
 import { useI18n } from "@/components/i18n/I18nProvider"
 import Image from "next/image"
 import { trackEvent } from "@/lib/analytics"
+import { DAY_PASS_EUR, formatAutopilotPlanMonthlyPrice } from "@/lib/pricing"
 
 // WORLD BEAST FINAL LAUNCH: lazy-load upsell modal
 const UpsellModal = dynamic(() => import("@/components/onboarding/UpsellModal"), { ssr: false })
@@ -51,6 +52,8 @@ export default function HeroSecurityCheck({ dict = {} }: { dict?: Record<string,
   const [publicScoreToken, setPublicScoreToken] = useState<string | null>(null)
   const [generatingPublicScore, setGeneratingPublicScore] = useState(false)
   const ctaLabel = isGerman ? "JETZT KOSTENLOS ANALYSIEREN" : "ANALYZE FOR FREE NOW"
+  const proMonthlyPrice = formatAutopilotPlanMonthlyPrice("pro", isGerman ? "de" : "en")
+  const dayPassPrice = isGerman ? `${DAY_PASS_EUR}€` : `€${DAY_PASS_EUR}`
 
   const shareUrl = useMemo(() => {
     if (!result) return ""
@@ -347,7 +350,7 @@ export default function HeroSecurityCheck({ dict = {} }: { dict?: Record<string,
                             href={`${prefix}/pricing`}
                             className="inline-flex items-center gap-2 px-4 py-2 rounded-lg font-semibold text-sm text-white bg-orange-600 hover:bg-orange-500 transition-colors"
                           >
-                            {isGerman ? "Pro starten (49€/Monat)" : "Start Pro (€49/month)"}
+                            {isGerman ? `Pro starten (${proMonthlyPrice}/Monat)` : `Start Pro (${proMonthlyPrice}/month)`}
                             <span className="text-lg">→</span>
                           </a>
                         </div>
@@ -452,19 +455,19 @@ export default function HeroSecurityCheck({ dict = {} }: { dict?: Record<string,
                       <div className="text-sm text-cyan-200 font-bold mb-2">{isGerman ? "Sofort raus aus dem Risiko?" : "Want out of the risk immediately?"}</div>
                       <div className="text-gray-200 mb-3">
                         {isGerman
-                          ? "Pro: dauerhafter Vollzugriff ab 49€/Monat. Day Pass: 24h Vollzugriff für 9€."
-                          : "Pro: permanent full access from €49/month. Day Pass: 24h full access for €9."}
+                          ? `Pro: dauerhafter Vollzugriff ab ${proMonthlyPrice}/Monat. Day Pass: 24h Vollzugriff für ${dayPassPrice}.`
+                          : `Pro: permanent full access from ${proMonthlyPrice}/month. Day Pass: 24h full access for ${dayPassPrice}.`}
                       </div>
                       <div className="flex flex-col sm:flex-row gap-3">
                         <BuyButton
                           product="pro"
-                          label={isGerman ? "Pro 49 € / Monat" : "Pro €49 / month"}
+                          label={isGerman ? `Pro ${proMonthlyPrice} / Monat` : `Pro ${proMonthlyPrice} / month`}
                           className="px-5 py-3 rounded-2xl font-black bg-gradient-to-r from-cyan-500 to-blue-600 hover:opacity-90"
                           analyticsSource="check_vulnerable_card"
                         />
                         <BuyButton
                           product="daypass"
-                          label={isGerman ? "Day Pass (9€ / 24h)" : "Day Pass (€9 / 24h)"}
+                          label={isGerman ? `Day Pass (${dayPassPrice} / 24h)` : `Day Pass (${dayPassPrice} / 24h)`}
                           className="px-5 py-3 rounded-2xl font-black bg-gradient-to-r from-orange-500 to-red-600 hover:opacity-90"
                           analyticsSource="check_vulnerable_card"
                         />
@@ -509,14 +512,14 @@ export default function HeroSecurityCheck({ dict = {} }: { dict?: Record<string,
                       <div className="flex flex-col sm:flex-row gap-3">
                         <BuyButton
                           product="pro"
-                          label={isGerman ? "Pro starten (49€/Mo)" : "Start Pro (€49/mo)"}
+                          label={isGerman ? `Pro starten (${proMonthlyPrice}/Mo)` : `Start Pro (${proMonthlyPrice}/mo)`}
                           className="px-5 py-3 rounded-2xl font-black text-black"
                           style={{ background: "linear-gradient(135deg, #f59e0b 0%, #d97706 100%)", boxShadow: "0 0 20px rgba(245,158,11,0.25)" }}
                           analyticsSource="check_score_below_70"
                         />
                         <BuyButton
                           product="daypass"
-                          label={isGerman ? "Erst testen: Day Pass 9€" : "Try first: Day Pass €9"}
+                          label={isGerman ? `Erst testen: Day Pass ${dayPassPrice}` : `Try first: Day Pass ${dayPassPrice}`}
                           className="px-5 py-3 rounded-2xl font-black border border-amber-700/50 text-amber-200 hover:bg-amber-900/20"
                           analyticsSource="check_score_below_70"
                         />

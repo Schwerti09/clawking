@@ -12,6 +12,7 @@ import { DEFAULT_LOCALE, type Locale } from "@/lib/i18n"
 import { getDictionary } from "@/lib/getDictionary"
 import { AUTOPILOT_PLANS } from "@/lib/autopilot-offering"
 import { MARKETING_METRICS } from "@/lib/marketing-metrics"
+import { DAY_PASS_EUR } from "@/lib/pricing"
 import dynamic from "next/dynamic"
 
 const CouponBanner = dynamic(() => import("@/components/marketing/CouponBanner"), { ssr: false })
@@ -523,7 +524,7 @@ export default async function PricingPage() {
                 </div>
                 <div className="text-xl font-black text-white font-heading mb-2">Autopilot Starter Trial</div>
                 <div className="flex items-end gap-2 mb-3">
-                  <span className="text-4xl font-black text-white">9€</span>
+                  <span className="text-4xl font-black text-white">{DAY_PASS_EUR}€</span>
                   <span className="text-sm text-gray-400 pb-1">{pricing.dayPassOnce}</span>
                 </div>
                 <p className="text-sm text-gray-300 leading-relaxed max-w-lg">

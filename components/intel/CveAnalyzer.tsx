@@ -2,6 +2,7 @@
 
 import React, { useMemo, useState } from "react"
 import { motion, useReducedMotion } from "framer-motion"
+import { DAY_PASS_EUR, formatAutopilotPlanMonthlyPrice } from "@/lib/pricing"
 
 type Severity = "CRITICAL" | "HIGH" | "MEDIUM" | "LOW"
 type AnalyzeResult = {
@@ -36,6 +37,8 @@ export default function CveAnalyzer({ prefix = "", dict = {} as IntelDict }: { p
   const [err, setErr] = useState<string | null>(null)
   const [res, setRes] = useState<AnalyzeResult | null>(null)
   const [freeLimited, setFreeLimited] = useState<{ resetAt?: number } | null>(null)
+  const proPrice = formatAutopilotPlanMonthlyPrice("pro", "de")
+  const dayPassPrice = `${DAY_PASS_EUR}€`
   const df = useMemo(
     () =>
       new Intl.DateTimeFormat(typeof navigator !== "undefined" ? navigator.language : "en-US", {
@@ -193,9 +196,9 @@ export default function CveAnalyzer({ prefix = "", dict = {} as IntelDict }: { p
             <div className="text-lg md:text-xl font-black text-white">Unbegrenzte CVE‑Analysen freischalten</div>
             <div className="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-2">
               <a href={`${prefix}/pricing`} className="px-4 py-3 rounded-2xl font-black text-black text-sm"
-                 style={{ background: "linear-gradient(135deg,#ff0033,#ff7a00)" }}>Day Pass 9 €</a>
+                 style={{ background: "linear-gradient(135deg,#ff0033,#ff7a00)" }}>{`Day Pass ${dayPassPrice}`}</a>
               <a href={`${prefix}/pricing`} className="px-4 py-3 rounded-2xl font-black text-black text-sm"
-                 style={{ background: "linear-gradient(135deg,#a78bfa,#00ff9d)" }}>Pro 49 € / Monat</a>
+                 style={{ background: "linear-gradient(135deg,#a78bfa,#00ff9d)" }}>{`Pro ${proPrice} / Monat`}</a>
             </div>
             <div className="mt-2 text-xs text-gray-400">Day Pass: 24h Zugriff — Pro: dauerhaft mit History, Export & Oracle</div>
           </div>

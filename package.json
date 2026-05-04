@@ -48,7 +48,7 @@
     "build:data": "node scripts/generate-runbooks-json.js",
     "post-batch": "powershell -ExecutionPolicy Bypass -File scripts/post-batch-orchestrator.ps1",
     "test": "jest",
-    "test:autopilot": "jest __tests__/autopilot-offering.test.ts __tests__/autopilot-delivery.test.ts __tests__/checkout-upgrade-signals.test.ts __tests__/autopilot-thresholds.test.ts __tests__/autopilot-retention.test.ts --runInBand --ci",
+    "test:autopilot": "jest __tests__/autopilot-offering.test.ts __tests__/autopilot-delivery.test.ts __tests__/checkout-upgrade-signals.test.ts __tests__/autopilot-thresholds.test.ts __tests__/autopilot-retention.test.ts __tests__/pricing-checkout-consistency.test.ts --runInBand --ci",
     "test:security-core": "jest __tests__/security-core.test.ts --runInBand --ci",
     "test:audit": "jest __tests__/i18n-seo-consistency.test.ts __tests__/api-surface-audit.test.ts --runInBand --ci",
     "test:coverage": "jest --coverage",
