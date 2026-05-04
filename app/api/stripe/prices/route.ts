@@ -35,6 +35,18 @@ export async function GET() {
       currency: "eur",
       interval: "year",
     },
+    starter_monthly: {
+      lookupKey: LOOKUP_KEYS.starter_monthly,
+      amount: 2900,
+      currency: "eur",
+      interval: "month",
+    },
+    starter_annual: {
+      lookupKey: LOOKUP_KEYS.starter_annual,
+      amount: 27840,
+      currency: "eur",
+      interval: "year",
+    },
     team_monthly: {
       lookupKey: LOOKUP_KEYS.team_monthly,
       amount: 24900,
