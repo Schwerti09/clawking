@@ -20,9 +20,9 @@ export async function generateMetadata({
     : "de") as Locale;
 
   return {
-    title: locale === "de" 
+    title: locale === "de"
       ? "Jenkins Security 2026 | CI/CD Hardening & Pipeline Security"
-      : "Jenkins Security 2026 | CI/CD Hardening & Pipeline Security",
+      : "Jenkins Security 2026 | CI/CD Hardening & Pipeline Security (EN)",
     description: locale === "de"
       ? "Jenkins Security: Matrix Authorization, CSRF Protection, Script Security, Pipeline Sandboxing & Credentials Management."
       : "Jenkins security: matrix authorization, CSRF protection, script security, pipeline sandboxing & credentials management.",
@@ -97,8 +97,8 @@ export default async function JenkinsSecurityPage({
 
             <div className="grid md:grid-cols-3 gap-6 mb-8">
               <div className="bg-red-900 border border-red-700 rounded-xl p-6">
-                <h3 className="font-semibold text-red-900 mb-2">Authentication</h3>
-                <ul className="text-sm text-red-800 space-y-1">
+                <h3 className="font-semibold text-red-300 mb-2">Authentication</h3>
+                <ul className="text-sm text-red-400 space-y-1">
                   <li>• Matrix Authorization</li>
                   <li>• LDAP/Active Directory</li>
                   <li>• SSO (SAML, OAuth)</li>

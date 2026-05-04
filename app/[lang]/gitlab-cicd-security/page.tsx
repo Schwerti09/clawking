@@ -20,9 +20,9 @@ export async function generateMetadata({
     : "de") as Locale;
 
   return {
-    title: locale === "de" 
+    title: locale === "de"
       ? "GitLab CI/CD Security 2026 | Pipeline Security & Compliance"
-      : "GitLab CI/CD Security 2026 | Pipeline Security & Compliance",
+      : "GitLab CI/CD Security 2026 | Pipeline Security & Compliance (EN)",
     description: locale === "de"
       ? "GitLab CI/CD Security: Secrets Management, SAST/DAST, Container Scanning, Compliance Pipelines, OIDC & Vault Integration."
       : "GitLab CI/CD security: secrets management, SAST/DAST, container scanning, compliance pipelines, OIDC & Vault integration.",
@@ -106,8 +106,8 @@ export default async function GitLabSecurityPage({
                 </ul>
               </div>
               <div className="bg-red-900 border border-red-700 rounded-xl p-6">
-                <h3 className="font-semibold text-red-900 mb-2">Runtime Security</h3>
-                <ul className="text-sm text-red-800 space-y-1">
+                <h3 className="font-semibold text-red-300 mb-2">Runtime Security</h3>
+                <ul className="text-sm text-red-400 space-y-1">
                   <li>• DAST (Dynamische Tests)</li>
                   <li>• Container Scanning</li>
                   <li>• Fuzz Testing</li>

@@ -248,10 +248,10 @@ export default async function XXE2026Page({
                 </p>
 
                 <div className="bg-red-900 border-l-4 border-red-500 p-6 rounded-r-lg mb-8">
-                  <h3 className="text-red-900 font-semibold mb-2 flex items-center gap-2">
+                  <h3 className="text-red-300 font-semibold mb-2 flex items-center gap-2">
                     <span>⚠️</span> Warum XXE 2026 besonders kritisch ist
                   </h3>
-                  <ul className="text-red-800 space-y-2 list-disc list-inside">
+                  <ul className="text-red-400 space-y-2 list-disc list-inside">
                     <li>Über 40% aller Enterprise-Anwendungen verwenden XML-Verarbeitung</li>
                     <li>Modern APIs nutzen oft XML-basierte Protokolle (SOAP, SAML)</li>
                     <li>Microservices-Architekturen erhöhen die Angriffsfläche exponentiell</li>

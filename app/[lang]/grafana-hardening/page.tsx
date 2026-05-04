@@ -22,9 +22,9 @@ export async function generateMetadata({
     : "de") as Locale;
 
   return {
-    title: locale === "de" 
+    title: locale === "de"
       ? "Grafana Hardening 2026: Sicherheits-Guide | SOC 2 & ISO 27001"
-      : "Grafana Hardening 2026: Security Guide | SOC 2 & ISO 27001",
+      : "Grafana Hardening 2026: Security Guide | SOC 2 & ISO 27001 Compliance",
     description: locale === "de"
       ? "Kompletter Grafana Hardening Guide: Authentifizierung, Autorisierung, Netzwerk-Security, Secrets Management & Compliance. Enterprise Observability Security."
       : "Complete Grafana hardening guide: Authentication, authorization, network security, secrets management & compliance. Enterprise observability security.",
@@ -118,10 +118,10 @@ export default async function GrafanaHardeningPage({
             </p>
 
             <div className="bg-red-900 border-l-4 border-red-500 rounded-r-xl p-6 mb-8">
-              <h3 className="text-red-900 font-semibold mb-2">
+              <h3 className="text-red-300 font-semibold mb-2">
                 {t(locale, "⚠️ Risiken eines unsicheren Grafana", "⚠️ Risks of an Unsecured Grafana")}
               </h3>
-              <ul className="text-red-800 space-y-2 text-sm">
+              <ul className="text-red-400 space-y-2 text-sm">
                 <li>• {t(locale, "Einsehbarkeit aller System-Metriken und Performance-Daten", "Visibility of all system metrics and performance data")}</li>
                 <li>• {t(locale, "Zugriff auf Logs mit potenziell sensiblen Daten", "Access to logs with potentially sensitive data")}</li>
                 <li>• {t(locale, "Datenexfiltration über Alerting-Kanäle", "Data exfiltration via alerting channels")}</li>
@@ -243,7 +243,7 @@ customRoles:
                 </p>
               </div>
               <div className="bg-red-900 rounded-lg p-4 border border-red-700">
-                <h4 className="font-semibold text-red-900 mb-2">Admin</h4>
+                <h4 className="font-semibold text-red-300 mb-2">Admin</h4>
                 <p className="text-sm text-red-300">
                   {t(locale, "Alle Berechtigungen + Benutzerverwaltung", "All permissions + user management")}
                 </p>
