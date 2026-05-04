@@ -18,6 +18,12 @@ export const LOOKUP_KEYS = {
 type LookupKey = (typeof LOOKUP_KEYS)[keyof typeof LOOKUP_KEYS]
 export type CheckoutProduct = "daypass" | "pro" | "team" | "msp" | "enterprise" | "starter" | "scale"
 
+export const ANNUAL_DISCOUNT_RATE = 0.8
+
+export function discountedAnnualAmountCents(monthlyPriceEur: number): number {
+  return Math.round(monthlyPriceEur * 12 * ANNUAL_DISCOUNT_RATE * 100)
+}
+
 /**
  * Price metadata: amount in cents (EUR), currency, and interval
  * Amounts match lib/autopilot-offering.ts with 20% annual discount
@@ -38,7 +44,7 @@ const PRICE_METADATA: Record<
     interval: "month",
   },
   clawguru_pro_annual: {
-    amount_cents: 95040, // 99 * 0.8 * 12 = 950.4 → 95040 cents
+    amount_cents: discountedAnnualAmountCents(99), // 99 * 0.8 * 12 = 950.4 → 95040 cents
     currency: "eur",
     type: "recurring",
     interval: "year",
@@ -50,7 +56,7 @@ const PRICE_METADATA: Record<
     interval: "month",
   },
   clawguru_starter_annual: {
-    amount_cents: 27840, // 29 * 0.8 * 12 = 278.4 → 27840 cents
+    amount_cents: discountedAnnualAmountCents(29), // 29 * 0.8 * 12 = 278.4 → 27840 cents
     currency: "eur",
     type: "recurring",
     interval: "year",
@@ -62,7 +68,7 @@ const PRICE_METADATA: Record<
     interval: "month",
   },
   clawguru_team_annual: {
-    amount_cents: 239040, // 249 * 0.8 * 12 = 2387.2 → 239040 cents
+    amount_cents: discountedAnnualAmountCents(249), // 249 * 0.8 * 12 = 2387.2 → 239040 cents
     currency: "eur",
     type: "recurring",
     interval: "year",

@@ -72,7 +72,7 @@ export default function BillingToggle({ locale, isDE, prefix }: { locale: Locale
 
             <div className="mt-5 flex items-end gap-2">
               {annual && (
-                <span className="text-2xl font-bold text-gray-500 line-through pb-2">{proMonthly}€</span>
+                <span className="text-2xl font-bold text-gray-500 line-through pb-2">{proMonthly * 12}€</span>
               )}
               <span className="text-5xl font-black text-white">
                 {annual ? proAnnual : proMonthly}€
@@ -142,7 +142,7 @@ export default function BillingToggle({ locale, isDE, prefix }: { locale: Locale
 
             <div className="mt-5 flex items-end gap-2">
               {annual && (
-                <span className="text-2xl font-bold text-gray-500 line-through pb-2">{teamMonthly}€</span>
+                <span className="text-2xl font-bold text-gray-500 line-through pb-2">{teamMonthly * 12}€</span>
               )}
               <span className="text-5xl font-black text-white">
                 {annual ? teamAnnual : teamMonthly}€
@@ -185,7 +185,7 @@ export default function BillingToggle({ locale, isDE, prefix }: { locale: Locale
                   policyControlsRequested: AUTOPILOT_THRESHOLDS.scale.needsPolicyControls,
                 })}
                 label={isDE
-                  ? `Scale starten (${annual ? teamAnnual : teamMonthly}€/Monat) → Stripe`
+                  ? `Teams starten (${annual ? teamAnnual : teamMonthly}€/Monat) → Stripe`
                   : `Start Scale (€${annual ? teamAnnual : teamMonthly}/month) → Stripe`}
                 className="w-full py-3 px-6 rounded-2xl font-black text-sm text-white border transition-all duration-300 hover:bg-white/5 disabled:opacity-60"
                 style={{ borderColor: "rgba(0,255,157,0.4)", boxShadow: "0 0 20px rgba(0,255,157,0.1)" }}
