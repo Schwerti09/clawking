@@ -1,4 +1,5 @@
 import {
+  getProductIdForLookupKey,
   planFromPriceId,
   planFromSubscription,
   resolveCheckoutPriceWithOptions,
@@ -19,6 +20,12 @@ const TRACKED_ENV_VARS = [
   "STRIPE_PRICE_SCALE_ANNUAL",
   "STRIPE_PRICE_MSP",
   "STRIPE_PRICE_MSP_ANNUAL",
+  // product IDs used for price auto-creation
+  "STRIPE_PRODUCT_DAYPASS",
+  "STRIPE_PRODUCT_STARTER",
+  "STRIPE_PRODUCT_PRO",
+  "STRIPE_PRODUCT_TEAM",
+  "STRIPE_PRODUCT_MSP",
 ] as const
 
 const SAVED_ENV: Record<string, string | undefined> = {}
@@ -79,6 +86,70 @@ describe("stripe-pricing resolver", () => {
     await expect(
       resolveCheckoutPriceWithOptions("msp", false, { allowCreate: false, allowLookup: false })
     ).rejects.toThrow("No checkout price resolvable for product=msp")
+  })
+})
+
+describe("getProductIdForLookupKey fallback chain", () => {
+  afterEach(() => {
+    delete process.env.STRIPE_PRODUCT_STARTER
+    delete process.env.STRIPE_PRODUCT_PRO
+    delete process.env.STRIPE_PRODUCT_TEAM
+    delete process.env.STRIPE_PRODUCT_MSP
+    delete process.env.STRIPE_PRODUCT_DAYPASS
+  })
+
+  it("returns STRIPE_PRODUCT_STARTER when set for starter lookup key", () => {
+    process.env.STRIPE_PRODUCT_STARTER = "prod_starter"
+    process.env.STRIPE_PRODUCT_PRO = "prod_pro"
+    expect(getProductIdForLookupKey("clawguru_starter_monthly")).toBe("prod_starter")
+  })
+
+  it("falls back to STRIPE_PRODUCT_PRO for starter when STRIPE_PRODUCT_STARTER is missing", () => {
+    process.env.STRIPE_PRODUCT_PRO = "prod_pro_fallback"
+    expect(getProductIdForLookupKey("clawguru_starter_monthly")).toBe("prod_pro_fallback")
+    expect(getProductIdForLookupKey("clawguru_starter_annual")).toBe("prod_pro_fallback")
+  })
+
+  it("falls back to STRIPE_PRODUCT_TEAM for starter when both STARTER and PRO are missing", () => {
+    process.env.STRIPE_PRODUCT_TEAM = "prod_team_fallback"
+    expect(getProductIdForLookupKey("clawguru_starter_monthly")).toBe("prod_team_fallback")
+  })
+
+  it("throws with helpful message including expected amount when no product ID is available", () => {
+    expect(() => getProductIdForLookupKey("clawguru_starter_monthly")).toThrow(
+      "€29.00"
+    )
+    expect(() => getProductIdForLookupKey("clawguru_starter_monthly")).toThrow(
+      "STRIPE_PRICE_STARTER=price_xxx"
+    )
+  })
+
+  it("falls back to STRIPE_PRODUCT_TEAM for pro when STRIPE_PRODUCT_PRO is missing", () => {
+    process.env.STRIPE_PRODUCT_TEAM = "prod_team"
+    expect(getProductIdForLookupKey("clawguru_pro_monthly")).toBe("prod_team")
+  })
+
+  it("falls back to STRIPE_PRODUCT_PRO for team when STRIPE_PRODUCT_TEAM is missing", () => {
+    process.env.STRIPE_PRODUCT_PRO = "prod_pro"
+    expect(getProductIdForLookupKey("clawguru_team_monthly")).toBe("prod_pro")
+  })
+
+  it("falls back msp to team then pro product", () => {
+    process.env.STRIPE_PRODUCT_PRO = "prod_pro"
+    expect(getProductIdForLookupKey("clawguru_msp_monthly")).toBe("prod_pro")
+    process.env.STRIPE_PRODUCT_TEAM = "prod_team"
+    expect(getProductIdForLookupKey("clawguru_msp_monthly")).toBe("prod_team")
+    process.env.STRIPE_PRODUCT_MSP = "prod_msp"
+    expect(getProductIdForLookupKey("clawguru_msp_monthly")).toBe("prod_msp")
+  })
+
+  it("daypass uses only STRIPE_PRODUCT_DAYPASS (no fallback)", () => {
+    process.env.STRIPE_PRODUCT_PRO = "prod_pro"
+    expect(() => getProductIdForLookupKey("clawguru_daypass_onetime")).toThrow(
+      "No STRIPE_PRODUCT_* env var found"
+    )
+    process.env.STRIPE_PRODUCT_DAYPASS = "prod_daypass"
+    expect(getProductIdForLookupKey("clawguru_daypass_onetime")).toBe("prod_daypass")
   })
 })
 
