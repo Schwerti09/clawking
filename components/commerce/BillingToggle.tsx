@@ -214,7 +214,7 @@ export default function BillingToggle({ locale, isDE, prefix }: { locale: Locale
 
             <div className="mt-5 flex items-end gap-2">
               {annual && (
-                <span className="text-2xl font-bold text-gray-500 line-through pb-2">249€</span>
+                <span className="text-2xl font-bold text-gray-500 line-through pb-2">{scaleMonthly}€</span>
               )}
               <span className="text-5xl font-black text-white">
                 {annual ? scaleAnnual : scaleMonthly}€
