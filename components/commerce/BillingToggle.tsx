@@ -16,10 +16,10 @@ export default function BillingToggle({ locale, isDE, prefix }: { locale: Locale
 
   const starterMonthly = AUTOPILOT_PLANS.starter.monthlyPriceEur
   const proMonthly = AUTOPILOT_PLANS.pro.monthlyPriceEur
-  const teamMonthly = AUTOPILOT_PLANS.scale.monthlyPriceEur
+  const scaleMonthly = AUTOPILOT_PLANS.scale.monthlyPriceEur
   const starterAnnual = Math.round(starterMonthly * 0.8)
   const proAnnual = Math.round(proMonthly * 0.8)
-  const teamAnnual = Math.round(teamMonthly * 0.8)
+  const scaleAnnual = Math.round(scaleMonthly * 0.8)
 
   return (
     <div>
@@ -217,7 +217,7 @@ export default function BillingToggle({ locale, isDE, prefix }: { locale: Locale
                 <span className="text-2xl font-bold text-gray-500 line-through pb-2">249€</span>
               )}
               <span className="text-5xl font-black text-white">
-                {annual ? teamAnnual : teamMonthly}€
+                {annual ? scaleAnnual : scaleMonthly}€
               </span>
               <span className="text-sm text-gray-400 pb-2">
                 {pick(isDE, "/Monat", "/month")}
@@ -226,8 +226,8 @@ export default function BillingToggle({ locale, isDE, prefix }: { locale: Locale
             {annual && (
               <div className="text-xs text-emerald-400 font-semibold mt-1">
                 {isDE
-                  ? `Jährlich abgerechnet (${teamAnnual * 12}€/Jahr)`
-                  : `Billed annually (€${teamAnnual * 12}/year)`}
+                  ? `Jährlich abgerechnet (${scaleAnnual * 12}€/Jahr)`
+                  : `Billed annually (€${scaleAnnual * 12}/year)`}
               </div>
             )}
 
@@ -257,8 +257,8 @@ export default function BillingToggle({ locale, isDE, prefix }: { locale: Locale
                   policyControlsRequested: AUTOPILOT_THRESHOLDS.scale.needsPolicyControls,
                 })}
                 label={isDE
-                  ? `Scale starten (${annual ? teamAnnual : teamMonthly}€/Monat) → Stripe`
-                  : `Start Scale (€${annual ? teamAnnual : teamMonthly}/month) → Stripe`}
+                  ? `Scale starten (${annual ? scaleAnnual : scaleMonthly}€/Monat) → Stripe`
+                  : `Start Scale (€${annual ? scaleAnnual : scaleMonthly}/month) → Stripe`}
                 className="w-full py-3 px-6 rounded-2xl font-black text-sm text-white border transition-all duration-300 hover:bg-white/5 disabled:opacity-60"
                 style={{ borderColor: "rgba(0,255,157,0.4)", boxShadow: "0 0 20px rgba(0,255,157,0.1)" }}
               />
