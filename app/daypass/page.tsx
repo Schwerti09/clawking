@@ -5,6 +5,9 @@ import ExitIntentPopup from "@/components/marketing/ExitIntentPopup"
 import UrgencyBanner from "@/components/marketing/UrgencyBanner"
 import SocialProofCounter from "@/components/marketing/SocialProofCounter"
 
+const EXIT_COUPON_CODE = process.env.NEXT_PUBLIC_EXIT_COUPON_CODE ?? "SAVE5"
+const EXIT_DISCOUNT_AMOUNT = process.env.NEXT_PUBLIC_EXIT_DISCOUNT_AMOUNT ?? "€5"
+
 export const metadata = {
   title: "24h Day Pass – Sofortzugang bei IT-Notfall | ClawGuru",
   description:
@@ -361,7 +364,7 @@ export default function DayPassLandingPage() {
       </Container>
 
       {/* TASK A3: Exit-Intent Popup with €5 discount */}
-      <ExitIntentPopup couponCode="SAVE5" discountAmount="€5" />
+      <ExitIntentPopup couponCode={EXIT_COUPON_CODE} discountAmount={EXIT_DISCOUNT_AMOUNT} />
     </main>
   )
 }

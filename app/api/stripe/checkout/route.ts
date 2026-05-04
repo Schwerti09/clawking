@@ -39,7 +39,8 @@ export async function GET(req: NextRequest) {
     const product: Product = (allowed as readonly string[]).includes(raw) ? (raw as Product) : "daypass"
 
     const email = sp.get("email") || undefined
-    const affiliateRef = sp.get("affiliate_ref") || undefined
+    const rawAffiliateRef = sp.get("affiliate_ref")
+    const affiliateRef = rawAffiliateRef && /^[a-zA-Z0-9_-]{1,64}$/.test(rawAffiliateRef) ? rawAffiliateRef : undefined
 
     const price = await resolveCheckoutPrice(product, false)
 
@@ -53,7 +54,7 @@ export async function GET(req: NextRequest) {
       })
 
       return NextResponse.json(
-        { error: `Checkout ist für product=${product} aktuell nicht verfügbar (Preisauflösung fehlgeschlagen).` },
+        { error: `Checkout unavailable for product=${product} (price resolution failed)` },
         { status: 503 }
       )
     }
@@ -169,7 +170,7 @@ export async function POST(req: NextRequest) {
       })
 
       return NextResponse.json(
-        { error: `Checkout ist für product=${product} aktuell nicht verfügbar (Preisauflösung fehlgeschlagen).` },
+        { error: `Checkout unavailable for product=${product} (price resolution failed)` },
         { status: 503 }
       )
     }

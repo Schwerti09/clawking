@@ -17,6 +17,9 @@ import dynamic from "next/dynamic"
 const CouponBanner = dynamic(() => import("@/components/marketing/CouponBanner"), { ssr: false })
 const BillingToggle = dynamic(() => import("@/components/commerce/BillingToggle"), { ssr: false })
 
+const EXIT_COUPON_CODE = process.env.NEXT_PUBLIC_EXIT_COUPON_CODE ?? "SAVE5"
+const EXIT_DISCOUNT_AMOUNT = process.env.NEXT_PUBLIC_EXIT_DISCOUNT_AMOUNT ?? "€5"
+
 const PRICING_KEYWORDS = [
   ...SEO_TARGET_KEYWORDS_2026,
   "Day Pass Security",
@@ -797,7 +800,7 @@ curl https://clawguru.com/api/intel/feeds \\
       </Container>
 
       {/* TASK A3: Exit-Intent Popup with €5 discount */}
-      <ExitIntentPopup couponCode="SAVE5" discountAmount="€5" />
+      <ExitIntentPopup couponCode={EXIT_COUPON_CODE} discountAmount={EXIT_DISCOUNT_AMOUNT} />
     </main>
   )
 }

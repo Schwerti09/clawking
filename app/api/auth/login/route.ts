@@ -40,7 +40,7 @@ export async function POST(req: NextRequest) {
         if (entry.count >= MAX_ATTEMPTS) {
           const retryAfterSec = Math.ceil((RATE_LIMIT_MS - (now - entry.firstAt)) / 1000)
           return NextResponse.json(
-            { error: `Zu viele Versuche. Bitte in ${retryAfterSec}s erneut versuchen.` },
+            { error: `Too many attempts. Try again in ${retryAfterSec}s.` },
             { status: 429 }
           )
         }
@@ -61,7 +61,7 @@ export async function POST(req: NextRequest) {
     const password = typeof body?.password === "string" ? body.password : ""
 
     if (!username || !password) {
-      return NextResponse.json({ error: "Benutzername und Passwort erforderlich" }, { status: 400 })
+      return NextResponse.json({ error: "Username and password required" }, { status: 400 })
     }
 
     // In production the username must be explicitly configured.
@@ -79,7 +79,7 @@ export async function POST(req: NextRequest) {
     if (!expectedUsername || !expectedPassword) {
       console.error("[login] ADMIN_PASSWORT / ADMIN_PASSWORD (and in production also ADMIN_USERNAME) nicht konfiguriert")
       return NextResponse.json(
-        { error: "Login ist derzeit nicht verfügbar." },
+        { error: "Login unavailable, try again later" },
         { status: 503 }
       )
     }
@@ -96,7 +96,7 @@ export async function POST(req: NextRequest) {
         loginAttempts.set(ip, { count: 1, firstAt: now })
       }
       return NextResponse.json(
-        { error: "Benutzername oder Passwort falsch." },
+        { error: "Invalid credentials" },
         { status: 401 }
       )
     }
@@ -119,6 +119,6 @@ export async function POST(req: NextRequest) {
   } catch (err) {
     const message = err instanceof Error ? err.message : String(err)
     console.error("[login] Fehler:", message)
-    return NextResponse.json({ error: "Login fehlgeschlagen." }, { status: 500 })
+    return NextResponse.json({ error: "Login failed" }, { status: 500 })
   }
 }
