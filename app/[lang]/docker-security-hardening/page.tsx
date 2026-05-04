@@ -20,9 +20,9 @@ export async function generateMetadata({
     : "de") as Locale;
 
   return {
-    title: locale === "de" 
+    title: locale === "de"
       ? "Docker Security Hardening 2026 — Container absichern"
-      : "Docker Security Hardening 2026 — Container absichern",
+      : "Docker Security Hardening 2026 — Container Security",
     description: locale === "de"
       ? "Docker Security Hardening: Rootless, seccomp, AppArmor, Cap-Drop, Image Scanning & CIS Benchmark. Enterprise Container Security."
       : "Docker Security Hardening: Rootless, seccomp, AppArmor, cap-drop, image scanning & CIS benchmark. Enterprise container security.",
@@ -120,8 +120,8 @@ export default function DockerSecurityPage({
 
             <div className="grid md:grid-cols-3 gap-6 mb-8">
               <div className="bg-red-900 border border-red-700 rounded-xl p-6">
-                <h3 className="font-semibold text-red-900 mb-2">Risiken</h3>
-                <ul className="text-sm text-red-700 space-y-1">
+                <h3 className="font-semibold text-red-300 mb-2">Risiken</h3>
+                <ul className="text-sm text-red-400 space-y-1">
                   <li>• Root im Container</li>
                   <li>• Privileged Mode</li>
                   <li>• Kernel Exploits</li>

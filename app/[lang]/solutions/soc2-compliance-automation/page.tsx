@@ -83,7 +83,7 @@ export default function Soc2CompliancePage({ params }: { params: { lang: string 
               { phase: 'Monat 2', title: 'Implementation', tasks: ['Controls implementieren', 'ClawGuru Monitoring', 'Evidence Collection starten', 'Policies dokumentieren'], color: 'orange' },
               { phase: 'Monat 3', title: 'Audit Ready', tasks: ['Audit Simulation', 'Evidence Review', 'Lücken schließen', 'Auditor Übergabe'], color: 'green' },
             ].map(({ phase, title, tasks, color }) => (
-              <div key={phase} className={`p-4 rounded-lg border ${color === 'blue' ? 'bg-blue-900 border-blue-700' : color === 'orange' ? 'bg-orange-50 border-orange-700' : 'bg-green-900 border-green-700'}`}>
+              <div key={phase} className={`p-4 rounded-lg border ${color === 'blue' ? 'bg-blue-900 border-blue-700' : color === 'orange' ? 'bg-orange-900 border-orange-700' : 'bg-green-900 border-green-700'}`}>
                 <div className="text-xs font-bold text-gray-400 mb-1">{phase}</div>
                 <div className="font-bold text-lg mb-3">{title}</div>
                 <ul className="space-y-1">

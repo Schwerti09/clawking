@@ -20,9 +20,9 @@ export async function generateMetadata({
     : "de") as Locale;
 
   return {
-    title: locale === "de" 
+    title: locale === "de"
       ? "Nginx Hardening 2026 — SSL, Header & Security-Konfiguration"
-      : "Nginx Hardening 2026 — SSL, Header & Security-Konfiguration",
+      : "Nginx Hardening 2026 — SSL, Header & Security Configuration",
     description: locale === "de"
       ? "Nginx Hardening: TLS 1.3, Security Headers, Rate Limiting, ModSecurity, Brotli, OCSP Stapling & CIS Benchmarks."
       : "Nginx hardening: TLS 1.3, security headers, rate limiting, ModSecurity, Brotli, OCSP stapling & CIS benchmarks.",
@@ -120,8 +120,8 @@ export default async function NginxHardeningPage({
 
             <div className="grid md:grid-cols-3 gap-6 mb-8">
               <div className="bg-red-900 border border-red-700 rounded-xl p-6">
-                <h3 className="font-semibold text-red-900 mb-2">Risiken</h3>
-                <ul className="text-sm text-red-700 space-y-1">
+                <h3 className="font-semibold text-red-300 mb-2">Risiken</h3>
+                <ul className="text-sm text-red-400 space-y-1">
                   <li>• Weak TLS/SSL</li>
                   <li>• Missing Headers</li>
                   <li>• No Rate Limiting</li>

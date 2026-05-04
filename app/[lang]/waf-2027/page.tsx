@@ -22,9 +22,9 @@ export async function generateMetadata({
     : "de") as Locale;
 
   return {
-    title: locale === "de" 
+    title: locale === "de"
       ? "WAF 2027: Web Application Firewall Guide | Cloud & On-Premise"
-      : "WAF 2027: Web Application Firewall Guide | Cloud & On-Premise",
+      : "WAF 2027: Web Application Firewall Guide | Cloud & On-Premise Security",
     description: locale === "de"
       ? "Umfassender WAF Guide 2027: Cloudflare, AWS WAF, ModSecurity, OWASP CRS. Rule-Sets, DDoS Protection, Bot Management & Zero Day Defense."
       : "Comprehensive WAF Guide 2027: Cloudflare, AWS WAF, ModSecurity, OWASP CRS. Rule-sets, DDoS protection, bot management & zero day defense.",
@@ -292,7 +292,7 @@ SecAction \\
                 </ul>
               </div>
               <div className="bg-red-900 border border-red-700 rounded-xl p-6">
-                <h3 className="font-semibold text-red-900 mb-3">Bot Management</h3>
+                <h3 className="font-semibold text-red-300 mb-3">Bot Management</h3>
                 <ul className="space-y-2 text-sm text-red-300">
                   <li className="flex items-center gap-2">
                     <span className="w-2 h-2 bg-red-9000 rounded-full" />

@@ -21,9 +21,9 @@ export async function generateMetadata({
     : "de") as Locale;
 
   return {
-    title: locale === "de" 
+    title: locale === "de"
       ? "Kubernetes Network Policies 2026 | Zero Trust K8s Networking"
-      : "Kubernetes Network Policies 2026 | Zero Trust K8s Networking",
+      : "Kubernetes Network Policies 2026 | Zero Trust K8s Network Security",
     description: locale === "de"
       ? "Kubernetes Network Policies Guide: Zero Trust Pod-to-Pod Security, Cilium, Calico, Ingress/Egress Rules. Cluster Network Segmentation."
       : "Kubernetes Network Policies guide: Zero Trust pod-to-pod security, Cilium, Calico, ingress/egress rules. Cluster network segmentation.",
@@ -128,8 +128,8 @@ spec:
             </div>
 
             <div className="bg-red-900 border border-red-700 rounded-xl p-6">
-              <h3 className="font-semibold text-red-900 mb-2">⚠️ Wichtig: Reihenfolge</h3>
-              <p className="text-red-800 text-sm">
+              <h3 className="font-semibold text-red-300 mb-2">⚠️ Wichtig: Reihenfolge</h3>
+              <p className="text-red-400 text-sm">
                 Deployen Sie Default-Deny NICHT bevor explizite Allow-Policies existieren! Sonst ist alles offline.
               </p>
             </div>

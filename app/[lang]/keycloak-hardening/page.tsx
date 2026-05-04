@@ -22,9 +22,9 @@ export async function generateMetadata({
     : "de") as Locale;
 
   return {
-    title: locale === "de" 
+    title: locale === "de"
       ? "Keycloak Hardening 2026: SSO Security Guide | IAM Best Practices"
-      : "Keycloak Hardening 2026: SSO Security Guide | IAM Best Practices",
+      : "Keycloak Hardening 2026: SSO Security Guide | IAM Best Practices (EN)",
     description: locale === "de"
       ? "Umfassender Keycloak Hardening Guide: SSO, MFA, LDAP, OAuth 2.0 & OpenID Connect Security. Brute-Force Protection, Session Management & Compliance."
       : "Comprehensive Keycloak hardening guide: SSO, MFA, LDAP, OAuth 2.0 & OpenID Connect security. Brute-force protection, session management & compliance.",
@@ -119,10 +119,10 @@ export default async function KeycloakHardeningPage({
             </p>
 
             <div className="bg-red-900 border-l-4 border-red-500 rounded-r-xl p-6 mb-8">
-              <h3 className="text-red-900 font-semibold mb-2">
+              <h3 className="text-red-300 font-semibold mb-2">
                 {t(locale, "⚠️ Risiken eines unsicheren IAM", "⚠️ Risks of an Unsecure IAM")}
               </h3>
-              <ul className="text-red-800 space-y-2 text-sm">
+              <ul className="text-red-400 space-y-2 text-sm">
                 <li>• {t(locale, "Single Point of Failure für alle Services", "Single point of failure for all services")}</li>
                 <li>• {t(locale, "Lateral Movement zu allen angebundenen Apps", "Lateral movement to all connected apps")}</li>
                 <li>• {t(locale, "Data Breach aller User-Daten", "Data breach of all user data")}</li>
@@ -321,7 +321,7 @@ ID Token Signature Algorithm: ES256
               </div>
 
               <div className="bg-red-900 border border-red-700 rounded-xl p-6">
-                <h3 className="font-semibold text-red-900 mb-3">Public vs Confidential Clients</h3>
+                <h3 className="font-semibold text-red-300 mb-3">Public vs Confidential Clients</h3>
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
                     <h4 className="font-medium text-red-300 mb-2">Confidential (Backend)</h4>

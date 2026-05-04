@@ -20,9 +20,9 @@ export async function generateMetadata({
     : "de") as Locale;
 
   return {
-    title: locale === "de" 
+    title: locale === "de"
       ? "Linux Server absichern 2026 — Komplette Hardening-Checkliste"
-      : "Linux Server absichern 2026 — Komplette Hardening-Checkliste",
+      : "Linux Server Hardening 2026 — Complete Security Checklist",
     description: locale === "de"
       ? "Linux Hardening: CIS Benchmarks, SELinux, AppArmor, Grsecurity, Kernel Hardening, Auditd & Compliance. Enterprise Linux Security."
       : "Linux hardening: CIS benchmarks, SELinux, AppArmor, grsecurity, kernel hardening, auditd & compliance. Enterprise Linux security.",
@@ -118,8 +118,8 @@ export default async function LinuxHardeningPage({
               </div>
               <div className="bg-red-900 border border-red-700 rounded-xl p-5 text-center">
                 <div className="text-3xl mb-2">🛡️</div>
-                <h3 className="font-semibold text-red-900 text-sm">MAC</h3>
-                <p className="text-xs text-red-700">SELinux/AppArmor</p>
+                <h3 className="font-semibold text-red-300 text-sm">MAC</h3>
+                <p className="text-xs text-red-400">SELinux/AppArmor</p>
               </div>
               <div className="bg-amber-900 border border-amber-700 rounded-xl p-5 text-center">
                 <div className="text-3xl mb-2">📊</div>

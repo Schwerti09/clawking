@@ -80,7 +80,7 @@ export default function AwsSecurityPage({ params }: { params: { lang: string } }
               { service: 'AWS Secrets Manager', category: 'Secrets', critical: true },
               { service: 'AWS WAF', category: 'Network', critical: false },
             ].map(({ service, category, critical }) => (
-              <div key={service} className={`p-3 rounded-lg border text-sm ${critical ? 'bg-orange-50 border-orange-700' : 'bg-gray-800 border-gray-700'}`}>
+              <div key={service} className={`p-3 rounded-lg border text-sm ${critical ? 'bg-orange-900 border-orange-700' : 'bg-gray-800 border-gray-700'}`}>
                 <div className="font-semibold text-gray-100">{service}</div>
                 <div className="text-xs text-gray-400">{category}</div>
                 {critical && <div className="text-xs text-orange-400 font-medium mt-1">Empfohlen</div>}
