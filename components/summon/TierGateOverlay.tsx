@@ -13,7 +13,7 @@ export default function TierGateOverlay({ allowed, needed }: { allowed: boolean;
         <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-2">
           <BuyButton product="daypass" label="Daypass 9 €" className="px-4 py-3 rounded-2xl font-black text-black"
                      style={{ background: "linear-gradient(135deg,#ff0033,#ff7a00)" }} />
-          <BuyButton product="pro" label="Pro 49 € / Monat" className="px-4 py-3 rounded-2xl font-black text-black"
+          <BuyButton product="pro" label="Pro 99 € / Monat" className="px-4 py-3 rounded-2xl font-black text-black"
                      style={{ background: "linear-gradient(135deg,#a78bfa,#00ff9d)" }} />
         </div>
         <div className="mt-3 text-xs text-gray-400">Daypass: 24h Zugriff — Pro: dauerhaft mit History, Export & Oracle</div>

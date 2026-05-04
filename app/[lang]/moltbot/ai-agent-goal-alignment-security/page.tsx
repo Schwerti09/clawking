@@ -2,6 +2,9 @@ import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import { SUPPORTED_LOCALES, type Locale, buildLocalizedAlternates } from "@/lib/i18n"
 import { pick } from "@/lib/i18n-pick"
+import { buildEEATArticleSchema } from "@/lib/seo/eeat-helper"
+import AuthorBox from "@/components/seo/AuthorBox"
+import LastUpdated from "@/components/seo/LastUpdated"
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://clawguru.org"
 const PATH = "/moltbot/ai-agent-goal-alignment-security"
@@ -12,9 +15,21 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
   const locale = (SUPPORTED_LOCALES.includes(params.lang as Locale) ? params.lang : "de") as Locale
+  const pageUrl = `${SITE_URL}/${locale}${PATH}`
   const isDE = locale === "de"
   const title = pick(isDE, "AI Agent Goal Alignment Security: KI-Agenten-Ziel-Alignment-Security | ClawGuru Moltbot", "AI Agent Goal Alignment Security: AI Agent Goal Alignment Security | ClawGuru Moltbot")
   const description = pick(isDE, "KI-Agenten-Ziel-Alignment-Security: Goal Specification Security, Objective Validation, Reward Signal Integrity und Goal Drift Detection für KI-Agenten-Ziel-Alignment-Security.", "AI agent goal alignment security: goal specification security, objective validation, reward signal integrity and goal drift detection for AI agent goal alignment security.")
+  
+  const articleSchema = buildEEATArticleSchema({
+    headline: title,
+    description,
+    url: pageUrl,
+    datePublished: "2026-04-28",
+    dateModified: "2026-05-04",
+    locale,
+    articleType: "TechArticle",
+  })
+
   return {
     title, description,
     keywords: ["ai agent goal alignment security", "goal specification security", "objective validation", "reward signal integrity", "goal drift detection", "moltbot alignment"],
@@ -22,6 +37,9 @@ export async function generateMetadata({ params }: { params: { lang: string } })
     openGraph: { title, description, type: "article", url: `${SITE_URL}/${locale}${PATH}`, images: ["/og-image.png"] },
     alternates: buildLocalizedAlternates(locale, PATH),
     robots: "index, follow",
+    other: {
+      "application/ld+json": JSON.stringify(articleSchema),
+    },
   }
 }
 

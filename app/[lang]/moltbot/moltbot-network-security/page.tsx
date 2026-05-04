@@ -2,6 +2,9 @@ import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import { SUPPORTED_LOCALES, type Locale, buildLocalizedAlternates } from "@/lib/i18n"
 import { pick } from "@/lib/i18n-pick"
+import { buildEEATArticleSchema } from "@/lib/seo/eeat-helper"
+import AuthorBox from "@/components/seo/AuthorBox"
+import LastUpdated from "@/components/seo/LastUpdated"
 
 interface PageProps { params: { lang: string } }
 
@@ -18,6 +21,17 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const isDE = locale === "de"
   const title = pick(isDE, "Moltbot Network Security: Netzwerksicherheit für AI-Agents | ClawGuru", "Moltbot Network Security: Network Security for AI Agents | ClawGuru")
   const description = pick(isDE, "Netzwerksegmentierung, Firewall-Konfiguration und TLS-Verschlüsselung für Moltbot-Kommunikationskanäle. Mit Moltbot automatisierbar.", "Network segmentation, firewall configuration and TLS encryption for Moltbot communication channels. Automatable with Moltbot.")
+  
+  const articleSchema = buildEEATArticleSchema({
+    headline: title,
+    description,
+    url: pageUrl,
+    datePublished: "2026-04-24",
+    dateModified: "2026-05-04",
+    locale,
+    articleType: "TechArticle",
+  })
+
   return {
     title,
     description,
@@ -36,7 +50,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       images: ["/og-image.png"]
     },
     alternates: buildLocalizedAlternates(locale, PATH),
-    robots: "index, follow"
+    robots: "index, follow",
+    other: {
+      "application/ld+json": JSON.stringify(articleSchema),
+    },
   }
 }
 
@@ -93,9 +110,16 @@ export default function MoltbotNetworkSecurityPage({ params }: PageProps) {
             <h1 className="text-4xl font-bold mb-4 text-gray-100 bg-gradient-to-r from-gray-100 via-white to-gray-100 bg-clip-text text-transparent">
               {pick(isDE, "Moltbot Network Security — Dein AI Agent hat gerade das gesamte Netzwerk exponiert. Hier ist der Fix.", "Moltbot Network Security — Your AI Agent Just Exposed the Entire Network. Here's the Fix.")}
             </h1>
-            <p className="text-lg text-gray-300 mb-6 leading-relaxed">
+            <p className="text-lg text-gray-300 mb-4 leading-relaxed">
               {pick(isDE, "Dein Moltbot AI Agent hat gestern Abend durch eine offene Firewall-Regel alle internen Netzwerksegmente exponiert, weil du keine Netzwerksegmentierung implementiert hast. Das Ergebnis: 180.000 Datensätze exponiert, 1.9 Mio. Euro Strafe, dein CTO wurde entlassen. Hier ist, wie du deine AI Agents mit Network Security absicherst.", "Your Moltbot AI agent exposed all internal network segments yesterday via an open firewall rule because you didn't implement network segmentation. The result: 180,000 records exposed, €1.9M in fines, your CTO was fired. Here's how to secure your AI agents with network security.")}
             </p>
+            <LastUpdated
+              date="2026-05-04"
+              publishedDate="2026-04-24"
+              locale={locale}
+              showPublished={true}
+              className="mb-4"
+            />
           </div>
 
           {/* Amateur Section */}
@@ -530,6 +554,13 @@ export default function MoltbotNetworkSecurityPage({ params }: PageProps) {
               </div>
             </div>
           </section>
+
+        {/* E-E-A-T AuthorBox */}
+        <AuthorBox
+          locale={locale}
+          variant="full"
+          className="mb-8"
+        />
         </div>
       </div>
     </div>

@@ -2,6 +2,9 @@ import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import { SUPPORTED_LOCALES, type Locale, buildLocalizedAlternates } from "@/lib/i18n"
 import { pick } from "@/lib/i18n-pick"
+import { buildEEATArticleSchema } from "@/lib/seo/eeat-helper"
+import AuthorBox from "@/components/seo/AuthorBox"
+import LastUpdated from "@/components/seo/LastUpdated"
 
 interface PageProps { params: { lang: string } }
 
@@ -18,6 +21,17 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const isDE = locale === "de"
   const title = pick(isDE, "Agentic RAG Security Patterns: Sicherheit für RAG-Systeme | ClawGuru", "Agentic RAG Security Patterns: Security for RAG Systems | ClawGuru")
   const description = pick(isDE, "Agentic RAG Security Patterns für Moltbot-Deployments. Vector DB Security, Retrieval Access Control, Document Filtering und Injection Protection für RAG-Systeme. Mit Moltbot automatisierbar.", "Agentic RAG security patterns for Moltbot deployments. Vector DB security, retrieval access control, document filtering and injection protection for RAG systems. Automatable with Moltbot.")
+  
+  const articleSchema = buildEEATArticleSchema({
+    headline: title,
+    description,
+    url: pageUrl,
+    datePublished: "2026-04-28",
+    dateModified: "2026-05-04",
+    locale,
+    articleType: "TechArticle",
+  })
+
   return {
     title,
     description,
@@ -36,7 +50,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       images: ["/og-image.png"]
     },
     alternates: buildLocalizedAlternates(locale, PATH),
-    robots: "index, follow"
+    robots: "index, follow",
+    other: {
+      "application/ld+json": JSON.stringify(articleSchema),
+    },
   }
 }
 
@@ -75,9 +92,16 @@ export default function AgenticRAGSecurityPatternsPage({ params }: PageProps) {
           <h1 className="text-4xl font-bold mb-4 text-gray-100 bg-gradient-to-r from-gray-100 via-white to-gray-100 bg-clip-text text-transparent">
             {pick(isDE, "Agentic RAG Security Patterns", "Agentic RAG Security Patterns")}
           </h1>
-          <p className="text-lg text-gray-300 mb-6 leading-relaxed">
+          <p className="text-lg text-gray-300 mb-4 leading-relaxed">
             {pick(isDE, "Agentic RAG Security Patterns für Moltbot-Deployments. Vector DB Security, Retrieval Access Control, Document Filtering und Injection Protection für RAG-Systeme.", "Agentic RAG security patterns for Moltbot deployments. Vector DB security, retrieval access control, document filtering and injection protection for RAG systems.")}
           </p>
+          <LastUpdated
+            date="2026-05-04"
+            publishedDate="2026-04-28"
+            locale={locale}
+            showPublished={true}
+            className="mb-4"
+          />
         </div>
 
         {/* Amateur Section */}
@@ -286,35 +310,12 @@ export default function AgenticRAGSecurityPatternsPage({ params }: PageProps) {
           </div>
         </section>
 
-        {/* Author & Trust */}
-        <section className="mb-10 animate-fade-in-up" style={{animationDelay: '0.9s'}}>
-          <div className="bg-gradient-to-r from-cyan-900/80 to-blue-900/80 backdrop-blur-lg p-6 rounded-xl border border-cyan-700/50 shadow-2xl hover:border-cyan-500/30 transition-all duration-300 hover:shadow-cyan-500/20">
-            <div className="flex items-start gap-4">
-              <div className="w-16 h-16 bg-cyan-800 rounded-full flex items-center justify-center text-2xl font-bold text-cyan-300 flex-shrink-0">CG</div>
-              <div className="flex-1">
-                <div className="flex items-center gap-2 mb-2">
-                  <h3 className="font-semibold text-cyan-300 text-lg">ClawGuru Security Team</h3>
-                  <span className="bg-green-600 text-white text-xs px-2 py-1 rounded font-semibold">✓ Verified</span>
-                </div>
-                <div className="text-sm text-cyan-200 mb-3">Security Research &amp; Engineering · RAG Security Specialists</div>
-                <div className="flex items-center gap-4 text-xs text-cyan-300 mb-3">
-                  <span>📅 {pick(isDE, 'Veröffentlicht', 'Published')}: 28.04.2026</span>
-                  <span>🔄 {pick(isDE, 'Zuletzt geprüft', 'Last reviewed')}: 28.04.2026</span>
-                </div>
-                <div className="text-sm text-cyan-100 leading-relaxed">
-                  {pick(isDE, 'Dieser Guide basiert auf praktischer Erfahrung mit RAG Security Pattern-Implementierungen für KI-Systeme in Produktionsumgebungen. Die beschriebenen Best Practices sind in echten Deployments erprobt und kontinuierlich verbessert worden.', 'This guide is based on practical experience with RAG security pattern implementations for AI systems in production environments. The described best practices have been proven in real deployments and continuously improved.')}
-                </div>
-              </div>
-            </div>
-            <div className="mt-4 pt-4 border-t border-cyan-700/50">
-              <div className="flex items-center gap-2 text-xs text-cyan-300">
-                <span className="bg-cyan-800/80 backdrop-blur-lg px-2 py-1 rounded">🔒 {pick(isDE, 'Verifiziert von ClawGuru Security Team', 'Verified by ClawGuru Security Team')}</span>
-                <span>·</span>
-                <span>{pick(isDE, 'Alle Informationen fact-checked und peer-reviewed', 'All information fact-checked and peer-reviewed')}</span>
-              </div>
-            </div>
-          </div>
-        </section>
+        {/* E-E-A-T AuthorBox */}
+        <AuthorBox
+          locale={locale}
+          variant="full"
+          className="mb-8"
+        />
       </div>
     </div>
   )

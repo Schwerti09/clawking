@@ -1,6 +1,28 @@
+"use client"
+
+import { motion, easeOut } from "framer-motion"
+import { useInView } from "framer-motion"
+import { useRef } from "react"
+
 type Props = { dict?: Record<string, string> }
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.1, delayChildren: 0.2 },
+  },
+}
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: easeOut } },
+}
+
 export default function ProblemSection({ dict = {} }: Props) {
+  const ref = useRef(null)
+  const inView = useInView(ref, { once: true, margin: "-100px" })
+
   const points = [
     {
       icon: "🚨",
@@ -20,9 +42,15 @@ export default function ProblemSection({ dict = {} }: Props) {
   ]
 
   return (
-    <section className="py-16" style={{ background: "var(--surface-1)" }}>
+    <section ref={ref} className="py-16" style={{ background: "var(--surface-1)" }}>
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
-        <div className="text-center mb-12">
+        {/* Header */}
+        <motion.div
+          className="text-center mb-12"
+          initial={{ opacity: 0, y: -20 }}
+          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
+          transition={{ duration: 0.6 }}
+        >
           <span className="inline-block mb-3 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-widest bg-red-500/10 text-red-400 border border-red-500/20">
             {dict.problem_badge || "The Problem"}
           </span>
@@ -32,21 +60,36 @@ export default function ProblemSection({ dict = {} }: Props) {
           <p className="mt-4 text-gray-400 max-w-2xl mx-auto text-base sm:text-lg">
             {dict.problem_sub || "A simple operating path: detect the weak spots, prioritize, execute, and re-check."}
           </p>
-        </div>
+        </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-5">
-          {points.map((p) => (
-            <div
+        {/* Cards with stagger */}
+        <motion.div
+          className="grid md:grid-cols-3 gap-5"
+          variants={containerVariants}
+          initial="hidden"
+          animate={inView ? "visible" : "hidden"}
+        >
+          {points.map((p, i) => (
+            <motion.div
               key={p.title}
-              className="rounded-2xl p-6 border border-white/10 bg-white/3"
+              variants={itemVariants}
+              whileHover={{ y: -4, scale: 1.02 }}
+              className="rounded-2xl p-6 border border-white/10 bg-white/3 hover:border-red-500/20 transition-all duration-300 group cursor-pointer"
               style={{ background: "rgba(255,255,255,0.03)" }}
             >
-              <div className="text-3xl mb-3">{p.icon}</div>
+              {/* Animated icon */}
+              <motion.div
+                className="text-3xl mb-3 inline-block"
+                animate={{ scale: [1, 1.1, 1] }}
+                transition={{ duration: 2, repeat: Infinity, delay: i * 0.2 }}
+              >
+                {p.icon}
+              </motion.div>
               <div className="text-white font-bold text-base mb-2">{p.title}</div>
               <p className="text-gray-400 text-sm leading-relaxed">{p.desc}</p>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   )

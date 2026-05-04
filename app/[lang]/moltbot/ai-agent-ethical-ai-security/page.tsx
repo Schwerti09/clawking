@@ -1,6 +1,9 @@
 import type { Metadata } from "next"
 import { SUPPORTED_LOCALES, type Locale, buildLocalizedAlternates } from "@/lib/i18n"
 import { pick } from "@/lib/i18n-pick"
+import { buildEEATArticleSchema } from "@/lib/seo/eeat-helper"
+import AuthorBox from "@/components/seo/AuthorBox"
+import LastUpdated from "@/components/seo/LastUpdated"
 
 interface PageProps { params: { lang: string } }
 
@@ -17,13 +20,27 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const isDE = locale === "de"
   const title = pick(isDE, "AI Agent Ethical AI Security: Ethische Sicherheit für AI-Agents | ClawGuru", "AI Agent Ethical AI Security: Ethical Security for AI Agents | ClawGuru")
   const description = pick(isDE, "AI Agent Ethical AI Security für Moltbot-Deployments. Bias Detection, Fairness Testing, Responsible AI und EU AI Act Compliance für AI-Agent-Systeme.", "AI agent ethical AI security for Moltbot deployments. Bias detection, fairness testing, responsible AI and EU AI Act compliance for AI agent systems.")
+  
+  const articleSchema = buildEEATArticleSchema({
+    headline: title,
+    description,
+    url: pageUrl,
+    datePublished: "2026-04-28",
+    dateModified: "2026-05-04",
+    locale,
+    articleType: "TechArticle",
+  })
+
   return {
     title, description,
     keywords: ["ethical ai security", "bias detection", "fairness testing", "responsible ai", "eu ai act", "moltbot security", "ethical ai 2026", "ai act compliance"],
     authors: [{ name: "ClawGuru Security Team" }],
     openGraph: { title, description, type: "article", url: pageUrl, images: ["/og-image.png"] },
     alternates: buildLocalizedAlternates(locale, PATH),
-    robots: "index, follow"
+    robots: "index, follow",
+    other: {
+      "application/ld+json": JSON.stringify(articleSchema),
+    },
   }
 }
 

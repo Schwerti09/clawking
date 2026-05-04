@@ -3009,6 +3009,108 @@ Wenn du nicht weißt, was als nächstes gebaut werden soll, nimm immer das mit d
 
 ---
 
+---
+
+## 16. QUALITY IMPROVEMENT MASTER PLAN — "ALLES IN EINEM RUTSCH" (Added 04.05.2026)
+
+> **Ziel:** Durchschnittlicher Quality Score von 68-75/100 auf 85-90/100 heben über ~10.000+ indexierte Seiten
+> **Dauer:** 6 Wochen (5 Phasen)
+> **Status:** PLANNING → READY TO START
+
+### Executive Summary
+
+Qualitätsanalyse (`docs/quality-audit-indexed-pages-2026-05-04.md`) hat folgende kritische Issues identifiziert:
+
+1. **E-E-A-T fehlt auf 90%+ der Seiten** 🔴 - AuthorBox, LastUpdated, Article Schema fehlen fast überall
+2. **Dark Theme Compliance Issues** 🔴 - SECURITY_SLUGS haben bg-red-900 mit text-red-900 (unlesbar)
+3. **Duplicate Title Bug** 🟡 - `/linux-hardening` hat identischen Title für DE/EN
+4. **bg-orange-50 Bug** 🟡 - `/solutions/soc2-compliance-automation` Zeile 86
+5. **Fehlende Interaktivität** 🟡 - Viele Seiten haben nur statischen Content
+
+### 5-Phasen Rollout Strategie
+
+#### Phase 1: Kritische Fixes (Woche 1)
+**Ziel:** Blockierende Issues beheben, die SEO/UX negativ beeinflussen
+
+- **1.1 Dark Theme Compliance - SECURITY_SLUGS** 🔴 KRITISCH
+  - Problem: bg-red-900 mit text-red-900 (unlesbar)
+  - Betroffen: ~896 Seiten (28 Slugs × 32 Locales)
+  - Lösung: Automatisierter Find/Replace mit PowerShell (`fix-dark-theme-security.ps1`)
+
+- **1.2 Duplicate Title Bug** 🟡 WICHTIG
+  - Problem: `/linux-hardening` hat identischen Title für DE/EN
+  - Lösung: pick() für Title in generateMetadata verwenden
+
+- **1.3 bg-orange-50 Bug** 🟡 WICHTIG
+  - Problem: `/solutions/soc2-compliance-automation` Zeile 86 hat bg-orange-50
+  - Lösung: Automatisierter Find/Replace (`fix-orange-50.ps1`)
+
+#### Phase 2: E-E-A-T Infrastruktur (Woche 1-2)
+**Ziel:** Template und Helper erstellen für skalierbares E-E-A-T
+
+- **2.1 E-E-A-T Helper erstellen** - `lib/seo/eeat-helper.ts`
+- **2.2 Pre-Push Check Script** - `scripts/check-dark-theme.ps1`
+- **2.3 E-E-A-T Template** - `docs/seo/eeat-template.md`
+
+#### Phase 3: Bulk Rollout - Priority Categories (Woche 2-3)
+**Ziel:** E-E-A-T auf wichtigsten Kategorien rollen
+
+- **3.1 MOLTbot Priority 1** - Core 10 Slugs (~320 Seiten)
+- **3.2 OPENCLAW_SLUGS** - Alle 20 Slugs (~640 Seiten)
+- **3.3 SOLUTIONS_SLUGS** - Alle 30 Slugs (~960 Seiten)
+
+#### Phase 4: Bulk Rollout - Secondary Categories (Woche 3-4)
+**Ziel:** E-E-A-T auf restlichen Content-Kategorien rollen
+
+- **4.1 SECURITY_SLUGS** - Alle 28 Slugs (~896 Seiten)
+- **4.2 COMPARE_SLUGS** - Alle 32 Slugs (~1.024 Seiten)
+
+#### Phase 5: Enhancement & Polish (Woche 4-6)
+**Ziel:** Interaktivität und verbleibende Kategorien
+
+- **5.1 Interactive Checklist** auf SECURITY_SLUGS
+- **5.2 GEO_QUALITY_SLUGS Audit** und E-E-A-T Rollout
+- **5.3 Academy ∞ E-E-A-T Rollout** (Missions, Breaches, Tools)
+- **5.4 Runbooks E-E-A-T Rollout** (bulk)
+
+### Rollout-Strategie & Commit-Hygiene
+
+**Multi-Agent Commit Rules (AGENTS.md Rule 6):**
+- **Single Concern:** Jeder Commit = eine Kategorie oder ein Slug
+- **No Mega-Bundles:** Nicht 100+ Dateien in einem Commit
+- **Staged Files:** Nur relevante Files stagen, nicht `git add -A`
+- **Branch Strategy:** Git Branch pro Phase (`quality-phase-1`, `quality-phase-2`, etc.)
+
+**Testing & Verification:**
+1. Pre-Push Check: `scripts/check-dark-theme.ps1` muss passieren
+2. Lighthouse Score: Nach jedem Bundle auf 3-5 Seiten testen
+3. Schema Validator: Google Rich Results Test auf Stichproben
+
+### Erfolgsmessung (KPIs)
+
+| Metrik | Vorher | Ziel | Status |
+|--------|--------|------|--------|
+| Durchschnitts-Score | 68-75/100 | 85-90/100 | ⏳ |
+| E-E-A-T Coverage | 10% | 90%+ | ⏳ |
+| Dark Theme Compliance | 70% | 99%+ | ⏳ |
+| Lighthouse Performance | 85+ | 90+ | ⏳ |
+
+### Vollständiger Master Plan
+
+Siehe `docs/quality-improvement-master-plan-2026-05-04.md` für:
+- Detaillierte Scripts (PowerShell)
+- Code-Beispiele für E-E-A-T Helper
+- Vollständige Slug-Listen pro Phase
+- Rollback-Plan und Risikomitigation
+
+### Owner
+
+**Claude Code** - E-E-A-T Infrastruktur, SECURITY_SLUGS, COMPARE_SLUGS
+**Windsurf** - MOLTbot, OPENCLAW, viral-pages (falls betroffen)
+**Cursor** - Solutions (falls betroffen), consulting-scope (falls betroffen)
+
+---
+
 > **Every Agent Must Remember**: Read this document fully before the first action.
 > Update Session Log + Open Tasks after every session.
 > Never build with errors. Never push red code.
