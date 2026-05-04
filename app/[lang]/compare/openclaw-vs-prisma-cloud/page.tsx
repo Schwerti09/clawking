@@ -5,6 +5,9 @@ import { pick } from "@/lib/i18n-pick"
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://clawguru.org"
 const PATH = "/compare/openclaw-vs-prisma-cloud"
+import { buildEEATArticleSchema } from '@/lib/seo/eeat-helper'
+import AuthorBox from '@/components/seo/AuthorBox'
+import LastUpdated from '@/components/seo/LastUpdated'
 
 export async function generateStaticParams() {
   return SUPPORTED_LOCALES.map((lang) => ({ lang }))
@@ -15,6 +18,14 @@ export async function generateMetadata({ params }: { params: { lang: string } })
   const isDE = locale === "de"
   const title = pick(isDE, "OpenClaw vs Prisma Cloud: Security-Vergleich 2026 | ClawGuru", "OpenClaw vs Prisma Cloud: Security Comparison 2026 | ClawGuru")
   const description = pick(isDE, "OpenClaw vs Prisma Cloud im Security-Vergleich: Self-Hosted vs SaaS, CSPM, Container Security, Kosten und GDPR-Compliance im direkten Vergleich 2026.", "OpenClaw vs Prisma Cloud security comparison: self-hosted vs SaaS, CSPM, container security, cost and GDPR compliance compared 2026.")
+  const articleSchema = buildEEATArticleSchema({
+    headline: title,
+    description,
+    url: `${SITE_URL}/${locale}${PATH}`,
+    datePublished: "2026-04-28",
+    dateModified: "2026-05-04",
+    locale,
+  })
   return {
     title, description,
     keywords: ["openclaw vs prisma cloud", "prisma cloud alternative", "self-hosted cspm", "openclaw security", "prisma cloud comparison 2026"],
@@ -22,6 +33,11 @@ export async function generateMetadata({ params }: { params: { lang: string } })
     openGraph: { title, description, type: "article", url: `${SITE_URL}/${locale}${PATH}`, images: ["/og-image.png"] },
     alternates: buildLocalizedAlternates(locale, PATH),
     robots: "index, follow",
+    other: {
+      'article:published_time': '2026-04-28T00:00:00Z',
+      'article:modified_time': '2026-05-04T00:00:00Z',
+      'article:author': 'R. Schwertfechter',
+    },
   }
 }
 
@@ -68,9 +84,16 @@ export default function OpenclawVsPrismaCloudPage({ params }: { params: { lang: 
         </div>
         <div className="mb-3"><span className="text-xs font-bold uppercase tracking-widest text-cyan-400">Compare · Batch 16</span></div>
         <h1 className="text-4xl font-bold mb-4 text-gray-100">{pick(isDE, "OpenClaw vs Prisma Cloud", "OpenClaw vs Prisma Cloud")}</h1>
-        <p className="text-lg text-gray-300 mb-6">
+        <p className="text-lg text-gray-300 mb-4">
           {pick(isDE, "Prisma Cloud kostet ab 100.000€/Jahr und schickt deine Daten in die Palo-Alto-Cloud. OpenClaw läuft selbst gehostet, kostet einen Bruchteil und gibt dir volle Datensouveränität.", "Prisma Cloud starts at $100k/year and sends your data to the Palo Alto cloud. OpenClaw runs self-hosted, costs a fraction of that, and gives you full data sovereignty.")}
         </p>
+        <LastUpdated
+          date="2026-05-04"
+          publishedDate="2026-04-28"
+          locale={locale}
+          showPublished={true}
+          className="mb-6"
+        />
         <section className="mb-10">
           <h2 className="text-2xl font-semibold mb-4 text-gray-100">{pick(isDE, "Feature-Vergleich", "Feature Comparison")}</h2>
           <div className="overflow-x-auto">
@@ -130,6 +153,13 @@ export default function OpenclawVsPrismaCloudPage({ params }: { params: { lang: 
             </a>
           </div>
         </section>
+
+        {/* E-E-A-T AuthorBox */}
+        <AuthorBox
+          locale={locale}
+          variant="full"
+          className="mb-8"
+        />
       </div>
     </div>
   )

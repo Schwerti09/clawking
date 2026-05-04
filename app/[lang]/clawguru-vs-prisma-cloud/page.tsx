@@ -4,6 +4,9 @@ import { SUPPORTED_LOCALES, type Locale, buildLocalizedAlternates } from "@/lib/
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://clawguru.org"
 const PATH = "/clawguru-vs-prisma-cloud"
+import { buildEEATArticleSchema } from '@/lib/seo/eeat-helper'
+import AuthorBox from '@/components/seo/AuthorBox'
+import LastUpdated from '@/components/seo/LastUpdated'
 
 export async function generateStaticParams() {
   return SUPPORTED_LOCALES.map((lang) => ({ lang }))
@@ -13,6 +16,14 @@ export async function generateMetadata({ params }: { params: { lang: string } })
   const locale = (SUPPORTED_LOCALES.includes(params.lang as Locale) ? params.lang : "de") as Locale
   const title = "ClawGuru vs Prisma Cloud: Self-Hosted CNAPP Alternative | ClawGuru"
   const description = "ClawGuru vs Palo Alto Prisma Cloud: cloud-native security comparison. Prisma Cloud is powerful but SaaS-only at $300k+/year. ClawGuru delivers CNAPP-equivalent coverage self-hosted for infrastructure cost only."
+  const articleSchema = buildEEATArticleSchema({
+    headline: title,
+    description,
+    url: `${SITE_URL}/${locale}${PATH}`,
+    datePublished: "2026-04-28",
+    dateModified: "2026-05-04",
+    locale,
+  })
   return {
     title, description,
     keywords: ["clawguru vs prisma cloud", "prisma cloud alternative", "prisma cloud self-hosted", "cnapp self-hosted", "palo alto prisma cloud comparison", "cnapp open source"],
@@ -20,6 +31,11 @@ export async function generateMetadata({ params }: { params: { lang: string } })
     openGraph: { title, description, type: "article", url: `${SITE_URL}/${locale}${PATH}`, images: ["/og-image.png"] },
     alternates: buildLocalizedAlternates(locale, PATH),
     robots: "index, follow",
+    other: {
+      'article:published_time': '2026-04-28T00:00:00Z',
+      'article:modified_time': '2026-05-04T00:00:00Z',
+      'article:author': 'R. Schwertfechter',
+    },
   }
 }
 
@@ -66,7 +82,14 @@ export default function ClawguruVsPrismaCloudPage({ params }: { params: { lang: 
         </div>
         <div className="mb-3"><span className="text-xs font-bold uppercase tracking-widest text-cyan-400">Compare · Batch 12</span></div>
         <h1 className="text-4xl font-bold mb-4 text-gray-100">ClawGuru vs Prisma Cloud</h1>
-        <p className="text-lg text-gray-300 mb-6">Prisma Cloud is the Palo Alto Networks CNAPP — the gold standard commercial platform at $150k-$500k+/year. ClawGuru delivers CNAPP-equivalent coverage self-hosted at infrastructure cost. For EU data residency, AI security, and self-hosted K8s: ClawGuru wins on every axis.</p>
+        <p className="text-lg text-gray-300 mb-4">Prisma Cloud is the Palo Alto Networks CNAPP — the gold standard commercial platform at $150k-$500k+/year. ClawGuru delivers CNAPP-equivalent coverage self-hosted at infrastructure cost. For EU data residency, AI security, and self-hosted K8s: ClawGuru wins on every axis.</p>
+        <LastUpdated
+          date="2026-05-04"
+          publishedDate="2026-04-28"
+          locale={locale}
+          showPublished={true}
+          className="mb-6"
+        />
 
         <div className="bg-orange-900 border border-orange-700 p-4 rounded-lg mb-8">
           <h3 className="font-bold text-orange-300 mb-1">⚠ Prisma Cloud: SaaS-Only Constraint</h3>
@@ -130,6 +153,13 @@ export default function ClawguruVsPrismaCloudPage({ params }: { params: { lang: 
             </a>
           </div>
         </section>
+
+        {/* E-E-A-T AuthorBox */}
+        <AuthorBox
+          locale={locale}
+          variant="full"
+          className="mb-8"
+        />
       </div>
     </div>
   )

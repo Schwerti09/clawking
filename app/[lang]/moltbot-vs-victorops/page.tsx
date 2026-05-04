@@ -3,6 +3,9 @@ import { notFound } from 'next/navigation'
 import { SUPPORTED_LOCALES, type Locale, buildLocalizedAlternates } from '@/lib/i18n'
 import { SITE_URL } from '@/lib/config'
 import { pick } from "@/lib/i18n-pick"
+import { buildEEATArticleSchema } from '@/lib/seo/eeat-helper'
+import AuthorBox from '@/components/seo/AuthorBox'
+import LastUpdated from '@/components/seo/LastUpdated'
 
 export async function generateStaticParams() {
   return SUPPORTED_LOCALES.map((lang) => ({ lang }))
@@ -14,12 +17,25 @@ export async function generateMetadata({ params }: { params: { lang: string } })
   const isDE = locale === 'de'
   const title = pick(isDE, 'Moltbot vs VictorOps (Splunk On-Call): Incident Response Vergleich 2026', 'Moltbot vs VictorOps (Splunk On-Call): Incident Response Comparison 2026')
   const description = pick(isDE, 'Moltbot vs VictorOps 2026. VictorOps (Splunk On-Call) ist eine Alerting & On-Call-Management-Plattform. Moltbot bietet Executable Runbooks, automatisierte Incident-Response und DSGVO-konformes Self-Hosting.', 'Moltbot vs VictorOps 2026. VictorOps (Splunk On-Call) is an alerting & on-call management platform. Moltbot provides executable runbooks, automated incident response and GDPR-compliant self-hosting.')
+  const articleSchema = buildEEATArticleSchema({
+    headline: title,
+    description,
+    url: `${SITE_URL}/${locale}/moltbot-vs-victorops`,
+    datePublished: "2026-04-28",
+    dateModified: "2026-05-04",
+    locale,
+  })
   return {
     title,
     description,
     alternates: buildLocalizedAlternates(locale, '/moltbot-vs-victorops'),
     openGraph: { images: ['/og-image.png'], title, description, type: 'article', url: `${SITE_URL}/${lang}/moltbot-vs-victorops` },
     robots: 'index, follow',
+    other: {
+      'article:published_time': '2026-04-28T00:00:00Z',
+      'article:modified_time': '2026-05-04T00:00:00Z',
+      'article:author': 'R. Schwertfechter',
+    },
   }
 }
 
@@ -36,6 +52,7 @@ const faqSchema = {
 
 export default function MoltbotVsVictorOpsPage({ params }: { params: { lang: string } }) {
   const { lang } = params
+  const locale = (SUPPORTED_LOCALES.includes(lang as Locale) ? lang : 'de') as Locale
   if (!SUPPORTED_LOCALES.includes(lang as Locale)) notFound()
   const isDE = lang === 'de'
 
@@ -51,9 +68,16 @@ export default function MoltbotVsVictorOpsPage({ params }: { params: { lang: str
         <h1 className="text-4xl font-bold mb-4 text-gray-100">
           {pick(isDE, 'Moltbot vs VictorOps (Splunk On-Call): Incident Response Vergleich', 'Moltbot vs VictorOps (Splunk On-Call): Incident Response Comparison')}
         </h1>
-        <p className="text-lg text-gray-300 mb-8">
+        <p className="text-lg text-gray-300 mb-4">
           {pick(isDE, 'VictorOps (heute: Splunk On-Call) ist eine On-Call-Management- und Alert-Routing-Plattform für DevOps-Teams. Moltbot (Teil der ClawGuru-Plattform) ergänzt mit Executable Security-Runbooks, automatisierter Incident-Response und einem integrierten Security-Dashboard — mit DSGVO-konformem Self-Hosting.', 'VictorOps (now Splunk On-Call) is an on-call management and alert routing platform for DevOps teams. Moltbot (part of the ClawGuru platform) adds executable security runbooks, automated incident response and an integrated security dashboard — with GDPR-compliant self-hosting.')}
         </p>
+        <LastUpdated
+          date="2026-05-04"
+          publishedDate="2026-04-28"
+          locale={locale}
+          showPublished={true}
+          className="mb-8"
+        />
 
         <section className="mb-10">
           <h2 className="text-2xl font-semibold mb-4 text-gray-100">{pick(isDE, '⚔️ Direkter Vergleich', '⚔️ Head-to-Head Comparison')}</h2>
@@ -160,6 +184,13 @@ export default function MoltbotVsVictorOpsPage({ params }: { params: { lang: str
             </a>
           </div>
         </section>
+
+        {/* E-E-A-T AuthorBox */}
+        <AuthorBox
+          locale={locale}
+          variant="full"
+          className="mb-8"
+        />
       </div>
     </div>
   )

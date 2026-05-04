@@ -1,18 +1,35 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { pick } from "@/lib/i18n-pick"
+import { SUPPORTED_LOCALES, type Locale, buildLocalizedAlternates } from '@/lib/i18n'
+import { buildEEATArticleSchema } from '@/lib/seo/eeat-helper'
+import AuthorBox from '@/components/seo/AuthorBox'
+import LastUpdated from '@/components/seo/LastUpdated'
 
 interface PageProps {
   params: { lang: string };
 }
 
 const SUPPORTED_LANGUAGES = ['de','en','es','fr','pt','it','ru','zh','ja','ko','ar','hi','tr','pl','nl'];
+const SITE_URL = 'https://clawguru.org'
+const PATH = '/moltbot-vs-clawbot/security-comparison'
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { lang } = params;
+  const locale = (SUPPORTED_LOCALES.includes(lang as Locale) ? lang : 'de') as Locale
+  const title = 'Moltbot vs. Clawbot: Security Vergleich 2024'
+  const description = 'Detaillierter Vergleich der Security-Fähigkeiten zwischen Moltbot und Clawbot. Welches Framework passt zu deinem Use Case? Mit Benchmark-Daten und Entscheidungsmatrix.'
+  const articleSchema = buildEEATArticleSchema({
+    headline: title,
+    description,
+    url: `${SITE_URL}/${locale}${PATH}`,
+    datePublished: "2026-04-28",
+    dateModified: "2026-05-04",
+    locale,
+  })
   return {
-    title: 'Moltbot vs. Clawbot: Security Vergleich 2024',
-    description: 'Detaillierter Vergleich der Security-Fähigkeiten zwischen Moltbot und Clawbot. Welches Framework passt zu deinem Use Case? Mit Benchmark-Daten und Entscheidungsmatrix.',
+    title,
+    description,
     keywords: ['moltbot vs clawbot','security comparison','bot security','moltbot clawbot unterschiede','security architecture'],
     authors: [{ name: 'ClawGuru Security Team' }],
     openGraph: {
@@ -22,27 +39,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       url: `https://clawguru.org/${lang}/moltbot-vs-clawbot/security-comparison`,
       images: ['/og-moltbot-vs-clawbot.jpg'],
     },
-    alternates: {
-      canonical: `https://clawguru.org/${lang}/moltbot-vs-clawbot/security-comparison`,
-      languages: {
-        de: 'https://clawguru.org/de/moltbot-vs-clawbot/security-comparison',
-        en: 'https://clawguru.org/en/moltbot-vs-clawbot/security-comparison',
-        es: 'https://clawguru.org/es/moltbot-vs-clawbot/security-comparison',
-        fr: 'https://clawguru.org/fr/moltbot-vs-clawbot/security-comparison',
-        pt: 'https://clawguru.org/pt/moltbot-vs-clawbot/security-comparison',
-        it: 'https://clawguru.org/it/moltbot-vs-clawbot/security-comparison',
-        ru: 'https://clawguru.org/ru/moltbot-vs-clawbot/security-comparison',
-        zh: 'https://clawguru.org/zh/moltbot-vs-clawbot/security-comparison',
-        ja: 'https://clawguru.org/ja/moltbot-vs-clawbot/security-comparison',
-        ko: 'https://clawguru.org/ko/moltbot-vs-clawbot/security-comparison',
-        ar: 'https://clawguru.org/ar/moltbot-vs-clawbot/security-comparison',
-        hi: 'https://clawguru.org/hi/moltbot-vs-clawbot/security-comparison',
-        tr: 'https://clawguru.org/tr/moltbot-vs-clawbot/security-comparison',
-        pl: 'https://clawguru.org/pl/moltbot-vs-clawbot/security-comparison',
-        nl: 'https://clawguru.org/nl/moltbot-vs-clawbot/security-comparison',
-      },
-    },
+    alternates: buildLocalizedAlternates(locale, PATH),
     robots: 'index, follow',
+    other: {
+      'article:published_time': '2026-04-28T00:00:00Z',
+      'article:modified_time': '2026-05-04T00:00:00Z',
+      'article:author': 'R. Schwertfechter',
+    },
   };
 }
 
@@ -70,9 +73,16 @@ export default function MoltbotVsClawbotPage({ params }: PageProps) {
         </div>
 
         <h1 className="text-4xl font-bold mb-4">Moltbot vs. Clawbot: Security Vergleich 2024</h1>
-        <p className="text-lg text-gray-300 mb-8">
+        <p className="text-lg text-gray-300 mb-4">
           Welches Bot-Security-Framework ist das richtige für dein Unternehmen? Dieser detaillierte Vergleich analysiert Security-Architektur, Performance, Compliance und TCO beider Systeme.
         </p>
+        <LastUpdated
+          date="2026-05-04"
+          publishedDate="2026-04-28"
+          locale={locale}
+          showPublished={true}
+          className="mb-8"
+        />
 
         <section className="mb-10">
           <h2 className="text-2xl font-semibold mb-4">🎯 Executive Summary</h2>
@@ -203,6 +213,13 @@ Winner: Moltbot (Threat Detection Accuracy: 97% vs 74%)`}</pre>
             </a>
           </div>
         </section>
+
+        {/* E-E-A-T AuthorBox */}
+        <AuthorBox
+          locale={locale}
+          variant="full"
+          className="mb-8"
+        />
       </div>
     </div>
   );

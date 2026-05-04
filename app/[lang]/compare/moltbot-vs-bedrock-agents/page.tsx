@@ -5,6 +5,9 @@ import { pick } from "@/lib/i18n-pick"
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://clawguru.org"
 const PATH = "/compare/moltbot-vs-bedrock-agents"
+import { buildEEATArticleSchema } from '@/lib/seo/eeat-helper'
+import AuthorBox from '@/components/seo/AuthorBox'
+import LastUpdated from '@/components/seo/LastUpdated'
 
 export async function generateStaticParams() {
   return SUPPORTED_LOCALES.map((lang) => ({ lang }))
@@ -15,6 +18,14 @@ export async function generateMetadata({ params }: { params: { lang: string } })
   const isDE = locale === "de"
   const title = pick(isDE, "Moltbot vs AWS Bedrock Agents: Vergleich | ClawGuru Compare", "Moltbot vs AWS Bedrock Agents: Comparison | ClawGuru Compare")
   const description = pick(isDE, "Moltbot vs AWS Bedrock Agents: Self-Hosted vs Cloud. Deployment, Security, Compliance, Pricing und Control vergleichen. Executable Runbooks für Self-Hosted AI-Agenten.", "Moltbot vs AWS Bedrock Agents: Self-Hosted vs Cloud. Compare deployment, security, compliance, pricing and control. Executable runbooks for self-hosted AI agents.")
+  const articleSchema = buildEEATArticleSchema({
+    headline: title,
+    description,
+    url: `${SITE_URL}/${locale}${PATH}`,
+    datePublished: "2026-04-28",
+    dateModified: "2026-05-04",
+    locale,
+  })
   return {
     title, description,
     keywords: ["moltbot vs bedrock agents", "self-hosted ai agents", "aws bedrock agents", "ai agent comparison", "moltbot security", "bedrock pricing"],
@@ -22,6 +33,11 @@ export async function generateMetadata({ params }: { params: { lang: string } })
     openGraph: { title, description, type: "article", url: `${SITE_URL}/${locale}${PATH}`, images: ["/og-image.png"] },
     alternates: buildLocalizedAlternates(locale, PATH),
     robots: "index, follow",
+    other: {
+      'article:published_time': '2026-04-28T00:00:00Z',
+      'article:modified_time': '2026-05-04T00:00:00Z',
+      'article:author': 'R. Schwertfechter',
+    },
   }
 }
 
@@ -66,9 +82,16 @@ export default function MoltbotVsBedrockAgentsPage({ params }: { params: { lang:
         </div>
         <div className="mb-3"><span className="text-xs font-bold uppercase tracking-widest text-cyan-400">Compare · Batch 15</span></div>
         <h1 className="text-4xl font-bold mb-4 text-gray-100">{pick(isDE, "Moltbot vs AWS Bedrock Agents", "Moltbot vs AWS Bedrock Agents")}</h1>
-        <p className="text-lg text-gray-300 mb-6">
+        <p className="text-lg text-gray-300 mb-4">
           {pick(isDE, "Self-Hosted vs Cloud: Deployment, Security, Compliance, Pricing und Control vergleichen.", "Self-Hosted vs Cloud: Compare deployment, security, compliance, pricing and control.")}
         </p>
+        <LastUpdated
+          date="2026-05-04"
+          publishedDate="2026-04-28"
+          locale={locale}
+          showPublished={true}
+          className="mb-6"
+        />
         <section className="mb-10">
           <h2 className="text-2xl font-semibold mb-4 text-gray-100">{pick(isDE, "Vergleichstabelle", "Comparison Table")}</h2>
           <div className="bg-gray-900 border border-gray-700 rounded-lg overflow-x-auto">
@@ -124,6 +147,13 @@ export default function MoltbotVsBedrockAgentsPage({ params }: { params: { lang:
             </a>
           </div>
         </section>
+
+        {/* E-E-A-T AuthorBox */}
+        <AuthorBox
+          locale={locale}
+          variant="full"
+          className="mb-8"
+        />
       </div>
     </div>
   )
