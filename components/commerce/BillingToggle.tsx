@@ -52,7 +52,7 @@ export default function BillingToggle({ locale, isDE, prefix }: { locale: Locale
       </div>
 
       {/* ── Cards ── */}
-      <div className="grid lg:grid-cols-3 gap-6 items-stretch">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
 
         {/* ── Starter ── */}
         <div className="relative rounded-3xl p-[1px] overflow-hidden"
@@ -200,7 +200,7 @@ export default function BillingToggle({ locale, isDE, prefix }: { locale: Locale
         </div>
 
         {/* ── Scale ── */}
-        <div className="relative rounded-3xl p-[1px] overflow-hidden"
+        <div className="relative rounded-3xl p-[1px] overflow-hidden md:col-span-2 lg:col-span-1"
           style={{ background: "linear-gradient(135deg, rgba(0,255,157,0.4) 0%, rgba(0,255,157,0.05) 100%)" }}>
           <div className="h-full rounded-3xl p-7 flex flex-col" style={{ background: "#080f0c" }}>
             <div className="flex items-start justify-between gap-3">
