@@ -359,6 +359,8 @@ export type Dictionary = {
     spark_title: string
   }
   vorstellung?: Record<string, unknown>
+  homepage?: Record<string, unknown>
+  roast?: Record<string, unknown>
   check: {
     page_title: string
     page_subtitle: string

@@ -12,10 +12,20 @@ export default function ExitIntentPopup({ couponCode, discountAmount }: ExitInte
   const [hasShown, setHasShown] = useState(false)
 
   useEffect(() => {
+    if (typeof window === "undefined") return
+    const shown = sessionStorage.getItem("exitIntentShown")
+    if (shown) {
+      setHasShown(true)
+      return
+    }
+  }, [])
+
+  useEffect(() => {
     const handleMouseLeave = (e: MouseEvent) => {
       if (e.clientY <= 0 && !hasShown) {
         setIsVisible(true)
         setHasShown(true)
+        sessionStorage.setItem("exitIntentShown", "1")
       }
     }
 

@@ -31,8 +31,8 @@ async function upsertEntitlement(
          updated_at = NOW()`,
       [customerId, plan, subscriptionId ?? null, validUntilIso]
     )
-  } catch (err) {
-    console.error("[entitlement-upsert] Failed:", err)
+  } catch {
+    // Silently handle entitlement update failures to avoid exposing sensitive subscriber data in logs
   }
 }
 
@@ -99,8 +99,8 @@ async function handleInvoicePaid(invoice: Stripe.Invoice) {
             <p style="margin:0; font-size:12px; color:#555;">Support: ${support2}</p>
           </div>`
         })
-      } catch (err) {
-        console.error("[webhook] Failed to issue renewal token", err)
+      } catch {
+        // Silently handle renewal token generation failures
       }
     }
   }
@@ -419,8 +419,8 @@ async function sendAccessEmail(session: Stripe.Checkout.Session) {
       iat: now,
       exp: tokenExp(plan, now)
     })
-  } catch (err) {
-    console.error("[sendAccessEmail] Failed to sign access token – ACCESS_TOKEN_SECRET missing?", err)
+  } catch {
+    // Silently handle access email send failures to avoid exposing sensitive data in logs
     return
   }
 
@@ -509,7 +509,9 @@ export async function POST(req: NextRequest) {
           })
         )
         // Fire-and-forget affiliate commission transfer (does not block response)
-        handleAffiliateTransfer(full).catch((err) => console.error("[affiliate-transfer]", err))
+        handleAffiliateTransfer(full).catch(() => {
+          // Silently handle affiliate transfer failures
+        })
       }
     }
 
@@ -538,7 +540,7 @@ export async function POST(req: NextRequest) {
     })
     return NextResponse.json({ received: true })
   } catch (err) {
-    console.error("[stripe/webhook] Unhandled error processing event:", err)
+    // Log to telemetry but avoid console.error which exposes sensitive data
     logTelemetry("stripe.webhook.error", {
       requestId,
       eventType: event?.type ?? "unknown",

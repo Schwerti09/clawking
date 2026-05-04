@@ -37,6 +37,8 @@ export function hasAccess(tier: TierName, required: TierName): boolean {
 export type TierLimits = {
   /** Maximum number of saved security checks. -1 = unlimited. */
   maxSavedChecks: number
+  /** Maximum runbook views per month. -1 = unlimited. Free tier: 3/month for upgrade pressure. */
+  maxRunbookViews: number
   /** Private fork / private node creation. */
   privateNodes: boolean
   /** Darwinian Feed (personalized intel feed). */
@@ -54,6 +56,7 @@ export type TierLimits = {
 export const TIER_LIMITS: Record<TierName, TierLimits> = {
   free: {
     maxSavedChecks: 0,
+    maxRunbookViews: 3,
     privateNodes: false,
     darwinianFeed: false,
     voiceCopilot: "none",
@@ -63,6 +66,7 @@ export const TIER_LIMITS: Record<TierName, TierLimits> = {
   },
   daypass: {
     maxSavedChecks: 5,
+    maxRunbookViews: 50,
     privateNodes: false,
     darwinianFeed: false,
     voiceCopilot: "limited",
@@ -72,6 +76,7 @@ export const TIER_LIMITS: Record<TierName, TierLimits> = {
   },
   pro: {
     maxSavedChecks: -1,
+    maxRunbookViews: -1,
     privateNodes: true,
     darwinianFeed: true,
     voiceCopilot: "unlimited",
@@ -81,6 +86,7 @@ export const TIER_LIMITS: Record<TierName, TierLimits> = {
   },
   enterprise: {
     maxSavedChecks: -1,
+    maxRunbookViews: -1,
     privateNodes: true,
     darwinianFeed: true,
     voiceCopilot: "unlimited",
@@ -102,6 +108,7 @@ export type GatedFeature = keyof TierLimits
 /** Minimum tier required per feature. */
 export const FEATURE_MIN_TIER: Record<GatedFeature, TierName> = {
   maxSavedChecks: "daypass",
+  maxRunbookViews: "daypass",
   privateNodes: "pro",
   darwinianFeed: "pro",
   voiceCopilot: "daypass",
