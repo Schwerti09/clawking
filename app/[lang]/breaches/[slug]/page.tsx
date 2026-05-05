@@ -4,6 +4,9 @@ import { notFound } from "next/navigation"
 import { SUPPORTED_LOCALES, type Locale, buildLocalizedAlternates } from "@/lib/i18n"
 import { AttackTimeline } from "@/components/breaches/AttackTimeline"
 import { getScenario, listScenarioSlugs } from "@/lib/breaches"
+import { buildAuthoredArticleSchema } from "@/lib/seo/author"
+import AuthorBox from "@/components/seo/AuthorBox"
+import LastUpdated from "@/components/seo/LastUpdated"
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://clawguru.org"
 
@@ -23,18 +26,19 @@ export async function generateMetadata(
   if (!s) return { title: "Scenario not found | ClawGuru" }
 
   const pageUrl = `${SITE_URL}/${locale}/breaches/${params.slug}`
-  const title = `${s.title} — Interactive re-enactment | ClawGuru`
+  const title = `${s.title} — Interactive re-enactment | ClawGuru Attack Cinema`
+  const datePublished = s.disclosed
+  const dateModified = "2026-05-05"
 
-  const articleSchema = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: s.title,
+  const articleSchema = buildAuthoredArticleSchema({
+    headline: title,
     description: s.summary,
-    datePublished: s.disclosed,
-    author: { "@type": "Organization", name: "ClawGuru" },
-    publisher: { "@type": "Organization", name: "ClawGuru", url: SITE_URL },
-    mainEntityOfPage: pageUrl,
-  }
+    url: pageUrl,
+    datePublished,
+    dateModified,
+    inLanguage: locale,
+    articleType: "Article",
+  })
 
   return {
     title,
@@ -42,7 +46,12 @@ export async function generateMetadata(
     openGraph: { title, description: s.summary, url: pageUrl, type: "article" },
     alternates: buildLocalizedAlternates(locale, `/breaches/${params.slug}`),
     robots: "index, follow",
-    other: { "application/ld+json": JSON.stringify(articleSchema) },
+    other: {
+      "article:published_time": `${datePublished}T00:00:00Z`,
+      "article:modified_time": `${dateModified}T00:00:00Z`,
+      "article:author": "Schwerti",
+      "application/ld+json": JSON.stringify(articleSchema),
+    },
   }
 }
 
@@ -84,6 +93,11 @@ export default function BreachScenarioPage({ params }: { params: { lang: string;
           <AttackTimeline scenario={scenario} />
         </div>
       </section>
+
+      <div className="max-w-5xl mx-auto px-4 py-8">
+        <AuthorBox locale={locale} variant="compact" />
+        <LastUpdated date="2026-05-05" publishedDate={scenario.disclosed} locale={locale} showPublished />
+      </div>
     </div>
   )
 }

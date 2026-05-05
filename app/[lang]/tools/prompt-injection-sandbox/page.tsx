@@ -3,6 +3,9 @@ import Link from "next/link"
 import { SUPPORTED_LOCALES, type Locale, buildLocalizedAlternates } from "@/lib/i18n"
 import { PromptInjectionSandboxClient } from "@/components/tools/PromptInjectionSandboxClient"
 import { getTool } from "@/lib/tools"
+import { buildPersonSchema, buildOrganizationSchema } from "@/lib/seo/author"
+import AuthorBox from "@/components/seo/AuthorBox"
+import LastUpdated from "@/components/seo/LastUpdated"
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://clawguru.org"
 const SLUG = "prompt-injection-sandbox"
@@ -18,17 +21,24 @@ export async function generateMetadata({ params }: { params: { lang: string } })
   const locale = (SUPPORTED_LOCALES.includes(params.lang as Locale) ? params.lang : "de") as Locale
   const t = getTool(SLUG)
   const pageUrl = `${SITE_URL}/${locale}/tools/${SLUG}`
-  const title = `${t?.name ?? "Prompt Injection Sandbox"} — Stress-test your system prompt | ClawGuru`
+  const title = `${t?.name ?? "Prompt Injection Sandbox"} — Stress-test your system prompt | ClawGuru Arsenal`
   const description = t?.description
+  const datePublished = "2026-04-22"
+  const dateModified = "2026-05-05"
 
   const softwareSchema = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     name: t?.name,
+    description,
     applicationCategory: "SecurityApplication",
     operatingSystem: "Any",
     offers: { "@type": "Offer", price: "0", priceCurrency: "EUR" },
     url: pageUrl,
+    author: buildPersonSchema(),
+    publisher: buildOrganizationSchema(),
+    datePublished,
+    dateModified,
   }
 
   return {
@@ -37,7 +47,12 @@ export async function generateMetadata({ params }: { params: { lang: string } })
     openGraph: { title, description, url: pageUrl, type: "website" },
     alternates: buildLocalizedAlternates(locale, `/tools/${SLUG}`),
     robots: "index, follow",
-    other: { "application/ld+json": JSON.stringify(softwareSchema) },
+    other: {
+      "application/ld+json": JSON.stringify(softwareSchema),
+      "article:published_time": `${datePublished}T00:00:00Z`,
+      "article:modified_time": `${dateModified}T00:00:00Z`,
+      "article:author": "Schwerti",
+    },
   }
 }
 
@@ -71,6 +86,11 @@ export default function PromptInjectionSandboxPage({ params }: { params: { lang:
           <PromptInjectionSandboxClient />
         </div>
       </section>
+
+      <div className="max-w-5xl mx-auto px-4 py-8">
+        <AuthorBox locale={locale} variant="compact" />
+        <LastUpdated date="2026-05-05" publishedDate="2026-04-22" locale={locale} showPublished />
+      </div>
     </div>
   )
 }
