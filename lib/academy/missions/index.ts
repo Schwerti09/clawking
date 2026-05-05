@@ -33,6 +33,42 @@ import { incidentDetectionBasicsMission } from "./incident-detection-basics"
 import { nis2EngineeringControlsMission } from "./nis2-engineering-controls"
 import { adversarialPatternRecognitionMission } from "./adversarial-pattern-recognition"
 import { hodlbergSeedRoundBreachMission } from "./hodlberg-seed-round-breach"
+import { hodlbergSeriesABreachMission } from "./hodlberg-series-a-breach"
+import { hodlbergIpoBreachMission } from "./hodlberg-ipo-breach"
+import { hodlbergAcquisitionBreachMission } from "./hodlberg-acquisition-breach"
+import { hodlbergInsiderThreatMission } from "./hodlberg-insider-threat"
+import { hodlbergStateSponsoredMission } from "./hodlberg-state-sponsored"
+import { hodlbergCatastropheMission } from "./hodlberg-catastrophe"
+import { hodlbergResurrectionMission } from "./hodlberg-resurrection"
+import { hodlbergRedemptionMission } from "./hodlberg-redemption"
+import { hodlbergLegacyMission } from "./hodlberg-legacy"
+import { hodlbergEpilogueMission } from "./hodlberg-epilogue"
+import { hodlbergFinaleMission } from "./hodlberg-finale"
+import { incidentTriagePressureMission } from "./incident-triage-pressure"
+import { incidentContainmentPlaybooksMission } from "./incident-containment-playbooks"
+import { incidentForensicsMission } from "./incident-forensics"
+import { incidentRecoveryMission } from "./incident-recovery"
+import { incidentRootCauseMission } from "./incident-root-cause"
+import { incidentPostmortemMission } from "./incident-postmortem"
+import { incidentPlaybooksMission } from "./incident-playbooks"
+import { incidentCommunicationMission } from "./incident-communication"
+import { incidentDrillsMission } from "./incident-drills"
+import { complianceDoraMission } from "./compliance-dora"
+import { complianceEuAiActMission } from "./compliance-eu-ai-act"
+import { complianceDsgvoArt32Mission } from "./compliance-dsgvo-art32"
+import { complianceEvidenceCollectionMission } from "./compliance-evidence-collection"
+import { complianceSoc2Mission } from "./compliance-soc2"
+import { complianceIso27001Mission } from "./compliance-iso27001"
+import { complianceThirdPartyRiskMission } from "./compliance-third-party-risk"
+import { adversarialSupplyChainMission } from "./adversarial-supply-chain"
+import { adversarialSocialEngineeringMission } from "./adversarial-social-engineering"
+import { adversarialRansomwareMission } from "./adversarial-ransomware"
+import { adversarialMlSecurityMission } from "./adversarial-ml-security"
+import { adversarialRedTeamingMission } from "./adversarial-red-teaming"
+import { adversarialBlueTeamingMission } from "./adversarial-blue-teaming"
+import { adversarialPurpleTeamingMission } from "./adversarial-purple-teaming"
+import { adversarialThreatIntelMission } from "./adversarial-threat-intel"
+import { adversarialOsintMission } from "./adversarial-osint"
 
 // Mission registry. Add new missions here; they become instantly routable via
 // /academy/mission/[slug]. Mission metadata on the hub + track pages is pulled
@@ -81,14 +117,49 @@ export const MISSIONS: Record<string, Mission> = {
   [prometheusAlertingMission.slug]:      prometheusAlertingMission,
   // Compliance (advanced track)
   [gdprDataMinimizationMission.slug]:    gdprDataMinimizationMission,
+  [nis2EngineeringControlsMission.slug]: nis2EngineeringControlsMission,
+  [complianceDoraMission.slug]:          complianceDoraMission,
+  [complianceEuAiActMission.slug]:       complianceEuAiActMission,
+  [complianceDsgvoArt32Mission.slug]:   complianceDsgvoArt32Mission,
+  [complianceEvidenceCollectionMission.slug]: complianceEvidenceCollectionMission,
+  [complianceSoc2Mission.slug]:         complianceSoc2Mission,
+  [complianceIso27001Mission.slug]:     complianceIso27001Mission,
+  [complianceThirdPartyRiskMission.slug]: complianceThirdPartyRiskMission,
   // Incident Response (advanced track)
   [incidentDetectionBasicsMission.slug]:  incidentDetectionBasicsMission,
-  // Compliance (advanced track)
-  [nis2EngineeringControlsMission.slug]: nis2EngineeringControlsMission,
+  [incidentTriagePressureMission.slug]:   incidentTriagePressureMission,
+  [incidentContainmentPlaybooksMission.slug]: incidentContainmentPlaybooksMission,
+  [incidentForensicsMission.slug]:        incidentForensicsMission,
+  [incidentRecoveryMission.slug]:         incidentRecoveryMission,
+  [incidentRootCauseMission.slug]:        incidentRootCauseMission,
+  [incidentPostmortemMission.slug]:       incidentPostmortemMission,
+  [incidentPlaybooksMission.slug]:        incidentPlaybooksMission,
+  [incidentCommunicationMission.slug]:    incidentCommunicationMission,
+  [incidentDrillsMission.slug]:           incidentDrillsMission,
   // Adversarial Defense (advanced track)
   [adversarialPatternRecognitionMission.slug]: adversarialPatternRecognitionMission,
+  [adversarialSupplyChainMission.slug]: adversarialSupplyChainMission,
+  [adversarialSocialEngineeringMission.slug]: adversarialSocialEngineeringMission,
+  [adversarialRansomwareMission.slug]: adversarialRansomwareMission,
+  [adversarialMlSecurityMission.slug]: adversarialMlSecurityMission,
+  [adversarialRedTeamingMission.slug]: adversarialRedTeamingMission,
+  [adversarialBlueTeamingMission.slug]: adversarialBlueTeamingMission,
+  [adversarialPurpleTeamingMission.slug]: adversarialPurpleTeamingMission,
+  [adversarialThreatIntelMission.slug]: adversarialThreatIntelMission,
+  [adversarialOsintMission.slug]: adversarialOsintMission,
   // Story (story track)
   [hodlbergSeedRoundBreachMission.slug]: hodlbergSeedRoundBreachMission,
+  [hodlbergSeriesABreachMission.slug]: hodlbergSeriesABreachMission,
+  [hodlbergIpoBreachMission.slug]: hodlbergIpoBreachMission,
+  [hodlbergAcquisitionBreachMission.slug]: hodlbergAcquisitionBreachMission,
+  [hodlbergInsiderThreatMission.slug]: hodlbergInsiderThreatMission,
+  [hodlbergStateSponsoredMission.slug]: hodlbergStateSponsoredMission,
+  [hodlbergCatastropheMission.slug]: hodlbergCatastropheMission,
+  [hodlbergResurrectionMission.slug]: hodlbergResurrectionMission,
+  [hodlbergRedemptionMission.slug]: hodlbergRedemptionMission,
+  [hodlbergLegacyMission.slug]: hodlbergLegacyMission,
+  [hodlbergEpilogueMission.slug]: hodlbergEpilogueMission,
+  [hodlbergFinaleMission.slug]: hodlbergFinaleMission,
 }
 
 export interface MissionIndexEntry {
@@ -137,13 +208,49 @@ export const MISSION_INDEX: MissionIndexEntry[] = [
   // Incident Response (advanced track)
   { slug: "incident-log-analysis",    track: "advanced", order: 1, xp: 280, durationMin: 16, accent: "red" },
   { slug: "incident-detection-basics", track: "advanced", order: 2, xp: 250, durationMin: 12, accent: "red" },
+  { slug: "incident-triage-pressure", track: "advanced", order: 3, xp: 260, durationMin: 13, accent: "red" },
+  { slug: "incident-containment-playbooks", track: "advanced", order: 4, xp: 270, durationMin: 14, accent: "red" },
+  { slug: "incident-forensics",       track: "advanced", order: 5, xp: 280, durationMin: 15, accent: "red" },
+  { slug: "incident-recovery",        track: "advanced", order: 6, xp: 290, durationMin: 16, accent: "red" },
+  { slug: "incident-root-cause",      track: "advanced", order: 7, xp: 300, durationMin: 17, accent: "red" },
+  { slug: "incident-postmortem",       track: "advanced", order: 8, xp: 310, durationMin: 18, accent: "red" },
+  { slug: "incident-playbooks",       track: "advanced", order: 9, xp: 320, durationMin: 19, accent: "red" },
+  { slug: "incident-communication",   track: "advanced", order: 10, xp: 330, durationMin: 20, accent: "red" },
+  { slug: "incident-drills",          track: "advanced", order: 11, xp: 340, durationMin: 21, accent: "red" },
   // Compliance (advanced track)
   { slug: "gdpr-data-minimization",   track: "advanced", order: 1, xp: 290, durationMin: 17, accent: "violet" },
   { slug: "nis2-engineering-controls", track: "advanced", order: 2, xp: 280, durationMin: 15, accent: "violet" },
+  { slug: "compliance-dora",          track: "advanced", order: 3, xp: 300, durationMin: 18, accent: "violet" },
+  { slug: "compliance-eu-ai-act",     track: "advanced", order: 4, xp: 310, durationMin: 19, accent: "violet" },
+  { slug: "compliance-dsgvo-art32",   track: "advanced", order: 5, xp: 320, durationMin: 20, accent: "violet" },
+  { slug: "compliance-evidence-collection", track: "advanced", order: 6, xp: 330, durationMin: 21, accent: "violet" },
+  { slug: "compliance-soc2",          track: "advanced", order: 7, xp: 340, durationMin: 22, accent: "violet" },
+  { slug: "compliance-iso27001",      track: "advanced", order: 8, xp: 350, durationMin: 23, accent: "violet" },
+  { slug: "compliance-third-party-risk", track: "advanced", order: 9, xp: 360, durationMin: 24, accent: "violet" },
   // Adversarial Defense (advanced track)
   { slug: "adversarial-pattern-recognition", track: "advanced", order: 1, xp: 300, durationMin: 18, accent: "red" },
+  { slug: "adversarial-supply-chain",   track: "advanced", order: 2, xp: 320, durationMin: 20, accent: "red" },
+  { slug: "adversarial-social-engineering", track: "advanced", order: 3, xp: 330, durationMin: 21, accent: "red" },
+  { slug: "adversarial-ransomware",    track: "advanced", order: 4, xp: 340, durationMin: 22, accent: "red" },
+  { slug: "adversarial-ml-security",   track: "advanced", order: 5, xp: 350, durationMin: 23, accent: "red" },
+  { slug: "adversarial-red-teaming",   track: "advanced", order: 6, xp: 360, durationMin: 24, accent: "red" },
+  { slug: "adversarial-blue-teaming",  track: "advanced", order: 7, xp: 370, durationMin: 25, accent: "red" },
+  { slug: "adversarial-purple-teaming", track: "advanced", order: 8, xp: 380, durationMin: 26, accent: "red" },
+  { slug: "adversarial-threat-intel",  track: "advanced", order: 9, xp: 390, durationMin: 27, accent: "red" },
+  { slug: "adversarial-osint",         track: "advanced", order: 10, xp: 400, durationMin: 28, accent: "red" },
   // Story (story track)
   { slug: "hodlberg-seed-round-breach", track: "story", order: 1, xp: 350, durationMin: 20, accent: "pink" },
+  { slug: "hodlberg-series-a-breach",   track: "story", order: 2, xp: 370, durationMin: 22, accent: "pink" },
+  { slug: "hodlberg-ipo-breach",       track: "story", order: 3, xp: 390, durationMin: 24, accent: "pink" },
+  { slug: "hodlberg-acquisition-breach", track: "story", order: 4, xp: 410, durationMin: 26, accent: "pink" },
+  { slug: "hodlberg-insider-threat",   track: "story", order: 5, xp: 430, durationMin: 28, accent: "pink" },
+  { slug: "hodlberg-state-sponsored",  track: "story", order: 6, xp: 450, durationMin: 30, accent: "pink" },
+  { slug: "hodlberg-catastrophe",      track: "story", order: 7, xp: 470, durationMin: 32, accent: "pink" },
+  { slug: "hodlberg-resurrection",     track: "story", order: 8, xp: 490, durationMin: 34, accent: "pink" },
+  { slug: "hodlberg-redemption",      track: "story", order: 9, xp: 510, durationMin: 36, accent: "pink" },
+  { slug: "hodlberg-legacy",          track: "story", order: 10, xp: 530, durationMin: 38, accent: "pink" },
+  { slug: "hodlberg-epilogue",       track: "story", order: 11, xp: 550, durationMin: 40, accent: "pink" },
+  { slug: "hodlberg-finale",         track: "story", order: 12, xp: 570, durationMin: 42, accent: "pink" },
 ]
 
 export function getMission(slug: string): Mission | undefined {
