@@ -2,6 +2,9 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { SUPPORTED_LOCALES, type Locale, buildLocalizedAlternates } from "@/lib/i18n"
 import { SCENARIO_INDEX } from "@/lib/breaches"
+import { buildAuthoredArticleSchema } from "@/lib/seo/author"
+import AuthorBox from "@/components/seo/AuthorBox"
+import LastUpdated from "@/components/seo/LastUpdated"
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://clawguru.org"
 
@@ -17,12 +20,31 @@ export async function generateMetadata({ params }: { params: { lang: string } })
   const pageUrl = `${SITE_URL}/${locale}/breaches`
   const title = "Attack Cinema — Interactive breach re-enactments | ClawGuru"
   const description = "Replay the biggest security breaches, step by step. Branch into 'what if' scenarios to see how simple defenses change the outcome."
+  const datePublished = "2026-04-22"
+  const dateModified = "2026-05-05"
+
+  const articleSchema = buildAuthoredArticleSchema({
+    headline: title,
+    description,
+    url: pageUrl,
+    datePublished,
+    dateModified,
+    inLanguage: locale,
+    articleType: "TechArticle",
+  })
+
   return {
     title,
     description,
     openGraph: { title, description, url: pageUrl, type: "website" },
     alternates: buildLocalizedAlternates(locale, "/breaches"),
     robots: "index, follow",
+    other: {
+      "article:published_time": `${datePublished}T00:00:00Z`,
+      "article:modified_time": `${dateModified}T00:00:00Z`,
+      "article:author": "Schwerti",
+      "application/ld+json": JSON.stringify(articleSchema),
+    },
   }
 }
 
@@ -96,6 +118,10 @@ export default function BreachesHubPage({ params }: { params: { lang: string } }
           </div>
         </div>
       </section>
+      <div className="max-w-5xl mx-auto px-4 py-8">
+        <AuthorBox locale={locale} variant="compact" />
+        <LastUpdated date="2026-05-05" publishedDate="2026-04-22" locale={locale} showPublished />
+      </div>
     </div>
   )
 }
