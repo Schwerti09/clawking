@@ -8,7 +8,6 @@ import { ClawguruAvatar } from "@/components/ui/ClawguruAvatar"
 import { SecurityCheckShareCard } from "@/components/marketing/SecurityCheckShareCard"
 import dynamic from "next/dynamic"
 import { useI18n } from "@/components/i18n/I18nProvider"
-import Image from "next/image"
 import { trackEvent } from "@/lib/analytics"
 
 // WORLD BEAST FINAL LAUNCH: lazy-load upsell modal
@@ -552,15 +551,11 @@ export default function HeroSecurityCheck({ dict = {} }: { dict?: Record<string,
             <div className="lg:w-[240px]">
               <div className="text-sm text-gray-400 mb-2">{isGerman ? "Share-Badge Preview" : "Share badge preview"}</div>
               <div className="rounded-2xl overflow-hidden border border-gray-800 bg-black/30">
-                <div className="relative w-full aspect-[16/9]">
-                  <Image
-                    src={badgeUrl || "/api/score-badge?target=example&score=0&vulnerable=0"}
-                    alt="Claw Security Score Badge"
-                    fill
-                    sizes="(max-width: 1024px) 100vw, 240px"
-                    placeholder="empty"
-                  />
-                </div>
+                <img
+                  src={badgeUrl || "/api/score-badge?target=example&score=0&vulnerable=0"}
+                  alt="Claw Security Score Badge"
+                  className="w-full h-auto"
+                />
               </div>
               <a
                 className="mt-3 inline-flex text-sm text-cyan-300 hover:text-cyan-200 underline"
