@@ -2,6 +2,9 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { SUPPORTED_LOCALES, type Locale, buildLocalizedAlternates } from "@/lib/i18n"
 import { TOOLS } from "@/lib/tools"
+import { buildAuthoredArticleSchema } from "@/lib/seo/author"
+import AuthorBox from "@/components/seo/AuthorBox"
+import LastUpdated from "@/components/seo/LastUpdated"
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://clawguru.org"
 
@@ -17,6 +20,18 @@ export async function generateMetadata({ params }: { params: { lang: string } })
   const pageUrl = `${SITE_URL}/${locale}/tools`
   const title = "The Arsenal — 15 free security tools | ClawGuru"
   const description = "Inline security tools for self-hosters: header doctor, TLS x-ray, prompt injection sandbox, and more. No signup, no data retention."
+  const datePublished = "2026-04-22"
+  const dateModified = "2026-05-05"
+
+  const articleSchema = buildAuthoredArticleSchema({
+    headline: title,
+    description,
+    url: pageUrl,
+    datePublished,
+    dateModified,
+    inLanguage: locale,
+    articleType: "TechArticle",
+  })
 
   const imageObjectJsonLd = {
     "@context": "https://schema.org",
@@ -56,7 +71,10 @@ export async function generateMetadata({ params }: { params: { lang: string } })
     alternates: buildLocalizedAlternates(locale, "/tools"),
     robots: "index, follow",
     other: {
-      "application/ld+json": JSON.stringify(imageObjectJsonLd),
+      "article:published_time": `${datePublished}T00:00:00Z`,
+      "article:modified_time": `${dateModified}T00:00:00Z`,
+      "article:author": "Schwerti",
+      "application/ld+json": JSON.stringify(articleSchema),
     },
   }
 }
@@ -123,6 +141,10 @@ export default function ToolsHubPage({ params }: { params: { lang: string } }) {
           </div>
         </div>
       </section>
+      <div className="max-w-5xl mx-auto px-4 py-8">
+        <AuthorBox locale={locale} variant="compact" />
+        <LastUpdated date="2026-05-05" publishedDate="2026-04-22" locale={locale} showPublished />
+      </div>
     </div>
   )
 }
