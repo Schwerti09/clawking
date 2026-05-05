@@ -211,14 +211,16 @@ export function UserDashboardClient({ user, tier, initialData }: UserDashboardCl
           {/* ── Tab Navigation ── */}
           <div
             className="relative flex border-b flex-shrink-0 overflow-x-auto"
+            role="tablist"
+            aria-label="Dashboard tabs"
             style={{
               background: 'rgba(10,10,10,0.6)',
               borderColor: 'rgba(255,255,255,0.05)',
               backdropFilter: 'blur(12px)'
             }}
           >
-            <div className="pointer-events-none absolute inset-y-0 left-0 w-6 bg-gradient-to-r from-[#0A0A0A] to-transparent lg:hidden z-10" />
-            <div className="pointer-events-none absolute inset-y-0 right-0 w-6 bg-gradient-to-l from-[#0A0A0A] to-transparent lg:hidden z-10" />
+            <div aria-hidden="true" className="pointer-events-none absolute inset-y-0 left-0 w-6 bg-gradient-to-r from-[#0A0A0A] to-transparent lg:hidden z-10" />
+            <div aria-hidden="true" className="pointer-events-none absolute inset-y-0 right-0 w-6 bg-gradient-to-l from-[#0A0A0A] to-transparent lg:hidden z-10" />
             {tabs.map((tab, index) => {
               const isShadowed = isFeatureShadowed(tier, tab.id as keyof typeof TIER_CONFIGS.explorer.canAccess)
               const isActive = activeTab === tab.id
@@ -228,6 +230,9 @@ export function UserDashboardClient({ user, tier, initialData }: UserDashboardCl
                 <motion.button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
+                  role="tab"
+                  aria-selected={isActive}
+                  aria-label={tab.label}
                   className="relative px-3 sm:px-4 md:px-6 py-3.5 flex items-center gap-2 transition-all overflow-hidden group shrink-0"
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
