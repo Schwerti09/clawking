@@ -4,6 +4,9 @@
 import { SUPPORTED_LOCALES, type Locale, buildLocalizedAlternates } from "@/lib/i18n"
 import RunbooksPageContent from "@/components/pages/RunbooksPageContent"
 import { getDictionary } from "@/lib/getDictionary"
+import { buildAuthoredArticleSchema } from "@/lib/seo/author"
+import AuthorBox from "@/components/seo/AuthorBox"
+import LastUpdated from "@/components/seo/LastUpdated"
 
 export const dynamic = "force-static"
 export const revalidate = 3600
@@ -46,6 +49,19 @@ export async function generateMetadata(props: { params: { lang: string } }) {
   const title = titles[locale] ?? titles.en!
   const description = descriptions[locale] ?? descriptions.en!
   const alternates = buildLocalizedAlternates(locale, "/runbooks")
+  const datePublished = "2026-04-22"
+  const dateModified = "2026-05-05"
+
+  const articleSchema = buildAuthoredArticleSchema({
+    headline: title,
+    description,
+    url: pageUrl,
+    datePublished,
+    dateModified,
+    inLanguage: locale,
+    articleType: "TechArticle",
+  })
+
   return {
     title,
     description,
@@ -62,6 +78,12 @@ export async function generateMetadata(props: { params: { lang: string } }) {
       card: "summary_large_image" as const,
       title,
       description,
+    },
+    other: {
+      "article:published_time": `${datePublished}T00:00:00Z`,
+      "article:modified_time": `${dateModified}T00:00:00Z`,
+      "article:author": "Schwerti",
+      "application/ld+json": JSON.stringify(articleSchema),
     },
   }
 }
