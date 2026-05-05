@@ -253,7 +253,7 @@ export function MyceliumTab({ isShadowed, nodes: dbNodes }: MyceliumTabProps) {
         <motion.div
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
-          className="absolute top-4 right-4 w-72 rounded-2xl border p-5 z-20"
+          className="absolute top-3 left-3 right-3 sm:top-4 sm:right-4 sm:left-auto sm:w-72 rounded-2xl border p-4 sm:p-5 z-20"
           style={{
             background: 'rgba(10,10,10,0.9)',
             borderColor: 'rgba(234,179,8,0.15)',
@@ -283,11 +283,11 @@ export function MyceliumTab({ isShadowed, nodes: dbNodes }: MyceliumTabProps) {
       )}
 
       {/* Controls */}
-      <div className="absolute bottom-4 left-4 flex gap-2 z-20">
+      <div className="absolute bottom-3 left-3 sm:bottom-4 sm:left-4 flex gap-2 z-20">
         {['Reset View', 'Export Graph'].map(label => (
           <button
             key={label}
-            className="px-3 py-2 rounded-xl text-[11px] font-medium text-gray-400 border transition-all hover:text-white hover:border-yellow-500/20"
+            className="px-2.5 sm:px-3 py-2 rounded-xl text-[10px] sm:text-[11px] font-medium text-gray-400 border transition-all hover:text-white hover:border-yellow-500/20"
             style={{ background: 'rgba(10,10,10,0.8)', borderColor: 'rgba(255,255,255,0.06)', backdropFilter: 'blur(12px)' }}
           >
             {label}
@@ -296,9 +296,9 @@ export function MyceliumTab({ isShadowed, nodes: dbNodes }: MyceliumTabProps) {
       </div>
 
       {/* Stats overlay */}
-      <div className="absolute top-4 left-4 z-20">
+      <div className="absolute top-3 left-3 sm:top-4 sm:left-4 z-20">
         <div
-          className="rounded-xl border px-4 py-3"
+          className="rounded-xl border px-3 sm:px-4 py-2.5 sm:py-3"
           style={{ background: 'rgba(10,10,10,0.85)', borderColor: 'rgba(255,255,255,0.06)', backdropFilter: 'blur(12px)' }}
         >
           <div className="text-[10px] font-semibold tracking-[0.15em] uppercase text-gray-600 mb-1">Mycelium Network</div>

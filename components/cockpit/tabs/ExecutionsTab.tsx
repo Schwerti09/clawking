@@ -74,11 +74,11 @@ export function ExecutionsTab({ isShadowed, executions }: ExecutionsTabProps) {
   const filteredExecutions = executions.filter(e => filter === 'all' || e.status === filter)
 
   return (
-    <div className="p-8 h-full overflow-y-auto">
+    <div className="p-4 sm:p-6 lg:p-8 h-full overflow-y-auto">
       {/* Header */}
       <motion.div initial={{ opacity: 0, y: -15 }} animate={{ opacity: 1, y: 0 }} className="mb-8">
-        <div className="flex items-center justify-between mb-5">
-          <div className="flex items-center gap-4">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-5">
+          <div className="flex items-start sm:items-center gap-4">
             <div className="w-12 h-12 rounded-2xl flex items-center justify-center border" style={{ background: 'rgba(234,179,8,0.08)', borderColor: 'rgba(234,179,8,0.2)' }}>
               <Activity className="w-6 h-6" style={{ color: '#EAB308' }} />
             </div>
@@ -98,7 +98,7 @@ export function ExecutionsTab({ isShadowed, executions }: ExecutionsTabProps) {
         </div>
 
         {/* Stats */}
-        <div className="grid grid-cols-4 gap-3">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
           {[
             { label: 'Running', value: executions.filter(e => e.status === 'running').length, icon: Activity },
             { label: 'Completed', value: executions.filter(e => e.status === 'completed').length, icon: CheckCircle },
@@ -126,7 +126,7 @@ export function ExecutionsTab({ isShadowed, executions }: ExecutionsTabProps) {
             </button>
           ))}
         </div>
-        <div className="flex items-center gap-1.5 ml-auto"><Clock className="w-3.5 h-3.5 text-gray-600" /><span className="text-xs text-gray-600">Zeitraum:</span></div>
+        <div className="flex items-center gap-1.5 sm:ml-auto"><Clock className="w-3.5 h-3.5 text-gray-600" /><span className="text-xs text-gray-600">Zeitraum:</span></div>
         <div className="flex gap-1.5">
           {['1h', '24h', '7d', '30d'].map(r => (
             <button key={r} onClick={() => setTimeRange(r)} className="px-3 py-1 rounded-lg text-xs font-medium border transition-all" style={timeRange === r ? { background: 'rgba(234,179,8,0.08)', borderColor: 'rgba(234,179,8,0.2)', color: '#EAB308' } : { background: 'transparent', borderColor: 'rgba(255,255,255,0.06)', color: '#71717A' }}>
@@ -209,7 +209,7 @@ export function ExecutionsTab({ isShadowed, executions }: ExecutionsTabProps) {
                         className="mt-5 pt-5"
                         style={{ borderTop: '1px solid rgba(255,255,255,0.04)' }}
                       >
-                        <div className="grid grid-cols-2 gap-5">
+                        <div className="grid grid-cols-1 xl:grid-cols-2 gap-5">
                           <div>
                             <h4 className="text-xs font-semibold mb-3 flex items-center gap-1.5" style={{ color: '#EAB308' }}><FileText className="w-3.5 h-3.5" /> Details</h4>
                             <div className="space-y-2 text-[11px]">

@@ -69,7 +69,7 @@ export function UserDashboardClient({ user, tier, initialData }: UserDashboardCl
   }
 
   return (
-    <div className="min-h-screen text-white overflow-hidden relative" style={{ background: '#0A0A0A' }}>
+    <div className="min-h-screen text-white overflow-x-hidden relative" style={{ background: '#0A0A0A' }}>
 
       {/* ── Background Layers ── */}
       <div className="fixed inset-0 z-0">
@@ -113,11 +113,11 @@ export function UserDashboardClient({ user, tier, initialData }: UserDashboardCl
       />
 
       {/* ── Main Layout ── */}
-      <div className="relative z-10 flex h-screen">
+      <div className="relative z-10 flex h-[100dvh] md:h-screen flex-col lg:flex-row">
 
         {/* Left Sidebar */}
         <div
-          className="w-72 border-r flex-shrink-0"
+          className="hidden lg:block w-72 border-r flex-shrink-0"
           style={{
             background: 'rgba(10,10,10,0.8)',
             borderColor: 'rgba(255,255,255,0.05)',
@@ -132,14 +132,14 @@ export function UserDashboardClient({ user, tier, initialData }: UserDashboardCl
 
           {/* ── Top Bar ── */}
           <header
-            className="h-14 flex items-center justify-between px-6 border-b flex-shrink-0"
+            className="h-14 flex items-center justify-between px-3 sm:px-4 md:px-6 border-b flex-shrink-0"
             style={{
               background: 'rgba(10,10,10,0.85)',
               borderColor: 'rgba(255,255,255,0.05)',
               backdropFilter: 'blur(20px)'
             }}
           >
-            <div className="flex items-center gap-5">
+            <div className="flex items-center gap-2 sm:gap-4 md:gap-5 min-w-0">
               <motion.div
                 className="flex items-center gap-2.5"
                 initial={{ opacity: 0, x: -20 }}
@@ -151,19 +151,21 @@ export function UserDashboardClient({ user, tier, initialData }: UserDashboardCl
                   className="w-2 h-2 rounded-full"
                   style={{ background: '#EAB308', boxShadow: '0 0 8px rgba(234,179,8,0.6)' }}
                 />
-                <div className="text-lg font-bold tracking-tight">
-                  <span style={{ color: '#EAB308' }}>ClawGuru</span>
-                  <span className="text-gray-500 font-normal ml-2 text-sm">Dashboard</span>
-                </div>
-              </motion.div>
+                  <div className="text-base sm:text-lg font-bold tracking-tight truncate">
+                    <span style={{ color: '#EAB308' }}>ClawGuru</span>
+                    <span className="hidden sm:inline text-gray-500 font-normal ml-2 text-sm">Dashboard</span>
+                  </div>
+                </motion.div>
 
-              {/* Subtle divider */}
-              <div className="w-px h-5 bg-white/5" />
+                {/* Subtle divider */}
+              <div className="hidden sm:block w-px h-5 bg-white/5" />
 
-              <ThreatLevelGauge activeThreats={initialData.activeThreats} />
+              <div className="min-w-0">
+                <ThreatLevelGauge activeThreats={initialData.activeThreats} />
+              </div>
             </div>
 
-            <div className="flex items-center gap-5">
+            <div className="flex items-center gap-2 sm:gap-4 md:gap-5">
               {/* Global indicators */}
               <div className="hidden lg:flex items-center gap-4 text-xs text-gray-500">
                 <div className="flex items-center gap-1.5">
@@ -208,7 +210,7 @@ export function UserDashboardClient({ user, tier, initialData }: UserDashboardCl
 
           {/* ── Tab Navigation ── */}
           <div
-            className="flex border-b flex-shrink-0"
+            className="flex border-b flex-shrink-0 overflow-x-auto no-scrollbar"
             style={{
               background: 'rgba(10,10,10,0.6)',
               borderColor: 'rgba(255,255,255,0.05)',
@@ -224,7 +226,7 @@ export function UserDashboardClient({ user, tier, initialData }: UserDashboardCl
                 <motion.button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
-                  className="relative px-6 py-3.5 flex items-center gap-2.5 transition-all overflow-hidden group"
+                  className="relative px-3 sm:px-4 md:px-6 py-3.5 flex items-center gap-2 transition-all overflow-hidden group shrink-0"
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.3, delay: index * 0.05 }}
@@ -240,12 +242,12 @@ export function UserDashboardClient({ user, tier, initialData }: UserDashboardCl
                     className="w-4 h-4 transition-colors duration-300"
                     style={{ color: isActive ? '#EAB308' : '#52525B' }}
                   />
-                  <span
-                    className="text-sm font-medium tracking-wide transition-colors duration-300"
-                    style={{ color: isActive ? '#FFFFFF' : '#71717A' }}
-                  >
-                    {tab.label}
-                  </span>
+                    <span
+                      className="text-sm font-medium tracking-wide transition-colors duration-300"
+                      style={{ color: isActive ? '#FFFFFF' : '#71717A' }}
+                    >
+                      {tab.label}
+                    </span>
 
                   {/* Lock overlay */}
                   {isShadowed && (
@@ -269,7 +271,7 @@ export function UserDashboardClient({ user, tier, initialData }: UserDashboardCl
           </div>
 
           {/* ── Tab Content ── */}
-          <div className="flex-1 relative overflow-hidden">
+          <div className="flex-1 relative overflow-hidden min-h-0">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeTab}
@@ -277,7 +279,7 @@ export function UserDashboardClient({ user, tier, initialData }: UserDashboardCl
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
                 transition={{ duration: 0.25 }}
-                className="h-full"
+                className="h-full min-h-0"
               >
                 {renderTab()}
               </motion.div>
@@ -295,7 +297,7 @@ export function UserDashboardClient({ user, tier, initialData }: UserDashboardCl
 
         {/* Right Sidebar */}
         <div
-          className="w-16 border-l flex-shrink-0"
+          className="hidden xl:block w-16 border-l flex-shrink-0"
           style={{
             background: 'rgba(10,10,10,0.8)',
             borderColor: 'rgba(255,255,255,0.05)',
