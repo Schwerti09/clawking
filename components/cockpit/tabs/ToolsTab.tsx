@@ -113,7 +113,7 @@ export function ToolsTab({ isShadowed, executions }: ToolsTabProps) {
   }
 
   return (
-    <div className="p-8 h-full overflow-y-auto">
+    <div className="p-4 sm:p-6 lg:p-8 h-full overflow-y-auto">
       <motion.div
         initial={{ opacity: 0, y: 8 }}
         animate={{ opacity: 1, y: 0 }}
@@ -125,7 +125,7 @@ export function ToolsTab({ isShadowed, executions }: ToolsTabProps) {
 
       {/* Header */}
       <motion.div initial={{ opacity: 0, y: -15 }} animate={{ opacity: 1, y: 0 }} className="mb-8">
-        <div className="flex items-center gap-4 mb-5">
+        <div className="flex items-start sm:items-center gap-4 mb-5">
           <div className="w-12 h-12 rounded-2xl flex items-center justify-center border" style={{ background: 'rgba(234,179,8,0.08)', borderColor: 'rgba(234,179,8,0.2)' }}>
             <Zap className="w-6 h-6" style={{ color: '#EAB308' }} />
           </div>
@@ -136,7 +136,7 @@ export function ToolsTab({ isShadowed, executions }: ToolsTabProps) {
         </div>
 
         {/* Global Stats */}
-        <div className="grid grid-cols-4 gap-3">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
           {[
             { label: 'Active Tools', value: String(tools.length), icon: CheckCircle },
             { label: 'Avg Success', value: avgSuccess > 0 ? `${avgSuccess}%` : '–', icon: Activity },
@@ -155,7 +155,7 @@ export function ToolsTab({ isShadowed, executions }: ToolsTabProps) {
       </motion.div>
 
       {/* Tools Grid */}
-      <div className="grid grid-cols-2 gap-5">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
         {tools.map((tool, index) => (
           <motion.div
             key={tool.id}
@@ -250,7 +250,7 @@ export function ToolsTab({ isShadowed, executions }: ToolsTabProps) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="mt-6 p-6 rounded-2xl border"
+            className="mt-6 p-4 sm:p-6 rounded-2xl border"
             style={{ ...glass, borderColor: 'rgba(234,179,8,0.12)', boxShadow: '0 0 60px rgba(234,179,8,0.04)' }}
           >
             <div className="flex items-center justify-between mb-5">
@@ -296,7 +296,7 @@ export function ToolsTab({ isShadowed, executions }: ToolsTabProps) {
             </div>
 
             {/* Execution info */}
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
                 { label: 'Runs gesamt', icon: Target, val: String(totalRuns) },
                 { label: 'Erfolgsrate', icon: CheckCircle, val: avgSuccess > 0 ? `${avgSuccess}%` : '–' }
