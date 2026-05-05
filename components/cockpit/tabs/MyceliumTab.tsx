@@ -253,7 +253,7 @@ export function MyceliumTab({ isShadowed, nodes: dbNodes }: MyceliumTabProps) {
         <motion.div
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
-          className="absolute top-3 left-3 right-3 sm:top-4 sm:right-4 sm:left-auto sm:w-72 rounded-2xl border p-4 sm:p-5 z-20"
+          className="absolute top-3 left-3 right-3 sm:top-4 sm:right-4 sm:left-auto sm:w-72 rounded-2xl border p-4 sm:p-5 z-30"
           style={{
             background: 'rgba(10,10,10,0.9)',
             borderColor: 'rgba(234,179,8,0.15)',

@@ -113,7 +113,7 @@ export function UserDashboardClient({ user, tier, initialData }: UserDashboardCl
       />
 
       {/* ── Main Layout ── */}
-      <div className="relative z-10 flex h-[100dvh] md:h-screen flex-col lg:flex-row">
+      <div className="relative z-10 flex h-screen supports-[height:100dvh]:h-[100dvh] flex-col lg:flex-row">
 
         {/* Left Sidebar */}
         <div
@@ -210,13 +210,15 @@ export function UserDashboardClient({ user, tier, initialData }: UserDashboardCl
 
           {/* ── Tab Navigation ── */}
           <div
-            className="flex border-b flex-shrink-0 overflow-x-auto no-scrollbar"
+            className="relative flex border-b flex-shrink-0 overflow-x-auto"
             style={{
               background: 'rgba(10,10,10,0.6)',
               borderColor: 'rgba(255,255,255,0.05)',
               backdropFilter: 'blur(12px)'
             }}
           >
+            <div className="pointer-events-none absolute inset-y-0 left-0 w-6 bg-gradient-to-r from-[#0A0A0A] to-transparent lg:hidden z-10" />
+            <div className="pointer-events-none absolute inset-y-0 right-0 w-6 bg-gradient-to-l from-[#0A0A0A] to-transparent lg:hidden z-10" />
             {tabs.map((tab, index) => {
               const isShadowed = isFeatureShadowed(tier, tab.id as keyof typeof TIER_CONFIGS.explorer.canAccess)
               const isActive = activeTab === tab.id
