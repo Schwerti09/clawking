@@ -72,7 +72,7 @@ export function BillingTab({ tier, onUpgrade, data }: BillingTabProps) {
   const getAdjustedPrice = (basePrice: string) => basePrice
   
   return (
-    <div className="p-8">
+    <div className="p-4 sm:p-6 lg:p-8 h-full overflow-y-auto">
       {/* Enhanced Header */}
       <motion.div
         initial={{ opacity: 0, y: -20 }}
@@ -100,9 +100,9 @@ export function BillingTab({ tier, onUpgrade, data }: BillingTabProps) {
         transition={{ delay: 0.1 }}
         className="mb-8"
       >
-        <div className="rounded-2xl border p-8" style={{ background: 'linear-gradient(135deg, rgba(255,255,255,0.025), rgba(255,255,255,0.005))', borderColor: 'rgba(255,255,255,0.06)', backdropFilter: 'blur(20px)' }}>
-          <div className="flex items-center justify-between mb-6">
-            <div className="flex items-center gap-6">
+        <div className="rounded-2xl border p-4 sm:p-6 lg:p-8" style={{ background: 'linear-gradient(135deg, rgba(255,255,255,0.025), rgba(255,255,255,0.005))', borderColor: 'rgba(255,255,255,0.06)', backdropFilter: 'blur(20px)' }}>
+          <div className="flex flex-col xl:flex-row xl:items-center xl:justify-between gap-4 mb-6">
+            <div className="flex items-start sm:items-center gap-4 sm:gap-6">
               <div className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${getTierGradient(tier)} flex items-center justify-center`}>
                 {(() => {
                   const IconComponent = getTierIcon(tier)
@@ -111,7 +111,7 @@ export function BillingTab({ tier, onUpgrade, data }: BillingTabProps) {
               </div>
               <div>
                 <h3 className="text-2xl font-bold text-white mb-2">Current Plan</h3>
-                <div className="flex items-center gap-4">
+             <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4">
                   <div className={`px-4 py-2 rounded-full text-sm font-bold ${
                     tier === 'enterprise' 
                       ? 'bg-yellow-500/20 text-yellow-500 border border-yellow-500/30'
@@ -152,7 +152,7 @@ export function BillingTab({ tier, onUpgrade, data }: BillingTabProps) {
           </div>
           
           {/* Current Tier Features */}
-          <div className="grid grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
             {currentConfig.features.slice(0, 4).map((feature, index) => (
               <motion.div
                 key={index}
@@ -174,10 +174,10 @@ export function BillingTab({ tier, onUpgrade, data }: BillingTabProps) {
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ delay: 0.2 }}
-        className="grid grid-cols-2 gap-6 mb-8"
+        className="grid grid-cols-1 xl:grid-cols-2 gap-6 mb-8"
       >
         {/* Usage This Month */}
-        <div className="rounded-2xl border p-6" style={{ background: 'linear-gradient(135deg, rgba(255,255,255,0.025), rgba(255,255,255,0.005))', borderColor: 'rgba(255,255,255,0.06)', backdropFilter: 'blur(20px)' }}>
+        <div className="rounded-2xl border p-4 sm:p-6" style={{ background: 'linear-gradient(135deg, rgba(255,255,255,0.025), rgba(255,255,255,0.005))', borderColor: 'rgba(255,255,255,0.06)', backdropFilter: 'blur(20px)' }}>
           <h4 className="text-base font-semibold text-white mb-5 flex items-center gap-2">
             <Activity className="w-4 h-4" style={{ color: '#EAB308' }} />
             Nutzung diesen Monat
@@ -215,7 +215,7 @@ export function BillingTab({ tier, onUpgrade, data }: BillingTabProps) {
         </div>
 
         {/* Billing Information */}
-        <div className="rounded-2xl border p-6" style={{ background: 'linear-gradient(135deg, rgba(255,255,255,0.025), rgba(255,255,255,0.005))', borderColor: 'rgba(255,255,255,0.06)', backdropFilter: 'blur(20px)' }}>
+        <div className="rounded-2xl border p-4 sm:p-6" style={{ background: 'linear-gradient(135deg, rgba(255,255,255,0.025), rgba(255,255,255,0.005))', borderColor: 'rgba(255,255,255,0.06)', backdropFilter: 'blur(20px)' }}>
           <h4 className="text-base font-semibold text-white mb-5 flex items-center gap-2">
             <DollarSign className="w-4 h-4" style={{ color: '#EAB308' }} />
             Zahlungsinformationen
@@ -298,14 +298,14 @@ export function BillingTab({ tier, onUpgrade, data }: BillingTabProps) {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3 }}
-        className="bg-black/40 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-8"
+        className="bg-black/40 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-4 sm:p-6 lg:p-8"
       >
         <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-2">
           <Sparkles className="w-6 h-6 text-cyan-400" />
           Compare Plans
         </h3>
         
-        <div className="grid grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
           {Object.entries(TIER_CONFIGS).map(([tierKey, config], index) => {
             const IconComponent = getTierIcon(tierKey)
             const isCurrentTier = tierKey === tier
@@ -317,7 +317,7 @@ export function BillingTab({ tier, onUpgrade, data }: BillingTabProps) {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 + index * 0.1 }}
-                className="relative group cursor-pointer border rounded-2xl p-6 transition-all"
+                className="relative group cursor-pointer border rounded-2xl p-4 sm:p-6 transition-all"
                 style={{
                   background: isCurrentTier ? 'rgba(234,179,8,0.04)' : 'linear-gradient(135deg, rgba(255,255,255,0.02), rgba(255,255,255,0.005))',
                   borderColor: isCurrentTier ? 'rgba(234,179,8,0.2)' : isHigherTier ? 'rgba(255,255,255,0.08)' : 'rgba(255,255,255,0.04)',

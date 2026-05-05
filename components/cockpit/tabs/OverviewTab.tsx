@@ -77,7 +77,7 @@ export function OverviewTab({ data, tier, onUpgrade }: OverviewTabProps) {
   ].slice(0, 5)
 
   return (
-    <div className="h-full overflow-y-auto p-6 space-y-8">
+    <div className="h-full overflow-y-auto p-4 sm:p-6 space-y-6 sm:space-y-8">
 
       {/* ── Instant Security Check ── */}
       <InstantSecurityCheck tier={tier} onUpgrade={onUpgrade} />
@@ -85,7 +85,7 @@ export function OverviewTab({ data, tier, onUpgrade }: OverviewTabProps) {
       {/* ── Hero Section: 3D ClawScore + Gauge + Live Stats ── */}
       <div className="animate-fade-in-up" style={{ animationDuration: '0.8s' }}>
         <div
-          className="relative overflow-hidden rounded-3xl border p-8"
+          className="relative overflow-hidden rounded-3xl border p-4 sm:p-6 lg:p-8"
           style={{
             background: 'linear-gradient(135deg, rgba(234,179,8,0.03) 0%, rgba(10,10,10,0.95) 40%, rgba(10,10,10,0.98) 100%)',
             borderColor: 'rgba(234,179,8,0.12)',
@@ -110,7 +110,7 @@ export function OverviewTab({ data, tier, onUpgrade }: OverviewTabProps) {
               <ClawScore3D
                 score={data.clawScore}
                 maxScore={1000}
-                className="w-56 h-56"
+                className="w-40 h-40 sm:w-56 sm:h-56"
               />
             </div>
 
