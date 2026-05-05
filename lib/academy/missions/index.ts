@@ -29,6 +29,10 @@ import { postgresRlsMission } from "./postgres-rls"
 import { githubActionsHardeningMission } from "./github-actions-hardening"
 import { prometheusAlertingMission } from "./prometheus-alerting"
 import { gdprDataMinimizationMission } from "./gdpr-data-minimization"
+import { incidentDetectionBasicsMission } from "./incident-detection-basics"
+import { nis2EngineeringControlsMission } from "./nis2-engineering-controls"
+import { adversarialPatternRecognitionMission } from "./adversarial-pattern-recognition"
+import { hodlbergSeedRoundBreachMission } from "./hodlberg-seed-round-breach"
 
 // Mission registry. Add new missions here; they become instantly routable via
 // /academy/mission/[slug]. Mission metadata on the hub + track pages is pulled
@@ -77,6 +81,14 @@ export const MISSIONS: Record<string, Mission> = {
   [prometheusAlertingMission.slug]:      prometheusAlertingMission,
   // Compliance (advanced track)
   [gdprDataMinimizationMission.slug]:    gdprDataMinimizationMission,
+  // Incident Response (advanced track)
+  [incidentDetectionBasicsMission.slug]:  incidentDetectionBasicsMission,
+  // Compliance (advanced track)
+  [nis2EngineeringControlsMission.slug]: nis2EngineeringControlsMission,
+  // Adversarial Defense (advanced track)
+  [adversarialPatternRecognitionMission.slug]: adversarialPatternRecognitionMission,
+  // Story (story track)
+  [hodlbergSeedRoundBreachMission.slug]: hodlbergSeedRoundBreachMission,
 }
 
 export interface MissionIndexEntry {
@@ -124,8 +136,14 @@ export const MISSION_INDEX: MissionIndexEntry[] = [
   { slug: "llm-rate-limiting",        track: "advanced", order: 4, xp: 250, durationMin: 12, accent: "red" },
   // Incident Response (advanced track)
   { slug: "incident-log-analysis",    track: "advanced", order: 1, xp: 280, durationMin: 16, accent: "red" },
+  { slug: "incident-detection-basics", track: "advanced", order: 2, xp: 250, durationMin: 12, accent: "red" },
   // Compliance (advanced track)
   { slug: "gdpr-data-minimization",   track: "advanced", order: 1, xp: 290, durationMin: 17, accent: "violet" },
+  { slug: "nis2-engineering-controls", track: "advanced", order: 2, xp: 280, durationMin: 15, accent: "violet" },
+  // Adversarial Defense (advanced track)
+  { slug: "adversarial-pattern-recognition", track: "advanced", order: 1, xp: 300, durationMin: 18, accent: "red" },
+  // Story (story track)
+  { slug: "hodlberg-seed-round-breach", track: "story", order: 1, xp: 350, durationMin: 20, accent: "pink" },
 ]
 
 export function getMission(slug: string): Mission | undefined {
