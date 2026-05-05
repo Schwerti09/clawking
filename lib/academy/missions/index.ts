@@ -23,6 +23,12 @@ import { k8sPodSecurityMission } from "./k8s-pod-security"
 import { oauth2PkceMission } from "./oauth2-pkce"
 import { awsS3BucketPolicyMission } from "./aws-s3-bucket-policy"
 import { fail2banSetupMission } from "./fail2ban-setup"
+import { incidentLogAnalysisMission } from "./incident-log-analysis"
+import { tlsCertificateRotationMission } from "./tls-certificate-rotation"
+import { postgresRlsMission } from "./postgres-rls"
+import { githubActionsHardeningMission } from "./github-actions-hardening"
+import { prometheusAlertingMission } from "./prometheus-alerting"
+import { gdprDataMinimizationMission } from "./gdpr-data-minimization"
 
 // Mission registry. Add new missions here; they become instantly routable via
 // /academy/mission/[slug]. Mission metadata on the hub + track pages is pulled
@@ -59,6 +65,18 @@ export const MISSIONS: Record<string, Mission> = {
   [awsS3BucketPolicyMission.slug]:       awsS3BucketPolicyMission,
   // Network Security (beginner track)
   [fail2banSetupMission.slug]:           fail2banSetupMission,
+  // Incident Response (advanced track)
+  [incidentLogAnalysisMission.slug]:      incidentLogAnalysisMission,
+  // Certificate Management (intermediate track)
+  [tlsCertificateRotationMission.slug]:   tlsCertificateRotationMission,
+  // Database Security (intermediate track)
+  [postgresRlsMission.slug]:              postgresRlsMission,
+  // CI/CD Security (intermediate track)
+  [githubActionsHardeningMission.slug]:   githubActionsHardeningMission,
+  // Monitoring & Observability (intermediate track)
+  [prometheusAlertingMission.slug]:      prometheusAlertingMission,
+  // Compliance (advanced track)
+  [gdprDataMinimizationMission.slug]:    gdprDataMinimizationMission,
 }
 
 export interface MissionIndexEntry {
@@ -91,6 +109,10 @@ export const MISSION_INDEX: MissionIndexEntry[] = [
   { slug: "redis-auth-acl",          track: "intermediate", order: 9, xp: 230, durationMin: 11, accent: "cyan" },
   { slug: "k8s-pod-security",       track: "intermediate", order: 10, xp: 270, durationMin: 15, accent: "blue" },
   { slug: "aws-s3-bucket-policy",   track: "intermediate", order: 11, xp: 250, durationMin: 12, accent: "amber" },
+  { slug: "tls-certificate-rotation", track: "intermediate", order: 12, xp: 240, durationMin: 13, accent: "cyan" },
+  { slug: "postgres-rls",            track: "intermediate", order: 13, xp: 260, durationMin: 14, accent: "blue" },
+  { slug: "github-actions-hardening", track: "intermediate", order: 14, xp: 270, durationMin: 15, accent: "amber" },
+  { slug: "prometheus-alerting",     track: "intermediate", order: 15, xp: 250, durationMin: 14, accent: "cyan" },
   // Auth & Identity (auth track)
   { slug: "jwt-alg-none",       track: "auth",         order: 1, xp: 200, durationMin: 10, accent: "violet" },
   { slug: "session-security",   track: "auth",         order: 2, xp: 220, durationMin: 11, accent: "violet" },
@@ -100,6 +122,10 @@ export const MISSION_INDEX: MissionIndexEntry[] = [
   { slug: "ai-agent-permissions",     track: "advanced", order: 2, xp: 260, durationMin: 14, accent: "red" },
   { slug: "llm-output-sanitize",      track: "advanced", order: 3, xp: 240, durationMin: 13, accent: "red" },
   { slug: "llm-rate-limiting",        track: "advanced", order: 4, xp: 250, durationMin: 12, accent: "red" },
+  // Incident Response (advanced track)
+  { slug: "incident-log-analysis",    track: "advanced", order: 1, xp: 280, durationMin: 16, accent: "red" },
+  // Compliance (advanced track)
+  { slug: "gdpr-data-minimization",   track: "advanced", order: 1, xp: 290, durationMin: 17, accent: "violet" },
 ]
 
 export function getMission(slug: string): Mission | undefined {
