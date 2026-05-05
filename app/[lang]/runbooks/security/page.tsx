@@ -4,6 +4,9 @@
 import Container from "@/components/shared/Container"
 import { type Locale, SUPPORTED_LOCALES, buildLocalizedAlternates } from "@/lib/i18n"
 import Link from "next/link"
+import { buildAuthoredArticleSchema } from "@/lib/seo/author"
+import AuthorBox from "@/components/seo/AuthorBox"
+import LastUpdated from "@/components/seo/LastUpdated"
 
 export const dynamic = "force-dynamic"
 
@@ -21,10 +24,34 @@ export async function generateStaticParams() {
 export async function generateMetadata(props: { params: { lang: string } }) {
   const params = props.params;
   const locale = (SUPPORTED_LOCALES.includes(params.lang as Locale) ? params.lang : "de") as Locale
+  const base = process.env.NEXT_PUBLIC_SITE_URL || "https://clawguru.org"
+  const pageUrl = `${base}/${locale}/runbooks/security`
+  const title = `Security Runbooks – Firewall, SSH, Secrets, Zero Trust 2026 | ClawGuru`
+  const description = `Alle ClawGuru Security-Runbooks: SSH Hardening, Firewall, CSP, Secrets Management, Zero Trust, Container Security. Aktuell für 2026.`
+  const datePublished = "2026-04-22"
+  const dateModified = "2026-05-05"
+
+  const articleSchema = buildAuthoredArticleSchema({
+    headline: title,
+    description,
+    url: pageUrl,
+    datePublished,
+    dateModified,
+    inLanguage: locale,
+    articleType: "TechArticle",
+  })
+
   return {
-    title: `Security Runbooks – Firewall, SSH, Secrets, Zero Trust 2026 | ClawGuru`,
-    description: `Alle ClawGuru Security-Runbooks: SSH Hardening, Firewall, CSP, Secrets Management, Zero Trust, Container Security. Aktuell für 2026.`,
-    alternates: buildLocalizedAlternates(locale, "/runbooks/security")
+    title,
+    description,
+    alternates: buildLocalizedAlternates(locale, "/runbooks/security"),
+    openGraph: { title, description, url: pageUrl, type: "article" },
+    other: {
+      "article:published_time": `${datePublished}T00:00:00Z`,
+      "article:modified_time": `${dateModified}T00:00:00Z`,
+      "article:author": "Schwerti",
+      "application/ld+json": JSON.stringify(articleSchema),
+    },
   }
 }
 
@@ -94,6 +121,12 @@ export default async function SecurityHubPage(props: { params: { lang: string } 
             </div>
           </div>
         ))}
+
+        {/* E-E-A-T: AuthorBox and LastUpdated */}
+        <div className="mt-12 max-w-5xl mx-auto">
+          <AuthorBox locale={locale} variant="compact" />
+          <LastUpdated date="2026-05-05" publishedDate="2026-04-22" locale={locale} showPublished />
+        </div>
       </div>
     </Container>
   );

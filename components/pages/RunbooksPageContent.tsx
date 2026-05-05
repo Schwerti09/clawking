@@ -7,6 +7,8 @@ import { BASE_URL } from "@/lib/config"
 import type { Locale } from "@/lib/i18n"
 import dynamic from "next/dynamic"
 import { EmailCapture } from "@/components/conversion/EmailCapture"
+import AuthorBox from "@/components/seo/AuthorBox"
+import LastUpdated from "@/components/seo/LastUpdated"
 const RunbookNexus = dynamic(() => import("@/components/pages/RunbookNexus"), {
   loading: () => (
     <div style={{ minHeight: "80vh", contentVisibility: "auto", containIntrinsicSize: "auto 1200px" }} />
@@ -215,6 +217,12 @@ export default async function RunbooksPageContent({
               </div>
             </a>
           </div>
+        </div>
+
+        {/* E-E-A-T: AuthorBox and LastUpdated */}
+        <div className="mt-12 max-w-5xl mx-auto">
+          <AuthorBox locale={locale} variant="compact" />
+          <LastUpdated date="2026-05-05" publishedDate="2026-04-22" locale={locale} showPublished />
         </div>
       </div>
     </Container>
