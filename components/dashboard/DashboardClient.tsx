@@ -220,7 +220,7 @@ function MyceliumCommandCore(props: { tier: AccessPlan }) {
             <div className="text-3xl font-black mt-1"><span className="text-cyan-300">Mycelium</span> erkennt gerade {ticker} neue Bedrohungen</div>
             <div className="mt-2 text-sm text-gray-400">Hover über Knoten → sofortiges Runbook</div>
           </div>
-          <div className="mt-4 flex gap-2">
+          <div className="mt-4 flex flex-col sm:flex-row gap-2">
             <UpgradeButton product="daypass" label="Daypass 9 € – 24h Live" />
             <UpgradeButton product="pro" label="Pro 99 €/Monat – Generator" />
           </div>
@@ -255,10 +255,10 @@ function SecurityScoreRing() {
   return (
     <div ref={rootRef} className="p-6 rounded-3xl border border-gray-800 bg-black/30">
       <div className="text-lg font-black mb-3">Mycelium Security Score</div>
-      <div className="flex items-center gap-6">
-        <div className="w-40 h-40 rounded-full grid place-items-center" style={{ background: bg }}>
-          <div className="w-32 h-32 rounded-full bg-black/80 border border-cyan-400/20 grid place-items-center">
-            <div className="text-3xl font-black">{score}</div>
+      <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6">
+        <div className="w-32 h-32 sm:w-40 sm:h-40 rounded-full grid place-items-center" style={{ background: bg }}>
+          <div className="w-24 h-24 sm:w-32 sm:h-32 rounded-full bg-black/80 border border-cyan-400/20 grid place-items-center">
+            <div className="text-2xl sm:text-3xl font-black">{score}</div>
           </div>
         </div>
         <div className="text-sm text-gray-300">Fasern leuchten je nach Score und Tier. Ziel: 900+</div>
@@ -275,7 +275,7 @@ function AiRunbookGenerator(props: { tier: AccessPlan }) {
   return (
     <GatedTile title="AI Mycelium Runbook Generator" minTier="daypass" tier={tier}>
       <div className="flex flex-col gap-3">
-        <div className="flex gap-2">
+        <div className="flex flex-col sm:flex-row gap-2">
           <button className="px-3 py-2 rounded-xl border border-gray-700 bg-black/40 text-gray-200">🎙️ Voice</button>
           <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Beschreibe dein System + Problem…"
                  className="flex-1 px-4 py-3 rounded-2xl bg-black/40 border border-gray-700 text-white placeholder-gray-500 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20" />
@@ -351,7 +351,7 @@ function AffiliateNetwork(props: { tier: AccessPlan }) {
   return (
     <GatedTile title="Mycelium Affiliate & Revenue Network" minTier="enterprise" tier={props.tier} cta="team">
       <div className="space-y-4">
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <div className="p-3 rounded-xl border border-indigo-500/20 bg-indigo-500/5">
             <div className="text-xs text-indigo-300 mb-1">Heute</div>
             <div className="text-xl font-black text-white">$12,847</div>
@@ -437,7 +437,7 @@ export default function DashboardClient() {
             <h1 className="text-3xl md:text-4xl font-black">Ultimatives Mycelium Dashboard</h1>
             <div className="text-sm text-gray-400">Blade Runner × Iron Man × Mycelium × Notion</div>
           </div>
-          <div className="flex gap-2">
+          <div className="flex flex-col sm:flex-row gap-2">
             <UpgradeButton product="daypass" label="Daypass" analyticsSource="dashboard_header_cta" />
             <UpgradeButton
               product="pro"
