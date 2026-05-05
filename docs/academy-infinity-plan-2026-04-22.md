@@ -3,7 +3,7 @@
 **Created:** 2026-04-22
 **Last updated:** 2026-05-05
 **Owner:** Rolf S. (Schwerti)
-**Status:** 🟢 BUILD IN PROGRESS — Steps 1–9 shipped, Step 7 (content pipeline) awaiting model availability
+**Status:** 🟢 BUILD IN PROGRESS — Steps 1–9 shipped, Step 7 (content pipeline) awaiting model availability, Academy Track E-E-A-T Rollout completed
 **Deployment targets:** Netlify (prod), Railway / Vercel candidates — build stays deploy-agnostic
 
 This document is the single source of truth for the Academy ∞ rebuild. Any agent picking up work should read this top to bottom before touching code.
@@ -23,11 +23,12 @@ This document is the single source of truth for the Academy ∞ rebuild. Any age
 | 7 | Content pipeline (local LLM) | 🟡 SHIPPED, blocked | `scripts/translate-via-aya.js` + `scripts/gen-mission-outlines.js` — waits on `aya-expanse:32b` pull |
 | 8 | Reactivation + sitemap sweep | ✅ DONE | Mission + breach routes static, registry-driven sitemap (auto-sync) |
 | 9 | 10 more missions × 2 tracks | ✅ DONE | M-021 to M-030 (k8s-pod-security, oauth2-pkce, aws-s3-bucket-policy, fail2ban-setup, incident-log-analysis, tls-certificate-rotation, postgres-rls, github-actions-hardening, prometheus-alerting, gdpr-data-minimization) |
-| 10 | Digital Twin (GitHub read-only) | ⏭ LATER | — |
-| 11 | Adversarial AI Co-Player | ⏭ LATER | — |
-| 12 | Community + Mission Authoring | ⏭ LATER | — |
-| 13 | SOC Simulator | ⏭ LATER | — |
-| 14 | Career Launchpad + HR | ⏭ LATER | — |
+| 10 | Academy Track E-E-A-T Rollout | ✅ DONE | All 8 track pages with buildAuthoredArticleSchema, AuthorBox, LastUpdated (beginner, intermediate, advanced, auth, compliance, adversarial, incident-response, story) |
+| 11 | Digital Twin (GitHub read-only) | ⏭ LATER | — |
+| 12 | Adversarial AI Co-Player | ⏭ LATER | — |
+| 13 | Community + Mission Authoring | ⏭ LATER | — |
+| 14 | SOC Simulator | ⏭ LATER | — |
+| 15 | Career Launchpad + HR | ⏭ LATER | — |
 
 **Live routes (all locales):**
 - `/academy` — hub with Mission / Attack Cinema / Arsenal teasers + 8 track cards
