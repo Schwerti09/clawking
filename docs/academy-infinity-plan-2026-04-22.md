@@ -1,16 +1,16 @@
 # Academy ∞ — Master Plan & Handoff Document
 
 **Created:** 2026-04-22
-**Last updated:** 2026-04-23
+**Last updated:** 2026-05-05
 **Owner:** Rolf S. (Schwerti)
-**Status:** 🟢 BUILD IN PROGRESS — Steps 1–8 shipped, Step 7 (content pipeline) awaiting model availability
+**Status:** 🟢 BUILD IN PROGRESS — Steps 1–9 shipped, Step 7 (content pipeline) awaiting model availability
 **Deployment targets:** Netlify (prod), Railway / Vercel candidates — build stays deploy-agnostic
 
 This document is the single source of truth for the Academy ∞ rebuild. Any agent picking up work should read this top to bottom before touching code.
 
 ---
 
-## 🚦 Progress Dashboard (2026-04-23)
+## 🚦 Progress Dashboard (2026-05-05)
 
 | # | Step | Status | Key artefacts |
 |---|------|--------|---------------|
@@ -20,9 +20,9 @@ This document is the single source of truth for the Academy ∞ rebuild. Any age
 | 4 | Sentinel AI Tutor (minimal) | ✅ DONE | `/api/academy/sentinel` (Ollama → Gemini → stub), SentinelChat widget |
 | 5 | The Arsenal (first 3 tools) | ✅ DONE | Header Doctor · TLS X-Ray · Prompt Injection Sandbox + `/tools` hub |
 | 6 | Attack Cinema (Log4Shell) | ✅ DONE | `/breaches` hub + `/breaches/log4shell` 10-step timeline with 3 forks |
-| 7 | Content pipeline (local LLM) | 🟡 SHIPPED, blocked | `scripts/translate-via-aya.js` + `scripts/gen-mission-outlines.js` — waits on `aya-expanse:8b` pull |
+| 7 | Content pipeline (local LLM) | 🟡 SHIPPED, blocked | `scripts/translate-via-aya.js` + `scripts/gen-mission-outlines.js` — waits on `aya-expanse:32b` pull |
 | 8 | Reactivation + sitemap sweep | ✅ DONE | Mission + breach routes static, registry-driven sitemap (auto-sync) |
-| 9 | 10 more missions × 2 tracks | 🟡 IN PROGRESS | Stack-Hardening track started: M-006 docker-nonroot + M-007 postgres-hardening shipped 25.04 |
+| 9 | 10 more missions × 2 tracks | ✅ DONE | M-021 to M-030 (k8s-pod-security, oauth2-pkce, aws-s3-bucket-policy, fail2ban-setup, incident-log-analysis, tls-certificate-rotation, postgres-rls, github-actions-hardening, prometheus-alerting, gdpr-data-minimization) |
 | 10 | Digital Twin (GitHub read-only) | ⏭ LATER | — |
 | 11 | Adversarial AI Co-Player | ⏭ LATER | — |
 | 12 | Community + Mission Authoring | ⏭ LATER | — |
