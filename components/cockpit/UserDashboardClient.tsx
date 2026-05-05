@@ -113,7 +113,7 @@ export function UserDashboardClient({ user, tier, initialData }: UserDashboardCl
       />
 
       {/* ── Main Layout ── */}
-      <div className="relative z-10 flex h-screen supports-[height:100dvh]:h-[100dvh] flex-col lg:flex-row">
+      <div className="relative z-10 flex h-screen flex-col lg:flex-row">
 
         {/* Left Sidebar */}
         <div
@@ -213,6 +213,7 @@ export function UserDashboardClient({ user, tier, initialData }: UserDashboardCl
             className="relative flex border-b flex-shrink-0 overflow-x-auto"
             role="tablist"
             aria-label="Dashboard tabs"
+            tabIndex={0}
             style={{
               background: 'rgba(10,10,10,0.6)',
               borderColor: 'rgba(255,255,255,0.05)',
@@ -233,6 +234,7 @@ export function UserDashboardClient({ user, tier, initialData }: UserDashboardCl
                   role="tab"
                   aria-selected={isActive}
                   aria-label={tab.label}
+                  tabIndex={isActive ? 0 : -1}
                   className="relative px-3 sm:px-4 md:px-6 py-3.5 flex items-center gap-2 transition-all overflow-hidden group shrink-0"
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
