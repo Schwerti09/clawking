@@ -213,7 +213,6 @@ export function UserDashboardClient({ user, tier, initialData }: UserDashboardCl
             className="relative flex border-b flex-shrink-0 overflow-x-auto"
             role="tablist"
             aria-label="Dashboard tabs"
-            tabIndex={0}
             style={{
               background: 'rgba(10,10,10,0.6)',
               borderColor: 'rgba(255,255,255,0.05)',
