@@ -258,7 +258,7 @@ function SecurityScoreRing() {
       <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6">
         <div className="w-32 h-32 sm:w-40 sm:h-40 rounded-full grid place-items-center" style={{ background: bg }}>
           <div className="w-24 h-24 sm:w-32 sm:h-32 rounded-full bg-black/80 border border-cyan-400/20 grid place-items-center">
-            <div className="text-3xl font-black">{score}</div>
+            <div className="text-2xl sm:text-3xl font-black">{score}</div>
           </div>
         </div>
         <div className="text-sm text-gray-300">Fasern leuchten je nach Score und Tier. Ziel: 900+</div>
