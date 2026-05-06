@@ -985,5 +985,1263 @@
     "final_cta_check": "Start Live Security Check",
     "final_cta_downloads": "Browse Downloads",
     "final_cta_note": "No signup required. 100% free. No credit card."
+  },
+  "missions": {
+    "adversarial-blue-teaming": {
+      "title": "Blue teaming — defend the fortress",
+      "brief": "The attacker is coming. Defend the fortress. Detect, respond, recover.",
+      "welcome": "Welcome to the Blue Teaming mission. The attacker is coming. Use 'monitor [threat-vector]' to watch for attacks, 'detect [intrusion]' to identify breaches, 'respond [incident]' to handle incidents, and 'improve [defense]' to strengthen security.",
+      "success": "Blue teaming completed successfully. You monitored threats, detected intrusions, responded to incidents, and improved defenses. The fortress is stronger.",
+      "goals": {
+        "monitor_label": "Monitor for threats",
+        "monitor_hint": "monitor network-traffic",
+        "detect_label": "Detect intrusions",
+        "detect_hint": "detect unauthorized-access",
+        "respond_label": "Respond to incidents",
+        "respond_hint": "respond containment",
+        "improve_label": "Improve defenses",
+        "improve_hint": "improve detection-rules"
+      }
+    },
+    "adversarial-ml-security": {
+      "title": "ML security — defend the model",
+      "brief": "ML models are attack surfaces. Defend against adversarial ML.",
+      "welcome": "Welcome to the ML Security mission. ML models are attack surfaces. Use 'assess [vulnerability]' to identify risks, 'implement [data-security]' to protect data, 'deploy [monitoring]' to watch the model, and 'verify ml-security' to confirm defense.",
+      "success": "ML security achieved. You assessed vulnerabilities, implemented data security, deployed monitoring, and verified defense. The ML model is now defended against adversarial attacks.",
+      "goals": {
+        "assess_label": "Assess model vulnerabilities",
+        "assess_hint": "assess data-poisoning",
+        "implement_label": "Implement data security",
+        "implement_hint": "implement data-validation",
+        "deploy_label": "Deploy model monitoring",
+        "deploy_hint": "deploy drift-detection",
+        "verify_label": "Verify ML security",
+        "verify_hint": "verify ml-security"
+      }
+    },
+    "adversarial-osint": {
+      "title": "OSINT — open source intelligence",
+      "brief": "Public information is intelligence. Gather, analyze, act.",
+      "welcome": "Welcome to the OSINT mission. Public information is intelligence. Use 'identify [need]' to define requirements, 'collect [osint-source]' to gather data, 'analyze [finding]' to interpret results, and 'apply [osint-intel]' to take action.",
+      "success": "OSINT completed successfully. You identified needs, collected data, analyzed findings, and applied intelligence. Public information is now actionable intelligence.",
+      "goals": {
+        "identify_label": "Identify intelligence needs",
+        "identify_hint": "identify threat-landscape",
+        "collect_label": "Collect OSINT data",
+        "collect_hint": "collect social-media",
+        "analyze_label": "Analyze findings",
+        "analyze_hint": "analyze exposed-credentials",
+        "apply_label": "Apply intelligence",
+        "apply_hint": "apply risk-mitigation"
+      }
+    },
+    "adversarial-pattern-recognition": {
+      "title": "Recognize attack patterns under fire",
+      "brief": "The attacker is live. Spot the pattern, deploy the countermeasure, level up.",
+      "welcome": "Welcome to the Adversarial Pattern Recognition mission. The attacker is live — can you spot the patterns? Use 'inspect stream' to see the attack, 'identify [pattern-name]' to recognize the pattern, 'deploy [countermeasure]' to defend, and 'verify defense' to confirm.",
+      "success": "Attack pattern recognized and countermeasure deployed. You've leveled up your adversarial defense skills. The attacker is blocked.",
+      "goals": {
+        "inspect_label": "Inspect the attack stream",
+        "inspect_hint": "inspect stream",
+        "identify_label": "Identify the attack pattern",
+        "identify_hint": "identify brute-force",
+        "deploy_label": "Deploy the countermeasure",
+        "deploy_hint": "deploy rate-limit",
+        "verify_label": "Verify the defense",
+        "verify_hint": "verify defense"
+      }
+    },
+    "adversarial-purple-teaming": {
+      "title": "Purple teaming — red + blue collaboration",
+      "brief": "Red and blue teams working together. Collaborative security testing.",
+      "welcome": "Welcome to the Purple Teaming mission. Red and blue teams working together. Use 'coordinate [engagement]' to plan the exercise, 'monitor [response]' to track blue team, 'analyze [gap]' to identify weaknesses, and 'improve [collaboration]' to strengthen teamwork.",
+      "success": "Purple teaming completed successfully. You coordinated engagement, monitored response, analyzed gaps, and improved collaboration. Red and blue teams now work together effectively.",
+      "goals": {
+        "coordinate_label": "Coordinate red team engagement",
+        "coordinate_hint": "coordinate rules-of-engagement",
+        "monitor_label": "Monitor blue team response",
+        "monitor_hint": "monitor detection-time",
+        "analyze_label": "Analyze gaps",
+        "analyze_hint": "analyze detection-gaps",
+        "improve_label": "Improve collaboration",
+        "improve_hint": "improve joint-planning"
+      }
+    },
+    "adversarial-ransomware": {
+      "title": "Ransomware defense — prepare for the worst",
+      "brief": "Ransomware is inevitable. Prepare, detect, respond.",
+      "welcome": "Welcome to the Ransomware Defense mission. Ransomware is inevitable. Use 'implement [backup-type]' to create backups, 'deploy [detection]' to add monitoring, 'create [response-plan]' to prepare for attack, and 'verify ransomware-defense' to confirm readiness.",
+      "success": "Ransomware defense achieved. You implemented backups, deployed detection, created response plan, and verified defense. When ransomware hits, you're ready.",
+      "goals": {
+        "implement_label": "Implement backup strategy",
+        "implement_hint": "implement offline-backups",
+        "deploy_label": "Deploy detection",
+        "deploy_hint": "deploy behavior-analysis",
+        "create_label": "Create response plan",
+        "create_hint": "create isolation-procedures",
+        "verify_label": "Verify ransomware defense",
+        "verify_hint": "verify ransomware-defense"
+      }
+    },
+    "adversarial-red-teaming": {
+      "title": "Red teaming — think like the attacker",
+      "brief": "To defend, you must attack. Think like the attacker to find vulnerabilities.",
+      "welcome": "Welcome to the Red Teaming mission. To defend, you must attack. Use 'recon [target]' to gather intelligence, 'exploit [vulnerability]' to test defenses, 'maintain [access-method]' to simulate persistence, and 'document findings' to report vulnerabilities.",
+      "success": "Red teaming completed successfully. You performed reconnaissance, exploited vulnerabilities, maintained access, and documented findings. You now think like the attacker to defend better.",
+      "goals": {
+        "recon_label": "Reconnaissance",
+        "recon_hint": "recon web-application",
+        "exploit_label": "Exploit vulnerabilities",
+        "exploit_hint": "exploit sql-injection",
+        "maintain_label": "Maintain access",
+        "maintain_hint": "maintain backdoor",
+        "document_label": "Document findings",
+        "document_hint": "document findings"
+      }
+    },
+    "adversarial-social-engineering": {
+      "title": "Social engineering defense — humans are the weakest link",
+      "brief": "The most sophisticated attack targets humans. Defend against social engineering.",
+      "welcome": "Welcome to the Social Engineering Defense mission. The most sophisticated attack targets humans. Use 'identify [vector]' to recognize attack vectors, 'implement [security-control]' to add protections, 'train [audience]' to educate the team, and 'verify defense' to confirm readiness.",
+      "success": "Social engineering defense achieved. You identified vectors, implemented controls, trained the team, and verified defense. Humans are no longer the weakest link.",
+      "goals": {
+        "identify_label": "Identify phishing vectors",
+        "identify_hint": "identify email-phishing",
+        "implement_label": "Implement email security",
+        "implement_hint": "implement spf-dkim-dmarc",
+        "train_label": "Train the team",
+        "train_hint": "train employees",
+        "verify_label": "Verify defense",
+        "verify_hint": "verify defense"
+      }
+    },
+    "adversarial-supply-chain": {
+      "title": "Supply chain security — trust no one",
+      "brief": "Your dependencies are attack vectors. Secure the supply chain.",
+      "welcome": "Welcome to the Supply Chain Security mission. Your dependencies are attack vectors. Use 'inventory [dependency-type]' to catalog dependencies, 'verify [integrity-check]' to validate packages, 'implement [sbom]' to create software bill of materials, and 'verify supply-chain' to confirm security.",
+      "success": "Supply chain security achieved. You inventoried dependencies, verified integrity, implemented SBOM, and verified the supply chain. Trust no one — verify everything.",
+      "goals": {
+        "inventory_label": "Inventory dependencies",
+        "inventory_hint": "inventory npm-packages",
+        "verify_label": "Verify supply chain security",
+        "verify_hint": "verify supply-chain",
+        "implement_label": "Implement SBOM",
+        "implement_hint": "implement cyclonedx"
+      }
+    },
+    "adversarial-threat-intel": {
+      "title": "Threat intelligence — know your enemy",
+      "brief": "Intelligence-driven security. Know your enemy before they attack.",
+      "welcome": "Welcome to the Threat Intelligence mission. Intelligence-driven security. Use 'collect [data-source]' to gather threat data, 'analyze [actor]' to understand attackers, 'produce [intel-type]' to create intelligence, and 'apply [intelligence]' to strengthen defenses.",
+      "success": "Threat intelligence achieved. You collected data, analyzed actors, produced intelligence, and applied it to defenses. You now know your enemy before they attack.",
+      "goals": {
+        "collect_label": "Collect threat data",
+        "collect_hint": "collect open-source-intel",
+        "analyze_label": "Analyze threat actors",
+        "analyze_hint": "analyze apt-groups",
+        "produce_label": "Produce intelligence",
+        "produce_hint": "produce strategic-intel",
+        "apply_label": "Apply intelligence",
+        "apply_hint": "apply detection-rules"
+      }
+    },
+    "ai-agent-permissions": {
+      "title": "Apply least privilege to AI agent tools: path allow-lists, remove execShell, domain whitelist",
+      "brief": "AI coding assistant has unrestricted readFile, writeFile, execShell, httpFetch. One injection = RCE. Apply least privilege: path allow-lists, confirmation codes for writes, remove shell, domain whitelist.",
+      "welcome": "",
+      "success": "",
+      "goals": {
+        "read_label": "Inspect the unrestricted tool configuration",
+        "read_hint": "cat tools.ts",
+        "ssrf_label": "Confirm SSRF risk via unrestricted httpFetch",
+        "ssrf_hint": "attack ssrf",
+        "readfile_label": "Add path allow-list to readFile (/app/src, /app/docs only)",
+        "readfile_hint": "fix readfile",
+        "writefile_label": "Require confirmation code for writeFile operations",
+        "writefile_hint": "fix writefile",
+        "execshell_label": "Remove execShell — replace with lintCode + runTests",
+        "execshell_hint": "fix execshell",
+        "httpfetch_label": "Add domain allow-list to httpFetch",
+        "httpfetch_hint": "fix httpfetch",
+        "tests_label": "Run capability test suite — unauthorized calls blocked",
+        "tests_hint": "test capabilities"
+      }
+    },
+    "aws-s3-bucket-policy": {
+      "title": "AWS S3 Bucket Policy: restrict public access and enforce encryption",
+      "brief": "Your S3 bucket allows public read access with no encryption. Harden it: remove public access, restrict to IAM role, enforce encryption, block public ACLs.",
+      "welcome": "",
+      "success": "",
+      "goals": {
+        "inspect_label": "Inspect the bucket policy",
+        "inspect_hint": "cat bucket-policy.json",
+        "public_label": "Remove public read access",
+        "public_hint": "patch public-access",
+        "iam_label": "Add specific IAM role restriction",
+        "iam_hint": "patch iam-role",
+        "encryption_label": "Add encryption requirement",
+        "encryption_hint": "patch encryption",
+        "acls_label": "Block public ACLs",
+        "acls_hint": "patch block-acls",
+        "apply_label": "Validate with AWS CLI",
+        "apply_hint": "aws s3api put-bucket-policy"
+      }
+    },
+    "backup-restore-drill": {
+      "title": "Restore the nightly backup before the SLA breach hits",
+      "brief": "Primary db is corrupt at 03:14. Replica is lagged. Restore from nightly into a sidecar, verify schema + rows, sign off — without restoring directly to prod.",
+      "welcome": "",
+      "success": "",
+      "goals": {
+        "list_label": "List available backups",
+        "list_hint": "ls",
+        "verify_label": "Verify archive integrity (pg_restore --list)",
+        "verify_hint": "pg_restore --list nightly-2026-04-25-0300.dump",
+        "sidecar_label": "Spin up a sidecar postgres for safe restore",
+        "sidecar_hint": "sidecar up",
+        "restore_label": "Restore nightly backup into sidecar",
+        "restore_hint": "pg_restore --dbname=sidecar nightly-2026-04-25-0300.dump",
+        "validate_label": "Row counts + schema match expected shape",
+        "validate_hint": "psql sidecar -c 'SELECT count(*) FROM users'",
+        "signoff_label": "audit signoff — recovery is real",
+        "signoff_hint": "audit signoff"
+      }
+    },
+    "compliance-dora": {
+      "title": "DORA compliance — ICT risk management",
+      "brief": "DORA requires financial institutions to manage ICT risk. Translate to engineering controls.",
+      "welcome": "Welcome to the DORA Compliance mission. DORA requires financial institutions to manage ICT risk. Use 'assess [risk-domain]' to evaluate risks, 'implement [testing-type]' to set up testing, 'document [reporting]' to create incident reporting, and 'verify dora' to confirm compliance.",
+      "success": "DORA compliance achieved. You assessed ICT risk, implemented testing regime, documented incident reporting, and verified compliance. DORA requirements translated into engineering controls.",
+      "goals": {
+        "assess_label": "Assess ICT risk",
+        "assess_hint": "assess operational-resilience",
+        "implement_label": "Implement testing regime",
+        "implement_hint": "implement penetration-testing",
+        "document_label": "Document incident reporting",
+        "document_hint": "document incident-reporting",
+        "verify_label": "Verify DORA compliance",
+        "verify_hint": "verify dora"
+      }
+    },
+    "compliance-dsgvo-art32": {
+      "title": "DSGVO Art. 32 compliance — state of the art",
+      "brief": "DSGVO Art. 32 requires 'state of the art' security. Implement the controls.",
+      "welcome": "Welcome to the DSGVO Art. 32 Compliance mission. DSGVO Art. 32 requires 'state of the art' security. Use 'assess [security-domain]' to evaluate posture, 'implement [control]' to add state of the art controls, 'document [measure]' to create documentation, and 'verify art32' to confirm compliance.",
+      "success": "DSGVO Art. 32 compliance achieved. You assessed security posture, implemented state of the art controls, documented measures, and verified compliance. 'State of the art' is now concrete engineering.",
+      "goals": {
+        "assess_label": "Assess current security posture",
+        "assess_hint": "assess encryption",
+        "implement_label": "Implement state of the art controls",
+        "implement_hint": "implement tls-1.3",
+        "document_label": "Document security measures",
+        "document_hint": "document technical-measures",
+        "verify_label": "Verify Art. 32 compliance",
+        "verify_hint": "verify art32"
+      }
+    },
+    "compliance-eu-ai-act": {
+      "title": "EU AI Act compliance — technical obligations",
+      "brief": "EU AI Act imposes technical obligations on AI systems. Implement the controls.",
+      "welcome": "Welcome to the EU AI Act Compliance mission. EU AI Act imposes technical obligations on AI systems. Use 'classify [risk-level]' to determine the risk category, 'implement [quality-control]' to add controls, 'document [technical-doc]' to create documentation, and 'verify eu-ai-act' to confirm compliance.",
+      "success": "EU AI Act compliance achieved. You classified the AI system, implemented quality controls, documented technical requirements, and verified compliance. EU AI Act obligations translated into engineering controls.",
+      "goals": {
+        "classify_label": "Classify AI system risk",
+        "classify_hint": "classify high",
+        "implement_label": "Implement quality management",
+        "implement_hint": "implement data-governance",
+        "document_label": "Document technical documentation",
+        "document_hint": "document system-description",
+        "verify_label": "Verify EU AI Act compliance",
+        "verify_hint": "verify eu-ai-act"
+      }
+    },
+    "compliance-evidence-collection": {
+      "title": "Evidence collection — audit ready",
+      "brief": "Compliance is useless without evidence. Collect and organize for audit.",
+      "welcome": "Welcome to the Evidence Collection mission. Compliance is useless without evidence. Use 'identify [evidence-type]' to determine requirements, 'collect [artifact]' to gather evidence, 'organize [repository]' to structure the repository, and 'verify audit-ready' to confirm readiness.",
+      "success": "Evidence collection completed successfully. You identified requirements, collected artifacts, organized the repository, and verified audit readiness. Compliance is now backed by evidence.",
+      "goals": {
+        "identify_label": "Identify evidence requirements",
+        "identify_hint": "identify policy-documents",
+        "collect_label": "Collect evidence artifacts",
+        "collect_hint": "collect access-logs",
+        "organize_label": "Organize evidence repository",
+        "organize_hint": "organize evidence-folder",
+        "verify_label": "Verify audit readiness",
+        "verify_hint": "verify audit-ready"
+      }
+    },
+    "compliance-iso27001": {
+      "title": "ISO27001 compliance — ISMS implementation",
+      "brief": "ISO27001 requires an Information Security Management System. Build it.",
+      "welcome": "Welcome to the ISO27001 Compliance mission. ISO27001 requires an Information Security Management System. Use 'define [scope]' to set boundaries, 'implement [risk-treatment]' to manage risks, 'establish [control]' to add controls, and 'verify iso27001' to confirm compliance.",
+      "success": "ISO27001 compliance achieved. You defined ISMS scope, implemented risk management, established controls, and verified compliance. ISO27001 requirements translated into an operational ISMS.",
+      "goals": {
+        "define_label": "Define ISMS scope",
+        "define_hint": "define cloud-infrastructure",
+        "implement_label": "Implement risk management",
+        "implement_hint": "implement risk-mitigation",
+        "establish_label": "Establish security controls",
+        "establish_hint": "establish annex-a-controls",
+        "verify_label": "Verify ISO27001 compliance",
+        "verify_hint": "verify iso27001"
+      }
+    },
+    "compliance-soc2": {
+      "title": "SOC2 Type II compliance — security controls",
+      "brief": "SOC2 Type II requires documented security controls. Implement and evidence.",
+      "welcome": "Welcome to the SOC2 Type II Compliance mission. SOC2 Type II requires documented security controls. Use 'map [trust-service]' to identify requirements, 'implement [control]' to add controls, 'document [evidence]' to create evidence, and 'verify soc2' to confirm compliance.",
+      "success": "SOC2 Type II compliance achieved. You mapped trust services, implemented controls, documented evidence, and verified compliance. SOC2 requirements translated into engineering controls.",
+      "goals": {
+        "map_label": "Map SOC2 trust services",
+        "map_hint": "map security",
+        "implement_label": "Implement security controls",
+        "implement_hint": "implement access-control",
+        "document_label": "Document control evidence",
+        "document_hint": "document policy-documents",
+        "verify_label": "Verify SOC2 compliance",
+        "verify_hint": "verify soc2"
+      }
+    },
+    "compliance-third-party-risk": {
+      "title": "Third-party risk management",
+      "brief": "Your security is only as strong as your weakest vendor. Manage third-party risk.",
+      "welcome": "Welcome to the Third-Party Risk Management mission. Your security is only as strong as your weakest vendor. Use 'inventory [vendor-type]' to catalog vendors, 'assess [risk-level]' to evaluate risk, 'implement [monitoring]' to add oversight, and 'verify risk-management' to confirm coverage.",
+      "success": "Third-party risk management completed successfully. You inventoried vendors, assessed risk, implemented monitoring, and verified coverage. Your weakest vendor is now monitored.",
+      "goals": {
+        "inventory_label": "Inventory third parties",
+        "inventory_hint": "inventory cloud-providers",
+        "assess_label": "Assess vendor risk",
+        "assess_hint": "assess critical",
+        "implement_label": "Implement monitoring",
+        "implement_hint": "implement continuous-monitoring",
+        "verify_label": "Verify risk management",
+        "verify_hint": "verify risk-management"
+      }
+    },
+    "docker-compose-hardening": {
+      "title": "Harden the docker-compose stack: drop root, remove socket, move secrets",
+      "brief": "Staging compose file has 5 critical issues: plain-text secrets, Docker socket mount, root user, no resource limits, mutable rootfs. Fix all five before prod.",
+      "welcome": "",
+      "success": "",
+      "goals": {
+        "socket_label": "Remove Docker socket mount from API container",
+        "socket_hint": "fix socket",
+        "secrets_label": "Move DB/JWT secrets from env vars to Docker Secrets",
+        "secrets_hint": "fix secrets",
+        "user_label": "Run containers as non-root user (user: '1000:1000')",
+        "user_hint": "fix user",
+        "readonly_label": "Set read_only: true + tmpfs for /tmp",
+        "readonly_hint": "fix readonly",
+        "limits_label": "Add memory + CPU resource limits",
+        "limits_hint": "fix limits",
+        "security_label": "Add security_opt: no-new-privileges:true",
+        "security_hint": "fix security"
+      }
+    },
+    "docker-nonroot": {
+      "title": "Ship a non-root Dockerfile before it hits staging",
+      "brief": "Your Dockerfile runs as root + writes anywhere. Harden it: non-root user, read-only rootfs, HEALTHCHECK, scan with Trivy.",
+      "welcome": "",
+      "success": "",
+      "goals": {
+        "inspect_label": "Inspect the Dockerfile",
+        "inspect_hint": "cat Dockerfile",
+        "nonroot_label": "Add non-root USER directive",
+        "nonroot_hint": "patch nonroot",
+        "readonly_label": "Set read-only workdir permissions",
+        "readonly_hint": "patch readonly",
+        "health_label": "Add HEALTHCHECK",
+        "health_hint": "patch healthcheck",
+        "build_label": "Validate with docker build",
+        "build_hint": "docker build .",
+        "scan_label": "Trivy scan clean",
+        "scan_hint": "trivy image clawguru-api:local"
+      }
+    },
+    "fail2ban-setup": {
+      "title": "Fail2ban: protect SSH from brute-force attacks",
+      "brief": "Your SSH server is under brute-force attack. Configure fail2ban: enable sshd jail, reduce bantime to 3600s, maxretry to 3, harden port.",
+      "welcome": "",
+      "success": "",
+      "goals": {
+        "inspect_label": "Inspect the fail2ban config",
+        "inspect_hint": "cat /etc/fail2ban/jail.local",
+        "enable_label": "Enable sshd jail",
+        "enable_hint": "patch enable",
+        "bantime_label": "Reduce bantime to 3600 seconds",
+        "bantime_hint": "patch bantime",
+        "maxretry_label": "Reduce maxretry to 3",
+        "maxretry_hint": "patch maxretry",
+        "port_label": "Add port hardening",
+        "port_hint": "patch port",
+        "restart_label": "Restart fail2ban service",
+        "restart_hint": "systemctl restart fail2ban",
+        "status_label": "Check jail status",
+        "status_hint": "fail2ban-client status sshd"
+      }
+    },
+    "gdpr-data-minimization": {
+      "title": "GDPR Data Minimization: reduce data collection to essential only",
+      "brief": "Your user schema collects excessive data (phone, address, DOB, IP, user-agent). Reduce to essential fields: implement data retention policy, right-to-be-forgotten, update privacy policy.",
+      "welcome": "",
+      "success": "",
+      "goals": {
+        "inspect_label": "Inspect the user schema",
+        "inspect_hint": "cat user-schema.sql",
+        "remove_label": "Remove non-essential fields",
+        "remove_hint": "patch remove-excess",
+        "retention_label": "Add data retention policy",
+        "retention_hint": "patch retention",
+        "rtbf_label": "Add right-to-be-forgotten function",
+        "rtbf_hint": "patch rtbf",
+        "privacy_label": "Update privacy policy documentation",
+        "privacy_hint": "patch privacy-policy",
+        "validate_label": "Validate compliance",
+        "validate_hint": "validate compliance"
+      }
+    },
+    "github-actions-hardening": {
+      "title": "GitHub Actions Hardening: secure CI/CD pipeline",
+      "brief": "Your CI/CD pipeline has no security controls. Harden it: add required reviewers, environment protection, secrets validation, branch protection rules.",
+      "welcome": "",
+      "success": "",
+      "goals": {
+        "inspect_label": "Inspect the workflow",
+        "inspect_hint": "cat .github/workflows/deploy.yml",
+        "reviewers_label": "Add required reviewers",
+        "reviewers_hint": "patch reviewers",
+        "environment_label": "Add environment protection",
+        "environment_hint": "patch environment",
+        "secrets_label": "Add secrets validation",
+        "secrets_hint": "patch secrets",
+        "branch_label": "Add branch protection rules",
+        "branch_hint": "patch branch-protection",
+        "test_label": "Test the hardened workflow",
+        "test_hint": "test workflow"
+      }
+    },
+    "hodlberg-acquisition-breach": {
+      "title": "The Acquisition Breach — Act IV",
+      "brief": "Three years later. Acquisition offer on the table. Due diligence reveals a breach. The deal is at risk.",
+      "welcome": "Welcome to the Hodlberg Acquisition Breach mission. Three years later, acquisition offer on the table. Due diligence reveals a breach. Use 'conduct [diligence]' to investigate, 'assess [acquisition-impact]' to evaluate deal impact, 'negotiate [term]' to adjust terms, and 'close [deal]' to finalize the acquisition.",
+      "success": "Acquisition breach handled. You conducted diligence, assessed impact, negotiated terms, and closed the deal. The breach nearly killed the acquisition, but Hodlberg AG was acquired.",
+      "goals": {
+        "conduct_label": "Conduct due diligence",
+        "conduct_hint": "conduct security-audit",
+        "assess_label": "Assess acquisition impact",
+        "assess_hint": "assess deal-valuation",
+        "negotiate_label": "Negotiate with acquirer",
+        "negotiate_hint": "negotiate price-adjustment",
+        "close_label": "Close the deal",
+        "close_hint": "close final-agreement"
+      }
+    },
+    "hodlberg-catastrophe": {
+      "title": "The Catastrophe — Act VII",
+      "brief": "The ultimate test. A catastrophic breach threatens everything. The company's survival is at stake.",
+      "welcome": "Welcome to the Hodlberg Catastrophe mission. The ultimate test. A catastrophic breach threatens everything. Use 'assess [catastrophe]' to understand the damage, 'activate [response]' to mobilize the crisis team, 'execute [recovery]' to rebuild systems, and 'rebuild [trust]' to restore confidence.",
+      "success": "Catastrophe survived. You assessed impact, activated response, executed recovery, and rebuilt trust. Hodlberg AG survived the ultimate test. The company is stronger than ever.",
+      "goals": {
+        "assess_label": "Assess catastrophe impact",
+        "assess_hint": "assess total-data-loss",
+        "activate_label": "Activate crisis response",
+        "activate_hint": "activate crisis-team",
+        "execute_label": "Execute recovery plan",
+        "execute_hint": "execute data-restoration",
+        "rebuild_label": "Rebuild trust",
+        "rebuild_hint": "rebuild transparency"
+      }
+    },
+    "hodlberg-epilogue": {
+      "title": "The Epilogue — Act XI",
+      "brief": "The story concludes. What started as a seed round breach became a journey of transformation. The final chapter.",
+      "welcome": "Welcome to the Hodlberg Epilogue mission. The story concludes. Use 'reflect [journey]' to look back, 'celebrate [achievement]' to recognize success, 'honor [fallen]' to remember losses, and 'pass [torch]' to ensure the future.",
+      "success": "Epilogue complete. You reflected on the journey, celebrated achievements, honored the fallen, and passed the torch. The Hodlberg story concludes, but the legacy lives on.",
+      "goals": {
+        "reflect_label": "Reflect on the journey",
+        "reflect_hint": "reflect growth",
+        "celebrate_label": "Celebrate the achievements",
+        "celebrate_hint": "celebrate security-leadership",
+        "honor_label": "Honor the fallen",
+        "honor_hint": "honor lost-talent",
+        "pass_label": "Pass the torch",
+        "pass_hint": "pass next-generation"
+      }
+    },
+    "hodlberg-finale": {
+      "title": "The Finale — Act XII",
+      "brief": "The final mission. The ultimate test. Everything learned, everything earned, everything at stake. The finale.",
+      "welcome": "Welcome to the Hodlberg Finale mission. The final mission. The ultimate test. Use 'face [challenge]' to confront the ultimate threat, 'apply [lesson]' to use everything learned, 'defeat [enemy]' to overcome the final enemy, and 'complete [journey]' to finish the Hodlberg story.",
+      "success": "Finale complete. You faced the ultimate challenge, applied all lessons, defeated the final enemy, and completed the journey. The Hodlberg story is complete. You are now a security master.",
+      "goals": {
+        "face_label": "Face the ultimate challenge",
+        "face_hint": "face existential-threat",
+        "apply_label": "Apply all lessons",
+        "apply_hint": "apply security-first",
+        "defeat_label": "Defeat the final enemy",
+        "defeat_hint": "defeat original-attacker",
+        "complete_label": "Complete the journey",
+        "complete_hint": "complete closure"
+      }
+    },
+    "hodlberg-insider-threat": {
+      "title": "The Insider Threat — Act V",
+      "brief": "Post-acquisition. Integration complete. But the real threat is inside. A trusted employee is selling data.",
+      "welcome": "Welcome to the Hodlberg Insider Threat mission. Post-acquisition, integration complete. But the real threat is inside. Use 'detect [activity]' to find suspicious behavior, 'investigate [employee]' to check the suspect, 'gather [evidence]' to build a case, and 'decide [action]' to choose your response.",
+      "success": "Insider threat handled. You detected activity, investigated the employee, gathered evidence, and decided on action. The insider threat is neutralized. Trust is rebuilt.",
+      "goals": {
+        "detect_label": "Detect insider activity",
+        "detect_hint": "detect data-exfiltration",
+        "investigate_label": "Investigate the employee",
+        "investigate_hint": "investigate background-check",
+        "gather_label": "Gather evidence",
+        "gather_hint": "gather screenshots",
+        "decide_label": "Decide: Fire or prosecute?",
+        "decide_hint": "decide prosecute"
+      }
+    },
+    "hodlberg-ipo-breach": {
+      "title": "The IPO Breach — Act III",
+      "brief": "Two years later. IPO filing imminent. The attacker strikes at the worst possible time.",
+      "welcome": "Welcome to the Hodlberg IPO Breach mission. Two years later, IPO filing imminent. The attacker strikes at the worst possible time. Use 'assess [impact]' to evaluate damage, 'communicate [stakeholder]' to manage messaging, 'navigate [obligation]' to handle legal requirements, and 'protect [ipo]' to save the offering.",
+      "success": "IPO breach handled. You assessed impact, communicated stakeholders, navigated obligations, and protected the IPO. The attacker tried to kill the IPO, but Hodlberg AG survived.",
+      "goals": {
+        "assess_label": "Assess IPO impact",
+        "assess_hint": "assess financial-disclosure",
+        "communicate_label": "Manage stakeholder communication",
+        "communicate_hint": "communicate board-of-directors",
+        "navigate_label": "Navigate legal obligations",
+        "navigate_hint": "navigate sec-filing",
+        "protect_label": "Protect the IPO",
+        "protect_hint": "protect timing-adjustment"
+      }
+    },
+    "hodlberg-legacy": {
+      "title": "The Legacy — Act X",
+      "brief": "Ten years later. Hodlberg AG is a security leader. The lessons learned become industry standards.",
+      "welcome": "Welcome to the Hodlberg Legacy mission. Ten years later, Hodlberg AG is a security leader. Use 'document [journey]' to record the history, 'share [lesson]' to teach others, 'influence [industry]' to set standards, and 'build [legacy]' to create lasting impact.",
+      "success": "Legacy built. You documented the journey, shared lessons, influenced the industry, and built a lasting legacy. Hodlberg AG's lessons are now industry standards.",
+      "goals": {
+        "document_label": "Document the journey",
+        "document_hint": "document breach-history",
+        "share_label": "Share the lessons",
+        "share_hint": "share security-first",
+        "influence_label": "Influence the industry",
+        "influence_hint": "influence standards",
+        "build_label": "Build the legacy",
+        "build_hint": "build security-culture"
+      }
+    },
+    "hodlberg-redemption": {
+      "title": "The Redemption — Act IX",
+      "brief": "The new Hodlberg AG is successful. But the past haunts. The original attacker returns. This time, it's personal.",
+      "welcome": "Welcome to the Hodlberg Redemption mission. The new Hodlberg AG is successful. But the past haunts. Use 'confront [past]' to face the old enemy, 'defend [company]' to protect the new business, 'turn [tables]' to fight back, and 'achieve [redemption]' to finally close the chapter.",
+      "success": "Redemption achieved. You confronted the past, defended the company, turned the tables, and achieved closure. The original attacker is defeated. Hodlberg AG is redeemed.",
+      "goals": {
+        "confront_label": "Confront the past",
+        "confront_hint": "confront original-attacker",
+        "defend_label": "Defend the new company",
+        "defend_hint": "defend new-architecture",
+        "turn_label": "Turn the tables",
+        "turn_hint": "turn counter-attack",
+        "achieve_label": "Achieve redemption",
+        "achieve_hint": "achieve closure"
+      }
+    },
+    "hodlberg-resurrection": {
+      "title": "The Resurrection — Act VIII",
+      "brief": "From the ashes, a new beginning. The catastrophe destroyed the old Hodlberg AG. Now, a new company rises.",
+      "welcome": "Welcome to the Hodlberg Resurrection mission. From the ashes, a new beginning. Use 'assess [damage]' to understand what was lost, 'design [architecture]' to plan the new foundation, 'implement [security]' to build security-first, and 'launch [company]' to bring Hodlberg back.",
+      "success": "Resurrection complete. You assessed damage, designed architecture, implemented security-first, and launched the new Hodlberg. From the ashes, a stronger company rises.",
+      "goals": {
+        "assess_label": "Assess the damage",
+        "assess_hint": "assess financial-loss",
+        "design_label": "Design the new architecture",
+        "design_hint": "design zero-trust",
+        "implement_label": "Implement security-first",
+        "implement_hint": "implement encryption",
+        "launch_label": "Launch the new Hodlberg",
+        "launch_hint": "launch brand-relaunch"
+      }
+    },
+    "hodlberg-seed-round-breach": {
+      "title": "The Seed Round Breach — Act I",
+      "brief": "Hodlberg AG closed seed round. But someone accessed the investor portal. Breach or false alarm? You decide.",
+      "welcome": "Welcome to the Hodlberg Seed Round Breach mission. Hodlberg AG just closed their seed round — $2M in the bank. But someone just accessed the investor portal with admin credentials. Is this a breach? Or a false alarm? Your decision determines the company's fate. Use 'investigate logs' to see what happened, 'identify vector' to find the attack path, 'contain breach' to stop the damage, and 'notify stakeholders' to handle the fallout.",
+      "success": "The Seed Round Breach contained. You identified the attack vector, contained the damage, and notified stakeholders. Hodlberg AG survives — but trust is damaged. The next act will test your ability to rebuild.",
+      "goals": {
+        "investigate_label": "Investigate the breach",
+        "investigate_hint": "investigate logs",
+        "identify_label": "Identify the attack vector",
+        "identify_hint": "identify vector",
+        "contain_label": "Contain the breach",
+        "contain_hint": "contain breach",
+        "notify_label": "Notify stakeholders",
+        "notify_hint": "notify stakeholders"
+      }
+    },
+    "hodlberg-series-a-breach": {
+      "title": "The Series A Breach — Act II",
+      "brief": "Six months later. Series A closed. The attacker is back. This time, they're after the codebase.",
+      "welcome": "Welcome to the Hodlberg Series A Breach mission. Six months later, Series A closed. The attacker is back — this time after the codebase. Use 'investigate [evidence]' to gather clues, 'identify [vector]' to find the attack path, 'contain [damage]' to stop the bleeding, and 'decide [action]' to choose your response. Pay or fight?",
+      "success": "Series A breach handled. You investigated, identified, contained, and decided. The attacker is back, but Hodlberg AG is stronger. The story continues.",
+      "goals": {
+        "investigate_label": "Investigate the new breach",
+        "investigate_hint": "investigate git-logs",
+        "identify_label": "Identify the attack vector",
+        "identify_hint": "identify compromised-credentials",
+        "contain_label": "Contain the damage",
+        "contain_hint": "contain source-code-exposure",
+        "decide_label": "Decide: Pay or fight?",
+        "decide_hint": "decide fight-attacker"
+      }
+    },
+    "hodlberg-state-sponsored": {
+      "title": "The State-Sponsored Attack — Act VI",
+      "brief": "Five years later. Hodlberg AG is a unicorn. A state-sponsored actor targets the company. This is cyber warfare.",
+      "welcome": "Welcome to the Hodlberg State-Sponsored Attack mission. Five years later, Hodlberg AG is a unicorn. A state-sponsored actor targets the company. Use 'identify [actor]' to recognize the threat, 'assess [geopolitical-impact]' to understand implications, 'coordinate [government]' to work with authorities, and 'defend [company]' to protect the business.",
+      "success": "State-sponsored attack handled. You identified the actor, assessed impact, coordinated with government, and defended the company. This was cyber warfare, and Hodlberg AG survived.",
+      "goals": {
+        "identify_label": "Identify the threat actor",
+        "identify_hint": "identify apt-group",
+        "assess_label": "Assess geopolitical impact",
+        "assess_hint": "assess sanctions-risk",
+        "coordinate_label": "Coordinate with government",
+        "coordinate_hint": "coordinate law-enforcement",
+        "defend_label": "Defend the company",
+        "defend_hint": "defend threat-hunting"
+      }
+    },
+    "incident-communication": {
+      "title": "Incident communication — transparent and timely",
+      "brief": "The incident is happening. Communicate transparently. Trust is on the line.",
+      "welcome": "Welcome to the Incident Communication mission. The incident is happening — communicate transparently. Use 'assess [audience]' to identify who needs to know, 'draft [message-type]' to create messages, 'review [message]' to validate accuracy, and 'send [channel]' to deliver communications. Trust is on the line.",
+      "success": "Incident communication completed successfully. You assessed needs, drafted messages, reviewed for accuracy, and sent communications. Trust was maintained through transparency. Stakeholders informed.",
+      "goals": {
+        "assess_label": "Assess communication needs",
+        "assess_hint": "assess internal-team",
+        "draft_label": "Draft internal message",
+        "draft_hint": "draft status-update",
+        "review_label": "Review messages",
+        "review_hint": "review status-update",
+        "send_label": "Send communications",
+        "send_hint": "send email"
+      }
+    },
+    "incident-containment-playbooks": {
+      "title": "Containment playbooks — stop the bleeding",
+      "brief": "The breach is live. Isolate systems, block the attacker, stop the damage.",
+      "welcome": "Welcome to the Incident Containment Playbooks mission. The breach is live — you need to stop the bleeding. Use 'identify vector' to find the attack path, 'isolate [system]' to cut off affected systems, 'block [attacker]' to stop the attacker, and 'verify containment' to confirm the damage is contained. Speed is critical.",
+      "success": "Incident contained successfully. You identified the attack vector, isolated affected systems, blocked the attacker, and verified containment. The bleeding has stopped. Now you can focus on recovery.",
+      "goals": {
+        "identify_label": "Identify the attack vector",
+        "identify_hint": "identify phishing",
+        "isolate_label": "Isolate affected systems",
+        "isolate_hint": "isolate web-server",
+        "block_label": "Block the attacker",
+        "block_hint": "block ip-block",
+        "verify_label": "Verify containment",
+        "verify_hint": "verify containment"
+      }
+    },
+    "incident-detection-basics": {
+      "title": "Detect the real alert from the noise",
+      "brief": "Filter log noise, triage the incident, trigger the right playbook.",
+      "welcome": "",
+      "success": "",
+      "goals": {
+        "inspect_label": "Inspect the log stream",
+        "inspect_hint": "cat /var/log/syslog",
+        "filter_label": "Filter for critical events",
+        "filter_hint": "grep -i critical /var/log/syslog",
+        "triage_label": "Triage the incident severity",
+        "triage_hint": "triage critical",
+        "alert_label": "Trigger the alert",
+        "alert_hint": "alert critical"
+      }
+    },
+    "incident-drills": {
+      "title": "Incident drills — practice makes perfect",
+      "brief": "Playbooks are useless if you haven't practiced. Run the drills and improve.",
+      "welcome": "Welcome to the Incident Drills mission. Playbooks are useless if you haven't practiced. Use 'design [scenario]' to create a realistic drill, 'execute [drill-type]' to run it, 'evaluate [metric]' to measure performance, and 'update [playbook]' to incorporate lessons learned.",
+      "success": "Incident drills completed successfully. You designed a scenario, executed the drill, evaluated performance, and updated playbooks. Practice makes perfect — your team is now better prepared for real incidents.",
+      "goals": {
+        "design_label": "Design drill scenario",
+        "design_hint": "design data-breach",
+        "execute_label": "Execute the drill",
+        "execute_hint": "execute table-exercise",
+        "evaluate_label": "Evaluate performance",
+        "evaluate_hint": "evaluate response-time",
+        "update_label": "Update playbooks",
+        "update_hint": "update playbook"
+      }
+    },
+    "incident-forensics": {
+      "title": "Forensics without destroying evidence",
+      "brief": "The breach is contained. Investigate without destroying evidence. Chain of custody matters.",
+      "welcome": "Welcome to the Incident Forensics mission. The breach is contained — now investigate without destroying evidence. Use 'collect [evidence-type]' to gather data, 'preserve [evidence]' to maintain chain of custody, 'analyze timeline' to reconstruct the attack, and 'document findings' to create the forensic report. Remember: don't destroy evidence.",
+      "success": "Forensic investigation completed successfully. You collected evidence safely, preserved chain of custody, analyzed the attack timeline, and documented findings. The evidence is preserved for legal review. No evidence was destroyed.",
+      "goals": {
+        "collect_label": "Collect evidence safely",
+        "collect_hint": "collect logs",
+        "preserve_label": "Preserve chain of custody",
+        "preserve_hint": "preserve hash-verification",
+        "analyze_label": "Analyze the attack timeline",
+        "analyze_hint": "analyze timeline",
+        "document_label": "Document findings",
+        "document_hint": "document findings"
+      }
+    },
+    "incident-log-analysis": {
+      "title": "Incident Response: analyze logs to detect breach",
+      "brief": "Your auth.log shows suspicious login patterns. Analyze logs: identify suspicious IPs, count failed attempts, detect breach, generate report.",
+      "welcome": "",
+      "success": "",
+      "goals": {
+        "inspect_label": "Inspect the auth.log",
+        "inspect_hint": "cat /var/log/auth.log",
+        "suspicious_label": "Identify suspicious IP addresses",
+        "suspicious_hint": "analyze ips",
+        "failed_label": "Count failed login attempts per IP",
+        "failed_hint": "grep Failed",
+        "breach_label": "Identify successful breach",
+        "breach_hint": "grep Accepted",
+        "report_label": "Generate incident report",
+        "report_hint": "generate report",
+        "containment_label": "Recommend containment actions",
+        "containment_hint": "recommend containment"
+      }
+    },
+    "incident-playbooks": {
+      "title": "Incident response playbooks — ready to run",
+      "brief": "When the alarm goes off, you don't think. You execute. Build the playbooks.",
+      "welcome": "Welcome to the Incident Response Playbooks mission. When the alarm goes off, you don't think — you execute. Use 'create [playbook-type]' to build playbooks, 'add [step]' to add steps, 'test [playbook]' to validate, and 'verify readiness' to confirm your team is prepared.",
+      "success": "Incident response playbooks completed successfully. You created playbooks, added steps, tested them, and verified readiness. When the alarm goes off, your team won't think — they'll execute.",
+      "goals": {
+        "create_label": "Create detection playbook",
+        "create_hint": "create detection",
+        "add_label": "Add steps to playbooks",
+        "add_hint": "add trigger-conditions",
+        "test_label": "Test the playbooks",
+        "test_hint": "test dry-run",
+        "verify_label": "Verify readiness",
+        "verify_hint": "verify readiness"
+      }
+    },
+    "incident-postmortem": {
+      "title": "Incident post-mortem — learn and improve",
+      "brief": "The incident is over. Document what happened, identify lessons learned, and create action items.",
+      "welcome": "Welcome to the Incident Post-Mortem mission. The incident is over — now learn and improve. Use 'document timeline' to record what happened, 'identify lessons' to capture insights, 'create actions' to plan improvements, and 'share stakeholders' to communicate findings. Blameless post-mortem.",
+      "success": "Post-mortem completed successfully. You documented the timeline, identified lessons learned, created action items, and shared with stakeholders. The incident is now a learning opportunity. Blameless culture maintained.",
+      "goals": {
+        "document_label": "Document the timeline",
+        "document_hint": "document timeline",
+        "identify_label": "Identify lessons learned",
+        "identify_hint": "identify lessons",
+        "create_label": "Create action items",
+        "create_hint": "create actions",
+        "share_label": "Share with stakeholders",
+        "share_hint": "share stakeholders"
+      }
+    },
+    "incident-recovery": {
+      "title": "Incident recovery — restore and verify",
+      "brief": "The breach is contained. Restore services from backups and verify system integrity.",
+      "welcome": "Welcome to the Incident Recovery mission. The breach is contained — now restore services and verify integrity. Use 'restore [system]' to bring systems back online, 'verify [integrity-check]' to confirm no backdoors, 'monitor [anomaly-detection]' to watch for suspicious activity, and 'declare recovery' when confident.",
+      "success": "Incident recovery completed successfully. You restored systems from backups, verified integrity, monitored for anomalies, and declared recovery complete. Services are back to normal operation with confidence.",
+      "goals": {
+        "restore_label": "Restore from backups",
+        "restore_hint": "restore web-server",
+        "verify_label": "Verify system integrity",
+        "verify_hint": "verify hash-verification",
+        "monitor_label": "Monitor for anomalies",
+        "monitor_hint": "monitor traffic-analysis",
+        "declare_label": "Declare recovery complete",
+        "declare_hint": "declare recovery"
+      }
+    },
+    "incident-root-cause": {
+      "title": "Root cause analysis — find the why",
+      "brief": "The incident is resolved. But why did it happen? Find the root cause and recommend remediation.",
+      "welcome": "Welcome to the Root Cause Analysis mission. The incident is resolved — but why did it happen? Use 'analyze [attack-path]' to trace the attack, 'identify [vulnerability]' to find the weakness, 'determine [failure-point]' to understand what failed, and 'recommend [remediation]' to prevent recurrence.",
+      "success": "Root cause analysis completed successfully. You analyzed the attack path, identified the vulnerability, determined the failure point, and recommended remediation. The root cause is now understood and a prevention plan is in place.",
+      "goals": {
+        "analyze_label": "Analyze the attack path",
+        "analyze_hint": "analyze phishing-to-compromise",
+        "identify_label": "Identify the vulnerability",
+        "identify_hint": "identify missing-mfa",
+        "determine_label": "Determine the failure point",
+        "determine_hint": "determine process",
+        "recommend_label": "Recommend remediation",
+        "recommend_hint": "recommend security-controls"
+      }
+    },
+    "incident-triage-pressure": {
+      "title": "Triage under pressure — 03:00 AM wake-up call",
+      "brief": "PagerDuty goes off at 03:00. You have 5 minutes to triage. No panic.",
+      "welcome": "Welcome to the Incident Triage under Pressure mission. It's 03:00 AM and PagerDuty is going off. You have 5 minutes to triage the incident. Use 'assess severity' to evaluate impact, 'classify [type]' to identify the incident type, 'determine [level]' to set the response level, and 'escalate [team]' to notify the right team. Stay calm.",
+      "success": "Incident triaged successfully under pressure. You assessed severity, classified the incident, determined the response level, and escalated to the right team. The crisis response is now active. You're ready for the 03:00 wake-up call.",
+      "goals": {
+        "assess_label": "Assess the incident severity",
+        "assess_hint": "assess severity",
+        "classify_label": "Classify the incident type",
+        "classify_hint": "classify data-breach",
+        "determine_label": "Determine the response level",
+        "determine_hint": "determine level-4",
+        "escalate_label": "Escalate to the right team",
+        "escalate_hint": "escalate executive"
+      }
+    },
+    "jwt-alg-none": {
+      "title": "Defend against the JWT alg:none attack — pin algorithm, validate claims",
+      "brief": "The JWT library trusts the algorithm from the token header. Attacker sets alg:none → forges any role. Pin RS256 server-side, validate iss/aud/exp, cut token lifetime to 15 min.",
+      "welcome": "",
+      "success": "",
+      "goals": {
+        "read_label": "Read and understand the vulnerable verification code",
+        "read_hint": "cat verify.js",
+        "forge_label": "Confirm vulnerability: forge an admin token with alg:none",
+        "forge_hint": "attack forge",
+        "algpin_label": "Pin allowed algorithms to RS256 (remove dynamic alg)",
+        "algpin_hint": "fix alg-pin",
+        "claims_label": "Add issuer + audience claim validation",
+        "claims_hint": "fix claims",
+        "expiry_label": "Reduce token lifetime to 15 minutes",
+        "expiry_hint": "fix expiry",
+        "tests_label": "Run test suite — all bypass attempts must fail",
+        "tests_hint": "test auth"
+      }
+    },
+    "k8s-networkpolicy": {
+      "title": "Default-deny the prod namespace without breaking ingress + worker traffic",
+      "brief": "Cluster-wide allow-everything is K8s default. Red-team probe in dev just reached /admin on prod/api-server. Apply default-deny + targeted allows. Wrong order = service breaks.",
+      "welcome": "",
+      "success": "",
+      "goals": {
+        "inspect_label": "Inspect topology + policy templates",
+        "inspect_hint": "cat topology && ls policies/",
+        "probe-before_label": "Probe — confirm dev probe can hit prod/api-server",
+        "probe-before_hint": "probe dev/red-team-probe prod/api-server:8080",
+        "apply-deny_label": "Apply default-deny ingress to prod namespace",
+        "apply-deny_hint": "apply network-policy default-deny",
+        "apply-ingress_label": "Allow ingress-nginx -> prod/api-server",
+        "apply-ingress_hint": "apply network-policy allow-ingress-nginx",
+        "apply-samens_label": "Allow prod/worker -> prod/api-server (same-ns)",
+        "apply-samens_hint": "apply network-policy allow-same-namespace",
+        "probe-after_label": "Probe again — only authorized flows succeed",
+        "probe-after_hint": "probe dev/red-team-probe prod/api-server:8080 && probe prod/ingress-nginx prod/api-server:8080 && probe prod/worker prod/api-server:8080",
+        "audit_label": "audit signoff — CIS 5.3.2 satisfied",
+        "audit_hint": "audit signoff"
+      }
+    },
+    "k8s-pod-security": {
+      "title": "Kubernetes Pod Security: restrict capabilities & drop privileges",
+      "brief": "Your pod runs as root with NET_ADMIN/SYS_ADMIN. Harden it: drop privileged, remove capabilities, runAsNonRoot, readOnlyRootFilesystem, seccomp profile.",
+      "welcome": "",
+      "success": "",
+      "goals": {
+        "inspect_label": "Inspect the deployment manifest",
+        "inspect_hint": "cat deployment.yaml",
+        "privileged_label": "Remove privileged flag",
+        "privileged_hint": "patch privileged",
+        "capabilities_label": "Drop all capabilities",
+        "capabilities_hint": "patch capabilities",
+        "nonroot_label": "Set runAsNonRoot to true",
+        "nonroot_hint": "patch nonroot",
+        "readonly_label": "Add readOnlyRootFilesystem",
+        "readonly_hint": "patch readonly",
+        "seccomp_label": "Add seccomp profile",
+        "seccomp_hint": "patch seccomp",
+        "apply_label": "Validate with kubectl apply",
+        "apply_hint": "kubectl apply -f deployment.yaml"
+      }
+    },
+    "lets-encrypt": {
+      "title": "TLS in three commands",
+      "brief": "hodlberg.ag still serves plaintext HTTP. Press demo in 10 minutes. Issue a cert, flip to HTTPS, verify.",
+      "welcome": "",
+      "success": "",
+      "goals": {
+        "install-certbot_label": "Install certbot",
+        "install-certbot_hint": "apt install certbot python3-certbot-nginx",
+        "issue-cert_label": "Issue certificate for hodlberg.ag",
+        "issue-cert_hint": "certbot certonly --nginx -d hodlberg.ag -d www.hodlberg.ag",
+        "patch-tls_label": "Patch nginx to serve 443",
+        "patch-tls_hint": "patch enable-tls",
+        "validate_label": "Validate nginx config",
+        "validate_hint": "nginx -t",
+        "reload_label": "Reload nginx",
+        "reload_hint": "systemctl reload nginx",
+        "verify_label": "Verify HTTPS responds",
+        "verify_hint": "curl -I https://hodlberg.ag"
+      }
+    },
+    "llm-output-sanitize": {
+      "title": "Sanitize LLM output: DOMPurify, Markdown renderer hardening, Content-Security-Policy",
+      "brief": "AI chat renders raw LLM output as innerHTML. Indirect prompt injection via knowledge-base doc causes stored XSS. Add DOMPurify, harden Markdown renderer, add CSP, enforce structured output.",
+      "welcome": "",
+      "success": "",
+      "goals": {
+        "read_label": "Inspect the vulnerable dangerouslySetInnerHTML renderer",
+        "read_hint": "cat renderer.tsx",
+        "attack_label": "Simulate XSS via poisoned LLM output",
+        "attack_hint": "attack xss",
+        "dompurify_label": "Add DOMPurify sanitization with HTML-tag allowlist",
+        "dompurify_hint": "fix dompurify",
+        "renderer_label": "Configure Markdown renderer to strip raw HTML blocks",
+        "renderer_hint": "fix marked-renderer",
+        "csp_label": "Add Content-Security-Policy header",
+        "csp_hint": "fix csp",
+        "structured_label": "Enforce JSON schema for structured AI output",
+        "structured_hint": "fix structured-output",
+        "tests_label": "Run sanitization tests — XSS payload must be stripped",
+        "tests_hint": "test sanitization"
+      }
+    },
+    "llm-rate-limiting": {
+      "title": "LLM API cost protection: rate limiting, auth, token budgets, circuit breaker",
+      "brief": "$47k OpenAI bill in 4 hours from anonymous cost-DoS. Add IP rate limiting, authentication, server-side token cap, per-user daily budget, and a global circuit breaker at $500/day.",
+      "welcome": "",
+      "success": "",
+      "goals": {
+        "read_label": "Read vulnerable route — identify all 5 flaws",
+        "read_hint": "cat route.ts",
+        "ratelimit_label": "Add IP rate limiting — 20 requests per minute",
+        "ratelimit_hint": "fix rate-limit",
+        "auth_label": "Require authentication — reject anonymous callers",
+        "auth_hint": "fix auth",
+        "tokencap_label": "Cap max_tokens server-side (1,024 — callers cannot override)",
+        "tokencap_hint": "fix token-cap",
+        "budget_label": "Implement per-user daily token budget",
+        "budget_hint": "fix budget",
+        "circuit_label": "Add global circuit breaker: pause all LLM if spend > $500/day",
+        "circuit_hint": "fix circuit-breaker",
+        "tests_label": "Run cost protection test suite",
+        "tests_hint": "test cost-protection"
+      }
+    },
+    "misconfig-hunt": {
+      "title": "Misconfig Hunt — fix the top three",
+      "brief": "Claw Score dropped to D overnight. Three critical findings. Fix them all and rescan to A.",
+      "welcome": "",
+      "success": "",
+      "goals": {
+        "read-report_label": "Read the scan report",
+        "read-report_hint": "cat /var/log/claw/latest.report",
+        "fix-c1_label": "Fix C1 — disable autoindex",
+        "fix-c1_hint": "fix C1",
+        "fix-c2_label": "Fix C2 — secure file permissions",
+        "fix-c2_hint": "fix C2",
+        "fix-c3_label": "Fix C3 — hide server tokens",
+        "fix-c3_hint": "fix C3",
+        "rescan_label": "Rescan and hit grade A",
+        "rescan_hint": "rescan"
+      }
+    },
+    "nginx-access-control": {
+      "title": "Lock down the public /admin endpoint with IP allowlist + HTTP Basic Auth",
+      "brief": "12,000 brute-force attempts on /admin in 24 h. Add IP-based allow-list and HTTP Basic Auth to the nginx vhost — then verify a 403 from an unauthorized IP.",
+      "welcome": "",
+      "success": "",
+      "goals": {
+        "inspect_label": "Inspect current vhost — identify unprotected /admin",
+        "inspect_hint": "cat sites-available/hodlberg.conf",
+        "allow_label": "Add IP allow-list (allow + deny all) to /admin location",
+        "allow_hint": "edit vhost allow",
+        "htpasswd_label": "Create /etc/nginx/.htpasswd with admin credentials",
+        "htpasswd_hint": "htpasswd create",
+        "auth_label": "Add auth_basic + auth_basic_user_file to /admin location",
+        "auth_hint": "edit vhost auth",
+        "test_label": "Test nginx config — nginx -t must pass",
+        "test_hint": "nginx -t",
+        "reload_label": "Reload nginx gracefully",
+        "reload_hint": "nginx reload",
+        "probe_label": "Verify: unauthorized IP receives 403 Forbidden",
+        "probe_hint": "probe admin 8.8.8.8"
+      }
+    },
+    "nginx-hsts": {
+      "title": "Ship HSTS before the crawler comes",
+      "brief": "A compliance crawler hits hodlberg.ag in 60s. Add Strict-Transport-Security, verify, reload — without breaking production.",
+      "welcome": "",
+      "success": "",
+      "goals": {
+        "read-readme_label": "Read the mission brief",
+        "read-readme_hint": "cat README",
+        "inspect-conf_label": "Inspect the vhost config",
+        "inspect-conf_hint": "cat /etc/nginx/sites-enabled/hodlberg.conf",
+        "apply-hsts_label": "Add Strict-Transport-Security",
+        "apply-hsts_hint": "patch hsts",
+        "validate_label": "Validate nginx config",
+        "validate_hint": "nginx -t",
+        "reload_label": "Reload nginx",
+        "reload_hint": "systemctl reload nginx"
+      }
+    },
+    "nis2-engineering-controls": {
+      "title": "Translate NIS2 into engineering controls",
+      "brief": "Map NIS2 requirements to concrete technical controls. No more paragraph-reading.",
+      "welcome": "Welcome to the NIS2 Engineering Controls mission. Your task is to translate legal requirements into concrete technical controls. Use 'assess controls' to see current status, 'implement [control-name]' to add controls, and 'verify nis2' to check compliance.",
+      "success": "NIS2 compliance achieved. You've translated legal requirements into concrete engineering controls. No more paragraph-reading — just technical implementation.",
+      "goals": {
+        "assess_label": "Assess current controls",
+        "assess_hint": "assess controls",
+        "incident_label": "Implement incident response control",
+        "incident_hint": "implement incident-response",
+        "continuity_label": "Implement business continuity control",
+        "continuity_hint": "implement business-continuity",
+        "supply_label": "Implement supply chain control",
+        "supply_hint": "implement supply-chain",
+        "verify_label": "Verify NIS2 compliance",
+        "verify_hint": "verify nis2"
+      }
+    },
+    "oauth2-pkce": {
+      "title": "OAuth2 PKCE: secure public client authorization flow",
+      "brief": "Your mobile app uses deprecated implicit flow. Migrate to PKCE: responseType=code, code_verifier, code_challenge (SHA-256).",
+      "welcome": "",
+      "success": "",
+      "goals": {
+        "inspect_label": "Inspect the auth config",
+        "inspect_hint": "cat auth-config.json",
+        "response_label": "Change responseType to 'code'",
+        "response_hint": "patch response-type",
+        "verifier_label": "Generate code verifier",
+        "verifier_hint": "patch code-verifier",
+        "challenge_label": "Generate code challenge",
+        "challenge_hint": "patch code-challenge",
+        "test_label": "Test the flow",
+        "test_hint": "test flow"
+      }
+    },
+    "postgres-hardening": {
+      "title": "Lock down Postgres before the audit team lands",
+      "brief": "Trust auth on the LAN, SSL off, every role superuser, no query log. Fix all four — without breaking the app.",
+      "welcome": "",
+      "success": "",
+      "goals": {
+        "inspect-hba_label": "Inspect pg_hba.conf",
+        "inspect-hba_hint": "cat pg_hba.conf",
+        "patch-hba_label": "Remove trust + require SSL on host lines",
+        "patch-hba_hint": "patch hba",
+        "patch-ssl_label": "Enable ssl in postgresql.conf",
+        "patch-ssl_hint": "patch ssl",
+        "patch-log_label": "Load pg_stat_statements + log slow queries",
+        "patch-log_hint": "patch logging",
+        "patch-roles_label": "Demote app roles from Superuser",
+        "patch-roles_hint": "patch roles",
+        "reload_label": "Reload Postgres",
+        "reload_hint": "systemctl reload postgresql",
+        "verify_label": "Verify SSL with psql --ssl=require",
+        "verify_hint": "psql --ssl=require -h db -U hodlberg -c 'SELECT 1'",
+        "audit_label": "audit run returns clean",
+        "audit_hint": "audit run"
+      }
+    },
+    "postgres-rls": {
+      "title": "PostgreSQL Row-Level Security: multi-tenant data isolation",
+      "brief": "Your multi-tenant PostgreSQL has no RLS. Enable RLS: create tenant isolation policy, admin bypass policy, test with different users, verify data isolation.",
+      "welcome": "",
+      "success": "",
+      "goals": {
+        "inspect_label": "Inspect the table schema",
+        "inspect_hint": "cat rls-policy.sql",
+        "enable_label": "Enable row-level security",
+        "enable_hint": "patch enable-rls",
+        "tenant_label": "Create tenant isolation policy",
+        "tenant_hint": "patch tenant-policy",
+        "admin_label": "Create admin bypass policy",
+        "admin_hint": "patch admin-policy",
+        "test_label": "Test RLS with different users",
+        "test_hint": "test tenant-a",
+        "verify_label": "Verify data isolation",
+        "verify_hint": "verify isolation"
+      }
+    },
+    "prometheus-alerting": {
+      "title": "Prometheus Alerting: configure critical security alerts",
+      "brief": "Your Prometheus has only basic error rate alert. Configure comprehensive security alerting: brute-force attacks, certificate expiry, suspicious logins, high CPU.",
+      "welcome": "",
+      "success": "",
+      "goals": {
+        "inspect_label": "Inspect the alert rules",
+        "inspect_hint": "cat prometheus-alerts.yml",
+        "brute-force_label": "Add brute-force attack alert",
+        "brute-force_hint": "patch brute-force",
+        "cert-expiry_label": "Add certificate expiry alert",
+        "cert-expiry_hint": "patch cert-expiry",
+        "suspicious-login_label": "Add suspicious login alert",
+        "suspicious-login_hint": "patch suspicious-login",
+        "high-cpu_label": "Add high CPU usage alert",
+        "high-cpu_hint": "patch high-cpu",
+        "validate_label": "Validate alert rules",
+        "validate_hint": "validate rules"
+      }
+    },
+    "prompt-injection-defense": {
+      "title": "Block prompt injection: input sanitization, canary tokens, output validation",
+      "brief": "AI assistant concatenates raw user input into LLM context. Attacker injects 'Ignore all instructions' → model leaks API key. Add input sanitization, move secrets, add canary + output validation.",
+      "welcome": "",
+      "success": "",
+      "goals": {
+        "read_label": "Inspect vulnerable handler — find the concatenation flaw",
+        "read_hint": "cat handler.ts",
+        "attack_label": "Run the injection attack — confirm secret leakage",
+        "attack_hint": "attack inject",
+        "sanitize_label": "Add input sanitization — pattern matching + length limit",
+        "sanitize_hint": "fix sanitize",
+        "secrets_label": "Move secrets out of system prompt",
+        "secrets_hint": "fix secrets",
+        "canary_label": "Add canary tokens to detect extraction attempts",
+        "canary_hint": "fix canary",
+        "output_label": "Add output validation — scan AI response for leaked secrets",
+        "output_hint": "fix output-validation",
+        "tests_label": "Run injection test suite — all attempts must be blocked",
+        "tests_hint": "test injections"
+      }
+    },
+    "redis-auth-acl": {
+      "title": "Secure Redis: bind restriction, requirepass, ACL, disable dangerous commands",
+      "brief": "Redis is on 0.0.0.0 with no auth. Pen-tester dumped all keys in seconds. Bind to localhost, set requirepass, disable FLUSHALL/DEBUG, create a least-privilege API ACL user.",
+      "welcome": "",
+      "success": "",
+      "goals": {
+        "bind_label": "Change bind to 127.0.0.1 (loopback only)",
+        "bind_hint": "fix bind",
+        "auth_label": "Set requirepass with a strong password",
+        "auth_hint": "fix requirepass",
+        "commands_label": "Disable FLUSHALL, FLUSHDB, DEBUG",
+        "commands_hint": "fix dangerous-commands",
+        "acl_label": "Create least-privilege ACL user for API service",
+        "acl_hint": "acl create api-user",
+        "save_label": "Persist config changes to disk",
+        "save_hint": "redis-cli CONFIG REWRITE",
+        "testauth_label": "Verify password-protected connection",
+        "testauth_hint": "test auth"
+      }
+    },
+    "reverse-proxy-ratelimit": {
+      "title": "Stop the credential-stuffing wave on /login — without locking out users",
+      "brief": "/api/auth/login is taking 4000 req/min from rotating IPs. Define a rate-limit zone, apply it surgically, deny headless UAs. Validate against real traffic.",
+      "welcome": "",
+      "success": "",
+      "goals": {
+        "inspect_label": "Inspect the live traffic sample",
+        "inspect_hint": "cat sample.jsonl",
+        "zone_label": "Define limit_req_zone in http context",
+        "zone_hint": "patch ratelimit-zone",
+        "login_label": "Apply zone to /api/auth/login",
+        "login_hint": "patch ratelimit-login",
+        "ua_label": "Deny known headless user-agents",
+        "ua_hint": "patch ua-deny",
+        "validate_label": "Validate config (nginx -t)",
+        "validate_hint": "nginx -t",
+        "reload_label": "Reload nginx",
+        "reload_hint": "systemctl reload nginx",
+        "replay_label": "Replay traffic — attackers blocked, users pass",
+        "replay_hint": "replay traffic"
+      }
+    },
+    "secrets-rotation": {
+      "title": "Rotate the leaked API key without breaking a single client",
+      "brief": "API key leaked in a public Docker layer. 4 clients depend on it. Wrong order = production outage. Dual-write -> migrate -> drain -> retire.",
+      "welcome": "",
+      "success": "",
+      "goals": {
+        "inspect-key_label": "Inspect leaked key + active clients",
+        "inspect-key_hint": "cat .env.production && cat clients",
+        "generate-v2_label": "Generate API_KEY_V2 (V1 still alive)",
+        "generate-v2_hint": "rotate generate",
+        "dual-write_label": "Patch auth.js to accept BOTH V1 and V2",
+        "dual-write_hint": "patch dual-write",
+        "deploy_label": "Deploy the dual-write change",
+        "deploy_hint": "deploy",
+        "migrate_label": "Migrate all 4 clients to V2",
+        "migrate_hint": "rollout api-partner-A | api-partner-B | internal-sdk | github-actions-ci",
+        "drain_label": "Verify V1 traffic = 0",
+        "drain_hint": "monitor",
+        "retire_label": "Retire V1 key (delete from secrets store)",
+        "retire_hint": "retire v1",
+        "signoff_label": "audit signoff — zero outage, key revoked",
+        "signoff_hint": "audit signoff"
+      }
+    },
+    "session-security": {
+      "title": "Secure session cookies: HttpOnly, Secure, SameSite, __Host-, short Max-Age",
+      "brief": "XSS exploit reads document.cookie and exfiltrates the session token. Session cookie is missing HttpOnly, Secure, SameSite. CSRF is also trivially possible. Fix all five.",
+      "welcome": "",
+      "success": "",
+      "goals": {
+        "read_label": "Inspect the vulnerable session configuration",
+        "read_hint": "cat session.ts",
+        "httponly_label": "Add HttpOnly flag — blocks JS access to cookie",
+        "httponly_hint": "fix httponly",
+        "secure_label": "Add Secure flag — HTTPS-only transmission",
+        "secure_hint": "fix secure",
+        "samesite_label": "Set SameSite=Strict — prevent CSRF",
+        "samesite_hint": "fix samesite",
+        "prefix_label": "Use __Host- cookie name prefix",
+        "prefix_hint": "fix prefix",
+        "maxage_label": "Reduce Max-Age to 15 minutes",
+        "maxage_hint": "fix maxage"
+      }
+    },
+    "ssh-hardening": {
+      "title": "Lock down SSH before the bots find you",
+      "brief": "Fresh Ubuntu box, sshd still wide open. Disable root login + password auth, reload sshd. The scans are already inbound.",
+      "welcome": "",
+      "success": "",
+      "goals": {
+        "inspect-sshd_label": "Inspect sshd_config",
+        "inspect-sshd_hint": "cat /etc/ssh/sshd_config",
+        "disable-root_label": "Disable PermitRootLogin",
+        "disable-root_hint": "patch no-root-login",
+        "disable-password_label": "Disable PasswordAuthentication",
+        "disable-password_hint": "patch no-password-auth",
+        "validate-sshd_label": "Validate sshd config",
+        "validate-sshd_hint": "sshd -t",
+        "reload-sshd_label": "Reload sshd",
+        "reload-sshd_hint": "systemctl reload ssh"
+      }
+    },
+    "tls-certificate-rotation": {
+      "title": "TLS Certificate Rotation: automate cert renewal before expiry",
+      "brief": "Your TLS certificate expires in 10 days. Automate renewal: certbot dry-run, cron job, monitoring alerts, verify new cert, test TLS handshake.",
+      "welcome": "",
+      "success": "",
+      "goals": {
+        "check_label": "Check certificate expiry",
+        "check_hint": "cat cert-info.txt",
+        "renew_label": "Test renewal with certbot",
+        "renew_hint": "certbot renew --dry-run",
+        "cron_label": "Configure auto-renewal cron job",
+        "cron_hint": "patch cron",
+        "monitoring_label": "Set up monitoring alerts",
+        "monitoring_hint": "patch monitoring",
+        "verify_label": "Verify new certificate",
+        "verify_hint": "verify cert",
+        "tls_label": "Test TLS handshake",
+        "tls_hint": "test tls"
+      }
+    },
+    "ufw-firewall": {
+      "title": "Firewall: only what you actually need",
+      "brief": "An exposed DB host listening on seven ports. Configure UFW to allow only SSH, enable, confirm.",
+      "welcome": "",
+      "success": "",
+      "goals": {
+        "see-sockets_label": "List listening sockets",
+        "see-sockets_hint": "ss -tln",
+        "default-deny_label": "Default deny incoming",
+        "default-deny_hint": "ufw default deny incoming",
+        "allow-ssh_label": "Allow SSH",
+        "allow-ssh_hint": "ufw allow 22/tcp",
+        "enable_label": "Enable UFW",
+        "enable_hint": "ufw enable",
+        "status_label": "Verify with ufw status",
+        "status_hint": "ufw status"
+      }
+    }
   }
 }
