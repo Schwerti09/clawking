@@ -1,9 +1,9 @@
 # Academy ∞ — Master Plan & Handoff Document
 
 **Created:** 2026-04-22
-**Last updated:** 2026-05-05
+**Last updated:** 2026-05-06
 **Owner:** Rolf S. (Schwerti)
-**Status:** 🟢 BUILD IN PROGRESS — Steps 1–9 shipped, Step 7 (content pipeline) awaiting model availability, Academy Track E-E-A-T Rollout completed
+**Status:** 🟢 BUILD IN PROGRESS — Steps 1–10 shipped, Step 7 (content pipeline) awaiting model availability, 36 new missions created (Incident Response 9, Compliance 7, Adversarial Defense 9, Story 11), i18n in progress (70 missions, 984 strings, 30 languages)
 **Deployment targets:** Netlify (prod), Railway / Vercel candidates — build stays deploy-agnostic
 
 This document is the single source of truth for the Academy ∞ rebuild. Any agent picking up work should read this top to bottom before touching code.
@@ -24,6 +24,8 @@ This document is the single source of truth for the Academy ∞ rebuild. Any age
 | 8 | Reactivation + sitemap sweep | ✅ DONE | Mission + breach routes static, registry-driven sitemap (auto-sync) |
 | 9 | 10 more missions × 2 tracks | ✅ DONE | M-021 to M-030 (k8s-pod-security, oauth2-pkce, aws-s3-bucket-policy, fail2ban-setup, incident-log-analysis, tls-certificate-rotation, postgres-rls, github-actions-hardening, prometheus-alerting, gdpr-data-minimization) |
 | 10 | Academy Track E-E-A-T Rollout | ✅ DONE | All 8 track pages with buildAuthoredArticleSchema, AuthorBox, LastUpdated (beginner, intermediate, advanced, auth, compliance, adversarial, incident-response, story) |
+| 16 | 36 New Missions (4 Tracks) | ✅ DONE | Incident Response (9), Compliance (7), Adversarial Defense (9), Story (11) — all registered in MISSIONS and MISSION_INDEX |
+| 17 | Academy Mission i18n | 🟡 IN PROGRESS | 70 missions, 984 strings extracted to en.json, translation running via aya-expanse:8b (30 languages) |
 | 11 | Digital Twin (GitHub read-only) | ⏭ LATER | — |
 | 12 | Adversarial AI Co-Player | ⏭ LATER | — |
 | 13 | Community + Mission Authoring | ⏭ LATER | — |
