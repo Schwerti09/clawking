@@ -62,7 +62,7 @@ const PRICE_METADATA: Record<
     interval: "month",
   },
   clawguru_team_annual: {
-    amount_cents: 239040, // 249 * 0.8 * 12 = 2387.2 → 239040 cents
+    amount_cents: 239040, // 249 * 0.8 * 12 = 2390.4 → 239040 cents
     currency: "eur",
     type: "recurring",
     interval: "year",
@@ -200,29 +200,62 @@ async function findExistingPriceByLookupKey(lookupKey: LookupKey): Promise<strin
 }
 
 /**
- * Resolve product ID from env vars, or create a product inline
- * Used when creating prices if the product doesn't exist yet
+ * Resolve product ID from env vars, or create a product inline.
+ * Used when creating prices if the product doesn't exist yet.
+ *
+ * Fallback chains per product so that deployments which only have a subset of
+ * STRIPE_PRODUCT_* vars configured can still auto-create missing prices:
+ *
+ *   starter → STRIPE_PRODUCT_STARTER → STRIPE_PRODUCT_PRO → STRIPE_PRODUCT_TEAM
+ *   pro     → STRIPE_PRODUCT_PRO     → STRIPE_PRODUCT_TEAM
+ *   team    → STRIPE_PRODUCT_TEAM    → STRIPE_PRODUCT_PRO
+ *   msp     → STRIPE_PRODUCT_MSP     → STRIPE_PRODUCT_TEAM → STRIPE_PRODUCT_PRO
+ *   daypass → STRIPE_PRODUCT_DAYPASS (no fallback – daypass is a distinct product)
+ *
+ * Expected price amounts (cents, EUR) for reference:
+ *   clawguru_starter_monthly  →  2900 (€29/mo)
+ *   clawguru_starter_annual   → 27840 (€278.40/yr, 20% off)
+ *   clawguru_pro_monthly      →  9900 (€99/mo)
+ *   clawguru_pro_annual       → 95040 (€950.40/yr, 20% off)
+ *   clawguru_team_monthly     → 24900 (€249/mo)
+ *   clawguru_team_annual      → 239040 (€2390.40/yr, 20% off)
+ *   clawguru_daypass_onetime  →    900 (€9 one-time)
  */
-function getProductIdForLookupKey(lookupKey: LookupKey): string {
+/** @internal Exported for unit-testing only. */
+export function getProductIdForLookupKey(lookupKey: LookupKey): string {
+  const env = process.env
   let productId: string | undefined
 
   if (lookupKey.includes("daypass")) {
-    productId = process.env.STRIPE_PRODUCT_DAYPASS
-  } else if (lookupKey.includes("team")) {
-    productId = process.env.STRIPE_PRODUCT_TEAM
-  } else if (lookupKey.includes("pro")) {
-    productId = process.env.STRIPE_PRODUCT_PRO
+    productId = env.STRIPE_PRODUCT_DAYPASS?.trim()
   } else if (lookupKey.includes("starter")) {
-    productId = process.env.STRIPE_PRODUCT_STARTER
+    // Fallback: starter can be created under the Pro or Team product umbrella
+    productId =
+      env.STRIPE_PRODUCT_STARTER?.trim() ||
+      env.STRIPE_PRODUCT_PRO?.trim() ||
+      env.STRIPE_PRODUCT_TEAM?.trim()
+  } else if (lookupKey.includes("pro")) {
+    // Fallback: Pro can be created under the Team product if dedicated product missing
+    productId = env.STRIPE_PRODUCT_PRO?.trim() || env.STRIPE_PRODUCT_TEAM?.trim()
+  } else if (lookupKey.includes("team")) {
+    // Fallback: Team can be created under the Pro product if dedicated product missing
+    productId = env.STRIPE_PRODUCT_TEAM?.trim() || env.STRIPE_PRODUCT_PRO?.trim()
   } else if (lookupKey.includes("msp")) {
-    productId = process.env.STRIPE_PRODUCT_MSP
+    productId =
+      env.STRIPE_PRODUCT_MSP?.trim() ||
+      env.STRIPE_PRODUCT_TEAM?.trim() ||
+      env.STRIPE_PRODUCT_PRO?.trim()
   }
 
   if (!productId) {
+    const meta = PRICE_METADATA[lookupKey]
+    const amountEur = meta ? (meta.amount_cents / 100).toFixed(2) : "unknown"
     throw new Error(
-      `No STRIPE_PRODUCT_* env var found for lookup_key: ${lookupKey}. ` +
-        `Please set STRIPE_PRODUCT_DAYPASS, STRIPE_PRODUCT_PRO, STRIPE_PRODUCT_TEAM, ` +
-        `STRIPE_PRODUCT_STARTER, or STRIPE_PRODUCT_MSP.`
+      `No STRIPE_PRODUCT_* env var found for lookup_key: ${lookupKey} (expected amount: €${amountEur}). ` +
+        `Set STRIPE_PRODUCT_STARTER, STRIPE_PRODUCT_PRO, STRIPE_PRODUCT_TEAM, ` +
+        `STRIPE_PRODUCT_DAYPASS, or STRIPE_PRODUCT_MSP in your environment. ` +
+        `Alternatively set the direct price ID env var ` +
+        `(e.g. STRIPE_PRICE_STARTER=price_xxx) to skip auto-create entirely.`
     )
   }
 
