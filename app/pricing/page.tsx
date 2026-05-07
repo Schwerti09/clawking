@@ -540,7 +540,7 @@ export default async function PricingPage() {
               <div className="flex flex-col gap-3 md:shrink-0 md:min-w-[220px]">
                 <SocialProofBlock locale={locale} />
                 <BuyButton
-                  product="daypass"
+                  product="starter-trial"
                   label={pricing.dayPassBuyLabel}
                   autoRecommend
                   upgradeSignals={{ workspaces: 1, needsApiExports: false, needsPolicyControls: false }}

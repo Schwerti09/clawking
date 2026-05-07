@@ -16,7 +16,7 @@ export const LOOKUP_KEYS = {
 } as const
 
 type LookupKey = (typeof LOOKUP_KEYS)[keyof typeof LOOKUP_KEYS]
-export type CheckoutProduct = "daypass" | "pro" | "team" | "msp" | "enterprise" | "starter" | "scale"
+export type CheckoutProduct = "daypass" | "pro" | "team" | "msp" | "enterprise" | "starter" | "scale" | "starter-trial"
 
 /**
  * Price metadata: amount in cents (EUR), currency, and interval
@@ -99,6 +99,7 @@ function normalizeLookupProduct(product: CheckoutProduct): "daypass" | "pro" | "
     case "scale":
       return "team"
     case "starter":
+    case "starter-trial":
       return "starter"
     case "daypass":
     case "pro":
@@ -113,7 +114,9 @@ function normalizeLookupProduct(product: CheckoutProduct): "daypass" | "pro" | "
 function envCandidates(product: CheckoutProduct, annual: boolean): string[] {
   switch (product) {
     case "daypass":
-      return ["STRIPE_PRICE_STARTER_AUTOPILOT", "STRIPE_PRICE_DAYPASS"]
+      return ["STRIPE_PRICE_DAYPASS"]
+    case "starter-trial":
+      return ["STRIPE_PRICE_STARTER_AUTOPILOT"]
     case "starter":
       return annual
         ? ["STRIPE_PRICE_STARTER_ANNUAL"]
