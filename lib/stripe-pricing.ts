@@ -113,7 +113,7 @@ function normalizeLookupProduct(product: CheckoutProduct): "daypass" | "pro" | "
 function envCandidates(product: CheckoutProduct, annual: boolean): string[] {
   switch (product) {
     case "daypass":
-      return ["STRIPE_PRICE_DAYPASS"]
+      return ["STRIPE_PRICE_STARTER_AUTOPILOT", "STRIPE_PRICE_DAYPASS"]
     case "starter":
       return annual
         ? ["STRIPE_PRICE_STARTER_ANNUAL"]
