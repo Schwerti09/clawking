@@ -605,7 +605,7 @@ export default async function PricingPage() {
                     </div>
                     <pre className="text-xs text-gray-300 overflow-x-auto whitespace-pre-wrap leading-relaxed">
 {`# Alle High-Severity Events abrufen
-curl https://clawguru.com/api/intel/feeds \\
+curl https://clawguru.org/api/intel/feeds \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -G --data-urlencode "severity=high"
 
