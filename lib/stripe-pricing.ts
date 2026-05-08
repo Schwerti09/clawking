@@ -98,8 +98,9 @@ function normalizeLookupProduct(product: CheckoutProduct): "daypass" | "pro" | "
     case "enterprise":
     case "scale":
       return "team"
-    case "starter":
     case "starter-trial":
+      return "daypass" // starter-trial is a one-time daypass (9€), not recurring starter (29€)
+    case "starter":
       return "starter"
     case "daypass":
     case "pro":
