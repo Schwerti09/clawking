@@ -316,6 +316,7 @@ export default function PageClient({ locale }: { locale: Locale }) {
                 <button className="flex-1 bg-blue-600 hover:bg-blue-500 text-white text-sm font-semibold py-2 px-4 rounded-lg transition-colors">{pick(isDE, "Share on LinkedIn", "Share on LinkedIn")}</button>
               </div>
             </div>
+            )}
           </div>
         </section>
         <section id="faq" className="mb-10 animate-fade-in-up" style={{animationDelay: '1.0s'}}>
