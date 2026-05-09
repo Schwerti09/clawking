@@ -108,8 +108,6 @@ class SecurityWorkflow {
   }
   
   async execute(trigger) {
-    console.log('Starting workflow:', this.name, 'trigger:', trigger.type);
-    
     for (const step of this.steps) {
       try {
         await this.executeStep(step, trigger);
@@ -121,12 +119,9 @@ class SecurityWorkflow {
         break;
       }
     }
-    
-    console.log('Workflow completed:', this.name);
   }
   
   async executeStep(step, trigger) {
-    console.log('Executing step:', step.name);
     
     switch (step.type) {
       case 'http_request':

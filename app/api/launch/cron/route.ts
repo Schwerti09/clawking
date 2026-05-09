@@ -79,7 +79,5 @@ export async function GET(req: NextRequest) {
     generatedAt: new Date().toISOString(),
   }
 
-  console.log(`[launch/cron] ✅ Batch ${batchPage}: ${stats.passed}/${slugs.length} passed (${stats.passRate}% pass-rate, avg ${stats.avgScore}/100) in ${elapsed}ms`)
-
   return NextResponse.json(result)
 }

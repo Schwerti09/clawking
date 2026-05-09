@@ -205,7 +205,6 @@ const getLiveWallCached = unstable_cache(
       payload = syntheticPayload(now)
     }
 
-    console.log("live-wall fetch [lang]", { status, error })
     return payload
   },
   ["live-wall-real"],

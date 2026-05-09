@@ -208,7 +208,6 @@ export const getLiveWallCached = unstable_cache(
       payload = syntheticPayload(now)
     }
 
-    console.log("live-wall fetch", { status, data: summarize(payload), error })
     return payload
   },
   ["live-wall-real"],

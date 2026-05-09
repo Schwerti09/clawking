@@ -43,24 +43,20 @@ export async function performSecurityCheck(target: string): Promise<SecurityChec
       text = await res.clone().text()
     } catch {}
     if (!res.ok) {
-      console.log("security-check call", { status, body: text?.slice(0, 200) ?? "", error: null })
       return fallbackResult(target)
     }
     let json: any = null
     try {
       json = await res.json()
     } catch (e) {
-      console.log("security-check call", { status, body: text?.slice(0, 200) ?? "", error: String(e) })
       return fallbackResult(target)
     }
     const valid = json && typeof json.score === "number" && typeof json.message === "string"
     if (!valid) {
-      console.log("security-check call", { status, data: json, error: "invalid payload" })
       return fallbackResult(target)
     }
     return json as SecurityCheckResult
   } catch (e: any) {
-    console.log("security-check call", { status: "network_error", data: null, error: e?.message || String(e) })
     return fallbackResult(target)
   }
 }

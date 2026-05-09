@@ -87,7 +87,6 @@ export async function sendEmail(args: SendArgs): Promise<{ id?: string }> {
     // ignore parse errors on success response
   }
 
-  console.log(`[email] E-Mail erfolgreich gesendet → Message ID: ${data.id ?? "(unknown)"}`)
   return data
 }
 

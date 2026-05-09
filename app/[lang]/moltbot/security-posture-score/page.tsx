@@ -264,9 +264,6 @@ const scorer = new SecurityPostureScorer();
 async function generateSecurityReport() {
   const score = await scorer.calculateScore();
   
-  console.log('Security Posture Score:', score.overall_score);
-  console.log('Grade:', score.grade);
-  
   // Generate recommendations
   const recommendations = generateRecommendations(score);
   

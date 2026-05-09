@@ -132,8 +132,6 @@ export async function GET(req: NextRequest) {
 
   const fullUrls = priorityPages.map(path => `${baseUrl}${path}`)
 
-  console.log("Indexing reference request", { requestId, count: fullUrls.length })
-
   return NextResponse.json({
     message: "Priority pages for manual indexing in Google Search Console",
     urls: fullUrls,

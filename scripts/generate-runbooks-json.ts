@@ -64,7 +64,6 @@ async function main() {
   try {
     const arr = (pseo as any).materializedRunbooks() as any[]
     for (const r of arr) out.push(minimal(r))
-    console.log(`Included materializedRunbooks: ${arr.length}`)
   } catch (e) {
     console.warn('WARN: failed to include materializedRunbooks', (e as Error)?.message)
   }
@@ -84,7 +83,6 @@ async function main() {
           clawScore: 80,
         })
       }
-      console.log(`Included 100k page ${p} with ${slugs.length} slugs`)
     }
   } catch (e) {
     console.warn('WARN: failed to include 100k pages', (e as Error)?.message)
@@ -92,9 +90,8 @@ async function main() {
 
   const final = uniqBySlug(out)
   fs.mkdirSync(path.dirname(outPath), { recursive: true })
-  fs.writeFileSync(outPath, JSON.stringify(final), 'utf8')
-  const sizeMb = (Buffer.byteLength(JSON.stringify(final)) / (1024 * 1024)).toFixed(2)
-  console.log(`Wrote ${final.length} runbooks to ${outPath} (~${sizeMb} MB)`) 
+  const sizeMb = (Buffer.byteLength(JSON.stringify(final)) / 1024 / 1024).toFixed(2)
+  fs.writeFileSync(outPath, JSON.stringify(final, null, 2))
 }
 
 main().catch((e) => {

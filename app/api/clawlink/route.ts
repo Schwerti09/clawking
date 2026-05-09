@@ -5,15 +5,11 @@ export const dynamic = "force-static";
 
 export async function GET() {
   const js = `/*! ClawLink v3.0 - Mycelial Singularity Engine */
-console.log("%c🚀 ClawLink connected to Mycelium", "color:#00ff9d; font-weight:bold");
-
 window.ClawLink = {
   version: "3.0",
   connected: true,
-  send: function(data) { console.log("ClawLink → Mycelium:", data); }
-};
-
-console.log("✅ ClawLink ready");`;
+  send: function(data) { /* ClawLink → Mycelium */ }
+};`;
 
   return new NextResponse(js, {
     status: 200,

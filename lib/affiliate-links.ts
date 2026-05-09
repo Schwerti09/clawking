@@ -124,5 +124,4 @@ export function formatAffiliateLink(link: AffiliateLink, locale = "en"): string 
 
 export function trackAffiliateClick(linkId: string, roastId: string): void {
   // TODO: Send analytics event
-  console.log(`Affiliate click: ${linkId} for roast ${roastId}`)
 }

@@ -113,7 +113,6 @@ export class BatchGeneratorClient {
         throw new Error(`Batch job ${jobId} did not complete within ${maxWaitMs}ms`)
       }
 
-      console.log(`[batch] Job ${jobId}: ${status.progress.percentage}% (${status.progress.completed}/${status.progress.total})`)
       await new Promise((resolve) => setTimeout(resolve, pollIntervalMs))
     }
   }

@@ -58,8 +58,6 @@ export async function GET(req: NextRequest) {
   const fulfilled = results.filter((r) => r.status === "fulfilled").length
   const rejected = results.filter((r) => r.status === "rejected").length
 
-  console.log(`[seo/index-now] submitted=${urls.length} ok=${fulfilled} err=${rejected}`)
-
   return NextResponse.json({
     submitted: urls.length,
     ok: fulfilled,

@@ -109,7 +109,6 @@ export async function GET(req: NextRequest) {
       `  </sitemap>\n` +
       `</sitemapindex>\n`
     logTelemetry("sitemap.index.fallback", { requestId, sitemapCount: 1, durationMs })
-    console.timeEnd(timeLabel)
     console.log("SITEMAP RESPONSE", { status: 200, length: fallback.length, first50: fallback.slice(0,50) + "..." })
     return new NextResponse(fallback, { status: 200, headers: SITEMAP_HEADERS })
   }

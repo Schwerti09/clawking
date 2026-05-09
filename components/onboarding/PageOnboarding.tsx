@@ -156,12 +156,10 @@ export default function PageOnboarding({ pageType, onDismiss }: PageOnboardingPr
 
   const handlePrimaryAction = () => {
     // Navigate to the main action of the page
-    console.log(`Primary action for ${pageType}`)
   }
 
   const handleSecondaryAction = () => {
     // Show secondary options
-    console.log(`Secondary action for ${pageType}`)
   }
 
   return (

@@ -296,21 +296,13 @@ async function processBatchAsync(jobId: string, tasks: BatchContentRequest[]) {
 
     // Optional: Log progress every 10 tasks
     if ((i + 1) % 10 === 0) {
-      console.log(`[batch-generate] Progress: ${i + 1}/${tasks.length}`)
+      // Progress tracking
     }
   }
 
   job.status = "completed"
   job.endTime = Date.now()
   if (redisAvailable()) await redisSetJSON(`job:${jobId}`, job, 60 * 60)
-
-  console.log(`[batch-generate] Job ${jobId} completed:`, {
-    totalTasks: job.totalTasks,
-    succeeded: job.results.length,
-    failed: job.errors.length,
-    totalTokens: job.telemetry.tokensUsed,
-    durationMs: job.endTime - job.startTime,
-  })
 }
 
 /**
