@@ -86,12 +86,12 @@ Claude's user memory (`C:\Users\rolli\.claude\projects\c--clawguru-seo-monster-g
 
 ---
 
-## 🔴 OPEN BACKLOG FROM EXTERNAL AUDIT (Kimi 2.5, 25.04.2026)
+## 🚨 OPEN BACKLOG FROM EXTERNAL AUDIT (Kimi 2.5, 25.04.2026)
 
 Source: `docs/audit-response-kimi-2026-04-25.md` (full point-by-point verification).
 
 **Critical (touch first):**
-1. **Pricing SSoT** — `app/pricing/page.tsx` shows monthly 29€/99€/249€; comparison pages (`/[lang]/clawguru-vs-*`) use yearly Explorer/Pro/Team with mixed Asset/Endpoint/Host units. Centralize in `lib/pricing.ts` and rebind all surfaces.
+1. **Pricing SSoT** — `app/pricing/page.tsx` zeigt monthly 29€/99€/249€; comparison pages (`/[lang]/clawguru-vs-*`) use yearly Explorer/Pro/Team with mixed Asset/Endpoint/Host units. Centralize in `lib/pricing.ts` and rebind all surfaces.
 2. **"Million Runbooks" Konstante** — already flagged in `docs/seo/eeat-strategy.md` as 🔴 Critical. Single value in `lib/stats.ts`, one phrase, all components/dictionaries bind. Inconsistency lives in `dictionaries/de.json:488`, `components/home/HeroPreview.tsx:97`, `components/vorstellung/VorstellungClient.tsx:207`, `app/[lang]/solutions/eu-ai-act-compliance-checklist/page.tsx:83`.
 3. **Tech-Stack-Block centralized** — Lacework comparison page asserts "PostgreSQL + Supabase". Reality: Neon + Netlify + Next.js 14. Build `components/marketing/StackDescription.tsx` and rebind all comparison pages.
 
@@ -104,6 +104,7 @@ Source: `docs/audit-response-kimi-2026-04-25.md` (full point-by-point verificati
 
 **Already in flight:**
 - i18n pick()-Pipeline B Ollama overnight run (started 25.04 ~10:00) — addresses "untranslated content per locale" finding.
+- Dark Theme Compliance: bg-teal-50/orange-50/amber-50/cyan-50 (abgeschlossen 09.05.2026) — 14 Dateien bearbeitet (cloudformation-security, cloudflare-tunnel-firewall-rules, argocd-security, xxe-2026, waf-2027, aws-security-architecture, aws-vpc-flow-logs, aws-iam-security, gitlab-cicd-security, jenkins-security, kafka-security, splunk-security, prometheus-vpn, mongodb-security). Alle verbotenen bg-*-50 Klassen durch dark-theme-konforme Alternativen ersetzt (bg-*-900/20 mit border und angepassten Textfarben).
 
 **False alarms (Kimi was wrong — do not act):**
 - "Only 8 language directories" — actually 32 in `lib/i18n.ts SUPPORTED_LOCALES`
