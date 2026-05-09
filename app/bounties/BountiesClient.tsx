@@ -77,7 +77,7 @@ function BountyCard({ bounty, onSubmit }: { bounty: Bounty; onSubmit: (b: Bounty
             ● {bounty.status}
           </span>
         </div>
-        <span className="text-gray-600">{bounty.submissions} submissions</span>
+        <span className="text-gray-400">{bounty.submissions} submissions</span>
       </div>
 
       {/* CTA */}
@@ -197,7 +197,7 @@ function SubmissionModal({ bounty, onClose }: { bounty: Bounty; onClose: () => v
                   Abbrechen
                 </button>
               </div>
-              <p className="text-xs text-gray-600">
+              <p className="text-xs text-gray-400">
                 Payout nach Review und Verifikation via Stripe. Maximal 72h.
               </p>
             </form>

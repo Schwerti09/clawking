@@ -194,8 +194,8 @@ export default function PerfectionDashboard() {
               onClick={() => setSelectedTier(tier)}
               className={`cursor-pointer rounded-2xl p-6 border-2 transition-all ${
                 selectedTier.id === tier.id
-                  ? "border-blue-600 bg-blue-50"
-                  : "border-slate-200 bg-white hover:border-blue-300"
+                  ? "border-blue-600 bg-blue-900 border-blue-700"
+                  : "border-slate-200 bg-gray-900 hover:border-blue-300"
               }`}
             >
               <h3 className="text-xl font-bold text-slate-900 mb-2">{tier.name}</h3>
@@ -215,8 +215,8 @@ export default function PerfectionDashboard() {
         </div>
 
         {/* Category Selection */}
-        <div className="bg-white rounded-2xl p-6 mb-8">
-          <h3 className="text-lg font-semibold text-slate-900 mb-4">Kategorie</h3>
+        <div className="bg-gray-900 rounded-2xl p-6 mb-8 border border-gray-700">
+          <h3 className="text-lg font-semibold text-gray-100 mb-4">Kategorie</h3>
           <div className="flex flex-wrap gap-3">
             {CATEGORIES.map((cat) => (
               <button
@@ -235,7 +235,7 @@ export default function PerfectionDashboard() {
         </div>
 
         {/* Input Form */}
-        <div className="bg-white rounded-2xl p-6 mb-8">
+        <div className="bg-gray-900 rounded-2xl p-6 mb-8 border border-gray-700">
           <div className="space-y-4">
             <div>
               <label className="block text-sm font-medium text-slate-700 mb-1">
@@ -287,9 +287,9 @@ export default function PerfectionDashboard() {
         </div>
 
         {/* Wie funktioniert's */}
-        <div className="bg-white rounded-2xl p-6 mb-8">
-          <h3 className="text-lg font-semibold text-slate-900 mb-4">So funktioniert’s</h3>
-          <ol className="list-decimal list-inside space-y-2 text-slate-700">
+        <div className="bg-gray-900 rounded-2xl p-6 mb-8 border border-gray-700">
+          <h3 className="text-lg font-semibold text-gray-100 mb-4">So funktioniert's</h3>
+          <ol className="list-decimal list-inside space-y-2 text-gray-300">
             <li>Thema und Keywords wählen</li>
             <li>Paket auswählen und bezahlen – wir generieren sofort deine Landingpage</li>
             <li>Download-Link erscheint – Code in dein Projekt kopieren (Next.js kompatibel)</li>
@@ -297,9 +297,9 @@ export default function PerfectionDashboard() {
         </div>
 
         {/* Integration in deine Website */}
-        <div className="bg-white rounded-2xl p-6 mb-8">
-          <h3 className="text-lg font-semibold text-slate-900 mb-4">Integration in deine Website</h3>
-          <div className="space-y-3 text-slate-700">
+        <div className="bg-gray-900 rounded-2xl p-6 mb-8 border border-gray-700">
+          <h3 className="text-lg font-semibold text-gray-100 mb-4">Integration in deine Website</h3>
+          <div className="space-y-3 text-gray-300">
             <p><strong>Next.js (empfohlen):</strong> Lege eine Datei <code>app/[lang]/[dein-slug]/page.tsx</code> an und füge den generierten Code ein.</p>
             <p><strong>Statisches Hosting:</strong> Nutze den Download, um die Inhalte in dein CMS (z. B. HTML‑Block) zu übernehmen.</p>
             <p><strong>SEO‑ready:</strong> Titel, Beschreibung, OpenGraph & JSON‑LD sind enthalten.</p>
@@ -308,8 +308,8 @@ export default function PerfectionDashboard() {
 
         {/* Generated Jobs */}
         {jobs.length > 0 && (
-          <div className="bg-white rounded-2xl p-6">
-            <h3 className="text-lg font-semibold text-slate-900 mb-4">
+          <div className="bg-gray-900 rounded-2xl p-6 border border-gray-700">
+            <h3 className="text-lg font-semibold text-gray-100 mb-4">
               Generierte Seiten ({jobs.length})
             </h3>
             <div className="space-y-4">

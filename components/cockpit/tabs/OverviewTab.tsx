@@ -257,7 +257,7 @@ export function OverviewTab({ data, tier, onUpgrade }: OverviewTabProps) {
                 />
                 <div className="flex-1 min-w-0">
                   <p className="text-sm text-gray-300 leading-snug">{activity.action}</p>
-                  <p className="text-[11px] text-gray-600 mt-0.5">{activity.time}</p>
+                  <p className="text-[11px] text-gray-400 mt-0.5">{activity.time}</p>
                 </div>
               </div>
             ))}
@@ -293,7 +293,7 @@ export function OverviewTab({ data, tier, onUpgrade }: OverviewTabProps) {
               </span>
             </div>
             <div className="text-sm font-medium text-gray-400">Overall Success Rate</div>
-            <div className="text-[11px] text-gray-600 mt-1">{data.totalExecutions > 0 ? `Basierend auf ${data.totalExecutions} Ausführungen` : 'Noch keine Ausführungen'}</div>
+            <div className="text-[11px] text-gray-400 mt-1">{data.totalExecutions > 0 ? `Basierend auf ${data.totalExecutions} Ausführungen` : 'Noch keine Ausführungen'}</div>
           </div>
         </div>
       </div>

@@ -108,7 +108,7 @@ export function ExecutionsTab({ isShadowed, executions }: ExecutionsTabProps) {
             <div key={s.label} className="rounded-xl border p-3" style={glass}>
               <div className="flex items-center gap-1.5 mb-1">
                 <s.icon className="w-3.5 h-3.5" style={{ color: '#EAB308' }} />
-                <span className="text-[10px] font-semibold tracking-[0.1em] uppercase text-gray-600">{s.label}</span>
+                <span className="text-[10px] font-semibold tracking-[0.1em] uppercase text-gray-400">{s.label}</span>
               </div>
               <div className="text-xl font-black text-white">{s.value}</div>
             </div>
@@ -118,7 +118,7 @@ export function ExecutionsTab({ isShadowed, executions }: ExecutionsTabProps) {
 
       {/* Filters */}
       <div className="flex items-center gap-3 mb-5 flex-wrap">
-        <div className="flex items-center gap-1.5"><Filter className="w-3.5 h-3.5 text-gray-600" /><span className="text-xs text-gray-600">Filter:</span></div>
+        <div className="flex items-center gap-1.5"><Filter className="w-3.5 h-3.5 text-gray-400" /><span className="text-xs text-gray-400">Filter:</span></div>
         <div className="flex gap-1.5">
           {['all', 'running', 'completed', 'failed'].map(s => (
             <button key={s} onClick={() => setFilter(s)} className="px-3 py-1 rounded-lg text-xs font-medium border transition-all" style={filter === s ? { background: 'rgba(234,179,8,0.08)', borderColor: 'rgba(234,179,8,0.2)', color: '#EAB308' } : { background: 'transparent', borderColor: 'rgba(255,255,255,0.06)', color: '#71717A' }}>
@@ -126,7 +126,7 @@ export function ExecutionsTab({ isShadowed, executions }: ExecutionsTabProps) {
             </button>
           ))}
         </div>
-        <div className="flex items-center gap-1.5 sm:ml-auto"><Clock className="w-3.5 h-3.5 text-gray-600" /><span className="text-xs text-gray-600">Zeitraum:</span></div>
+        <div className="flex items-center gap-1.5 sm:ml-auto"><Clock className="w-3.5 h-3.5 text-gray-400" /><span className="text-xs text-gray-400">Zeitraum:</span></div>
         <div className="flex gap-1.5">
           {['1h', '24h', '7d', '30d'].map(r => (
             <button key={r} onClick={() => setTimeRange(r)} className="px-3 py-1 rounded-lg text-xs font-medium border transition-all" style={timeRange === r ? { background: 'rgba(234,179,8,0.08)', borderColor: 'rgba(234,179,8,0.2)', color: '#EAB308' } : { background: 'transparent', borderColor: 'rgba(255,255,255,0.06)', color: '#71717A' }}>
@@ -142,7 +142,7 @@ export function ExecutionsTab({ isShadowed, executions }: ExecutionsTabProps) {
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="flex flex-col items-center justify-center py-16 rounded-2xl border" style={glass}>
             <Inbox className="w-10 h-10 mb-3" style={{ color: '#EAB308', opacity: 0.4 }} />
             <p className="text-sm text-gray-500 mb-1">Keine Ausführungen vorhanden</p>
-            <p className="text-[11px] text-gray-600">Starte ein Tool, um deine ersten Ergebnisse zu sehen.</p>
+            <p className="text-[11px] text-gray-400">Starte ein Tool, um deine ersten Ergebnisse zu sehen.</p>
           </motion.div>
         )}
         {filteredExecutions.map((exec, index) => {
@@ -188,13 +188,13 @@ export function ExecutionsTab({ isShadowed, executions }: ExecutionsTabProps) {
                             </motion.span>
                           )}
                         </div>
-                        <div className="flex items-center gap-3 text-[11px] text-gray-600">
+                        <div className="flex items-center gap-3 text-[11px] text-gray-400">
                           <span className="flex items-center gap-1"><Clock className="w-3 h-3" />{timeAgo(exec.created_at)}</span>
                           {dur !== null && <span>{dur} min</span>}
                         </div>
                       </div>
                     </div>
-                    <motion.div animate={{ rotate: isExpanded ? 180 : 0 }} className="text-gray-600 ml-3">
+                    <motion.div animate={{ rotate: isExpanded ? 180 : 0 }} className="text-gray-400 ml-3">
                       <ChevronDown className="w-4 h-4" />
                     </motion.div>
                   </div>
@@ -245,7 +245,7 @@ export function ExecutionsTab({ isShadowed, executions }: ExecutionsTabProps) {
       </div>
 
       {filteredExecutions.length === 0 && (
-        <div className="text-center py-12"><span className="text-gray-600 text-sm">Keine Ausführungen gefunden</span></div>
+        <div className="text-center py-12"><span className="text-gray-400 text-sm">Keine Ausführungen gefunden</span></div>
       )}
     </div>
   )

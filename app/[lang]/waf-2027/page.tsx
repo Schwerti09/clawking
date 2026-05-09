@@ -270,9 +270,9 @@ SecAction \\
             <h2 className="text-3xl font-bold text-gray-100 mb-6">Cloudflare WAF 2027</h2>
             
             <div className="grid md:grid-cols-2 gap-6 mb-8">
-              <div className="bg-orange-50 border border-orange-700 rounded-xl p-6">
-                <h3 className="font-semibold text-orange-900 mb-3">Managed Rulesets</h3>
-                <ul className="space-y-2 text-sm text-orange-800">
+              <div className="bg-orange-900/20 border border-orange-700 rounded-xl p-6">
+                <h3 className="font-semibold text-orange-400 mb-3">Managed Rulesets</h3>
+                <ul className="space-y-2 text-sm text-orange-200">
                   <li className="flex items-center gap-2">
                     <span className="w-2 h-2 bg-orange-500 rounded-full" />
                     Cloudflare Managed Rules

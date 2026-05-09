@@ -126,7 +126,7 @@ export default function EuAiActComplianceChecklistPage({ params }: { params: { l
                   <ul className="space-y-2">
                     {section.items.map((item, i) => (
                       <li key={i} className="flex items-start gap-3 text-sm text-gray-300">
-                        <span className="mt-0.5 text-gray-600 flex-shrink-0">☐</span>
+                        <span className="mt-0.5 text-gray-400 flex-shrink-0">☐</span>
                         <span>{item}</span>
                       </li>
                     ))}

@@ -84,14 +84,14 @@ function ActionCard({
         <span className={`text-[10px] font-black uppercase px-2 py-0.5 rounded-full border ${STATUS_BADGE[action.status]}`}>
           {action.status}
         </span>
-        <span className="ml-auto text-[10px] font-mono text-gray-600">{action.id}</span>
+        <span className="ml-auto text-[10px] font-mono text-gray-400">{action.id}</span>
       </div>
 
       <div className="font-black text-sm text-gray-100 mb-1">{action.title}</div>
       <p className="text-xs text-gray-400 leading-relaxed mb-3">{action.description}</p>
 
       {/* APPROVED REMEDIATION SWARM v3.2 SAFE – Overlord AI: Metadata row */}
-      <div className="flex flex-wrap gap-x-4 gap-y-1 text-[11px] text-gray-600 font-mono mb-3">
+      <div className="flex flex-wrap gap-x-4 gap-y-1 text-[11px] text-gray-400 font-mono mb-3">
         <span>🤖 {action.agentId}</span>
         <span>📍 {action.zone}</span>
         <span>🗂 {action.scope}</span>
@@ -171,7 +171,7 @@ function ActionCard({
 
       {/* APPROVED REMEDIATION SWARM v3.2 SAFE – Overlord AI: Show actioned-by info when resolved */}
       {!isPending && action.actionedBy && (
-        <div className="mt-2 text-[11px] font-mono text-gray-600">
+        <div className="mt-2 text-[11px] font-mono text-gray-400">
           {action.status === "approved" ? "✅" : action.status === "rejected" ? "❌" : "✏️"}{" "}
           {action.actionedBy} · {action.actionedAt ? relTime(new Date(action.actionedAt).getTime()) : ""}
         </div>
@@ -184,17 +184,17 @@ function ActionCard({
 function AuditRow({ entry }: { entry: AuditLogEntry }) {
   return (
     <div className="flex items-start gap-3 py-2.5 border-b border-gray-800/60 last:border-0">
-      <div className="text-[11px] font-mono text-gray-600 shrink-0 w-[90px] pt-0.5">
+      <div className="text-[11px] font-mono text-gray-400 shrink-0 w-[90px] pt-0.5">
         {new Date(entry.timestampMs).toLocaleTimeString()}
       </div>
       <div className="flex-1 min-w-0">
         <div className="text-xs font-semibold text-gray-300">{AUDIT_LABELS[entry.action]}</div>
         <div className="text-[11px] text-gray-500 mt-0.5 leading-snug">{entry.detail}</div>
         {entry.targetActionId && (
-          <div className="text-[10px] font-mono text-gray-700 mt-0.5">{entry.targetActionId}</div>
+          <div className="text-[10px] font-mono text-gray-400 mt-0.5">{entry.targetActionId}</div>
         )}
       </div>
-      <div className="text-[10px] font-mono text-gray-700 shrink-0">{entry.actor}</div>
+      <div className="text-[10px] font-mono text-gray-400 shrink-0">{entry.actor}</div>
     </div>
   )
 }
@@ -219,15 +219,15 @@ function ApprovalProgress({ plan }: { plan: ApprovedSwarmPlan }) {
       <div className="grid grid-cols-3 gap-2 text-center">
         <div>
           <div className="text-lg font-black font-mono text-cyan-400">{plan.pendingActions}</div>
-          <div className="text-[10px] text-gray-600 uppercase tracking-wide">Pending</div>
+          <div className="text-[10px] text-gray-400 uppercase tracking-wide">Pending</div>
         </div>
         <div>
           <div className="text-lg font-black font-mono text-emerald-400">{plan.approvedActions}</div>
-          <div className="text-[10px] text-gray-600 uppercase tracking-wide">Approved</div>
+          <div className="text-[10px] text-gray-400 uppercase tracking-wide">Approved</div>
         </div>
         <div>
           <div className="text-lg font-black font-mono text-red-400">{plan.rejectedActions}</div>
-          <div className="text-[10px] text-gray-600 uppercase tracking-wide">Rejected</div>
+          <div className="text-[10px] text-gray-400 uppercase tracking-wide">Rejected</div>
         </div>
       </div>
     </div>
@@ -428,7 +428,7 @@ export default function ApprovedSwarmPanel({ initialPlan }: Props) {
             className={`px-4 py-2 text-xs font-black uppercase tracking-widest transition-colors ${
               activeTab === tab
                 ? "text-orange-400 border-b-2 border-orange-400 -mb-px"
-                : "text-gray-600 hover:text-gray-400"
+                : "text-gray-400 hover:text-gray-300"
             }`}
           >
             {tab === "actions" ? `🐝 Proposed Actions (${plan.proposedActions.length})` : `📋 Audit Log (${plan.auditLog.length})`}

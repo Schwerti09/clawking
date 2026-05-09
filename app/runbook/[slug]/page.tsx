@@ -497,8 +497,8 @@ export default async function RunbookPage(props: { params: { slug: string; lang?
 
         <div className="flex flex-wrap items-center gap-3 mb-4">
           <ClawScoreBadge score={r.clawScore} />
-          <span className="text-xs text-gray-600">Stand: {r.lastmod}</span>
-          <span className="text-xs text-gray-600">·</span>
+          <span className="text-xs text-gray-400">Stand: {r.lastmod}</span>
+          <span className="text-xs text-gray-400">·</span>
           <span className="text-xs text-gray-500">Author: ClawGuru Institutional Ops</span>
           <ClawCertifiedBadge score={quality.score} tier={quality.clawCertifiedTier} />
         </div>

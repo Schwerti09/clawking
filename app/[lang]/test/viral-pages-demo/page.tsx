@@ -373,7 +373,7 @@ export default function ViralPagesDemoPage({ params }: PageProps) {
                     <span className="bg-purple-800 px-2 py-1 rounded">✓ AI Copilot</span>
                   </div>
                 </div>
-                <a href={`/${locale}/pricing#daypass`} className="bg-white text-purple-900 font-bold py-3 px-6 rounded-lg hover:bg-purple-100 transition-colors whitespace-nowrap">
+                <a href={`/${locale}/pricing#daypass`} className="bg-gray-900 text-purple-300 font-bold py-3 px-6 rounded-lg hover:bg-gray-800 transition-colors whitespace-nowrap">
                   {pick(isDE, "Daypass kaufen — €3", "Buy Daypass — €3")}
                 </a>
               </div>

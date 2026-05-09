@@ -324,7 +324,7 @@ export default function UniverseManual() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.8 }}
-        className="mt-10 text-center text-xs text-gray-600"
+        className="mt-10 text-center text-xs text-gray-400"
       >
         ClawGuru Universe Manual · Cyberpunk-Minimalismus · Schwarz × Deep-Purple × Cyan
       </motion.p>

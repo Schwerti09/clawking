@@ -134,7 +134,7 @@ export default function Impressum() {
 
         </div>
 
-        <p className="mt-10 text-center text-xs text-gray-600">
+        <p className="mt-10 text-center text-xs text-gray-300">
           Stand: März 2026 · {LEGAL_INFO.company}
         </p>
       </div>

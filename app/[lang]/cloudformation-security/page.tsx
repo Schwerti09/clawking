@@ -96,18 +96,18 @@ export default function CloudFormationSecurityPage({
             </p>
 
             <div className="grid md:grid-cols-3 gap-6 mb-8">
-              <div className="bg-orange-50 border border-orange-700 rounded-xl p-6">
-                <h3 className="font-semibold text-orange-900 mb-2">Stack Protection</h3>
-                <ul className="text-sm text-orange-800 space-y-1">
+              <div className="bg-orange-900/20 border border-orange-700 rounded-xl p-6">
+                <h3 className="font-semibold text-orange-400 mb-2">Stack Protection</h3>
+                <ul className="text-sm text-orange-200 space-y-1">
                   <li>• Stack Policies</li>
                   <li>• Termination Protection</li>
                   <li>• Change Sets</li>
                   <li>• Rollback Configuration</li>
                 </ul>
               </div>
-              <div className="bg-amber-50 border border-amber-200 rounded-xl p-6">
-                <h3 className="font-semibold text-amber-900 mb-2">Access Control</h3>
-                <ul className="text-sm text-amber-800 space-y-1">
+              <div className="bg-amber-900/20 border border-amber-700 rounded-xl p-6">
+                <h3 className="font-semibold text-amber-400 mb-2">Access Control</h3>
+                <ul className="text-sm text-amber-200 space-y-1">
                   <li>• Service Roles</li>
                   <li>• IAM Permissions</li>
                   <li>• SCP Restrictions</li>

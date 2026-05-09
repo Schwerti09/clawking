@@ -114,9 +114,9 @@ export default async function SplunkSecurityPage({
                   <li>• Index Archiving</li>
                 </ul>
               </div>
-              <div className="bg-teal-50 border border-teal-200 rounded-xl p-6">
-                <h3 className="font-semibold text-teal-900 mb-2">Platform Security</h3>
-                <ul className="text-sm text-teal-800 space-y-1">
+              <div className="bg-teal-900/20 border border-teal-700 rounded-xl p-6">
+                <h3 className="font-semibold text-teal-400 mb-2">Platform Security</h3>
+                <ul className="text-sm text-teal-200 space-y-1">
                   <li>• SSL/TLS Encryption</li>
                   <li>• Certificate Management</li>
                   <li>• App Vetting</li>

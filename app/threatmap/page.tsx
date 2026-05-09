@@ -113,7 +113,7 @@ export default function ThreatMapPage() {
                       >
                         {region.severity}
                       </span>
-                      <span className="text-xs text-gray-600">→ Runbooks</span>
+                      <span className="text-xs text-gray-300">→ Runbooks</span>
                     </div>
                   </a>
                 )

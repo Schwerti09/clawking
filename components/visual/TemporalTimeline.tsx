@@ -101,9 +101,9 @@ function VersionCard({
           {v.badge === "original" ? "⏱ Original" : v.badge === "current" ? "✦ Aktuell" : "⚗ Temporal Mutation"}
         </span>
         <span className="text-xs font-mono text-gray-500">{v.quarter}</span>
-        <span className="text-xs text-gray-600">{v.timestamp}</span>
+        <span className="text-xs text-gray-400">{v.timestamp}</span>
         <ScorePill score={v.score} />
-        <span className="ml-auto text-xs font-mono text-gray-600">{v.version}</span>
+        <span className="ml-auto text-xs font-mono text-gray-400">{v.version}</span>
       </div>
 
       <div className="text-sm font-bold text-gray-200">{v.label}</div>
@@ -232,7 +232,7 @@ export default function TemporalTimeline({ history, slug, lang }: Props) {
               key={i}
               onClick={() => setSelectedIdx(i)}
               className={`text-[10px] font-mono transition-colors ${
-                i === selectedIdx ? "text-cyan-400 font-bold" : "text-gray-600 hover:text-gray-400"
+                i === selectedIdx ? "text-cyan-400 font-bold" : "text-gray-400 hover:text-gray-300"
               }`}
             >
               {v.quarter}

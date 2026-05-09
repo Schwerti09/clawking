@@ -302,31 +302,19 @@ export default function PageClient({ locale }: { locale: Locale }) {
                   <div className="text-xs text-gray-400">{pick(isDE, "Industry Avg", "Industry Avg")}</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-green-400 mb-1">Top 32%</div>
-                  <div className="text-xs text-gray-400">{pick(isDE, "Percentile", "Percentile")}</div>
+                  <div className="text-sm text-gray-300 mb-4 text-center">{pick(isDE, "Dein Score: Mittel — Raum für Verbesserung", "Your Score: Medium — Room for improvement")}</div>
+                  <div className="bg-gradient-to-r from-cyan-900 to-blue-900 p-4 rounded-lg border border-cyan-700">
+                    <div className="text-sm text-cyan-300 mb-2">{pick(isDE, "Upgrade zu Pro für Deep Scan & Detailed Report", "Upgrade to Pro for Deep Scan & Detailed Report")}</div>
+                    <a href={`/${locale}/pricing`} className="block bg-gray-900 text-gray-300 font-semibold py-2 px-4 rounded-lg text-center hover:bg-gray-800 transition-colors">
+                      {pick(isDE, "Pro Plan — €49/mo", "Pro Plan — €49/mo")}
+                    </a>
+                  </div>
                 </div>
               </div>
-              <div className="text-sm text-gray-300 mb-4 text-center">{pick(isDE, "Dein Score: Mittel — Raum für Verbesserung", "Your Score: Medium — Room for improvement")}</div>
-              <div className="bg-gradient-to-r from-cyan-900 to-blue-900 p-4 rounded-lg border border-cyan-700">
-                <div className="text-sm text-cyan-300 mb-2">{pick(isDE, "Upgrade zu Pro für Deep Scan & Detailed Report", "Upgrade to Pro for Deep Scan & Detailed Report")}</div>
-                <a href={`/${locale}/pricing`} className="block bg-white text-gray-900 font-semibold py-2 px-4 rounded-lg text-center hover:bg-gray-100 transition-colors">{pick(isDE, "Pro Plan — €49/mo", "Pro Plan — €49/mo")}</a>
+              <div className="flex gap-2">
+                <button className="flex-1 bg-cyan-600 hover:bg-cyan-500 text-white text-sm font-semibold py-2 px-4 rounded-lg transition-colors">{pick(isDE, "Download PNG", "Download PNG")}</button>
+                <button className="flex-1 bg-blue-600 hover:bg-blue-500 text-white text-sm font-semibold py-2 px-4 rounded-lg transition-colors">{pick(isDE, "Share on LinkedIn", "Share on LinkedIn")}</button>
               </div>
-            </div>
-            )}
-          </div>
-        </section>
-        <section id="badge" className="mb-10 animate-fade-in-up" style={{animationDelay: '0.9s'}}>
-          <h2 className="text-2xl font-semibold mb-4 text-gray-100">{pick(isDE, "Share Badge — Context Security Badge", "Share Badge — Context Security Badge")}</h2>
-          <div className="bg-gray-800/80 backdrop-blur-lg p-6 rounded-xl border border-gray-700/50 shadow-2xl hover:border-cyan-500/30 transition-all duration-300 hover:shadow-cyan-500/20">
-            <p className="text-gray-300 text-sm mb-4">{pick(isDE, "Generiere ein Badge mit deinem Context Security Score.", "Generate a badge with your context security score.")}</p>
-            <div className="bg-gradient-to-r from-cyan-900 to-blue-900 p-6 rounded-lg border border-cyan-700 mb-4 text-center">
-              <div className="text-sm text-cyan-300 mb-2">{pick(isDE, "Ich habe Context Security implementiert", "I implemented context security")}</div>
-              <div className="text-4xl font-bold text-white mb-2">Context Security Score: 47/100</div>
-              <div className="text-xs text-cyan-200">clawguru.org/moltbot/ai-agent-context-security</div>
-            </div>
-            <div className="flex gap-2">
-              <button className="flex-1 bg-cyan-600 hover:bg-cyan-500 text-white text-sm font-semibold py-2 px-4 rounded-lg transition-colors">{pick(isDE, "Download PNG", "Download PNG")}</button>
-              <button className="flex-1 bg-blue-600 hover:bg-blue-500 text-white text-sm font-semibold py-2 px-4 rounded-lg transition-colors">{pick(isDE, "Share on LinkedIn", "Share on LinkedIn")}</button>
             </div>
           </div>
         </section>

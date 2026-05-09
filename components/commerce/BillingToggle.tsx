@@ -36,7 +36,7 @@ export default function BillingToggle({ locale, isDE, prefix }: { locale: Locale
           style={{ background: annual ? "rgba(0,255,157,0.3)" : "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.15)" }}
         >
           <span
-            className="inline-block h-5 w-5 rounded-full bg-white shadow-md transform transition-transform duration-200"
+            className="inline-block h-5 w-5 rounded-full bg-gray-300 shadow-md transform transition-transform duration-200"
             style={{ transform: annual ? "translateX(32px)" : "translateX(2px)" }}
           />
         </button>
@@ -259,7 +259,7 @@ export default function BillingToggle({ locale, isDE, prefix }: { locale: Locale
                 label={isDE
                   ? `Scale starten (${annual ? scaleAnnual : scaleMonthly}€/Monat) → Stripe`
                   : `Start Scale (€${annual ? scaleAnnual : scaleMonthly}/month) → Stripe`}
-                className="w-full py-3 px-6 rounded-2xl font-black text-sm text-white border transition-all duration-300 hover:bg-white/5 disabled:opacity-60"
+                className="w-full py-3 px-6 rounded-2xl font-black text-sm text-white border transition-all duration-300 hover:bg-gray-800/5 disabled:opacity-60"
                 style={{ borderColor: "rgba(0,255,157,0.4)", boxShadow: "0 0 20px rgba(0,255,157,0.1)" }}
               />
               <div className="mt-3 text-xs text-gray-500 text-center">

@@ -147,12 +147,9 @@ export default function CityITSecurityPage({ params }: PageProps) {
               : 'Run a free security check to identify vulnerabilities in your IT infrastructure.'
             }
           </p>
-          <Link
-            href={`/${locale}/check`}
-            className="inline-block bg-white text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-          >
-            {locale === 'de' ? 'Security Check starten' : 'Start Security Check'}
-          </Link>
+          <a href={`/${locale}/roast-my-moltbot`} className="block bg-gray-800 border border-gray-700 text-gray-300 font-semibold py-2 px-4 rounded-lg text-center hover:bg-gray-700 transition-colors">
+            {locale === 'de' ? 'Dein Stack analysieren' : 'Analyze Your Stack'}
+          </a>
         </div>
 
         {/* Internal Links */}

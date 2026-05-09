@@ -231,7 +231,7 @@ export function MyceliumTab({ isShadowed, nodes: dbNodes }: MyceliumTabProps) {
               Erlebe den Echtzeit-Security-Graphen, der Bedrohungen, Runbooks und
               Intelligence im gesamten ClawGuru-Ökosystem verbindet.
             </p>
-            <div className="flex items-center justify-center gap-5 text-[11px] text-gray-600">
+            <div className="flex items-center justify-center gap-5 text-[11px] text-gray-400">
               {[
                 { label: 'Threats', color: '#EF4444' },
                 { label: 'Runbooks', color: '#EAB308' },
@@ -263,7 +263,7 @@ export function MyceliumTab({ isShadowed, nodes: dbNodes }: MyceliumTabProps) {
         >
           <div className="flex items-center justify-between mb-3">
             <h4 className="text-sm font-semibold text-white tracking-wide">Node Details</h4>
-            <button onClick={() => setSelectedNode(null)} className="text-gray-600 hover:text-white text-xs">✕</button>
+            <button onClick={() => setSelectedNode(null)} className="text-gray-400 hover:text-white text-xs">✕</button>
           </div>
           <div className="space-y-2 text-sm">
             <div className="flex justify-between">
@@ -301,7 +301,7 @@ export function MyceliumTab({ isShadowed, nodes: dbNodes }: MyceliumTabProps) {
           className="rounded-xl border px-3 sm:px-4 py-2.5 sm:py-3"
           style={{ background: 'rgba(10,10,10,0.85)', borderColor: 'rgba(255,255,255,0.06)', backdropFilter: 'blur(12px)' }}
         >
-          <div className="text-[10px] font-semibold tracking-[0.15em] uppercase text-gray-600 mb-1">Mycelium Network</div>
+          <div className="text-[10px] font-semibold tracking-[0.15em] uppercase text-gray-400 mb-1">Mycelium Network</div>
           <div className="flex items-center gap-4">
             <div>
               <span className="text-lg font-black text-white">{nodes.length}</span>

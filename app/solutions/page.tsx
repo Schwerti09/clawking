@@ -157,7 +157,7 @@ export default function SolutionsPage({ searchParams }: { searchParams?: { q?: s
                 </div>
                 <div className="text-xs text-gray-400 mb-2 font-medium">{cve.name}</div>
                 <div className="text-xs text-gray-500 line-clamp-2">{cve.description}</div>
-                <div className="mt-3 text-xs text-gray-600">
+                <div className="mt-3 text-xs text-gray-400">
                   Affects: <span className="text-gray-400">{cve.affectedSoftware}</span>
                 </div>
                 <div className="mt-3 text-xs text-cyan-400 group-hover:text-cyan-300 transition-colors">

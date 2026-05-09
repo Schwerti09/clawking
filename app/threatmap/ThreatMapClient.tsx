@@ -172,7 +172,7 @@ export default function ThreatMapClient({ regions }: Props) {
             </div>
           ))}
         </div>
-        <div className="absolute top-4 right-4 font-mono text-xs text-gray-600">
+        <div className="absolute top-4 right-4 font-mono text-xs text-gray-300">
           <span className="text-red-400 animate-pulse">●</span> LIVE
         </div>
       </div>

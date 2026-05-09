@@ -334,12 +334,9 @@ export default async function AcademyPage({ params }: { params: { lang: string }
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-black text-gray-100 mb-4">{c.footer.title}</h2>
             <p className="text-base md:text-lg text-gray-400 mb-8 max-w-2xl mx-auto">{c.footer.sub}</p>
-            <Link
-              href={`${prefix}/consulting`}
-              className="inline-block bg-white text-black font-black px-7 py-3.5 rounded-lg hover:bg-gray-200 transition-colors"
-            >
+            <a href={`/${locale}/academy/certification`} className="block bg-gray-800 border border-gray-700 text-gray-300 font-semibold py-3 px-6 rounded-lg text-center hover:bg-gray-700 transition-colors">
               {c.footer.cta}
-            </Link>
+            </a>
           </div>
         </div>
       </section>

@@ -171,7 +171,7 @@ export function AdminDashboardClient({ user, initialData }: AdminDashboardClient
                   whileTap={{ scale: 0.95 }}
                 >
                   <motion.div
-                    className="w-5 h-5 bg-white rounded-full"
+                    className="w-5 h-5 bg-gray-300 rounded-full"
                     animate={{ x: godMode ? 24 : 2 }}
                     transition={{ type: 'spring', stiffness: 200 }}
                   />

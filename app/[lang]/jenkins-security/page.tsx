@@ -105,9 +105,9 @@ export default async function JenkinsSecurityPage({
                   <li>• API Tokens</li>
                 </ul>
               </div>
-              <div className="bg-orange-50 border border-orange-700 rounded-xl p-6">
-                <h3 className="font-semibold text-orange-900 mb-2">Protection</h3>
-                <ul className="text-sm text-orange-800 space-y-1">
+              <div className="bg-orange-900/20 border border-orange-700 rounded-xl p-6">
+                <h3 className="font-semibold text-orange-400 mb-2">Protection</h3>
+                <ul className="text-sm text-orange-200 space-y-1">
                   <li>• CSRF Protection</li>
                   <li>• Script Security</li>
                   <li>• Pipeline Sandbox</li>

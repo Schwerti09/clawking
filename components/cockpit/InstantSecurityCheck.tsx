@@ -378,7 +378,7 @@ export function InstantSecurityCheck({ tier, onUpgrade }: InstantSecurityCheckPr
         {/* ── Input Row ── */}
         <div className="flex gap-3 mb-2">
           <div className="flex-1 relative">
-            <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-600 pointer-events-none" />
+            <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none" />
             <input
               ref={inputRef}
               type="text"
@@ -477,7 +477,7 @@ export function InstantSecurityCheck({ tier, onUpgrade }: InstantSecurityCheckPr
                     <p className="text-xs text-gray-500 leading-relaxed">
                       Geprüft: <span className="text-gray-300 font-mono">{result.input}</span>
                     </p>
-                    <p className="text-[11px] text-gray-600 mt-1">
+                    <p className="text-[11px] text-gray-400 mt-1">
                       {formatInputTypeLabel(result.inputType)}
                       {' · '}
                       {new Date(result.checkedAt).toLocaleTimeString('de-DE', { hour: '2-digit', minute: '2-digit' })} Uhr
@@ -616,7 +616,7 @@ export function InstantSecurityCheck({ tier, onUpgrade }: InstantSecurityCheckPr
                         <ChevronRight className="w-4 h-4" />
                       </motion.button>
                     )}
-                    <p className="text-[11px] text-gray-600 mt-3">Ab €9/Tag · Sofortzugang · Kein Abo nötig</p>
+                    <p className="text-[11px] text-gray-400 mt-3">Ab €9/Tag · Sofortzugang · Kein Abo nötig</p>
                   </div>
                 </motion.div>
               )}

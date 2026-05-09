@@ -152,7 +152,7 @@ export default async function TagPage(props: { params: { tag: string } }) {
                   href={`${prefix}/runbook/${r.slug}`}
                   className="p-4 rounded-2xl border border-gray-800 bg-black/30 hover:bg-black/40 transition-colors flex items-start gap-3"
                 >
-                  <span className="text-lg font-black text-gray-600 w-6 shrink-0">{i + 1}</span>
+                  <span className="text-lg font-black text-gray-400 w-6 shrink-0">{i + 1}</span>
                   <div>
                     <div className="font-bold text-gray-100">{r.title}</div>
                     <div className="mt-1 text-xs text-gray-500 flex gap-2">
@@ -179,7 +179,7 @@ export default async function TagPage(props: { params: { tag: string } }) {
               <div className="mt-2 text-sm text-gray-400">{r.summary}</div>
               <div className="mt-3 flex items-center gap-3 text-sm">
                 <span className="text-cyan-300 underline">Runbook \u00f6ffnen \u2192</span>
-                <span className="text-xs text-gray-600">\u26a1{r.clawScore}</span>
+                <span className="text-xs text-gray-400">⚡{r.clawScore}</span>
               </div>
             </a>
           ))}

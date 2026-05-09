@@ -136,7 +136,7 @@ export default function LaunchDashboard() {
           </div>
           {qs.topViolations.length > 0 && (
             <div>
-              <div className="text-xs text-gray-600 mb-1">Top violations (sample)</div>
+              <div className="text-xs text-gray-400 mb-1">Top violations (sample)</div>
               <ul className="space-y-1">
                 {qs.topViolations.map((v) => (
                   <li key={v.field} className="text-xs text-gray-400 flex justify-between">
@@ -156,7 +156,7 @@ export default function LaunchDashboard() {
           <div className="text-sm text-gray-400">
             Slugs {data.nextBatch.startSlugIndex.toLocaleString()} – {data.nextBatch.endSlugIndex.toLocaleString()}
           </div>
-          <div className="text-xs text-gray-600 mt-2">
+          <div className="text-xs text-gray-400 mt-2">
             Cron: <code className="text-gray-400">/api/launch/cron?page=1</code> (every 6 h via Vercel Cron)
           </div>
         </div>

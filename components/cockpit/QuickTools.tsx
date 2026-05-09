@@ -33,7 +33,7 @@ export function QuickTools({ tier }: QuickToolsProps) {
     <div className="h-full flex flex-col py-4">
       {/* Header */}
       <div className="px-3 mb-4">
-        <h3 className="text-[10px] font-semibold text-gray-600 uppercase tracking-[0.15em]">Quick Tools</h3>
+        <h3 className="text-[10px] font-semibold text-gray-400 uppercase tracking-[0.15em]">Quick Tools</h3>
       </div>
 
       {/* Tool Buttons */}
@@ -119,7 +119,7 @@ export function QuickTools({ tier }: QuickToolsProps) {
             <div className="text-center">
               <div className="text-xl mb-1">{tools.find(t => t.id === activeTool)?.icon}</div>
               <div className="text-[11px] font-medium text-white mb-0.5">{tools.find(t => t.id === activeTool)?.label}</div>
-              <div className="text-[10px] text-gray-600">Klicken — wird serverseitig ausgeführt</div>
+              <div className="text-[10px] text-gray-400">Klicken — wird serverseitig ausgeführt</div>
             </div>
           </motion.div>
         )}
@@ -129,7 +129,7 @@ export function QuickTools({ tier }: QuickToolsProps) {
         <div className="px-3 mt-2 text-[10px] leading-snug">
           {lastError && <p className="text-red-400/90">{lastError}</p>}
           {lastOkId && !lastError && (
-            <p className="text-gray-500">Run gespeichert · <span className="font-mono text-gray-600">{lastOkId.slice(0, 8)}…</span></p>
+            <p className="text-gray-500">Run gespeichert · <span className="font-mono text-gray-400">{lastOkId.slice(0, 8)}…</span></p>
           )}
         </div>
       )}

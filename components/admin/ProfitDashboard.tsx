@@ -307,7 +307,7 @@ function WallOfShame({ data, onBlock }: { data: DashData["wallOfShame"]; onBlock
         <tbody className="divide-y divide-gray-800">
           {data.topIps.map((entry, i) => (
             <tr key={entry.ip} className="hover:bg-white/[0.02] transition-colors">
-              <td className="py-2 pr-4 text-gray-600">{i + 1}</td>
+              <td className="py-2 pr-4 text-gray-400">{i + 1}</td>
               <td className="py-2 pr-4 font-mono text-gray-200">{entry.ip}</td>
               <td className="py-2 pr-4 text-right font-black text-white">{entry.count.toLocaleString()}</td>
               <td className="py-2 pr-4">
@@ -387,7 +387,7 @@ function ConversionFunnel({ funnel }: { funnel: DashData["funnel"] }) {
               )}
             </div>
             {i < steps.length - 1 && (
-              <div className="text-gray-700 text-xl self-center mx-1">→</div>
+              <div className="text-gray-400 text-xl self-center mx-1">→</div>
             )}
           </div>
         ))}
@@ -558,7 +558,7 @@ function ConversionFunnel({ funnel }: { funnel: DashData["funnel"] }) {
         Checkout errors (24h): <span className="font-bold">{checkoutErrors.toLocaleString()}</span>
       </div>
       {funnel.note && (
-        <div className="mt-4 text-xs text-gray-600 text-center">{funnel.note}</div>
+        <div className="mt-4 text-xs text-gray-400 text-center">{funnel.note}</div>
       )}
     </div>
   )
@@ -930,7 +930,7 @@ export default function ProfitDashboard() {
                   <div className="font-black text-white text-lg">
                     {usd(margins?.marginPerCheckIndicatorUsd ?? 0)}
                   </div>
-                  <div className="text-xs text-gray-600 mt-1">
+                  <div className="text-xs text-gray-400 mt-1">
                     Revenue ({usd(margins?.revenuePerDaypassUsd ?? 0)}) − Kosten ({usd(margins?.costPerCheckIndicatorUsd ?? 0)})
                   </div>
                 </div>
@@ -939,7 +939,7 @@ export default function ProfitDashboard() {
                   <div className="font-black text-white text-lg">
                     {usd(margins?.marginPerRunbookUsd ?? 0)}
                   </div>
-                  <div className="text-xs text-gray-600 mt-1">
+                  <div className="text-xs text-gray-400 mt-1">
                     Revenue ({usd(margins?.revenuePerDaypassUsd ?? 0)}) − Kosten ({usd(margins?.costPerRunbookUsd ?? 0)})
                   </div>
                 </div>
@@ -968,7 +968,7 @@ export default function ProfitDashboard() {
             <SectionHeader title="Wall of Shame – Top Abuser IPs" icon="🚨" />
             <WallOfShame data={data.wallOfShame} onBlock={handleBlockIp} />
             {data.wallOfShame?.activeBlocks && data.wallOfShame.activeBlocks.length > 0 && (
-              <div className="mt-3 text-xs text-gray-600">
+              <div className="mt-3 text-xs text-gray-400">
                 Aktive Sperren:{" "}
                 {data.wallOfShame.activeBlocks
                   .map((b) => `${b.ip} (bis ${new Date(b.unblockAt).toLocaleString("de-DE")})`)

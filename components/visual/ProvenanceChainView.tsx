@@ -81,7 +81,7 @@ function ZKProofModal({
           </span>
           <button
             onClick={onClose}
-            className="ml-2 text-gray-600 hover:text-gray-400 text-lg leading-none"
+            className="ml-2 text-gray-400 hover:text-gray-300 text-lg leading-none"
           >
             ✕
           </button>
@@ -116,12 +116,12 @@ function ZKProofModal({
             Merkle Proof Path ({proof.proofPath.length} hops)
           </div>
           {proof.proofPath.length === 0 ? (
-            <p className="text-xs text-gray-600">Single-event chain – no path needed.</p>
+            <p className="text-xs text-gray-400">Single-event chain – no path needed.</p>
           ) : (
             <div className="space-y-1 font-mono text-xs">
               {proof.proofPath.map((step, i) => (
                 <div key={i} className="flex items-center gap-2">
-                  <span className="text-gray-600 w-4 shrink-0">{i + 1}.</span>
+                  <span className="text-gray-400 w-4 shrink-0">{i + 1}.</span>
                   <span className={`w-12 shrink-0 text-xs font-bold ${step.direction === "left" ? "text-cyan-400" : "text-violet-400"}`}>
                     [{step.direction === "left" ? "←L" : "R→"}]
                   </span>
@@ -132,7 +132,7 @@ function ZKProofModal({
           )}
         </div>
 
-        <p className="text-[11px] text-gray-600 leading-relaxed">
+        <p className="text-[11px] text-gray-400 leading-relaxed">
           This Zero-Knowledge proof demonstrates that the above event exists in the Provenance
           chain without revealing any other event&apos;s content. The Merkle path can be independently
           verified by any auditor using only the content hash and the chain&apos;s Merkle root.
@@ -175,8 +175,8 @@ function EventCard({
           <span>{mutationTypeLabel(event.mutationType).split("–")[0].trim()}</span>
         </span>
         <span className="text-xs font-mono text-gray-500">{event.version}</span>
-        <span className="text-xs text-gray-600">{event.timestamp.slice(0, 10)}</span>
-        <span className="ml-auto text-xs font-mono text-gray-600">#{event.index}</span>
+        <span className="text-xs text-gray-400">{event.timestamp.slice(0, 10)}</span>
+        <span className="ml-auto text-xs font-mono text-gray-400">#{event.index}</span>
       </div>
 
       {/* Reason */}
@@ -185,12 +185,12 @@ function EventCard({
       {/* Hash summary row */}
       <div className="font-mono text-[11px] space-y-1">
         <div className="flex flex-wrap items-center gap-1">
-          <span className="text-gray-600 w-24 shrink-0">content hash:</span>
+          <span className="text-gray-400 w-24 shrink-0">content hash:</span>
           <span className="text-cyan-300">{shortHash(event.contentHash)}</span>
           <CopyButton value={event.contentHash} />
         </div>
         <div className="flex flex-wrap items-center gap-1">
-          <span className="text-gray-600 w-24 shrink-0">prev hash:</span>
+          <span className="text-gray-400 w-24 shrink-0">prev hash:</span>
           <span className="text-violet-300">{shortHash(event.previousHash)}</span>
           <CopyButton value={event.previousHash} />
         </div>

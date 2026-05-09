@@ -46,7 +46,7 @@ export default function MaintenancePage() {
         </div>
 
         {/* Footer */}
-        <p className="text-gray-600 text-sm">
+        <p className="text-gray-400 text-sm">
           © {new Date().getFullYear()} ClawGuru &mdash; Security &amp; DevOps Platform
         </p>
       </div>

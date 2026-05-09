@@ -129,10 +129,10 @@ export default function TrustSecurity({ fullPage = false }: { fullPage?: boolean
                   key={client}
                   className="p-6 rounded-2xl border border-white/[0.07] bg-white/[0.02] hover:border-white/[0.12] transition-colors duration-300"
                 >
-                  <div className="text-[10px] uppercase tracking-widest text-gray-600 font-mono mb-2">{period}</div>
+                  <div className="text-[10px] uppercase tracking-widest text-gray-400 font-mono mb-2">{period}</div>
                   <div className="text-sm font-bold text-gray-200 mb-2">{client}</div>
                   <div className="text-base font-black text-gray-100 font-heading leading-snug mb-3">{result}</div>
-                  <div className="text-xs text-gray-600 italic border-t border-white/[0.05] pt-3">{note}</div>
+                  <div className="text-xs text-gray-400 italic border-t border-white/[0.05] pt-3">{note}</div>
                 </div>
               ))}
             </div>
@@ -158,7 +158,7 @@ export default function TrustSecurity({ fullPage = false }: { fullPage?: boolean
                 </blockquote>
               ))}
             </div>
-            <p className="mt-4 text-xs text-gray-600 italic">
+            <p className="mt-4 text-xs text-gray-400 italic">
               * Quotes are representative of editorial coverage. Contact press@clawguru.org for media inquiries.
             </p>
           </div>
