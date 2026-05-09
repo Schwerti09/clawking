@@ -254,7 +254,7 @@ export default function ZeroKnowledgeCheck() {
             value={input}
             onChange={(e) => setInput(e.target.value)}
             placeholder="Config, Log oder Code einfügen – bleibt 100% lokal…"
-            className={`w-full h-36 bg-black/50 text-gray-200 font-mono text-xs p-4 rounded-xl border border-white/10 resize-none focus:outline-none focus:border-[#00ff9d]/30 placeholder:text-gray-600 transition-all ${
+            className={`w-full h-36 bg-black/50 text-gray-200 font-mono text-xs p-4 rounded-xl border border-white/10 resize-none focus:outline-none focus:border-[#00ff9d]/30 placeholder:text-gray-400 transition-all ${
               showInput ? "" : "blur-sm select-none"
             }`}
             spellCheck={false}
@@ -300,8 +300,8 @@ export default function ZeroKnowledgeCheck() {
               </div>
             </div>
             <div className="text-right">
-              <p className="text-xs text-gray-600 font-mono">{result.zkProof}</p>
-              <p className="text-xs text-gray-600">ZK-Proof (lokal)</p>
+              <p className="text-xs text-gray-400 font-mono">{result.zkProof}</p>
+              <p className="text-xs text-gray-400">ZK-Proof (lokal)</p>
             </div>
           </div>
 

@@ -76,11 +76,11 @@ export default function BountiesPage() {
         <div className="mt-6 p-5 rounded-2xl border border-white/5 bg-black/20">
           <h3 className="font-black mb-3">📋 Regeln</h3>
           <ul className="space-y-2 text-sm text-gray-400">
-            <li className="flex gap-2"><span className="text-gray-600">•</span> Nur originäre Findings. Keine duplizierten CVEs.</li>
-            <li className="flex gap-2"><span className="text-gray-600">•</span> Verantwortungsvolle Offenlegung: Kein aktiver Exploit ohne Review.</li>
-            <li className="flex gap-2"><span className="text-gray-600">•</span> Das Runbook muss reproduzierbar und dokumentiert sein.</li>
-            <li className="flex gap-2"><span className="text-gray-600">•</span> Payout nach Editor-Review und Verifikation (max. 72h).</li>
-            <li className="flex gap-2"><span className="text-gray-600">•</span> Mit der Einreichung überträgst du ClawGuru das nicht-exklusive Recht zur Veröffentlichung.</li>
+            <li className="flex gap-2"><span className="text-gray-400">•</span> Nur originäre Findings. Keine duplizierten CVEs.</li>
+            <li className="flex gap-2"><span className="text-gray-400">•</span> Verantwortungsvolle Offenlegung: Kein aktiver Exploit ohne Review.</li>
+            <li className="flex gap-2"><span className="text-gray-400">•</span> Das Runbook muss reproduzierbar und dokumentiert sein.</li>
+            <li className="flex gap-2"><span className="text-gray-400">•</span> Payout nach Editor-Review und Verifikation (max. 72h).</li>
+            <li className="flex gap-2"><span className="text-gray-400">•</span> Mit der Einreichung überträgst du ClawGuru das nicht-exklusive Recht zur Veröffentlichung.</li>
           </ul>
         </div>
       </div>

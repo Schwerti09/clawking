@@ -170,7 +170,7 @@ export default function MyceliumPanel() {
         <div className="flex items-center gap-2">
           <div className="w-2 h-2 rounded-full bg-[#00ff9d] animate-pulse" />
           <span className="text-xs font-mono font-bold tracking-widest uppercase text-[#00ff9d]">Live Mycelium</span>
-          <span className="text-xs text-gray-600 font-mono">— Threat &amp; Infrastructure Network</span>
+          <span className="text-xs text-gray-400 font-mono">— Threat &amp; Infrastructure Network</span>
         </div>
         <div className="flex items-center gap-2">
           <button
@@ -199,7 +199,7 @@ export default function MyceliumPanel() {
 
       {/* ── Filter chips ── */}
       <div className="flex items-center gap-2 px-4 py-2 flex-wrap border-b border-white/6">
-        <span className="text-[10px] font-mono uppercase text-gray-600 mr-1">Filter:</span>
+        <span className="text-[10px] font-mono uppercase text-gray-400 mr-1">Filter:</span>
         {ALL_TYPES.map((t) => {
           const cfg = TYPE_CONFIG[t]
           const active = visibleTypes.has(t)
@@ -229,7 +229,7 @@ export default function MyceliumPanel() {
         />
 
         {/* Overlay hint */}
-        <div className="absolute bottom-3 right-3 text-[10px] text-gray-600 font-mono pointer-events-none select-none">
+        <div className="absolute bottom-3 right-3 text-[10px] text-gray-400 font-mono pointer-events-none select-none">
           Klick = Node-Details · Scrollen = Zoom · Ziehen = Drehen
         </div>
       </div>
@@ -240,7 +240,7 @@ export default function MyceliumPanel() {
         <StatBadge icon="⟋" label="Verbindungen" value={stats.edges} color="#8b6cdf" />
         <StatBadge icon="⚠" label="Threats" value={stats.threats} color="#ff4444" />
         <StatBadge icon="🔴" label="Critical" value={stats.critical} color="#ff6666" />
-        <div className="ml-auto text-[10px] text-gray-600 font-mono">
+        <div className="ml-auto text-[10px] text-gray-400 font-mono">
           {stats.nodes} / {ALL_NODES.length} sichtbar
         </div>
       </div>
@@ -278,7 +278,7 @@ export default function MyceliumPanel() {
           </div>
           <button
             onClick={() => setSelectedId(null)}
-            className="text-gray-600 hover:text-gray-300 text-lg leading-none flex-shrink-0 transition-colors"
+            className="text-gray-400 hover:text-gray-300 text-lg leading-none flex-shrink-0 transition-colors"
           >
             ×
           </button>

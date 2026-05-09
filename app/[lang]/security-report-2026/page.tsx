@@ -325,7 +325,7 @@ export default async function SecurityReport2026Page({ params }: PageProps) {
                 </p>
                 <Link
                   href={`/${locale}/roast-my-moltbot`}
-                  className="inline-block bg-gray-100 text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-200 transition-colors"
+                  className="inline-block bg-gray-800 border border-gray-700 text-gray-300 px-8 py-3 rounded-lg font-semibold hover:bg-gray-700 transition-colors"
                 >
                   {pick(isDE, "Analysiere deinen Stack → Roast My Stack", "Analyze Your Stack → Roast My Stack")}
                 </Link>

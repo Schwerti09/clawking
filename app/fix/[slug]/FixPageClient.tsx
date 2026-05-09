@@ -174,7 +174,7 @@ export default function FixPageClient({ slug, fixData }: Props) {
               <ul className="space-y-1">
                 {fixData.testingSteps.map((step, i) => (
                   <li key={i} className="flex items-start gap-2 text-sm text-gray-300">
-                    <span className="text-gray-600 mt-0.5">☐</span>
+                    <span className="text-gray-400 mt-0.5">☐</span>
                     <span>{step}</span>
                   </li>
                 ))}

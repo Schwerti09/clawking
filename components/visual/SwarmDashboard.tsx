@@ -165,7 +165,7 @@ function StatCard({
         {value}
       </div>
       <div className="text-xs text-gray-400 uppercase tracking-wide mt-1">{label}</div>
-      {sub && <div className="text-[10px] text-gray-600 mt-0.5">{sub}</div>}
+      {sub && <div className="text-[10px] text-gray-400 mt-0.5">{sub}</div>}
     </div>
   )
 }
@@ -180,7 +180,7 @@ function HealEventRow({ ev }: { ev: SwarmHealEvent }) {
       </div>
       <div className="font-semibold text-gray-200">{ev.issue}</div>
       <div className="mt-0.5 text-gray-400">✓ {ev.resolution}</div>
-      <div className="mt-1 text-gray-600 font-mono">{ev.agentId} · {ev.zone}</div>
+      <div className="mt-1 text-gray-400 font-mono">{ev.agentId} · {ev.zone}</div>
     </div>
   )
 }
@@ -290,10 +290,10 @@ export default function SwarmDashboard({ deployment }: Props) {
       <div className="flex flex-wrap items-center gap-3 p-3 rounded-xl border border-gray-800 bg-black/25 text-xs">
         <span className="font-mono text-gray-500">ID:</span>
         <span className="font-mono text-gray-300">{deployment.deploymentId}</span>
-        <span className="text-gray-700">·</span>
+        <span className="text-gray-400">·</span>
         <span className="text-gray-500">Target:</span>
         <span className="text-orange-300 font-bold">{targetLabel}</span>
-        <span className="text-gray-700">·</span>
+        <span className="text-gray-400">·</span>
         <span className="text-gray-500">Started:</span>
         <span className="text-gray-300">{new Date(deployment.startedAt).toLocaleTimeString()}</span>
         <span className={`ml-auto inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-black ${

@@ -96,9 +96,9 @@ export default async function GitLabSecurityPage({
             </p>
 
             <div className="grid md:grid-cols-3 gap-6 mb-8">
-              <div className="bg-orange-50 border border-orange-700 rounded-xl p-6">
-                <h3 className="font-semibold text-orange-900 mb-2">Code Security</h3>
-                <ul className="text-sm text-orange-800 space-y-1">
+              <div className="bg-orange-900/20 border border-orange-700 rounded-xl p-6">
+                <h3 className="font-semibold text-orange-400 mb-2">Code Security</h3>
+                <ul className="text-sm text-orange-200 space-y-1">
                   <li>• SAST (Statische Analyse)</li>
                   <li>• Secret Detection</li>
                   <li>• Dependency Scanning</li>

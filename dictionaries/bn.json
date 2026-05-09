@@ -13,7 +13,7 @@
     "ctaMycelium": "জীবন্ত মাইসেলিয়াম →",
     "ctaCopilot": "কোপাইলটকে জিজ্ঞাসা করুন",
     "ctaProKits": "Pro কিট (Stripe)",
-    "ctaIntel": "Intel Feed",
+    "ctaIntel": "ইন্টেল খাতা",
     "miniCopilotTitle": "মিনি-কোপাইলট",
     "miniCopilotSubtitle": "আপনার সমস্যা ১টি বাক্যে বর্ণনা করুন। আমরা আপনাকে সঠিক হাবে গাইড করব।",
     "miniCopilotPlaceholder": "যেমন 'আমার মনে হয় আমার গেটওয়ে এক্সপোজড হয়ে গেছে'",
@@ -26,9 +26,9 @@
     "featureVaultDesc": "রেফারেন্স ও প্যাটার্ন",
     "featureAcademy": "একাডেমি",
     "featureAcademyDesc": "স্প্রিন্ট, কোর্স নয়",
-    "titleSuffix": "Mycelial Singularity Engine v3.0",
+    "titleSuffix": "মাসিকাল সিঙ্গুলার এঞ্চিন ঵ৃত্তি 3.0",
     "knowledgeEdges": "জ্ঞানের প্রান্ত",
-    "genesisProtocol": "Genesis Protocol",
+    "genesisProtocol": "জেনেসিস প্রোটোকোল",
     "nodeTooltip": "নলেজ নোড",
     "scrollLabel": "স্ক্রল",
     "cta_primary": "এখনই নিরাপত্তা পরীক্ষা শুরু করুন →",
@@ -45,7 +45,7 @@
   "nav": {
     "live": "লাইভ",
     "securityCheck": "সিকিউরিটি চেক",
-    "copilot": "Copilot",
+    "copilot": "কোপায়ট",
     "sandbox": "স্যান্ডবক্স",
     "runbooks": "রানবুক",
     "intelFeed": "ইন্টেল ফিড",
@@ -120,11 +120,11 @@
     "a4": "কারণ ৯০% ক্ষতি অপারেশন/শৃঙ্খলা থেকে আসে, অভিনব বৈশিষ্ট্য থেকে নয়।"
   },
   "home": {
-    "clawVerseKicker": "CLAWVERSE · UNIVERSE CORE · OPERATIONAL KNOWLEDGE NETWORK",
+    "clawVerseKicker": "CLAWVERSE · উন্নয়নের কোর · প্রাথমিক জ্ञান নেটওয়ার্ক",
     "clawVerseTitle": "ClawVerse-এ প্রবেশ করুন",
     "clawVerseDesc": "টুল, সময় এবং ইন্টেলিজেন্স স্তর জুড়ে সমস্ত অপারেশনাল নিরাপত্তা জ্ঞানকে সংযুক্ত করে একটি জীবন্ত মাইসেলিয়াম। মহাবিশ্ব লাইভ।",
     "clawVerseCta": "মহাবিশ্বে প্রবেশ করুন →",
-    "genesisProtocol": "GENESIS PROTOCOL ACTIVE · MYCELIAL SINGULARITY ENGINE v3.0",
+    "genesisProtocol": "জেনেসিস প্রোটোকোল চালু · মাসিকাল সিঙ্গুলার এঞ্চিন ঵ৃত্তি 3.0",
     "myceliumTitle": "জীবন্ত মাইসেলিয়াম। 1M+ রানবুক। এখনই।",
     "myceliumDesc": "প্রতিটি নোড জ্ঞানের একটি একক। প্রতিটি এজ একটি সিমান্টিক সম্পর্ক। নেটওয়ার্ক ডারউইনীয় নির্বাচনের মাধ্যমে স্বায়ত্তশাসিতভাবে বৃদ্ধি পায়, শেখে এবং বিকশিত হয়।",
     "openMycelium": "জীবন্ত মাইসেলিয়াম খুলুন →"
@@ -772,17 +772,17 @@
     "security_share": "ফলাফল শেয়ার করুন",
     "security_badge": "সিকিউরিটি স্কোর",
     "live_subtitle": "নেটওয়ার্ক থেকে রিয়েল-টাইম হুমকি",
-    "live_checks_today": "Heute durchgeführte Checks",
-    "live_no_incidents": "Keine aktiven Vorfälle",
-    "live_severity_high": "HOCH",
-    "live_severity_medium": "MITTEL",
-    "live_severity_low": "NIEDRIG",
-    "transparency_title": "Transparenz",
-    "transparency_subtitle": "ClawGuru ist kostenlos. Einige Empfehlungen sind Affiliate-Links. Wir kuratieren nach Nutzwert im echten Betrieb.",
-    "transparency_affiliate_title": "1) Affiliate-Erlöse",
-    "transparency_affiliate_desc": "Hosting & Security-Tools",
-    "transparency_ops_title": "2) Managed Ops",
-    "transparency_ops_desc": "Hardening, Monitoring, Wartung",
+    "live_checks_today": "আজ করা চেক",
+    "live_no_incidents": "কোনও সক্রিয় ঘটনা নেই",
+    "live_severity_high": "उच্চ",
+    "live_severity_medium": "মধ্যম",
+    "live_severity_low": "নিম্ন",
+    "transparency_title": "পারশ্বদৃষ্টি",
+    "transparency_subtitle": "ClawGuru বিনামূল্যে। কुछ সুপারিশ অফাইলিয়েট লিংক। আমরা যদি প্রাসंगিক তার ব্যবহার করে নিয়ে উপস্থাপনা করে, তা কুতুল করি।",
+    "transparency_affiliate_title": "1) অফাইলিয়েট আমন্ত্রণ",
+    "transparency_affiliate_desc": "হোস্টিং & সিকিयরিটি টুল",
+    "transparency_ops_title": "2) ম্যানেজ ওপেরেশন",
+    "transparency_ops_desc": "হার্ডেনিং, নিটিগেষণ, রেপেরেন্স",
     "transparency_research_title": "৩) গবেষণা/রিপোর্ট",
     "transparency_research_desc": "সংক্ষিপ্ত পরিস্থিতি রিপোর্ট",
     "section_title_kicker": "",
@@ -985,5 +985,537 @@
     "final_cta_check": "লাইভ সিকিউরিটি চেক শুরু করুন",
     "final_cta_downloads": "ডাউনলোড ব্রাউজ করুন",
     "final_cta_note": "কোনো সাইনআপের প্রয়োজন নেই। ১০০% ফ্রি। কোনো ক্রেডিট কার্ড লাগবে না।"
+  },
+  "missions": {
+    "docker-nonroot": {
+      "goals": {
+        "build_label": "ডোকার বিল্ড দ্বারা যাচাই করুন",
+        "build_hint": "docker build .",
+        "scan_label": "Trivy দ্বারা পরিষ্কার করুন সাফ",
+        "scan_hint": "trivy image clawguru-api:local"
+      }
+    },
+    "fail2ban-setup": {
+      "title": "Fail2ban: SSH আঘাতে ব্রূট-ফোর্স আক্রমণ থেকে সুরক্ষিত করুন",
+      "brief": "আপনার SSH সর্বরক্ষক ব্রূট-ফোর্স আক্রমণের নিম্নে ছিল। Fail2ban কনফিগুরেशन করুন: sshd জাইল চালান, bantime-টি 3600 সেকন্ডের নিম্নে করুন, maxretry 3 নির্ধারিত করুন, পোর্ট সুরক্ষিত করুন।",
+      "welcome": "",
+      "success": "",
+      "goals": {
+        "inspect_label": "Fail2ban কনফিগুরেশন পরিষ্কার করুন",
+        "inspect_hint": "cat /etc/fail2ban/jail.local",
+        "enable_label": "SSHD জাইল চালান সম্পাদন করুন",
+        "enable_hint": "patch enable",
+        "bantime_label": "Bantime টি 3600 সেকন্ডের নিম্নে করুন",
+        "bantime_hint": "patch bantime",
+        "maxretry_label": "Maxretry টি 3 নির্ধারিত করুন",
+        "maxretry_hint": "patch maxretry",
+        "port_label": "পোর্ট সুরক্ষা করুন",
+        "port_hint": "patch port",
+        "restart_label": "Fail2ban সেবা পুনরস্তাপন করুন",
+        "restart_hint": "systemctl restart fail2ban",
+        "status_label": "Jail স্থিতি যাচাই করুন",
+        "status_hint": "fail2ban-client status sshd"
+      }
+    },
+    "gdpr-data-minimization": {
+      "title": "GDPR ডেটা মিনিমালাইজেশন: অবসরীয় কে সূচিত দ্বারা ডেটা সংগ্রহ কম করুন",
+      "brief": "आपकা যूজার শেঞ্চা অতিরিক্ত ডেটা (ফোন, ঠারিপাথ, তারিখ এবং সময়, যूজার-আজেন্ট) সংগ্রহ করে। অবসরীয় ক্ষেত্রগুলিতে প্রতিবেদন করুন: ডেটা রিটেন্শন নিয়ম, ভুলে ফেলার সম্ভাবনা, প্রাপ্তি গোপ্তীয়তা ব্যবস্থা আপনি, গোপ্তীয়তা নিয়ম প্রস্তুতি।",
+      "welcome": "",
+      "success": "",
+      "goals": {
+        "inspect_label": "যूজার শেঞ্চা পরিষ্কার করুন",
+        "inspect_hint": "cat user-schema.sql",
+        "remove_label": "অবসরীয় ক্ষেত্রগুলি থেকে ডেটা হট করুন",
+        "remove_hint": "patch remove-excess",
+        "retention_label": "ডেটা রিটেন্শন নিয়ম যোগ করুন",
+        "retention_hint": "patch retention",
+        "rtbf_label": "ভুলে ফেলার সম্ভাবনা করা করুন",
+        "rtbf_hint": "patch rtbf",
+        "privacy_label": "গোপ্তয়তা নিয়ম প্রস্তুতি আপনি",
+        "privacy_hint": "patch privacy-policy",
+        "validate_label": "পালন করুন",
+        "validate_hint": "validate compliance"
+      }
+    },
+    "github-actions-hardening": {
+      "title": "GitHub Actions Hardening: CI/CD পাইপলाइन সুরক্ষিত করুন",
+      "brief": "आपकা CI/CD পাইপলাइन কোনও সুরক্ষা নিয়ম রেক্টিফিকেশন বিনা করে। এটি সুরক্ষিত করুন: অবসরীয় সংস্থাপকদাতা, পাইপলাइन সম্পর্কে সুरक্ষা, রাখাগুলি যাচাই, ব্রান্চ সুरक্ষা নিয়ম।"
+    },
+    "incident-drills": {
+      "goals": {
+        "execute_label": "ড্রিল কার्যক্রম অনুসরণ করুন",
+        "execute_hint": "টেবল এরপ্রেস করা করুন",
+        "evaluate_label": "প্রদর্শন করা করুন",
+        "evaluate_hint": "প্রতিক্রিযা সময় অনুষ্ঠান করা করুন",
+        "update_label": "প্রোটবুক আপডেট করুন",
+        "update_hint": "প্রোটবুক সংশোধন করা করুন"
+      }
+    },
+    "incident-forensics": {
+      "title": "প্রতিবেদন বিষয়ে স্থায়ী প্রবেশ করা না",
+      "brief": "আক্রমণ সংচিত হয়েছে। প্রবেশ করা বিনা প্রবেশ করা তথ্য অনুসंধান করুন। চ্যান আফ কুড মতামত রক্ষা করুন।",
+      "welcome": "স্বাগত, প্রতিবেদন বিষয়ে মিশ্রণ করা মিশ্রণে আপনি স্বাগত জানাই। আক্রমণ সংচিত, এখানে প্রবেশ করা বিনা তথ্য অনুসंধান করুন। 'collect [প্রবেশ-প্রকার]', প্রবেশ রক্ষার জন্য 'preserve [প্রবেশ]', আক্রমণের সময়চিত পুনর্বিস্তারন করার জন্য 'analyze timeline', এবং 'document findings' তাদের ফোরেনসিক রিপোর্ট তৈরি করার জন্য। যাদের বিনা প্রবেশ তথ্য গুমন করা না, তাদের সম্পর্কে যাদেরও ধ্যান রাখুন।",
+      "success": "প্রতিবেদন অনুসंধান সফলভাবে পूর্ণ হয়েছে। আপনি সুরক্ষিত ভাবে তথ্য সংগ্রহ করেছেন, প্রবেশ রক্ষা করেছেন, আক্রমণের সময়চিত পুনর্বিস্তারন করেছেন, এবং ফোরেনসিক রিপোর্ট তৈরি করেছেন। তথ্য সংগ্রহিত এবং সম্পর্কে যাদেরও ধ্যান রাখা নিশ্চিত।",
+      "goals": {
+        "collect_label": "সুরক্ষিত ভাবে তথ্য সংগ্রহ করুন",
+        "collect_hint": "cat /var/log/auth.log",
+        "preserve_label": "প্রবেশ রক্ষা করুন",
+        "preserve_hint": "হ্যাশ-যাচাই সংরক্ষিত করা",
+        "analyze_label": "আক্রমণের সময়চিত পুনর্বিস্তারন করা",
+        "analyze_hint": "timeline অনুষ্ঠান",
+        "document_label": "পাওয়ার নিতি তৈরি করুন",
+        "document_hint": "ফোরেনসিক রিপোর্ট তৈরি করা"
+      }
+    },
+    "incident-log-analysis": {
+      "title": "অভিযান প্রতিক্রিযা: লগ ফাইল আনলাইজ করে আক্রমণ খোঁছে নির্ধারিত",
+      "brief": "আপনির auth.log সংশোধন করলে অনপ্রয়োজক লগিন প্রদর্শন দেখা যায়। লগ ফাইল আনলাইজ করুন: সংदেশগুলি চিহ্নিত করুন, অনপ্রয়োজক লগিন প্রয়াস সংখ্যা গন্ধ করুন, আক্রমণ খোঁছে নির্ধারিত করুন, এবং রিপোর্ট তৈরি করুন।",
+      "welcome": "",
+      "success": "",
+      "goals": {
+        "inspect_label": "auth.log আনলাইজ করুন",
+        "inspect_hint": "cat /var/log/auth.log",
+        "suspicious_label": "সংদেশগুলি চিহ্নিত করুন",
+        "suspicious_hint": "লগ ঐপি আনলাইজ করুন",
+        "failed_label": "প্রয়াস সংখ্যা গন্ধ করুন",
+        "failed_hint": "grep Failed",
+        "breach_label": "সফল আক্রমণ খোঁছে নির্ধারিত করুন",
+        "breach_hint": "grep Accepted",
+        "report_label": "অভিযান রিপোর্ট তৈরি করুন",
+        "report_hint": "রিপোর্ট তৈরি করা",
+        "containment_label": "সমাধান করার নির্দেশনা দিতে প্রথম করুন",
+        "containment_hint": "সমাধান করার নির্দেশনা দিতে প্রথম করুন"
+      }
+    },
+    "incident-playbooks": {
+      "title": "Incident response playbooks — ready to run",
+      "brief": "When the alarm goes off, you don't think. You execute. Build the playbooks.",
+      "welcome": "Welcome to the Incident Response Playbooks mission. When the alarm goes off, you don't think — you execute. Use 'create [playbook-type]' to build playbooks, 'add [step]' to add steps, 'test [playbook]' to validate, and 'verify readiness' to confirm your team is prepared.",
+      "success": "Incident response playbooks completed successfully. You created playbooks, added steps, tested them, and verified readiness. When the alarm goes off, your team won't think — they'll execute.",
+      "goals": {
+        "create_label": "Create detection playbook",
+        "create_hint": "create detection"
+      }
+    },
+    "k8s-networkpolicy": {
+      "goals": {
+        "apply-ingress_label": "ইনগ্রেস-নিগেکس → প্রোড/API-সার্বার জন্য অনুমতি দেন",
+        "apply-ingress_hint": "apply network-policy allow-ingress-nginx",
+        "apply-samens_label": "প্রোড/কার্যকরী → প্রোড/API-সার্বার (সমান নামস্থা)",
+        "apply-samens_hint": "apply network-policy allow-same-namespace",
+        "probe-after_label": "পুনরাবীতি করে চেয়েন — মান্য প্রবেশকে হিসাবে সাক্ষ্য দেন",
+        "probe-after_hint": "probe dev/red-team-probe prod/api-server:8080 && probe prod/ingress-nginx prod/api-server:8080 && probe prod/worker prod/api-server:8080",
+        "audit_label": "অনুমতি প্রদান সমূহ — CIS 5.3.2 সঠিক থাকে",
+        "audit_hint": "অনুমতি প্রদান সমূহ"
+      }
+    },
+    "k8s-pod-security": {
+      "title": "Kubernetes Pod Security: ক্षमतা সीमিত করুন & অধিকার বিগড় করুন",
+      "brief": "आपका pod রট হিসেবে কাম করছে, NET_ADMIN/SYS_ADMIN সাথে। এটা শক্তিশালী করুন: অধিকার বিগড় করুন, ক্षमतা হিসেবে বিমুখ করুন, runAsNonRoot, readOnlyRootFilesystem, seccomp profile সেট করুন।",
+      "welcome": "",
+      "success": "",
+      "goals": {
+        "inspect_label": "ডিপ্লোয়মেন্ট মনোন্ত্রণ দেখুন",
+        "inspect_hint": "cat deployment.yaml",
+        "privileged_label": "অধিকার ফ্ল্যাগ বিগড় করুন",
+        "privileged_hint": "patch privileged",
+        "capabilities_label": "সমস্ত ক্षमतা বিমুখ করুন",
+        "capabilities_hint": "patch capabilities",
+        "nonroot_label": "runAsNonRoot সেট করুন true",
+        "nonroot_hint": "patch nonroot",
+        "readonly_label": "readOnlyRootFilesystem যোগ করুন",
+        "readonly_hint": "patch readonly",
+        "seccomp_label": "seccomp profile সেট করুন",
+        "seccomp_hint": "patch seccomp",
+        "apply_label": "kubectl apply দ্বারা যোগ্যতা পুনর্স্থাপিত করুন",
+        "apply_hint": "kubectl apply -f deployment.yaml"
+      }
+    },
+    "lets-encrypt": {
+      "title": "TLS তিন বেশি কম স্টেপভাবে",
+      "brief": "hodlberg.ag আছে অস্থায়ী HTTP। 10 মিনিটের মধ্যে demo দেখুন। সাম্প্রতিক জন্য সামান্য করা, HTTPS স্বিচ্ছা করুন, যাচাই করুন।",
+      "welcome": "",
+      "success": "",
+      "goals": {
+        "install-certbot_label": "certbot স্থাপিত করুন",
+        "install-certbot_hint": "apt install certbot python3-certbot-nginx",
+        "issue-cert_label": "hodlberg.ag জন্য সাম্প্রতিক প্রস্তুতি করুন",
+        "issue-cert_hint": "certbot certonly --nginx -d hodlberg.ag -d www.hodlberg.ag",
+        "patch-tls_label": "nginx 443 পরিষ্কার করুন",
+        "patch-tls_hint": "patch enable-tls",
+        "validate_label": "nginx কন্ফিগুরেশন যাচাই করুন",
+        "validate_hint": "nginx -t",
+        "reload_label": "nginx পুনর্জীবন করুন",
+        "reload_hint": "systemctl reload nginx",
+        "verify_label": "HTTPS প্রতিক্রিয়া যাচাই করুন",
+        "verify_hint": "curl -I https://hodlberg.ag"
+      }
+    },
+    "llm-output-sanitize": {
+      "title": "LLM উত্তর সাফ করা: DOMPurify, Markdown রেন্দারিভার সুদৃঢ়িকরন, Content-Security-Policy",
+      "brief": "AI চাট রাখতে মূল LLM উত্তর দৈর্ঘ্যমান ভাষা কে ইন্নার HTML কে সেট করে। জ্ঞান-বাসিত ডॉক মাध্यमে অসুरक্षিত প্রোমপ্ট সংক্রান্তি দ্বারা সংগ্রহিত স্থায়ী XSS। DOMPurify, Markdown রেন্দারিভার সুদৃঢ়িকরন করুন, CSP যোগ করুন, এবং স্ট্রুক্চুরাজাইজ্ড উত্তর প্রয়োজন করুন।",
+      "welcome": "",
+      "success": "",
+      "goals": {
+        "read_label": "দৌর করুন সাম্বংধিত রেন্দারি প্রক্রিয়া",
+        "read_hint": "cat renderer.tsx",
+        "attack_label": "XSS আগমন করা হেতু প্রকৃতিভাবে সম্প্রদ্ধ LLM উত্তর",
+        "attack_hint": "XSS আগমন করুন",
+        "dompurify_label": "HTML-টাগ অনুমোদন সूचির সাথে DOMPurify সাফ করা করুন",
+        "dompurify_hint": "dompurify সুधারুন",
+        "renderer_label": "Markdown রেন্দারিভার কনফিগর করুন তাকি মূল HTML ব্लॉক হট করা যায়",
+        "renderer_hint": "marked-renderer সুधারুন",
+        "csp_label": "Content-Security-Policy হেট যোগ করুন",
+        "csp_hint": "csp সুधারুন",
+        "structured_label": "স্ট্রুক্চুরাজাইজ্ড AI উত্তরের জন্য JSON শেমা লাগুন",
+        "structured_hint": "structured-output সুधারুন",
+        "tests_label": "সাফতা পরীক্ষা করুন — XSS প্রয়াস হট করা যায়",
+        "tests_hint": "সাফতা পরীক্ষা করুন"
+      }
+    },
+    "llm-rate-limiting": {
+      "title": "LLM API খর্চ সুरक্ষা: রেট লিমিটিং, অপাল, টোকেন বাজেট, সাইক্রণ ব্রেকার",
+      "brief": "$47k OpenAI বিল 4 ঘंটায় $1 হাজার অনামন্ত্রিত খর্চ করার পরিণাম। IP রেট লিমিটিং, অপাল, সার্ভার-সাইড টোকেন ক্যাপ, প্রতি ব্যক্তি দৈনিক টোকেন বাজেট, এবং $500/দিনের গ্লোবাল সাইক্রণ ব্রেকার যোগ করুন।",
+      "welcome": "",
+      "success": "",
+      "goals": {
+        "read_label": "প্রাথমিক রুটের পরিচয় — 5 অসুবিধা তৈরি করুন",
+        "read_hint": "cat route.ts",
+        "ratelimit_label": "IP রেট লিমিটিং — 20 অনুরোধ প্রতি মিনিট",
+        "ratelimit_hint": "রেট-লিমিট সুधারুন",
+        "auth_label": "অপাল প্রযোগ করুন — অনামন্ত্রিত ব্যক্তিদের অনুমোদন রদ্দ করুন",
+        "auth_hint": "অপাল সুधারুন",
+        "tokencap_label": "सर্বোচ্চ টোকেন সংখ্যা সার্ভার-সাইডে (1,024 — কল্পনাকরীদের অনুমোদন না হিসেবে)",
+        "tokencap_hint": "टোকেন ক্যাপ সুधারুন",
+        "budget_label": "প্রতি ব্যক্তি দৈনিক টোকেন বাজেট নিষ্পাদন করুন",
+        "budget_hint": "বাজেট সুधারুন",
+        "circuit_label": "গ্লোবাল সাইক্রণ ব্রেকার: যদি খর্চ $500/দিন পরে, সমস্যা নিষ্ক্রিয় করুন",
+        "circuit_hint": "সাইক্রণ ব্রেকার সুधারুন",
+        "tests_label": "খর্চ প্রবেশন পরীক্ষা করুন",
+        "tests_hint": "খর্চ প্রবেশন পরীক্ষা করুন"
+      }
+    },
+    "misconfig-hunt": {
+      "title": "Misconfig Hunt — সমস্যাগ্रस্ত তিনটি সমাধান করুন",
+      "brief": "Claw Score একদিনে $D নিচে পড়ে গেল। তিন গভীর পाজ পাওয়া হয়েছে। সমস্যাগ্रस্ত তাদের সমাধান করুন এবং পুনরআলোচনা করুন যাকে A হিসেবে রেট করা হয়।",
+      "welcome": "",
+      "success": "",
+      "goals": {
+        "read-report_label": "স্ক্যান রিপোর্ट পড়ুন",
+        "read-report_hint": "cat /var/log/claw/latest.report",
+        "fix-c1_label": "C1 সমাধান করুন — autoindex অক্ষেত্র বিকল্प করুন",
+        "fix-c1_hint": "fix C1",
+        "fix-c2_label": "C2 সমাধান করুন — ফাइल অধিকার সুरक্ষিত করুন",
+        "fix-c2_hint": "fix C2",
+        "fix-c3_label": "C3 সমাধান করুন — সেবাক্ষেত্র টোকেন পরিহার করুন",
+        "fix-c3_hint": "fix C3",
+        "rescan_label": "پुनः স্ক্যান করুন এবং A গ্रেড প্রাप্ত করুন",
+        "rescan_hint": "rescan"
+      }
+    },
+    "nginx-access-control": {
+      "title": "প্রাথমিক /admin এন্ডপোइंट নিয়ंত्রণ করুন IP অনুমতি সूचি + HTTP বেসিক আউট দ্বারা",
+      "brief": "24 ঘটনায় 12,000 ব্রুট-ফোর্স প্রয়াস /admin উপর। nginx vhost এ নিয়ম করুন — IP-বেসিত অনুমতি সूचি এবং HTTP Basic Auth যোগ করুন — তাঁর পর অনামন্য IP থেকে 403 নির্দেশ প্রাপ্ত হওয়া যাবে।",
+      "welcome": "",
+      "success": "",
+      "goals": {
+        "inspect_label": "वर्तमाন vhost পরিকল্পনা করুন — /admin অনসুरक্ষিত ক্ষেত্র খোজা করুন",
+        "inspect_hint": "cat sites-available/hodlberg.conf",
+        "allow_label": "/admin স্থানে IP অনুমতি সूचি (সব অনুমতি + বিরুদ্ধ কল) যোগ করুন",
+        "allow_hint": "vhost allow সंपाদনা",
+        "htpasswd_label": "/etc/nginx/.htpasswd তৈরি করুন অ্যাডমিন পাসওয়োর্ড সাথে",
+        "htpasswd_hint": "htpasswd create",
+        "auth_label": "/admin স্থানে auth_basic + auth_basic_user_file যোগ করুন",
+        "auth_hint": "vhost auth সंपाদনা",
+        "test_label": "nginx কন্ফিগুরেशन পরীক্ষা করুন — nginx -t মানে পাস হবে",
+        "test_hint": "nginx -t",
+        "reload_label": "nginx সঠিকভাবে রিলোয়দ করুন",
+        "reload_hint": "nginx reload",
+        "probe_label": "অনামন্য IP থেকে 403 Forbidden নির্দেশ প্রাপ্ত হওয়া যাবে নির্ণয় করুন",
+        "probe_hint": "probe admin 8.8.8.8"
+      }
+    },
+    "nginx-hsts": {
+      "title": "HSTS আগে প্রাপ্ত করুন ক্রাবলার আসার সময়",
+      "brief": "hodlberg.ag এ 60 সেকন্ডে একটি পাল্টি ক্রাবলার আসার সময়। Strict-Transport-Security যোগ করুন, পরীক্ষা করুন, রিলোয়দ করুন — প্রশ্নস্বয়ং বিনা প্রোডাক্ষনে।",
+      "welcome": "",
+      "success": "",
+      "goals": {
+        "read-readme_label": "মিশন ব্রিফ পড়ুন",
+        "read-readme_hint": "cat README",
+        "inspect-conf_label": "vhost কন্ফিগুরেশন পরিকল্পনা করুন",
+        "inspect-conf_hint": "cat /etc/nginx/sites-enabled/hodlberg.conf",
+        "apply-hsts_label": "Strict-Transport-Security যোগ করুন",
+        "apply-hsts_hint": "patch hsts",
+        "validate_label": "নিগেξ কন্ফিগুরেशन যাচায়",
+        "validate_hint": "nginx -t",
+        "reload_label": "নিগেکس পুনর্লোড করুন",
+        "reload_hint": "systemctl reload nginx"
+      }
+    },
+    "nis2-engineering-controls": {
+      "title": "NIS2 এর উপর ইংজিনিয়ারিং কন্ট্রোল অনুবাদ",
+      "brief": "NIS2 আয়ামগঙ্গা নির্ধারণ সহ সঞ্চয় টেকনিক কন্ট্রোল অনুবাদ করুন। কৃতিপূর্ণ পরিষ্কার না — তার স্থাপনা সম্পর্কে।",
+      "welcome": "NIS2 ইংজিনিয়ারিং কন্ট্রোল মিশনে স্বাগত। আপনি কানूনি আয়ামগঙ্গা নির্ধারণ সহ সঞ্চয় টেকনিক কন্ট্রোল অনুবাদ করতে পারবেন। 'কন্ট্রোল আমল' দেখতে, 'এমপ্লিমেন্ট [কন্ট্রোল-নাম]' দ্বারা কন্ট্রোল যোগ করুন, এবং 'ভ্যারিফিকেশন NIS2' দ্বারা পালিত সম্পর্কে জানুন।",
+      "success": "NIS2 পালিতি সঞ্চয় করা হয়েছে। আপনি কানूনি আয়ামগঙ্গা নির্ধারণ সহ সঞ্চয় টেকনিক কন্ট্রোল অনুবাদ করেছেন। কৃতিপূর্ণ পরিষ্কার না — তার স্থাপনা সম্পর্কে।",
+      "goals": {
+        "assess_label": "প্রতিটি কন্ট্রোল নির্ধারণ আমল করুন",
+        "assess_hint": "কন্ট্রোল আমল",
+        "incident_label": "অনিয়মিত প্রস্তুতি কন্ট্রোল এমপ্লিমেন্ট করুন",
+        "incident_hint": "অনিয়মিত প্রস্তুতি কন্ট্রোল এমপ্লিমেন্ট",
+        "continuity_label": "ব্যবসায়িক নিরন্তরতা কন্ট্রোল এমপ্লিমেন্ট করুন",
+        "continuity_hint": "ব্যবসায়িক নিরন্তরতা কন্ট্রোল এমপ্লিমেন্ট",
+        "supply_label": "সাপ্লায় চেন কন্ট্রোল এমপ্লিমেন্ট করুন",
+        "supply_hint": "সাপ্লায় চেন কন্ট্রোল এমপ্লিমেন্ট",
+        "verify_label": "NIS2 পালিতি যাচায়",
+        "verify_hint": "ভ্যারিফিকেশন NIS2"
+      }
+    },
+    "oauth2-pkce": {
+      "title": "OAuth2 PKCE: সুরক্ষিত পব্লিক ক্লাণ্ট অধিকার প্রদর্শন",
+      "brief": "আপনির মোবাইল এপ দের প্রায় প্রাথমিক অধিকার প্রদর্শন করে এসেছে। PKCE (responseType=code, code_verifier, code_challenge (SHA-256)) সাথে মিশন করুন।",
+      "welcome": "",
+      "success": "",
+      "goals": {
+        "inspect_label": "অ্যাথবৃত অধিকার কন্ফিগুরেশন আমল করুন",
+        "inspect_hint": "cat auth-config.json",
+        "response_label": "responseType প্রতিস্থাপন করুন 'code'",
+        "response_hint": "patch response-type",
+        "verifier_label": "code_verifier তৈরি করুন",
+        "verifier_hint": "patch code-verifier",
+        "challenge_label": "code_challenge তৈরি করুন",
+        "challenge_hint": "patch code-challenge",
+        "test_label": "প্রতিটি ফ্লো পরীক্ষা করুন",
+        "test_hint": "ফ্লো পরীক্ষা"
+      }
+    },
+    "postgres-hardening": {
+      "title": "Lock down Postgres before the audit team lands",
+      "brief": "Trust auth on the LAN, SSL off, every role superuser, no query log. Fix all four — without breaking the app.",
+      "welcome": "",
+      "success": "",
+      "goals": {
+        "inspect-hba_label": "Inspect pg_hba.conf",
+        "inspect-hba_hint": "cat pg_hba.conf",
+        "patch-hba_label": "Remove trust + require SSL on host lines",
+        "patch-hba_hint": "patch hba",
+        "patch-ssl_label": "পোটেগ্রস কনফিগেশন ফাইলে এসএলএল অনুমতি দেন",
+        "patch-ssl_hint": "এসএলএল প্রযোগ করা",
+        "patch-log_label": "pg_stat_statements এবং দের নিম্ন ক্ষেত্রে লোগ অনুমতি দেন",
+        "patch-log_hint": "লোগ প্রযোগ করা",
+        "patch-roles_label": "Superuser থেকে অ্যাপ রোল নিম্নাধিকার করুন",
+        "patch-roles_hint": "রোল সंशোधन করা",
+        "reload_label": "পোটেগ্রস রিলোয়াদ করুন",
+        "reload_hint": "systemctl reload postgresql",
+        "verify_label": "পোটেগ্রসের এসএলএল নির্ধারিত করা সম্পর্কে psql --ssl=require দ্বারা যাচায়ই করুন",
+        "verify_hint": "psql --ssl=require -h db -U hodlberg -c 'SELECT 1'",
+        "audit_label": "audit run returns clean",
+        "audit_hint": "audit run"
+      }
+    },
+    "postgres-rls": {
+      "title": "PostgreSQL Row-Level Security: বিভিন্ন কিরায়ালী ডেটা অসম্ব্যাহতা",
+      "brief": "আর্থিক পোটেগ্রস কেন্দ্রিত করা নেই। RLS অনুমতি দেন: তার নিবাসী অসম্ব্যাহতা নিয়ম, অ্যাদমিন পাঠাও নিয়ম, ভিন্ন উপযোক্তার সাথে পরীক্ষা করুন, অসম্ব্যাহতা সঠিক তা যাচায়ই করুন।",
+      "welcome": "",
+      "success": "",
+      "goals": {
+        "inspect_label": "টেবল স্কিমা পরীক্ষা করুন",
+        "inspect_hint": "cat rls-policy.sql",
+        "enable_label": "Row-Level Security সম্পর্কে অনুমতি দেন",
+        "enable_hint": "patch enable-rls",
+        "tenant_label": "তার নিবাসী অসম্ব্যাহতা নিয়ম তৈরি করুন",
+        "tenant_hint": "patch tenant-policy",
+        "admin_label": "অ্যাদমিন পাঠাও নিয়ম তৈরি করুন",
+        "admin_hint": "patch admin-policy",
+        "test_label": "বিভিন্ন উপযোক্তার সাথে RLS পরীক্ষা করুন",
+        "test_hint": "test tenant-a",
+        "verify_label": "ডেটা অসম্ব্যাহতা যাচায়ই করুন",
+        "verify_hint": "অসম্ব্যাহতা পরীক্ষা করা"
+      }
+    },
+    "prometheus-alerting": {
+      "title": "Prometheus Alerting: ক্রিটিক সেক্यুরিটি অলার্ম কনফিগুরেশন করা",
+      "brief": "আপনির Prometheus মাত্র বিচারক ত্রুটি সংখ্যা অলার্ম। সম্পূর্ণ সেক্यুরিটি অলার্ম কনফিগুরেশন: ব্রুট-ফোরস আত্মগ্রস, প্রাসাদ পরিবর্তন, অভিযোগী লগিন, উচ্চ CPU।",
+      "welcome": "",
+      "success": "",
+      "goals": {
+        "inspect_label": "অলার্ম নিয়ম পরীক্ষা করুন",
+        "inspect_hint": "cat prometheus-alerts.yml",
+        "brute-force_label": "ব্রুট-ফোরস আত্মগ্রস অলার্ম যোগ করুন",
+        "brute-force_hint": "patch brute-force",
+        "cert-expiry_label": "প্রাসাদ পরিবর্তন অলার্ম যোগ করুন",
+        "cert-expiry_hint": "patch cert-expiry",
+        "suspicious-login_label": "অভিযোগী লগিন অলার্ম যোগ করুন",
+        "suspicious-login_hint": "patch suspicious-login",
+        "high-cpu_label": "উচ্চ CPU ব্যবহার পরিচেয়া সৃষ্টি করুন",
+        "high-cpu_hint": "উচ্চ-CPU সমাধান করুন",
+        "validate_label": "অনুপ্রেরণা নিয়মগুলি যাচাই করুন",
+        "validate_hint": "নিয়ম যাচাই করুন"
+      }
+    },
+    "prompt-injection-defense": {
+      "title": "প্রোম্প্ট ইনজেক্ষন নিষেধ: ইনপুট সাফচ্ছা, ক্যানারি টোকেন, আউটপুট যাচাই",
+      "brief": "AI অসিস্টান্ট গুচ্ছিত ব্যবক্তির ইনপুট সমেং সঞ্চয় করে এই তথ্য উপযোগ করে। আক্রান্ত করে 'সমস্যা সমাধান নির্দেশ অনই' → মॉडल API কী খুলে দেওয়ার পরিণাম ফেলে। ইনপুট সাফচ্ছা, গুপ্তয় স্থানে ডাকা রাখুন, ক্যানারি + আউটপুট যাচাই যোগ্য করুন।",
+      "welcome": "",
+      "success": "",
+      "goals": {
+        "read_label": "প্রতিরক্ষাটা পরিশোধন করুন — সংযোগ কৌশল খোজা",
+        "read_hint": "cat handler.ts",
+        "attack_label": "ইনজেক্ষন আক্রান্ত করুন — গুপ্তয় খুলা যাবে নির্ণয়",
+        "attack_hint": "আক্রান্ত করুন",
+        "sanitize_label": "ইনপুট সাফচ্ছা যোগ্য করুন — প্রণালী মিলান + লেন্ধা সীমা",
+        "sanitize_hint": "সাফচ্ছা সুधারুন",
+        "secrets_label": "গুপ্তয় স্থানে থাকা বিরুদ্ধিত সিস্টম প্রোম্প্ট থেকে বের করুন",
+        "secrets_hint": "গুপ্তয় স্থান সুधারুন",
+        "canary_label": "ক্যানারি টোকেন যোগ্য করুন দুঃস্পষ্ট চেষ্টা নিরোধ",
+        "canary_hint": "ক্যানারি সুधারুন",
+        "output_label": "আউটপুট যাচাই যোগ্য করুন — AI উত্তরে খুলা গুপ্তয় তথ্য পাওয়া",
+        "output_hint": "আউটপুট যাচাই সুधারুন",
+        "tests_label": "ইনজেক্ষন টেস্ট সুস্থাপনা করুন — সমস্যা সব চেষ্টা নিরোধ",
+        "tests_hint": "ইনজেক্ষন টেস্ট করুন"
+      }
+    },
+    "redis-auth-acl": {
+      "title": "Redis সুरक্ষিত করুন: বাইন্ড নিয়ম, requirepass, ACL, দাহিন আদেশ অক্ষীন করুন",
+      "brief": "Redis 0.0.0.0 পরিবেশে নির্দিষ্ট করা হয়েছে নো অধিকার। পেন-টেস্টার সেকংসেস কুডর করে সেকংস সমেং সঞ্চয় করেছিল। লোকপরিবেশে বাইন্ড করুন, requirepass সঙ্গে একটি শক্তিশালী পাসওয়ার্ড নির্দিষ্ট করুন, disable FLUSHALL/DEBUG, একটি সমস্যাপূর্ণ API ACL যूজার তৈরি করুন।",
+      "welcome": "",
+      "success": "",
+      "goals": {
+        "bind_label": "বাইন্ড টাইপ করুন 127.0.0.1 (লোককেন্দ্রিত মাত্র)",
+        "bind_hint": "বাইন্ড সুधারুন",
+        "auth_label": "requirepass সঙ্গে একটি শক্তিশালী পাসওয়ার্ড নির্দিষ্ট করুন",
+        "auth_hint": "requirepass সুधারুন",
+        "commands_label": "disable FLUSHALL, FLUSHDB, DEBUG",
+        "commands_hint": "আপত্তিকর আদেশ সুधারুন",
+        "acl_label": "API সেবার জন্য একটি সমস্যাপূর্ণ ACL যूজার তৈরি করুন",
+        "acl_hint": "ACL তৈরি করুন api-user",
+        "save_label": "প্রস্তুতি পরিবর্তন ডিস্কে ভেঙ্গা করুন",
+        "save_hint": "redis-cli CONFIG REWRITE",
+        "testauth_label": "পাসওয়ার্ড-প্রতিবেদিত যাত্রা যাচাই করুন",
+        "testauth_hint": "প্রবেশ টেস্ট করুন"
+      }
+    },
+    "reverse-proxy-ratelimit": {
+      "title": "Stop the credential-stuffing wave on /login — without locking out users",
+      "brief": "/api/auth/login is taking 4000 req/min from rotating IPs. Define a rate-limit zone, apply it surgically, deny headless UAs. Validate against real traffic.",
+      "welcome": "",
+      "success": "",
+      "goals": {
+        "inspect_label": "জীবন ট্রাফিক সাম্পলে আনুষ্ঠান করুন",
+        "inspect_hint": "cat sample.jsonl",
+        "zone_label": "http সম্পদে limit_req_zone নির্দিষ্ট করুন",
+        "zone_hint": "patch ratelimit-zone",
+        "login_label": "ইংস্টাল জোন করুন /api/auth/login",
+        "login_hint": "patch ratelimit-login",
+        "ua_label": "অনজানা হেডেলেस উপযোগকে নিষিদ্ধ করুন",
+        "ua_hint": "patch ua-deny",
+        "validate_label": "Konfiguração যাচায়িত করুন (nginx -t)",
+        "validate_hint": "nginx -t",
+        "reload_label": "nginx পুনःটাউন করুন",
+        "reload_hint": "systemctl reload nginx",
+        "replay_label": "ট্রাফিক পুনরাবৃত্তি — আক্রমকর্তারা বাদ হয়ে, উভয় ব্যবহারকর্তা যাচায়িত হয়",
+        "replay_hint": "replay traffic"
+      }
+    },
+    "secrets-rotation": {
+      "title": "লीक হনে পদাर্থ API কী পুনর্বিনিময় করুন কোনও ক্লাইন্ট বিপর্যয় নেই",
+      "brief": "API কী একটি পব্লিক Docker লেয়ারে লीक হয়, 4 ক্লাইন্ট এটির উপর নির্ভর করে। সর্বশীর্ষ অর্থ = প্রসারন বাদ। Dual-write → migrate → drain → retire.",
+      "welcome": "",
+      "success": "",
+      "goals": {
+        "inspect-key_label": "লीক হনে কী + সক্রিয় ক্লাইন্ট আনুষ্ঠান করুন",
+        "inspect-key_hint": "cat .env.production && cat clients",
+        "generate-v2_label": "API_KEY_V2 (V1 আছে জীবন্ত)",
+        "generate-v2_hint": "rotate generate",
+        "dual-write_label": "auth.js পैچ করুন যা সমঢী এবং V1 ও V2 সম্পদে অনুমতি দিয়ে",
+        "dual-write_hint": "patch dual-write",
+        "deploy_label": "Dual-write পরিবর্তন প্রকাশ করুন",
+        "deploy_hint": "deploy",
+        "migrate_label": "সমস্ত 4 ক্লাইন্ট নূনতম V2 পরিবর্তন করুন",
+        "migrate_hint": "rollout api-partner-A | api-partner-B | internal-sdk | github-actions-ci",
+        "drain_label": "V1 ট্রাফিক = 0 যাচায়িত করুন",
+        "drain_hint": "monitor",
+        "retire_label": "V1 কী সমাপ্ত করুন (সেক্রেট স্টোর থেকে ডিলিট করুন)",
+        "retire_hint": "retire v1",
+        "signoff_label": "অনুমতি প্রদান — কোনও বিপর্যয় নেই, কী রদ্দ করা হয়",
+        "signoff_hint": "audit signoff"
+      }
+    },
+    "session-security": {
+      "title": "Secure session cookies: HttpOnly, Secure, SameSite, __Host-, short Max-Age",
+      "brief": "XSS exploit reads document.cookie and exfiltrates the session token. Session cookie is missing HttpOnly, Secure, SameSite. CSRF is also trivially possible. Fix all five.",
+      "welcome": "",
+      "success": "",
+      "goals": {
+        "read_label": "সেশন কন্ফিগুরেशन পরীক্ষা করুন",
+        "read_hint": "cat session.ts",
+        "httponly_label": "HttpOnly ফ্লैগ যোগ করুন — জেসি এসেস টকাবে না",
+        "httponly_hint": "fix httponly",
+        "secure_label": "Secure ফ্লैগ যোগ করুন — ইটিপি সিরকারি প্রেরণা",
+        "secure_hint": "fix secure",
+        "samesite_label": "SameSite=Strict সেট করুন — CSRF প্রয়াস নিষেধ করুন",
+        "samesite_hint": "fix samesite",
+        "prefix_label": "__Host- কुকি নাম প্রিফিক্স ব্যবহার করুন",
+        "prefix_hint": "fix prefix",
+        "maxage_label": "Max-Age নিম্নের 15 মিনিট করুন",
+        "maxage_hint": "fix maxage"
+      }
+    },
+    "ssh-hardening": {
+      "title": "SSH সুরক্ষা গভীর করুন আপনি বোট পাওয়া পরে",
+      "brief": "ফ্রেশ Ubuntu বক্স, sshd যাঁকী ভূমিকা খুলা রেখেছে। রট লॉগিন + পাসवर্ড আধারিত অপস্থা নিষেধ করুন, sshd রিলোয়াদ করুন। স্ক্যান এবং ভিন্ন ভিন্ন ভাবে আসছে।",
+      "welcome": "",
+      "success": "",
+      "goals": {
+        "inspect-sshd_label": "sshd_config পরীক্ষা করুন",
+        "inspect-sshd_hint": "cat /etc/ssh/sshd_config",
+        "disable-root_label": "PermitRootLogin নিষেধ করুন",
+        "disable-root_hint": "patch no-root-login",
+        "disable-password_label": "PasswordAuthentication নিষেধ করুন",
+        "disable-password_hint": "patch no-password-auth",
+        "validate-sshd_label": "sshd কন্ফিগুরেशन যাচায়তা করুন",
+        "validate-sshd_hint": "sshd -t",
+        "reload-sshd_label": "sshd রিলোয়াদ করুন",
+        "reload-sshd_hint": "systemctl reload ssh"
+      }
+    },
+    "tls-certificate-rotation": {
+      "title": "TLS সামাধান্ড পুনরুত্থান: অবশেষের আগে সামাধান্ড পুনরূপত্তি স্বাচ্ছেত্রে করুন",
+      "brief": "आपका TLS সামাধান্ড 10 দিন পর মিলেছে। স্বাচ্ছেত্রে পুনরূপত্তি: certbot dry-run, cron জবাব, নিয়মিত আলর্ট, নির্ণয় করুন নতুন সামাধান্ড, TLS হাইটেক পরীক্ষা করুন।",
+      "welcome": "",
+      "success": "",
+      "goals": {
+        "check_label": "সামাধান্ড পরিণাম পরীক্ষা করুন",
+        "check_hint": "cat cert-info.txt",
+        "renew_label": "certbot সাথে পুনরূপত্তি পরীক্ষা করুন — dry-run",
+        "renew_hint": "certbot renew --dry-run",
+        "cron_label": "auto-renewal cron জবাব সেট করুন",
+        "cron_hint": "patch cron",
+        "monitoring_label": "নিয়মিত আলর্ট সেট অপ করুন",
+        "monitoring_hint": "patch monitoring",
+        "verify_label": "নতুন সামাধান্ড যাচায়তা করুন",
+        "verify_hint": "verify cert",
+        "tls_label": "টেস্ট টিএলএস হানশাক",
+        "tls_hint": "টেস্ট টিএলএস"
+      }
+    },
+    "ufw-firewall": {
+      "title": "ফায়রওল: তীব্র পরিণতি যা তুমি কতটা অস্বীকার করে",
+      "brief": "একটি বেঁধিত ডেটাবेস হোস্ট যা ৭টি পোর্টে শ্রেণ্ধাইতে থাকে। UFW-এর মাধ্যমে কেবল SSH অনুমতি দিয়ে, সেট করুন, যাচাই করুন।",
+      "welcome": "",
+      "success": "",
+      "goals": {
+        "see-sockets_label": "সুন্নয় সোকেট সूचি",
+        "see-sockets_hint": "ss -tln",
+        "default-deny_label": "আউতাম আঁদন করুন আসান্তরিক ভাগে",
+        "default-deny_hint": "ufw default deny incoming",
+        "allow-ssh_label": "SSH অনুমতি দিয়ে",
+        "allow-ssh_hint": "ufw allow 22/tcp",
+        "enable_label": "UFW সেট করুন চালনীয়",
+        "enable_hint": "ufw enable",
+        "status_label": "UFW স্থিতি যাচাই করুন",
+        "status_hint": "ufw status"
+      }
+    }
   }
 }

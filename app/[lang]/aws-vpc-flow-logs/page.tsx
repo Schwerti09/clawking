@@ -109,9 +109,9 @@ export default function AWSVPCFlowLogsPage({
             </p>
 
             <div className="grid md:grid-cols-2 gap-6 mb-8">
-              <div className="bg-orange-50 border border-orange-700 rounded-xl p-6">
-                <h3 className="font-semibold text-orange-900 mb-2">Erfasste Daten</h3>
-                <ul className="text-sm text-orange-700 space-y-1">
+              <div className="bg-orange-900/20 border border-orange-700 rounded-xl p-6">
+                <h3 className="font-semibold text-orange-400 mb-2">Erfasste Daten</h3>
+                <ul className="text-sm text-orange-200 space-y-1">
                   <li>• Source/Destination IP</li>
                   <li>• Source/Destination Port</li>
                   <li>• Protocol (TCP/UDP/ICMP)</li>
@@ -120,9 +120,9 @@ export default function AWSVPCFlowLogsPage({
                   <li>• Action (ACCEPT/REJECT)</li>
                 </ul>
               </div>
-              <div className="bg-amber-50 border border-amber-200 rounded-xl p-6">
-                <h3 className="font-semibold text-amber-900 mb-2">Use Cases</h3>
-                <ul className="text-sm text-amber-700 space-y-1">
+              <div className="bg-amber-900/20 border border-amber-700 rounded-xl p-6">
+                <h3 className="font-semibold text-amber-400 mb-2">Use Cases</h3>
+                <ul className="text-sm text-amber-200 space-y-1">
                   <li>• DDoS Detection</li>
                   <li>• Datenexfiltration</li>
                   <li>• Compliance Auditing</li>

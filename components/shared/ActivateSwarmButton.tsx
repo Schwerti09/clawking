@@ -228,7 +228,7 @@ export function ActivateSwarmButton({ slug, isPro = false }: Props) {
               <button
                 type="button"
                 onClick={() => setOpen(false)}
-                className="mt-3 w-full text-xs text-gray-600 hover:text-gray-400 transition-colors"
+                className="mt-3 w-full text-xs text-gray-400 hover:text-gray-300 transition-colors"
               >
                 Cancel
               </button>

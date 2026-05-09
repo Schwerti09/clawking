@@ -183,7 +183,7 @@ export function ShadowRealmOverlay({ onUpgrade, tier }: ShadowRealmOverlayProps)
                         <Icon className="w-5 h-5" style={{ color: '#A1A1AA' }} />
                       </div>
                       <h3 className="text-sm font-semibold text-white mb-1">{feature.title}</h3>
-                      <p className="text-xs text-gray-600 mb-3 leading-relaxed">{feature.description}</p>
+                      <p className="text-xs text-gray-400 mb-3 leading-relaxed">{feature.description}</p>
                       <div className="flex items-baseline gap-1.5">
                         <span className="text-2xl font-black text-white">{feature.value}</span>
                         <span className="text-[11px] text-gray-500">{feature.unit}</span>
@@ -238,7 +238,7 @@ export function ShadowRealmOverlay({ onUpgrade, tier }: ShadowRealmOverlayProps)
                 <Info className="w-3.5 h-3.5" />
                 Ab €9/Tag · Sofortzugang · Jederzeit kündbar
               </p>
-              <div className="flex items-center justify-center gap-4 text-xs text-gray-600">
+              <div className="flex items-center justify-center gap-4 text-xs text-gray-400">
                 <span className="flex items-center gap-1">
                   <Star className="w-3 h-3" style={{ color: '#EAB308' }} />
                   4.9/5

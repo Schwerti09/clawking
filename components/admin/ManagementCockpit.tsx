@@ -111,7 +111,7 @@ function RevenuePanel({ data }: { data: Revenue | null }) {
 
           <div className="text-xs uppercase tracking-widest text-gray-500 mb-2">Letzte 5 Transaktionen</div>
           {data.lastTransactions.length === 0 ? (
-            <p className="text-sm text-gray-600">Keine Transaktionen gefunden.</p>
+            <p className="text-sm text-gray-400">Keine Transaktionen gefunden.</p>
           ) : (
             <div className="space-y-2">
               {data.lastTransactions.map((tx, i) => (
@@ -206,7 +206,7 @@ function AffiliatePanel({ data }: { data: Affiliates }) {
           ))}
         </tbody>
       </table>
-      <p className="mt-3 text-xs text-gray-600">
+      <p className="mt-3 text-xs text-gray-400">
         Klick-Tracking via <code>/go/[slug]</code> · Sales aus Stripe-Metadata.
       </p>
     </div>
@@ -303,7 +303,7 @@ function SystemPanel({ data }: { data: System }) {
         </button>
 
         {!data.hasNetlifyToken && (
-          <p className="text-xs text-gray-600">
+          <p className="text-xs text-gray-400">
             ENV fehlt: <code>NETLIFY_AUTH_TOKEN</code> + <code>NETLIFY_SITE_ID</code>
           </p>
         )}
@@ -365,7 +365,7 @@ export default function ManagementCockpit() {
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div className="text-sm text-gray-400">
           Management Cockpit · auto-refresh 60s
-          {data && <span className="ml-2 text-gray-600">· {data.generatedAt.slice(0, 19).replace("T", " ")} UTC</span>}
+          {data && <span className="ml-2 text-gray-400">· {data.generatedAt.slice(0, 19).replace("T", " ")} UTC</span>}
         </div>
         <div className="flex gap-3">
           <a

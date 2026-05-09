@@ -175,9 +175,9 @@ export default async function CveFixPage(props: Props) {
           <span className="text-xs font-mono text-gray-400">
             CVSS <strong className="text-white">{entry.cvssScore}</strong>/10
           </span>
-          <span className="text-xs text-gray-600">·</span>
+          <span className="text-xs text-gray-400">·</span>
           <span className="text-xs text-gray-500">Published: {entry.publishedDate}</span>
-          <span className="text-xs text-gray-600">·</span>
+          <span className="text-xs text-gray-400">·</span>
           <span className="text-xs text-gray-500">{entry.affectedSoftware}</span>
         </div>
 

@@ -38,8 +38,8 @@ export default function AwsSecurityPage({ params }: { params: { lang: string } }
     <div className="container mx-auto px-4 py-8">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <div className="max-w-4xl mx-auto">
-        <div className="bg-orange-50 border-l-4 border-orange-400 p-4 mb-8 text-sm">
-          <strong>ClawGuru AWS</strong>: Nicht ein Pentest — sondern automatisiertes AWS Security Assessment und Well-Architected Review.
+        <div className="bg-orange-900/20 border-l-4 border-orange-500 p-4 mb-8 text-sm">
+          <strong className="text-orange-400">ClawGuru AWS</strong>: Nicht ein Pentest — sondern automatisiertes AWS Security Assessment und Well-Architected Review.
         </div>
         <h1 className="text-4xl font-bold mb-4 text-gray-100">AWS Security Architecture</h1>
         <p className="text-lg text-gray-300 mb-8">AWS Well-Architected Security Pillar implementieren — von IAM Least Privilege über CloudTrail bis hin zu Security Hub und GuardDuty.</p>

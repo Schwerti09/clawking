@@ -130,7 +130,7 @@ export default async function ProvenancePage(
           </p>
           <SignatureCountBadge count={chain.totalSignatures} />
 
-          <div className="mt-4 flex flex-wrap gap-2 text-[11px] text-gray-600">
+          <div className="mt-4 flex flex-wrap gap-2 text-[11px] text-gray-400">
             <span className="px-2 py-1 rounded-lg border border-gray-800 bg-black/20">
               📌 Append-only hash-chain
             </span>

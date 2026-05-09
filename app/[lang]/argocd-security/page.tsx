@@ -96,9 +96,9 @@ export default async function ArgoCDSecurityPage({
             </p>
 
             <div className="grid md:grid-cols-3 gap-6 mb-8">
-              <div className="bg-cyan-50 border border-cyan-200 rounded-xl p-6">
-                <h3 className="font-semibold text-cyan-900 mb-2">Authentication</h3>
-                <ul className="text-sm text-cyan-800 space-y-1">
+              <div className="bg-cyan-900/20 border border-cyan-700 rounded-xl p-6">
+                <h3 className="font-semibold text-cyan-400 mb-2">Authentication</h3>
+                <ul className="text-sm text-cyan-200 space-y-1">
                   <li>• OIDC/Dex Integration</li>
                   <li>• SSO (Okta, Azure AD)</li>
                   <li>• Local Users (avoid!)</li>

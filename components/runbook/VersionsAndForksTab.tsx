@@ -60,7 +60,7 @@ function VersionCard({ v, onFork }: { v: RunbookVersion; onFork?: () => void }) 
           {sourceLabel(v.source)}
         </span>
         <span className="text-xs font-mono text-gray-500">{v.version}</span>
-        <span className="text-xs text-gray-600">{v.timestamp}</span>
+        <span className="text-xs text-gray-400">{v.timestamp}</span>
         <span className="ml-auto inline-flex items-center gap-1 px-2 py-0.5 rounded-lg border border-cyan-500/40 bg-cyan-500/10 text-xs font-bold text-cyan-300">
           ⚡ {v.score}
         </span>
@@ -68,7 +68,7 @@ function VersionCard({ v, onFork }: { v: RunbookVersion; onFork?: () => void }) 
       <div className="text-sm font-bold text-gray-200">{v.label}</div>
       <div className="mt-1 text-xs text-gray-400">{v.changes}</div>
       {v.forkedBy && (
-        <div className="mt-1 text-xs text-gray-600">by {v.forkedBy}</div>
+        <div className="mt-1 text-xs text-gray-400">by {v.forkedBy}</div>
       )}
 
       {v.diffs.length > 0 && (
@@ -118,11 +118,11 @@ function MrCard({ mr }: { mr: MergeRequest }) {
         <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-lg border text-xs font-bold ${statusColor}`}>
           {mr.status === "approved" ? "✓ Approved" : mr.status === "rejected" ? "✗ Rejected" : "⏳ Pending"}
         </span>
-        <span className="text-xs text-gray-600">{mr.createdAt}</span>
+        <span className="text-xs text-gray-400">{mr.createdAt}</span>
       </div>
       <div className="text-sm font-bold text-gray-200">{mr.title}</div>
       {mr.description && <div className="mt-1 text-xs text-gray-400">{mr.description}</div>}
-      <div className="mt-1 text-xs text-gray-600">from {mr.userEmail}</div>
+      <div className="mt-1 text-xs text-gray-400">from {mr.userEmail}</div>
     </div>
   )
 }

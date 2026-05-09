@@ -10,7 +10,7 @@
   "hero": {
     "badge": "Operasionele Pro-Intelligensie",
     "subtitle": "Die lewendige miselium van 1M+ runbooks. Elke knoop 'n eenheid van kennis, elke rand 'n semantiese verhouding. Force-directed graph, Darwinian Evolution Engine, en Oracle Mode – die wêreld se mees gevorderde ops kennisbasis.",
-    "ctaMycelium": "Living Mycelium →",
+    "ctaMycelium": "Leef Mycelium →",
     "ctaCopilot": "Vra Copilot",
     "ctaProKits": "Pro Kits (Stripe)",
     "ctaIntel": "Intel Feed",
@@ -24,12 +24,12 @@
     "featureCopilotDesc": "Gesprek → Runbook",
     "featureVault": "Vault",
     "featureVaultDesc": "Verwysings & Patrone",
-    "featureAcademy": "Academy",
+    "featureAcademy": "Akademi",
     "featureAcademyDesc": "Sprints, nie kursusse nie",
     "titleSuffix": "Mycelial Singularity Engine v3.0",
-    "knowledgeEdges": "Knowledge Edges",
-    "genesisProtocol": "Genesis Protocol",
-    "nodeTooltip": "Knowledge Node",
+    "knowledgeEdges": "Kennisranden",
+    "genesisProtocol": "Genesis Protokol",
+    "nodeTooltip": "Kennisnoot",
     "scrollLabel": "Scroll",
     "cta_primary": "Begin Sekuriteitstoets Nou →",
     "cta_secondary": "Blaai deur Runbooks",
@@ -184,7 +184,7 @@
     "subtitle": "Elke bladsy is 'n ingangspunt: Probleem → Herstel → Verifikasie."
   },
   "pricing": {
-    "accessBadge": "Access · Pricing",
+    "accessBadge": "Toegang · Prysing",
     "title": "Kies Jou Toegang",
     "subtitle": "Begin gratis. Dagpas vir akute insidente. Pro vir permanente toegang. Spanne vir samewerking.",
     "emergencyText": "Sekuriteitsinsident?",
@@ -583,7 +583,7 @@
     "hero_tryNow": "Probeer dit gratis",
     "live_title": "Regstreekse Monitering",
     "live_sub": "Probeer kernfunksies reg hier. Sien hoe ons probleme oplos, risiko's voorspel en infrastruktuur versterk.",
-    "live_preview_kicker": "LIVE",
+    "live_preview_kicker": "LEW",
     "live_preview_title": "Intel-voorskou",
     "live_preview_empty": "Geen insidente gevind nie.",
     "live_stats_checks": "Kontroles vandag",
@@ -690,9 +690,9 @@
     "solution_p3_desc": "Git commit, oudit verslag, sertifikaat. Elke uitvoering is gedokumenteer en naspeurbaar.",
     "tools_title": "Gereedskap vir egte sekuriteit operasies",
     "tools_sub": "Van insident respons na versterking na nakoming – alles in een platform.",
-    "tools_t1_title": "Summon",
+    "tools_t1_title": "Sammon",
     "tools_t1_desc": "Beskryf jou probleem – ClawGuru vind ooreenstemmende runbooks en begin uitvoering.",
-    "tools_t2_title": "Intel Feed",
+    "tools_t2_title": "Intele Feed",
     "tools_t2_desc": "Egte tyd bedreigings intelligensie. Outomatiese risiko analise vir jou infrastruktuur.",
     "tools_t3_title": "OpsWall",
     "tools_t3_desc": "Live monitoring van jou stelsels. Opsporing van afwykings en bedreigings in egte tyd.",
@@ -727,7 +727,7 @@
     "summon_example2": "My AWS-gevalle word aangeval, hoe keer ek dit?",
     "summon_example3": "Kubernetes-cluster toon oop poorte – tree onmiddellik op!",
     "summon_placeholder": "Ek het 'n kritieke SSH-kwesbaarheid ontdek – wat nou?",
-    "oracle_cve_title": "OpenSSH pre‑auth RCE",
+    "oracle_cve_title": "OpenSSH pre-auth RCE",
     "oracle_cve_severity": "Krities",
     "oracle_cve_desc": "Pre-auth kode-uitvoering in OpenSSH daemon onder spesifieke KEX-paaie.",
     "oracle_cve_runbook": "OpenSSH Noodlopieplan",
@@ -985,5 +985,1263 @@
     "final_cta_check": "Begin Regstreekse Sekuriteitsondersoek",
     "final_cta_downloads": "Blaai deur Aflaaie",
     "final_cta_note": "Geen registrasie nodig nie. 100% gratis. Geen kredietkaart."
+  },
+  "missions": {
+    "adversarial-blue-teaming": {
+      "title": "Blau team — verdedig die fortres",
+      "brief": "Die aanvaller kom. Verdedig die fortres. Detecteer, reager en herstel.",
+      "welcome": "Welkom tot die Blau Teaming opdrag. Die aanvaller kom. Gebruik 'monitor [bedreigingsvektor]' om aan te sien vir aanvale, 'detect [inbreuk]' om inbreuken te identificeer, 'reager [incident]' om incidenten te behandel en 'verbeter [verweer]' om beveiliging te verstevig.",
+      "success": "Blau teamings is met succes voltooid. Jy het bedreigingen gemonitoor, inbreuken gedetecteer, incidenten gereageer en verweer verbeterd. Die fortres is sterker.",
+      "goals": {
+        "monitor_label": "Monitor vir bedreigings",
+        "monitor_hint": "monitor netwerktraffiek",
+        "detect_label": "Detecteer inbreuken",
+        "detect_hint": "detecteer onbevoegde toegang",
+        "respond_label": "Reager op incidenten",
+        "respond_hint": "reager op inhouding",
+        "improve_label": "Verbeter verweer",
+        "improve_hint": "verbeter detectieregels"
+      }
+    },
+    "adversarial-ml-security": {
+      "title": "ML beveiliging — verdedig die model",
+      "brief": "ML modellen is aanvalsopvattings. Verdedig tegen adversiale ML.",
+      "welcome": "Welkom tot die ML Beveiliging opdrag. ML modellen is aanvalsopvattings. Gebruik 'beoordeel [kwetsbaarheid]' om riske te identificeer, 'implementeer [data-beveiliging]' om data te bescherm, 'implementeer [bewaking]' om die model te bewaak en 'verifieer ml-beveiliging' om die verdediging te bevestig.",
+      "success": "ML beveiliging is bereikt. Jy het kwetsbaarhede beoordeel, data-beveiliging geïmplementeer, bewaking geïmplementeer en verdediging geverifieer. Die ML model is nu tegen adversiale aanvalsopvattings bescherm.",
+      "goals": {
+        "assess_label": "Beoordeel model kwetsbaarhede",
+        "assess_hint": "beoordeel data-vergifing",
+        "implement_label": "Implement data security",
+        "implement_hint": "implement data validasi",
+        "deploy_label": "Implementeer modelbewaking",
+        "deploy_hint": "implementeer drift-detectie",
+        "verify_label": "Verifieer ML-beveiliging",
+        "verify_hint": "verifieer ml-beveiliging"
+      }
+    },
+    "adversarial-osint": {
+      "title": "OSINT — Open Bron Informatie Onderzoek",
+      "brief": "Publieke informatie is inlichtingen. Verzamel, analyseer en handel.",
+      "welcome": "Welkom tot die OSINT missie. Publieke informatie is inlichtingen. Gebruik 'identificeer [behoefte]' om vereisten te definieer, 'verzamel [OSINT-bron]' om data te verzamel, 'analyseer [vindeling]' om resultaten te interpreteer en 'toepas [OSINT-inlichtingen]' om actie te neem.",
+      "success": "OSINT voltooid met succes. Jy identificeerde behoeftes, verzamelde data, analyseerde vindelingen en toepas inlichtingen. Publieke informatie is nu handeleerbare inlichtingen.",
+      "goals": {
+        "identify_label": "Identificeer inlichtingsbehoeftes",
+        "identify_hint": "identificeer bedreigingslandschap",
+        "collect_label": "Verzamel OSINT data",
+        "collect_hint": "verzamel sosiale media",
+        "analyze_label": "Analyseer vindelingen",
+        "analyze_hint": "analyseer blootgestelde referenties",
+        "apply_label": "Toepas inlichtingen",
+        "apply_hint": "toepas risicobeheersing"
+      }
+    },
+    "adversarial-pattern-recognition": {
+      "title": "Herken aanvalspatronen onder druk",
+      "brief": "Die aanvaller is levendig. Herken die patroon, implementeer die tegenmaatregel en verskyn op een hoger niveau.",
+      "welcome": "Welkom tot die Adversarial Pattern Recognition missie. Die aanvaller is levendig — kan jy die patronen herken? Gebruik 'inspekteer stroom' om die aanval te sien, 'identificeer [patroonnaam]' om die patroon te herkenn, 'implementeer [tegenmaatregel]' om te verdedig en 'verifieer verdediging' om te bevestig.",
+      "success": "Aanvalspatroon herken en tegenmaatregel geïmplementeer. Jy het jouw adversiale defensie vaardighede op een hoger niveau gebracht. Die aanvaller is geblokkeer.",
+      "goals": {
+        "inspect_label": "Inspekteer die aanvalstroom",
+        "inspect_hint": "inspekteer stroom",
+        "identify_label": "Herken die aanvalspatroon",
+        "identify_hint": "herken brute-force",
+        "deploy_label": "Implementeer die tegenmaatregel",
+        "deploy_hint": "implementeer rate-limiting",
+        "verify_label": "Verifieer die verdediging",
+        "verify_hint": "verifieer verdediging"
+      }
+    },
+    "adversarial-purple-teaming": {
+      "title": "Purple Teaming — Rood + Blou Samenwerking",
+      "brief": "Rood en blou teams werk saam. Samenwerkende beveiligingsprentstoelings.",
+      "welcome": "Welkom tot die Purple Teaming missie. Rood en blou teams werk saam. Gebruik 'coördineer [betrekkingspunt]' om die oefening te plan, 'monitor [respons]' om die blou team te volg, 'analyseer [leemte]' om zwakke plekke te identificeer en 'verbeter [samenwerking]' om teamwerk te versterk.",
+      "success": "Purple teaming voltooid met succes. Jy coördineerde betrokkenheid, monitorde respons, analyseerde leemtes en verbeterde samenwerking. Rood en blou teams werk nu effektief saam.",
+      "goals": {
+        "coordinate_label": "Coördineer rood team betrokkenheid",
+        "coordinate_hint": "coördineer regels van betrekkingspunt",
+        "monitor_label": "Monitor blou team respons",
+        "monitor_hint": "monitor detectie-tyd",
+        "analyze_label": "Analyseer leemtes",
+        "analyze_hint": "analyseer detectie-leemtes",
+        "improve_label": "Verbeter samenwerking",
+        "improve_hint": "verbeter gezamenlike planing"
+      }
+    },
+    "adversarial-ransomware": {
+      "title": "Ransomeware-verweer - bereid je voor op het ergste",
+      "brief": "Ransomeware is onvermijdelijk. Bereid, detecteer, reageer.",
+      "welcome": "Welkom bij de Ransomeware Verweer missie. Ransomeware is onvermijdelijk. Gebruik 'implement [back-uptype]' om back-ups te maken, 'deploy [detectie]' om monitoring toe te voegen, 'creëer [reageerplan]' om je voor een aanval voor te bereiden en 'verifieer ransomeware-verweer' om je klaarheid te bevestigen.",
+      "success": "Ransomeware verweer bereikt. Je hebt back-ups geïmplementeerd, detectie ingezet, een reageerplan gecreëerd en de verdediging geverifieerd. Wanneer ransomeware toeslaat, ben je klaar.",
+      "goals": {
+        "implement_label": "Implementeer back-upstrategie",
+        "implement_hint": "implementeer offline-back-ups",
+        "deploy_label": "Inzet detectie",
+        "deploy_hint": "implementeer gedragsanalyse",
+        "create_label": "Creëer reageerplan",
+        "create_hint": "creëer isolatieprocedures",
+        "verify_label": "Verifieer ransomeware-verdediging",
+        "verify_hint": "verifieer ransomeware-verdediging"
+      }
+    },
+    "adversarial-red-teaming": {
+      "title": "Red teaming - denk als de aanvaller",
+      "brief": "Om te verdedigen, moet je aanvallen. Denk als de aanvaller om kwetsbaarheden te vinden.",
+      "welcome": "Welkom bij de Red Teaming missie. Om te verdedigen, moet je aanvallen. Gebruik 'recon [doel]' om inlichtingen te verzamelen, 'exploit [kwetsbaarheid]' om verdedigingen te testen, 'houd [toegangsmethode]' om persistentie na te bootsen en 'document bevindingen' om kwetsbaarheden te rapporteren.",
+      "success": "Red teaming succesvol voltooid. Je hebt inlichtingen verzameld, kwetsbaarheden geëxploiteerd, toegang behouden en bevindingen gedocumenteerd. Je denkt nu als de aanvaller om beter te verdedigen.",
+      "goals": {
+        "recon_label": "Inlichtingenverzameling",
+        "recon_hint": "recon web-applicatie",
+        "exploit_label": "Kwetsbaarheden exploiteren",
+        "exploit_hint": "exploit sql-injectie",
+        "maintain_label": "Toegang behouden",
+        "maintain_hint": "houd backdoor open",
+        "document_label": "Bevindingen documenteren",
+        "document_hint": "document bevindingen"
+      }
+    },
+    "adversarial-social-engineering": {
+      "title": "Sociale techniekverdediging - mensen zijn de zwakste schakel",
+      "brief": "De meest geavanceerde aanval richt zich op mensen. Verdedig je tegen sociale techniek.",
+      "welcome": "Welkom bij de Sociale Techniekverdediging missie. De meest geavanceerde aanval richt zich op mensen. Gebruik 'identificeer [vector]' om aanvalsvectoren te herkennen, 'implementeer [beveiligingscontrole]' om beschermingen toe te voegen, 'train [team]' om het team te onderwijzen en 'verifieer verdediging' om klaarheid te bevestigen.",
+      "success": "Sociale techniekverdediging bereikt. Je hebt vectoren geïdentificeerd, controles geïmplementeerd, het team getraind en de verdediging geverifieerd. Mensen zijn niet langer de zwakste schakel.",
+      "goals": {
+        "identify_label": "Identificeer phishingvectoren",
+        "identify_hint": "identificeer e-mailphishing",
+        "implement_label": "Implementeer e-mailsveiligheid",
+        "implement_hint": "implementeer SPF-DKIM-DMARC",
+        "train_label": "Train het team",
+        "train_hint": "train werknemers",
+        "verify_label": "Verdediging verifiëren",
+        "verify_hint": "verifieer verdediging"
+      }
+    },
+    "adversarial-supply-chain": {
+      "title": "Supply chain beveiliging - vertrouw niemand",
+      "brief": "Je afhankelijkheden zijn aanvalsvectoren. Beveilig de supply chain.",
+      "welcome": "Welkom bij de Supply Chain Beveiliging missie. Je afhankelijkheden zijn aanvalsvectoren. Gebruik 'inventaris [afhankelijkheidstype]' om afhankelijkheden te catalogiseren, 'verifieer [integriteitscontrole]' om pakketten te valideren, 'implementeer [SBOM]' om een software bill of materials te creëren en 'verifieer supply-chain' om beveiliging te bevestigen.",
+      "success": "Supply chain beveiliging verwyder. Julle het afhankelijkhede inventariseer, integriteit verifieer, SBOM implementeer en die verskafketen verifieer. Vertrouw nie op wie dan ook — verifieer alles.",
+      "goals": {
+        "inventory_label": "Afhankelijkhede inventariseer",
+        "inventory_hint": "npm-pakkete inventariseer",
+        "verify_label": "Verskafketen beveiliging verifieer",
+        "verify_hint": "verskafketen verifieer",
+        "implement_label": "SBOM implementeer",
+        "implement_hint": "cyclonedx implementeer"
+      }
+    },
+    "adversarial-threat-intel": {
+      "title": "Bedreiging inlichtingen — ken jou wederstander",
+      "brief": "Inlichtingsgedreven beveiliging. Ken jou wederstanders voor dat hulle aanval doen.",
+      "welcome": "Welkom tot die Bedreiging Inlichtingen missie. Inlichtingsgedreven beveiliging. Gebruik 'collect [data-bron]' om bedreigingsgegevens in te samel, 'analyseer [aansager]' om aanvallers te begryp, 'produkte [inlichtingssoort]' om inlichtingen te skep en 'toepas [inlichtingen]' om die verdedigingslinie te versterk.",
+      "success": "Bedreiging inlichtingen verwyder. Julle het gegevens in samel, aanvallers geanalyseer, inlichtingen geprodukte en dit toepas op verdedigingslinie. Julle ken nou jou wederstanders voor dat hulle aanval doen.",
+      "goals": {
+        "collect_label": "Bedreigingsgegevens in samel",
+        "collect_hint": "open-source-inlichtingen in samel",
+        "analyze_label": "Bedreigingsaansagers analyseer",
+        "analyze_hint": "apt-groepen analyseer",
+        "produce_label": "Inlichtingen produkteer",
+        "produce_hint": "strategiese inlichtingen skep",
+        "apply_label": "Inlichtingen toepas",
+        "apply_hint": "detectie-regels toepas"
+      }
+    },
+    "ai-agent-permissions": {
+      "title": "Toepas minste prent op AI-hulpprogramma's: pad toestaan-lys, verwijder execShell, domein witlis",
+      "brief": "AI kode-hulpprogramma het onbeperkte leesBestand, schrijfBestand, execShell, httpFetch. Eén injeksie = RCE. Toepas minste prent: pad toestaan-lys, bevestigingscodes vir schrijfbestande, shell verwyder, domein witlis.",
+      "welcome": "",
+      "success": "",
+      "goals": {
+        "read_label": "Controleer die onbeperkte hulpmiddel konfiguratie",
+        "read_hint": "cat tools.ts",
+        "ssrf_label": "Bevestig SSRF risik deur onbeperkte httpFetch",
+        "ssrf_hint": "aan SSRF aanval doe",
+        "readfile_label": "Voeg pad toestaan-lys toe aan leesBestand (/app/src, /app/docs net alleen)",
+        "readfile_hint": "leesbestand opgelos",
+        "writefile_label": "Vereis bevestigingscode vir schrijfBestand operaties",
+        "writefile_hint": "schrijfbestand opgelos",
+        "execshell_label": "Verwijder execShell — vervang met lintCode + runTests",
+        "execshell_hint": "execShell opgelos",
+        "httpfetch_label": "Voeg domein toestaan-lys toe aan httpFetch",
+        "httpfetch_hint": "httpFetch opgelos",
+        "tests_label": "Voer bekwaamheid test suite uit — onbevoegde oproepe geblokkeer",
+        "tests_hint": "bekwaamheid test"
+      }
+    },
+    "aws-s3-bucket-policy": {
+      "title": "AWS S3 Bucket Policy: openbare toegang beperk en versleuteling afdwing",
+      "brief": "Jouw S3 bucket staan openbare leestoegang met geen versleuteling toe. Hardneem dit: openbare toegang verwyder, beperk tot IAM rol, versleuteling afdwing, openbare ACL's blokkeer.",
+      "welcome": "",
+      "success": "",
+      "goals": {
+        "inspect_label": "Bekijk die bucket-beleid",
+        "inspect_hint": "cat bucket-policy.json",
+        "public_label": "Verwijder openbare leestoegang",
+        "public_hint": "patch public-access",
+        "iam_label": "Voeg spesifieke IAM rolbeperking toe",
+        "iam_hint": "patch iam-role",
+        "encryption_label": "Voeg versleutelingseisen by",
+        "encryption_hint": "patch encryption",
+        "acls_label": "Blokkeer openbare ACLs",
+        "acls_hint": "patch block-acls",
+        "apply_label": "Valideer met AWS CLI",
+        "apply_hint": "aws s3api put-bucket-policy"
+      }
+    },
+    "backup-restore-drill": {
+      "title": "Herstel die dagelijkse backup voor die SLA-breuk",
+      "brief": "Hoofd-db is op 03:14 corrupt. Replica is lag. Herstel uit die dagelijkse naar 'n sidecar, verifieer skema + rijen, tekens af — zonder direkte herstel na produktyf.",
+      "welcome": "",
+      "success": "",
+      "goals": {
+        "list_label": "Lijst beschikbare backups",
+        "list_hint": "ls",
+        "verify_label": "Verifieer archiefintegriteit (pg_restore --list)",
+        "verify_hint": "pg_restore --list nightly-2026-04-25-0300.dump",
+        "sidecar_label": "Spin 'n sidecar postgres op vir veilige herstel",
+        "sidecar_hint": "sidecar up",
+        "restore_label": "Herstel die dagelijkse backup naar sidecar",
+        "restore_hint": "pg_restore --dbname=sidecar nightly-2026-04-25-0300.dump",
+        "validate_label": "Rijteltal + skema stem op verwagte vorm",
+        "validate_hint": "psql sidecar -c 'SELECT count(*) FROM users'",
+        "signoff_label": "Audit tekens af — herstel is reëel",
+        "signoff_hint": "audit signoff"
+      }
+    },
+    "compliance-dora": {
+      "title": "DORA naleving — ICT risikobeheer",
+      "brief": "DORA vereist dat finansiele instellings ICT risik beheer. Vertaal dit na ingenieursbeheerskontrole.",
+      "welcome": "Welkom tot die DORA Naleving missie. DORA vereis dat finansiele instellings ICT risik beheer. Gebruik 'assess [risiko-domein]' om risike te evalueer, 'implement [testings-type]' om testings in te stel, 'document [verslagging]' om incident verslagging te skep en 'verifieer dora' om naleving te bevestig.",
+      "success": "DORA naleving bewerk. Jy evalueerde ICT risik, stel testings in, skep incident verslagging en verifieer naleving. DORA vereisten vertaal na ingenieursbeheerskontrole.",
+      "goals": {
+        "assess_label": "Beoordeel ICT risik",
+        "assess_hint": "beoordeel operationele-resiliëntie",
+        "implement_label": "Implementeer testings regime",
+        "implement_hint": "implementeer penetrasie-testen",
+        "document_label": "Dokumenter incident verslagging",
+        "document_hint": "dokumenter incident-rapportering",
+        "verify_label": "Verifieer DORA-naleving",
+        "verify_hint": "verifieer Dora"
+      }
+    },
+    "compliance-dsgvo-art32": {
+      "title": "DSGVO Artikel 32 naleving — van die hoek tot aan die front",
+      "brief": "DSGVO Artikel 32 vereis 'van die hoek tot aan die front' beveiliging. Implementeer die regte.",
+      "welcome": "Welkom tot die DSGVO Artikel 32 Naleving missie. DSGVO Artikel 32 vereis 'van die hoek tot aan die front' beveiliging. Gebruik 'assess [beveiligingsdomein]' om posnede in te schat, 'implementeer [kontrol]' om van die hoek tot aan die front kontrole toe te voeg, 'dokumenteer [maatregel]' om dokumantatie te skep, en 'verifieer art32' om naleving te bevestig.",
+      "success": "DSGVO Artikel 32 naleving bewerkstred. Jy het posnede in geskatt, van die hoek tot aan die front kontrole toegevoeg, dokumantatie geskep en naleving verifieer. 'Van die hoek tot aan die front' is nu konkrete ingeniering.",
+      "goals": {
+        "assess_label": "Beoordeel huidige beveiligingsposnede",
+        "assess_hint": "beoordeel versleuteling",
+        "implement_label": "Implementeer van die hoek tot aan die front kontrole",
+        "implement_hint": "implementeer TLS-1.3",
+        "document_label": "Dokumenteer beveiligingsmaatregelen",
+        "document_hint": "dokumenteer tekniese maatstalle",
+        "verify_label": "Verifieer Artikel 32 naleving",
+        "verify_hint": "verifieer art32"
+      }
+    },
+    "compliance-eu-ai-act": {
+      "title": "EU AI Act naleving — tekniese verpligtinge",
+      "brief": "De EU AI Act stel tekniese verpligtinge vir AI-sisteeme op. Implementeer die regte.",
+      "welcome": "Welkom tot die EU AI Act Naleving missie. De EU AI Act stel tekniese verpligtinge vir AI-sisteeme op. Gebruik 'classificeer [risikoniveau]' om die risiko-kategorie te bepaal, 'implementeer [kwaliteitskontrol]' om kontrole toe te voeg, 'dokumenteer [tekniese dokumantatie]' om dokumantatie te skep, en 'verifieer eu-ai-act' om naleving te bevestig.",
+      "success": "EU AI Act naleving bewerkstred. Jy het die AI-systeem geklassificeerd, kwaliteitskontrole toegevoeg, tekniese vereiste gedokumenteer en naleving verifieer. EU AI Act verpligtinge is nu in ingenieringskontrole omgezet.",
+      "goals": {
+        "classify_label": "Classificeer AI-systeem risiko",
+        "classify_hint": "classificeer hoog",
+        "implement_label": "Implementeer kwaliteitsbeheer",
+        "implement_hint": "implementeer data-bestuur",
+        "document_label": "Dokumenteer tekniese dokumantatie",
+        "document_hint": "dokumenteer sistem-beschrijving",
+        "verify_label": "Verifieer EU AI Act naleving",
+        "verify_hint": "verifieer eu-ai-act"
+      }
+    },
+    "compliance-evidence-collection": {
+      "title": "Bewijsmateriaalverzameling — auditrede klaar",
+      "brief": "Naleving is nutteloos zonder bewijs. Verzamel en organiseer vir audit.",
+      "welcome": "Welkom tot die Bewijsmateriaalverzameling missie. Naleving is nutteloos zonder bewijs. Gebruik 'identificeer [bewijstype]' om vereiste te bepaal, 'verzamel [artefakt]' om bewijs te verwerf, 'organiseer [repositorie]' om die repositorie te struktureer, en 'verifieer auditrede klaar' om klaarheid te bevestig.",
+      "success": "Bewijsmateriaalverzameling voltooid met succes. Jy het vereiste geïdentificeer, bewijs verwerf, die repositorie gestruktureer en auditrede klaar verifieer. Naleving is nu met bewijs ondersteun.",
+      "goals": {
+        "identify_label": "Identificeer bewijsvereiste",
+        "identify_hint": "identificeer beleidsdokumente",
+        "collect_label": "Verzamel bewijsartefacten",
+        "collect_hint": "verzamel toegangslogge",
+        "organize_label": "Organiseer bewijsrepositorie",
+        "organize_hint": "organiseer bewijspmappe",
+        "verify_label": "Verifieer auditrede klaarheid",
+        "verify_hint": "verifieer auditrede-klaar"
+      }
+    },
+    "compliance-iso27001": {
+      "title": "ISO27001 naleving — ISMS implementering",
+      "brief": "ISO27001 vereis 'Informasiebeveiligingsbeheersysteem'. Bouw dit op.",
+      "welcome": "Welkom tot die ISO27001 Naleving missie. ISO27001 vereis 'Informasiebeveiligingsbeheersysteem'. Gebruik 'definieer [omvattingsgrenze]' om grenzen te stel, 'implementeer [risikebeheer]' om risike te beheers, 'stel [kontrol] in' om kontrole toe te voeg, en 'verifieer iso27001' om naleving te bevestig.",
+      "success": "ISO27001-komplianse verwyk. Jy het ISMS-skop gedefinieer, risikobeheer geïmplementeer, beveiligingsregels vastgestel en komplianse geverifieer. ISO27001-vereisten omgeset na 'n werkende ISMS.",
+      "goals": {
+        "define_label": "Definieer ISMS-skop",
+        "define_hint": "definieer cloud-infrastruktuur",
+        "implement_label": "Implementeer risikobeheer",
+        "implement_hint": "implementeer risicopreking",
+        "establish_label": "Vaststel beveiligingsregels",
+        "establish_hint": "vaststel annex-a-regels",
+        "verify_label": "Verifieer ISO27001-komplianse",
+        "verify_hint": "verifieer iso27001"
+      }
+    },
+    "compliance-soc2": {
+      "title": "SOC2 Type II-komplianse — beveiligingsregels",
+      "brief": "SOC2 Type II vereist gedocumenteerde beveiligingsregels. Implementeer en bewijk.",
+      "welcome": "Welkom tot die SOC2 Type II Komplianse missie. SOC2 Type II vereis gedocumenteerde beveiligingsregels. Gebruik 'map [vertrouwensdiens]' om vereisten te identifiseer, 'implementeer [regel]' om regels toe te voeg, 'dokumenteer [bewijs]' om bewijs te skep en 'verifieer soc2' om komplianse te bevestig.",
+      "success": "SOC2 Type II-komplianse verwyk. Jy het vertrouwensdiense gemap, beveiligingsregels geïmplementeer, bewijs gedokumenteer en komplianse geverifieer. SOC2-vereisten omgeset na ingenieursregels.",
+      "goals": {
+        "map_label": "Map SOC2-vertrouwensdiense",
+        "map_hint": "map beveiliging",
+        "implement_label": "Implementeer beveiligingsregels",
+        "implement_hint": "implementeer toegangsbeheer",
+        "document_label": "Dokumenteer regelbewijs",
+        "document_hint": "dokumenteer beleidsdokumente",
+        "verify_label": "Verifieer SOC2-komplianse",
+        "verify_hint": "verifieer soc2"
+      }
+    },
+    "compliance-third-party-risk": {
+      "title": "Derde-partij risikobeheer",
+      "brief": "Jou beveiliging is net so sterk as jou zwakste leverancier. Beheer derde-partij risico.",
+      "welcome": "Welkom tot die Derde-partij Risikobeheer missie. Jou beveiliging is net so sterk as jou zwakste leverancier. Gebruik 'inventaris [leverantietype]' om leveranciers te katalogiseer, 'evaluer [risikoniveau]' om risiko te asses, 'implementeer [bewaking]' om oorzicht toe te voeg en 'verifieer risikobeheer' om dekking te bevestig.",
+      "success": "Derde-partij risikobeheer voltooid met sukses. Jy het leveranciers gekatalogiseer, risiko geëvalueer, bewaakingsmaatregels geïmplementeer en dekking geverifieer. Jou zwakste leverancier word nu bewaak.",
+      "goals": {
+        "inventory_label": "Inventariseer derde partijen",
+        "inventory_hint": "inventariseer cloud-leveranciers",
+        "assess_label": "Asses derde-partij risiko",
+        "assess_hint": "asses krities",
+        "implement_label": "Implementeer bewaakingsmaatregels",
+        "implement_hint": "implementeer continuë bewaaking",
+        "verify_label": "Verifieer risikobeheer",
+        "verify_hint": "verifieer risikobeheer"
+      }
+    },
+    "docker-compose-hardening": {
+      "title": "Harden die docker-compose stapel: verwyder root, verwijder socket, verplaats geheimen",
+      "brief": "Die staging compose-bestand het 5 kritieke probleme: onversleutelde geheimen, Docker-socket mount, root-gebruiker, geen resourteringsbeperkingen, mutabel rootfs. Vloek almal voor produktyie.",
+      "welcome": "",
+      "success": "",
+      "goals": {
+        "socket_label": "Verwyder Docker socket mount uit API-container",
+        "socket_hint": "repareer socket",
+        "secrets_label": "Verplaats DB/JWT geheimen van omgevingsvariabeles na Docker Geheimen",
+        "secrets_hint": "versterk geheime",
+        "user_label": "Voer containers uit as niet-root gebruiker (gebruiker: '1000:1000')",
+        "user_hint": "versterk gebruiker",
+        "readonly_label": "Stel read_only in op waar + tmpfs vir /tmp",
+        "readonly_hint": "versterk read-only",
+        "limits_label": "Voeg geheugen + CPU ressourter limiete by",
+        "limits_hint": "versterk limiete",
+        "security_label": "Voeg beveiligingsopties by: no-new-privileges:true",
+        "security_hint": "versterk beveiliging"
+      }
+    },
+    "docker-nonroot": {
+      "title": "Verzend 'n niet-root Dockerfile voor dit hit Staging",
+      "brief": "Jouw Dockerfile dra als root en skryf elders. Verhard dit: niet-root gebruiker, read-only rootfs, HEALTHCHECK, scan met Trivy.",
+      "welcome": "",
+      "success": "",
+      "goals": {
+        "inspect_label": "Inspecteer die Dockerfile",
+        "inspect_hint": "sien Dockerfile",
+        "nonroot_label": "Voeg 'n niet-root USER richtlijn by",
+        "nonroot_hint": "patch nietroot",
+        "readonly_label": "Stel read-only werkmap machtigings in",
+        "readonly_hint": "pas `readonly` aan",
+        "health_label": "Voeg HEALTHCHECK by",
+        "health_hint": "pas `healthcheck` aan",
+        "build_label": "Valideer met 'docker build'",
+        "build_hint": "docker build .",
+        "scan_label": "Trivy scan rein",
+        "scan_hint": "trivy afbeelding clawguru-api:lokale"
+      }
+    },
+    "fail2ban-setup": {
+      "title": "Fail2ban: bescherm SSH tegen brute-kracht aanval",
+      "brief": "Jouw SSH-server is onder brute-kracht aanval. Configureer fail2ban: inschakel sshd jail, verlaag bantime na 3600s, maxretry na 3, verhard poort.",
+      "welcome": "",
+      "success": "",
+      "goals": {
+        "inspect_label": "Inspecteer die fail2ban configuratie",
+        "inspect_hint": "sien /etc/fail2ban/jail.lokale",
+        "enable_label": "Inschakel sshd jail",
+        "enable_hint": "pas `enable` aan",
+        "bantime_label": "Verlaag bantime na 3600 sekondes",
+        "bantime_hint": "pas `bantime` aan",
+        "maxretry_label": "Verlaag maxretry na 3",
+        "maxretry_hint": "pas `maxretry` aan",
+        "port_label": "Voeg poort verharding by",
+        "port_hint": "pas `port` aan",
+        "restart_label": "Herstart fail2ban dienst",
+        "restart_hint": "herstart fail2ban",
+        "status_label": "Control jail status",
+        "status_hint": "fail2ban-client status sshd"
+      }
+    },
+    "gdpr-data-minimization": {
+      "title": "GDPR Data Minimisering: verminder dataverzameling tot essentiële enkelde",
+      "brief": "Jouw gebruikersschema verwerft te veel data (telefoonnummer, adres, geboortedatum, IP, user-agent). Verminder tot essentiële velden: implementeer een datretentiebeleid, recht om vergeten te worden, en update jouw privacybeleid.",
+      "welcome": "",
+      "success": "",
+      "goals": {
+        "inspect_label": "Inspecteer het gebruikersschema",
+        "inspect_hint": "sien user-schema.sql",
+        "remove_label": "Verwijder onnodige velden",
+        "remove_hint": "verwijder overskone",
+        "retention_label": "Voeg datretentiebeleid toe",
+        "retention_hint": "pas behoudtijd aan",
+        "rtbf_label": "Voeg recht om vergeten te worden functie toe",
+        "rtbf_hint": "pas RTBF aan",
+        "privacy_label": "Update privacybeleid documentatie",
+        "privacy_hint": "pas privasi-beleid aan",
+        "validate_label": "Valideer naleving",
+        "validate_hint": "valideer naleving"
+      }
+    },
+    "github-actions-hardening": {
+      "title": "GitHub Actions Hardening: beveilig CI/CD pijplijn",
+      "brief": "Jouw CI/CD pijplijn het geen beveiligingskontrole. Versterk dit: voeg vereiste beoordelaars toe, omgevingbescherming, geheimenvalidatie, takbeschermingsregels.",
+      "welcome": "",
+      "success": "",
+      "goals": {
+        "inspect_label": "Inspecteer de workflow",
+        "inspect_hint": "sien .github/workflows/deploy.yml",
+        "reviewers_label": "Voeg vereiste beoordelaars toe",
+        "reviewers_hint": "pas beoordeelaars aan",
+        "environment_label": "Voeg omgevingbescherming toe",
+        "environment_hint": "pas omgeving aan",
+        "secrets_label": "Voeg geheimenvalidatie toe",
+        "secrets_hint": "pas geheimen aan",
+        "branch_label": "Voeg takbeschermingsregels toe",
+        "branch_hint": "pas takbescherming aan",
+        "test_label": "Test de versterkte workflow",
+        "test_hint": "test werkstroom"
+      }
+    },
+    "hodlberg-acquisition-breach": {
+      "title": "Die Akvisitie Breuk — Deel IV",
+      "brief": "Drie jaar later. 'n Akvisitie aanbieding op tafel. Due diligence onthullings 'n breuk. Die deal in gevaar.",
+      "welcome": "Welkom tot die Hodlberg Akvisitie Breuk missie. Drie jaar later, 'n akvisitie aanbieding op tafel. Due diligence onthullings 'n breuk. Gebruik 'conduct [diligence]' om te onderzoek, 'assess [acquisition-impact]' om die deal impact te evalueer, 'negotiate [term]' om termine aan te pas, en 'close [deal]' om die akvisitie af te sluit.",
+      "success": "Akvisitie breuk opgelos. Jy onderzocht due diligence, evalueerde impact, onderhandelde termine, en sloot die deal af. Die breuk het bijna die akvisitie verwyder, maar Hodlberg AG is verworven.",
+      "goals": {
+        "conduct_label": "Voer due diligence uit",
+        "conduct_hint": "voer beveiligings-audit uit",
+        "assess_label": "Beoordeel overname-impact",
+        "assess_hint": "beoordeel deal-waardering",
+        "negotiate_label": "Onderhandel met de overnemer",
+        "negotiate_hint": "onderhandel prijs-aanpassing",
+        "close_label": "Sluit de deal",
+        "close_hint": "sluit uiteindelike overeenkomst"
+      }
+    },
+    "hodlberg-catastrophe": {
+      "title": "Die Katastrofe — Akte VII",
+      "brief": "Die uiteindelike test. 'n Katastrofale inbreuk dreig alles. Die overlevings van die bedryf hang af.",
+      "welcome": "Welkom tot die Hodlberg Katastrofe opdriek. Die uiteindelike test. Gebruik 'beoordeel [katastrof]' om die schade te begrijp, 'activeer [respons]' om die krisisteam te mobiliseer, 'uitvoer [herstel]' om die systeme te herbouw en 'herstel [vertrou]' om die vertrou weer op te bou.",
+      "success": "Katastrof overlev. Jy beoordeelde impact, activeerde respons, uitvoer herstel en herstel vertrou. Hodlberg AG overlev die uiteindelike test. Die bedryf is sterker as ooit.",
+      "goals": {
+        "assess_label": "Beoordeel katastrof-impact",
+        "assess_hint": "beoordeel totale data-verlies",
+        "activate_label": "Activeer krisisrespons",
+        "activate_hint": "activeer krisisteam",
+        "execute_label": "Uitvoer herstelplan",
+        "execute_hint": "uitvoer data-herstel",
+        "rebuild_label": "Herstel vertrou",
+        "rebuild_hint": "herstel transparantie"
+      }
+    },
+    "hodlberg-epilogue": {
+      "title": "Die Epiloog — Akte XI",
+      "brief": "Die verhaal sluit af. Wat as 'n rondt-inbreuk oor die begin het na 'n reis van transformatie gebleken. Die laatste hoofde.",
+      "welcome": "Welkom tot die Hodlberg Epiloog opdriek. Gebruik 'reflekter [reis]' om terug te kyk, 'vier [succes]' om die sukses te erkenn, 'eer [verloren]' om die verliere te herinner en 'overdraai [stok]' om die toekomst te sekerstel.",
+      "success": "Epoeloo voltooi. Jy reflekteerde oor die reis, vierde sukses, eer die verlore en overdraai die stok. Die Hodlberg verhaal sluit af, maar die erfenis lew in.",
+      "goals": {
+        "reflect_label": "Reflekter oor die reis",
+        "reflect_hint": "reflekter groei",
+        "celebrate_label": "Vier die sukses",
+        "celebrate_hint": "vier beveiligingsleiderschap",
+        "honor_label": "Eer die verlore",
+        "honor_hint": "eer verliere talent",
+        "pass_label": "Overdraai die stok",
+        "pass_hint": "overdraai volgende generatie"
+      }
+    },
+    "hodlberg-finale": {
+      "title": "Die Finale — Akte XII",
+      "brief": "Die laatste opdriek. Die uiteindelike test. Alles wat jy geleer, alles wat jy verwor, alles wat op die spel hangt. Die finale.",
+      "welcome": "Welkom tot die Hodlberg Finale opdriek. Gebruik 'confronteer [uitdaging]' om die uiteindelike dreiging te confronteer, 'toepas [les]' om alles wat jy geleer te gebruik, 'versla [vijand]' om die laatste vijand te overwin en 'voltooi [reis]' om die Hodlberg verhaal af te rond.",
+      "success": "Finale voltooi. Jy confronteerde die uiteindelike uitdaging, toepas alle lessen, versla die laatste vijand en voltooi die reis. Die Hodlberg verhaal is voltooid. Jy is nu 'n beveiligingsmeester.",
+      "goals": {
+        "face_label": "Confronteer die uiteindelike uitdaging",
+        "face_hint": "confronteer existentiële dreiging",
+        "apply_label": "Toepas alle lessen",
+        "apply_hint": "toepas beveiliging-eerst",
+        "defeat_label": "Versla die laatste vijand",
+        "defeat_hint": "verset die oorhede",
+        "complete_label": "Voltooi die reise",
+        "complete_hint": "voltooi die afsluiting"
+      }
+    },
+    "hodlberg-insider-threat": {
+      "title": "Die Inside Bedreiging — Akte V",
+      "brief": "Na aankoop. Integratie voltooid. Maar die reële bedreiging is binnenin. 'n Vertrouwde werknemer verkoel data.",
+      "welcome": "Welkom tot die Hodlberg Inside Bedreiging missie. Na aankoop, integratie voltooid. Maar die reële bedreiging is binnenin. Gebruik 'detect [aktiviteit]' om verdachte gedrag te vind, 'onderzoek [werknemer]' om die verdoele te controleer, 'verzamel [bewys]' om 'n zaak op te bou en 'beslis [handeling]' om jou respons te kies.",
+      "success": "Inside bedreiging behandel. Jy detecteerde aktiviteit, onderzocht die werknemer, verzamelde bewyse en beslisse oor actie. Die inside bedreiging is neutraliseer. Vertrouwe herstel.",
+      "goals": {
+        "detect_label": "Detecteer inside aktiviteit",
+        "detect_hint": "detecteer data-uitvoerings",
+        "investigate_label": "Onderzoek die werknemer",
+        "investigate_hint": "onderzoek achtergrond-controle",
+        "gather_label": "Verzamel bewyse",
+        "gather_hint": "verzamel schermafbeeldingen",
+        "decide_label": "Beslis: Verwerp of streef?",
+        "decide_hint": "beslis om te streef"
+      }
+    },
+    "hodlberg-ipo-breach": {
+      "title": "Die IPO Breach — Akte III",
+      "brief": "Twee jaar later. IPO-indiening onthef. Die aanvaller slaat op die slechtste mogelijke tijd.",
+      "welcome": "Welkom tot die Hodlberg IPO Breach missie. Twee jaar later, IPO-indiening onthef. Gebruik 'beoordeel [impakt]' om schade te evalueer, 'kommunikeer [belanghebbende]' om boodskap te beheer, 'navigeer [verpligting]' om juridieke vereiste te hanter en 'bescherm [IPO]' om die aanbieding te redde.",
+      "success": "IPO breach behandel. Jy beoordeelde impakt, kommunikeerde belanghebbende, navigeerde verpligtinge en beschermde die IPO. Die aanvaller probeer die IPO te kill, maar Hodlberg AG overleef.",
+      "goals": {
+        "assess_label": "Beoordeel IPO-impakt",
+        "assess_hint": "beoordeel financiële-onthulling",
+        "communicate_label": "Boodschap beheer aan belanghebbende",
+        "communicate_hint": "kommunikeer met raad van bestuur",
+        "navigate_label": "Navigeer juridieke verpligtinge",
+        "navigate_hint": "navigeer sec-indiening",
+        "protect_label": "Bescherm die IPO",
+        "protect_hint": "bescherm tyd-aanpassing"
+      }
+    },
+    "hodlberg-legacy": {
+      "title": "Die Erfenis — Akte X",
+      "brief": " Tien jaar later. Hodlberg AG is 'n beveiligingsleider. Die lessen geleer word industriestandaarde.",
+      "welcome": "Welkom tot die Hodlberg Erfenis missie. Tien jaar later, Hodlberg AG is 'n beveiligingsleider. Gebruik 'document [reis]' om die geschiedenis op te neem, 'deel [les]' om ander te onderwees, 'invloed [industrie]' om standaarde te stel en 'bouw [erfenis]' om 'n blijvende impact te creëer.",
+      "success": "Erfenis gebou. Jy documenteerde die reis, deel lessen, beïnvloedde die industrie en bou 'n blijvende erfenis. Hodlberg AG's lessen is nu industriestandaarde.",
+      "goals": {
+        "document_label": "Documenteer die reis",
+        "document_hint": "documenter breuk-geschiedenis",
+        "share_label": "Deel die lessen",
+        "share_hint": "deel beveiliging-eerst",
+        "influence_label": "Invloed die industrie",
+        "influence_hint": "invloed standaarde",
+        "build_label": "Bouw die erfenis",
+        "build_hint": "bouw beveiligings-kultur"
+      }
+    },
+    "hodlberg-redemption": {
+      "title": "Die Verlossing — Akte IX",
+      "brief": "Die nieuwe Hodlberg AG is gesukcesvol, maar die verleden haunt. Die oorlig aanvaller keert terug. Dit keer is dit persoonlik.",
+      "welcome": "Welkom tot die Hodlberg Redemption missie. Die nieuwe Hodlberg AG is gesukcesvol, maar die verleden haunt. Gebruik 'confront [verleden]' om die oorlig vijand te confronteer, 'defend [bedrijf]' om die nuwe onderneming te bescherm, 'turn [tabeln]' om terug te vecht, en 'achieve [redemtie]' om eindelijk die hoofstuk te sluit.",
+      "success": "Redemtie bewerkstelligd. Jy confronteer die verleden, bescherm die nuwe architectuur, dra tabel oor en bewerkstellig sloting. Die oorlig aanvaller is verslaan. Hodlberg AG is verlos.",
+      "goals": {
+        "confront_label": "Confronteer die verleden",
+        "confront_hint": "confronteer originele aanvaller",
+        "defend_label": "Verdedig die nuwe bedryf",
+        "defend_hint": "verdedig nuwe architectuur",
+        "turn_label": "Turn die tabel",
+        "turn_hint": "draai tegenslag",
+        "achieve_label": "Behaal redeemsing",
+        "achieve_hint": "behaal afsluiting"
+      }
+    },
+    "hodlberg-resurrection": {
+      "title": "Die Opstanding — Akte VIII",
+      "brief": "Uit die as, 'n nuwe begin. Die rampstand vernietig die ou Hodlberg AG. Nu, staai 'n nuwe bedryf op.",
+      "welcome": "Welkom tot die Hodlberg Opstanding missie. Uit die as, 'n nuwe begin. Gebruik 'assess [schade]' om te begrijp wat verliest is, 'ontwerp [architectuur]' om die nuwe grondslag te plan, 'implementeer [beveiliging]' om beveiligings-eerst te bou en 'lancering [bedryf]' om Hodlberg terug te bring.",
+      "success": "Opstanding voltooid. Jy asseserde schade, ontwerpte architectuur, implementeerde beveiligings-eerst en lancere die nuwe Hodlberg. Uit die as, 'n sterker bedryf op.",
+      "goals": {
+        "assess_label": "Asses die schade",
+        "assess_hint": "asses financieel-verlies",
+        "design_label": "Ontwerp die nuwe architectuur",
+        "design_hint": "ontwerp zero-trust",
+        "implement_label": "Implementeer beveiligings-eerst",
+        "implement_hint": "implementeer versleuteling",
+        "launch_label": "Lancering die nuwe Hodlberg",
+        "launch_hint": "lancering merk-heropstanding"
+      }
+    },
+    "hodlberg-seed-round-breach": {
+      "title": "Die Seed Round Breach — Akte I",
+      "brief": "Hodlberg AG sloot seed rond. Maar iemand toegang het investeur portal. Breach of vals alarm? Jy beslis.",
+      "welcome": "Welkom tot die Hodlberg Seed Round Breach missie. Hodlberg AG net hun seed rond gesloten — $2M in die bank. Maar iemand net toegang het investeur portal met admin kredensiale. Is dit 'n breach? Of 'n vals alarm? Jouw besluit bepaal die bedryf se lot. Gebruik 'onderzoek logge' om te sien wat gebeur, 'identificeer aanvalspad' om die aanvalsvector te vind, 'stop breach' om schade te beperk en 'notifie belanghebbende' om die naslepende te hanter.",
+      "success": "Die Seed Round Breach gestop. Jy identificeerde die aanvalsvector, stopte die schade en notifieerde belanghebbende. Hodlberg AG overlev, maar vertrou is beschadig. Die volgende akte sal jou vermogen om te herstel test.",
+      "goals": {
+        "investigate_label": "Onderzoek die breach",
+        "investigate_hint": "onderzoek logge",
+        "identify_label": "Identificeer die aanvalspad",
+        "identify_hint": "identificeer vector",
+        "contain_label": "Stop die breach",
+        "contain_hint": "stop breach",
+        "notify_label": "Notifie belanghebbende",
+        "notify_hint": "notifie belanghebbende"
+      }
+    },
+    "hodlberg-series-a-breach": {
+      "title": "Die Serie A Breach — Deel II",
+      "brief": "Se maand later. Serie A gesluit. Die aanvaller is terug. Dit keer na die kodebase.",
+      "welcome": "Welkom tot die Hodlberg Serie A Breach opdrig. Se maand later, Serie A gesluit. Die aanvaller is terug — dit keer na die kodebase. Gebruik 'onderzoek [bewys]' om aanwijings te verwerf, 'identificeer [vector]' om die aanvalspad te vind, 'beperk [sondag]' om bloedig te stop, en 'beslis [handeling]' om jou respons te kies. Betal of vecht?",
+      "success": "Serie A breek afhandel. Jy onderzocht, identificeer, beperk en beslis. Die aanvaller is terug, maar Hodlberg AG is sterker. Die verhaal voortduur.",
+      "goals": {
+        "investigate_label": "Onderzoek die nieuwe breek",
+        "investigate_hint": "onderzoek git-logge",
+        "identify_label": "Identificeer die aanvalvector",
+        "identify_hint": "identificeer verwyderde referentie",
+        "contain_label": "Beperk die schade",
+        "contain_hint": "beperk bronkode-onthulling",
+        "decide_label": "Beslis: Betaal of vecht?",
+        "decide_hint": "beslis om te vecht tegen die aanvaller"
+      }
+    },
+    "hodlberg-state-sponsored": {
+      "title": "Die Staat-Sponsorde Aanval — Akte VI",
+      "brief": "Vijf jaar later. Hodlberg AG is 'n uniek. 'n Staat-sponsorde akteur doel die bedrijf aan. Dit is kyberske oorlog.",
+      "welcome": "Welkom tot die Hodlberg Staat-Sponsorde Aanval missie. Vijf jaar later, Hodlberg AG is 'n uniek. 'n Staat-sponsorde akteur doel die bedrijf aan. Gebruik 'identificeer [akteur]' om die dreiging te herkennings, 'beoordeel [geopolitieke-impak]' om die nasleende te begryp, 'koordineer [regeringsdiens]' om met autoriteite te werk te gaan en 'verdedig [bedrijf]' om die bedryf te bescherm.",
+      "success": "Staat-sponsorde aanval behandel. Jy identificeer die akteur, beoordeel impact, koordineer met regeringsdiens en verdedig die bedrijf. Dit was kyberske oorlog, en Hodlberg AG overlevde.",
+      "goals": {
+        "identify_label": "Identificeer die dreigingakteur",
+        "identify_hint": "identificeer APT-groep",
+        "assess_label": "Beoordeel geopolitieke impak",
+        "assess_hint": "beoordeel risik vir sanksie",
+        "coordinate_label": "Koordineer met regeringsdiens",
+        "coordinate_hint": "koordineer met wet-handhaafing",
+        "defend_label": "Verdedig die bedrijf",
+        "defend_hint": "verdedig dreigingjag"
+      }
+    },
+    "incident-communication": {
+      "title": "Incident kommunikatie — transparant en tydig",
+      "brief": "Die incident is aan het skep. Kommunikeer transparant. Vertrou is op die lijn.",
+      "welcome": "Welkom tot die Incident Komunikatie missie. Die incident is aan het skep — kommunikeer transparant. Gebruik 'beoordeel [publiek]' om te identificeer wie die inlichtingen moet weet, 'opstel [berichtsoort]' om berichte te skep, 'beoordeel [bericht]' om die nauwkeurigheid te valideer en 'verstuur [kanaal]' om kommunikatie te lever. Vertrou is op die lijn.",
+      "success": "Incident kommunikatie met succes voltooid. Jy beoordeelde behoeftes, skepte berichte, beoordeelde die nauwkeurigheid en verstuurde kommunikatie. Vertrou gewaarborg deur transparantie. Stakeholdere informeer.",
+      "goals": {
+        "assess_label": "Beoordeel kommunikatiebehoeftes",
+        "assess_hint": "beoordeel intern-team",
+        "draft_label": "Skep intern bericht",
+        "draft_hint": "skep status-update",
+        "review_label": "Beoordeel berichte",
+        "review_hint": "beoordeel status-update",
+        "send_label": "Verstuur kommunikatie",
+        "send_hint": "verstuur e-pos"
+      }
+    },
+    "incident-containment-playbooks": {
+      "title": "Behoudingsspelboeke — stop die bloeding",
+      "brief": "Die breuk is levendig. Isoleer systeme, blokkeer die aanvaller, stop die schade.",
+      "welcome": "Welkom tot die Incident Behoudingsspelboeke missie. Die breuk is levendig — jy moet die bloeding stop. Gebruik 'identificeer vector' om die aanvalspad te vind, 'isoleer [systeem]' om die bevoordele systeme af te snij, 'blokkeer [aanvalder]' om die aanvaller te stop en 'verifieer behouding' om te bevestig dat die schade gebespeur is. Snelheid is krities.",
+      "success": "Incident met succes ingebind. Jy identificeer die aanvalsvector, isoleer bevoordele systeme, blokkeer die aanvaller en verifieer behouding. Die bloeding is gestop. Nu kan jy op herstel fokus.",
+      "goals": {
+        "identify_label": "Identificeer die aanvalvector",
+        "identify_hint": "identificeer phishing",
+        "isolate_label": "Isoleren van bevoordele systeme",
+        "isolate_hint": "isoleer web-server",
+        "block_label": "Blokkeer die aanvaller",
+        "block_hint": "blok ip-adres",
+        "verify_label": "Verifieer behoud",
+        "verify_hint": "verifieer behoud"
+      }
+    },
+    "incident-detection-basics": {
+      "title": "Vind die reële waarschuwing in die luidsprek",
+      "brief": "Filtre logluidsprek, triage die incident, activeer die regte playbook.",
+      "welcome": "",
+      "success": "",
+      "goals": {
+        "inspect_label": "Inspecteer die logstroom",
+        "inspect_hint": "cat /var/log/syslog",
+        "filter_label": "Filtreer vir kritieke gebeurtenisse",
+        "filter_hint": "grep -i kritiek /var/log/syslog",
+        "triage_label": "Triage die incident-ernis",
+        "triage_hint": "triage kritiek",
+        "alert_label": "Activeer die waarschuwing",
+        "alert_hint": "activeer kritiek"
+      }
+    },
+    "incident-drills": {
+      "title": "Incident-oefeningen — praktiek maak perfek",
+      "brief": "Playbooks zijn nuttig nie als jy nie gepraktie het. Voer die oefeningen uit en verbeter.",
+      "welcome": "Welkom tot die Incident Oefening missie. Playbooks zijn nuttig nie as jy nie gepraktie het. Gebruik 'ontwerp [scenario]' om 'n realistisieke oefening te skep, 'voer uit [oefentype]' om dit te voer, 'beoordeel [metriek]' om prestaties te meet, en 'verskyn [playbook]' om geleerde lessen in te sluit.",
+      "success": "Incident-oefeningen voltooid met succes. Jy ontwerp 'n scenario, voer die oefening uit, beoordeel prestaties, en verskyn playbooks. Praktiek maak perfek — jou team is nu beter voorbereid vir reële incidenten.",
+      "goals": {
+        "design_label": "Ontwerp oefenscenario",
+        "design_hint": "ontwerp data-breuk",
+        "execute_label": "Voer die oefening uit",
+        "execute_hint": "voer tabel-oefening uit",
+        "evaluate_label": "Beoordeel prestaties",
+        "evaluate_hint": "beoordeel respons-tyd",
+        "update_label": "Verskyn playbooks",
+        "update_hint": "verskyn playbook"
+      }
+    },
+    "incident-forensics": {
+      "title": "Forensiek zonder bewijs te vernietig",
+      "brief": "Die inbreuk is ingesluit. Onderzoek zonder bewijs te vernietig. Ketting van hoederdom is belangrik.",
+      "welcome": "Welkom tot die Incident Forensiek missie. Die inbreuk is ingesluit — nu onderzoek zonder bewijs te vernietig. Gebruik 'verzamel [bewijssoort]' om data te verwerf, 'behoud [bewijs]' om ketting van hoederdom te behoud, 'analyseer tydlijn' om die aanval te herstel, en 'dokumenteer bevindings' om die forensiek verslag te skep. Herinner: vernietig geen bewijs.",
+      "success": "Forensie-onderzoek voltooid met succes. Jy verzamelde bewijs veilig, behield ketting van hoederdom, analyseer die aanvalstydlijn, en documenteer bevindings. Die bewijs is vir legaal herbekijk bewaar, en geen bewijs is vernietig.",
+      "goals": {
+        "collect_label": "Verzamel bewijs veilig",
+        "collect_hint": "verzamel loggegevens",
+        "preserve_label": "Behoud ketting van hoederdom",
+        "preserve_hint": "behoud hash-verificatie",
+        "analyze_label": "Analyseer die aanvalstydlijn",
+        "analyze_hint": "analyseer tydlijn",
+        "document_label": "Dokumenteer bevindings",
+        "document_hint": "dokumenteer bevindings"
+      }
+    },
+    "incident-log-analysis": {
+      "title": "Incident Beheer: analyseer loggegevens om 'n inbreuk te detecteer",
+      "brief": "Jouw auth.log toon verdachte inlogmone. Analyseer logge: identificeer verdachte IP's, tel gesagde pogings, detect inbreuk, genereer rapport.",
+      "welcome": "",
+      "success": "",
+      "goals": {
+        "inspect_label": "Inspecteer die auth.log",
+        "inspect_hint": "cat /var/log/auth.log",
+        "suspicious_label": "Identificeer verdachte IP-adres",
+        "suspicious_hint": "analyse ip's",
+        "failed_label": "Tel gesagde inlogpogings per IP",
+        "failed_hint": "grep Failed",
+        "breach_label": "Identificeer geslaagde inbreuk",
+        "breach_hint": "grep aanvaard",
+        "report_label": "Genereer incidentrapport",
+        "report_hint": "genereer rapport",
+        "containment_label": "Aanbeveel behoudingsactie",
+        "containment_hint": "aanbevel behouding"
+      }
+    },
+    "incident-playbooks": {
+      "title": "Incident respons spelboeke — klaar om te voer",
+      "brief": "Wanneer die alarm afga, denk jy nie. Jy voer uit. Bouw die spelboeke.",
+      "welcome": "Welkom bij die Incident Respons Spelboeke opdracht. Wanneer die alarm afga, denk jy nie — jy voer uit. Gebruik 'skep [spelboektype]' om spelboeke te skep, 'voeg [stap]' om stappe toe te voeg, 'test [spelboek]' om te valideren, en 'bevestig gereedheid' om te bevestig dat jou team paraat is.",
+      "success": "Incident respons spelboeke voltooid met succes. Jy skepte spelboeke, voegde stappe toe, testte hulle en bevestigde gereedheid. Wanneer die alarm afga, sal jou team nie denk — hy sal uitvoer.",
+      "goals": {
+        "create_label": "Skep detectie spelboek",
+        "create_hint": "skep detectie",
+        "add_label": "Voeg stappe toe aan spelboeke",
+        "add_hint": "voeg trigger-voorwaarden toe",
+        "test_label": "Test die spelboeke",
+        "test_hint": "test droog-run",
+        "verify_label": "Bevestig gereedheid",
+        "verify_hint": "bevestig gereedheid"
+      }
+    },
+    "incident-postmortem": {
+      "title": "Incident post-mortem — leer en verbeter",
+      "brief": "Die incident is oor. Dokument wat gebeur, identificeer lessen geleer, en skep werkstroom. Leer uit die verledene en bouw 'n blameloze kultuur op.",
+      "welcome": "Welkom bij die Incident Post-Mortem opdracht. Die incident is oor — nou leer en verbeter. Gebruik 'dokument tydlijn' om wat gebeur te rekord, 'identificeer lessen' om inzicht te verwerf, 'skep werkstroom' om verbeteringen te plan, en 'del met belanghebbende' om bevindings te kommunikeer. Blameloze post-mortem.",
+      "success": "Post-mortem met succes voltooid. Jy documenteerde die tydlijn, identificeerde lessen geleer, skepte werkstroom en deel met belanghebbende. Die incident is nu 'n leerkans. Blameloze kultuur behoud.",
+      "goals": {
+        "document_label": "Dokumenteer die tydlijn",
+        "document_hint": "dokumenter tydlijn",
+        "identify_label": "Identificeer lessen geleer",
+        "identify_hint": "identificeer lessen",
+        "create_label": "Skep werkstroom",
+        "create_hint": "skep werkstroom",
+        "share_label": "Deel met belanghebbende",
+        "share_hint": "deel belanghebbende"
+      }
+    },
+    "incident-recovery": {
+      "title": "Incident herstel — herstel en verifieer",
+      "brief": "Die inbreuk is ingesluit. Herstel dienste uit backups en verifieer sistem integriteit.",
+      "welcome": "Welkom tot die Incident Recovery missie. Die inbreuk is ingesluit — nu herstel dienste en verifieer integriteit. Gebruik 'herstel [systeem]' om systeme weer online te breng, 'verifieer [integriteits-controle]' om geen achterdeurtjies te bevestig, 'monitor [anomalie-detectie]' om verdachte activiteit te bekam en 'dek herstel af' wanneer jy seker is.",
+      "success": "Die incident herstel is met succes voltooid. Jy het systeme uit backups herstel, integriteit verifieer, vir anomalie monitor en die herstel afdek as volslag. Dienste is weer normaal in bedryf met sekerheid.",
+      "goals": {
+        "restore_label": "Herstel uit backups",
+        "restore_hint": "herstel web-server",
+        "verify_label": "Verifieer sistem integriteit",
+        "verify_hint": "verifieer hash-verificatie",
+        "monitor_label": "Monitor vir anomalieë",
+        "monitor_hint": "monitor traffic-analyse",
+        "declare_label": "Dek herstel af",
+        "declare_hint": "dek herstel af"
+      }
+    },
+    "incident-root-cause": {
+      "title": "Wortel oorweeg — vind die waarom",
+      "brief": "Die incident is opgelos. Maar waarom het gebeur? Vind die worteloorzaak en stel aanbevelings voor herstel.",
+      "welcome": "Welkom tot die Wortel Oorweeg missie. Die incident is opgelos — maar waarom het gebeur? Gebruik 'analyseer [aanvalspad]' om die aanval te traceer, 'identificeer [kwetsbaarheid]' om die zwakheid te vind, 'bepaal [faalpunt]' om te begryp wat verwyder en 'stel [herstel] voor' om herhaling te voorkomen.",
+      "success": "Die wortel oorweeg analyse is met succes voltooid. Jy het die aanvalspad geanalyseer, kwetsbaarheid geïdentifieer, faalpunt bepaal en herstel aanbevool. Die worteloorzaak is nu begrepen en 'n preventieplan is in plaas.",
+      "goals": {
+        "analyze_label": "Analyseer die aanvalspad",
+        "analyze_hint": "analyseer phishing-to-compromise",
+        "identify_label": "Identificeer die kwetsbaarheid",
+        "identify_hint": "identificeer missing-mfa",
+        "determine_label": "Bepaal die faalpunt",
+        "determine_hint": "bepaal proces",
+        "recommend_label": "Stel herstel voor",
+        "recommend_hint": "stel beveiligingsregels voor"
+      }
+    },
+    "incident-triage-pressure": {
+      "title": "Triage onder druk — 'n 03:00 AM wakkerroep",
+      "brief": "PagerDuty klop om 03:00. Jy het 5 minute om die incident te triage. Geen paniek.",
+      "welcome": "Welkom tot die Incident Triage onder Druk missie. 'n 03:00 AM en PagerDuty klop. Jy het 5 minute om die incident te triage. Gebruik 'beoordeel ernst' om die impact te evalueer, 'klasifieer [type]' om die incident tipe te identificeer, 'bepaal [niveau]' om die respons niveau te stel en 'eskalatie [team]' om die regte team op te roep. Blijf kalm.",
+      "success": "Die incident is met succes onder druk getriage. Jy het ernst beoordeel, incident klasifiseer, respons niveau bepaal en na 'n regte team eskalatie. Die krisisrespons is nu aktief. Jy's klaar vir die 03:00 wakkerroep.",
+      "goals": {
+        "assess_label": "Beoordeel die incident ernst",
+        "assess_hint": "beoordeel ernst",
+        "classify_label": "Klasifieer die incident tipe",
+        "classify_hint": "klasifiseer data-breach",
+        "determine_label": "Bepaal die respons niveau",
+        "determine_hint": "bepaal niveau-4",
+        "escalate_label": "Eskalatie na die regte team",
+        "escalate_hint": "eskalatie uitvoerig"
+      }
+    },
+    "jwt-alg-none": {
+      "title": "Weerstand bied tegen die JWT alg:none aanval — vergrendel algoritme, bewerk bewerings",
+      "brief": "Die JWT bibliotheek vertrouw op die algoritme uit die token kop. Aanvaler stel alg:none in → forge enige rol. Vergrendel RS256 server-side, valideer iss/aud/exp, skep token lewe tot 15 minute.",
+      "welcome": "",
+      "success": "",
+      "goals": {
+        "read_label": "Lees en begrijp die kwetsbare verificatie kode",
+        "read_hint": "cat verify.js",
+        "forge_label": "Bevestig kwetsbaarheid: forge 'n admin token met alg:none",
+        "forge_hint": "aanval forge",
+        "algpin_label": "Vaststel toegestane algoritme op RS256 (verwijder dynamiese alg)",
+        "algpin_hint": "oploss alg-pin",
+        "claims_label": "Voeg uitgaver + publiek claim validatie toe",
+        "claims_hint": "oploss claims",
+        "expiry_label": "Verkort token lewe om 15 minute",
+        "expiry_hint": "oploss expiry",
+        "tests_label": "Voer testsuite uit — alle bypas pogings moet falen",
+        "tests_hint": "test auth"
+      }
+    },
+    "k8s-networkpolicy": {
+      "title": "Stel standaard afweergedrag in vir die produktnaamruimte zonder ingress + werker trafik te verstoor",
+      "brief": "K8s standaard is almal toegestaan. 'n Red-team probe in die ontwikkelingsomgewing het net /admin op die produkt/api-server bereikt. Pas standaard-afweer + gerichte toelatinge toe. Onregte volgorde = dienst verstoor.",
+      "welcome": "",
+      "success": "",
+      "goals": {
+        "inspect_label": "Inspecteer topologie + beleid sjablone",
+        "inspect_hint": "cat topology en ls policies/",
+        "probe-before_label": "Probe — bevestig dat die ontwikkelingsprobe die produkt/api-server kan hit",
+        "probe-before_hint": "probe dev/red-team-probe prod/api-server:8080",
+        "apply-deny_label": "Pas standaard-afweer in op die produkt naamruimte",
+        "apply-deny_hint": "pas network-policy default-deny toe",
+        "apply-ingress_label": "Toelat ingress-nginx → produkt/api-server",
+        "apply-ingress_hint": "pas network-policy allow-ingress-nginx toe",
+        "apply-samens_label": "Toelat produkt/werker → produkt/api-server (same-ns)",
+        "apply-samens_hint": "pas network-policy allow-same-namespace toe",
+        "probe-after_label": "Probe weer — net geautoriseerde stroom se probe sukses",
+        "probe-after_hint": "probe dev/red-team-probe prod/api-server:8080 en probe prod/ingress-nginx prod/api-server:8080 en probe prod/werker prod/api-server:8080",
+        "audit_label": "Audit signoff — CIS 5.3.2 vervul",
+        "audit_hint": "audit signoff"
+      }
+    },
+    "k8s-pod-security": {
+      "title": "Kubernetes Pod Beveiliging: beperk mogelijkhede en verwerf voorrechte",
+      "brief": "Jou pod dra als root met NET_ADMIN/SYS_ADMIN. Verhard dit: verwyder voorregte, verwijder mogelijkhede, loop as nonRoot, leesalene rooie bestandsysem, pas seccomp profiel toe.",
+      "welcome": "",
+      "success": "",
+      "goals": {
+        "inspect_label": "Inspecteer die implementatie manifest",
+        "inspect_hint": "cat deployment.yaml",
+        "privileged_label": "Verwijder voorregte vlag",
+        "privileged_hint": "patch privileged",
+        "capabilities_label": "Verwyder almal mogelijkhede",
+        "capabilities_hint": "patch capabilities",
+        "nonroot_label": "Stel loop as nonRoot op waarskynlik",
+        "nonroot_hint": "patch nie-root",
+        "readonly_label": "Voeg readOnlyRootFilesystem toe",
+        "readonly_hint": "patch readonly",
+        "seccomp_label": "Voeg seccomp profiel toe",
+        "seccomp_hint": "patch seccomp",
+        "apply_label": "Valideer met kubectl apply",
+        "apply_hint": "kubectl apply -f deployment.yaml"
+      }
+    },
+    "lets-encrypt": {
+      "title": "TLS in drie bekommeringen",
+      "brief": "hodlberg.ag serveert nog steeds onversleutelde HTTP. Klik demo binnen 10 minute. Uitgifte 'n certificaat, skakel oor na HTTPS, verifieer.",
+      "welcome": "",
+      "success": "",
+      "goals": {
+        "install-certbot_label": "Installeer certbot",
+        "install-certbot_hint": "apt install certbot python3-certbot-nginx",
+        "issue-cert_label": "Uitgifte 'n certificaat vir hodlberg.ag",
+        "issue-cert_hint": "certbot certonly --nginx -d hodlberg.ag -d www.hodlberg.ag",
+        "patch-tls_label": "Skakel nginx in om 443 te serveer",
+        "patch-tls_hint": "skakel enable-tls in",
+        "validate_label": "Valideer nginx konfiguratie",
+        "validate_hint": "nginx -t",
+        "reload_label": "Laad nginx opnieuw in",
+        "reload_hint": "systemctl reload nginx",
+        "verify_label": "Verifieer of HTTPS oorkom",
+        "verify_hint": "curl -I https://hodlberg.ag"
+      }
+    },
+    "llm-output-sanitize": {
+      "title": "Saniteer LLM uitvoer: DOMPurify, Markdown renderer harding, Content-Security-Policy",
+      "brief": "AI chat verwerk raak LLM uitvoer as innerHTML. Onmiddellijke prompt injeksie via kennisbasis dok oorkom onbeweeglike XSS. Voeg DOMPurify by, harding Markdown renderer, voeg CSP by, en afdwing gestruktureerde uitvoer.",
+      "welcome": "",
+      "success": "",
+      "goals": {
+        "read_label": "Onderzoek die kwetsbare gevaarlik setInnerHTML renderer",
+        "read_hint": "cat renderer.tsx",
+        "attack_label": "Simuleer XSS deur 'n vergiftig LLM uitvoer",
+        "attack_hint": "aanval xss",
+        "dompurify_label": "Voeg DOMPurify saniteer met HTML-tag allowlist by",
+        "dompurify_hint": "repareer dompurify",
+        "renderer_label": "Konfigureer Markdown renderer om raak HTML blokke te verwyder",
+        "renderer_hint": "repareer marked-renderer",
+        "csp_label": "Voeg Content-Security-Policy koppie by",
+        "csp_hint": "repareer csp",
+        "structured_label": "Afdwing JSON skema vir gestruktureerde AI uitvoer",
+        "structured_hint": "repareer structured-output",
+        "tests_label": "Voer saniteer tests uit — XSS payload moet verwyder word",
+        "tests_hint": "test sanitisatie"
+      }
+    },
+    "llm-rate-limiting": {
+      "title": "LLM API kostbescherming: rate limiting, authenticatie, tokenbudjets, circuit breaker",
+      "brief": "$47k OpenAI rekening in 4 uur van anoniem kost-DoS. Voeg IP rate limiting, authenticatie, server-side token limiet, per-gebruiker dagelijkse budget en een globale circuit breaker toe vanaf $500/dag.",
+      "welcome": "",
+      "success": "",
+      "goals": {
+        "read_label": "Lees kwetsbare route — identificeer alle 5 tekortkomingen",
+        "read_hint": "cat route.ts",
+        "ratelimit_label": "Voeg IP rate limiting toe — 20 verzoeken per minuut",
+        "ratelimit_hint": "losse rate-limit opstelling",
+        "auth_label": "Vereis authenticatie — weigert anonieme aanbieders af",
+        "auth_hint": "losse auth opstelling",
+        "tokencap_label": "Stel max_tokens server-side in (1.024 — aanbieders kunnen dit niet overschrijden)",
+        "tokencap_hint": "losse token-cap opstelling",
+        "budget_label": "Implementeer per-gebruiker dagelijkse token budget",
+        "budget_hint": "losse budget opstelling",
+        "circuit_label": "Voeg globale circuit breaker toe: pauzeer alle LLM als de uitgaven > $500/dag bereiken",
+        "circuit_hint": "losse circuit-breaker opstelling",
+        "tests_label": "Voer kostbescherming testreeks uit",
+        "tests_hint": "test kostbescherming"
+      }
+    },
+    "misconfig-hunt": {
+      "title": "Misconfig Hunt — verhelp de top drie",
+      "brief": "Claw Score gedaald naar D overnacht. Drie kritieke bevindingen. Verhelp ze allemaal en scan opnieuw om een A te bereiken.",
+      "welcome": "",
+      "success": "",
+      "goals": {
+        "read-report_label": "Lees het scanningsrapport",
+        "read-report_hint": "cat /var/log/claw/latest.report",
+        "fix-c1_label": "Verhelp C1 — schakel autoindex uit",
+        "fix-c1_hint": "losse C1 opstelling",
+        "fix-c2_label": "Verhelp C2 — beveilig bestandsmachtigingen",
+        "fix-c2_hint": "losse C2 opstelling",
+        "fix-c3_label": "Verhelp C3 — verberg server tokens",
+        "fix-c3_hint": "losse C3 opstelling",
+        "rescan_label": "Scan opnieuw en haal een A",
+        "rescan_hint": "scan opnieuw"
+      }
+    },
+    "nginx-access-control": {
+      "title": "Beveilig het openbare /admin endpoint met IP toegestaan lijst + HTTP Basic Authenticatie",
+      "brief": "12.000 brute-force pogingen op /admin in 24 uur. Voeg IP-gebaseerde toegestaan lijst en HTTP Basic Authenticatie toe aan de nginx vhost — controleer vervolgens een 403 van een niet-geautoriseerde IP.",
+      "welcome": "",
+      "success": "",
+      "goals": {
+        "inspect_label": "Inspecteer huidige vhost — identificeer onbeschermde /admin",
+        "inspect_hint": "cat sites-available/hodlberg.conf",
+        "allow_label": "Voeg IP toegestaan lijst toe aan de /admin locatie (toestaan + weigeren alles)",
+        "allow_hint": "bewerk vhost allow",
+        "htpasswd_label": "Skep /etc/nginx/.htpasswd met admin-referensie",
+        "htpasswd_hint": "htpasswd skep",
+        "auth_label": "Voeg auth_basic + auth_basic_user_file by aan /admin lokasie",
+        "auth_hint": "bewerk vhost auth",
+        "test_label": "Test nginx konfigurasi — nginx -t moet sukses verwyder",
+        "test_hint": "nginx -t",
+        "reload_label": "Laad nginx op 'n gracieuze manier in",
+        "reload_hint": "nginx laad",
+        "probe_label": "Verifieer: onbevoegde IP ontvang 403 Forbidden",
+        "probe_hint": "probe admin 8.8.8.8"
+      }
+    },
+    "nginx-hsts": {
+      "title": "Verskaf HSTS voor 'n crawler kom",
+      "brief": "Een nalevingskraal raak Hodlberg.ag binnen 60 sekondes. Voeg Strict-Transport-Security by, verifieer en laad op — zonder produktiie onderbreking.",
+      "welcome": "",
+      "success": "",
+      "goals": {
+        "read-readme_label": "Lees die missie korting",
+        "read-readme_hint": "cat README",
+        "inspect-conf_label": "Bekijk die vhost konfiguratie",
+        "inspect-conf_hint": "cat /etc/nginx/sites-enabled/hodlberg.conf",
+        "apply-hsts_label": "Voeg Strict-Transport-Security by",
+        "apply-hsts_hint": "patch hsts",
+        "validate_label": "Verifieer nginx konfigurasi",
+        "validate_hint": "nginx -t",
+        "reload_label": "Laad nginx op",
+        "reload_hint": "systemctl laad nginx"
+      }
+    },
+    "nis2-engineering-controls": {
+      "title": "Vertaal NIS2 na ingenieursbeheersingselementen",
+      "brief": "Kaart NIS2 vereisten na concrete technische beheersingselementen. Geen meer paragraaflees.",
+      "welcome": "Welkom bij die NIS2 Ingenieursbeheersingsmissie. Uw taak is om juridieke vereisten te vertaal naar concrete technische beheersingselementen. Gebruik 'assess controls' om die huidige status te sien, 'implement [beheersing-naam]' om beheersingen by te voeg en 'verify nis2' om naleving te controleer.",
+      "success": "NIS2 naleving behaal. Jy het juridieke vereisten succesvol vertaal na concrete ingenieursbeheersingselementen. Geen meer paragraaflees — net technische implementatie.",
+      "goals": {
+        "assess_label": "Beoordeel huidige beheersingen",
+        "assess_hint": "assess controls",
+        "incident_label": "Implementeer incidentbeheersingselement",
+        "incident_hint": "implement incident-beheersing",
+        "continuity_label": "Implementeer bedryfskontinuitasbeheersing",
+        "continuity_hint": "implement bedryfskontinuitas",
+        "supply_label": "Implementeer versorgingsketenbeheersing",
+        "supply_hint": "implement versorgingsketen",
+        "verify_label": "Controleer NIS2 naleving",
+        "verify_hint": "verify nis2"
+      }
+    },
+    "oauth2-pkce": {
+      "title": "OAuth2 PKCE: beveilig 'n openbare cliënt autorisatie stroom",
+      "brief": "Jouw mobiele app gebruik 'n verouderde impliciete stroom. Migreer na PKCE: responseType=code, code_verifier, code_challenge (SHA-256).",
+      "welcome": "",
+      "success": "",
+      "goals": {
+        "inspect_label": "Inspecteer die auth-config",
+        "inspect_hint": "cat auth-config.json",
+        "response_label": "Verander responseType na 'code'",
+        "response_hint": "patch response-type",
+        "verifier_label": "Genereer code verifier",
+        "verifier_hint": "patch code-verifier",
+        "challenge_label": "Genereer code challenge",
+        "challenge_hint": "patch code-challenge",
+        "test_label": "Test die stroom",
+        "test_hint": "test flow"
+      }
+    },
+    "postgres-hardening": {
+      "title": "Beveilig Postgres voor die auditeerteam vinnig kom",
+      "brief": "Vertrouw op auth op die LAN, SSL uit, elke rol is superuser, geen query log. Vaste alle vier zonder die app te breek.",
+      "welcome": "",
+      "success": "",
+      "goals": {
+        "inspect-hba_label": "Inspecteer pg_hba.conf",
+        "inspect-hba_hint": "cat pg_hba.conf",
+        "patch-hba_label": "Verwijder vertrouw + vereis SSL op host-regte",
+        "patch-hba_hint": "patch hba",
+        "patch-ssl_label": "Aktiveer ssl in postgresql.conf",
+        "patch-ssl_hint": "patch ssl",
+        "patch-log_label": "Laad pg_stat_statements + log trage queries",
+        "patch-log_hint": "patch logging",
+        "patch-roles_label": "Demote app-rollen van Superuser",
+        "patch-roles_hint": "patch roles",
+        "reload_label": "Laad opnieuw Postgres",
+        "reload_hint": "systemctl reload postgresql",
+        "verify_label": "Verifieer SSL met psql --ssl=require",
+        "verify_hint": "psql --ssl=require -h db -U hodlberg -c 'SELECT 1'",
+        "audit_label": "Die auditeerrun teruggeef rein",
+        "audit_hint": "auditerun"
+      }
+    },
+    "postgres-rls": {
+      "title": "PostgreSQL Row-Level Security: multi-tenant data isolatie",
+      "brief": "Jouw multi-tenant PostgreSQL het geen RLS. Activeer RLS: skep tenant isolasie beleid, admin overskryf beleid, test met verskeie gebruikers, verifieer data isolatie.",
+      "welcome": "",
+      "success": "",
+      "goals": {
+        "inspect_label": "Inspecteer die tabelschema",
+        "inspect_hint": "cat rls-policy.sql",
+        "enable_label": "Activeer row-level beveiliging",
+        "enable_hint": "patch enable-rls",
+        "tenant_label": "Skep tenant isolatiebeleid",
+        "tenant_hint": "patch tenant-policy",
+        "admin_label": "Skep admin overskryfbeleid",
+        "admin_hint": "patch admin-policy",
+        "test_label": "Test RLS met verskeie gebruikers",
+        "test_hint": "test tenant-a",
+        "verify_label": "Verifieer data isolatie",
+        "verify_hint": "verifieer isolatie"
+      }
+    },
+    "prometheus-alerting": {
+      "title": "Prometheus Alerting: stel kritieke beveiligingswaarschyningen in",
+      "brief": "Jou Prometheus het net basiese foutrate waarschyninge. Stel omvattende beveiligingswaarschyninge in vir brute-force aanvalle, certifikat verval, verdachte inloggebeurtenisse, en hoge CPU.",
+      "welcome": "",
+      "success": "",
+      "goals": {
+        "inspect_label": "Onderzoek die waarschyningsregels",
+        "inspect_hint": "cat prometheus-alerts.yml",
+        "brute-force_label": "Voeg brute-force aanval waarschyning toe",
+        "brute-force_hint": "patch brute-force",
+        "cert-expiry_label": "Voeg certifikat verval waarschyning toe",
+        "cert-expiry_hint": "patch cert-expiry",
+        "suspicious-login_label": "Voeg verdachte inlog waarschyning toe",
+        "suspicious-login_hint": "patch suspicious-login",
+        "high-cpu_label": "Voeg hoge CPU gebruik waarschyning toe",
+        "high-cpu_hint": "patch high-cpu",
+        "validate_label": "Valideer waarschyningsregels",
+        "validate_hint": "valideer regels"
+      }
+    },
+    "prompt-injection-defense": {
+      "title": "Blokkeer prompt invoering: invoer sanitiseer, canary tokens, uitvoer validatie",
+      "brief": "AI assistent kat samenvoeg raak gebruikersinvoer in LLM kontekst. Aanvalmer injecteer 'Negeer alle instructies' → model lekker API sleutel. Voeg invoer sanitiseer toe, verplaats geheimen, voeg canary + uitvoer validatie.",
+      "welcome": "",
+      "success": "",
+      "goals": {
+        "read_label": "Onderzoek die kwetsbare hanter — vind die samenvoeging fauw",
+        "read_hint": "lees handler.ts",
+        "attack_label": "Voer die invoering in — bevestig geheim lekkage",
+        "attack_hint": "aanval injecteer",
+        "sanitize_label": "Voeg invoer sanitiseer toe — patroonvergelijking + lengtebeperking",
+        "sanitize_hint": "reparer sanitize",
+        "secrets_label": "Verplaats geheimen uit sistem invoer",
+        "secrets_hint": "reparer secrets",
+        "canary_label": "Voeg canary tokens by om versekeringspoginge op te smerk",
+        "canary_hint": "reparer canary",
+        "output_label": "Voeg uitvoer validatie by om geheime lekkage uit AI-antwoord te detecteer",
+        "output_hint": "repare output-validasi",
+        "tests_label": "Voer injektie test suite uit — alle pogings moet geblokkeer wees",
+        "tests_hint": "test injekties"
+      }
+    },
+    "redis-auth-acl": {
+      "title": "Veilig Redis: bind beperking, requirepass, ACL, gevaarlike opdringe deactiver",
+      "brief": "Redis is op 0.0.0.0 met geen auth. Pen-tester het alte sleutels in sekondes gedumpt. Bind naartoe localhost, set requirepass met 'n sterk wachtwoord, deactiveer FLUSHALL/DEBUG, en skep 'n minste-privilegie API ACL gebruiker.",
+      "welcome": "",
+      "success": "",
+      "goals": {
+        "bind_label": "Verander bind naartoe 127.0.0.1 (loopback netwerk alleen)",
+        "bind_hint": "repare bind",
+        "auth_label": "Set requirepass met 'n sterk wachtwoord",
+        "auth_hint": "repare requirepass",
+        "commands_label": "Deactiveer FLUSHALL, FLUSHDB, DEBUG",
+        "commands_hint": "repare gevaarlike opdringe",
+        "acl_label": "Skep minste-privilegie ACL gebruiker vir API dienst",
+        "acl_hint": "acl skep api-user",
+        "save_label": "Bewaar konfiguratie wijzigings op disk",
+        "save_hint": "redis-cli CONFIG REWRITE",
+        "testauth_label": "Verifieer wachtwoord beveiligde verbinding",
+        "testauth_hint": "test auth"
+      }
+    },
+    "reverse-proxy-ratelimit": {
+      "title": "Stop die kredensie-stuffing golf op /login — zonder gebruikers uit te sluit",
+      "brief": "/api/auth/login ontvang 4000 verzoeke per minuut van rotatiewende IP's. Definieer 'n rate-limiet zone, pas dit chirurgisch toe, weig hoofdloze UX-s. Valideer tegen reële verkeer.",
+      "welcome": "",
+      "success": "",
+      "goals": {
+        "inspect_label": "Inspecteer die levende verkeer monster",
+        "inspect_hint": "lees sample.jsonl",
+        "zone_label": "Definieer limiet_req_zone in http kontekst",
+        "zone_hint": "patch ratelimit-zone",
+        "login_label": "Pas zone toe op /api/auth/login",
+        "login_hint": "patch ratelimit-login",
+        "ua_label": "Weig bekende hoofdloze gebruikers-agenten af",
+        "ua_hint": "patch ua-deny",
+        "validate_label": "Valideer konfiguratie (nginx -t)",
+        "validate_hint": "nginx -t",
+        "reload_label": "Laad nginx opnieuw in",
+        "reload_hint": "systemctl reload nginx",
+        "replay_label": "Spel verkeer terug — aanvallers geblokkeer, gebruikers pas",
+        "replay_hint": "spel verkeer terug"
+      }
+    },
+    "secrets-rotation": {
+      "title": "Draai die gelekte API sleutel af zonder 'n enkele klient te verstoor",
+      "brief": "API sleutel gelekt in 'n publieke Docker laag. 4 kliënte hang af daarvan. Onregte volgorde = produktie uitval. Dual-write → migreer → leeg → retireer.",
+      "welcome": "",
+      "success": "",
+      "goals": {
+        "inspect-key_label": "Bekijk lekke sleutel en aktieve kliënte",
+        "inspect-key_hint": "lees .env.production en lees clients",
+        "generate-v2_label": "Genereer API_KEY_V2 (V1 nog steeds in leven)",
+        "generate-v2_hint": "rotate generate",
+        "dual-write_label": "Patch auth.js om BOTE V1 en V2 te aanvaar",
+        "dual-write_hint": "patch dual-write",
+        "deploy_label": "Implementeer die duale schrijfwijziging",
+        "deploy_hint": "implementeer",
+        "migrate_label": "Migreer alle 4 kliënte na V2",
+        "migrate_hint": "rolover api-partner-A na api-partner-B na internal-sdk na github-actions-ci",
+        "drain_label": "Verifieer dat V1 trafik = 0",
+        "drain_hint": "monitor",
+        "retire_label": "Ontslag V1 sleutel (verwijder uit geheimenopslag)",
+        "retire_hint": "retireer v1",
+        "signoff_label": "Audit signoff — geen uitval, sleutel ingetrekken",
+        "signoff_hint": "audit signoff"
+      }
+    },
+    "session-security": {
+      "title": "Beveilig sessiekoekies: HttpOnly, Secure, SameSite, __Host-, kort Max-Age",
+      "brief": "XSS-uitbuiting lees document.cookie en exfiltrereer die sessie-token. Sessiekoekie ontbeert HttpOnly, Secure, SameSite. CSRF is ook maklik mogelijk. Versterk almal vijf.",
+      "welcome": "",
+      "success": "",
+      "goals": {
+        "read_label": "Bekijk die kwetsbare sessie-configuratie",
+        "read_hint": "lees session.ts",
+        "httponly_label": "Voeg HttpOnly-vlag toe — blokkeer JS-toegang tot koekie",
+        "httponly_hint": "reparer httponly",
+        "secure_label": "Voeg Secure-vlag toe — enkel via HTTPS overdraag",
+        "secure_hint": "reparer secure",
+        "samesite_label": "Stel SameSite=Strict in — voorkom CSRF",
+        "samesite_hint": "reparer samesite",
+        "prefix_label": "Gebruik __Host- koekie naamvoorkeur",
+        "prefix_hint": "reparer prefix",
+        "maxage_label": "Verlaag Max-Age tot 15 minute",
+        "maxage_hint": "reparer maxage"
+      }
+    },
+    "ssh-hardening": {
+      "title": "Beveilig SSH voor die bots vind jou nie",
+      "brief": "Nieuwe Ubuntu-box, sshd nog steeds wijd open. Ontslag root-inlog en wachtwoordverificatie, herlaad sshd. Die scans is al inkomende.",
+      "welcome": "",
+      "success": "",
+      "goals": {
+        "inspect-sshd_label": "Bekijk sshd_config",
+        "inspect-sshd_hint": "lees /etc/ssh/sshd_config",
+        "disable-root_label": "Ontslag PermitRootLogin",
+        "disable-root_hint": "patch no-root-login",
+        "disable-password_label": "Wiss wordverificatie uit",
+        "disable-password_hint": "patch no-password-auth",
+        "validate-sshd_label": "Valideer sshd-configuratie",
+        "validate-sshd_hint": "sshd -t",
+        "reload-sshd_label": "Laad sshd opnieuw in",
+        "reload-sshd_hint": "systemctl herlaad sshd"
+      }
+    },
+    "tls-certificate-rotation": {
+      "title": "TLS-certifikatrotatie: automatisering van certificaatvernieuwing voor afloop",
+      "brief": "Uw TLS-certificaat verloop binnen 10 dae. Automatiseer vernieuwing: certbot dry-run, cron-taak, bewakingspopups, verifieer nieuw certificaat, test TLS-handshake.",
+      "welcome": "",
+      "success": "",
+      "goals": {
+        "check_label": "Controleer certificaateinddatum",
+        "check_hint": "cat cert-info.txt",
+        "renew_label": "Test vernieuwing met certbot",
+        "renew_hint": "certbot hernie -d",
+        "cron_label": "Stel een automatiseringstak in voor cron",
+        "cron_hint": "patch cron",
+        "monitoring_label": "Stel bewakingspopups in",
+        "monitoring_hint": "patch monitoring",
+        "verify_label": "Verifieer nieuw certificaat",
+        "verify_hint": "verifieer certifikat",
+        "tls_label": "Test TLS-handshake",
+        "tls_hint": "test TLS"
+      }
+    },
+    "ufw-firewall": {
+      "title": "Firewall: alleen wat u werkelijk nodig hebt",
+      "brief": "Een blootgestelde DB-host die luistert op zeven poorten. Configureer UFW om alleen SSH toe te staan, inschakel, bevestig.",
+      "welcome": "",
+      "success": "",
+      "goals": {
+        "see-sockets_label": "Wees poorten in luisterstand",
+        "see-sockets_hint": "ss -tln (Afrikaans: 'toon luide poorten')",
+        "default-deny_label": "Stel standaard afwijzing van binnenkomende verzoeken in",
+        "default-deny_hint": "ufw standaard afwijs inkomende verzoeken",
+        "allow-ssh_label": "Sta SSH toe",
+        "allow-ssh_hint": "ufw toelat 22/tcp",
+        "enable_label": "Schakel UFW in",
+        "enable_hint": "ufw inschakel",
+        "status_label": "Controleer met ufw status",
+        "status_hint": "ufw status (Afrikaans: 'weergeef status van ufw')"
+      }
+    }
   }
 }

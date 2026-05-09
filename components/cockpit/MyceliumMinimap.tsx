@@ -45,7 +45,7 @@ export function MyceliumMinimap({ tier, dbNodes }: MyceliumMinimapProps) {
       {/* Header */}
       <div className="p-4" style={{ borderBottom: '1px solid rgba(255,255,255,0.04)' }}>
         <h3 className="text-sm font-semibold text-white mb-0.5">Mycelium Network</h3>
-        <p className="text-[10px] text-gray-600">
+        <p className="text-[10px] text-gray-400">
           {tier === 'explorer' ? 'Preview Mode' : 'Live Network'}
         </p>
       </div>
@@ -93,7 +93,7 @@ export function MyceliumMinimap({ tier, dbNodes }: MyceliumMinimapProps) {
             <div className="absolute inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center">
               <div className="text-center">
                 <Lock className="w-5 h-5 mx-auto mb-1.5" style={{ color: '#EAB308', opacity: 0.6 }} />
-                <p className="text-[10px] text-gray-600">Upgrade für Live-Netzwerk</p>
+                <p className="text-[10px] text-gray-400">Upgrade für Live-Netzwerk</p>
               </div>
             </div>
           )}
@@ -112,11 +112,11 @@ export function MyceliumMinimap({ tier, dbNodes }: MyceliumMinimapProps) {
             ].map(item => (
               <div key={item.label} className="flex items-center gap-1">
                 <div className="w-1.5 h-1.5 rounded-full" style={{ background: item.color }} />
-                <span className="text-gray-600">{item.label}</span>
+                <span className="text-gray-400">{item.label}</span>
               </div>
             ))}
           </div>
-          <span className="text-gray-600">{nodes.length}</span>
+          <span className="text-gray-400">{nodes.length}</span>
         </div>
       </div>
     </div>

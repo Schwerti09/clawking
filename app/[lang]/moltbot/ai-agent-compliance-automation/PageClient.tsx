@@ -337,7 +337,7 @@ export default function PageClient({ locale }: { locale: Locale }) {
                 </div>
                 <div className="bg-gradient-to-r from-cyan-900 to-blue-900 p-4 rounded-lg border border-cyan-700">
                   <div className="text-sm text-cyan-300 mb-2">{pick(isDE, "Upgrade zu Pro für Deep Scan & Detailed Report", "Upgrade to Pro for Deep Scan & Detailed Report")}</div>
-                  <a href={`/${locale}/pricing`} className="block bg-white text-gray-900 font-semibold py-2 px-4 rounded-lg text-center hover:bg-gray-100 transition-colors">{pick(isDE, "Pro Plan — €49/mo", "Pro Plan — €49/mo")}</a>
+                  <a href={`/${locale}/pricing`} className="block bg-gray-900 text-gray-300 font-semibold py-2 px-4 rounded-lg text-center hover:bg-gray-800 transition-colors">{pick(isDE, "Pro Plan — €49/mo", "Pro Plan — €49/mo")}</a>
                 </div>
               </div>
             )}

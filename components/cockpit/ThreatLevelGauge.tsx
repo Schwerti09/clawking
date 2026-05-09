@@ -72,7 +72,7 @@ export function ThreatLevelGauge({ activeThreats }: ThreatLevelGaugeProps) {
         >
           {getStatusText()}
         </motion.span>
-        <span className="text-[10px] text-gray-600">Threat Level</span>
+        <span className="text-[10px] text-gray-400">Threat Level</span>
       </div>
     </div>
   )

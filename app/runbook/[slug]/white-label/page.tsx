@@ -140,7 +140,7 @@ export default async function WhiteLabelRunbookPage(
         {logoUrl && (
           <span className="font-black text-sm text-white">{company}</span>
         )}
-        <span className="ml-auto text-xs text-gray-600">Powered by ClawGuru</span>
+        <span className="ml-auto text-xs text-gray-400">Powered by ClawGuru</span>
       </header>
       <div className="max-w-4xl mx-auto px-4 py-12">
         {/* Kicker + title */}

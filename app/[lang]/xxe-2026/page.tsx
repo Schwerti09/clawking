@@ -363,8 +363,8 @@ export default async function XXE2026Page({
                 </div>
               </div>
 
-              <div className="bg-amber-50 border border-amber-200 rounded-xl p-6">
-                <h3 className="text-amber-900 font-semibold mb-3 flex items-center gap-2">
+              <div className="bg-amber-900/20 border border-amber-700 rounded-xl p-6">
+                <h3 className="text-amber-400 font-semibold mb-3 flex items-center gap-2">
                   <span>📋</span> CVE-Tracking für Security Teams
                 </h3>
                 <p className="text-amber-800 text-sm mb-4">

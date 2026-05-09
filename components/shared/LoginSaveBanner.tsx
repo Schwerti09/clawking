@@ -34,7 +34,7 @@ export default function LoginSaveBanner() {
       <button
         onClick={() => setDismissed(true)}
         aria-label="Banner schließen"
-        className="text-gray-600 hover:text-gray-400 text-xs font-mono shrink-0"
+        className="text-gray-400 hover:text-gray-300 text-xs font-mono shrink-0"
       >
         ✕
       </button>

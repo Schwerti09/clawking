@@ -111,9 +111,9 @@ export default async function PrometheusVPNPage({
             </p>
 
             <div className="grid md:grid-cols-3 gap-6 mb-8">
-              <div className="bg-orange-50 border border-orange-700 rounded-xl p-6">
-                <h3 className="font-semibold text-orange-900 mb-2">Tailscale</h3>
-                <p className="text-sm text-orange-700">Zero Trust Mesh VPN. Einfachste Lösung.</p>
+              <div className="bg-orange-900/20 border border-orange-700 rounded-xl p-6">
+                <h3 className="font-semibold text-orange-400 mb-2">Tailscale</h3>
+                <p className="text-sm text-orange-200">Zero Trust Mesh VPN. Einfachste Lösung.</p>
               </div>
               <div className="bg-blue-900 border border-blue-700 rounded-xl p-6">
                 <h3 className="font-semibold text-blue-200 mb-2">WireGuard</h3>

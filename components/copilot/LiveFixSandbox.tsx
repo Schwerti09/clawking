@@ -313,7 +313,7 @@ export default function LiveFixSandbox() {
         value={code}
         onChange={(e) => setCode(e.target.value)}
         placeholder="Config hier einfügen (nginx, Dockerfile, Terraform HCL, K8s YAML)…"
-        className="w-full h-48 bg-black/50 text-gray-200 font-mono text-xs p-4 resize-none focus:outline-none border-b border-white/5 placeholder:text-gray-600"
+        className="w-full h-48 bg-black/50 text-gray-200 font-mono text-xs p-4 resize-none focus:outline-none border-b border-white/5 placeholder:text-gray-400"
         spellCheck={false}
       />
 

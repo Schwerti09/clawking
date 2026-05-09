@@ -129,10 +129,10 @@ export default async function MongoDBSecurityPage({
                 <h3 className="font-semibold text-purple-900 text-sm mb-1">Authorization</h3>
                 <p className="text-xs text-purple-700">RBAC mit built-in & custom roles</p>
               </div>
-              <div className="bg-amber-50 border border-amber-200 rounded-xl p-5 text-center">
+              <div className="bg-amber-900/20 border border-amber-700 rounded-xl p-5 text-center">
                 <div className="text-3xl mb-2">🔒</div>
-                <h3 className="font-semibold text-amber-900 text-sm mb-1">Encryption</h3>
-                <p className="text-xs text-amber-700">At-rest & Client-Side Field Level</p>
+                <h3 className="font-semibold text-amber-400 text-sm mb-1">Encryption</h3>
+                <p className="text-xs text-amber-200">At-rest & Client-Side Field Level</p>
               </div>
             </div>
           </section>

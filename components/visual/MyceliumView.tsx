@@ -610,7 +610,7 @@ export default function MyceliumView({ graph, summaries, totalRunbooks, ui = "fu
 
         {/* MYCELIAL SINGULARITY v3.0 – Navigation hint */}
         {!isEmbed && (
-          <div className="absolute bottom-3 right-3 text-gray-600 text-xs pointer-events-none">
+          <div className="absolute bottom-3 right-3 text-gray-400 text-xs pointer-events-none">
             scroll to zoom · drag to pan · click node to inspect
           </div>
         )}
@@ -677,7 +677,7 @@ export default function MyceliumView({ graph, summaries, totalRunbooks, ui = "fu
 
             <div className="flex-1 overflow-y-auto px-4 py-3 space-y-3">
               {oracleResults.length === 0 && (
-                <div className="text-xs text-gray-600 italic text-center mt-8">
+                <div className="text-xs text-gray-400 italic text-center mt-8">
                   The Mycelium awaits your query…
                 </div>
               )}
@@ -763,7 +763,7 @@ export default function MyceliumView({ graph, summaries, totalRunbooks, ui = "fu
                     >
                       {style.icon} {evt.type.toUpperCase()}
                     </span>
-                    <span className="text-gray-600 ml-auto font-mono">{agoStr} ago</span>
+                    <span className="text-gray-400 ml-auto font-mono">{agoStr} ago</span>
                   </div>
                   <div className="text-gray-300 leading-relaxed font-mono text-[11px] break-words">
                     {evt.message}

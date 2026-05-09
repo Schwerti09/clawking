@@ -12,7 +12,7 @@ export type AutopilotPlan = {
 export const AUTOPILOT_PLANS: Record<AutopilotPlanId, AutopilotPlan> = {
   starter: {
     id: "starter",
-    monthlyPriceEur: 9,
+    monthlyPriceEur: 29,
     recommendedFor: "solo founders and small setups",
     maxWorkspaces: 1,
     includesApiExports: false,

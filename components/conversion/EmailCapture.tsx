@@ -211,7 +211,7 @@ export function EmailCapture({ locale, source = "website", variant = "card" }: P
 
           {error && <p className="text-xs text-red-400 mt-1">{error}</p>}
 
-          <div className="mt-3 flex items-center gap-3 text-[10px] text-gray-600">
+          <div className="mt-3 flex items-center gap-3 text-[10px] text-gray-400">
             <span className="flex items-center gap-1"><Shield className="h-3 w-3" /> DSGVO-konform</span>
             <span>·</span>
             <span>{locale === "de" ? "Kein Spam, kein Tracking" : "No spam, no tracking"}</span>

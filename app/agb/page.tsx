@@ -237,7 +237,7 @@ export default function AGBPage() {
             </p>
           </section>
 
-          <p className="text-center text-xs text-gray-600">
+          <p className="text-center text-xs text-gray-400">
             Stand: März 2026 · {LEGAL_INFO.company}
           </p>
 

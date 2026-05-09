@@ -272,9 +272,9 @@ spec:
               </div>
             </div>
 
-            <div className="bg-orange-50 border border-orange-700 rounded-xl p-6">
-              <h3 className="font-semibold text-orange-900 mb-3">Token Management</h3>
-              <p className="text-orange-800 text-sm mb-4">
+            <div className="bg-orange-900/20 border border-orange-700 rounded-xl p-6">
+              <h3 className="font-semibold text-orange-400 mb-3">Token Management</h3>
+              <p className="text-orange-200 text-sm mb-4">
                 {t(locale, "Speichern Sie den Tunnel-Token sicher in Kubernetes Secrets, Docker Secrets oder Vault. Niemals in Git committen!", "Store the tunnel token securely in Kubernetes Secrets, Docker Secrets, or Vault. Never commit to Git!")}
               </p>
               <div className="bg-slate-900 rounded-lg p-4 font-mono text-xs text-green-400">

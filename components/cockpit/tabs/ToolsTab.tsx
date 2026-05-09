@@ -146,7 +146,7 @@ export function ToolsTab({ isShadowed, executions }: ToolsTabProps) {
             <div key={stat.label} className="rounded-xl border p-4" style={glass}>
               <div className="flex items-center gap-2 mb-1">
                 <stat.icon className="w-3.5 h-3.5" style={{ color: '#EAB308' }} />
-                <span className="text-[10px] font-semibold tracking-[0.1em] uppercase text-gray-600">{stat.label}</span>
+                <span className="text-[10px] font-semibold tracking-[0.1em] uppercase text-gray-400">{stat.label}</span>
               </div>
               <div className="text-xl font-black text-white">{stat.value}</div>
             </div>
@@ -189,12 +189,12 @@ export function ToolsTab({ isShadowed, executions }: ToolsTabProps) {
                       <h3 className="text-lg font-semibold text-white">{tool.name}</h3>
                       <div className="flex items-center gap-2 mt-0.5">
                         <div className="text-[10px] px-2 py-0.5 rounded-full font-medium" style={{ background: 'rgba(234,179,8,0.1)', color: '#EAB308' }}>{tool.status}</div>
-                        <span className="text-[10px] text-gray-600">{tool.category}</span>
+                        <span className="text-[10px] text-gray-400">{tool.category}</span>
                       </div>
                     </div>
                   </div>
                   <div className="text-right">
-                    <div className="text-[10px] text-gray-600 uppercase">Success</div>
+                    <div className="text-[10px] text-gray-400 uppercase">Success</div>
                     <div className="text-lg font-black" style={{ color: '#EAB308' }}>{avgSuccess > 0 ? `${avgSuccess}%` : '–'}</div>
                   </div>
                 </div>
@@ -206,8 +206,8 @@ export function ToolsTab({ isShadowed, executions }: ToolsTabProps) {
                   {[{ label: 'Total Runs', value: String(totalRuns), icon: Clock }, { label: 'Last Used', value: lastRun, icon: Activity }].map(s => (
                     <div key={s.label} className="rounded-lg p-2.5 border" style={{ background: 'rgba(255,255,255,0.015)', borderColor: 'rgba(255,255,255,0.04)' }}>
                       <div className="flex items-center gap-1.5 mb-0.5">
-                        <s.icon className="w-3 h-3 text-gray-600" />
-                        <span className="text-[10px] text-gray-600">{s.label}</span>
+                        <s.icon className="w-3 h-3 text-gray-400" />
+                        <span className="text-[10px] text-gray-400">{s.label}</span>
                       </div>
                       <div className="text-sm font-semibold text-white">{s.value}</div>
                     </div>
@@ -280,7 +280,7 @@ export function ToolsTab({ isShadowed, executions }: ToolsTabProps) {
                     <RotateCcw className="w-3 h-3 inline mr-1" />Reset
                   </button>
                 )}
-                <button onClick={() => setActiveTool(null)} className="text-gray-600 hover:text-white text-xs ml-1">✕</button>
+                <button onClick={() => setActiveTool(null)} className="text-gray-400 hover:text-white text-xs ml-1">✕</button>
               </div>
             </div>
 
@@ -303,8 +303,8 @@ export function ToolsTab({ isShadowed, executions }: ToolsTabProps) {
               ].map(r => (
                 <div key={r.label} className="rounded-lg p-3 border" style={{ background: 'rgba(255,255,255,0.015)', borderColor: 'rgba(255,255,255,0.04)' }}>
                   <div className="flex items-center gap-1.5 mb-1">
-                    <r.icon className="w-3 h-3 text-gray-600" />
-                    <span className="text-[10px] text-gray-600">{r.label}</span>
+                    <r.icon className="w-3 h-3 text-gray-400" />
+                    <span className="text-[10px] text-gray-400">{r.label}</span>
                   </div>
                   <div className="text-base font-bold text-white">{r.val}</div>
                 </div>

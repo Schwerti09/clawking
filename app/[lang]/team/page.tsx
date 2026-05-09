@@ -462,7 +462,7 @@ export default function TeamPage({ params }: PageProps) {
           <div className="flex flex-wrap justify-center gap-4">
             <a
               href="mailto:team@clawguru.org"
-              className="bg-white text-gray-900 font-bold px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors"
+              className="bg-gray-900 text-gray-300 font-bold px-6 py-3 rounded-lg hover:bg-gray-800 transition-colors"
             >
               team@clawguru.org
             </a>

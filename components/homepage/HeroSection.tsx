@@ -169,7 +169,7 @@ export default function HeroSection({ locale, prefix = "", dict = {} }: Props) {
               href={`${prefix}/consulting`}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl border border-cyan-500/30 hover:border-cyan-400/60 font-bold text-gray-200 transition-all duration-300 backdrop-blur-sm hover:bg-white/5"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl border border-cyan-500/30 hover:border-cyan-400/60 font-bold text-gray-200 transition-all duration-300 backdrop-blur-sm hover:bg-gray-800/5"
               data-track="hero_secondary_strategy_call"
             >
               <Calendar className="h-5 w-5" aria-hidden />
@@ -206,7 +206,7 @@ export default function HeroSection({ locale, prefix = "", dict = {} }: Props) {
       >
         <div className="w-6 h-10 border-2 border-white/20 rounded-full flex justify-center">
           <motion.div
-            className="w-1 h-2 bg-white rounded-full mt-2"
+            className="w-1 h-2 bg-gray-300 rounded-full mt-2"
             animate={{ opacity: [1, 0.3, 1] }}
             transition={{ duration: 2, repeat: Infinity }}
           />
