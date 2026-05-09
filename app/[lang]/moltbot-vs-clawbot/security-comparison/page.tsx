@@ -51,6 +51,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export default function MoltbotVsClawbotPage({ params }: PageProps) {
   const { lang } = params;
+  const locale = (SUPPORTED_LOCALES.includes(lang as Locale) ? lang : 'de') as Locale
   if (!SUPPORTED_LANGUAGES.includes(lang)) notFound();
   const isDE = lang === 'de'
   const faqSchema = {
