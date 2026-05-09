@@ -530,7 +530,7 @@ export default async function PricingPage() {
                 </div>
                 <div className="text-xl font-black text-white font-heading mb-2">Autopilot Starter Trial</div>
                 <div className="flex items-end gap-2 mb-3">
-                  <span className="text-4xl font-black text-white">9€</span>
+                  <span className="text-4xl font-black text-white">29€</span>
                   <span className="text-sm text-gray-400 pb-1">{pricing.dayPassOnce}</span>
                 </div>
                 <p className="text-sm text-gray-300 leading-relaxed max-w-lg">
