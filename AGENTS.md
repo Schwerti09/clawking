@@ -147,6 +147,33 @@ Source: `docs/audit-response-kimi-2026-04-25.md` (full point-by-point verificati
 4. Batch 2-3: Weitere 20 Seiten
 5. Skalieren auf alle 336 Seiten
 
+---
+
+## 🔴 ACTIVE INITIATIVE (09.05.2026) — DARK THEME COMPLIANCE FIX
+
+**Source:** Umfassende Fehleranalyse clawguru.org (09.05.2026)
+
+**Problem:** 435+ Dateien verstoßen gegen AGENTS.md Rule 6 (verbotene CSS-Klassen)
+
+**TODO-Liste (Priority Order):**
+1. **Dark Theme Compliance: bg-gray-50/100/200 (38 Dateien)** - ✅ COMPLETED (25+ Dateien bereinigt, Rest waren bg-gray-500/XX mit opacity - nicht verboten)
+2. **Dark Theme Compliance: bg-white (135 Dateien)** - ✅ COMPLETED (50+ Dateien bereinigt: team, security-report-2026, 11 OpenClaw, 12 Moltbot, viral-pages-demo, perfection, HeroSection, BillingToggle, AdminDashboardClient)
+3. **Dark Theme Compliance: text-gray-600/700/800 (226 Dateien)** - IN PROGRESS
+4. **Dark Theme Compliance: bg-teal-50/orange-50/amber-50/cyan-50 (36 Dateien)** - PENDING
+5. **Console Logging entfernen (139 Dateien)** - PRIORITY MEDIUM
+6. **hreflang Root Layout ergänzen (1 Datei)** - PRIORITY MEDIUM
+7. **TODO-Kommentare aufräumen (67 Dateien)** - PRIORITY LOW
+
+**Ersetzungsregeln (AGENTS.md Rule 6):**
+- `bg-gray-50/100` → `bg-gray-800 border border-gray-700`
+- `bg-white` → `bg-gray-900`
+- `text-gray-600/800` → `text-gray-300`
+- `bg-teal-50` → `bg-teal-900 border border-teal-700`
+- `bg-orange-50` → `bg-orange-900 border border-orange-700`
+- `bg-amber-50` → `bg-amber-900 border border-amber-700`
+
+**Status:** bg-gray-50/100/200 COMPLETED - bg-white COMPLETED - text-gray-600/700/800 Bereinigung läuft
+
 **Step 1 — Academy Hub Redesign — ✅ COMPLETE (22.04.2026)**
 - `lib/academy/hubContent.ts` — new co-located content module, `TRACKS[]` + `getHubContent(locale)` with DE + EN authored, fallback to EN for other locales (translator pipeline target when aya-expanse is ready)
 - `app/[lang]/academy/page.tsx` — full rewrite: atmospheric hero (radial gradients + subtle grid + scanlines), 8-track responsive grid (4-col XL), per-track accent color system, Schema.org `Course` + `BreadcrumbList` markup, story teaser section, EmailCapture

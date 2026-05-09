@@ -107,7 +107,7 @@ export function SentinelChat({ mission, state, locale }: Props) {
                 <p className="mb-2">
                   I&apos;m your tutor for <span className="text-gray-300">{mission.title}</span>. Ask in any language — I&apos;ll nudge you toward the next step without spoiling the whole solution.
                 </p>
-                <p className="text-gray-600">
+                <p className="text-gray-400">
                   Try: &ldquo;what does <span className="text-cyan-400">patch hsts</span> actually do?&rdquo;
                 </p>
               </div>
