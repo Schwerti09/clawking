@@ -35,7 +35,7 @@ export async function GET(req: NextRequest) {
     const sp = url.searchParams
 
     const raw = sp.get("product") || sp.get("plan") || "daypass"
-    const allowed = ["pro", "team", "daypass", "msp", "enterprise", "starter", "scale"] as const
+    const allowed = ["pro", "team", "daypass", "msp", "enterprise", "starter", "scale", "starter-trial"] as const
     const product: Product = (allowed as readonly string[]).includes(raw) ? (raw as Product) : "daypass"
 
     const email = sp.get("email") || undefined
@@ -117,7 +117,7 @@ export async function GET(req: NextRequest) {
 }
 
 function getMode(product: Product): "payment" | "subscription" {
-  return product === "daypass" ? "payment" : "subscription"
+  return product === "daypass" || product === "starter-trial" ? "payment" : "subscription"
 }
 
 export async function POST(req: NextRequest) {
@@ -134,7 +134,7 @@ export async function POST(req: NextRequest) {
     const body = await req.json().catch(() => ({}))
 
     const product: Product =
-      (["pro", "team", "daypass", "msp", "enterprise", "starter", "scale"] as const).includes(body?.product)
+      (["pro", "team", "daypass", "msp", "enterprise", "starter", "scale", "starter-trial"] as const).includes(body?.product)
         ? body.product
         : "daypass"
 

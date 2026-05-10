@@ -117,7 +117,7 @@ function envCandidates(product: CheckoutProduct, annual: boolean): string[] {
     case "daypass":
       return ["STRIPE_PRICE_DAYPASS"]
     case "starter-trial":
-      return ["STRIPE_PRICE_STARTER_AUTOPILOT"]
+      return ["STRIPE_PRICE_DAYPASS"]
     case "starter":
       return annual
         ? ["STRIPE_PRICE_STARTER_ANNUAL"]
