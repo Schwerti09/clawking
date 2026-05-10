@@ -24,6 +24,7 @@ logs/*.log
 # Only the consolidated lib/i18n-autotranslate.ts is a stable artifact.
 lib/i18n-pick-sources.json
 lib/i18n-autotranslate/*.json
+lib/i18n-autotranslate.ts
 
 # env files (NEVER commit real secrets)
 .env
