@@ -17,8 +17,8 @@ function TypewriterSubheader({ isDE }: { isDE: boolean }) {
   const [charIndex, setCharIndex] = useState(0)
 
   const texts = isDE
-    ? ["4,2M Runbooks.", "Live Intelligence.", "Zero Bullshit."]
-    : ["4.2M Runbooks.", "Live Intelligence.", "Zero Bullshit."]
+    ? ["EU-Hosted Runbooks.", "Live Intelligence.", "Zero Bullshit."]
+    : ["EU-Hosted Runbooks.", "Live Intelligence.", "Zero Bullshit."]
 
   useEffect(() => {
     if (!texts[textIndex]) return
@@ -74,7 +74,7 @@ export default function HeroSection({ locale, prefix = "", dict = {} }: Props) {
   const cro = getHomepageCroCopy(locale)
   const isDE = locale === "de"
   const t = {
-    badge: dict.hero_badge || (pick(isDE, "Security Intelligence Engine · 4.2M Runbooks · Expert-Reviewed", "Security Intelligence Engine · 4.2M Runbooks · Expert-Reviewed")),
+    badge: dict.hero_badge || (pick(isDE, "Security Intelligence Engine · EU-Hosted Runbooks · Expert-Reviewed", "Security Intelligence Engine · EU-Hosted Runbooks · Expert-Reviewed")),
     title: dict.hero_title || cro.heroH1,
     sub: dict.hero_sub || cro.heroSubtitle,
     primary: dict.hero_primary || (pick(isDE, "Kostenloser Security Check", "Free Security Check")),

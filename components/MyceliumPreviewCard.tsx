@@ -4,7 +4,7 @@ import React, { useEffect, useMemo, useRef, useState } from "react"
 import dynamic from "next/dynamic"
 import FeaturePreviewCard from "./FeaturePreviewCard"
 import Skeleton from "./ui/Skeleton"
-import { STATS } from "@/lib/stats"
+import { RUNBOOK_COUNT_SHORT_DE } from "@/lib/stats"
 
 function useInView<T extends HTMLElement>(opts?: IntersectionObserverInit) {
   const ref = useRef<T | null>(null)
@@ -55,23 +55,7 @@ export default function MyceliumPreviewCard({ prefix = "", dict = {} }: Props) {
     return () => { canceled = true }
   }, [inView])
 
-  // Animated stat counter
-  useEffect(() => {
-    if (!inView) return
-    const target = STATS.totalRunbooks || 1247891
-    let raf: number
-    const start = performance.now()
-    const dur = 1200
-    const ease = (t: number) => 0.5 - 0.5 * Math.cos(Math.PI * t)
-    const tick = (now: number) => {
-      const p = Math.min(1, (now - start) / dur)
-      const v = Math.round(target * ease(p))
-      setCounter(v)
-      if (p < 1) raf = requestAnimationFrame(tick)
-    }
-    raf = requestAnimationFrame(tick)
-    return () => cancelAnimationFrame(raf)
-  }, [inView])
+  // Static quality label — inflated counter removed per credibility audit
 
   return (
     <div ref={ref}>
@@ -133,7 +117,7 @@ export default function MyceliumPreviewCard({ prefix = "", dict = {} }: Props) {
             LIVE MYCELIUM
           </div>
           <div className="absolute top-2 right-2 text-[11px] text-gray-300 bg-black/40 border border-white/10 rounded px-2 py-0.5">
-            {new Intl.NumberFormat("de-DE").format(counter)} Runbooks vernetzt
+            🇪🇺 {RUNBOOK_COUNT_SHORT_DE} Runbooks vernetzt
           </div>
           <a
             href={`${prefix}/mycelium`}

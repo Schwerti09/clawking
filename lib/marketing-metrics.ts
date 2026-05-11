@@ -6,7 +6,7 @@
 
 export const MARKETING_METRICS = {
   // Content & Knowledge Base
-  runbooksCount: "4,2M",
+  runbooksCount: "EU-Hosted",
   cveFixGuides: "30+",
   indexedPages: "25k+",
   knowledgeNodes: "1M+",

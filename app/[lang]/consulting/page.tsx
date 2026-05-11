@@ -321,7 +321,7 @@ export default function ConsultingPage({ params }: PageProps) {
                   {pick(isDE, "Vertraut von Self-Hosted-Teams und Enterprise-Kunden", "Trusted by self-hosted teams and enterprise customers")}
                 </div>
                 <div className="text-xs text-gray-500">
-                  {pick(isDE, "4.200+ Runbooks · 147 Academy Pro Absolventen · EU-Hosting", "4,200+ runbooks · 147 Academy Pro graduates · EU-hosted")}
+                  {pick(isDE, "Kuratierte Runbooks · 147 Academy Pro Absolventen · EU-Hosting Frankfurt", "Curated runbooks · 147 Academy Pro graduates · EU-hosted Frankfurt")}
                 </div>
               </div>
               <div className="flex gap-3 text-xs">

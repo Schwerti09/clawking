@@ -205,7 +205,7 @@ export default function DefenderCertPage({ params }: PageProps) {
           </h1>
           <LastUpdated date={MODIFIED} publishedDate={PUBLISHED} showPublished locale={locale} className="mb-4" />
           <p className="text-lg text-gray-300 max-w-3xl mb-6">
-            {pick(isDE, "Die praxisnahste Security-Zertifizierung für SecOps, DevSecOps und IT-Defender. Drei Stufen — Foundation, Professional, Expert. Keine Multiple-Guess-Kataloge, sondern echte Incident-Szenarien auf Basis unseres 4.2M-Runbook-Katalogs.", "The most practical security certification for SecOps, DevSecOps, and IT defenders. Three tiers — Foundation, Professional, Expert. No multiple-guess trivia — real incident scenarios based on our 4.2M runbook catalog.")}
+            {pick(isDE, "Die praxisnahste Security-Zertifizierung für SecOps, DevSecOps und IT-Defender. Drei Stufen — Foundation, Professional, Expert. Keine Multiple-Guess-Kataloge, sondern echte Incident-Szenarien auf Basis unseres kuratierten, EU-gehosteten Runbook-Katalogs.", "The most practical security certification for SecOps, DevSecOps, and IT defenders. Three tiers — Foundation, Professional, Expert. No multiple-guess trivia — real incident scenarios based on our curated, EU-hosted runbook catalog.")}
           </p>
           <div className="flex flex-col sm:flex-row gap-3">
             <Link

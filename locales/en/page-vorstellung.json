@@ -17,8 +17,8 @@
     "description": "We believe AI agents deserve the same security standards as critical infrastructure. Our platform provides comprehensive protection for AI systems, from individual agents to large-scale deployments.",
     "stats": [
       {
-        "number": "4.2M+",
-        "label": "Security Runbooks Generated"
+        "number": "\ud83c\uddea\ud83c\uddfa",
+        "label": "EU-Hosted Runbooks"
       },
       {
         "number": "50K+",
@@ -83,7 +83,7 @@
       {
         "year": "2025",
         "title": "Rapid Growth",
-        "description": "Expanded to serve thousands of customers, introduced Oracle AI intelligence, and reached 4.2 million generated security runbooks."
+        "description": "Expanded to serve thousands of customers, introduced Oracle AI intelligence, and launched curated, EU-hosted security runbooks."
       },
       {
         "year": "2026",
@@ -169,7 +169,7 @@
       {
         "name": "Security Runbooks",
         "icon": "book",
-        "description": "4.2 million+ AI-generated security runbooks for every possible scenario.",
+        "description": "Curated, executable security runbooks for every possible scenario \u2014 EU-hosted and GDPR-compliant.",
         "key_features": [
           "Automated fix generation",
           "Step-by-step guidance",
@@ -317,7 +317,7 @@
         "avatar": "jennifer-adams"
       },
       {
-        "quote": "The 4.2 million security runbooks are incredible. Whatever security challenge we face, there's a detailed solution ready to implement.",
+        "quote": "The curated runbooks are incredible. Whatever security challenge we face, there's a detailed, executable solution ready to implement \u2014 EU-hosted and always up to date.",
         "author": "Robert Chang",
         "role": "Security Director",
         "company": "Global Finance Corp",
@@ -339,7 +339,7 @@
       {
         "icon": "trophy",
         "title": "Industry Recognition",
-        "description": "Named "Best AI Security Solution" at the Global Security Awards 2025"
+        "description": "Named 'Best AI Security Solution' at the Global Security Awards 2025"
       },
       {
         "icon": "certificate",
@@ -354,7 +354,7 @@
       {
         "icon": "book",
         "title": "Knowledge Leadership",
-        "description": "4.2 million security runbooks generated and shared with the community"
+        "description": "Curated, executable security runbooks shared with the community \u2014 EU-hosted"
       },
       {
         "icon": "globe",

@@ -512,7 +512,7 @@ export default function MyceliumView({ graph, summaries, totalRunbooks, ui = "fu
               MYCELIAL SINGULARITY v3.0
             </div>
             <div className="text-gray-400">
-              Total library: <span className="text-white font-mono">{totalRunbooks.toLocaleString()}+</span> runbooks
+              Library: <span className="text-white font-mono">🇪🇺 EU-Hosted</span> curated runbooks
             </div>
             <div className="text-gray-400">
               Active nodes: <span className="text-white font-mono">{graph.nodes.length}</span>

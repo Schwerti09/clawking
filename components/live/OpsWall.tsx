@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useRef, useState } from "react"
 import { motion, useReducedMotion } from "framer-motion"
 import { useI18n } from "@/components/i18n/I18nProvider"
-import { RUNBOOK_COUNT_SHORT_EN, STATS } from "@/lib/stats"
+import { RUNBOOK_COUNT_SHORT_EN, RUNBOOK_COUNT_SHORT_DE } from "@/lib/stats"
 import { pick } from "@/lib/i18n-pick"
 
 type LivePayload = {
@@ -93,29 +93,9 @@ export default function OpsWall() {
   const [buying, setBuying] = useState<null | "daypass" | "pro">(null)
   const rootRef = useRef<HTMLDivElement>(null)
 
-  const TOTAL_COUNT = STATS.totalRunbooks
-  const totalShort = useMemo(() => {
-    try {
-      const isDE = String(locale).toLowerCase().startsWith("de")
-      const nf = new Intl.NumberFormat(locale, { maximumFractionDigits: 1 })
-      if (TOTAL_COUNT >= 1_000_000_000) {
-        const v = TOTAL_COUNT / 1_000_000_000
-        return `${nf.format(v)}${pick(isDE, " Mrd", "B")}+`
-      }
-      if (TOTAL_COUNT >= 1_000_000) {
-        const v = TOTAL_COUNT / 1_000_000
-        return `${nf.format(v)}${pick(isDE, " Mio", "M")}+`
-      }
-      if (TOTAL_COUNT >= 1_000) {
-        const v = TOTAL_COUNT / 1_000
-        return `${nf.format(v)}${pick(isDE, " Tsd", "K")}+`
-      }
-      return new Intl.NumberFormat(locale).format(TOTAL_COUNT)
-    } catch {
-      return `${RUNBOOK_COUNT_SHORT_EN}+`
-    }
-  }, [locale])
-  const totalExact = useMemo(() => new Intl.NumberFormat(locale).format(TOTAL_COUNT), [locale, TOTAL_COUNT])
+  const isDE = String(locale).toLowerCase().startsWith("de")
+  const totalShort = isDE ? RUNBOOK_COUNT_SHORT_DE : RUNBOOK_COUNT_SHORT_EN
+  const totalExact = pick(isDE, "Kuratiert & EU-gehostet", "Curated & EU-Hosted")
 
   async function checkout(product: "daypass" | "pro") {
     try {
@@ -260,7 +240,7 @@ export default function OpsWall() {
 
   const visibleTrending = useMemo(() => filteredTrending.slice(0, Math.min(visibleCount, filteredTrending.length)), [filteredTrending, visibleCount])
   const lowActivity = (data?.trending?.length || 0) < 50
-  const pillText = `${synthetic ? "Synthetic Pulse" : "Live Pulse"}: ${data?.pulse ?? 87}% · ${totalShort} Library`
+  const pillText = `${synthetic ? "Synthetic Pulse" : "Live Pulse"}: ${data?.pulse ?? 87}% · ${totalShort}`
 
   return (
     <div ref={rootRef} className="space-y-6">
@@ -270,14 +250,14 @@ export default function OpsWall() {
           <div>
             <div className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight">
               <span className="relative">
-                {totalShort} Runbooks generierbar
+                {pick(isDE, "Kuratierte Runbooks — EU-gehostet", "Curated Runbooks — EU-Hosted")}
                 <span
                   className="absolute -inset-1.5 -z-10 rounded-full blur-2xl opacity-40"
                   style={{ background: "radial-gradient(60% 60% at 50% 50%, rgba(0,184,255,0.25), rgba(0,0,0,0))" }}
                 />
               </span>
             </div>
-            <div className="text-xs text-gray-400">≈ {totalExact} potenzielle Fixes · Live zeigt Top 100 hot + trending – Rest on‑demand</div>
+            <div className="text-xs text-gray-400">{pick(isDE, "DSGVO-konform · Gehostet in Frankfurt · Live zeigt Top 100 hot + trending", "GDPR-compliant · Hosted in Frankfurt · Live shows Top 100 hot + trending")}</div>
           </div>
           <div className="flex items-center gap-2">
             <div className="px-3 py-1.5 rounded-full border border-cyan-500/40 bg-cyan-500/10 text-cyan-200 text-xs font-bold">
@@ -286,7 +266,7 @@ export default function OpsWall() {
             <div className="px-3 py-1.5 rounded-full text-[11px] font-extrabold text-white"
               style={{ background: "linear-gradient(90deg, rgba(0,255,157,0.25), rgba(0,184,255,0.25))", boxShadow: "0 0 24px rgba(0,184,255,0.25) inset, 0 0 14px rgba(0,255,157,0.25)" }}
             >
-              {totalShort} Badge
+              {pick(isDE, "🇪🇺 EU-Hosted", "🇪🇺 EU-Hosted")}
             </div>
           </div>
         </div>
@@ -294,7 +274,7 @@ export default function OpsWall() {
           <input
             value={q}
             onChange={(e) => setQ(e.target.value)}
-            placeholder={`Suche in ${totalShort} Runbooks…`}
+            placeholder={pick(isDE, "Suche in Runbooks…", "Search runbooks…")}
             className="w-full px-4 py-3 rounded-2xl bg-black/40 border border-gray-700 text-white placeholder-gray-500 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all"
           />
           <a
@@ -361,8 +341,8 @@ export default function OpsWall() {
           <div className="text-xs text-gray-500 mb-2">Library</div>
           <div className="grid grid-cols-2 gap-4">
             <div>
-              <div className="text-3xl font-black">{totalExact}</div>
-              <div className="text-sm text-gray-300">Runbooks</div>
+              <div className="text-3xl font-black">🇪🇺</div>
+              <div className="text-sm text-gray-300">{pick(isDE, "EU-Hosted Runbooks", "EU-Hosted Runbooks")}</div>
             </div>
             <div>
               <div className="text-3xl font-black">{data?.counts?.tags ?? "—"}</div>
@@ -370,7 +350,7 @@ export default function OpsWall() {
             </div>
           </div>
           <div className="mt-4 text-xs text-gray-500">
-            Alles indexierbar. Alles verlinkbar. Alles “problem → fix → verify”.
+            {pick(isDE, "Kuratiert. Ausführbar. DSGVO-konform. Gehostet in Frankfurt.", "Curated. Executable. GDPR-compliant. Hosted in Frankfurt.")}
           </div>
         </div>
 

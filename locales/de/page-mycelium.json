@@ -1,26 +1,26 @@
 {
   "meta": {
     "title": "Mycelium Netzwerk - Lebendes Wissens-Graph | ClawGuru",
-    "description": "Entdecken Sie Mycelium, das lebende, sich selbst weiterentwickelnde Wissens-Netzwerk mit 4,2 Millionen Security Runbooks. Visualisieren Sie die Intelligenz Ihrer Organisation als vernetzten Graph, der w\u00e4chst und lernt.",
+    "description": "Entdecken Sie Mycelium, das lebende, sich selbst weiterentwickelnde Wissens-Netzwerk mit kuratierten, ausf\u00fchrbaren Security Runbooks \u2014 EU-gehostet. Visualisieren Sie die Intelligenz Ihrer Organisation als vernetzten Graph, der w\u00e4chst und lernt.",
     "keywords": "Mycelium Netzwerk, lebendes Wissens-Graph, Security Runbooks, verteilte Intelligenz, Wissensmanagement, Enterprise Security, Collective Intelligence",
     "og_title": "Mycelium Netzwerk - Lebendes Wissens-Graph",
-    "og_description": "Ihr Wissen, visualisiert als lebender Graph, der sich mit 4,2 Millionen Security Runbooks und Collective Intelligence weiterentwickelt.",
+    "og_description": "Ihr Wissen, visualisiert als lebender Graph mit kuratierten, EU-gehosteten Security Runbooks und Collective Intelligence.",
     "og_image": "https://clawguru.org/og-mycelium.jpg",
     "twitter_card": "summary_large_image",
     "twitter_title": "Mycelium Netzwerk - Lebendes Wissens-Graph",
-    "twitter_description": "Ihr Wissen, visualisiert als lebender Graph, der sich mit 4,2 Millionen Security Runbooks und Collective Intelligence weiterentwickelt.",
+    "twitter_description": "Ihr Wissen, visualisiert als lebender Graph mit kuratierten, EU-gehosteten Security Runbooks und Collective Intelligence.",
     "twitter_image": "https://clawguru.org/twitter-mycelium.jpg"
   },
   "hero": {
     "title": "Dein Wissen, visualisiert",
     "subtitle": "Ein lebender Graph, der sich mit deiner Organisation weiterentwickelt",
-    "description": "Mycelium transformiert das Wissen Ihrer Organisation in ein lebendes, sich selbst weiterentwickelndes Netzwerk. Mit 4,2 Millionen Security Runbooks und Collective Intelligence von Tausenden von Organisationen ist es das fortschrittlichste Wissensmanagement-System, das je gebaut wurde.",
+    "description": "Mycelium transformiert das Wissen Ihrer Organisation in ein lebendes, sich selbst weiterentwickelndes Netzwerk. Mit kuratierten, ausf\u00fchrbaren Security Runbooks und Collective Intelligence von Tausenden von Organisationen ist es das fortschrittlichste Wissensmanagement-System, das je gebaut wurde.",
     "cta_primary": "Mycelium Netzwerk erkunden",
     "cta_secondary": "Interaktive Demo ansehen",
     "stats": [
       {
-        "number": "4,2M+",
-        "label": "Security Runbooks"
+        "number": "\ud83c\uddea\ud83c\uddfa",
+        "label": "EU-Hosted Runbooks"
       },
       {
         "number": "50K+",
@@ -116,7 +116,7 @@
     "layers": [
       {
         "name": "Wissens-Layer",
-        "description": "4,2 Millionen+ Security Runbooks und organisatorisches Wissen dargestellt als semantische Nodes",
+        "description": "Kuratierte, ausf\u00fchrbare Security Runbooks und organisatorisches Wissen dargestellt als semantische Nodes",
         "components": ["Runbook Nodes", "Procedure Nodes", "Threat Nodes", "Solution Nodes", "Connection Edges"]
       },
       {
@@ -293,8 +293,8 @@
       },
       {
         "metric": "Wissens-Nodes",
-        "value": "4,2M+",
-        "change": "+15.234 heute",
+        "value": "EU-Hosted",
+        "change": "Frankfurt, DE",
         "trend": "up"
       },
       {
@@ -419,7 +419,7 @@
         "period": "pro Monat",
         "description": "Ideal f\u00fcr wachsende Organisationen, die erweiterte Intelligenz ben\u00f6tigen",
         "features": [
-          "Zugriff zu 4,2M+ Runbooks",
+          "Zugriff auf alle kuratierten Runbooks",
           "Erweiterte Netzwerk-Analytics",
           "25 User-Lizenzen",
           "Priorit\u00e4ts-Support",
@@ -451,7 +451,7 @@
   "cta_section": {
     "title": "Transformieren Sie Ihr Wissensmanagement",
     "subtitle": "Schlie\u00dfen Sie sich der lebenden Wissens-Revolution an",
-    "description": "Erleben Sie die Kraft eines Wissens-Netzwerks, das sich mit Ihrer Organisation weiterentwickelt. Starten Sie mit 4,2 Millionen Security Runbooks und wachsen Sie von dort aus.",
+    "description": "Erleben Sie die Kraft eines Wissens-Netzwerks, das sich mit Ihrer Organisation weiterentwickelt. Starten Sie mit kuratierten, EU-gehosteten Security Runbooks und wachsen Sie von dort aus.",
     "cta_primary": "Mycelium Reise starten",
     "cta_secondary": "Live Demo vereinbaren",
     "trust_indicators": [
@@ -483,7 +483,7 @@
       },
       {
         "question": "Welche Arten von Wissen kann Mycelium verwalten?",
-        "answer": "Mycelium gl\u00e4nzt bei Security-Wissen, operativen Verfahren, Compliance-Anforderungen, Threat Intelligence und Best Practices. Es kann strukturierte Verfahren, unstrukturierte Einblicke und alles dazwischen verwalten. Die 4,2 Millionen Security Runbooks sind nur der Ausgangspunkt."
+        "answer": "Mycelium gl\u00e4nzt bei Security-Wissen, operativen Verfahren, Compliance-Anforderungen, Threat Intelligence und Best Practices. Es kann strukturierte Verfahren, unstrukturierte Einblicke und alles dazwischen verwalten. Die kuratierten, ausf\u00fchrbaren Runbooks sind nur der Ausgangspunkt."
       },
       {
         "question": "Wie funktioniert die Evolution Engine?",
@@ -511,7 +511,7 @@
     "webpage": {
       "@type": "WebPage",
       "name": "Mycelium Netzwerk - Lebendes Wissens-Graph",
-      "description": "Ihr Wissen, visualisiert als lebender Graph, der sich mit 4,2 Millionen Security Runbooks und Collective Intelligence weiterentwickelt.",
+      "description": "Ihr Wissen, visualisiert als lebender Graph mit kuratierten, EU-gehosteten Security Runbooks und Collective Intelligence.",
       "url": "https://clawguru.org/mycelium",
       "mainEntity": {
         "@type": "SoftwareApplication",

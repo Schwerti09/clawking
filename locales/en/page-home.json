@@ -39,8 +39,8 @@
     "title": "Trusted by Security Teams Worldwide",
     "stats": [
       {
-        "number": "4.2M+",
-        "label": "Security Runbooks Generated"
+        "number": "\ud83c\uddea\ud83c\uddfa",
+        "label": "EU-Hosted Runbooks"
       },
       {
         "number": "50K+",
@@ -116,7 +116,7 @@
       },
       {
         "title": "Security Runbooks",
-        "description": "4.2 million+ AI-generated security runbooks for every possible scenario.",
+        "description": "Curated, executable security runbooks for every possible scenario \u2014 EU-hosted and GDPR-compliant.",
         "features": [
           "Automated fix generation",
           "Step-by-step guidance",
@@ -226,7 +226,7 @@
         "avatar": "michael-rodriguez"
       },
       {
-        "quote": "4.2 million security runbooks is unmatched. Whatever security issue we face, there's a detailed solution ready to implement.",
+        "quote": "The curated runbooks are unmatched. Whatever security issue we face, there's a detailed, executable solution ready to implement \u2014 EU-hosted and always up to date.",
         "author": "Emma Thompson",
         "role": "DevOps Lead",
         "company": "CloudScale Systems",
@@ -341,7 +341,7 @@
       },
       {
         "question": "How do the security runbooks work?",
-        "answer": "Our AI generates 4.2 million+ security runbooks that provide step-by-step guidance for addressing specific security issues. Each runbook is tailored to your technology stack and includes detailed implementation steps, code examples, and best practices."
+        "answer": "Our curated, executable security runbooks provide step-by-step guidance for addressing specific security issues. Each runbook is tailored to your technology stack, EU-hosted, GDPR-compliant, and includes detailed implementation steps, code examples, and best practices."
       },
       {
         "question": "Is my data secure with ClawGuru?",

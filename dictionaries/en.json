@@ -495,8 +495,8 @@
       },
       {
         "y": "2026 Q2",
-        "t": "3.4M Runbooks",
-        "d": "Massive vault upgrade & quality seal"
+        "t": "EU-Hosted Runbooks",
+        "d": "GDPR-compliant, executable, hosted in Frankfurt"
       }
     ],
     "copilotInit": "Initializing Copilot…",
@@ -513,8 +513,8 @@
         "l": "ClawScore"
       },
       {
-        "v": "3.4M",
-        "l": "Runbooks"
+        "v": "\ud83c\uddea\ud83c\uddfa",
+        "l": "EU-Hosted"
       },
       {
         "v": "128K",
@@ -578,7 +578,7 @@
   },
   "homepage": {
     "hero_title": "Security Operations That Actually Work.",
-    "hero_sub": "ClawGuru is the AI-powered SecOps platform with 4.2 million executable runbooks – for incident response, hardening, and compliance in real time. From problem to fix in under 30 seconds.",
+    "hero_sub": "ClawGuru is the AI-powered SecOps platform with curated, executable runbooks – EU-hosted, GDPR-compliant. For incident response, hardening, and compliance in real time. From problem to fix in under 30 seconds.",
     "hero_daypass": "Start Daypass – €9/24 h",
     "hero_tryNow": "Try it for free",
     "live_title": "Live Monitoring",
@@ -664,7 +664,7 @@
     "price_pro_f2": "API access & team support",
     "price_pro_f3": "Compliance & reports",
     "price_pro_btn": "View plans",
-    "hero_badge": "Mycelial Engine · 4.2 M Runbooks · Executable Security Content",
+    "hero_badge": "Mycelial Engine · EU-Hosted Runbooks · Executable Security Content",
     "problem_badge": "The Problem",
     "problem_title": "Why SecOps Teams Face Daily Compromises",
     "problem_sub": "Security operations are complex, time-critical, and knowledge-intensive – and most tools only help halfway.",

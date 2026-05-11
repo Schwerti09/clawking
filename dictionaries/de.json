@@ -495,8 +495,8 @@
       },
       {
         "y": "2026 Q2",
-        "t": "3,4 Mio Runbooks",
-        "d": "Massives Vault‑Upgrade & Qualitätssiegel"
+        "t": "EU-Hosted Runbooks",
+        "d": "DSGVO-konform, ausf\u00fchrbar, gehostet in Frankfurt"
       }
     ],
     "copilotInit": "Initialisiere Copilot…",
@@ -513,8 +513,8 @@
         "l": "ClawScore"
       },
       {
-        "v": "3.4M",
-        "l": "Runbooks"
+        "v": "\ud83c\uddea\ud83c\uddfa",
+        "l": "EU-Hosted"
       },
       {
         "v": "128K",
@@ -578,7 +578,7 @@
   },
   "homepage": {
     "hero_title": "Security-Operationen, die wirklich funktionieren.",
-    "hero_sub": "ClawGuru ist die KI-gestützte SecOps-Plattform mit über 4,2 Millionen ausführbaren Runbooks – für Incident Response, Hardening und Compliance in Echtzeit. Vom Problem zum Fix in unter 30 Sekunden.",
+    "hero_sub": "ClawGuru ist die KI-gest\u00fctzte SecOps-Plattform mit kuratierten, ausf\u00fchrbaren Runbooks \u2013 EU-gehostet, DSGVO-konform. F\u00fcr Incident Response, Hardening und Compliance in Echtzeit. Vom Problem zum Fix in unter 30 Sekunden.",
     "hero_daypass": "Daypass starten – 9 €/24 h",
     "hero_tryNow": "Kostenlos ausprobieren",
     "live_title": "Live-Überwachung",
@@ -664,7 +664,7 @@
     "price_pro_f2": "API‑Zugriff & Team‑Support",
     "price_pro_f3": "Compliance & Reports",
     "price_pro_btn": "Angebote ansehen",
-    "hero_badge": "Mycelial Engine · 4,2 Mio. Runbooks · Executable Security Content",
+    "hero_badge": "Mycelial Engine · EU-Hosted Runbooks · Executable Security Content",
     "problem_badge": "Das Problem",
     "problem_title": "Warum SecOps-Teams täglich Kompromisse eingehen müssen",
     "problem_sub": "Sicherheitsoperationen sind komplex, zeitkritisch und wissensintensiv – und die meisten Tools helfen nur halb.",

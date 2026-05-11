@@ -1,26 +1,26 @@
 {
   "meta": {
     "title": "Mycelium Network - Living Knowledge Graph | ClawGuru",
-    "description": "Discover Mycelium, the living, self-evolving knowledge network with 4.2 million security runbooks. Visualize your organization's intelligence as a connected graph that grows and learns.",
+    "description": "Discover Mycelium, the living, self-evolving knowledge network with curated, executable security runbooks — EU-hosted. Visualize your organization's intelligence as a connected graph that grows and learns.",
     "keywords": "Mycelium network, living knowledge graph, security runbooks, distributed intelligence, knowledge management, enterprise security, collective intelligence",
     "og_title": "Mycelium Network - Living Knowledge Graph",
-    "og_description": "Your knowledge, visualized as a living graph that evolves with 4.2 million security runbooks and collective intelligence.",
+    "og_description": "Your knowledge, visualized as a living graph with curated, EU-hosted security runbooks and collective intelligence.",
     "og_image": "https://clawguru.org/og-mycelium.jpg",
     "twitter_card": "summary_large_image",
     "twitter_title": "Mycelium Network - Living Knowledge Graph",
-    "twitter_description": "Your knowledge, visualized as a living graph that evolves with 4.2 million security runbooks and collective intelligence.",
+    "twitter_description": "Your knowledge, visualized as a living graph with curated, EU-hosted security runbooks and collective intelligence.",
     "twitter_image": "https://clawguru.org/twitter-mycelium.jpg"
   },
   "hero": {
     "title": "Your Knowledge, Visualized",
     "subtitle": "A living graph that evolves with your organization",
-    "description": "Mycelium transforms your organization's knowledge into a living, self-evolving network. With 4.2 million security runbooks and collective intelligence from thousands of organizations, it's the most advanced knowledge management system ever built.",
+    "description": "Mycelium transforms your organization's knowledge into a living, self-evolving network. With curated, executable security runbooks and collective intelligence from thousands of organizations, it's the most advanced knowledge management system ever built.",
     "cta_primary": "Explore Mycelium Network",
     "cta_secondary": "View Interactive Demo",
     "stats": [
       {
-        "number": "4.2M+",
-        "label": "Security Runbooks"
+        "number": "\ud83c\uddea\ud83c\uddfa",
+        "label": "EU-Hosted Runbooks"
       },
       {
         "number": "50K+",
@@ -116,7 +116,7 @@
     "layers": [
       {
         "name": "Knowledge Layer",
-        "description": "4.2 million+ security runbooks and organizational knowledge represented as semantic nodes",
+        "description": "Curated, executable security runbooks and organizational knowledge represented as semantic nodes",
         "components": ["Runbook nodes", "Procedure nodes", "Threat nodes", "Solution nodes", "Connection edges"]
       },
       {
@@ -293,8 +293,8 @@
       },
       {
         "metric": "Knowledge Nodes",
-        "value": "4.2M+",
-        "change": "+15,234 today",
+        "value": "EU-Hosted",
+        "change": "Frankfurt, DE",
         "trend": "up"
       },
       {
@@ -419,7 +419,7 @@
         "period": "per month",
         "description": "Ideal for growing organizations needing advanced intelligence",
         "features": [
-          "Access to 4.2M+ runbooks",
+          "Access to all curated runbooks",
           "Advanced network analytics",
           "25 user seats",
           "Priority support",
@@ -451,7 +451,7 @@
   "cta_section": {
     "title": "Transform Your Knowledge Management",
     "subtitle": "Join the living knowledge revolution",
-    "description": "Experience the power of a knowledge network that evolves with your organization. Start with 4.2 million security runbooks and grow from there.",
+    "description": "Experience the power of a knowledge network that evolves with your organization. Start with curated, EU-hosted security runbooks and grow from there.",
     "cta_primary": "Start Mycelium Journey",
     "cta_secondary": "Schedule Live Demo",
     "trust_indicators": [
@@ -483,7 +483,7 @@
       },
       {
         "question": "What types of knowledge can Mycelium manage?",
-        "answer": "Mycelium excels at security knowledge, operational procedures, compliance requirements, threat intelligence, and best practices. It can handle structured procedures, unstructured insights, and everything in between. The 4.2 million security runbooks are just the starting point."
+        "answer": "Mycelium excels at security knowledge, operational procedures, compliance requirements, threat intelligence, and best practices. It can handle structured procedures, unstructured insights, and everything in between. The curated, executable runbooks are just the starting point."
       },
       {
         "question": "How does the evolution engine work?",
@@ -511,7 +511,7 @@
     "webpage": {
       "@type": "WebPage",
       "name": "Mycelium Network - Living Knowledge Graph",
-      "description": "Your knowledge, visualized as a living graph that evolves with 4.2 million security runbooks and collective intelligence.",
+      "description": "Your knowledge, visualized as a living graph with curated, EU-hosted security runbooks and collective intelligence.",
       "url": "https://clawguru.org/mycelium",
       "mainEntity": {
         "@type": "SoftwareApplication",

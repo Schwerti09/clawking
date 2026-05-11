@@ -17,8 +17,8 @@
     "description": "Wir glauben, dass KI-Agenten die gleichen Sicherheitsstandards verdienen wie kritische Infrastruktur. Unsere Plattform bietet umfassenden Schutz f\u00fcr KI-Systeme, von einzelnen Agenten bis hin zu gro\u00df angelegten Bereitstellungen.",
     "stats": [
       {
-        "number": "4,2M+",
-        "label": "Security Runbooks generiert"
+        "number": "\ud83c\uddea\ud83c\uddfa",
+        "label": "EU-Hosted Runbooks"
       },
       {
         "number": "50K+",
@@ -83,7 +83,7 @@
       {
         "year": "2025",
         "title": "Rapid Growth",
-        "description": "Expansion auf Tausende von Kunden, Einf\u00fchrung von Oracle KI-Intelligenz und Erreichen von 4,2 Millionen generierten Security Runbooks."
+        "description": "Expansion auf Tausende von Kunden, Einf\u00fchrung von Oracle KI-Intelligenz und Launch kuratierter, EU-gehosteter Security Runbooks."
       },
       {
         "year": "2026",
@@ -169,7 +169,7 @@
       {
         "name": "Security Runbooks",
         "icon": "book",
-        "description": "4,2 Millionen+ KI-generierte Security Runbooks f\u00fcr jedes m\u00f6gliche Szenario.",
+        "description": "Kuratierte, ausf\u00fchrbare Security Runbooks f\u00fcr jedes Szenario \u2014 EU-gehostet und DSGVO-konform.",
         "key_features": [
           "Automatisierte Fix-Generierung",
           "Schritt-f\u00fcr-Schritt-Anleitung",
@@ -317,7 +317,7 @@
         "avatar": "jennifer-adams"
       },
       {
-        "quote": "Die 4,2 Millionen Security Runbooks sind unglaublich. Welches Sicherheitsproblem wir auch haben, es gibt eine detaillierte L\u00f6sung zur Implementierung.",
+        "quote": "Die kuratierten Runbooks sind unglaublich. Welches Sicherheitsproblem wir auch haben, es gibt eine detaillierte, ausf\u00fchrbare L\u00f6sung \u2014 EU-gehostet und immer aktuell.",
         "author": "Robert Chang",
         "role": "Security Director",
         "company": "Global Finance Corp",
@@ -354,7 +354,7 @@
       {
         "icon": "book",
         "title": "Wissensf\u00fchrerschaft",
-        "description": "4,2 Millionen Security Runbooks generiert und mit der Community geteilt"
+        "description": "Kuratierte, ausf\u00fchrbare Security Runbooks mit der Community geteilt \u2014 EU-gehostet"
       },
       {
         "icon": "globe",

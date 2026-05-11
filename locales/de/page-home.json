@@ -39,8 +39,8 @@
     "title": "Vertraut von Security-Teams weltweit",
     "stats": [
       {
-        "number": "4,2M+",
-        "label": "Security Runbooks generiert"
+        "number": "\ud83c\uddea\ud83c\uddfa",
+        "label": "EU-Hosted Runbooks"
       },
       {
         "number": "50K+",
@@ -116,7 +116,7 @@
       },
       {
         "title": "Security Runbooks",
-        "description": "4,2 Millionen+ KI-generierte Security Runbooks f\u00fcr jedes m\u00f6gliche Szenario.",
+        "description": "Kuratierte, ausf\u00fchrbare Security Runbooks f\u00fcr jedes Szenario \u2014 EU-gehostet und DSGVO-konform.",
         "features": [
           "Automatisierte Fix-Generierung",
           "Schritt-f\u00fcr-Schritt-Anleitung",
@@ -226,7 +226,7 @@
         "avatar": "michael-rodriguez"
       },
       {
-        "quote": "4,2 Millionen Security Runbooks sind un\u00fcbertroffen. Welches Sicherheitsproblem wir auch haben, es gibt eine detaillierte L\u00f6sung zur Implementierung.",
+        "quote": "Die kuratierten Runbooks sind un\u00fcbertroffen. Welches Sicherheitsproblem wir auch haben, es gibt eine detaillierte, ausf\u00fchrbare L\u00f6sung \u2014 EU-gehostet und immer aktuell.",
         "author": "Emma Thompson",
         "role": "DevOps Lead",
         "company": "CloudScale Systems",
@@ -341,7 +341,7 @@
       },
       {
         "question": "Wie funktionieren die Security Runbooks?",
-        "answer": "Unsere KI generiert 4,2 Millionen+ Security Runbooks, die Schritt-f\u00fcr-Schritt-Anleitungen zur Behebung spezifischer Sicherheitsprobleme bieten. Jedes Runbook ist auf Ihren Technology-Stack zugeschnitten und enth\u00e4lt detaillierte Implementierungsschritte, Code-Beispiele und Best Practices."
+        "answer": "Unsere kuratierten, ausf\u00fchrbaren Security Runbooks bieten Schritt-f\u00fcr-Schritt-Anleitungen zur Behebung spezifischer Sicherheitsprobleme. Jedes Runbook ist auf Ihren Technology-Stack zugeschnitten, EU-gehostet, DSGVO-konform und enth\u00e4lt detaillierte Implementierungsschritte, Code-Beispiele und Best Practices."
       },
       {
         "question": "Sind meine Daten mit ClawGuru sicher?",
