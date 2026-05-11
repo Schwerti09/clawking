@@ -30,6 +30,6 @@ export async function generateMetadata(
   }
 }
 
-export default function LocalePricingPage() {
+export default async function LocalePricingPage() {
   return <PricingPage />
 }
