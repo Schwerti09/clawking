@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react"
 import dynamic from "next/dynamic"
 import { motion } from "framer-motion"
-import { RUNBOOK_COUNT_SHORT_DE, RUNBOOK_COUNT_SHORT_EN } from "@/lib/stats"
+// Stats display constants no longer needed here — EU-hosting messaging is inline
 
 const PreviewField = dynamic(() => import("@/components/home/PreviewField"), { ssr: false, loading: () => null })
 
@@ -47,7 +47,7 @@ export default function HeroPreview() {
               {[
                 { v: "21.4K", l: "Instanzen" },
                 { v: "94", l: "ClawScore" },
-                { v: RUNBOOK_COUNT_SHORT_EN, l: "Runbooks" },
+                { v: "🇪🇺", l: "EU-Hosted" },
                 { v: "99.98%", l: "Uptime" },
               ].map((s) => (
                 <div key={s.l} className="rounded-xl border border-white/10 bg-black/50 p-3">
@@ -95,7 +95,7 @@ export default function HeroPreview() {
 
             {/* Key features */}
             <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-2 text-[11px] text-gray-300">
-              {["Mycelium", `${RUNBOOK_COUNT_SHORT_DE} Runbooks`, "Live‑Intel", "Copilot", "Quantum‑Resistant"].map((k, i) => (
+              {["Mycelium", "EU‑Hosted Runbooks", "Live‑Intel", "Copilot", "DSGVO‑Ready"].map((k, i) => (
                 <div key={i} className="rounded-lg border border-white/10 bg-black/50 px-3 py-2 text-center">{k}</div>
               ))}
             </div>

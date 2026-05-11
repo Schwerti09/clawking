@@ -14,19 +14,18 @@ function safeTotalSitemapUrls(): number {
   return 0
 }
 
-// Canonical runbook count. Used everywhere this number is shown.
-// Was inconsistent across the codebase (4.2M on summon, 3.4M everywhere else,
-// 1M on /fr/pricing) per Kimi 2.5 audit — see docs/audit-response-kimi-2026-04-25.md.
-// 3.4M is the canonical value (matches dictionaries, vorstellung timeline,
-// HeroPreview). DO NOT hardcode this number anywhere — import from here.
+// Canonical runbook count — used programmatically (sitemap generation, pseo).
+// NOTE (11.05.2026): Inflated "Million Runbooks" messaging was removed from all
+// user-facing surfaces per credibility audit. Senior DevOps/SecOps buyers don't
+// trust vanity numbers. USP is quality + EU-hosting + executability, not volume.
 export const TOTAL_RUNBOOKS = 3_400_000
 
-// Display strings for the runbook count. Localized formatting differs:
-// DE uses comma decimal + "Mio"/"Millionen", EN uses dot + "M"/"million".
-export const RUNBOOK_COUNT_SHORT_DE = "3,4 Mio"
-export const RUNBOOK_COUNT_SHORT_EN = "3.4M"
-export const RUNBOOK_COUNT_LONG_DE = "3,4 Millionen"
-export const RUNBOOK_COUNT_LONG_EN = "3.4 million"
+// Display strings — quality-focused, no inflated counts.
+// Used in badges, feature pills, and timeline entries.
+export const RUNBOOK_COUNT_SHORT_DE = "EU-Hosted"
+export const RUNBOOK_COUNT_SHORT_EN = "EU-Hosted"
+export const RUNBOOK_COUNT_LONG_DE = "Kuratierte Runbooks — gehostet in Frankfurt, nicht Virginia"
+export const RUNBOOK_COUNT_LONG_EN = "Curated runbooks — hosted in Frankfurt, not Virginia"
 
 export function runbookCount(locale: string, variant: "short" | "long" = "short"): string {
   const isDe = locale === "de"

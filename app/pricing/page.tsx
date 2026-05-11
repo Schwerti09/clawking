@@ -657,12 +657,28 @@ curl https://clawguru.org/api/intel/feeds \\
                 <div className="text-xs text-gray-400 mt-1">CVE Fix Guides</div>
               </div>
             </div>
-            <div className="flex flex-wrap items-center justify-center gap-4 text-sm">
-              <div className="flex items-center gap-2 px-4 py-2 rounded-xl border border-white/10"
-                style={{ background: "rgba(0,255,157,0.04)" }}>
-                <span style={{ color: "#00ff9d" }}>🛡</span>
-                <span className="text-gray-300">DSGVO / GDPR konform</span>
+            {/* Compliance Trust Block — honest status */}
+            <div className="mt-6 grid md:grid-cols-2 gap-4 text-left max-w-2xl mx-auto">
+              <div className="rounded-xl border border-emerald-700/50 p-4" style={{ background: "rgba(0,255,157,0.03)" }}>
+                <div className="text-xs font-mono uppercase tracking-widest text-emerald-400 mb-2">Was wir heute garantieren</div>
+                <ul className="space-y-1.5 text-sm text-gray-300">
+                  <li className="flex items-start gap-2"><span className="text-emerald-400 mt-0.5">✓</span> DSGVO Art. 25 & 32 umgesetzt</li>
+                  <li className="flex items-start gap-2"><span className="text-emerald-400 mt-0.5">✓</span> Alle Daten in Frankfurt (EU)</li>
+                  <li className="flex items-start gap-2"><span className="text-emerald-400 mt-0.5">✓</span> AES-256 at rest, TLS 1.3 in transit</li>
+                  <li className="flex items-start gap-2"><span className="text-emerald-400 mt-0.5">✓</span> Audit-Trail für jede Aktion</li>
+                </ul>
               </div>
+              <div className="rounded-xl border border-violet-700/50 p-4" style={{ background: "rgba(139,92,246,0.03)" }}>
+                <div className="text-xs font-mono uppercase tracking-widest text-violet-400 mb-2">Was kommt</div>
+                <ul className="space-y-1.5 text-sm text-gray-300">
+                  <li className="flex items-start gap-2"><span className="text-violet-400 mt-0.5">→</span> SOC 2 Type II Audit: Q3 2026</li>
+                  <li className="flex items-start gap-2"><span className="text-violet-400 mt-0.5">→</span> ISO 27001 Zertifizierung: H2 2026</li>
+                  <li className="flex items-start gap-2"><span className="text-violet-400 mt-0.5">→</span> Pentest-Report auf Anfrage</li>
+                  <li className="flex items-start gap-2"><span className="text-violet-400 mt-0.5">→</span> Security-Roadmap für Enterprise unter NDA</li>
+                </ul>
+              </div>
+            </div>
+            <div className="mt-4 flex flex-wrap items-center justify-center gap-4 text-sm">
               <div className="flex items-center gap-2 px-4 py-2 rounded-xl border border-white/10"
                 style={{ background: "rgba(0,184,255,0.04)" }}>
                 <span style={{ color: "#00b8ff" }}>🔒</span>

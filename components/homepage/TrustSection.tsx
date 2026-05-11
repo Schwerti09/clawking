@@ -41,10 +41,10 @@ export default function TrustSection({ locale, prefix = "", dict = {} }: Props) 
     {
       id: "runbooks",
       icon: "📊",
-      title: isDE ? "4,2M Runbooks – Bewährt" : "4.2M Runbooks – Proven",
+      title: isDE ? "Kuratierte Runbooks" : "Curated Runbooks",
       items: [
         isDE ? "Manuell analysiert & validiert" : "Human-reviewed & validated",
-        isDE ? "Keine KI-Halluzinationen" : "Zero AI hallucinations",
+        isDE ? "Ausführbar per CLI & API" : "Executable via CLI & API",
         isDE ? "Täglich aktualisiert" : "Updated daily",
         isDE ? "Live Scanner starten →" : "Try scanner now →",
       ],
@@ -69,12 +69,12 @@ export default function TrustSection({ locale, prefix = "", dict = {} }: Props) 
     {
       id: "compliance",
       icon: "📋",
-      title: isDE ? "Compliance & Audits" : "Compliance & Audits",
+      title: isDE ? "Compliance-Status" : "Compliance Status",
       items: [
-        "NIS2 Richtlinie ✓",
-        "BSI Grundschutz",
-        "ISO 27001 (geplant H2 2026)",
-        "SOC 2 Type II (geplant H2 2026)",
+        isDE ? "DSGVO Art. 25 & 32 umgesetzt" : "GDPR Art. 25 & 32 implemented",
+        isDE ? "Alle Daten in Frankfurt (EU)" : "All data in Frankfurt (EU)",
+        isDE ? "SOC 2 Type II: Q3 2026" : "SOC 2 Type II: Q3 2026",
+        isDE ? "ISO 27001: H2 2026" : "ISO 27001: H2 2026",
       ],
       accent: "text-violet-400",
       bgGradient: "from-violet-500/10 to-violet-600/5",
@@ -114,8 +114,8 @@ export default function TrustSection({ locale, prefix = "", dict = {} }: Props) 
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
             {isDE
-              ? "Keine Fake-Logos, keine Storytelling. Nur echte Proof: EU-gehostet, Compliance-geprüft, täglich in Produktion."
-              : "No fake logos, no storytelling. Just real proof: EU-hosted, compliance-verified, daily in production."}
+              ? "Keine Fake-Logos, keine Storytelling. Nur echte Proof: EU-gehostet, DSGVO umgesetzt, Zertifizierungen in Vorbereitung."
+              : "No fake logos, no storytelling. Just real proof: EU-hosted, GDPR implemented, certifications in progress."}
           </p>
         </motion.div>
 

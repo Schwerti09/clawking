@@ -656,12 +656,12 @@ export default function CaseStudiesPage() {
 
         {/* CTA */}
         <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
-          <div className="text-lg font-bold text-gray-100 mb-2">Deinen Case hier einreichen?</div>
+          <div className="text-lg font-bold text-gray-100 mb-2">Eure Story hier erzählen?</div>
           <p className="text-gray-300 text-sm mb-4">
-            Schick anonymisierte Logs/Config-Snippets (ohne Secrets). Wir bauen daraus ein Runbook und — auf Wunsch — eine vollständige Case Study. 100% anonym, kein Unternehmensname ohne Zustimmung.
+            20 Minuten Call, volle Freigabe, Backlink inklusive. Wir schreiben — ihr gebt frei. Kein Druck, kein Vertrag.
           </p>
-          <a href={`${prefix}/copilot`} className="inline-block px-5 py-2.5 bg-cyan-700 hover:bg-cyan-600 text-white font-semibold rounded-lg transition-colors text-sm">
-            Case einreichen via Copilot &rarr;
+          <a href={`${prefix}/case-studies/teilnehmen`} className="inline-block px-5 py-2.5 bg-cyan-700 hover:bg-cyan-600 text-white font-semibold rounded-lg transition-colors text-sm">
+            Am Case-Study-Programm teilnehmen &rarr;
           </a>
         </div>
 

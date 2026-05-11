@@ -312,22 +312,22 @@
     }
   },
   "metrics_numbers": {
-    "million_runbooks": {
-      "en": "4.2 million runbooks",
-      "de": "4,2 Millionen Runbooks",
-      "es": "4,2 millones de runbooks",
-      "fr": "4,2 millions de runbooks",
-      "it": "4,2 milioni di runbooks",
-      "pt": "4,2 milh\u00f5es de runbooks",
-      "nl": "4,2 miljoen runbooks",
-      "pl": "4,2 miliony runbooks",
-      "ru": "4,2 \u043c\u0438\u043b\u043b\u0438\u043e\u043d\u0430 runbooks",
-      "tr": "4,2 milyon runbook",
-      "ar": "4.2 \u0645\u0644\u064a\u0648\u0646 runbook",
-      "zh": "420\u4e07\u8fd0\u7ef4\u624b\u518c",
-      "ja": "420\u4e07\u306e\u30e9\u30f3\u30d6\u30c3\u30af",
-      "ko": "420\ub9cc \ub7f0\ubd81",
-      "sv": "4,2 miljoner runbooks"
+    "curated_runbooks": {
+      "en": "curated, executable runbooks — EU-hosted",
+      "de": "kuratierte, ausführbare Runbooks — EU-gehostet",
+      "es": "runbooks curados y ejecutables — alojados en la UE",
+      "fr": "runbooks curés et exécutables — hébergés dans l'UE",
+      "it": "runbook curati ed eseguibili — ospitati nell'UE",
+      "pt": "runbooks curados e executáveis — hospedados na UE",
+      "nl": "gecureerde, uitvoerbare runbooks — EU-gehost",
+      "pl": "kuratorowane, wykonywalne runbooki — hostowane w UE",
+      "ru": "курируемые исполняемые runbooks — размещены в ЕС",
+      "tr": "küratörlü, çalıştırılabilir runbook'lar — AB'de barındırılıyor",
+      "ar": "runbooks منسقة وقابلة للتنفيذ — مستضافة في الاتحاد الأوروبي",
+      "zh": "精选可执行运维手册 — 欧盟托管",
+      "ja": "厳選された実行可能なランブック — EU ホスティング",
+      "ko": "큐레이션된 실행 가능한 런북 — EU 호스팅",
+      "sv": "kurerade, körbara runbooks — EU-hostade"
     },
     "thirty_seconds": {
       "en": "30 seconds",

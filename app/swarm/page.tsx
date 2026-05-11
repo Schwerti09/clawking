@@ -103,7 +103,7 @@ const FEATURES = [
   {
     icon: "📄",
     label: "Compliance Report Export",
-    desc: "Generate SOC 2, ISO 27001, and NIST-aligned compliance reports from audit logs.",
+    desc: "Generate compliance reports mapped to SOC 2, ISO 27001, and NIST controls from audit logs.",
     color: QV.coldWhite,
   },
 ]
