@@ -12,6 +12,7 @@ import { DEFAULT_LOCALE, type Locale } from "@/lib/i18n"
 import { getDictionary } from "@/lib/getDictionary"
 import { AUTOPILOT_PLANS } from "@/lib/autopilot-offering"
 import { MARKETING_METRICS } from "@/lib/marketing-metrics"
+import { DAY_PASS_EUR } from "@/lib/pricing"
 import dynamic from "next/dynamic"
 
 const CouponBanner = dynamic(() => import("@/components/marketing/CouponBanner"), { ssr: false })

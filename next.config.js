@@ -19,6 +19,7 @@ const nextConfig = {
   // Inline non-secret defaults at build time (DefinePlugin).
   // Secrets are NOT listed here — they come from runtime env vars only.
   env: envMap,
+  output: "standalone",
   reactStrictMode: true,
   trailingSlash: false,
   poweredByHeader: false,
