@@ -8,9 +8,8 @@ interface PageProps { params: { lang: string } }
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://clawguru.org"
 const PATH = "/roast-my-moltbot/hall-of-fame"
 
-export async function generateStaticParams() {
-  return SUPPORTED_LOCALES.map((lang) => ({ lang }))
-}
+// generateStaticParams removed to prevent build-time data fetching from clawking.klick
+// Pages will be dynamically generated at runtime instead
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const locale = (SUPPORTED_LOCALES.includes(params.lang as Locale) ? params.lang : "de") as Locale

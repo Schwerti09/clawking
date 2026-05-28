@@ -27,15 +27,8 @@ async function getRoastStatistics() {
   }
 }
 
-export async function generateStaticParams() {
-  const stats = await getRoastStatistics()
-  const experts = stats?.topScores?.slice(0, 10).map((entry: any, idx: number) => 
-    `guest-${idx + 1}`
-  ) || ["guest-1", "guest-2", "guest-3"]
-  return SUPPORTED_LOCALES.flatMap((lang) => 
-    experts.map((expert: string) => ({ lang, expert }))
-  )
-}
+// generateStaticParams removed to prevent build-time data fetching from clawking.klick
+// Pages will be dynamically generated at runtime instead
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const locale = (SUPPORTED_LOCALES.includes(params.lang as Locale) ? params.lang : "de") as Locale
