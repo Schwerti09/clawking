@@ -7,6 +7,8 @@ import { pick } from "@/lib/i18n-pick"
 
 interface PageProps { params: { lang: string; expert: string } }
 
+export const dynamic = 'force-dynamic'
+
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://clawguru.org"
 
 async function getRoastStatistics() {
