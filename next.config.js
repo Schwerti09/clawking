@@ -19,7 +19,7 @@ const nextConfig = {
   // Inline non-secret defaults at build time (DefinePlugin).
   // Secrets are NOT listed here — they come from runtime env vars only.
   env: envMap,
-  output: "standalone",
+  output: process.env.NEXT_OUTPUT_STANDALONE === "1" ? "standalone" : undefined,
   reactStrictMode: true,
   trailingSlash: false,
   poweredByHeader: false,
