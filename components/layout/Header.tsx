@@ -136,10 +136,10 @@ export default function Header() {
 
   // Compact header share: Web Share API â†’ X intent fallback
   const handleHeaderShare = useCallback(() => {
-    const url = typeof window !== "undefined" ? window.location.href : "https://clawguru.org"
+    const url = typeof window !== "undefined" ? window.location.href : "https://clawking.klick"
     const text = dict.share.myceliumPost
     if (typeof navigator !== "undefined" && navigator.share) {
-      navigator.share({ title: "ClawGuru · Security Intelligence Engine", text, url }).catch(() => {})
+      navigator.share({ title: "ClawKing · Security Intelligence Engine", text, url }).catch(() => {})
     } else {
       const xUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`
       window.open(xUrl, "_blank", "noopener,noreferrer")
@@ -181,7 +181,7 @@ export default function Header() {
             }}
           >
             {/* Logo */}
-            <Link href={localizePath(locale, "/")} className="flex items-center gap-3 shrink-0" aria-label="ClawGuru â€“ Startseite">
+            <Link href={localizePath(locale, "/")} className="flex items-center gap-3 shrink-0" aria-label="ClawKing â€“ Startseite">
               <div
                 className="w-9 h-9 rounded-xl flex items-center justify-center"
                 aria-hidden="true"
@@ -190,10 +190,10 @@ export default function Header() {
                   boxShadow: "0 0 20px rgba(212,175,55,0.35)",
                 }}
               >
-                <span className="text-black font-black text-sm">CG</span>
+                <span className="text-black font-black text-sm">👑</span>
               </div>
               <div className="leading-tight">
-                <div className="font-black text-white tracking-tight">ClawGuru</div>
+                <div className="font-black text-white tracking-tight">ClawKing</div>
                 <div className="text-xs hidden sm:block" style={{ color: "rgba(212,175,55,0.7)" }}>
                   Security Intelligence Engine
                 </div>

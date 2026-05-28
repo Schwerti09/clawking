@@ -1,7 +1,7 @@
 export const BRAND = {
-  name: "ClawGuru",
-  domain: "clawguru.org",
-  twitter: "@clawguru"
+  name: "ClawKing",
+  domain: "clawking.klick",
+  twitter: "@clawking"
 }
 
 import { STATS } from "@/lib/stats"
@@ -55,11 +55,11 @@ export const HOSTING_PROVIDERS = [
 ]
 
 export const LEGAL_INFO = {
-  company: "ClawGuru Security Operations – R. Schwertfechter (Einzelunternehmen)",
+  company: "ClawKing Security Operations – R. Schwertfechter (Einzelunternehmen)",
   owner: "R. Schwertfechter",
   address: "Karklandsweg 1",
   city: "26553 Dornum, Deutschland",
-  email: "support@clawguru.org",
+  email: "support@clawking.klick",
   phone: "+49 (0) XXX XXXXXXX",
   ustId: "DE [ausstehend]",
   taxNote: "Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz: DE [ausstehend]",

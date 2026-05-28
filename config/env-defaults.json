@@ -1,9 +1,9 @@
 {
   "_comment": "Non-secret infrastructure defaults. Used by next.config.js (build-time) and instrumentation.ts (runtime). Never put secrets here. AI provider order (AI_PROVIDER_ORDER, AI_PREFERRED, AI_PROVIDER) must NOT be here — set them as Vercel/Netlify runtime env vars so platform config is respected.",
 
-  "NEXT_PUBLIC_SITE_URL": "https://clawguru.org",
-  "SITE_URL": "https://clawguru.org",
-  "NEXT_PUBLIC_BASE_URL": "https://clawguru.org",
+  "NEXT_PUBLIC_SITE_URL": "https://clawking.klick",
+  "SITE_URL": "https://clawking.klick",
+  "NEXT_PUBLIC_BASE_URL": "https://clawking.klick",
 
   "GEMINI_MODEL": "gemini-2.5-flash",
   "GEMINI_BASE_URL": "https://generativelanguage.googleapis.com/v1beta",
@@ -14,13 +14,13 @@
   "OPENAI_BASE_URL": "https://api.openai.com/v1",
   "LEGAL_AI_MAX_TOKENS": "2048",
 
-  "RESEND_FROM": "noreply@clawguru.org",
-  "EMAIL_FROM": "ClawGuru <noreply@clawguru.org>",
-  "EMAIL_REPLY_TO": "support@clawguru.org",
-  "SUPPORT_EMAIL": "support@clawguru.org",
-  "ADMIN_EMAIL": "admin@clawguru.org",
-  "HEALTH_ALERT_EMAIL": "alerts@clawguru.org",
-  "PASSIVE_SUMMARY_EMAIL": "summary@clawguru.org",
+  "RESEND_FROM": "noreply@clawking.klick",
+  "EMAIL_FROM": "ClawKing <noreply@clawking.klick>",
+  "EMAIL_REPLY_TO": "support@clawking.klick",
+  "SUPPORT_EMAIL": "support@clawking.klick",
+  "ADMIN_EMAIL": "admin@clawking.klick",
+  "HEALTH_ALERT_EMAIL": "alerts@clawking.klick",
+  "PASSIVE_SUMMARY_EMAIL": "summary@clawking.klick",
   "TEST_EMAIL_RECIPIENT": "test@example.com",
 
   "ADMIN_USERNAME": "admin",

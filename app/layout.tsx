@@ -28,13 +28,13 @@ import { I18nProvider } from "@/components/i18n/I18nProvider"
 
 // 100/100 OPTIMIZATION: Fonts loaded via CSS @import in globals.css (avoids build-time fetch failures)
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://clawguru.org"
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://clawking.klick"
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "ClawGuru — Self-Hosted Security Intelligence | Runbooks, Copilot, Threat Feed",
+  title: "ClawKing — Self-Hosted Security Intelligence | Runbooks, Copilot, Threat Feed",
   description:
-    "ClawGuru: 3M+ expert-reviewed security runbooks, live CVE intel, and hands-on hardening tools for DevOps and SecOps teams.",
+    "ClawKing: 3M+ expert-reviewed security runbooks, live CVE intel, and hands-on hardening tools for DevOps and SecOps teams.",
   keywords: SEO_TARGET_KEYWORDS_2026,
   alternates: {
     canonical: "/de",
@@ -43,11 +43,11 @@ export const metadata: Metadata = {
     type: "website",
     locale: "de_DE",
     url: `${SITE_URL}/de`,
-    title: "ClawGuru — Self-Hosted Security Intelligence",
+    title: "ClawKing — Self-Hosted Security Intelligence",
     description: "3M+ expert-reviewed security runbooks, live CVE intel, hardening tools.",
     images: ["/og-image.png", "/og-image.svg"]
   },
-  twitter: { card: "summary_large_image", creator: "@clawguru" },
+  twitter: { card: "summary_large_image", creator: "@clawking" },
   verification: { google: "b629ac432cdf0f21" },
   // 100/100 OPTIMIZATION 2026: Explicit robots directive
   robots: { index: true, follow: true },
@@ -63,19 +63,19 @@ export const viewport: Viewport = {
 const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "ClawGuru",
+  name: "ClawKing",
   url: SITE_URL,
   logo: `${SITE_URL}/og-image.png`,
-  sameAs: ["https://twitter.com/clawguru"],
+  sameAs: ["https://twitter.com/clawking"],
   description:
-    "ClawGuru ist die #1 Ops-Intelligence-Plattform für OpenClaw/Moltbot Security & Betrieb.",
+    "ClawKing ist die #1 Ops-Intelligence-Plattform für OpenClaw/Moltbot Security & Betrieb.",
 }
 
 // WebSite schema with SearchAction for Sitelinks Searchbox & AI discovery
 const websiteJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  name: "ClawGuru",
+  name: "ClawKing",
   url: SITE_URL,
   potentialAction: {
     "@type": "SearchAction",
@@ -104,7 +104,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         {/* 100/100 LCP OPTIMIZATION: Preload critical OG image for faster LCP */}
         <link rel="preload" as="image" href="/og-image.png" fetchPriority="high" />
         {/* 100/100 LCP OPTIMIZATION: DNS prefetch for analytics */}
-        <link rel="dns-prefetch" href="https://umami.clawguru.org" />
+        <link rel="dns-prefetch" href="https://umami.clawking.klick" />
         {/* NEXT-LEVEL UPGRADE 2026: PWA manifest */}
         <link rel="manifest" href="/manifest.json" />
         <meta name="apple-mobile-web-app-capable" content="yes" />

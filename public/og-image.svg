@@ -20,6 +20,6 @@
     <circle cx="100" cy="85" r="12" fill="#00f2ff"/>
     <circle cx="100" cy="85" r="5" fill="#fff"/>
   </g>
-  <text x="80" y="520" fill="#e5e7eb" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-weight="800" font-size="56">ClawGuru</text>
+  <text x="80" y="520" fill="#e5e7eb" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-weight="800" font-size="56">👑 ClawKing</text>
   <text x="80" y="570" fill="#9ca3af" font-family="Inter, system-ui, sans-serif" font-weight="600" font-size="28">Mycelial Singularity Engine v3.0</text>
 </svg>
