@@ -29,7 +29,7 @@
   # Suppress false-positive secrets scanning on server-side Next.js bundles.
   # These must be in [build.environment] (not the build script) because the
   # scanner runs as a post-build step outside the shell session.
-  SECRETS_SCAN_OMIT_PATHS = ".next/cache,.next/server,.next/static"
+  SECRETS_SCAN_OMIT_PATHS = ".next/cache,.next/server,.next/static,scripts/translate-missing.js,scripts/translate-multi.js,status/DAILY_STATUS.md,AGENTS.md"
 
   # ⚠️  SECRETS_SCAN_OMIT_KEYS is intentionally NOT here — it was ~1.1 KB and
   # pushed Functions over the 4 KB limit. Instead:
