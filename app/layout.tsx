@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     images: ["/og-image.png", "/og-image.svg"]
   },
   twitter: { card: "summary_large_image", creator: "@clawking" },
-  verification: { google: "b629ac432cdf0f21" },
+  verification: { google: "BmYqMmD3jMAiZPRI17rWRjHoSZNT8Ca4VEdK2ZOdUbU" },
   // 100/100 OPTIMIZATION 2026: Explicit robots directive
   robots: { index: true, follow: true },
 }
