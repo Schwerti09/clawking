@@ -42,11 +42,12 @@ function getMoltbotCopy(locale: Locale): M {
   return { ...EN_COPY, ...(COPY[locale] ?? {}) }
 }
 
-export async function generateStaticParams() {
-  return SUPPORTED_LOCALES.map((lang) => ({ lang }))
-}
+export const dynamic = 'force-dynamic'
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://clawguru.org"
+
+// generateStaticParams removed to prevent build-time data fetching from clawking.klick
+// Pages will be dynamically generated at runtime instead
 
 export async function generateMetadata(props: { params: { lang: string } }): Promise<Metadata> {
   const locale = (SUPPORTED_LOCALES.includes(props.params.lang as Locale) ? props.params.lang : "de") as Locale
