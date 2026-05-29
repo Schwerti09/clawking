@@ -14,17 +14,18 @@
   package = "@netlify/plugin-nextjs"
 
 [build.environment]
-  # ============================================================================
+  # =================================================================================
   # MINIMAL FUNCTION ENV — must stay under 4 KB total (including Dashboard vars)
-  # ============================================================================
+  # =================================================================================
   # Only keep vars here that Netlify's platform needs before/after the build.
   # Everything else goes into:
   #   - scripts/netlify-build-env.sh  (build-only vars, not in Functions)
   #   - config/env-defaults.json      (non-secret defaults, inlined at build)
   #   - Netlify Dashboard             (secrets, scoped to appropriate context)
-  # ============================================================================
+  # =================================================================================
 
   NODE_VERSION = "20"
+  NODE_ENV = "production"
 
   # Suppress false-positive secrets scanning on server-side Next.js bundles.
   # These must be in [build.environment] (not the build script) because the
